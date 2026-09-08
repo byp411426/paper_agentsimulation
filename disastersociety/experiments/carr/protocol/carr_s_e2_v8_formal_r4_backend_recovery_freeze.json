@@ -1,0 +1,143 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r4",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_BACKEND_RELIABILITY_RECOVERY_BEFORE_EXECUTION",
+  "predecessor_protocol_id": "carr_s_e2_v8_formal_r3",
+  "recovery_trigger": {
+    "type": "provider_timeout_under_excessive_cross_job_concurrency",
+    "failed_run": "carr_s_e2_v8_formal_r3_full_seed1201",
+    "terminal_status": "ABORTED",
+    "completed_steps": 6,
+    "planned_steps": 10,
+    "n_ok": 88,
+    "n_failed": 2,
+    "reason_code": "BACKEND_UNAVAILABLE",
+    "observed_error": "Two requests reached the frozen 240-second timeout during step 7.",
+    "concurrent_load_at_failure": "Two E2 lanes at max_concurrency 12 plus one Carr-R validation job at max_concurrency 4.",
+    "scientific_effect_interpretation_allowed": false
+  },
+  "prior_attempt_disposition": {
+    "rule": "All r3 artifacts are operational audit records only and are excluded from the selected r4 scientific matrix.",
+    "cross_attempt_pairing_allowed": false,
+    "r3_artifacts": [
+      {
+        "seed": 1103,
+        "condition": "full",
+        "terminal_status": "VALID_BUT_EXCLUDED_WITH_R3",
+        "summary_sha256": "02e70c916169010e52351485b44b7b5a5e9cffd6d5ed9287fb8b3cf2ab25c57b",
+        "mechanism_metrics_sha256": "3cc12232710a9deb8d7b79a016ba12d955c41043302ff569074b10819b6675af"
+      },
+      {
+        "seed": 1201,
+        "condition": "full",
+        "terminal_status": "ABORTED_PROVIDER_TIMEOUT",
+        "summary_sha256": "eedeaa77e14cf65377587796506aae0f7b8ae94b052092d498e72beede7c9363",
+        "mechanism_metrics_sha256": "cc46a563657fac98a67028520cc8a913cf25410d39080d31be7007cef8e88db3"
+      },
+      {
+        "seed": 1103,
+        "condition": "full_minus_memory",
+        "terminal_status": "INTERRUPTED_AFTER_PEER_ABORT_WITHOUT_TERMINAL_SUMMARY",
+        "llm_calls_sha256": "9adc0027657416fd20b3caad24c5bd4cab62e41b5d23ac4a9ea4b693af57f773",
+        "events_sha256": "e47ba2d38aa37e1dd59a02a0ac494cf1ca7c359e3a8cecf743216439f27814e1"
+      }
+    ]
+  },
+  "r4_execution_contract": {
+    "selection_rule": "Use r4 for all 12 frozen seeds and all five frozen conditions; never combine with r1, r2, or r3.",
+    "science_configuration_equal_to_r3_after_transport_and_protocol_identity_exclusions": true,
+    "scientific_changes": [],
+    "permitted_operational_changes": [
+      "new run and protocol identifiers",
+      "per-run maximum concurrency reduced from 12 to 6",
+      "request timeout extended from 240 to 600 seconds",
+      "two lanes remain but no other paid experiment may overlap",
+      "protocol-specific seed-batch filenames prevent cross-attempt overwrite"
+    ],
+    "lane_a_seeds": [
+      1103,
+      1301,
+      1511,
+      1709,
+      1907,
+      2111
+    ],
+    "lane_b_seeds": [
+      1201,
+      1409,
+      1601,
+      1801,
+      2003,
+      2203
+    ],
+    "n_selected_seed_condition_runs": 60,
+    "stop_rule": "Each lane stops on its first exception or non-five-for-five-VALID batch. Any failure stops all new paid jobs pending an explicit audited recovery amendment.",
+    "carr_r_test_split_opened": false,
+    "no_direction_based_stopping": true,
+    "mock_eligible_for_effect_evidence": false
+  },
+  "frozen_artifacts": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal_r4.yaml",
+      "sha256": "4b4f6d3e245349e1662b8c3a0a797c3ee562b0cad8d5f18535b9194c47b26ee4"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "sha256": "7462f20d0dbb5fd0768afca2bde24f6520b6bdf03cd6ae98f5693987de7666ea"
+    },
+    "single_seed_science_runner": {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "sha256": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    "r4_lane_supervisor": {
+      "path": "scripts/run_carr_e2_v8_r4_lane.py",
+      "sha256": "f4218347a7221727ac16e874f3c00337fa89ff30c8afbfef29c7d32e2dabcf12"
+    },
+    "frozen_v8_summarizer": {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "sha256": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    "r4_protocol_filename_adapter": {
+      "path": "scripts/summarize_carr_e2_v8_r4.py",
+      "sha256": "7b376f1789ee051c8aa7a869b8a05addbaf82bf472a15f93a03ca0e384b2a5bb"
+    },
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "sha256": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    }
+  },
+  "analysis_file_amendment": {
+    "timing": "Applied before any r4 seed batch had a terminal summary.",
+    "reason": "The original v8 summarizer is itself frozen by the r1 protocol and was restored byte-for-byte. A new r4-only wrapper maps protocol-specific batch filenames into a temporary audit view and delegates all estimators to the frozen summarizer.",
+    "scientific_change": false
+  },
+  "claim_boundary": "r4 changes only audited execution transport and output identity after a provider-timeout abort. It does not change the E2 cohort, prompt, model identity, thinking mode, conditions, seeds, metrics, estimands, sample size, or scientific exclusion rules."
+}

@@ -1,0 +1,67 @@
+{
+  "models": [
+    {
+      "model": "qwen",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    },
+    {
+      "model": "glm",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    },
+    {
+      "model": "gpt54mini",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "1/4"
+    },
+    {
+      "model": "qwen27b",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    },
+    {
+      "model": "gemma4",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    },
+    {
+      "model": "qwen36",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    },
+    {
+      "model": "deepseek",
+      "valid_cells": 12,
+      "feedback_manipulation": "4/4",
+      "feedback_downstream": "4/4",
+      "interaction_manipulation": "4/4",
+      "interaction_downstream": "4/4"
+    }
+  ],
+  "summary": [
+    "## 汇总",
+    "",
+    "- 反馈机制：7/7 模型操纵检查与下游方向均为 4/4 seed 同向。",
+    "- 互动机制：7/7 模型操纵检查 4/4 seed 同向；下游协调出发方向除 gpt-5.4-mini 为 1/4 外，其余 6/6 模型均为 4/4。",
+    "- 模型集：7 个模型均完成 4 seed × 3 条件 = 12/12 VALID。"
+  ]
+}

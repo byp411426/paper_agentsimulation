@@ -1,0 +1,24 @@
+{
+  "evidence_status": "PILOT",
+  "source_matches_running_snapshot": true,
+  "code_sha256": {
+    "ds/agents/e1_contracts.py": "72e6558cc61c19c719be5ba74e7cc9dcb2e05ac4733926f6792f386425deda81",
+    "ds/agents/carr_empirical_v2.py": "bd5b7e644ba7d932c8d9789f6ecf35dc47a9f4d7df8cf15b74a49dcb9d668329",
+    "ds/world/carr_empirical_v2.py": "f0c8dfe744672c26abd6218a6c5766482125396c1e3b9535fff2a2aee0c30d14",
+    "ds/interaction/carr_empirical_v2.py": "7e41de9e90a09a376f3871ff6b7e71dd1db2d6aac57c54bcf67c649734c56f40",
+    "ds/households/state.py": "28504e6560ed6e1a76424a3cc6e30759cabcb674dbca4b81d9932567ae9963ca",
+    "ds/kernel/engine.py": "b28039c733505f8a70c154da9d3bbf851974641fbcc8c9dd35609d14384b7773",
+    "ds/llm/gateway.py": "ae4194ee34190208d42d1a4ce4cc85ceacde2371c09ddbfc5712abb7f8a23445",
+    "experiments/carr/empirical_v2_runner.py": "68ec033daa2d031578d98b7d19a0b1dc2c6f16a673e891f59d32d7fcbcbac4a5"
+  },
+  "artifacts_sha256": {
+    "profiles.jsonl": "c4c5094140c92b1ccc8798183619cc358630376ae39aac98a3bb9ec56f46adce",
+    "pilot.yaml": "28b64f31ea42a5cc950e4e765d0eefd21e01e36d89f73896463f7c2542a215e6",
+    "models_recovery.yaml": "6daabc352574043652b514175d2146dfe8bd90eb38d121484c41af1367ee6ba3",
+    "run_complete.py": "050beddc376474e1f95443aa835cadb7011fc21ff8c40c8e3a85d4f5bdfb4040"
+  },
+  "effective_model_registry": "models_recovery.yaml",
+  "reused_successful_cache": "live_final/cache.sqlite",
+  "started_from_initial_state": true,
+  "no_full_runs_started": true
+}

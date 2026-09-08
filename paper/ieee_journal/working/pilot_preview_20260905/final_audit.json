@@ -1,0 +1,9 @@
+{
+  "original_sources_unchanged": true,
+  "repaired_sources_frozen_during_run": true,
+  "targeted_checks_passed": 6,
+  "existing_checks_passed": 9,
+  "new_live_discovered_regression": "FAILS; see open_contract_test.txt",
+  "formal_run_ready": false,
+  "new_full_runs_started": 0
+}

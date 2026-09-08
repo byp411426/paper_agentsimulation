@@ -1,0 +1,255 @@
+{
+  "status": "PILOT_VALIDATION_ONLY",
+  "track": "Carr-R",
+  "test_split_opened": false,
+  "claim_boundary": "Validation-only development evidence. It does not support a formal model comparison or a platform-validity claim.",
+  "configuration": {
+    "path": "experiments/baselines/configs/carr_r_validation_pilot.yaml",
+    "sha256": "fa920f3c59b6a0bf83868ad5ec5520260b1b664d5dacbeec376f6aec33297096",
+    "features": [
+      "age_group",
+      "household_size",
+      "vehicle_count",
+      "income_bracket"
+    ],
+    "feature_encoding": "missing-category imputation followed by one-hot encoding",
+    "train_split": "train",
+    "evaluation_splits": [
+      "validation"
+    ],
+    "sealed_splits": [
+      "test"
+    ],
+    "decision_threshold": 0.5,
+    "ece_bins": 10,
+    "bootstrap_replicates": 2000,
+    "bootstrap_interval_scope": "conditional on fitted predictions; training uncertainty omitted"
+  },
+  "sample": {
+    "total_frozen": 330,
+    "train_n": 198,
+    "train_outcome_prevalence": 0.8888888888888888,
+    "evaluation_n": {
+      "validation": 66
+    }
+  },
+  "provenance": {
+    "runner": {
+      "path": "experiments/baselines/train_carr_r_frozen.py",
+      "sha256": "3037f12aa4cefeff0374243671d78d90e818b357cd5d52c9dfa03a18e383b2a9"
+    },
+    "artifacts": {
+      "clean_survey": {
+        "path": "eventpacks/carr_2018/behavior/survey_clean.csv",
+        "sha256": "46539f3162428803a250e59f30d81c87ac9d4d2551c3561d71069ad078daee4b"
+      },
+      "evaluation_linkage": {
+        "path": "eventpacks/carr_2018/behavior/evaluation_respondents.csv",
+        "sha256": "5cc642186cba75d36e0b2617d3bccfe1bb51b1a328eb98cb0a5391a9ea0ba031"
+      },
+      "split": {
+        "path": "experiments/carr/protocol/carr_r_split.csv",
+        "sha256": "5e52b396b2cf1e9c456005d434f8d1bf5b5edec9e080b187a98812b54c3074ae"
+      },
+      "field_roles": {
+        "path": "experiments/carr/protocol/field_roles.yaml",
+        "sha256": "f88944d421ec8d313b64ff272052a6b36d62f9b4e8dcbdf4e34410b0ecb3b4ba"
+      }
+    },
+    "respondent_id_exported": false,
+    "python": "3.13.5",
+    "pandas": "3.0.3",
+    "numpy": "2.5.1",
+    "scikit_learn": "1.9.0",
+    "command": "uv run --extra ml python experiments/baselines/train_carr_r_frozen.py"
+  },
+  "models": {
+    "train_prevalence": {
+      "configuration": {
+        "kind": "constant_prevalence"
+      },
+      "metrics": {
+        "validation": {
+          "n": 66,
+          "outcome_prevalence": 0.8939393939393939,
+          "predicted_positive_rate": 1.0,
+          "accuracy": 0.8939393939393939,
+          "macro_f1": 0.472,
+          "brier": 0.09483726150392817,
+          "ece": 0.005050505050504972,
+          "confusion_matrix_labels_0_1": [
+            [
+              0,
+              7
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "conditional_stratified_bootstrap_95pct": {
+            "accuracy": [
+              0.8939393939393939,
+              0.8939393939393939
+            ],
+            "macro_f1": [
+              0.472,
+              0.472
+            ],
+            "brier": [
+              0.0948372615039282,
+              0.0948372615039282
+            ],
+            "ece": [
+              0.005050505050504972,
+              0.005050505050504972
+            ]
+          }
+        }
+      }
+    },
+    "logistic_regression": {
+      "configuration": {
+        "kind": "logistic_regression",
+        "class_weight": null,
+        "max_iter": 1000,
+        "random_state": 20260731
+      },
+      "metrics": {
+        "validation": {
+          "n": 66,
+          "outcome_prevalence": 0.8939393939393939,
+          "predicted_positive_rate": 0.9545454545454546,
+          "accuracy": 0.8484848484848485,
+          "macro_f1": 0.45901639344262296,
+          "brier": 0.1185575518119382,
+          "ece": 0.10354184644711092,
+          "confusion_matrix_labels_0_1": [
+            [
+              0,
+              7
+            ],
+            [
+              3,
+              56
+            ]
+          ],
+          "conditional_stratified_bootstrap_95pct": {
+            "accuracy": [
+              0.7878787878787878,
+              0.8939393939393939
+            ],
+            "macro_f1": [
+              0.4406779661016949,
+              0.472
+            ],
+            "brier": [
+              0.10357696965792747,
+              0.13805131344699123
+            ],
+            "ece": [
+              0.051598101985907495,
+              0.15988956574615354
+            ]
+          }
+        }
+      }
+    },
+    "logistic_regression_balanced": {
+      "configuration": {
+        "kind": "logistic_regression",
+        "class_weight": "balanced",
+        "max_iter": 1000,
+        "random_state": 20260731
+      },
+      "metrics": {
+        "validation": {
+          "n": 66,
+          "outcome_prevalence": 0.8939393939393939,
+          "predicted_positive_rate": 0.7878787878787878,
+          "accuracy": 0.7121212121212122,
+          "macro_f1": 0.462033462033462,
+          "brier": 0.2396378722442794,
+          "ece": 0.3202472066239032,
+          "confusion_matrix_labels_0_1": [
+            [
+              1,
+              6
+            ],
+            [
+              13,
+              46
+            ]
+          ],
+          "conditional_stratified_bootstrap_95pct": {
+            "accuracy": [
+              0.6060606060606061,
+              0.8034090909090889
+            ],
+            "macro_f1": [
+              0.38317757009345793,
+              0.5807048486300814
+            ],
+            "brier": [
+              0.19295249928554958,
+              0.2916941117274687
+            ],
+            "ece": [
+              0.25476523612818347,
+              0.4118417157557449
+            ]
+          }
+        }
+      }
+    },
+    "random_forest_balanced": {
+      "configuration": {
+        "kind": "random_forest",
+        "class_weight": "balanced",
+        "n_estimators": 500,
+        "max_depth": 5,
+        "min_samples_leaf": 3,
+        "random_state": 20260731
+      },
+      "metrics": {
+        "validation": {
+          "n": 66,
+          "outcome_prevalence": 0.8939393939393939,
+          "predicted_positive_rate": 0.7727272727272727,
+          "accuracy": 0.696969696969697,
+          "macro_f1": 0.4545454545454546,
+          "brier": 0.2260446675835306,
+          "ece": 0.3147131493712997,
+          "confusion_matrix_labels_0_1": [
+            [
+              1,
+              6
+            ],
+            [
+              14,
+              45
+            ]
+          ],
+          "conditional_stratified_bootstrap_95pct": {
+            "accuracy": [
+              0.5909090909090909,
+              0.7882575757575736
+            ],
+            "macro_f1": [
+              0.37735849056603776,
+              0.5636363636363636
+            ],
+            "brier": [
+              0.19890673925783892,
+              0.257774545400602
+            ],
+            "ece": [
+              0.2840931462952575,
+              0.3964649053016734
+            ]
+          }
+        }
+      }
+    }
+  }
+}

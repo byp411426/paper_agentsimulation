@@ -1,0 +1,85 @@
+{
+  "backend": "real",
+  "evidence_status": "DIAGNOSTIC_PILOT",
+  "run_seed": 7201,
+  "planned_steps": 12,
+  "completed_steps": 4,
+  "last_completed_step": 5,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 5,
+    "route_state": {
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000007": -104.0339241862599
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {},
+      "syn_t001_h0000002": {
+        "auto_e1_preview_4hh_seed7201:4:syn_t001_h0000002_r001": {
+          "id": "auto_e1_preview_4hh_seed7201:4:syn_t001_h0000002_r001",
+          "created_step": 4,
+          "status": "accepted",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000002_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000002_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000002:vehicle:1",
+            "depart_step": 5
+          }
+        }
+      },
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000007": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "('home', 'syn_t001_h0000001')",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')"
+    }
+  },
+  "gateway": {
+    "run_id": "e1_preview_4hh_seed7201",
+    "spent": 0.020065,
+    "n_ok": 3,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 5951,
+    "live_completion_tokens": 14114,
+    "logical_prompt_tokens": 5951,
+    "logical_completion_tokens": 14114
+  },
+  "wall_clock_seconds": 177.232866,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t001_h0000002_r001, step=5: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out. - timeout value=120.0, time taken=120.01 seconds",
+  "provider_requests": 4,
+  "elapsed_seconds": 177.24
+}

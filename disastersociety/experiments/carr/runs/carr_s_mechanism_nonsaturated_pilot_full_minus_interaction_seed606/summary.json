@@ -1,0 +1,83 @@
+{
+  "run_seed": 606,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "VALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "controlled_alternate": {
+        "open": true,
+        "capacity_per_step": 8
+      },
+      "controlled_primary": {
+        "open": false,
+        "capacity_per_step": 8
+      }
+    },
+    "n_evacuated_residents": 20,
+    "n_safe_dependents": 32,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 20,
+    "rejections": {
+      "route capacity exhausted": 16,
+      "vehicle allocated to syn_t011_h0000001_r001": 2,
+      "vehicle allocated to syn_t012_h0000031_r001": 3,
+      "vehicle allocated to syn_t017_h0000005_r001": 2,
+      "vehicle allocated to syn_t017_h0000008_r001": 2,
+      "vehicle allocated to syn_t023_h0000012_r001": 1,
+      "vehicle allocated to syn_t023_h0000016_r001": 2,
+      "vehicle allocated to syn_t026_h0000006_r001": 1,
+      "vehicle allocated to syn_t026_h0000012_r001": 2,
+      "vehicle allocated to syn_t028_h0000006_r001": 1,
+      "vehicle allocated to syn_t028_h0000008_r001": 1,
+      "vehicle allocated to syn_t029_h0000014_r001": 3,
+      "vehicle allocated to syn_t030_h0000010_r001": 3,
+      "vehicle allocated to syn_t035_h0000011_r001": 1,
+      "vehicle allocated to syn_t035_h0000025_r001": 2,
+      "vehicle allocated to syn_t037_h0000010_r001": 2,
+      "vehicle allocated to syn_t038_h0000027_r001": 1,
+      "vehicle allocated to syn_t041_h0000005_r001": 1,
+      "vehicle allocated to syn_t041_h0000018_r001": 1,
+      "vehicle allocated to syn_t044_h0000013_r001": 3,
+      "vehicle allocated to syn_t047_h0000019_r001": 2,
+      "vehicle reserved by syn_t011_h0000001_r001": 2,
+      "vehicle reserved by syn_t012_h0000031_r001": 1,
+      "vehicle reserved by syn_t017_h0000005_r001": 2,
+      "vehicle reserved by syn_t017_h0000008_r001": 2,
+      "vehicle reserved by syn_t023_h0000012_r001": 3,
+      "vehicle reserved by syn_t023_h0000016_r001": 2,
+      "vehicle reserved by syn_t026_h0000006_r001": 3,
+      "vehicle reserved by syn_t026_h0000012_r001": 2,
+      "vehicle reserved by syn_t028_h0000006_r001": 3,
+      "vehicle reserved by syn_t028_h0000008_r001": 3,
+      "vehicle reserved by syn_t029_h0000014_r001": 1,
+      "vehicle reserved by syn_t030_h0000010_r001": 1,
+      "vehicle reserved by syn_t035_h0000011_r001": 3,
+      "vehicle reserved by syn_t035_h0000025_r001": 2,
+      "vehicle reserved by syn_t037_h0000010_r001": 2,
+      "vehicle reserved by syn_t038_h0000027_r001": 3,
+      "vehicle reserved by syn_t041_h0000005_r001": 3,
+      "vehicle reserved by syn_t041_h0000018_r001": 3,
+      "vehicle reserved by syn_t044_h0000013_r001": 1,
+      "vehicle reserved by syn_t047_h0000019_r001": 2
+    },
+    "route_closures": [
+      {
+        "step": 5,
+        "route_id": "controlled_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_mechanism_nonsaturated_pilot_full_minus_interaction_seed606",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 172,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0
+  }
+}

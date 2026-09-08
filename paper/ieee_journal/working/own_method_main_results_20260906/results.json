@@ -1,0 +1,305 @@
+{
+  "method": "DisasterSociety",
+  "status": "OFFLINE_RESULTS_FOR_REVIEW",
+  "new_model_calls": 0,
+  "new_simulation_runs": 0,
+  "evaluation_scope": "Structured source provenance, recorded social event fidelity, and logged physical-state invariants; not human behavioral realism or comparative superiority",
+  "aggregation": "All three previously accepted 24-household runs; event counts are descriptive pooled exposure, not independent populations or hypothesis tests",
+  "totals": {
+    "steps": 75,
+    "decisions": 659,
+    "original_cached_responses_checked": 659,
+    "input_packets_with_structural_source_violation": 0,
+    "steps_with_world_conflict": 0,
+    "proposals": 49,
+    "departure_attempts": 65,
+    "executed_departure_parties": 37,
+    "moved_members": 58,
+    "proposal_stages": {
+      "invalid_membership": 12,
+      "declined": 8,
+      "feasible_agreement": 12,
+      "pending_response": 16,
+      "resource_conflict": 1
+    },
+    "agreement_outcomes": {
+      "cancelled": 1,
+      "rejected": 5,
+      "executed": 4,
+      "accepted": 2
+    },
+    "event_records": {
+      "delivery": {
+        "tp": 125,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "processing": {
+        "tp": 59,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "feasible_agreement": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "runs": [
+    {
+      "run": "24hh_seed7201",
+      "source_dir": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905",
+      "households": 24,
+      "members": 44,
+      "steps": 25,
+      "decisions": 247,
+      "original_cached_responses_checked": 247,
+      "input_packets_with_structural_source_violation": 0,
+      "event_records": {
+        "delivery": {
+          "tp": 76,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "processing": {
+          "tp": 32,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "feasible_agreement": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "steps_with_world_conflict": 0,
+      "proposals": 20,
+      "proposal_stages": {
+        "invalid_membership": 4,
+        "declined": 4,
+        "feasible_agreement": 6,
+        "pending_response": 5,
+        "resource_conflict": 1
+      },
+      "agreement_outcomes": {
+        "cancelled": 1,
+        "rejected": 3,
+        "executed": 2
+      },
+      "action_outcomes": {
+        "prepare/executed": 78,
+        "evacuate/executed": 15,
+        "stay/executed": 28,
+        "seek_help/executed": 111,
+        "evacuate/rejected": 13,
+        "offer_help/executed": 2
+      },
+      "departure_attempts": 28,
+      "executed_departure_parties": 13,
+      "moved_members": 22,
+      "household_terminal_counts": {
+        "none_safe": 11,
+        "partly_safe": 2,
+        "all_safe": 11
+      }
+    },
+    {
+      "run": "24hh_seed8301",
+      "source_dir": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905",
+      "households": 24,
+      "members": 44,
+      "steps": 25,
+      "decisions": 188,
+      "original_cached_responses_checked": 188,
+      "input_packets_with_structural_source_violation": 0,
+      "event_records": {
+        "delivery": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "processing": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "feasible_agreement": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "steps_with_world_conflict": 0,
+      "proposals": 14,
+      "proposal_stages": {
+        "declined": 2,
+        "feasible_agreement": 3,
+        "pending_response": 8,
+        "invalid_membership": 1
+      },
+      "agreement_outcomes": {
+        "executed": 1,
+        "rejected": 1,
+        "accepted": 1
+      },
+      "action_outcomes": {
+        "prepare/executed": 61,
+        "seek_help/executed": 86,
+        "stay/executed": 21,
+        "evacuate/executed": 14,
+        "evacuate/rejected": 6
+      },
+      "departure_attempts": 20,
+      "executed_departure_parties": 13,
+      "moved_members": 18,
+      "household_terminal_counts": {
+        "all_safe": 11,
+        "partly_safe": 1,
+        "none_safe": 12
+      }
+    },
+    {
+      "run": "24hh_seed9401",
+      "source_dir": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905",
+      "households": 24,
+      "members": 44,
+      "steps": 25,
+      "decisions": 224,
+      "original_cached_responses_checked": 224,
+      "input_packets_with_structural_source_violation": 0,
+      "event_records": {
+        "delivery": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "processing": {
+          "tp": 13,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "feasible_agreement": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "steps_with_world_conflict": 0,
+      "proposals": 15,
+      "proposal_stages": {
+        "declined": 2,
+        "feasible_agreement": 3,
+        "pending_response": 3,
+        "invalid_membership": 7
+      },
+      "agreement_outcomes": {
+        "executed": 1,
+        "rejected": 1,
+        "accepted": 1
+      },
+      "action_outcomes": {
+        "prepare/executed": 59,
+        "stay/executed": 35,
+        "seek_help/executed": 113,
+        "evacuate/executed": 12,
+        "evacuate/rejected": 5
+      },
+      "departure_attempts": 17,
+      "executed_departure_parties": 11,
+      "moved_members": 18,
+      "household_terminal_counts": {
+        "all_safe": 10,
+        "none_safe": 14
+      }
+    }
+  ],
+  "negative_and_positive_controls": [
+    {
+      "run": "24hh_seed7201",
+      "foreign_receipt_detected": true,
+      "invented_agreement_adds_false_positive": true,
+      "omitted_agreement_adds_false_negative": true,
+      "empty_event_set_is_not_full_score": true,
+      "unexecuted_member_transfer_detected": true,
+      "valid_quiet_step_passes": true
+    },
+    {
+      "run": "24hh_seed8301",
+      "foreign_receipt_detected": true,
+      "invented_agreement_adds_false_positive": true,
+      "omitted_agreement_adds_false_negative": true,
+      "empty_event_set_is_not_full_score": true,
+      "unexecuted_member_transfer_detected": true,
+      "valid_quiet_step_passes": true
+    },
+    {
+      "run": "24hh_seed9401",
+      "foreign_receipt_detected": true,
+      "invented_agreement_adds_false_positive": true,
+      "omitted_agreement_adds_false_negative": true,
+      "empty_event_set_is_not_full_score": true,
+      "unexecuted_member_transfer_detected": true,
+      "valid_quiet_step_passes": true
+    }
+  ],
+  "sources": {
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/accepted.json": "cffa44908b417a9a49eaf90a6fd4ad7811d3bba8297fd325e59fefcde0532222",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/events/events.jsonl": "6281f1d7dcab0f02b2890c064a90f8abaf6143d6c21e6191c57d78ec90bd4a86",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/decision_inputs.jsonl": "32362b05f2bf1dfcdf8355be725d3c43fe5248178e754b9b462a16a9eac9e025",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/llm_calls.jsonl": "1385579f05532553ec522d3c7c6a1518f4cec819820ff733ffd2e2de4004839b",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/initial_state.json": "ad6cc56eb62d24581049ae50c47d46b1664351bf195c13dcad5204138d076406",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/message_ledger.jsonl": "dd237f1670142c509dbc61e5d151539595fd6de4551a8e15d0566951c20aec2c",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/commitment_ledger.jsonl": "16fdc1e334b6b5260f553e8742a2d9f7e2ed3a3cf7a1dd7e58d13e549310dc8b",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/official_receipts.jsonl": "141aff809503cbaf3d3bb54556bf7a0542038551da63067e7f150488e8a6c769",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/execution_config.yaml": "e628f8575efc0e8d5c18512ce7957ca73e9683534283523fe0e8cf8ceec77340",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/cache.sqlite": "934cf209c85f96732be60a0e78726ea725196aeb70aea1b49c877a9befb321d1",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/accepted.json": "ee5e3025a2a3b2438f5cca9a2b4e5543e1eefe5284a8d6b0fcbe7b7b5efd6709",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/events/events.jsonl": "665cbeb682d2fcfc8543300d6de349b8d43fc24c2acd5cae5c1b358b15c4e21e",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/decision_inputs.jsonl": "9f47a59a00f4d5bbab0406b4ffacff35c95e4082c3ca5a0b121b748fcb1ed00c",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/llm_calls.jsonl": "621ae0f6a8dafb9c8aed29161b622a2fbafa7e0476f408216d06a6cd3dc35985",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/initial_state.json": "3d2b2363ddb996ceb1f807423a190ae554562a64d41e1da51bf27411c6cb0b4f",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/message_ledger.jsonl": "76c234619ebbb7b50593bbc0aff83183afcbc7ea07529bdfc32623e57ab06848",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/commitment_ledger.jsonl": "b1b317cec250bb177d486930c60a904d95efead0a4aaec8a43e656c873ffa6d5",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/official_receipts.jsonl": "91bc0e823065c734b0036ddd872e410383bd7b1ce3029000c73ad2c25a054713",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/execution_config.yaml": "e628f8575efc0e8d5c18512ce7957ca73e9683534283523fe0e8cf8ceec77340",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/cache.sqlite": "c3b0afdb8c6c4cd234f8b3a4e55e26dd1f6f3e6dd8d2ae48a433aea7fd42ccd4",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/accepted.json": "3128ff2a8b21bd89902acabd3c4bf00096a9dc08e9f5aa550425dfe427501296",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/events/events.jsonl": "a2177c224eb20d12f10214788fd0d61f5867f1dab9c4f885e2549a42f1b87abf",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/decision_inputs.jsonl": "cf8322d4fe73581c0d2645d37f6bf9431aca991e291109e8cd860cfd3581df04",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/llm_calls.jsonl": "1bc0f67b60dd2d767c3f6d0cdd79a143d1ca3e62b676f2dca99d77ffc93255d1",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/initial_state.json": "cc220b6ba033fd5ed1b3fbba4c0fbcdf01d73775eeccc864a166fffe5f3a3857",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/message_ledger.jsonl": "6c7792e44aec81422ea45bb85a7bc35c607bf67868d80f0f4b3b6cfa2ea68ecf",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/commitment_ledger.jsonl": "cc566d7f8a09049024cf70aa513df3180a2195013b49d07474a9eef46e7958a9",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/official_receipts.jsonl": "e2dcb14507761db38c5e4516f629fe8cdc7d0d87f82e8334adab3626b542422f",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/execution_config.yaml": "e628f8575efc0e8d5c18512ce7957ca73e9683534283523fe0e8cf8ceec77340",
+    "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/cache.sqlite": "4f866551b6c7d460b679d0cd4c79595e59c510b1be50f50e28cf060b64f4e913"
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "world": {
+    "step": 0,
+    "route_state": {
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000007": -104.0339241862599
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {},
+      "syn_t001_h0000002": {},
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000007": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "('home', 'syn_t001_h0000001')",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')"
+    }
+  },
+  "agents": [
+    {
+      "id": "syn_t001_h0000001_r001",
+      "household_id": "syn_t001_h0000001",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000002_r001",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000002_r002",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000005_r001",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000005_r002",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000007_r001",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000007_r003",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    }
+  ],
+  "graph_edges": [
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000002_r001"
+    ],
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000002_r002"
+    ],
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000005_r001"
+    ],
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000005_r002"
+    ],
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000007_r001"
+    ],
+    [
+      "syn_t001_h0000001_r001",
+      "syn_t001_h0000007_r003"
+    ],
+    [
+      "syn_t001_h0000002_r001",
+      "syn_t001_h0000002_r002"
+    ],
+    [
+      "syn_t001_h0000002_r001",
+      "syn_t001_h0000005_r001"
+    ],
+    [
+      "syn_t001_h0000002_r001",
+      "syn_t001_h0000005_r002"
+    ],
+    [
+      "syn_t001_h0000002_r001",
+      "syn_t001_h0000007_r001"
+    ],
+    [
+      "syn_t001_h0000002_r001",
+      "syn_t001_h0000007_r003"
+    ],
+    [
+      "syn_t001_h0000002_r002",
+      "syn_t001_h0000005_r001"
+    ],
+    [
+      "syn_t001_h0000002_r002",
+      "syn_t001_h0000005_r002"
+    ],
+    [
+      "syn_t001_h0000002_r002",
+      "syn_t001_h0000007_r001"
+    ],
+    [
+      "syn_t001_h0000002_r002",
+      "syn_t001_h0000007_r003"
+    ],
+    [
+      "syn_t001_h0000005_r001",
+      "syn_t001_h0000005_r002"
+    ],
+    [
+      "syn_t001_h0000005_r001",
+      "syn_t001_h0000007_r001"
+    ],
+    [
+      "syn_t001_h0000005_r001",
+      "syn_t001_h0000007_r003"
+    ],
+    [
+      "syn_t001_h0000005_r002",
+      "syn_t001_h0000007_r001"
+    ],
+    [
+      "syn_t001_h0000005_r002",
+      "syn_t001_h0000007_r003"
+    ],
+    [
+      "syn_t001_h0000007_r001",
+      "syn_t001_h0000007_r003"
+    ]
+  ],
+  "event_schedule": {
+    "7": [
+      {
+        "event_id": "order_m_1",
+        "kind": "official_order",
+        "severity": "mandatory",
+        "issued_step": 7,
+        "recipient_id": "syn_t001_h0000005_r001"
+      },
+      {
+        "event_id": "order_m_2",
+        "kind": "official_order",
+        "severity": "mandatory",
+        "issued_step": 7,
+        "recipient_id": "syn_t001_h0000001_r001"
+      },
+      {
+        "event_id": "order_m_4",
+        "kind": "official_order",
+        "severity": "mandatory",
+        "issued_step": 7,
+        "recipient_id": "syn_t001_h0000002_r001"
+      }
+    ],
+    "3": [
+      {
+        "event_id": "order_v_3",
+        "kind": "official_order",
+        "severity": "voluntary",
+        "issued_step": 3,
+        "recipient_id": "syn_t001_h0000002_r001"
+      }
+    ],
+    "9": [
+      {
+        "event_id": "closure_1",
+        "kind": "route_closure",
+        "route_id": "tiger_primary",
+        "issued_step": 9
+      }
+    ]
+  }
+}

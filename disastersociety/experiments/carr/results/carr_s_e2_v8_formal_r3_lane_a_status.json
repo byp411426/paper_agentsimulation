@@ -1,0 +1,18 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r3",
+  "lane": "a",
+  "pid": 72756,
+  "config": "experiments/carr/configs/carr_s_e2_v8_formal_r3.yaml",
+  "declared_seeds": [
+    1103,
+    1301,
+    1511,
+    1709,
+    1907,
+    2111
+  ],
+  "completed_seeds": [],
+  "current_seed": 1103,
+  "state": "STOPPED_AFTER_PEER_ABORT",
+  "stop_reason": "Lane B seed 1201 full ABORTED after two 240-second backend timeouts. The predeclared abort rule stopped new paid execution; the in-progress seed 1103 full-minus-memory artifact remains partial and excluded."
+}

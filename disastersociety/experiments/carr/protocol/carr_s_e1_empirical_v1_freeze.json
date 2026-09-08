@@ -1,0 +1,166 @@
+{
+  "protocol_id": "carr_s_e1_empirical_v1",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_BEFORE_PAID_EXECUTION",
+  "track": "Carr-S",
+  "purpose": "Evaluate aggregate empirical reasonableness and household/social-process constraints in a natural-timing Carr-informed controlled scenario.",
+  "design": {
+    "decision_model": "packy-deepseek-v4-flash",
+    "thinking_mode": "enabled",
+    "mock_behavior_evidence_allowed": false,
+    "n_households": 50,
+    "fixed_cohort_seed": 20260802,
+    "model_and_delivery_seeds": [
+      3109,
+      3203,
+      3301,
+      3407,
+      3511
+    ],
+    "independent_replication_unit": "complete seed run",
+    "total_steps": 25,
+    "step_minutes": 30,
+    "order_step": 1,
+    "maximum_post_order_horizon_hours": 12.0,
+    "initial_plan": null,
+    "preset_departure_step": null,
+    "road_closure_event": null,
+    "household_decision_members": "one or two adults selected from an intact donor household",
+    "dependent_members": "children retain execution, care, location, and safety state without LLM calls",
+    "focal_resident": "first adult by donor SPORDER in each sampled household",
+    "social_graph": "family clique plus controlled tract-proximity and small-world edges; not empirically calibrated",
+    "warning_delivery": "delivery_params.yaml calibrated to Carr survey official-receipt margin",
+    "stop_rule": "Run all five seeds regardless of interim similarity. Stop after the first non-VALID run and do not retry automatically.",
+    "paid_job_isolation": "Do not overlap E1 paid execution with the active E2 r4 matrix or another paid experiment.",
+    "carr_r_test_split_opened": false
+  },
+  "offline_preflight": {
+    "n_households": 50,
+    "n_decision_residents": 81,
+    "n_dependents": 15,
+    "n_social_graph_edges": 261,
+    "focal_age_65plus": 12,
+    "households_size_3plus": 10,
+    "households_zero_vehicle": 5,
+    "households_income_under_50k": 28,
+    "two_adult_households": 31,
+    "initial_plans_present": 0,
+    "controlled_departure_target_in_prompt": false,
+    "test_suite_at_freeze": "91 passed"
+  },
+  "estimands": {
+    "external_aggregate": [
+      "mean focal-resident evacuation rate across seeds versus Carr Q9.1 reference",
+      "mean order-to-departure CDF through 12 hours versus the temporally consistent Carr reference",
+      "age, household-size, vehicle, and income evacuation-gap directions and magnitudes"
+    ],
+    "internal_process": [
+      "complete household safe departure rate",
+      "coordinated departure rate",
+      "dependent safety rate",
+      "resource-conflict and dependent-left-behind rejection rates",
+      "message delivery and disposition funnel"
+    ],
+    "inference": "Across-seed mean, SD, MCSE, and 95 percent t interval; all invalid or unavailable denominators reported.",
+    "channel_boundary": "Official receipt is calibration, and simulation family/neighbor message prevalence is not equated to survey multi-select channel prevalence or first-heard shares."
+  },
+  "claim_boundary": {
+    "historical_reconstruction": false,
+    "historical_road_timeline": false,
+    "population_representative": false,
+    "person_level_population_calibrated": false,
+    "behavior_realism_established_before_complete_audit": false,
+    "blind_human_or_expert_rating_included": false,
+    "carr_r_test_split_opened": false
+  },
+  "frozen_artifacts": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e1_empirical_deepseek_v1.yaml",
+      "sha256": "c7d1c33894f88e098b414532c5102ba615e477d703b923797a1e4d471b6ace0d"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "sha256": "7462f20d0dbb5fd0768afca2bde24f6520b6bdf03cd6ae98f5693987de7666ea"
+    },
+    "empirical_resident": {
+      "path": "ds/agents/carr_empirical.py",
+      "sha256": "373747bfc765ece39e659de8bd3a7bf3825e16a75a0c268519a6ffe80329172a"
+    },
+    "empirical_runner": {
+      "path": "experiments/carr/empirical_runner.py",
+      "sha256": "50af225f651b4e704835850a99013ff49b00f7e8ce0334fd5a06b7542077631b"
+    },
+    "execution_supervisor": {
+      "path": "scripts/run_carr_e1_empirical.py",
+      "sha256": "814fed27e5614c0409b6e2fb0a6dff98dab7780b84d1745b038dca554041851b"
+    },
+    "summarizer": {
+      "path": "scripts/summarize_carr_e1_empirical.py",
+      "sha256": "5b96583085c91f087d439d1172f1099b3bb66de16eb98ae06da4e76abb436384"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "sha256": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    },
+    "network_builder": {
+      "path": "ds/population/networks.py",
+      "sha256": "f34213c7d031a0ac39fb3dca63bbfe8ccfdce821270826bd6b085b729a2a5b0f"
+    },
+    "synthetic_households": {
+      "path": "eventpacks/carr_2018/population/pilot_seed42_n1000/synthetic_households.csv",
+      "sha256": "f6dce2cae63839742bd27cf90230241aaf5a08b0afc924e28f227446dc781219"
+    },
+    "synthetic_persons": {
+      "path": "eventpacks/carr_2018/population/pilot_seed42_n1000/synthetic_persons.csv",
+      "sha256": "ec293c8ce7a223d1a2bdf103506cc00b2b2ea934ae0c6d671661e0b8b28e5adc"
+    },
+    "synthetic_population_qa": {
+      "path": "eventpacks/carr_2018/population/pilot_seed42_n1000/synthetic_population_qa.json",
+      "sha256": "304e839417fcd6f2e2d797d558947a66cf5b778cc82d5ff6fb14894484108043"
+    },
+    "warning_source": {
+      "path": "eventpacks/carr_2018/warnings/warnings_multi.csv",
+      "sha256": "a630ce6dc27cadc6eca17f78f10ff721df8e843db7450c1ddc028ef21f4f17ac"
+    },
+    "delivery_parameters": {
+      "path": "eventpacks/carr_2018/warnings/delivery_params.yaml",
+      "sha256": "89e3bc80d919717b2a31820876cf071e47710cc71fc27879a8fa3cf2cd2b9aca"
+    },
+    "route_asset": {
+      "path": "eventpacks/carr_2018/environment/west_redding_controlled_routes.json",
+      "sha256": "135e50797b706fe4aaab3b81814c24a279ba7310373ad756384ee3763010caaf"
+    },
+    "tract_geometry": {
+      "path": "eventpacks/carr_2018/population/tiger/tracts/shasta_tracts.geojson",
+      "sha256": "4d3d035ad0560df2c1a3af059f7257d516dbf20de7a39d246f32e01920d23e8d"
+    },
+    "empirical_reference": {
+      "path": "experiments/carr/results/carr_s_e1_empirical_reference/reference_summary.json",
+      "sha256": "0d899eb35bce343903ab91e05f885e9a329d5d66194edaac437b2712b423d691"
+    },
+    "reference_freeze": {
+      "path": "experiments/carr/protocol/carr_s_e1_empirical_reference_v1_1_freeze.json",
+      "sha256": "17b508c322a6b8afb24f810558f0637e76f63a185a1197f1ae5b92eacb533bb4"
+    }
+  }
+}

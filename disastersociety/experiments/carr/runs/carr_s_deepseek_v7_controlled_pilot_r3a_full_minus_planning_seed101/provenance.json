@@ -1,0 +1,154 @@
+{
+  "git_sha": "ec2d069ec1da0e357f6987e4c3ba1527ed1e5a85",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_deepseek_v7_controlled_pilot_r3a_full_minus_planning_seed101",
+      "total_steps": 10,
+      "step_minutes": 30,
+      "seed": 101
+    },
+    "llm": {
+      "decision_model": "packy-deepseek-v4-flash",
+      "models_config": "configs/models.yaml",
+      "temperature": 0.0,
+      "max_concurrency": 8,
+      "budget_usd": 1.0,
+      "fallback_threshold": 0.01,
+      "abort_on_call_failure": true
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "V7_CONTROLLED_MECHANISM_BACKEND_PILOT",
+      "metric_protocol_version": "v7",
+      "prompt_version": "carr_s_controlled_resident_v7",
+      "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 4,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4
+      ],
+      "depart_step": 5,
+      "coordination_deadline_step": 7,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 4,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 1.0,
+      "household_dm_delivery_probability": 1.0,
+      "community_message_delivery_probability": 0.15,
+      "abort_matrix_on_nonvalid_run": true,
+      "route_observation_mode": "feedback_gated",
+      "seed_controlled_initial_plan": true,
+      "declared_backend_pilot": {
+        "paid_execution_authorized": true,
+        "authorization_basis": "repeated explicit user authorization in the active task",
+        "seeds": [
+          101,
+          202,
+          303
+        ],
+        "conditions": [
+          "full",
+          "full_minus_memory",
+          "full_minus_feedback",
+          "full_minus_planning",
+          "full_minus_interaction"
+        ],
+        "execute_all_cells_regardless_of_interim_effect_direction": true,
+        "stop_only_on_hard_failure": true,
+        "exclusion_rule": "Exclude a paired mechanism contrast if either run is not VALID. Preserve every raw attempt under its original run ID; never overwrite or backfill.",
+        "formal_seed_count_frozen": false,
+        "formal_matrix_authorized": false,
+        "carr_r_test_split_opened": false,
+        "backend_mode": "thinking enabled, reasoning effort high"
+      },
+      "metric_contract": {
+        "memory": {
+          "metric": "conditional_warning_retention_rate",
+          "denominator": "coordinators who actually received the warning",
+          "direction": "positive"
+        },
+        "feedback": {
+          "metric": "preclosure_primary_to_postclosure_alternate_update_rate",
+          "denominator": "decision residents with the controlled pre-closure primary plan",
+          "direction": "positive"
+        },
+        "planning": {
+          "metric": "successful_postclosure_replan_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        },
+        "interaction": {
+          "metric": "post_closure_feasible_commitment_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        }
+      },
+      "design_contract": {
+        "resident_route_information": "perceived snapshot, never a direct live-world reference",
+        "feedback_enabled": "refresh perceived routes after world changes",
+        "feedback_disabled": "retain the frozen pre-closure perceived route snapshot",
+        "physical_arbitration": "always uses the true current world state",
+        "initial_plan_scope": "private resident state only",
+        "initial_plan_route": "tiger_primary",
+        "initial_plan_depart_step": 5,
+        "shared_commitment_at_initialization": false,
+        "intervention": "primary route closes at paired-seed-selected step 3 or 4"
+      },
+      "claim_boundary": {
+        "purpose": "Test whether structurally isolated memory, feedback, planning, and interaction paths remain directionally distinguishable under the declared DeepSeek thinking-high backend, while increasing the controlled cohort from two to four households.",
+        "formal_evidence": false,
+        "mock_effect_evidence_allowed": false,
+        "carr_empirical_validation": false,
+        "historical_closure_reconstruction": false,
+        "population_representative": false,
+        "test_split_opened": false
+      },
+      "route_semantics": {
+        "geometry": "sourced 2018 TIGER/Line road network",
+        "obstruction": "algorithmic controlled perturbation",
+        "historical_closure_observed": false,
+        "traffic_scope": "route-level capacity, not microscopic traffic reconstruction"
+      },
+      "condition": "full_minus_planning"
+    }
+  },
+  "models": [
+    "packy-deepseek-v4-flash"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "models_config": {
+    "path": "configs/models.yaml",
+    "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+  },
+  "credential_environment_name": "PACKY_API_KEY",
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "e84a0ad6672c3170dc83d24ca8dcb9011cb79c0f57992396e3eae24694b64283"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "9cec2a1512ee5e9f1cbfe4717e8b8944bdc50268f0fae92a0bcd3ba90d12c95a"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    }
+  }
+}

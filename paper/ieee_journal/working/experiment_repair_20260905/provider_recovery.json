@@ -1,0 +1,9 @@
+{
+  "reason": "Provider HTTP 520 at step 6; bounded retry of transient backend errors with 60/120 second backoff; fatal auth/billing still immediate abort.",
+  "max_attempts": 3,
+  "same_behavior_code": true,
+  "same_prompts": true,
+  "exact_successful_responses_reused_from": "live_final/cache.sqlite",
+  "no_state_splicing": true,
+  "gateway_sha256": "ae4194ee34190208d42d1a4ce4cc85ceacde2371c09ddbfc5712abb7f8a23445"
+}

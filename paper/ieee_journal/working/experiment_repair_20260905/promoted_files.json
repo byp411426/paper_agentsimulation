@@ -1,0 +1,92 @@
+[
+  {
+    "file": "ds/agents/e1_contracts.py",
+    "before_sha256": null,
+    "after_sha256": "72e6558cc61c19c719be5ba74e7cc9dcb2e05ac4733926f6792f386425deda81"
+  },
+  {
+    "file": "ds/agents/carr_empirical_v2.py",
+    "before_sha256": "4f8bf3bc754b36e79a11b032a1b3f2c8de649f2b972b7b0d8439d6a5cc4e258e",
+    "after_sha256": "bd5b7e644ba7d932c8d9789f6ecf35dc47a9f4d7df8cf15b74a49dcb9d668329"
+  },
+  {
+    "file": "ds/world/carr_empirical_v2.py",
+    "before_sha256": "16ae1d71d80cf526ed9331e58e92ecbbebc8691a551f827771a7292bb7e1fa18",
+    "after_sha256": "f0c8dfe744672c26abd6218a6c5766482125396c1e3b9535fff2a2aee0c30d14"
+  },
+  {
+    "file": "ds/interaction/carr_empirical_v2.py",
+    "before_sha256": "3b97058b415f07b5a312716d5d95b9ef7b764769f1db322470c5a5724a565e16",
+    "after_sha256": "7e41de9e90a09a376f3871ff6b7e71dd1db2d6aac57c54bcf67c649734c56f40"
+  },
+  {
+    "file": "ds/households/state.py",
+    "before_sha256": "b30528df862ddd1f00783c4c6116cd5e15722f8c29b8708da6a7e816cdf801cf",
+    "after_sha256": "28504e6560ed6e1a76424a3cc6e30759cabcb674dbca4b81d9932567ae9963ca"
+  },
+  {
+    "file": "ds/kernel/engine.py",
+    "before_sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28",
+    "after_sha256": "b28039c733505f8a70c154da9d3bbf851974641fbcc8c9dd35609d14384b7773"
+  },
+  {
+    "file": "experiments/carr/empirical_v2_runner.py",
+    "before_sha256": "af2ba9609f13314e2921c707fceaa3071040c7044fbb7be565a0f819e24f8306",
+    "after_sha256": "68ec033daa2d031578d98b7d19a0b1dc2c6f16a673e891f59d32d7fcbcbac4a5"
+  },
+  {
+    "file": "scripts/run_carr_e1_v2_preflight.py",
+    "before_sha256": "d09b51116b9e0b1df6516f6cb1bc8b723ea28038fb5cf51190846f97469cef05",
+    "after_sha256": "3243433335c002c4386afb6a18bfa439eb203d6efc52e1398b0a69d202ef7c1a"
+  },
+  {
+    "file": "tests/test_carr_e1_v2.py",
+    "before_sha256": "d6b15683e37084b24569b6294d07722510f976cae75c4b428f5bfd4690f59851",
+    "after_sha256": "f7cb93d977e06e39e641649b8a826d620aa29752fb8c7105d42e0b0fb8a3cbd4"
+  },
+  {
+    "file": "tests/test_carr_interaction_v2.py",
+    "before_sha256": "e783d40c09f2b94a8fca42baec74498eb565cd57ea7b26fa65d1e5643ae7f5c9",
+    "after_sha256": "41698e1985b37affe8145a96b96e6611d9867908460b90a1c60479141fe11389"
+  },
+  {
+    "file": "experiments/carr/configs/carr_s_e1_repaired_24.yaml",
+    "before_sha256": null,
+    "after_sha256": "1ce74041c1e773c3bb952201fa314bbde2ece1c2c28e15d35fb0031c9cd596b4"
+  },
+  {
+    "file": "experiments/carr/configs/carr_s_e1_repaired_100.yaml",
+    "before_sha256": null,
+    "after_sha256": "5bd4293e781f37fc74c173de604b1f0e0e9e41e54f77fb36acec4ad4315eb5c0"
+  },
+  {
+    "file": "tests/test_e1_process_repair.py",
+    "before_sha256": null,
+    "after_sha256": "9c57d90c6c6b4a276271c8b67a326d9ed06b7c8add08c07ed1ff59edbd3ba1ac"
+  },
+  {
+    "file": "scripts/analyze_carr_e1_process.py",
+    "before_sha256": null,
+    "after_sha256": "8c3c93ae5eeb3599fea5ce905674624b42f91109cbd2f6a985e585d1cdbf92fd"
+  },
+  {
+    "file": "configs/models_e1_repaired.yaml",
+    "before_sha256": null,
+    "after_sha256": "6daabc352574043652b514175d2146dfe8bd90eb38d121484c41af1367ee6ba3"
+  },
+  {
+    "file": "ds/llm/gateway.py",
+    "before_sha256": "132b787e400d515c0c3f857c5d4a21a9b87d9743d24f8364935e9e7c57ae70c0",
+    "after_sha256": "ae4194ee34190208d42d1a4ce4cc85ceacde2371c09ddbfc5712abb7f8a23445"
+  },
+  {
+    "file": "tests/test_provider_retry.py",
+    "before_sha256": null,
+    "after_sha256": "5a0e0e2423f61f8da00902c9c5b312a9f1df7e064c0a049ba9aacf11c9d2e003"
+  },
+  {
+    "file": "tests/test_carr_pilot.py",
+    "before_sha256": "6a4a803fc9bed23f6b482370bde4a8a0ad6f32771c8262f2943431dd33162a1b",
+    "after_sha256": "84bbf8cfb3349a51152e99e6bd6d7c8c70ca8b2398aea5891325583a0133b32e"
+  }
+]

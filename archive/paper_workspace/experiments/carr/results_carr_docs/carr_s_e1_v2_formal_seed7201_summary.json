@@ -1,0 +1,30 @@
+{
+  "n_households": 24,
+  "n_executed_parties": 10,
+  "n_rejected_parties": 0,
+  "complete_safe_household_departure_rate": 0.4166666666666667,
+  "coordinated_household_rate": 0.25,
+  "split_departure_household_rate": 0.0,
+  "care_recipient_left_behind_count": 0,
+  "vehicle_conflict_count": 0,
+  "capacity_rejection_count": 0,
+  "caregiver_violation_count": 0,
+  "message_funnel": {
+    "sent": 0,
+    "delivered": 0,
+    "processed": 0,
+    "accepted": 0,
+    "rejected": 0
+  },
+  "official_receipt_counts": {
+    "voluntary": 5,
+    "mandatory": 15
+  },
+  "commitment_counts": {
+    "accepted": 5,
+    "cancelled": 0,
+    "executed": 10,
+    "rejected": 0
+  },
+  "rejection_reasons": {}
+}

@@ -1,0 +1,55 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r3",
+  "frozen_at": "2026-08-02T12:04:23+08:00",
+  "status": "FROZEN_DETACHED_INFRASTRUCTURE_RECOVERY",
+  "predecessor_protocol_id": "carr_s_e2_v8_formal_r2",
+  "predecessor_recovery_freeze_sha256": "2597c069de280c1889ff68c4f79fca3561cac3221d4162dca4be383d00bcfd80",
+  "recovery_trigger": {
+    "type": "repeated_host_task_interruption",
+    "observation": "The r2 seed1103 and seed1201 full processes disappeared when the active Codex task changed. Neither directory contains summary.json or mechanism_metrics.json.",
+    "scientific_failure": false,
+    "provider_failure_observed": false,
+    "selection_made_without_scientific_outcome_inspection": true
+  },
+  "prior_attempt_disposition": {
+    "rule": "All r1 and r2 artifacts are operational audit records only and are excluded from the selected scientific matrix.",
+    "cross_attempt_pairing_allowed": false,
+    "r2_artifacts": [
+      {
+        "seed": 1103,
+        "condition": "full",
+        "terminal_status": "HOST_INTERRUPTED_WITHOUT_TERMINAL_SUMMARY",
+        "events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "llm_calls_sha256": "a507115defa38eee84d14de93ff879ebe8686c0297a54274f6af90fa1701a8da",
+        "provenance_sha256": "50e6dac44955594fae2942d130fc07f3d8cae5429d98d9c92ed8b03e6c5bddea"
+      },
+      {
+        "seed": 1201,
+        "condition": "full",
+        "terminal_status": "HOST_INTERRUPTED_WITHOUT_TERMINAL_SUMMARY",
+        "events_sha256": "d6ca76fbe05acdf56adfcc71239185879addd14861022ce74a57e7b85735de45",
+        "llm_calls_sha256": "92f053a8b8d576a7b6e575bee921aa954ec6af787db10e6f9f9f90e7d08fd115",
+        "provenance_sha256": "72365ffa59034bf4b5118c052b95e012aa89bfff0ca9e390723134d3d769ba1b"
+      }
+    ]
+  },
+  "r3_execution_contract": {
+    "config": "experiments/carr/configs/carr_s_e2_v8_formal_r3.yaml",
+    "config_sha256": "c891a3c993a13c6ac6c137f2576754b7b6485331c76e8bf44c4d42dc04e29785",
+    "single_seed_runner": "scripts/run_carr_e2_v8_formal.py",
+    "single_seed_runner_sha256": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320",
+    "detached_lane_runner": "scripts/run_carr_e2_v8_detached_lane.py",
+    "detached_lane_runner_sha256": "9c6d426c3217801d5e0de544690f42b6d67ba2d6d3aa1dda704714c3bca04e42",
+    "science_configuration_equal_to_r2_and_r1": true,
+    "allowed_science_changes": [],
+    "execution_transport": "two detached nohup lanes; six predeclared seeds per lane",
+    "lane_a_seeds": [1103, 1301, 1511, 1709, 1907, 2111],
+    "lane_b_seeds": [1201, 1409, 1601, 1801, 2003, 2203],
+    "selection_rule": "Use r3 for all 12 frozen seeds and all five frozen conditions. Stop a lane on the first subprocess error or non-five-for-five-VALID seed batch. Never retry automatically.",
+    "n_selected_seed_condition_runs": 60,
+    "carr_r_test_split_opened": false,
+    "no_direction_based_stopping": true,
+    "mock_eligible_for_effect_evidence": false
+  },
+  "claim_boundary": "The r3 amendment changes only operational run identity and detached execution transport after repeated host interruptions. It does not change the cohort, model, prompt, conditions, seeds, metrics, estimands, sample size, or scientific exclusion rules."
+}

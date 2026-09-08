@@ -1,0 +1,239 @@
+# Carr E1 v2 PUMS field codebook.
+# Source: 2018 ACS 5-year PUMS Data Dictionary (November 14, 2019).
+# source_sha256: 843a18e15b6cb7c7326261d478947a1415c4674c62419a8d01946a5a5df4d5fd
+# The raw dictionary is archived at:
+#   eventpacks/carr_2018/raw/PUMS_Data_Dictionary_2018.txt
+source:
+  name: 2018 ACS 5-year PUMS Data Dictionary
+  url: https://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2018.txt
+  sha256: 843a18e15b6cb7c7326261d478947a1415c4674c62419a8d01946a5a5df4d5fd
+
+fields:
+  TEN:
+    label: Tenure
+    na_code: b
+    codes:
+      "1": Owned with mortgage or loan (include home equity loans)
+      "2": Owned free and clear
+      "3": Rented
+      "4": Occupied without payment of rent
+  BLD:
+    label: Units in structure
+    na_code: bb
+    codes:
+      "01": Mobile home or trailer
+      "02": One-family house detached
+      "03": One-family house attached
+      "04": 2 Apartments
+      "05": 3-4 Apartments
+      "06": 5-9 Apartments
+      "07": 10-19 Apartments
+      "08": 20-49 Apartments
+      "09": 50 or more apartments
+      "10": Boat, RV, van, etc.
+  ACCESS:
+    label: Access to the Internet
+    na_code: b
+    codes:
+      "1": Yes, by paying a cell phone company or Internet service provider
+      "2": Yes, without paying a cell phone company or Internet service provider
+      "3": No access to the Internet at this house, apartment, or mobile home
+  HISPEED:
+    label: Broadband (high speed) Internet service such as cable, fiber optic, or DSL service
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  SMARTPHONE:
+    label: Smartphone
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  HUPAC:
+    label: HH presence and age of children
+    na_code: b
+    codes:
+      "1": With children under 6 years only
+      "2": With children 6 to 17 years only
+      "3": With children under 6 years and 6 to 17 years
+      "4": No children
+  HUPAOC:
+    label: HH presence and age of own children
+    na_code: b
+    codes:
+      "1": Presence of own children under 6 years only
+      "2": Presence of own children 6 to 17 years only
+      "3": Presence of own children under 6 years and 6 to 17 years
+      "4": No own children present
+  HUPARC:
+    label: HH presence and age of related children
+    na_code: b
+    codes:
+      "1": Presence of related children under 6 years only
+      "2": Presence of related children 6 to 17 years only
+      "3": Presence of related children under 6 years and 6 to 17 years
+      "4": No related children present
+  WIF:
+    label: Workers in family during the past 12 months
+    na_code: b
+    codes:
+      "0": No workers
+      "1": 1 worker
+      "2": 2 workers
+      "3": 3 or more workers in family
+  RELP:
+    label: Relationship
+    na_code: bb
+    codes:
+      "00": Reference person
+      "01": Husband/wife
+      "02": Biological son or daughter
+      "03": Adopted son or daughter
+      "04": Stepson or stepdaughter
+      "05": Brother or sister
+      "06": Father or mother
+      "07": Grandchild
+      "08": Parent-in-law
+      "09": Son-in-law or daughter-in-law
+      "10": Other relative
+      "11": Roomer or boarder
+      "12": Housemate or roommate
+      "13": Unmarried partner
+      "14": Foster child
+      "15": Other nonrelative
+      "16": Institutionalized group quarters population
+      "17": Noninstitutionalized group quarters population
+  SCHL:
+    label: Educational attainment
+    na_code: bb
+    codes:
+      "01": No schooling completed
+      "02": Nursery school, preschool
+      "03": Kindergarten
+      "04": Grade 1
+      "05": Grade 2
+      "06": Grade 3
+      "07": Grade 4
+      "08": Grade 5
+      "09": Grade 6
+      "10": Grade 7
+      "11": Grade 8
+      "12": Grade 9
+      "13": Grade 10
+      "14": Grade 11
+      "15": 12th grade - no diploma
+      "16": Regular high school diploma
+      "17": GED or alternative credential
+      "18": Some college, but less than 1 year
+      "19": 1 or more years of college credit, no degree
+      "20": Associate's degree
+      "21": Bachelor's degree
+      "22": Master's degree
+      "23": Professional degree beyond a bachelor's degree
+      "24": Doctorate degree
+  SEX:
+    label: Sex
+    na_code: null
+    codes:
+      "1": Male
+      "2": Female
+  ESR:
+    label: Employment status recode
+    na_code: b
+    codes:
+      "1": Civilian employed, at work
+      "2": Civilian employed, with a job but not at work
+      "3": Unemployed
+      "4": Armed forces, at work
+      "5": Armed forces, with a job but not at work
+      "6": Not in labor force
+  WKW:
+    label: Weeks worked during past 12 months
+    na_code: b
+    codes:
+      "1": 50 to 52 weeks worked during past 12 months
+      "2": 48 to 49 weeks worked during past 12 months
+      "3": 40 to 47 weeks worked during past 12 months
+      "4": 27 to 39 weeks worked during past 12 months
+      "5": 14 to 26 weeks worked during past 12 months
+      "6": less than 14 weeks worked during past 12 months
+  JWTR:
+    label: Means of transportation to work
+    na_code: bb
+    codes:
+      "01": Car, truck, or van
+      "02": Bus or trolley bus
+      "03": Streetcar or trolley car (carro publico in Puerto Rico)
+      "04": Subway or elevated
+      "05": Railroad
+      "06": Ferryboat
+      "07": Taxicab
+      "08": Motorcycle
+      "09": Bicycle
+      "10": Walked
+      "11": Worked at home
+      "12": Other method
+  WKHP:
+    label: Usual hours worked per week past 12 months
+    na_code: bb
+    numeric: true
+    codes:
+      "99": 99 or more usual hours
+  JWMNP:
+    label: Travel time to work
+    na_code: bbb
+    numeric: true
+    codes: {}
+  DIS:
+    label: Disability recode
+    na_code: null
+    codes:
+      "1": With a disability
+      "2": Without a disability
+  DEAR:
+    label: Hearing difficulty
+    na_code: null
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DEYE:
+    label: Vision difficulty
+    na_code: null
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DREM:
+    label: Cognitive difficulty
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DPHY:
+    label: Ambulatory difficulty
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DOUT:
+    label: Independent living difficulty
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DDRS:
+    label: Self-care difficulty
+    na_code: b
+    codes:
+      "1": "Yes"
+      "2": "No"
+  DRAT:
+    label: Veteran service connected disability rating (percentage)
+    na_code: b
+    codes:
+      "1": 0 percent
+      "2": 10 or 20 percent
+      "3": 30 or 40 percent
+      "4": 50 or 60 percent
+      "5": 70, 80, 90, or 100 percent
+      "6": Not reported

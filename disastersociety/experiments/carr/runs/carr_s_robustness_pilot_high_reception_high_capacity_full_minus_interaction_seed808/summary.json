@@ -1,0 +1,93 @@
+{
+  "run_seed": 808,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "VALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "controlled_alternate": {
+        "open": true,
+        "capacity_per_step": 12,
+        "length_m": null,
+        "source_linearid_count": 0,
+        "asset_status": null
+      },
+      "controlled_primary": {
+        "open": false,
+        "capacity_per_step": 12,
+        "length_m": null,
+        "source_linearid_count": 0,
+        "asset_status": null
+      }
+    },
+    "n_evacuated_residents": 20,
+    "n_safe_dependents": 30,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 20,
+    "rejections": {
+      "route capacity exhausted": 8,
+      "vehicle allocated to syn_t010_h0000012_r001": 2,
+      "vehicle allocated to syn_t011_h0000001_r001": 2,
+      "vehicle allocated to syn_t012_h0000031_r001": 1,
+      "vehicle allocated to syn_t015_h0000019_r001": 1,
+      "vehicle allocated to syn_t017_h0000008_r001": 2,
+      "vehicle allocated to syn_t023_h0000016_r001": 1,
+      "vehicle allocated to syn_t026_h0000006_r001": 2,
+      "vehicle allocated to syn_t026_h0000012_r001": 2,
+      "vehicle allocated to syn_t028_h0000006_r001": 1,
+      "vehicle allocated to syn_t028_h0000008_r001": 1,
+      "vehicle allocated to syn_t029_h0000014_r001": 2,
+      "vehicle allocated to syn_t030_h0000010_r001": 1,
+      "vehicle allocated to syn_t035_h0000025_r001": 2,
+      "vehicle allocated to syn_t037_h0000010_r001": 2,
+      "vehicle allocated to syn_t038_h0000027_r001": 1,
+      "vehicle allocated to syn_t041_h0000005_r001": 1,
+      "vehicle allocated to syn_t041_h0000018_r001": 1,
+      "vehicle allocated to syn_t044_h0000013_r001": 1,
+      "vehicle allocated to syn_t046_h0000009_r001": 1,
+      "vehicle allocated to syn_t047_h0000019_r001": 1,
+      "vehicle reserved by syn_t010_h0000012_r001": 2,
+      "vehicle reserved by syn_t011_h0000001_r001": 2,
+      "vehicle reserved by syn_t012_h0000031_r001": 3,
+      "vehicle reserved by syn_t015_h0000019_r001": 3,
+      "vehicle reserved by syn_t017_h0000008_r001": 2,
+      "vehicle reserved by syn_t023_h0000016_r001": 3,
+      "vehicle reserved by syn_t026_h0000006_r001": 2,
+      "vehicle reserved by syn_t026_h0000012_r001": 2,
+      "vehicle reserved by syn_t028_h0000006_r001": 3,
+      "vehicle reserved by syn_t028_h0000008_r001": 3,
+      "vehicle reserved by syn_t029_h0000014_r001": 2,
+      "vehicle reserved by syn_t030_h0000010_r001": 3,
+      "vehicle reserved by syn_t035_h0000025_r001": 2,
+      "vehicle reserved by syn_t037_h0000010_r001": 2,
+      "vehicle reserved by syn_t038_h0000027_r001": 3,
+      "vehicle reserved by syn_t041_h0000005_r001": 3,
+      "vehicle reserved by syn_t041_h0000018_r001": 3,
+      "vehicle reserved by syn_t044_h0000013_r001": 3,
+      "vehicle reserved by syn_t046_h0000009_r001": 3,
+      "vehicle reserved by syn_t047_h0000019_r001": 3
+    },
+    "route_closures": [
+      {
+        "step": 5,
+        "route_id": "controlled_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_robustness_pilot_high_reception_high_capacity_full_minus_interaction_seed808",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 164,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 0,
+    "live_completion_tokens": 0,
+    "logical_prompt_tokens": 96225,
+    "logical_completion_tokens": 15162
+  }
+}

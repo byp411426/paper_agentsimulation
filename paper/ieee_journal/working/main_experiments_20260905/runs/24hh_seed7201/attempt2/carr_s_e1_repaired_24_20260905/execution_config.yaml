@@ -1,0 +1,55 @@
+run:
+  run_id: carr_s_e1_repaired_24_20260905
+  total_steps: 25
+  step_minutes: 30
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: /Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 6
+  budget_usd: 8.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+experiment:
+  evidence_status: RUNNING_PENDING_AUDIT
+  metric_protocol_version: e1_process_repair_20260905
+  n_households: 24
+  profile_seed: 4201
+  profiles_dir: /Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/inputs
+  profiles_file: profiles.jsonl
+  order_calibration: /Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/inputs/order_calibration.json
+  formal_seeds:
+  - 7201
+  - 8301
+  - 9401
+  social_graph:
+    radius_m: 1500
+    k_neighbors: 6
+    k_friends: 4
+    rewire_p: 0.1
+  hazard:
+    initial_distance_m: 9000
+    approach_per_step_m: 250
+    offset_range_m:
+    - -250
+    - 250
+  routes:
+    primary_route_id: tiger_primary
+    alternate_route_id: tiger_alternate
+    closure_step: 9
+    route_capacity_per_step: 10
+  orders:
+    voluntary_step: 3
+    mandatory_step: 7
+    direct_delivery_probability: 1.0
+  delivery:
+    household_dm_probability: 1.0
+    community_message_probability: 0.15
+  vehicles:
+    capacity: 5
+    topcode_min_vehicles: 4
+  safe_zone: controlled_safe_zone
+  claim_boundary:
+    historical_reconstruction: false
+    population_representative: false
+    carr_informed_controlled_scenario: true

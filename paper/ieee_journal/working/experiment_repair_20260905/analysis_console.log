@@ -1,0 +1,103 @@
+{
+  "status": "VALID",
+  "completed_steps": 12,
+  "planned_steps": 12,
+  "households": [
+    {
+      "label": "H1",
+      "household_id": "syn_t001_h0000001",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H2",
+      "household_id": "syn_t001_h0000002",
+      "members": 2,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 1,
+      "state": "部分安全"
+    },
+    {
+      "label": "H3",
+      "household_id": "syn_t001_h0000005",
+      "members": 6,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 6,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H4",
+      "household_id": "syn_t001_h0000007",
+      "members": 3,
+      "decision_members": 2,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 3,
+      "state": "窗口内尚未出发"
+    }
+  ],
+  "metrics": {
+    "step": 12,
+    "hours": 6.0,
+    "official_recipients": 3,
+    "first_departures": 2,
+    "joint_agreement_households": 0,
+    "joint_execution_households": 0,
+    "active_private_plans": 3,
+    "all_safe_households": 1,
+    "official_recipient_share": 0.42857142857142855,
+    "first_departure_share": 0.2857142857142857,
+    "all_safe_household_share": 0.25,
+    "joint_agreement_household_share": 0.0,
+    "joint_execution_household_share": 0.0
+  },
+  "contract_violations": [],
+  "rejection_counts": {
+    "invalid_accompanying_members": 1
+  },
+  "call_status_counts": {
+    "cache_hit": 3,
+    "ok": 13
+  },
+  "gateway": {
+    "run_id": "e1_repaired_4hh_seed7201",
+    "spent": 0.160137,
+    "n_ok": 13,
+    "n_cache": 3,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 49147,
+    "live_completion_tokens": 110990,
+    "logical_prompt_tokens": 61686,
+    "logical_completion_tokens": 116800
+  },
+  "provider_requests": 15,
+  "wall_seconds": 600.74,
+  "action_counts": {
+    "prepare": 5,
+    "stay": 2,
+    "evacuate": 3,
+    "seek_help": 6
+  },
+  "private_plan_users": 4,
+  "number_of_joint_commitment_versions": 0,
+  "number_of_solo_commitment_versions": 2,
+  "all_commitment_final_statuses": {
+    "executed": 2
+  },
+  "software_check_passed": true,
+  "metric_denominators": {
+    "decision_residents": 7,
+    "all_households": 4,
+    "multi_decision_households": 3
+  }
+}

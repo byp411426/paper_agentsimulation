@@ -1,0 +1,255 @@
+{
+  "status": "PILOT",
+  "activity_type": "V6_THINKING_HIGH_BACKEND_PILOT_DERIVED_SUMMARY",
+  "case_semantics": "Carr-informed controlled mechanism scenario",
+  "decision_model": "packy-deepseek-v4-flash",
+  "backend_mode": "thinking enabled, reasoning effort high",
+  "metric_protocol_version": "v6",
+  "n_households_per_run": 2,
+  "seeds": [
+    101,
+    202
+  ],
+  "conditions": [
+    "full",
+    "full_minus_memory",
+    "full_minus_feedback",
+    "full_minus_planning",
+    "full_minus_interaction"
+  ],
+  "selected_runs": [
+    {
+      "seed": 101,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r1_full_seed101",
+      "summary_sha256": "bc7225001adaa0c86cbbbd17a0850c855c27e7124ba359f0604a200d116d15d2",
+      "mechanism_metrics_sha256": "886eddc98eb90cd6437770b97c3c056ca8a5669408162656d5db59ff9871d3b0",
+      "provenance_sha256": "fec012dfd732fb6580b0ca5ff84260165078825cabd94b549b2f52fc4efe3c98"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r1_full_minus_memory_seed101",
+      "summary_sha256": "e0155e2170c413539e080d1ad528949d55f36ef748d2f964e4ca4b84109a2779",
+      "mechanism_metrics_sha256": "46167fa1cb87dafe61daffdefb83a16f487c9acb49d44e44667ff8dc8278c35d",
+      "provenance_sha256": "5c7663164684ba9d5d3ee209435d970ca74789d83a6a799772f5d167878ca661"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_feedback_seed101",
+      "summary_sha256": "ed6556ec1482d21afe3eaf1972dbb42fd6d66c223b016ea4cf963cfa5091a884",
+      "mechanism_metrics_sha256": "92f5509db09f2b3d5c47013a43bda3fbcee177678892feed2e71f87b01e7dc73",
+      "provenance_sha256": "3c4a0c152e401736b98c7ed67515e6795dec22c781fdff0f1708aaea22470521"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_planning_seed101",
+      "summary_sha256": "a5c5c73647b75b1b208415c064c4f848f478ebb48cc3cd31818762b5f2b78745",
+      "mechanism_metrics_sha256": "01bfd7e33dde914013da65466b4b841b3e861a135230b969ad008512f7c60fe7",
+      "provenance_sha256": "4310e3f4f0f5fe58c534776aa07f1125d39027b33e606fa4c0965d97ed7503d3"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_interaction_seed101",
+      "summary_sha256": "8a3589a13f4da8d6c43e8db40e777f179391cf812d65629e7fa18ce8b01b9034",
+      "mechanism_metrics_sha256": "8ace61358e2ff666ba021c73247e08db5ec3b5d83e32464b2d70b714a5690be0",
+      "provenance_sha256": "5458c52b73d582b7d4ebbe449bf14f4e484e2a02af88f35cdbd83e50c5bf96d6"
+    },
+    {
+      "seed": 202,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_seed202",
+      "summary_sha256": "b9d631760aa0d62d563ea0f374b61b9d49842a02ec5851ad9ac23384bb4f4fee",
+      "mechanism_metrics_sha256": "2e4023a10eabe7895df6fdfa67aeb1cbdbfc843add039fcb653b1eb1777cd0e6",
+      "provenance_sha256": "22f90fb7723f957c8117e32c73dc00345e3c1bd4e67b1ac6ea47165ee8a5663f"
+    },
+    {
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_memory_seed202",
+      "summary_sha256": "7adef40c6cc4dfad190ccc84f48cb7efbee410534c6d736b2b218e1d5b6200f3",
+      "mechanism_metrics_sha256": "906f5ce1a942d9c147d650c03b33035f81d683b1417d7b0f034f9620f944bdd2",
+      "provenance_sha256": "9df6c541221d5382258ddd52dfd1fa35909e5f1438ab51247a77ae1cd539c7b9"
+    },
+    {
+      "seed": 202,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_feedback_seed202",
+      "summary_sha256": "723c0279ceab5c40728d06a209779e56fd9ffbb187f92e5b7cf6386ecbaf5935",
+      "mechanism_metrics_sha256": "a6c231970da0a823094399e0b8b52ac61ad63f85de24716808c7d572138bc54f",
+      "provenance_sha256": "500b760856cfea905fc183feb808a9bcd5e89e1463cfc83d21cedf6446d4bf46"
+    },
+    {
+      "seed": 202,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_planning_seed202",
+      "summary_sha256": "32f33c65ac1de3a76a88e5dca4b6198110e939ae055f0e9cb23e6ee43452ed8b",
+      "mechanism_metrics_sha256": "d9e0f299c9ae302ea483babdd69bdf2b1ebaa71196fac22d547feceb8cee52db",
+      "provenance_sha256": "725cd70cae4fca1feecb1b264d496a7b54d634fc18838ee0117410de486391e9"
+    },
+    {
+      "seed": 202,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_interaction_seed202",
+      "summary_sha256": "b2edb372e0f17414defdfbbabd7e5e8981f1c6dc7c42604bbcdeccf72aee55f4",
+      "mechanism_metrics_sha256": "a7d94412af9dfeefc032a8ac4824f3037ccf6b7841397f9eccabb6f237af4459",
+      "provenance_sha256": "fd80d3b3d41288e62ed6d42c3f1e2ad92f0ce0aec0faa2e02e09b3b5ccb0a5ad"
+    }
+  ],
+  "run_status_counts": {
+    "VALID": 10
+  },
+  "gateway_totals": {
+    "n_ok": 184,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0
+  },
+  "paired_primary_differences": [
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.5,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.75,
+      "paired_difference": 0.25,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive"
+    }
+  ],
+  "paired_summary": [
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.375,
+      "sd_paired_difference": 0.1767766952966369,
+      "mcse": 0.125,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": true
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "mcse": 0.0,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": false
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "mcse": 0.0,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": false
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.5,
+      "sd_paired_difference": 0.0,
+      "mcse": 0.0,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": false
+    }
+  ],
+  "module_mean_paired_differences": {
+    "feedback": 0.375,
+    "interaction": 1.0,
+    "memory": 1.0,
+    "planning": 0.5
+  },
+  "module_sd_paired_differences": {
+    "feedback": 0.1767766952966369,
+    "interaction": 0.0,
+    "memory": 0.0,
+    "planning": 0.0
+  },
+  "pilot_gate_assessment": {
+    "all_predeclared_cells_valid": true,
+    "directionally_consistent": true,
+    "variance_informative_modules": [
+      "feedback"
+    ],
+    "formal_seed_count_frozen": false,
+    "reason": "Two seeds and two households per run yield coarse fractions; three of four module contrasts have zero observed seed variance.",
+    "next_action": "Increase the controlled cohort before precision-based formal seed sizing; reuse the frozen v6 matrix for bounded cross-model robustness without treating this pilot as formal evidence."
+  },
+  "limitations": [
+    "PILOT only; no formal interval or significance claim is made.",
+    "The two-household controlled cohort is not population-representative.",
+    "The route obstruction is controlled, not a historical Carr closure.",
+    "Drop-one estimates are conditional removal effects, not universal module effects."
+  ]
+}

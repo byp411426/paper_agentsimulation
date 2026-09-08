@@ -1,0 +1,28 @@
+# Toy village smoke config (spec M1 §1).
+run:
+  run_id: toy_smoke
+  seed: 42
+  total_steps: 48            # 24h at 30-min steps
+  step_minutes: 30
+
+world:
+  type: toy_grid
+  grid_size: [10, 10]
+  fire_origin: [8, 8]
+  fire_spread_prob: 0.35
+
+population:
+  n_agents: 50
+  trait_panic_prone: 0.3
+
+llm:
+  decision_model: mock       # offline, deterministic, free
+  temperature: 0.7
+  max_concurrency: 16
+  budget_usd: 5.0
+
+interaction:
+  warning_step: 6
+  device_ownership: 0.9
+  coverage: 0.85
+  rumor: false

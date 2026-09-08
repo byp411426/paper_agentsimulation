@@ -1,0 +1,57 @@
+{
+  "run_seed": 202,
+  "planned_steps": 10,
+  "completed_steps": 10,
+  "last_completed_step": 10,
+  "status": "VALID",
+  "world_final": {
+    "step": 10,
+    "hazard_distance_m": 0.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 2,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 2,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 2,
+    "n_safe_dependents": 4,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 2,
+    "rejections": {
+      "departure scheduled for a future step": 6,
+      "vehicle allocated to syn_t026_h0000012_r001": 1,
+      "vehicle reserved by syn_t023_h0000012_r002": 4,
+      "vehicle reserved by syn_t026_h0000012_r001": 4
+    },
+    "route_closures": [
+      {
+        "step": 4,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_memory_seed202",
+    "spent": 0.045732,
+    "n_ok": 23,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 18597,
+    "live_completion_tokens": 4269,
+    "logical_prompt_tokens": 18597,
+    "logical_completion_tokens": 4269
+  },
+  "wall_clock_seconds": 67.53611
+}

@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_________ test_postponed_current_intent_must_not_execute_old_due_party _________
+
+    def test_postponed_current_intent_must_not_execute_old_due_party():
+        people,hh,world,ix=parts();a=people['a'];clock=Clock(30,2);world.update(clock)
+        world.apply_batch(world.resolve_batch([envelope(a,2,3)],clock,7),clock)
+        clock.tick();world.update(clock)
+        current=envelope(a,3,4)
+        outcome=world.apply_batch(world.resolve_batch([current],clock,7),clock)['3:a']
+>       assert outcome.status != 'executed', 'Current intention says step 4; old step 3 agreement must not override it silently'
+E       AssertionError: Current intention says step 4; old step 3 agreement must not override it silently
+E       assert 'executed' != 'executed'
+E        +  where 'executed' = ExecutionOutcome(decision_id='3:a', agent_id='a', status='executed', executed_action='evacuate', reason=None, resource_allocations={}, state_delta={}).status
+
+tests/test_open_execution_contract.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../../../dev::test_postponed_current_intent_must_not_execute_old_due_party
+1 failed in 0.18s

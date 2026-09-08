@@ -1,0 +1,83 @@
+{
+  "protocol": "carr_s_v8_execution_feedback.0",
+  "status": "DEVELOPMENT_RECHECK_COMPLETED",
+  "evidence_status": "PILOT",
+  "freeze_date": "2026-08-02",
+  "diagnosis_source": "The completed v7 full/seed101 run was inspected after the matrix was complete. Accepted commitments were followed by mismatched departure steps, and execution rejection reasons were stored internally but absent from the next prompt, causing repeated requests for a vehicle already reserved by a departed member.",
+  "comparison_boundary": {
+    "posthoc_development_comparison": true,
+    "unbiased_prompt_comparison": false,
+    "formal_mechanism_evidence": false,
+    "carr_empirical_validation": false,
+    "carr_r_test_split_opened": false
+  },
+  "frozen_cell": {
+    "model": "packy-deepseek-v4-flash",
+    "backend_mode": "thinking enabled, reasoning effort high",
+    "seed": 101,
+    "condition": "full",
+    "n_households": 4,
+    "n_decision_residents": 8,
+    "reference_run": "carr_s_deepseek_v7_controlled_pilot_r2_full_seed101",
+    "run_id": "carr_s_deepseek_v8_execution_feedback_pilot_r1_full_seed101"
+  },
+  "frozen_changes": [
+    "Expose current_plan.last_failure in the v8 prompt.",
+    "Expose the last three execution feedback records when feedback is enabled.",
+    "Expose household vehicle reservation, occupancy, location, and available seats.",
+    "State exact route/vehicle/depart-step adherence for accepted household commitments and forbid repeated use of a vehicle already taken by another member."
+  ],
+  "development_targets": {
+    "coordinated_departure_rate": "increase from the v7 seed101 value of 0.25",
+    "dependent_left_behind_rejections": "decrease from 3",
+    "resource_conflict_rejections_per_household": "decrease from 4.0",
+    "backend_reliability": "remain VALID with zero failed and fallback decisions"
+  },
+  "frozen_sources": [
+    {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    {
+      "path": "experiments/carr/runner.py",
+      "sha256": "e84a0ad6672c3170dc83d24ca8dcb9011cb79c0f57992396e3eae24694b64283"
+    },
+    {
+      "path": "configs/models.yaml",
+      "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+    },
+    {
+      "path": "experiments/carr/configs/carr_s_deepseek_v8_execution_feedback_pilot.yaml",
+      "sha256": "2da913ed5c66d132bc5574686c44e42eaf5bc64276105d3180b79500f0f1c2b9"
+    },
+    {
+      "path": "tests/test_carr_pilot.py",
+      "sha256": "c9c54bb935ecba16fae0fbfe30fbcd825682ce24883c4542bd399326716c06cd"
+    }
+  ],
+  "completion_record": {
+    "terminal_status": "VALID",
+    "logical_decisions": 40,
+    "failed_decisions": 0,
+    "fallback_decisions": 0,
+    "internal_estimated_cost_usd": 0.215863,
+    "observed_metrics": {
+      "coordinated_departure_rate": 1.0,
+      "dependent_left_behind_rejections": 0,
+      "resource_conflict_rejections_per_household": 0.0,
+      "successful_postclosure_replan_rate": 1.0
+    },
+    "reference_v7_metrics": {
+      "coordinated_departure_rate": 0.25,
+      "dependent_left_behind_rejections": 3,
+      "resource_conflict_rejections_per_household": 4.0,
+      "successful_postclosure_replan_rate": 0.75
+    },
+    "artifacts": {
+      "summary_sha256": "25b9f22a2a5baea0c6dafd392777af8f287132c1d28b127e876ec37cce7da918",
+      "mechanism_metrics_sha256": "fc0ebf0315ebe9157d57e549ccf6c4801821fa5e47493e62005861cfaf0b3863",
+      "provenance_sha256": "127ec7283daa308a24fda43b9116eeba0295a4be955e45a071eb6497e51c9904"
+    },
+    "interpretation": "All development targets improved on the diagnosed seed, supporting the failure diagnosis and repair direction. Because the repair was chosen after inspecting this seed, the comparison is not formal evidence and requires frozen-seed confirmation."
+  }
+}

@@ -1,0 +1,13 @@
+{"step": 1, "awake": 0}
+{"step": 2, "awake": 0}
+{"step": 3, "awake": 1}
+{"step": 4, "awake": 1}
+{"step": 5, "awake": 1}
+{"step": 6, "awake": 1}
+{"step": 7, "awake": 3}
+{"step": 8, "awake": 3}
+{"step": 9, "awake": 3}
+{"step": 10, "awake": 3}
+{"step": 11, "awake": 3}
+{"step": 12, "awake": 3}
+{"status": "VALID", "completed_steps": 12, "provider_requests": 0, "elapsed_seconds": 0.04}

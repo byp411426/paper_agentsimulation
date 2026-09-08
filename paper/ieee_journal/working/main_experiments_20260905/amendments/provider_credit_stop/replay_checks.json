@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "mode": "offline cache-only",
+  "freeze_sha256": "44a06f58d207cc449bacae9fc3e61eae94fbb7bd1aa9f9be48dd6eb24a8ab837",
+  "checks": [
+    {
+      "households": 100,
+      "seed": 101,
+      "original_attempt": 3,
+      "complete_steps": 24,
+      "events_byte_identical": true,
+      "cached_rows": 774,
+      "cache_hits": 774,
+      "new_successful_calls": 0,
+      "source_cache_unchanged": true,
+      "correct_terminal_state": true,
+      "passed": true
+    }
+  ]
+}

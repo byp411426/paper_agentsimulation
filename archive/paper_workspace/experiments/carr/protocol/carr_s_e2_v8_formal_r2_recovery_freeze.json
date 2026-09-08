@@ -1,0 +1,73 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r2",
+  "frozen_at": "2026-08-02T11:39:59+08:00",
+  "status": "FROZEN_INFRASTRUCTURE_RECOVERY",
+  "predecessor_protocol_id": "carr_s_e2_v8_formal_r1",
+  "predecessor_freeze_sha256": "549dc9f76e9184796d3e8588ba03e08f3ae1af7f58a80cef151b7ab2f4a323b0",
+  "recovery_trigger": {
+    "type": "host_task_interruption",
+    "observation": "Both paid seed-batch processes disappeared when the active Codex turn was interrupted. Each full condition had a terminal VALID summary, while each following full_minus_memory directory lacked summary.json and mechanism_metrics.json.",
+    "scientific_failure": false,
+    "provider_failure_observed": false,
+    "selection_made_without_scientific_outcome_inspection": true
+  },
+  "r1_disposition": {
+    "rule": "Exclude every r1 artifact for seeds 1103 and 1201 from the selected 60-cell scientific matrix, including the two terminal full runs. Preserve all files as operational audit artifacts.",
+    "reason": "A complete immutable five-condition seed batch was not produced; mixing r1 full with r2 drop-one runs is disallowed.",
+    "excluded_seed_batches": [1103, 1201],
+    "selected_for_effect_analysis": false,
+    "artifacts": [
+      {
+        "seed": 1103,
+        "condition": "full",
+        "terminal_status": "VALID",
+        "summary_sha256": "436edaacad4f4c3bf536742b1c85dd447929d3b6526c81eb5a0e88dd2b386f18",
+        "mechanism_metrics_sha256": "50c69f5a8e8544c7263081a45670e0c237574f01a8af0013bc259d29ed95bc97",
+        "provenance_sha256": "80b16f42423a0f72ac157e3e761ae94596814b6c97c533ad0f28df78eb7d6e3d"
+      },
+      {
+        "seed": 1103,
+        "condition": "full_minus_memory",
+        "terminal_status": "HOST_INTERRUPTED_WITHOUT_TERMINAL_SUMMARY",
+        "events_sha256": "3acc006f7781d8c232daa3f0bcf5e1dd0f8492c63b781efffa1655398b6e0c8c",
+        "llm_calls_sha256": "ddd411832840a7af0836c795c9a76527c242f8a181c091f64ddf454df330dc17",
+        "provenance_sha256": "b2551361876ffb316a87e099ae60fc912fd341ae2e04f32a764103c6206e1b5b"
+      },
+      {
+        "seed": 1201,
+        "condition": "full",
+        "terminal_status": "VALID",
+        "summary_sha256": "42dfc4f7db740a7984835e5c397265e43c555e9a2ee185b959760e6046cc3692",
+        "mechanism_metrics_sha256": "98c0cf1124916fa641c2a0555e5e6f772aa1037bacf3154f559b010e83de1b50",
+        "provenance_sha256": "c0d700ea641a38c05048d0f78a34a78555b7e2e3e3789a0df00c4e0a1f2fde17"
+      },
+      {
+        "seed": 1201,
+        "condition": "full_minus_memory",
+        "terminal_status": "HOST_INTERRUPTED_WITHOUT_TERMINAL_SUMMARY",
+        "events_sha256": "05aad0f41be41d49a0ac2afae9ee2212663f28d643ba3ad512b0aa36c23accbd",
+        "llm_calls_sha256": "33752f71ec3c78ea5c4a151fc5d708e81bb2a841aa69131f33470887a01e1bf6",
+        "provenance_sha256": "fff63395a482a5e471d76fd7778eae59664e8744d3873cd4b6e1700155b236e9"
+      }
+    ]
+  },
+  "r2_execution_contract": {
+    "config": "experiments/carr/configs/carr_s_e2_v8_formal_r2.yaml",
+    "config_sha256": "a41ec26f0938e33e61d6fc249df9b340ff673a2519632c68a313f74dbf1ec88b",
+    "science_configuration_equal_to_r1": true,
+    "allowed_changes_from_r1": [
+      "run.run_id",
+      "formal_protocol.protocol_id",
+      "formal_protocol.freeze_file",
+      "formal_protocol.predecessor_protocol_id",
+      "formal_protocol.recovery_reason",
+      "formal_protocol.selection_rule"
+    ],
+    "selection_rule": "Use r2 for all 12 frozen seeds and all five frozen conditions regardless of r1 terminal outcomes or r2 interim directions.",
+    "n_selected_seed_condition_runs": 60,
+    "carr_r_test_split_opened": false,
+    "no_direction_based_stopping": true,
+    "mock_eligible_for_effect_evidence": false
+  },
+  "claim_boundary": "This amendment changes only operational run identity after a host interruption. It does not change the scientific cohort, model, prompt, conditions, seeds, metrics, estimands, sample size, or exclusion rules."
+}

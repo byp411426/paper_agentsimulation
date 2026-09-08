@@ -1,0 +1,557 @@
+{
+  "run_seed": 7201,
+  "planned_steps": 25,
+  "completed_steps": 25,
+  "last_completed_step": 25,
+  "status": "VALID",
+  "world_final": {
+    "step": 25,
+    "route_state": {
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000003": 75.59994297144544,
+      "syn_t001_h0000004": 81.19810232380081,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000006": 54.57713621064704,
+      "syn_t001_h0000007": -104.0339241862599,
+      "syn_t001_h0000008": -12.30012610317732,
+      "syn_t001_h0000009": 97.52185630498985,
+      "syn_t001_h0000010": -120.14062230243255,
+      "syn_t002_h0000001": -188.67938852744626,
+      "syn_t002_h0000002": -195.08029674577816,
+      "syn_t002_h0000003": -16.79789670457737,
+      "syn_t002_h0000004": 33.427168743229856,
+      "syn_t002_h0000005": -25.60318022357916,
+      "syn_t002_h0000006": -27.659986424133876,
+      "syn_t002_h0000007": 116.0925942028743,
+      "syn_t002_h0000008": -108.3881483816559,
+      "syn_t002_h0000009": 112.4280625726704,
+      "syn_t002_h0000010": 114.61403799052346,
+      "syn_t002_h0000011": 110.14414772780316,
+      "syn_t002_h0000012": 88.4541969879395,
+      "syn_t002_h0000013": -113.47758507171503,
+      "syn_t002_h0000014": 142.09567577968102
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {},
+      "syn_t001_h0000002": {
+        "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000002_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000002_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000002_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000002_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000002:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000003": {
+        "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000003_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000003_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000003_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000003_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000003:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000004": {
+        "auto_carr_s_e1_repaired_24_20260905:6:syn_t001_h0000004_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:6:syn_t001_h0000004_r001",
+          "created_step": 6,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000004_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000004_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000004:vehicle:1",
+            "depart_step": 6
+          }
+        }
+      },
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000006": {
+        "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000006_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:7:syn_t001_h0000006_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000006_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000006_r001"
+            ],
+            "accompanying_member_ids": [
+              "syn_t001_h0000006_r002",
+              "syn_t001_h0000006_r003"
+            ],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000006:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000007": {},
+      "syn_t001_h0000008": {
+        "auto_carr_s_e1_repaired_24_20260905:3:syn_t001_h0000008_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:3:syn_t001_h0000008_r001",
+          "created_step": 3,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000008_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000008_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000008:vehicle:1",
+            "depart_step": 3
+          }
+        }
+      },
+      "syn_t001_h0000009": {},
+      "syn_t001_h0000010": {},
+      "syn_t002_h0000001": {},
+      "syn_t002_h0000002": {
+        "auto_carr_s_e1_repaired_24_20260905:7:syn_t002_h0000002_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:7:syn_t002_h0000002_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000002_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000002_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000002:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t002_h0000003": {},
+      "syn_t002_h0000004": {},
+      "syn_t002_h0000005": {
+        "auto_carr_s_e1_repaired_24_20260905:7:syn_t002_h0000005_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:7:syn_t002_h0000005_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000005_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000005_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000005:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t002_h0000006": {
+        "auto_carr_s_e1_repaired_24_20260905:20:syn_t002_h0000006_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:20:syn_t002_h0000006_r001",
+          "created_step": 20,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000006_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000006_r001"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000006_r002",
+              "syn_t002_h0000006_r003"
+            ],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000006:vehicle:1",
+            "depart_step": 20
+          }
+        },
+        "auto_carr_s_e1_repaired_24_20260905:21:syn_t002_h0000006_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:21:syn_t002_h0000006_r001",
+          "created_step": 21,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000006_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000006_r001"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000006_r002",
+              "syn_t002_h0000006_r003"
+            ],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000006:vehicle:1",
+            "depart_step": 21
+          }
+        }
+      },
+      "syn_t002_h0000007": {},
+      "syn_t002_h0000008": {
+        "auto_carr_s_e1_repaired_24_20260905:24:syn_t002_h0000008_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:24:syn_t002_h0000008_r001",
+          "created_step": 24,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000008_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000008_r001"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000008_r002",
+              "syn_t002_h0000008_r003"
+            ],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000008:vehicle:1",
+            "depart_step": 24
+          }
+        },
+        "auto_carr_s_e1_repaired_24_20260905:25:syn_t002_h0000008_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:25:syn_t002_h0000008_r001",
+          "created_step": 25,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000008_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000008_r001"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000008_r002",
+              "syn_t002_h0000008_r003"
+            ],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000008:vehicle:1",
+            "depart_step": 25
+          }
+        }
+      },
+      "syn_t002_h0000009": {
+        "commit:m8:syn_t002_h0000009_r001:0": {
+          "id": "commit:m8:syn_t002_h0000009_r001:0",
+          "created_step": 9,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000009_r001",
+            "syn_t002_h0000009_r002"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000009_r001",
+              "syn_t002_h0000009_r002"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000009:vehicle:1",
+            "depart_step": 10
+          }
+        },
+        "auto_carr_s_e1_repaired_24_20260905:11:syn_t002_h0000009_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:11:syn_t002_h0000009_r001",
+          "created_step": 11,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000009_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000009_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000009:vehicle:1",
+            "depart_step": 11
+          }
+        }
+      },
+      "syn_t002_h0000010": {
+        "auto_carr_s_e1_repaired_24_20260905:25:syn_t002_h0000010_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:25:syn_t002_h0000010_r001",
+          "created_step": 25,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000010_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000010_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000010:vehicle:1",
+            "depart_step": 25
+          }
+        }
+      },
+      "syn_t002_h0000011": {},
+      "syn_t002_h0000012": {
+        "auto_carr_s_e1_repaired_24_20260905:20:syn_t002_h0000012_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:20:syn_t002_h0000012_r001",
+          "created_step": 20,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000012_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000012_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000012:vehicle:1",
+            "depart_step": 20
+          }
+        },
+        "auto_carr_s_e1_repaired_24_20260905:21:syn_t002_h0000012_r001": {
+          "id": "auto_carr_s_e1_repaired_24_20260905:21:syn_t002_h0000012_r001",
+          "created_step": 21,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000012_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000012_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000012:vehicle:1",
+            "depart_step": 21
+          }
+        }
+      },
+      "syn_t002_h0000013": {
+        "commit:m7:syn_t002_h0000013_r001:0": {
+          "id": "commit:m7:syn_t002_h0000013_r001:0",
+          "created_step": 8,
+          "status": "cancelled",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000013_r001",
+            "syn_t002_h0000013_r003"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000013_r001",
+              "syn_t002_h0000013_r003"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000013_r002"
+            ],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000013:vehicle:1",
+            "depart_step": 9
+          }
+        },
+        "commit:m9:syn_t002_h0000013_r001:0": {
+          "id": "commit:m9:syn_t002_h0000013_r001:0",
+          "created_step": 10,
+          "status": "rejected",
+          "supersedes_id": "commit:m7:syn_t002_h0000013_r001:0",
+          "accepted_by": [
+            "syn_t002_h0000013_r001",
+            "syn_t002_h0000013_r003"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000013_r001",
+              "syn_t002_h0000013_r003"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000013_r002"
+            ],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000013:vehicle:1",
+            "depart_step": 11
+          }
+        },
+        "commit:m12:syn_t002_h0000013_r003:0": {
+          "id": "commit:m12:syn_t002_h0000013_r003:0",
+          "created_step": 13,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000013_r001",
+            "syn_t002_h0000013_r003"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000013_r001",
+              "syn_t002_h0000013_r003"
+            ],
+            "accompanying_member_ids": [
+              "syn_t002_h0000013_r002"
+            ],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000013:vehicle:1",
+            "depart_step": 14
+          }
+        }
+      },
+      "syn_t002_h0000014": {
+        "commit:m7:syn_t002_h0000014_r001:0": {
+          "id": "commit:m7:syn_t002_h0000014_r001:0",
+          "created_step": 8,
+          "status": "rejected",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000014_r001",
+            "syn_t002_h0000014_r002"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000014_r001",
+              "syn_t002_h0000014_r002"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t002_h0000014:vehicle:1",
+            "depart_step": 9
+          }
+        },
+        "commit:m10:syn_t002_h0000014_r001:0": {
+          "id": "commit:m10:syn_t002_h0000014_r001:0",
+          "created_step": 11,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t002_h0000014_r001",
+            "syn_t002_h0000014_r002"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t002_h0000014_r001",
+              "syn_t002_h0000014_r002"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_alternate",
+            "vehicle_id": "syn_t002_h0000014:vehicle:1",
+            "depart_step": 12
+          }
+        }
+      }
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "('home', 'syn_t001_h0000001')",
+      "syn_t001_h0000002_r001": "controlled_safe_zone",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000003_r001": "controlled_safe_zone",
+      "syn_t001_h0000004_r001": "controlled_safe_zone",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000006_r001": "controlled_safe_zone",
+      "syn_t001_h0000006_r002": "controlled_safe_zone",
+      "syn_t001_h0000006_r003": "controlled_safe_zone",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000008_r001": "controlled_safe_zone",
+      "syn_t001_h0000009_r001": "('home', 'syn_t001_h0000009')",
+      "syn_t001_h0000010_r001": "('home', 'syn_t001_h0000010')",
+      "syn_t002_h0000001_r001": "('home', 'syn_t002_h0000001')",
+      "syn_t002_h0000002_r001": "controlled_safe_zone",
+      "syn_t002_h0000003_r001": "('home', 'syn_t002_h0000003')",
+      "syn_t002_h0000004_r001": "('home', 'syn_t002_h0000004')",
+      "syn_t002_h0000005_r001": "controlled_safe_zone",
+      "syn_t002_h0000006_r001": "controlled_safe_zone",
+      "syn_t002_h0000006_r002": "controlled_safe_zone",
+      "syn_t002_h0000006_r003": "controlled_safe_zone",
+      "syn_t002_h0000007_r001": "('home', 'syn_t002_h0000007')",
+      "syn_t002_h0000008_r001": "controlled_safe_zone",
+      "syn_t002_h0000008_r002": "controlled_safe_zone",
+      "syn_t002_h0000008_r003": "controlled_safe_zone",
+      "syn_t002_h0000009_r001": "controlled_safe_zone",
+      "syn_t002_h0000009_r002": "('home', 'syn_t002_h0000009')",
+      "syn_t002_h0000010_r001": "('home', 'syn_t002_h0000010')",
+      "syn_t002_h0000010_r002": "('home', 'syn_t002_h0000010')",
+      "syn_t002_h0000011_r001": "('home', 'syn_t002_h0000011')",
+      "syn_t002_h0000011_r002": "('home', 'syn_t002_h0000011')",
+      "syn_t002_h0000012_r001": "controlled_safe_zone",
+      "syn_t002_h0000013_r001": "controlled_safe_zone",
+      "syn_t002_h0000013_r002": "controlled_safe_zone",
+      "syn_t002_h0000013_r003": "controlled_safe_zone",
+      "syn_t002_h0000014_r001": "controlled_safe_zone",
+      "syn_t002_h0000014_r002": "controlled_safe_zone"
+    }
+  },
+  "gateway": {
+    "run_id": "carr_s_e1_repaired_24_20260905",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 247,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 0,
+    "live_completion_tokens": 0,
+    "logical_prompt_tokens": 900852,
+    "logical_completion_tokens": 1567170
+  },
+  "wall_clock_seconds": 0.354233
+}

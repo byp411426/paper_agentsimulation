@@ -1,0 +1,10 @@
+{
+  "backend": "real",
+  "seed": 7201,
+  "households": 24,
+  "freeze_sha256": "f3adefaf11deb7bff00baa3fad0fe8e958ece83280182323cf6ba1ea759675cb",
+  "resume_cache": null,
+  "model": "packy-deepseek-v4-flash",
+  "temperature": 0.0,
+  "hash_seed": "0"
+}

@@ -1,0 +1,118 @@
+run:
+  run_id: carr_s_deepseek_v7_controlled_pilot_r1
+  total_steps: 10
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 8
+  budget_usd: 1.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT
+  activity_type: V7_CONTROLLED_MECHANISM_BACKEND_PILOT
+  metric_protocol_version: v7
+  prompt_version: carr_s_controlled_resident_v7
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 4
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices: [3, 4]
+  depart_step: 5
+  coordination_deadline_step: 7
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 4
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 1.0
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.15
+  abort_matrix_on_nonvalid_run: true
+
+  # The true world and resident cognition are deliberately separate. In the
+  # no-feedback ablation the world still closes the route and rejects invalid
+  # execution, but the resident does not receive a live omniscient snapshot.
+  route_observation_mode: feedback_gated
+
+  # E2 identifies response to a controlled disruption. Every decision resident
+  # therefore begins with the same private primary-route plan. This is an
+  # experimental initial condition, not a generated finding or shared household
+  # commitment. Natural plan formation belongs to a separate E1 experiment.
+  seed_controlled_initial_plan: true
+
+  declared_backend_pilot:
+    paid_execution_authorized: true
+    authorization_basis: repeated explicit user authorization in the active task
+    seeds: [101, 202, 303]
+    conditions:
+      - full
+      - full_minus_memory
+      - full_minus_feedback
+      - full_minus_planning
+      - full_minus_interaction
+    execute_all_cells_regardless_of_interim_effect_direction: true
+    stop_only_on_hard_failure: true
+    exclusion_rule: >-
+      Exclude a paired mechanism contrast if either run is not VALID. Preserve
+      every raw attempt under its original run ID; never overwrite or backfill.
+    formal_seed_count_frozen: false
+    formal_matrix_authorized: false
+    carr_r_test_split_opened: false
+    backend_mode: thinking enabled, reasoning effort high
+
+  metric_contract:
+    memory:
+      metric: conditional_warning_retention_rate
+      denominator: coordinators who actually received the warning
+      direction: positive
+    feedback:
+      metric: preclosure_primary_to_postclosure_alternate_update_rate
+      denominator: decision residents with the controlled pre-closure primary plan
+      direction: positive
+    planning:
+      metric: successful_postclosure_replan_rate
+      denominator: controlled households
+      direction: positive
+    interaction:
+      metric: post_closure_feasible_commitment_rate
+      denominator: controlled households
+      direction: positive
+
+  design_contract:
+    resident_route_information: perceived snapshot, never a direct live-world reference
+    feedback_enabled: refresh perceived routes after world changes
+    feedback_disabled: retain the frozen pre-closure perceived route snapshot
+    physical_arbitration: always uses the true current world state
+    initial_plan_scope: private resident state only
+    initial_plan_route: tiger_primary
+    initial_plan_depart_step: 5
+    shared_commitment_at_initialization: false
+    intervention: primary route closes at paired-seed-selected step 3 or 4
+
+  claim_boundary:
+    purpose: >-
+      Test whether structurally isolated memory, feedback, planning, and
+      interaction paths remain directionally distinguishable under the declared
+      DeepSeek thinking-high backend, while increasing the controlled cohort
+      from two to four households.
+    formal_evidence: false
+    mock_effect_evidence_allowed: false
+    carr_empirical_validation: false
+    historical_closure_reconstruction: false
+    population_representative: false
+    test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

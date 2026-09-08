@@ -1,0 +1,58 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r7",
+  "amendment_id": "r7_speedup_20260802",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_EXECUTION_TRANSPORT_SPEEDUP",
+  "basis": "Explicit user request on 2026-08-02 to speed up the E2 matrix and run grid cells in parallel instead of the 10-hour two-lane schedule.",
+  "science_configuration_unchanged": true,
+  "unchanged_items": [
+    "cohort (8 households, 16 decision residents)",
+    "conditions (full, full_minus_memory, full_minus_feedback, full_minus_planning, full_minus_interaction)",
+    "seeds (12 frozen seeds)",
+    "prompt version (carr_s_controlled_resident_v8)",
+    "model identity and thinking mode (packy-deepseek-v4-flash thinking-high)",
+    "temperature (0.0), metrics, estimands, exclusion rules, sample size (60 cells)",
+    "all science code file hashes (unchanged from the original v8 freeze)"
+  ],
+  "transport_changes": [
+    {
+      "item": "lane count",
+      "from": 2,
+      "to": 6,
+      "detail": "Six independent lane supervisor processes, one per seed pair; each run keeps per-request concurrency 6; total in-flight requests 36.",
+      "rationale": "Seed batches are independent; the only serialization inside a seed is the frozen five-condition loop. Parallel seeds reduce wall clock from ~10h to ~3.5h.",
+      "risk_control": "Total in-flight 36 exceeds the r3 failure load (28) but the current transport has 600s timeouts, SDK-level retries, no overlapping paid jobs, and has been failure-free for 2+ hours at 12 in-flight. First-batch health is watched; any lane exception still stops all new paid batches."
+    },
+    {
+      "item": "call_kwargs.max_retries",
+      "from": 3,
+      "to": 6,
+      "detail": "OpenAI SDK exponential-backoff retry for all 5xx (including Cloudflare 520) and connection errors; gateway max_attempts stays 3; fatal errors still abort immediately.",
+      "rationale": "Covers tens-of-seconds provider outages (the observed 520 requested a >=60s backoff)."
+    },
+    {
+      "item": "completed-cell reuse",
+      "from": "not applicable",
+      "to": "deterministic reuse",
+      "detail": "r7 cells already written with complete terminal artifacts are reused by the lane runner's existing reuse path (reused_terminal_artifacts counters); no cell is re-paid or overwritten. In-flight cells are allowed to finish before the switch so no partial artifacts are created."
+    }
+  ],
+  "lane_seed_assignment": {
+    "lane_1": [1103, 1301],
+    "lane_2": [1201, 1409],
+    "lane_3": [1511, 1709],
+    "lane_4": [1601, 1801],
+    "lane_5": [1907, 2111],
+    "lane_6": [2003, 2203],
+    "note": "Seeds 1103/1201 and cell 1409/full already have or will have complete r7 terminal artifacts and are reused without re-payment."
+  },
+  "switch_procedure": {
+    "step_1": "Wait for lane A to finish the seed1103 batch (5/5 VALID terminal batch summary).",
+    "step_2": "Wait for lane B to finish the seed1409/full cell (VALID terminal summary) and stop lane B before it starts seed1409/full_minus_memory.",
+    "step_3": "Stop both old lane processes.",
+    "step_4": "Start six lane supervisors with the lane_seed_assignment above, same frozen r7 config and lane runner.",
+    "no_partial_overwrite": true
+  },
+  "stop_rule_unchanged": "Each lane stops on its first exception or non-five-for-five-VALID batch. Any failure stops all new paid jobs pending an explicit audited recovery amendment.",
+  "claim_boundary": "This amendment changes execution scheduling and retry transport only. It does not change any scientific parameter or the identity of the r7 attempt; all cells remain within carr_s_e2_v8_formal_r7."
+}

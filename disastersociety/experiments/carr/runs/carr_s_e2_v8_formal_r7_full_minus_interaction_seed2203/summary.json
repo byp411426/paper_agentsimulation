@@ -1,0 +1,64 @@
+{
+  "run_seed": 2203,
+  "planned_steps": 10,
+  "completed_steps": 10,
+  "last_completed_step": 10,
+  "status": "VALID",
+  "world_final": {
+    "step": 10,
+    "hazard_distance_m": 0.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 8,
+    "n_safe_dependents": 11,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 8,
+    "rejections": {
+      "departure scheduled for a future step": 15,
+      "route capacity exhausted": 1,
+      "vehicle allocated to syn_t012_h0000031_r001": 1,
+      "vehicle allocated to syn_t023_h0000016_r001": 2,
+      "vehicle allocated to syn_t026_h0000006_r001": 1,
+      "vehicle allocated to syn_t029_h0000014_r001": 1,
+      "vehicle allocated to syn_t041_h0000005_r001": 1,
+      "vehicle reserved by syn_t028_h0000008_r001": 1,
+      "vehicle reserved by syn_t035_h0000025_r001": 1,
+      "vehicle reserved by syn_t037_h0000010_r001": 1,
+      "vehicle reserved by syn_t041_h0000005_r001": 1
+    },
+    "route_closures": [
+      {
+        "step": 4,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e2_v8_formal_r7_full_minus_interaction_seed2203",
+    "spent": 0.47088,
+    "n_ok": 109,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 127703,
+    "live_completion_tokens": 343177,
+    "logical_prompt_tokens": 127703,
+    "logical_completion_tokens": 343177
+  },
+  "wall_clock_seconds": 894.367237
+}

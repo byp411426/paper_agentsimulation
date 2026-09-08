@@ -1,0 +1,18 @@
+/opt/anaconda3/lib/python3.13/asyncio/base_events.py:2027: RuntimeWarning: coroutine 'OpenAIChatCompletion.acompletion' was never awaited
+  handle = self._ready.popleft()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11d718b90>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x11e9b8590>, 364555.434865458), (<aiohttp.client_proto.ResponseHandler object at 0x11e9b8fa0>, 364564.420587333), (<aiohttp.client_proto.ResponseHandler object at 0x11e9ba510>, 364615.018811416), (<aiohttp.client_proto.ResponseHandler object at 0x11e9ba890>, 364623.505423625), (<aiohttp.client_proto.ResponseHandler object at 0x11e9bb540>, 364645.30447425), (<aiohttp.client_proto.ResponseHandler object at 0x11e9b8670>, 364673.403141125)])']
+connector: <aiohttp.connector.TCPConnector object at 0x11d719950>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11e6b16a0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11e73ae90>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x11e6caa50>, 361356.619706), (<aiohttp.client_proto.ResponseHandler object at 0x11e74cad0>, 361391.195134875), (<aiohttp.client_proto.ResponseHandler object at 0x11e6cb930>, 361415.761226583), (<aiohttp.client_proto.ResponseHandler object at 0x11e6cb4d0>, 361434.473794541), (<aiohttp.client_proto.ResponseHandler object at 0x11e74c210>, 361450.730479125)])']
+connector: <aiohttp.connector.TCPConnector object at 0x11e6b1160>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x11e967e00>, 362583.600153041), (<aiohttp.client_proto.ResponseHandler object at 0x11e913cb0>, 362634.002362708), (<aiohttp.client_proto.ResponseHandler object at 0x11e913e70>, 362656.061451875), (<aiohttp.client_proto.ResponseHandler object at 0x11e9132a0>, 362700.350085166)])']
+connector: <aiohttp.connector.TCPConnector object at 0x11e73aad0>

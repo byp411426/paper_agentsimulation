@@ -1,0 +1,13 @@
+variable,group,n,evacuation_share,n_departure_times,median_departure_hours_since_fire
+vehicle_access,two_plus,272,0.9007352941176471,244,77.75
+vehicle_access,one_vehicle,57,0.8245614035087719,47,76.75
+children,no_children,216,0.8842592592592593,190,77.75
+children,has_children,114,0.8947368421052632,102,76.75
+older_adults,no_65_plus,223,0.9013452914798207,200,77.75
+older_adults,has_65_plus,107,0.8598130841121495,92,76.25
+disability,no_disability,265,0.8867924528301887,235,77.75
+disability,has_disability,65,0.8923076923076924,57,76.75
+pets,has_pets,267,0.8913857677902621,238,77.75
+pets,no_pets,63,0.873015873015873,54,77.75
+livestock,no_livestock,309,0.8867313915857605,273,77.75
+livestock,has_livestock,20,0.9,18,77.25

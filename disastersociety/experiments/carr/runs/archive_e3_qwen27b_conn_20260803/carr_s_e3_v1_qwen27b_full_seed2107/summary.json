@@ -1,0 +1,65 @@
+{
+  "run_seed": 2107,
+  "planned_steps": 10,
+  "completed_steps": 9,
+  "last_completed_step": 10,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 10,
+    "hazard_distance_m": 0.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 10,
+    "n_safe_dependents": 12,
+    "coordinated_movements": 2,
+    "uncoordinated_movements": 6,
+    "rejections": {
+      "departure scheduled for a future step": 2,
+      "route capacity exhausted": 3,
+      "vehicle allocated to syn_t012_h0000031_r001": 1,
+      "vehicle allocated to syn_t026_h0000006_r002": 1,
+      "vehicle allocated to syn_t026_h0000012_r001": 1,
+      "vehicle allocated to syn_t037_h0000010_r003": 1,
+      "vehicle allocated to syn_t038_h0000027_r001": 1,
+      "vehicle reserved by syn_t011_h0000001_r001": 1,
+      "vehicle reserved by syn_t026_h0000012_r001": 1,
+      "vehicle reserved by syn_t038_h0000027_r001": 1
+    },
+    "route_closures": [
+      {
+        "step": 4,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_v1_qwen27b_full_seed2107",
+    "spent": 0.0,
+    "n_ok": 122,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 149279,
+    "live_completion_tokens": 38507,
+    "logical_prompt_tokens": 149279,
+    "logical_completion_tokens": 38507
+  },
+  "wall_clock_seconds": 745.994542,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t011_h0000001_r003, step=10: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error."
+}

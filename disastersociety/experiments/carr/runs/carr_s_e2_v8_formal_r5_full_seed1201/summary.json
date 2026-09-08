@@ -1,0 +1,49 @@
+{
+  "run_seed": 1201,
+  "planned_steps": 10,
+  "completed_steps": 0,
+  "last_completed_step": null,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 1,
+    "hazard_distance_m": 5300.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {},
+    "route_closures": []
+  },
+  "gateway": {
+    "run_id": "carr_s_e2_v8_formal_r5_full_seed1201",
+    "spent": 0.045104,
+    "n_ok": 10,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 11160,
+    "live_completion_tokens": 33944,
+    "logical_prompt_tokens": 11160,
+    "logical_completion_tokens": 33944
+  },
+  "wall_clock_seconds": 65.568041,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t041_h0000005_r001, step=1: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error."
+}

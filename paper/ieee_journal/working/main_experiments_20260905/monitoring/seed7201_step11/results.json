@@ -1,0 +1,295 @@
+{
+  "status": "RUNNING",
+  "completed_steps": 11,
+  "planned_steps": 25,
+  "households": [
+    {
+      "label": "H1",
+      "household_id": "syn_t001_h0000001",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H2",
+      "household_id": "syn_t001_h0000002",
+      "members": 2,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 1,
+      "state": "部分安全"
+    },
+    {
+      "label": "H3",
+      "household_id": "syn_t001_h0000003",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H4",
+      "household_id": "syn_t001_h0000004",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H5",
+      "household_id": "syn_t001_h0000005",
+      "members": 6,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 6,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H6",
+      "household_id": "syn_t001_h0000006",
+      "members": 3,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 3,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H7",
+      "household_id": "syn_t001_h0000007",
+      "members": 3,
+      "decision_members": 2,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 3,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H8",
+      "household_id": "syn_t001_h0000008",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H9",
+      "household_id": "syn_t001_h0000009",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H10",
+      "household_id": "syn_t001_h0000010",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H11",
+      "household_id": "syn_t002_h0000001",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H12",
+      "household_id": "syn_t002_h0000002",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H13",
+      "household_id": "syn_t002_h0000003",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H14",
+      "household_id": "syn_t002_h0000004",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H15",
+      "household_id": "syn_t002_h0000005",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 0,
+      "state": "全员安全"
+    },
+    {
+      "label": "H16",
+      "household_id": "syn_t002_h0000006",
+      "members": 3,
+      "decision_members": 1,
+      "vehicles": 3,
+      "safe_members": 0,
+      "remaining_members": 3,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H17",
+      "household_id": "syn_t002_h0000007",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H18",
+      "household_id": "syn_t002_h0000008",
+      "members": 3,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 3,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H19",
+      "household_id": "syn_t002_h0000009",
+      "members": 2,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 1,
+      "remaining_members": 1,
+      "state": "部分安全"
+    },
+    {
+      "label": "H20",
+      "household_id": "syn_t002_h0000010",
+      "members": 2,
+      "decision_members": 2,
+      "vehicles": 2,
+      "safe_members": 0,
+      "remaining_members": 2,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H21",
+      "household_id": "syn_t002_h0000011",
+      "members": 2,
+      "decision_members": 1,
+      "vehicles": 0,
+      "safe_members": 0,
+      "remaining_members": 2,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H22",
+      "household_id": "syn_t002_h0000012",
+      "members": 1,
+      "decision_members": 1,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 1,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H23",
+      "household_id": "syn_t002_h0000013",
+      "members": 3,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 3,
+      "state": "窗口内尚未出发"
+    },
+    {
+      "label": "H24",
+      "household_id": "syn_t002_h0000014",
+      "members": 2,
+      "decision_members": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "remaining_members": 2,
+      "state": "窗口内尚未出发"
+    }
+  ],
+  "metrics": {
+    "step": 11,
+    "hours": 5.5,
+    "official_recipients": 17,
+    "first_departures": 8,
+    "joint_agreement_households": 3,
+    "joint_execution_households": 0,
+    "active_private_plans": 13,
+    "all_safe_households": 6,
+    "official_recipient_share": 0.5483870967741935,
+    "first_departure_share": 0.25806451612903225,
+    "all_safe_household_share": 0.25,
+    "joint_agreement_household_share": 0.42857142857142855,
+    "joint_execution_household_share": 0.0
+  },
+  "contract_violations": [],
+  "rejection_counts": {
+    "invalid_accompanying_members": 2,
+    "commitment_not_active": 1,
+    "route_closed": 6
+  },
+  "call_status_counts": {
+    "ok": 90
+  },
+  "gateway": {},
+  "provider_requests": null,
+  "wall_seconds": null,
+  "action_counts": {
+    "prepare": 30,
+    "evacuate": 17,
+    "stay": 10,
+    "seek_help": 28
+  },
+  "private_plan_users": 16,
+  "number_of_joint_commitment_versions": 5,
+  "number_of_solo_commitment_versions": 8,
+  "all_commitment_final_statuses": {
+    "executed": 8,
+    "cancelled": 1,
+    "rejected": 3,
+    "accepted": 1
+  },
+  "software_check_passed": false,
+  "metric_denominators": {
+    "decision_residents": 31,
+    "all_households": 24,
+    "multi_decision_households": 7
+  }
+}

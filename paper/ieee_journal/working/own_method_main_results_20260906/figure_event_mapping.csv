@@ -1,0 +1,13 @@
+figure_row,run,message_id,household_id,issued_step,expected_formed_step,expected_stage,expected_feasible,recorded_feasible,oracle_reasons,record_consistency_errors,planned_departure_step,route_id,terminal_commitment_status,terminal_step,outside_window
+1,24hh_seed8301,m4:syn_t002_h0000014_r001:1,syn_t002_h0000014,4,5,feasible_agreement,True,True,,,6,tiger_primary,executed,6,False
+2,24hh_seed9401,m4:syn_t002_h0000014_r001:1,syn_t002_h0000014,4,5,feasible_agreement,True,True,,,6,tiger_primary,executed,6,False
+3,24hh_seed7201,m7:syn_t002_h0000013_r001:0,syn_t002_h0000013,7,8,feasible_agreement,True,True,,,9,tiger_primary,cancelled,9,False
+4,24hh_seed7201,m7:syn_t002_h0000014_r001:0,syn_t002_h0000014,7,8,feasible_agreement,True,True,,,9,tiger_primary,rejected,9,False
+5,24hh_seed8301,m7:syn_t001_h0000002_r001:0,syn_t001_h0000002,7,8,feasible_agreement,True,True,,,9,tiger_primary,rejected,9,False
+6,24hh_seed9401,m7:syn_t002_h0000010_r001:1,syn_t002_h0000010,7,8,feasible_agreement,True,True,,,9,tiger_primary,rejected,9,False
+7,24hh_seed7201,m8:syn_t002_h0000009_r001:0,syn_t002_h0000009,8,9,feasible_agreement,True,True,,,10,tiger_primary,rejected,10,False
+8,24hh_seed7201,m9:syn_t002_h0000013_r001:0,syn_t002_h0000013,9,10,feasible_agreement,True,True,,,11,tiger_primary,rejected,11,False
+9,24hh_seed7201,m10:syn_t002_h0000014_r001:0,syn_t002_h0000014,10,11,feasible_agreement,True,True,,,12,tiger_alternate,executed,12,False
+10,24hh_seed7201,m12:syn_t002_h0000013_r003:0,syn_t002_h0000013,12,13,feasible_agreement,True,True,,,14,tiger_alternate,executed,14,False
+11,24hh_seed8301,m24:syn_t002_h0000009_r001:0,syn_t002_h0000009,24,25,feasible_agreement,True,True,,,26,tiger_primary,accepted,,True
+12,24hh_seed9401,m24:syn_t001_h0000002_r001:0,syn_t001_h0000002,24,25,feasible_agreement,True,True,,,26,tiger_primary,accepted,,True

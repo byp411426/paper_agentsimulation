@@ -1,0 +1,90 @@
+{
+  "study": "E3a equivalent-prompt sensitivity (v8a, v8b)",
+  "protocol_id": "carr_s_e3a_prompt_sensitivity",
+  "expected_cells": 24,
+  "usable_cells": 24,
+  "provenance": {
+    "cells_with_provenance": 24,
+    "git_shas": [
+      "ec2d069ec1da0e357f6987e4c3ba1527ed1e5a85"
+    ],
+    "git_sha_consistent": true,
+    "source_file_hashes_consistent": true,
+    "sanctioned_hash_violations": [],
+    "hash_cell_counts": {
+      "carr_runner": {
+        "5519f244a1b2": 24
+      },
+      "resident_adapter": {
+        "c2ebf7e50679": 24
+      },
+      "kernel_engine": {
+        "40bdad9bf9b6": 24
+      },
+      "llm_gateway": {
+        "132b787e400d": 24
+      }
+    },
+    "prompt_identities": [
+      "carr_s_controlled_resident_v8",
+      "carr_s_controlled_resident_v8:v8a",
+      "carr_s_controlled_resident_v8:v8b"
+    ],
+    "decision_models": [
+      "opencode-deepseek-v4-flash",
+      "packy-deepseek-v4-flash"
+    ]
+  },
+  "provenance_note": null,
+  "lane_contrasts": {
+    "carr_s_e3a_v8a": {
+      "feedback_downstream_delta_per_seed": [
+        -7.0,
+        -7.125,
+        -7.25,
+        -6.625
+      ],
+      "feedback_downstream_mean": -7.0,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.875,
+        1.0,
+        1.0,
+        0.875
+      ],
+      "interaction_downstream_mean": 0.9375,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3a_v8b_packy": {
+      "feedback_downstream_delta_per_seed": [
+        -7.125,
+        -7.5,
+        -7.0,
+        -6.75
+      ],
+      "feedback_downstream_mean": -7.09375,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.875,
+        0.875,
+        0.75,
+        1.0
+      ],
+      "interaction_downstream_mean": 0.875,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    }
+  },
+  "gateway_totals": {
+    "n_ok": 3010,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0
+  },
+  "problems": [],
+  "all_gates_pass": true,
+  "evidence_label": "COMPLETE_VALID"
+}

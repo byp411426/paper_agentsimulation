@@ -1,0 +1,28 @@
+{"step": 1, "awake": 0}
+{"step": 2, "awake": 0}
+{"step": 3, "awake": 1}
+{"step": 4, "awake": 1}
+{"step": 5, "awake": 1}
+{"provider_request_started": 1}
+{"step": 6, "awake": 1}
+{"provider_request_started": 2}
+{"provider_request_started": 3}
+{"provider_request_started": 4}
+{"provider_request_started": 5}
+{"step": 7, "awake": 3}
+{"provider_request_started": 6}
+{"provider_request_started": 7}
+{"step": 8, "awake": 2}
+{"provider_request_started": 8}
+{"step": 9, "awake": 1}
+{"provider_request_started": 9}
+{"step": 10, "awake": 1}
+{"provider_request_started": 10}
+{"provider_request_started": 11}
+{"provider_request_started": 12}
+{"step": 11, "awake": 2}
+{"provider_request_started": 13}
+{"provider_request_started": 14}
+{"provider_request_started": 15}
+{"step": 12, "awake": 3}
+{"status": "VALID", "completed_steps": 12, "provider_requests": 15, "elapsed_seconds": 600.74}

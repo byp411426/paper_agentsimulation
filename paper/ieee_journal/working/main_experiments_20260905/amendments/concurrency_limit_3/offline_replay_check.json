@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "mode": "cache-only; backend refuses every missing response without network access",
+  "prefix_complete_steps": 9,
+  "prefix_events_byte_identical": true,
+  "cached_successful_responses": 366,
+  "cache_hits": 366,
+  "new_successful_calls": 0,
+  "expected_stop_reason": "OFFLINE_CACHE_MISS_NO_NETWORK",
+  "original_cache_sha256_before": "320a7e6f13d2dd161eaf59e28e09ebf54cfbe9d70c953297fc7c91acb86f5543",
+  "original_cache_sha256_after": "320a7e6f13d2dd161eaf59e28e09ebf54cfbe9d70c953297fc7c91acb86f5543",
+  "freeze_sha256": "57510fc89f5114e3a5f1eccea0210e9bb7c5a72ff385f0990f14859e187a17bf"
+}

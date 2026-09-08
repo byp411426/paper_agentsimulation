@@ -1,0 +1,78 @@
+{
+  "git_sha": "3d59a1888317ce4ff8db54fd4b83d06195d12f0a",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_tiger_routes_integration_full_seed202",
+      "total_steps": 8,
+      "step_minutes": 30,
+      "seed": 202
+    },
+    "llm": {
+      "decision_model": "mock",
+      "temperature": 0.0,
+      "max_concurrency": 16,
+      "budget_usd": 1.0,
+      "fallback_threshold": 0.01
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "INTEGRATION_CHECK",
+      "case_semantics": "Carr-informed controlled scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 20,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "depart_step": 5,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 8,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 0.65,
+      "social_message_delivery_probability": 0.25,
+      "route_semantics": {
+        "geometry": "sourced 2018 TIGER/Line road network",
+        "obstruction": "algorithmic controlled perturbation",
+        "historical_closure_observed": false,
+        "traffic_scope": "route-level capacity, not microscopic traffic reconstruction"
+      },
+      "condition": "full"
+    }
+  },
+  "models": [
+    "mock"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled scenario with TIGER-derived routes",
+  "models_config": {
+    "path": null,
+    "sha256": null
+  },
+  "credential_environment_name": null,
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "f73a813dae48693ab21bfbd3e0eda86ecbc7c7eb1f5c40f053c7f1f593669b5b"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "22ce2ddf22d04e30fce3db0c6ea4ce361e7048bce7be1f45aa459cde815ab73e"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "3dc6ae3036d0998094da4ae75f0454870f9cf7588f744f25ea3d3ef369d7e8b8"
+    }
+  }
+}

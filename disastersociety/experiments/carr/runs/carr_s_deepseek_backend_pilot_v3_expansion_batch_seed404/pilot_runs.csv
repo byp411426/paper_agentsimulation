@@ -1,0 +1,6 @@
+condition,seed,status,n_households,n_decision_residents,warning_retention_rate,primary_to_alternate_update_rate,successful_replan_rate,compatible_commitment_rate,coordinated_departure_rate,uncoordinated_departure_rate,resource_conflict_rejections_per_household,dependent_left_behind_rejections,accepted_message_receipts,delivered_message_receipts,dropped_message_deliveries,realized_closure_step,n_logical_decisions,run_terminal_status,fallback_rate,cost_usd
+full,404,PILOT,2,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0,2,3,8,3,13,INVALID,0.076923,0.049386
+full_minus_memory,404,PILOT,2,4,0.0,1.0,1.0,0.5,0.5,0.5,2.0,0,1,1,13,3,16,VALID,0.0,0.059032
+full_minus_feedback,404,PILOT,2,4,1.0,1.0,1.0,0.5,0.0,1.0,3.5,0,1,4,11,3,16,VALID,0.0,0.070605
+full_minus_planning,404,PILOT,2,4,1.0,0.0,0.0,0.0,0.0,1.0,3.5,0,0,3,9,3,12,VALID,0.0,0.060386
+full_minus_interaction,404,PILOT,2,4,1.0,1.0,0.5,0.0,0.0,1.0,4.0,0,0,0,0,3,15,VALID,0.0,0.044012

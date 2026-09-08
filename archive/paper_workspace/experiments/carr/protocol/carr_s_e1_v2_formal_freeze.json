@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e1_v2_formal",
+  "frozen_at": "2026-08-03",
+  "status": "FROZEN_FORMAL_MINIMAL_SAMPLE",
+  "basis": "Preflight r5 passed (VALID, 86 cached real decisions, 4/6 households evacuated, 0 failures). User-authorized two-day sprint: freeze minimal formal sample after preflight.",
+  "formal_design": {
+    "n_households": 24,
+    "seeds": [7201, 8301, 9401],
+    "total_steps": 25,
+    "step_minutes": 30,
+    "model": "packy-deepseek-v4-flash thinking-high",
+    "temperature": 0.0,
+    "order_sequences": "calibration quotas from order_sequence_calibration.json (main, excluding 15 contradictions)",
+    "cohort": "first 24 households of e1_profiles_v2_seed4201 (whole households, no member splitting)"
+  },
+  "coordination_design_note": "Parties auto-form from valid evacuation intents with caregivers assigned to the evacuating adult; household messages remain the coordination channel and can form or revise parties. Multi-adult households evacuate without requiring prior proposal messages (preflight finding).",
+  "evidence_label": "RUNNING_PENDING_AUDIT",
+  "claim_boundary": "Carr-informed controlled scenario; not historical reconstruction, not population representative, not individual-level validation."
+}

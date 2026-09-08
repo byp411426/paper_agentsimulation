@@ -1,0 +1,63 @@
+{
+  "status": "PILOT_LEGACY_REANALYSIS",
+  "track": "Carr-R",
+  "model": "deepseek-v4-flash",
+  "split": "validation",
+  "test_split_opened": false,
+  "n": 66,
+  "legacy_label_mismatches_in_frozen_330": 74,
+  "probability_semantics": "P(evacuated) = confidence for yes decisions and 1-confidence for no decisions",
+  "metrics": {
+    "n": 66,
+    "outcome_prevalence": 0.8939393939393939,
+    "predicted_positive_rate": 0.9393939393939394,
+    "accuracy": 0.8939393939393939,
+    "macro_f1": 0.6528925619834711,
+    "brier": 0.10231060606060605,
+    "ece": 0.1628787878787879,
+    "confusion_matrix_labels_0_1": [
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        57
+      ]
+    ],
+    "conditional_stratified_bootstrap_95pct": {
+      "accuracy": [
+        0.8333333333333334,
+        0.9393939393939394
+      ],
+      "macro_f1": [
+        0.45901639344262296,
+        0.8166666666666667
+      ],
+      "brier": [
+        0.07852272727272727,
+        0.1262907196969697
+      ],
+      "ece": [
+        0.12121212121212137,
+        0.2128787878787879
+      ]
+    }
+  },
+  "claim_boundary": "No-cost reanalysis of stored demographic-only model responses. The run predates the frozen protocol and lacks current gateway provenance, so it is not a formal model comparison.",
+  "provenance": {
+    "respondent_id_exported_in_new_artifact": false,
+    "runner": {
+      "path": "experiments/baselines/reanalyze_deepseek_legacy.py",
+      "sha256": "244d3a41361c9b4120973db78d2d6537a020d790293411db86900018f2357e83"
+    },
+    "source_files": {
+      "experiments/baselines/results/llm_static_deepseek-v4-flash_predictions.csv": "3475b0daf257c1fbd6d8713f2286a42ac4e9c79edfa6a10555ceba84c1f640b2",
+      "experiments/baselines/results/llm_static_deepseek-v4-flash.json": "66ae808379edccb177361c45277278f753fd9df9bdff526e5c472e0b4c9fd45d",
+      "experiments/baselines/results/llm_static_full.log": "d74f5667f5f698293e54d03b5100d441a776c5108681ef22c86ff546e477c473",
+      "eventpacks/carr_2018/behavior/evaluation_respondents.csv": "5cc642186cba75d36e0b2617d3bccfe1bb51b1a328eb98cb0a5391a9ea0ba031",
+      "experiments/carr/protocol/carr_r_split.csv": "5e52b396b2cf1e9c456005d434f8d1bf5b5edec9e080b187a98812b54c3074ae"
+    },
+    "command": "uv run --extra ml python experiments/baselines/reanalyze_deepseek_legacy.py"
+  }
+}

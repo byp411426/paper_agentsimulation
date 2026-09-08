@@ -1,0 +1,195 @@
+{
+  "study": "E3 v1 bounded cross-model replication",
+  "protocol_id": "carr_s_e3_v1",
+  "expected_cells": 84,
+  "usable_cells": 84,
+  "provenance": {
+    "cells_with_provenance": 84,
+    "git_shas": [
+      "ec2d069ec1da0e357f6987e4c3ba1527ed1e5a85"
+    ],
+    "git_sha_consistent": true,
+    "source_file_hashes_consistent": true,
+    "sanctioned_hash_violations": [],
+    "hash_cell_counts": {
+      "carr_runner": {
+        "5519f244a1b2": 84
+      },
+      "resident_adapter": {
+        "c2ebf7e50679": 29,
+        "1a6b68a225ed": 55
+      },
+      "kernel_engine": {
+        "40bdad9bf9b6": 84
+      },
+      "llm_gateway": {
+        "132b787e400d": 58,
+        "e3c2397b9469": 26
+      }
+    },
+    "prompt_identities": [
+      "carr_s_controlled_resident_v8"
+    ],
+    "decision_models": [
+      "local-gemma4-31b-fp8",
+      "local-qwen35-27b-fp8",
+      "local-qwen36-27b-fp8",
+      "opencode-deepseek-v4-flash",
+      "packy-glm-5",
+      "packy-gpt5.4-mini",
+      "packy-qwen3.5-plus"
+    ]
+  },
+  "provenance_note": "Two sanctioned builds per the frozen amendments carr_py_reconstruction_20260804 and carr_py_gateway_refreeze_20260815: resident adapter original (55 cells) vs reconstructed docstring-only (29 cells); gateway transport-hardening builds (26 vs 58 cells). Claude lane (10 partial cells) excluded by user decision and not part of the 84-cell matrix.",
+  "lane_contrasts": {
+    "carr_s_e3_v1_deepseek": {
+      "feedback_downstream_delta_per_seed": [
+        -6.875,
+        -6.875,
+        -6.875,
+        -6.75
+      ],
+      "feedback_downstream_mean": -6.84375,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        1.0,
+        1.0,
+        0.5,
+        0.625
+      ],
+      "interaction_downstream_mean": 0.78125,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_qwen": {
+      "feedback_downstream_delta_per_seed": [
+        -6.375,
+        -6.625,
+        -7.0,
+        -6.875
+      ],
+      "feedback_downstream_mean": -6.71875,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.5,
+        0.375,
+        0.5,
+        0.25
+      ],
+      "interaction_downstream_mean": 0.40625,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_glm": {
+      "feedback_downstream_delta_per_seed": [
+        -6.625,
+        -6.625,
+        -6.75,
+        -6.625
+      ],
+      "feedback_downstream_mean": -6.65625,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.375,
+        0.625,
+        0.625,
+        0.375
+      ],
+      "interaction_downstream_mean": 0.5,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_gpt54mini": {
+      "feedback_downstream_delta_per_seed": [
+        -1.625,
+        -1.75,
+        -1.625,
+        -1.75
+      ],
+      "feedback_downstream_mean": -1.6875,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "interaction_downstream_mean": 0.03125,
+      "interaction_downstream_direction_share": 0.25,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_qwen27b": {
+      "feedback_downstream_delta_per_seed": [
+        -8.125,
+        -8.5,
+        -8.125,
+        -8.125
+      ],
+      "feedback_downstream_mean": -8.21875,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.5,
+        0.375,
+        0.5,
+        0.5
+      ],
+      "interaction_downstream_mean": 0.46875,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_gemma4": {
+      "feedback_downstream_delta_per_seed": [
+        -6.25,
+        -5.75,
+        -6.0,
+        -6.625
+      ],
+      "feedback_downstream_mean": -6.15625,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.25,
+        0.375,
+        0.5,
+        0.375
+      ],
+      "interaction_downstream_mean": 0.375,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    },
+    "carr_s_e3_v1_qwen36": {
+      "feedback_downstream_delta_per_seed": [
+        -8.75,
+        -9.0,
+        -9.75,
+        -10.125
+      ],
+      "feedback_downstream_mean": -9.40625,
+      "feedback_downstream_direction_share": 1.0,
+      "interaction_downstream_delta_per_seed": [
+        0.75,
+        0.5,
+        0.625,
+        0.375
+      ],
+      "interaction_downstream_mean": 0.5625,
+      "interaction_downstream_direction_share": 1.0,
+      "feedback_check_direction_share": 1.0,
+      "interaction_check_direction_share": 1.0
+    }
+  },
+  "gateway_totals": {
+    "n_ok": 11259,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0
+  },
+  "problems": [],
+  "all_gates_pass": true,
+  "evidence_label": "COMPLETE_VALID"
+}

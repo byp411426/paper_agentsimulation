@@ -1,0 +1,88 @@
+{
+  "status": "PILOT_VALIDATION_ONLY",
+  "track": "Carr-R",
+  "mode": "validation",
+  "test_split_opened": false,
+  "model_alias": "packy-deepseek-v4-flash",
+  "model_id": "openai/deepseek-v4-flash",
+  "prompt_version": "carr_r_static_demographics_v1",
+  "prompt_template_sha256": "0f5313787ff4e18fad6bba35aff3e7b82e89e720e684e0c5f5f687f22851ff4b",
+  "features": [
+    "age_group",
+    "household_size",
+    "vehicle_count",
+    "income_bracket"
+  ],
+  "n_requested": 66,
+  "n_failed": 0,
+  "metrics": {
+    "n": 66,
+    "outcome_prevalence": 0.8939393939393939,
+    "predicted_positive_rate": 0.9696969696969697,
+    "accuracy": 0.8636363636363636,
+    "macro_f1": 0.4634146341463415,
+    "brier": 0.1269909090909091,
+    "ece": 0.17757575757575747,
+    "confusion_matrix_labels_0_1": [
+      [
+        0,
+        7
+      ],
+      [
+        2,
+        57
+      ]
+    ],
+    "decision_probability_consistency_rate": 1.0,
+    "conditional_stratified_bootstrap_95pct": {
+      "accuracy": [
+        0.8181818181818182,
+        0.8939393939393939
+      ],
+      "macro_f1": [
+        0.45,
+        0.472
+      ],
+      "brier": [
+        0.10856693181818183,
+        0.14885113636363637
+      ],
+      "ece": [
+        0.14226893939393945,
+        0.2548560606060605
+      ]
+    }
+  },
+  "gateway": {
+    "run_id": "carr-r-deepseek-carr_r_static_demographics_v1-validation",
+    "spent": 0.029342,
+    "n_ok": 65,
+    "n_cache": 1,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 17165,
+    "live_completion_tokens": 12177,
+    "logical_prompt_tokens": 17430,
+    "logical_completion_tokens": 12287
+  },
+  "pricing_status": "internal_budget_estimate_not_verified_proxy_billing",
+  "claim_boundary": "Validation-only static demographic baseline. This is auxiliary Carr-R evidence, not a multi-step social simulation result and not a platform-validity claim.",
+  "provenance": {
+    "runner": {
+      "path": "experiments/baselines/run_carr_r_deepseek.py",
+      "sha256": "962c5e784dd873782ad6d8d596f99578edde356ca8c642293eee69cce294f30a"
+    },
+    "configuration": {
+      "path": "experiments/baselines/configs/carr_r_deepseek_validation.yaml",
+      "sha256": "87aebe945893feb1fada4049fb92ed8ea57e852385adead4d4164a6df74f3bac"
+    },
+    "models_config_sha256": "b8284ad554500e6355bebe518a8178ace71a61544b1487ecf49cbe1f2024b044",
+    "respondent_id_exported": false,
+    "credential_environment_name": "OPENAI_API_KEY",
+    "credential_value_recorded": false,
+    "python": "3.13.5",
+    "litellm": "1.93.0",
+    "command": "uv run --extra ml python experiments/baselines/run_carr_r_deepseek.py"
+  }
+}

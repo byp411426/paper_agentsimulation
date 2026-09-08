@@ -1,0 +1,59 @@
+{
+  "run_seed": 101,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "VALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 8,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 8,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 5,
+    "n_safe_dependents": 7,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 5,
+    "rejections": {
+      "dependent member would be left behind": 1,
+      "vehicle allocated to syn_t035_h0000025_r001": 1,
+      "vehicle allocated to syn_t047_h0000019_r001": 1,
+      "vehicle reserved by syn_t012_h0000031_r001": 1,
+      "vehicle reserved by syn_t035_h0000025_r001": 2,
+      "vehicle reserved by syn_t047_h0000019_r001": 2
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_formal_e2_v5_full_minus_feedback_seed101",
+    "spent": 0.093361,
+    "n_ok": 32,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 22194,
+    "live_completion_tokens": 71167,
+    "logical_prompt_tokens": 22194,
+    "logical_completion_tokens": 71167
+  },
+  "wall_clock_seconds": 652.520871
+}

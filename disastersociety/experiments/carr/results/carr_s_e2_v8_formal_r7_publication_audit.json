@@ -1,0 +1,2436 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r7",
+  "audit_status": "COMPLETE_VALID",
+  "expected_cells": 60,
+  "actual_cells": 60,
+  "n_valid_cells": 60,
+  "terminal_status_counts": {
+    "VALID": 60
+  },
+  "missing_cells": [],
+  "unexpected_cells": [],
+  "duplicate_seed_conditions": {},
+  "frozen_artifact_hashes": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal_r7.yaml",
+      "ok": true,
+      "actual": "715e4c161db4e653fbceb5a625127b1b3b5381cb713392b753d7d74ffafa803d",
+      "expected": "715e4c161db4e653fbceb5a625127b1b3b5381cb713392b753d7d74ffafa803d"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "ok": true,
+      "actual": "3e54912ec2202dbc90755614345571e634a0c8292b6afe805da80926fe8bf0e8",
+      "expected": "3e54912ec2202dbc90755614345571e634a0c8292b6afe805da80926fe8bf0e8"
+    },
+    "single_seed_science_runner": {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "ok": true,
+      "actual": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320",
+      "expected": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    "r7_lane_supervisor": {
+      "path": "scripts/run_carr_e2_v8_r7_lane.py",
+      "ok": true,
+      "actual": "9802d5ea16263c8885e94ac5cccafd728c4dccd34ee95bde6550324bc171964a",
+      "expected": "9802d5ea16263c8885e94ac5cccafd728c4dccd34ee95bde6550324bc171964a"
+    },
+    "frozen_v8_summarizer": {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "ok": true,
+      "actual": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5",
+      "expected": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    "r7_protocol_filename_adapter": {
+      "path": "scripts/summarize_carr_e2_v8_r7.py",
+      "ok": true,
+      "actual": "2bb972c0065422ea95096d4b6076d36ad16fdf8b0de0ca5e7e0c886239aa45ba",
+      "expected": "2bb972c0065422ea95096d4b6076d36ad16fdf8b0de0ca5e7e0c886239aa45ba"
+    },
+    "publication_audit": {
+      "path": "scripts/audit_carr_e2_v8_r5_publication.py",
+      "ok": true,
+      "actual": "2d04a0432dc1da17ece0f8b480b0af99202015eb787543897e1aa04517e7a649",
+      "expected": "2d04a0432dc1da17ece0f8b480b0af99202015eb787543897e1aa04517e7a649"
+    },
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "ok": true,
+      "actual": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65",
+      "expected": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "ok": true,
+      "actual": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+      "expected": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "ok": true,
+      "actual": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a",
+      "expected": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "ok": true,
+      "actual": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28",
+      "expected": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "ok": true,
+      "actual": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f",
+      "expected": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "ok": true,
+      "actual": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e",
+      "expected": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "ok": true,
+      "actual": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d",
+      "expected": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "ok": true,
+      "actual": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970",
+      "expected": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    }
+  },
+  "cells": [
+    {
+      "seed": 1103,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 103,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.660653,
+      "wall_clock_seconds": 1391.96703,
+      "n_logical_decisions": 103,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.080503,
+      "wall_clock_seconds": 1984.17848,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 113,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.549236,
+      "wall_clock_seconds": 1584.058202,
+      "n_logical_decisions": 113,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 4,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.542797,
+      "wall_clock_seconds": 1017.348752,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 101,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.677935,
+      "wall_clock_seconds": 1275.084042,
+      "n_logical_decisions": 101,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 96,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.585403,
+      "wall_clock_seconds": 1056.980419,
+      "n_logical_decisions": 96,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 132,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.813652,
+      "wall_clock_seconds": 1398.30693,
+      "n_logical_decisions": 132,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 121,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.529912,
+      "wall_clock_seconds": 964.600188,
+      "n_logical_decisions": 121,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.574045,
+      "wall_clock_seconds": 965.391769,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 98,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.68257,
+      "wall_clock_seconds": 1376.905963,
+      "n_logical_decisions": 98,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1301,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 97,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.666434,
+      "wall_clock_seconds": 1257.705311,
+      "n_logical_decisions": 97,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 6
+        }
+      }
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.024593,
+      "wall_clock_seconds": 1662.62707,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 121,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.576699,
+      "wall_clock_seconds": 1052.885475,
+      "n_logical_decisions": 121,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.585792,
+      "wall_clock_seconds": 1393.924402,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 98,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.6236,
+      "wall_clock_seconds": 1270.915134,
+      "n_logical_decisions": 98,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1409,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 103,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.65941,
+      "wall_clock_seconds": 1577.306068,
+      "n_logical_decisions": 103,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 152,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.948735,
+      "wall_clock_seconds": 2123.868035,
+      "n_logical_decisions": 152,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 119,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.614314,
+      "wall_clock_seconds": 1243.693153,
+      "n_logical_decisions": 119,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 88,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.521292,
+      "wall_clock_seconds": 837.089643,
+      "n_logical_decisions": 88,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 103,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.660236,
+      "wall_clock_seconds": 1270.968984,
+      "n_logical_decisions": 103,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1511,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 92,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.557199,
+      "wall_clock_seconds": 1148.733783,
+      "n_logical_decisions": 92,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 152,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.023162,
+      "wall_clock_seconds": 1808.814525,
+      "n_logical_decisions": 152,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 110,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.562816,
+      "wall_clock_seconds": 1127.094929,
+      "n_logical_decisions": 110,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 5,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.610479,
+      "wall_clock_seconds": 1454.247316,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 91,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.668511,
+      "wall_clock_seconds": 1411.001323,
+      "n_logical_decisions": 91,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1601,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.560095,
+      "wall_clock_seconds": 983.870882,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.989504,
+      "wall_clock_seconds": 1625.982321,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 118,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.519668,
+      "wall_clock_seconds": 981.76401,
+      "n_logical_decisions": 118,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 86,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.474034,
+      "wall_clock_seconds": 1190.585423,
+      "n_logical_decisions": 86,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 93,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.595509,
+      "wall_clock_seconds": 1082.543492,
+      "n_logical_decisions": 93,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 6
+        }
+      }
+    },
+    {
+      "seed": 1709,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 96,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.536847,
+      "wall_clock_seconds": 904.129352,
+      "n_logical_decisions": 96,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 153,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.094048,
+      "wall_clock_seconds": 1697.467363,
+      "n_logical_decisions": 153,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 114,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.537788,
+      "wall_clock_seconds": 1051.086479,
+      "n_logical_decisions": 114,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 5,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 96,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.54642,
+      "wall_clock_seconds": 917.253196,
+      "n_logical_decisions": 96,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 98,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.619585,
+      "wall_clock_seconds": 1122.057588,
+      "n_logical_decisions": 98,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1801,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 99,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.619429,
+      "wall_clock_seconds": 1320.114282,
+      "n_logical_decisions": 99,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.061445,
+      "wall_clock_seconds": 1758.41611,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 118,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.577732,
+      "wall_clock_seconds": 988.342212,
+      "n_logical_decisions": 118,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 93,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.597128,
+      "wall_clock_seconds": 1414.156499,
+      "n_logical_decisions": 93,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 100,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.57463,
+      "wall_clock_seconds": 1181.230952,
+      "n_logical_decisions": 100,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1907,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 84,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.487904,
+      "wall_clock_seconds": 718.453722,
+      "n_logical_decisions": 84,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.028679,
+      "wall_clock_seconds": 1903.338743,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 114,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.498108,
+      "wall_clock_seconds": 1064.334202,
+      "n_logical_decisions": 114,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.532449,
+      "wall_clock_seconds": 929.832728,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.589338,
+      "wall_clock_seconds": 933.794007,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2003,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 92,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.607359,
+      "wall_clock_seconds": 1280.468995,
+      "n_logical_decisions": 92,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 153,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.023113,
+      "wall_clock_seconds": 1654.580105,
+      "n_logical_decisions": 153,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 117,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.500039,
+      "wall_clock_seconds": 939.786893,
+      "n_logical_decisions": 117,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 97,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.594505,
+      "wall_clock_seconds": 1735.828326,
+      "n_logical_decisions": 97,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 92,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.53851,
+      "wall_clock_seconds": 952.424975,
+      "n_logical_decisions": 92,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2111,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 97,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.559664,
+      "wall_clock_seconds": 1108.082951,
+      "n_logical_decisions": 97,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.982119,
+      "wall_clock_seconds": 1661.209748,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 115,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.53311,
+      "wall_clock_seconds": 990.744179,
+      "n_logical_decisions": 115,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 6,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 99,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.596164,
+      "wall_clock_seconds": 1079.312029,
+      "n_logical_decisions": 99,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 7,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 98,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.596826,
+      "wall_clock_seconds": 1145.999739,
+      "n_logical_decisions": 98,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2203,
+      "condition": "full",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 104,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.587964,
+      "wall_clock_seconds": 1020.907672,
+      "n_logical_decisions": 104,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_feedback",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 160,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 1.032507,
+      "wall_clock_seconds": 1573.137396,
+      "n_logical_decisions": 160,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_interaction",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 109,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.47088,
+      "wall_clock_seconds": 894.367237,
+      "n_logical_decisions": 109,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 5,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_memory",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 96,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.551842,
+      "wall_clock_seconds": 1137.146742,
+      "n_logical_decisions": 96,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 8,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 8
+        }
+      }
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_planning",
+      "present": true,
+      "status": "VALID",
+      "identity_ok": true,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 94,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.592543,
+      "wall_clock_seconds": 1251.68554,
+      "n_logical_decisions": 94,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 16,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 7
+        }
+      }
+    }
+  ],
+  "paired_contrasts": {
+    "memory": {
+      "valid_pairs": 12,
+      "n_seeds": 12,
+      "excluded": []
+    },
+    "feedback": {
+      "valid_pairs": 12,
+      "n_seeds": 12,
+      "excluded": []
+    },
+    "planning": {
+      "valid_pairs": 12,
+      "n_seeds": 12,
+      "excluded": []
+    },
+    "interaction": {
+      "valid_pairs": 12,
+      "n_seeds": 12,
+      "excluded": []
+    }
+  },
+  "opportunity_denominators": {
+    "memory": {
+      "primary_denominator_field": "warning_exposed_coordinator_count",
+      "valid_cell_denominator_values": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "n_cells_with_zero_or_missing_denominator": 0
+    },
+    "feedback": {
+      "primary_denominator_field": "preclosure_primary_plan_count",
+      "valid_cell_denominator_values": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "n_cells_with_zero_or_missing_denominator": 0
+    },
+    "planning": {
+      "primary_denominator_field": "postclosure_replanned_household_count",
+      "valid_cell_denominator_values": [
+        7,
+        0,
+        4,
+        6,
+        0,
+        8,
+        0,
+        7,
+        8,
+        0,
+        6,
+        0,
+        7,
+        8,
+        0,
+        8,
+        0,
+        6,
+        7,
+        0,
+        7,
+        0,
+        5,
+        8,
+        0,
+        7,
+        0,
+        6,
+        7,
+        0,
+        8,
+        0,
+        5,
+        8,
+        0,
+        6,
+        0,
+        6,
+        7,
+        0,
+        7,
+        0,
+        6,
+        8,
+        0,
+        7,
+        0,
+        6,
+        7,
+        0,
+        8,
+        0,
+        6,
+        7,
+        0,
+        8,
+        0,
+        5,
+        8,
+        0
+      ],
+      "n_cells_with_zero_or_missing_denominator": 24
+    },
+    "interaction": {
+      "primary_denominator_field": "n_households",
+      "valid_cell_denominator_values": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "n_cells_with_zero_or_missing_denominator": 0
+    }
+  },
+  "problems": []
+}

@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "amendment_id": "r3_seed101_empty_response_recovery_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_RECOVERY_RERUN",
+  "trigger": {
+    "type": "empty_provider_response",
+    "observed_error": "schema invalid after repair: E1ResidentDecision Invalid JSON EOF at step 11",
+    "affected_run": "carr_s_e1_scale_100_packy seed101 (ABORTED, BACKEND_UNAVAILABLE)",
+    "n_ok_before_failure": 671,
+    "n_failed": 1
+  },
+  "disposition": {
+    "old_attempt": "Partial artifacts archived under experiments/carr/runs/archive_e3c_seed101_empty_response_20260804 and excluded; no cross-attempt splicing.",
+    "rerun": "Same frozen config/seed (carr_s_e1_scale_100_packy, seed 101) with a new out-dir; shared llm_cache replays the 671 successful calls and only the failed decision is re-executed live.",
+    "science_unchanged": true
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

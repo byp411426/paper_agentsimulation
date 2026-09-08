@@ -1,0 +1,16 @@
+{
+  "protocol_id": "carr_s_e3_v1_deepseek",
+  "lane": "deepseek",
+  "pid": 39963,
+  "config": "experiments/carr/configs/carr_s_e3_v1_deepseek.yaml",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [],
+  "current_seed": 2107,
+  "state": "RUNNING",
+  "stop_reason": null
+}

@@ -1,0 +1,145 @@
+{
+  "git_sha": "ec2d069ec1da0e357f6987e4c3ba1527ed1e5a85",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_feedback_seed101",
+      "total_steps": 10,
+      "step_minutes": 30,
+      "seed": 101
+    },
+    "llm": {
+      "decision_model": "packy-minimax-m2.7",
+      "models_config": "configs/models_cross_model.yaml",
+      "temperature": 0.0,
+      "max_concurrency": 4,
+      "budget_usd": 1.5,
+      "fallback_threshold": 0.01,
+      "abort_on_call_failure": true
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "E3_CROSS_MODEL_ROBUSTNESS_PILOT",
+      "metric_protocol_version": "v6",
+      "prompt_version": "carr_s_controlled_resident_v6",
+      "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 2,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4
+      ],
+      "depart_step": 5,
+      "coordination_deadline_step": 7,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 2,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 1.0,
+      "household_dm_delivery_probability": 1.0,
+      "community_message_delivery_probability": 0.15,
+      "abort_matrix_on_nonvalid_run": true,
+      "declared_cross_model_pilot": {
+        "paid_execution_authorized": true,
+        "authorization_scope": "three alternate backends, two households, five conditions, two paired seeds",
+        "models": [
+          "packy-qwen3.5-plus",
+          "packy-minimax-m2.7",
+          "packy-glm-5"
+        ],
+        "seeds": [
+          101,
+          202
+        ],
+        "conditions": [
+          "full",
+          "full_minus_memory",
+          "full_minus_feedback",
+          "full_minus_planning",
+          "full_minus_interaction"
+        ],
+        "execute_conditions_sequentially_within_model": true,
+        "maximum_concurrent_model_matrices": 2,
+        "maximum_total_in_flight_requests": 8,
+        "continuation_rule": "Run every predeclared cell unless a hard credential, balance, provider, budget, or run-validity failure occurs. Do not stop or continue based on observed effect direction.",
+        "exclusion_rule": "Exclude a model-seed mechanism pair if either member is not VALID. Preserve all artifacts and retry only under a new run identifier.",
+        "formal_evidence": false,
+        "carr_r_test_split_opened": false
+      },
+      "metric_contract": {
+        "memory": {
+          "metric": "conditional_warning_retention_rate",
+          "denominator": "coordinators who actually received the warning",
+          "direction": "positive"
+        },
+        "feedback": {
+          "metric": "primary_to_alternate_update_rate",
+          "denominator": "decision residents with a recorded primary-route plan",
+          "direction": "positive"
+        },
+        "planning": {
+          "metric": "successful_replan_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        },
+        "interaction": {
+          "metric": "post_closure_feasible_commitment_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        }
+      },
+      "claim_boundary": {
+        "purpose": "Test whether the directions of the frozen v6 DeepSeek pilot contrasts persist across alternate model classes under the same prompt, scenario, cohort-selection rule, seeds, conditions, and metrics.",
+        "formal_evidence": false,
+        "model_quality_ranking": false,
+        "mock_effect_evidence_allowed": false,
+        "carr_empirical_validation": false,
+        "historical_closure_reconstruction": false,
+        "test_split_opened": false
+      },
+      "route_semantics": {
+        "geometry": "sourced 2018 TIGER/Line road network",
+        "obstruction": "algorithmic controlled perturbation",
+        "historical_closure_observed": false,
+        "traffic_scope": "route-level capacity, not microscopic traffic reconstruction"
+      },
+      "condition": "full_minus_feedback"
+    }
+  },
+  "models": [
+    "packy-minimax-m2.7"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "models_config": {
+    "path": "configs/models_cross_model.yaml",
+    "sha256": "32bb3a3fa568242c9791e03b2cb6c08ae4f61a13fcf2eaf6ee5d543d08c548bf"
+  },
+  "credential_environment_name": "PACKY_CROSS_MODEL_API_KEY",
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "cb0f1b6a2f643aced1a9ed6c7d012d1036ecace0975edab195270d144a6c12e9"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "eab59e62d72a380be688f1af11a2b7c197433b63e17be8365414f99af4946a9a"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    }
+  }
+}

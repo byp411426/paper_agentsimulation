@@ -1,0 +1,7 @@
+{
+  "status": "SUPERSEDED_DEVELOPMENT_ATTEMPT",
+  "completed_steps": 11,
+  "stop_reason": "Stopped owned development run after timing-contract correction was ready; last-step responses were exhausting output allocation. Replaced with fresh-cache final implementation.",
+  "signal": "SIGALRM",
+  "automatic_wall_limit_reached": false
+}

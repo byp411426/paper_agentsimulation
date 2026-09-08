@@ -1,0 +1,118 @@
+# Carr-S E1 v2 trait codebook (frozen).
+# Missing, blank, and "Prefer not to answer" are encoded as null; no median
+# imputation is allowed.
+encoding:
+  Q29.3_worry:
+    Not at all worried: 0.00
+    Slightly worried: 0.25
+    Moderately worried: 0.50
+    Very worried: 0.75
+    Extremely worried: 1.00
+  Q29.4_likelihood:
+    Extremely unlikely: 0.00
+    Somewhat unlikely: 0.25
+    Neither likely nor unlikely: 0.50
+    Somewhat likely: 0.75
+    Extremely likely: 1.00
+  Q32.9_Q32.10:
+    "No": false
+    "Yes": true
+  Q35.3_trustworthiness:
+    Almost never trustworthy: 0.00
+    Not usually trustworthy: 0.25
+    Sometimes trustworthy: 0.50
+    Generally trustworthy: 0.75
+    Almost always trustworthy: 1.00
+  Q35.4_general_trust:
+    "We can never be too cautious in our dealings with other people.": 0.00
+    "It is possible to trust most people.": 1.00
+  Q35.6_helping:
+    "1 (not at all true)": 0.00
+    "2": 0.25
+    "3": 0.50
+    "4": 0.75
+    "5 (very true)": 1.00
+  Q34.4_decision_participation:
+    Another person is the sole decision maker: 0.00
+    I provide input into the decisions, but I am not the primary decision maker: 0.25
+    I share equally in making decisions with another household member(s): 0.50
+    I am the primary decision maker with input from another household member: 0.75
+    I am the sole decision maker: 1.00
+    Prefer not to answer: null
+  Q34.2_prior_evacuation:
+    "0": 0
+    "1": 1
+    "2": 2
+    "3": 3
+    "4": 4
+    "5": 5
+    More than 5: 6
+    topcode_only_for_more_than_5: true
+  Q32.8_household_size:
+    "0": 0
+    "1": 1
+    "2": 2
+    "3": 3
+    "4": 4
+    "5": 5
+    "6": 6
+    "7": 7
+    "10 or more": 10
+  Q32.11_vehicle_count:
+    "1": 1
+    "2": 2
+    "3": 3
+    "4": 4
+    "5": 5
+    More than 5: 6
+  Q32.2_age_band:
+    "18 - 24": "18_24"
+    "25 - 34": "25_34"
+    "35 - 44": "35_44"
+    "45 - 54": "45_54"
+    "55 - 64": "55_64"
+    "65 - 74": "65_74"
+    "75 - 84": "75_84"
+    "85 or older": "85_plus"
+  Q32.13_income_band:
+    Less than $10,000: lt_10k
+    "$10,000 - $14,999": 10_15k
+    "$15,000 - $24,999": 15_25k
+    "$25,000 - $34,999": 25_35k
+    "$35,000 - $49,999": 35_50k
+    "$50,000 - $74,999": 50_75k
+    "$75,000 - $99,999": 75_100k
+    "$100,000 - $149,999": 100_150k
+    "$150,000 - $199,999": 150_200k
+    More than $200,000: 200k_plus
+factors:
+  hazard_worry:
+    items: [Q29.3_1, Q29.3_2]
+    minimum_valid: 1
+  evacuation_friction:
+    items: [Q29.3_3, Q29.3_4, Q29.3_5, Q29.3_6, Q29.3_7, Q29.3_8, Q29.3_9]
+    minimum_valid: 4
+  home_person_threat:
+    items: [Q29.4_1, Q29.4_2, Q29.4_4, Q29.4_5]
+    minimum_valid: 2
+  infrastructure_rescue:
+    items: [Q29.4_3, Q29.4_7, Q29.4_8]
+    minimum_valid: 2
+  property_security:
+    items: [Q29.4_6]
+    minimum_valid: 1
+  work_obligation:
+    items: [Q29.4_9]
+    minimum_valid: 1
+helping_tendency:
+  items: [Q35.6_1, Q35.6_2, Q35.6_3, Q35.6_4, Q35.6_5]
+  minimum_valid: 3
+matching_bands:
+  age_band: [18_24, 25_34, 35_44, 45_54, 55_64, 65_74, 75_84, 85_plus]
+  household_band: [1, 2, 3_4, 5_plus]
+  vehicle_band: [0, 1, 2, 3_plus]
+  income_band: [lt_25k, 25_49k, 50_99k, 100k_plus, missing]
+notes:
+  q29_retrospective_pre_event_report: true
+  q34.4_not_coordinator_truth: true
+  q35.3_item_text_mapping: generic positions only; no family/neighbor/government labels

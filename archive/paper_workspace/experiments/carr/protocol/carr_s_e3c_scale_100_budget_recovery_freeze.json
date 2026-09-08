@@ -1,0 +1,24 @@
+{
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "amendment_id": "r4_budget_recovery_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_RECOVERY_RERUN",
+  "trigger": {
+    "type": "budget_exceeded",
+    "detail": "seed202 aborted at step 17 with BUDGET_EXCEEDED after 1340 ok calls under the $8/run budget; seed101_r2 would hit the same ceiling on its remaining live calls.",
+    "affected_runs": [
+      "carr_s_e1_scale_100_packy seed101_r2 (stopped, partial)",
+      "carr_s_e1_scale_100_packy seed202 (ABORTED, BUDGET_EXCEEDED)"
+    ]
+  },
+  "changes": {
+    "budget_usd": 30.0,
+    "science_unchanged": true,
+    "config": "experiments/carr/configs/carr_s_e1_scale_100_packy_r2.yaml"
+  },
+  "disposition": {
+    "old_attempts": "Partials archived under experiments/carr/runs/archive_e3c_budget_20260804 and excluded; no cross-attempt splicing.",
+    "rerun": "seed101_r3 and seed202_r2 rerun with the higher budget; shared llm_cache replays prior successful calls."
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

@@ -1,0 +1,57 @@
+% Review fragment only. Not inserted into main.tex.
+\subsection{Generated Household Response Processes}
+The completed experiments use a cohort of 24 households with 44 members,
+including 31 decision-making residents, over 25 half-hour steps. We analyze
+all three previously completed runs. Counts below describe recorded events
+across these runs; repeated appearances of a household are not treated as
+independent population samples.
+
+The generated processes contain 49 household proposals. Twelve become
+feasible commitments, 16 remain awaiting a required response, and eight are
+explicitly declined. Twelve proposals are rejected for incompatible member
+assignments, and one encounters an active resource conflict after the
+participants agree. Of the 12 formed commitments, four execute, five are
+rejected at execution, and one is cancelled. The remaining two schedule
+departure at step 26, beyond the observation horizon, and therefore have no
+observed terminal execution outcome. These results distinguish proposal,
+agreement, and movement without treating staying or declining to coordinate
+as simulation errors.
+
+A separate, retrospective record-level analysis checks structured information
+sources and event/state consistency. No structured source-ownership violation
+is detected in 659 recorded decision inputs. Reconstructed delivery,
+processing, and feasible-commitment events agree with the corresponding
+records (125, 59, and 12 events, respectively). No conflict is detected across
+the 75 complete steps for the checked member-movement, vehicle-use, and
+route constraints. These checks evaluate recorded process consistency under
+the implemented scenario; they do not measure agreement with real human
+behavior or establish superiority over other simulation frameworks.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{DisasterSociety: retrospective record consistency in the completed
+24-household experiments. Counts aggregate three existing runs. Event
+precision/recall concerns recorded events, not human evacuation prediction.}
+\label{tab:ours-record-consistency-review}
+\begin{tabular}{lrr}
+\hline
+Check & Result & Exposure \\
+\hline
+Source violations & 0 & 659 inputs \\
+Delivery P/R & 100\%/100\% & 125 events \\
+Processing P/R & 100\%/100\% & 59 events \\
+Commitment P/R & 100\%/100\% & 12 events \\
+State-conflict steps & 0 & 75 steps \\
+\hline
+\end{tabular}
+\end{table}
+
+% Suggested figure captions (figure choice remains under review):
+% Proposal outcomes: All 49 proposal versions and subsequent outcomes of
+% the 12 formed agreements. The panels have different denominators.
+% Agreement timeline: All formed agreement versions aligned by scenario
+% step across the three runs. Event markers denote agreement formation and
+% observed execution, rejection, or cancellation; planned departures beyond
+% the horizon are explicitly marked. R1/R2 are the primary/alternate routes.

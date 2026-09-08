@@ -1,0 +1,48 @@
+version: 1
+status: PILOT_VALIDATION_ONLY
+track: Carr-R
+
+data:
+  clean_survey: eventpacks/carr_2018/behavior/survey_clean.csv
+  evaluation_linkage: eventpacks/carr_2018/behavior/evaluation_respondents.csv
+  split: experiments/carr/protocol/carr_r_split.csv
+  field_roles: experiments/carr/protocol/field_roles.yaml
+
+experiment:
+  field_role_experiment: carr_r_prediction_primary
+  evaluation_splits:
+    - validation
+  sealed_splits:
+    - test
+  model_alias: packy-deepseek-v4-flash
+  prompt_version: carr_r_fixed_preoutcome_context_v1
+  scenario_context:
+    - An active wildfire is threatening communities in the Redding area.
+    - Fire, smoke, and road conditions may change quickly.
+    - Authorities advise residents to monitor official information and prepare for possible evacuation.
+    - No respondent-specific warning receipt, evacuation order, later fire severity, departure reason, or outcome is supplied.
+  temperature: 0.0
+  base_seed: 20260731
+  decision_threshold: 0.5
+  ece_bins: 10
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20260731
+  max_concurrency: 4
+  max_calls: 66
+  estimated_budget_usd: 1.0
+  claim_boundary: >-
+    Validation-only fixed pre-outcome contextual one-shot baseline using the
+    same four frozen demographic fields and one identical non-respondent-specific
+    scenario checkpoint. The test split remains sealed. This is auxiliary
+    Carr-R evidence, not a multi-step social simulation or platform-validity result.
+
+reporting:
+  result_json: experiments/baselines/results/carr_r_deepseek_context_validation_pilot.json
+  predictions_csv: experiments/baselines/results/carr_r_deepseek_context_validation_pilot_predictions.csv
+  run_root: experiments/carr/runs
+  cache: experiments/carr/runs/llm_cache.sqlite
+  export_respondent_id: false
+  interpretation: >-
+    Validation-only paired prompt-context sensitivity on the same 66 records;
+    no test records, respondent-specific warning variables, post-outcome fields,
+    or respondent identifiers are sent to the model.

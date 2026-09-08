@@ -1,0 +1,55 @@
+event_id: carr_2018
+hazard_type: wildfire
+timezone: America/Los_Angeles
+spatial_crs: EPSG:4326
+simulation_step_minutes: 30
+
+data:
+  raw/:
+    description: "Immutable source files retained for audit and reproducible derivation."
+    size_approx_mb: 448
+  hazard/perimeters.geojson:
+    description: "Final CAL FIRE Carr Fire perimeter; one feature, not an observed time series."
+    feature_count: 1
+    timestamp_semantics: "Local civil CONT_DATE; use buffer approximation for within-event progression."
+  population/pums.csv:
+    description: "2018 ACS 5-year PUMS household seed, PUMA 0608900 (Shasta County--Redding City)."
+    row_count: 4317
+  population/acs_marginals.csv:
+    description: "2018 ACS 5-year tract-level marginal estimates for Shasta County (FIPS 06089)."
+    tract_count: 48
+    row_count: 1536
+  population/donors_v1/donor_households.csv:
+    description: "De-identified PUMS donor household table; original SERIALNO retained only in ignored restricted provenance."
+    row_count: 4317
+  population/donors_v1/donor_persons.csv:
+    description: "De-identified person records linked to public donor IDs."
+    row_count: 9968
+  population/pilot_seed42_n1000/synthetic_households.csv:
+    description: "Development-only 1000-household synthetic population pilot; not a formal Carr population."
+    evidence_status: PILOT
+  population/pilot_seed42_n1000/synthetic_persons.csv:
+    description: "Members of the development-only synthetic population pilot."
+    evidence_status: PILOT
+  population/tiger/roads/shasta_roads.geojson:
+    description: "2018 TIGER/Line road segments for Shasta County."
+    feature_count: 15814
+  population/tiger/tracts/shasta_tracts.geojson:
+    description: "2018 TIGER/Line census tracts for Shasta County."
+    feature_count: 48
+  environment/west_redding_controlled_routes.json:
+    description: "Controlled primary/alternate route asset derived from sourced 2018 TIGER/Line road geometry."
+    evidence_status: CONTROLLED_DERIVED_ASSET
+    historical_closure_observed: false
+  environment/west_redding_controlled_routes.geojson:
+    description: "Visualization geometry for the controlled TIGER-derived route pair and algorithmic obstruction."
+    evidence_status: CONTROLLED_DERIVED_ASSET
+    feature_count: 3
+    historical_closure_observed: false
+  warnings/warnings_multi.csv:
+    description: "Carr-informed warning/control event table; scenario rows require explicit calibration/evaluation roles."
+    row_count: 8
+  behavior/survey_clean_qa.json:
+    description: "Machine-readable QA and source hash for ignored Carr survey derivatives."
+
+provenance: provenance/download_log.yaml

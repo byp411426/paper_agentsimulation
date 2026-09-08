@@ -1,0 +1,24 @@
+{
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "amendment_id": "r2_packy_transport_concurrency_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_TRANSPORT_AMENDMENT",
+  "trigger": {
+    "type": "user_transport_choice",
+    "detail": "User instructed the real E3c scale runs to use the Packy gateway (packy-deepseek-v4-flash) instead of OpenCode Go, with higher concurrency (12)."
+  },
+  "changes": {
+    "transport": "packy-deepseek-v4-flash via PACKY_API_KEY (models_e2_reliable.yaml)",
+    "max_concurrency": 12,
+    "science_unchanged": true,
+    "sizes_seeds_metrics": "unchanged from carr_s_e3c_scale_efficiency_freeze.json (100/500/1000 households x 2 seeds; E1 v2 metrics)"
+  },
+  "execution_start": {
+    "size": 100,
+    "seeds": [101, 202],
+    "config": "experiments/carr/configs/carr_s_e1_scale_100_packy.yaml",
+    "state": "RUNNING"
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "claim_boundary": "Scale envelope only; Packy is the same proxy family used by E1/E2/E3 and remains subject to provider instability."
+}

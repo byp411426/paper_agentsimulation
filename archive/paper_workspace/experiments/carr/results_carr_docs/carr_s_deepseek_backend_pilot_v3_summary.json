@@ -1,0 +1,270 @@
+{
+  "status": "PILOT",
+  "activity_type": "BACKEND_PILOT_DERIVED_SUMMARY",
+  "case_semantics": "Carr-informed controlled mechanism scenario",
+  "decision_model": "packy-deepseek-v4-flash",
+  "cohort": {
+    "n_households_per_run": 2,
+    "n_decision_residents_per_run": 4,
+    "seeds": [
+      101,
+      202
+    ],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "n_runs": 10
+  },
+  "source": {
+    "matrices": [
+      {
+        "path": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3/pilot_matrix.json",
+        "sha256": "97f038e8043f11349821c309ad57c99d8f2d98e40de5b09c918ec77a2eb8d55c"
+      }
+    ],
+    "run_artifacts": [
+      {
+        "condition": "full",
+        "seed": 101,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_seed101",
+        "summary_sha256": "3bd7f78c91ec5c7b958756db77745b2036e1ed647dae27c313ce1733c918bee7",
+        "mechanism_metrics_sha256": "ad609f85b61e4f12a80fee14f449682c8799c438e10f3bb2ecd9ee347a593520",
+        "provenance_sha256": "91744a59078263adc1fa377496f3948d36b2044de6a1d5b0ab5a761e2e2e3d43"
+      },
+      {
+        "condition": "full_minus_memory",
+        "seed": 101,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_memory_seed101",
+        "summary_sha256": "3bb7f9612931c282d57be506136b6a8bc1bca1ffb45f46ddc3704857040ffd0e",
+        "mechanism_metrics_sha256": "4cf4aed8becba97ed1a32f7cc186e155577a7d491ce2eb4716a5cc73fb90a666",
+        "provenance_sha256": "50d72960330bfb72039ad95b4be060eeed4adbc8e712e800ed181e4276a889ab"
+      },
+      {
+        "condition": "full_minus_feedback",
+        "seed": 101,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_feedback_seed101",
+        "summary_sha256": "16bc46efc2fefa32c3086e75315440ca45516e771011e25af8b69bbdf37288ad",
+        "mechanism_metrics_sha256": "4cec1afdccef21d181816c61337996775ada3be7fca60640909c59f5903225e7",
+        "provenance_sha256": "e82edc53bd4641642816c14f24449b533a78551251fadc4b386c9da275c88506"
+      },
+      {
+        "condition": "full_minus_planning",
+        "seed": 101,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_planning_seed101",
+        "summary_sha256": "8b178a3230509f6bdd348b3391ec5f4c5925e62060f89b4f0b3243d82a651791",
+        "mechanism_metrics_sha256": "fb5e24090476ad905c3f20f7a0a61d7a7ac2822960b2f7a670780403f7391c92",
+        "provenance_sha256": "f4ec32fe97ca6117818030bd5593ea4913472e9351460b6c8cd039a7650a0a52"
+      },
+      {
+        "condition": "full_minus_interaction",
+        "seed": 101,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_interaction_seed101",
+        "summary_sha256": "3dfcbbfe1df723b729ba39b3e3fc86f011db330845f7f0c6a8dad181f0437ab3",
+        "mechanism_metrics_sha256": "f0ead4fe285a476ac0ba9a8cd6c94986f374ec8e1623d5fd9e0456ad5531d47c",
+        "provenance_sha256": "d8260daec5a2940c77f0bc9288536451e0bca6dd0f19c1dec51915fc9ff4550e"
+      },
+      {
+        "condition": "full",
+        "seed": 202,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_seed202",
+        "summary_sha256": "afbbd909ebd5b28473f3ffc71cc7ffb47b88cf2a303b44a653532e7003a5e8e1",
+        "mechanism_metrics_sha256": "6bbd6c52de090e29bc52f83d312795eb849d0dd32472b092ecff5291251453c4",
+        "provenance_sha256": "0891b63edfaa8f217814de8f396dd5783b907484286c97dc949007bc67e9635d"
+      },
+      {
+        "condition": "full_minus_memory",
+        "seed": 202,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_memory_seed202",
+        "summary_sha256": "9fe551558ee6dc3a80dbc3b67cd8e2712743c43e5ae6c384fa8f3afea6fc47fe",
+        "mechanism_metrics_sha256": "69a3f0585ab3a421639d6a7fdab89b47d72a13692fe737d1915ba9f4eb94705f",
+        "provenance_sha256": "26b075a33a7f66c4cedca62b7b8a1297db2275b3d0785db36a735ff608ec64e8"
+      },
+      {
+        "condition": "full_minus_feedback",
+        "seed": 202,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_feedback_seed202",
+        "summary_sha256": "f215fdba1182a78593a98d829958aadb193494c90c825c2954dc41c851e4b6f3",
+        "mechanism_metrics_sha256": "2b25b49589547a529aad68180eba1663e88506086720ccb20b684f7b420f6dd5",
+        "provenance_sha256": "3fa84645ffcb1d7793581db62e1992ebaceda4edfb7c533068df4e40dc59a0d4"
+      },
+      {
+        "condition": "full_minus_planning",
+        "seed": 202,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_planning_seed202",
+        "summary_sha256": "976ae81b49881b024a8a6c99fdf5b137d3a5f827d446029686b56e632647b3d8",
+        "mechanism_metrics_sha256": "9de75d974d1f9bddee3cdb2190cce36541df75c30926a3995bbcbd6012589341",
+        "provenance_sha256": "e396640f401aef485ad7d3a8af70fff249ab798e16fa7788c145f3c21f104fa3"
+      },
+      {
+        "condition": "full_minus_interaction",
+        "seed": 202,
+        "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_pilot_v3_full_minus_interaction_seed202",
+        "summary_sha256": "fb91c3d0aa10b64f1220169631cc640802451e4d41a093b2af8191990e48c684",
+        "mechanism_metrics_sha256": "2f08bd8347ed624507a0b46b91cca410a4bb71a7f5eb25ea5ef659bb89bae907",
+        "provenance_sha256": "67136b1b66e21d5f6943fe74c380433ad39ee4362f8a018ed08c04bf8b379ab4"
+      }
+    ]
+  },
+  "analysis_correction": {
+    "reason": "The preserved raw matrix mapped interaction to coordinated_departure_rate, while the method decision and analysis plan had predeclared compatible commitment formation.",
+    "raw_matrix_preserved": true,
+    "corrected_interaction_primary_metric": "compatible_commitment_rate",
+    "post_hoc_metric_selection": false
+  },
+  "completion": {
+    "terminal_status_counts": {
+      "VALID": 10
+    },
+    "all_runs_valid": true,
+    "test_split_opened": false
+  },
+  "usage": {
+    "n_ok": 119,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "live_prompt_tokens": 92650,
+    "live_completion_tokens": 400926,
+    "logical_prompt_tokens": 92650,
+    "logical_completion_tokens": 400926,
+    "estimated_cost_usd": 0.493576
+  },
+  "runtime": {
+    "n_runs_with_wall_clock": 0,
+    "sum_run_wall_clock_seconds": null,
+    "median_run_wall_clock_seconds": null,
+    "max_run_wall_clock_seconds": null,
+    "observed_artifact_timestamp_span_seconds": 4387.473,
+    "timestamp_span_is_formal_timing_metric": false,
+    "all_future_runner_runs_record_wall_clock_seconds": true
+  },
+  "paired_primary_differences": [
+    {
+      "module": "memory",
+      "metric": "warning_retention_rate",
+      "seed": 101,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "memory",
+      "metric": "warning_retention_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 1.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 0.5,
+      "drop_one": 0.3333333333333333,
+      "paired_difference": 0.16666666666666669,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "interaction",
+      "metric": "compatible_commitment_rate",
+      "seed": 101,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive"
+    },
+    {
+      "module": "interaction",
+      "metric": "compatible_commitment_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive"
+    }
+  ],
+  "paired_summary": [
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.08333333333333334,
+      "sd_paired_difference": 0.11785113019775793,
+      "mcse": 0.08333333333333334,
+      "positive_direction_fraction": 0.5,
+      "variance_informative": true
+    },
+    {
+      "module": "interaction",
+      "metric": "compatible_commitment_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.25,
+      "sd_paired_difference": 0.3535533905932738,
+      "mcse": 0.25,
+      "positive_direction_fraction": 0.5,
+      "variance_informative": true
+    },
+    {
+      "module": "memory",
+      "metric": "warning_retention_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.25,
+      "sd_paired_difference": 0.3535533905932738,
+      "mcse": 0.25,
+      "positive_direction_fraction": 0.5,
+      "variance_informative": true
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "n_seeds": 2,
+      "mean_paired_difference": 0.5,
+      "sd_paired_difference": 0.7071067811865476,
+      "mcse": 0.5,
+      "positive_direction_fraction": 0.5,
+      "variance_informative": true
+    }
+  ],
+  "paired_exclusions": [],
+  "pilot_gate_assessment": {
+    "mechanism_paths_positive_in_every_seed": false,
+    "seed_variance_informative_for_every_module": true,
+    "formal_seed_count_frozen": false,
+    "formal_results_eligible": false,
+    "next_action": "Retain the null and mixed contrasts; expand a predeclared backend pilot only after the corrected metric mapping and resource-cleanup tests pass."
+  },
+  "claim_boundary": "This is a two-seed backend behavior and engineering pilot. It supports endpoint/schema/cost/fallback feasibility and diagnoses mechanism variance; it is not formal E2 or Carr empirical evidence."
+}

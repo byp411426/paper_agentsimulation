@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-09-05T16:02:06.816352+00:00",
+  "reason": "Provider explicitly reduced account concurrency limit to 3; seed101 attempt1 aborted at step10 after 9 complete snapshots.",
+  "old_freeze_sha256": "06ca8a7017c1b09d477f3e8a0c1a6e6b31a70e31e36bb125bd6ca957d5da6c7e",
+  "changes": {
+    "100hh_max_concurrency": [
+      12,
+      3
+    ],
+    "100hh_wall_clock_limit_seconds": [
+      10800,
+      43200
+    ]
+  },
+  "model_prompt_schema_behavior_inputs_seed_metrics_budget_unchanged": true,
+  "old_attempt_preserved": true,
+  "recovery": "Restart from initial state, exact successful-response cache only; offline prefix validation required before real attempt2",
+  "accepted_24hh_runs_reusable": "Their scientific inputs, behavior code and 24hh config are unchanged; original run provenance and old freeze preserved."
+}

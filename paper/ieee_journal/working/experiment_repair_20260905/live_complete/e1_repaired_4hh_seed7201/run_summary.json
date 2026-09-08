@@ -1,0 +1,2373 @@
+{
+  "run_id": "e1_repaired_4hh_seed7201",
+  "status": "VALID",
+  "reason_code": null,
+  "n_households": 4,
+  "n_residents": 7,
+  "n_orders": 4,
+  "route_state_final": {
+    "tiger_primary": {
+      "open": false,
+      "capacity_per_step": 10
+    },
+    "tiger_alternate": {
+      "open": true,
+      "capacity_per_step": 10
+    }
+  },
+  "world": {
+    "step": 12,
+    "route_state": {
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000007": -104.0339241862599
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {
+        "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000001_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000001_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000001:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000002": {
+        "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001",
+          "created_step": 8,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000002_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000002_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000002:vehicle:1",
+            "depart_step": 8
+          }
+        }
+      },
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000007": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "controlled_safe_zone",
+      "syn_t001_h0000002_r001": "controlled_safe_zone",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')"
+    }
+  },
+  "messages": {
+    "messages": {
+      "m7:syn_t001_h0000005_r001:0": {
+        "message_id": "m7:syn_t001_h0000005_r001:0",
+        "sender_id": "syn_t001_h0000005_r001",
+        "recipient_ids": [
+          "syn_t001_h0000005_r002"
+        ],
+        "kind": "notice",
+        "content": "The mandatory evacuation order is in effect. Our car seats only five and there are six of us, and I need help with moving. Please help coordinate an extra ride or plan to split the evacuation safely so no one is left behind.",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 7,
+        "delivered_step": 11,
+        "processed_step": 12,
+        "status": "delivered",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000005_r002": {
+            "delivered_step": 11,
+            "processed_step": 12,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      },
+      "m8:syn_t001_h0000002_r001:0": {
+        "message_id": "m8:syn_t001_h0000002_r001:0",
+        "sender_id": "syn_t001_h0000002_r001",
+        "recipient_ids": [
+          "syn_t001_h0000002_r002"
+        ],
+        "kind": "notice",
+        "content": "Mandatory evacuation is in effect. I am taking the household vehicle and leaving now; please make your own evacuation arrangements.",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 8,
+        "delivered_step": 10,
+        "processed_step": 11,
+        "status": "delivered",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000002_r002": {
+            "delivered_step": 10,
+            "processed_step": 11,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      },
+      "m8:syn_t001_h0000005_r001:0": {
+        "message_id": "m8:syn_t001_h0000005_r001:0",
+        "sender_id": "syn_t001_h0000005_r001",
+        "recipient_ids": [
+          "syn_t001_h0000005_r002"
+        ],
+        "kind": "notice",
+        "content": "We cannot all fit in one car (6 people, 5 seats). Please help coordinate an extra ride or prepare for a two-leg trip: take the children to safety and return for me.",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 8,
+        "delivered_step": 12,
+        "processed_step": null,
+        "status": "delivered",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000005_r002": {
+            "delivered_step": 12,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      },
+      "m9:syn_t001_h0000005_r001:0": {
+        "message_id": "m9:syn_t001_h0000005_r001:0",
+        "sender_id": "syn_t001_h0000005_r001",
+        "recipient_ids": [
+          "syn_t001_h0000005_r002"
+        ],
+        "kind": "notice",
+        "content": "I am still seeking an extra vehicle or ride. Do not put all six of us in our 5-seat vehicle; wait until we have confirmed capacity for everyone.",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 9,
+        "delivered_step": null,
+        "processed_step": null,
+        "status": "sent",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000005_r002": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      },
+      "m11:syn_t001_h0000002_r002:0": {
+        "message_id": "m11:syn_t001_h0000002_r002:0",
+        "sender_id": "syn_t001_h0000002_r002",
+        "recipient_ids": [
+          "syn_t001_h0000002_r001"
+        ],
+        "kind": "notice",
+        "content": "I am still at home and do not have the vehicle. Can you help arrange a ride for me to the controlled safe zone, or should I try to leave on foot?",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 11,
+        "delivered_step": null,
+        "processed_step": null,
+        "status": "sent",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000002_r001": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      },
+      "m12:syn_t001_h0000005_r002:0": {
+        "message_id": "m12:syn_t001_h0000005_r002:0",
+        "sender_id": "syn_t001_h0000005_r002",
+        "recipient_ids": [
+          "syn_t001_h0000005_r001",
+          "syn_t001_h0000001_r001",
+          "syn_t001_h0000002_r001",
+          "syn_t001_h0000002_r002",
+          "syn_t001_h0000007_r001",
+          "syn_t001_h0000007_r003"
+        ],
+        "kind": "notice",
+        "content": "Household syn_t001_h0000005 has 6 people and one 5-seat car. Mandatory evacuation is in effect; we need an extra ride/seat so no one is left behind. We are at home and can depart promptly once help is arranged.",
+        "channel": "community",
+        "payload": {},
+        "issued_step": 12,
+        "delivered_step": null,
+        "processed_step": null,
+        "status": "sent",
+        "disposition": null,
+        "recipient_states": {
+          "syn_t001_h0000005_r001": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          },
+          "syn_t001_h0000001_r001": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          },
+          "syn_t001_h0000002_r001": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          },
+          "syn_t001_h0000002_r002": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          },
+          "syn_t001_h0000007_r001": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          },
+          "syn_t001_h0000007_r003": {
+            "delivered_step": null,
+            "processed_step": null,
+            "disposition": null,
+            "response_step": null
+          }
+        }
+      }
+    },
+    "receipts": [
+      {
+        "receipt_id": "receipt_order_v_3_syn_t001_h0000002_r001",
+        "resident_id": "syn_t001_h0000002_r001",
+        "source_event_id": "order_v_3",
+        "severity": "voluntary",
+        "channel": "official_direct",
+        "issued_step": 3,
+        "delivered_step": 3,
+        "processed_step": 3
+      },
+      {
+        "receipt_id": "receipt_order_m_1_syn_t001_h0000005_r001",
+        "resident_id": "syn_t001_h0000005_r001",
+        "source_event_id": "order_m_1",
+        "severity": "mandatory",
+        "channel": "official_direct",
+        "issued_step": 7,
+        "delivered_step": 7,
+        "processed_step": 7
+      },
+      {
+        "receipt_id": "receipt_order_m_2_syn_t001_h0000001_r001",
+        "resident_id": "syn_t001_h0000001_r001",
+        "source_event_id": "order_m_2",
+        "severity": "mandatory",
+        "channel": "official_direct",
+        "issued_step": 7,
+        "delivered_step": 7,
+        "processed_step": 7
+      },
+      {
+        "receipt_id": "receipt_order_m_4_syn_t001_h0000002_r001",
+        "resident_id": "syn_t001_h0000002_r001",
+        "source_event_id": "order_m_4",
+        "severity": "mandatory",
+        "channel": "official_direct",
+        "issued_step": 7,
+        "delivered_step": 7,
+        "processed_step": 7
+      }
+    ],
+    "commitment_notifications": []
+  },
+  "receipts": [
+    {
+      "receipt_id": "receipt_order_v_3_syn_t001_h0000002_r001",
+      "resident_id": "syn_t001_h0000002_r001",
+      "source_event_id": "order_v_3",
+      "severity": "voluntary",
+      "channel": "official_direct",
+      "issued_step": 3,
+      "delivered_step": 3,
+      "processed_step": 3
+    },
+    {
+      "receipt_id": "receipt_order_m_1_syn_t001_h0000005_r001",
+      "resident_id": "syn_t001_h0000005_r001",
+      "source_event_id": "order_m_1",
+      "severity": "mandatory",
+      "channel": "official_direct",
+      "issued_step": 7,
+      "delivered_step": 7,
+      "processed_step": 7
+    },
+    {
+      "receipt_id": "receipt_order_m_2_syn_t001_h0000001_r001",
+      "resident_id": "syn_t001_h0000001_r001",
+      "source_event_id": "order_m_2",
+      "severity": "mandatory",
+      "channel": "official_direct",
+      "issued_step": 7,
+      "delivered_step": 7,
+      "processed_step": 7
+    },
+    {
+      "receipt_id": "receipt_order_m_4_syn_t001_h0000002_r001",
+      "resident_id": "syn_t001_h0000002_r001",
+      "source_event_id": "order_m_4",
+      "severity": "mandatory",
+      "channel": "official_direct",
+      "issued_step": 7,
+      "delivered_step": 7,
+      "processed_step": 7
+    }
+  ],
+  "member_profiles": [
+    {
+      "resident_id": "syn_t001_h0000001_r001",
+      "household_id": "syn_t001_h0000001",
+      "age": 78,
+      "relationship": "Reference person",
+      "pums_static": {
+        "sex": "Female",
+        "education": "Bachelor's degree",
+        "employment": "Not in labor force",
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Reference person"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 0.3928571428571428,
+        "home_person_threat": 0.375,
+        "infrastructure_rescue": 0.25,
+        "property_security": 0.25,
+        "work_obligation": 0.0,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 0.5,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.75,
+        "trust_item_6": 0.75,
+        "trust_item_7": 0.75,
+        "trust_item_8": 0.75,
+        "trust_item_9": 0.75,
+        "trust_item_10": 0.75,
+        "trust_item_11": 0.75,
+        "trust_item_12": 0.75,
+        "general_trust": 1.0,
+        "helping_tendency": 0.5,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 1.0,
+        "age_band": "75_84",
+        "household_band": "1",
+        "vehicle_band": "1",
+        "income_band": "25_49k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000002_r001",
+      "household_id": "syn_t001_h0000002",
+      "age": 29,
+      "relationship": "Reference person",
+      "pums_static": {
+        "sex": "Male",
+        "education": "1 or more years of college credit, no degree",
+        "employment": "Civilian employed, at work",
+        "weeks_worked": "50 to 52 weeks worked during past 12 months",
+        "hours_worked": 40,
+        "commute_mode": "Car, truck, or van",
+        "commute_minutes": 7,
+        "relationship": "Reference person"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 0.3214285714285714,
+        "home_person_threat": 0.8125,
+        "infrastructure_rescue": 0.5,
+        "property_security": 0.75,
+        "work_obligation": 0.75,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.5,
+        "trust_item_5": 0.25,
+        "trust_item_6": 0.5,
+        "trust_item_7": 0.5,
+        "trust_item_8": 0.75,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.75,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.45,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "25_34",
+        "household_band": "2",
+        "vehicle_band": "1",
+        "income_band": null
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000002_r002",
+      "household_id": "syn_t001_h0000002",
+      "age": 36,
+      "relationship": "Roomer or boarder",
+      "pums_static": {
+        "sex": "Male",
+        "education": "Regular high school diploma",
+        "employment": "Not in labor force",
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Roomer or boarder"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 1.0,
+        "home_person_threat": 1.0,
+        "infrastructure_rescue": 1.0,
+        "property_security": 1.0,
+        "work_obligation": 1.0,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 1.0,
+        "trust_item_4": 1.0,
+        "trust_item_5": 1.0,
+        "trust_item_6": 1.0,
+        "trust_item_7": 1.0,
+        "trust_item_8": 1.0,
+        "trust_item_9": 1.0,
+        "trust_item_10": 1.0,
+        "trust_item_11": 1.0,
+        "trust_item_12": 1.0,
+        "general_trust": 1.0,
+        "helping_tendency": 1.0,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 1.0,
+        "age_band": "35_44",
+        "household_band": "2",
+        "vehicle_band": "1",
+        "income_band": "25_49k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r001",
+      "household_id": "syn_t001_h0000005",
+      "age": 46,
+      "relationship": "Reference person",
+      "pums_static": {
+        "sex": "Male",
+        "education": "1 or more years of college credit, no degree",
+        "employment": "Not in labor force",
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Reference person"
+      },
+      "functional_limitations": {
+        "DEAR": true,
+        "DEYE": true,
+        "DREM": false,
+        "DPHY": true,
+        "DOUT": true,
+        "DDRS": true
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 0.2857142857142857,
+        "home_person_threat": 0.1875,
+        "infrastructure_rescue": 0.3333333333333333,
+        "property_security": 0.25,
+        "work_obligation": 0.0,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 1.0,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.75,
+        "trust_item_6": 0.75,
+        "trust_item_7": 0.5,
+        "trust_item_8": 1.0,
+        "trust_item_9": 0.75,
+        "trust_item_10": 1.0,
+        "trust_item_11": 0.75,
+        "trust_item_12": 0.75,
+        "general_trust": 1.0,
+        "helping_tendency": 1.0,
+        "prior_evacuation_count_capped": 4,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "45_54",
+        "household_band": "5_plus",
+        "vehicle_band": "2",
+        "income_band": "100k_plus"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r002",
+      "household_id": "syn_t001_h0000005",
+      "age": 27,
+      "relationship": "Husband/wife",
+      "pums_static": {
+        "sex": "Female",
+        "education": "Regular high school diploma",
+        "employment": "Civilian employed, at work",
+        "weeks_worked": "50 to 52 weeks worked during past 12 months",
+        "hours_worked": 32,
+        "commute_mode": "Car, truck, or van",
+        "commute_minutes": 8,
+        "relationship": "Husband/wife"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 0.3571428571428571,
+        "home_person_threat": 0.75,
+        "infrastructure_rescue": 0.5833333333333334,
+        "property_security": 1.0,
+        "work_obligation": 1.0,
+        "trust_item_1": 0.5,
+        "trust_item_2": 0.5,
+        "trust_item_3": 0.25,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.25,
+        "trust_item_6": 0.25,
+        "trust_item_7": 0.0,
+        "trust_item_8": 0.5,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.5,
+        "trust_item_11": 0.25,
+        "trust_item_12": 0.25,
+        "general_trust": 0.0,
+        "helping_tendency": 0.65,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.0,
+        "age_band": "25_34",
+        "household_band": "5_plus",
+        "vehicle_band": "3_plus",
+        "income_band": null
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r003",
+      "household_id": "syn_t001_h0000005",
+      "age": 8,
+      "relationship": "Biological son or daughter",
+      "pums_static": {
+        "sex": "Female",
+        "education": "Grade 2",
+        "employment": null,
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Biological son or daughter"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": null,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": false,
+      "decision_policy": "dependent",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 0.25,
+        "evacuation_friction": 0.0357142857142857,
+        "home_person_threat": 0.5,
+        "infrastructure_rescue": 0.5833333333333334,
+        "property_security": 0.75,
+        "work_obligation": 0.75,
+        "trust_item_1": 0.75,
+        "trust_item_2": 0.75,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.75,
+        "trust_item_6": 0.75,
+        "trust_item_7": 0.75,
+        "trust_item_8": 0.5,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.5,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.9,
+        "prior_evacuation_count_capped": 4,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 1.0,
+        "age_band": "35_44",
+        "household_band": "2",
+        "vehicle_band": "1",
+        "income_band": "100k_plus"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r004",
+      "household_id": "syn_t001_h0000005",
+      "age": 6,
+      "relationship": "Biological son or daughter",
+      "pums_static": {
+        "sex": "Male",
+        "education": "Kindergarten",
+        "employment": null,
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Biological son or daughter"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": null,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": false,
+      "decision_policy": "dependent",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 0.875,
+        "evacuation_friction": 0.2857142857142857,
+        "home_person_threat": 0.75,
+        "infrastructure_rescue": 0.3333333333333333,
+        "property_security": 0.0,
+        "work_obligation": 0.75,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.25,
+        "trust_item_6": 0.75,
+        "trust_item_7": 0.5,
+        "trust_item_8": 0.75,
+        "trust_item_9": 0.5,
+        "trust_item_10": 1.0,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.5,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.25,
+        "age_band": "25_34",
+        "household_band": "2",
+        "vehicle_band": "2",
+        "income_band": "50_99k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r005",
+      "household_id": "syn_t001_h0000005",
+      "age": 1,
+      "relationship": "Biological son or daughter",
+      "pums_static": {
+        "sex": "Male",
+        "education": null,
+        "employment": null,
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Biological son or daughter"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": null,
+        "DPHY": null,
+        "DOUT": null,
+        "DDRS": null
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": false,
+      "decision_policy": "dependent",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 1.0,
+        "evacuation_friction": 0.3571428571428571,
+        "home_person_threat": 0.75,
+        "infrastructure_rescue": 0.4166666666666667,
+        "property_security": 0.75,
+        "work_obligation": 0.5,
+        "trust_item_1": 1.0,
+        "trust_item_2": 0.75,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.5,
+        "trust_item_5": 0.5,
+        "trust_item_6": 0.5,
+        "trust_item_7": 0.5,
+        "trust_item_8": 0.75,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.75,
+        "trust_item_11": 0.75,
+        "trust_item_12": 0.75,
+        "general_trust": 0.0,
+        "helping_tendency": 0.8,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "25_34",
+        "household_band": "2",
+        "vehicle_band": "2",
+        "income_band": "lt_25k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000005_r006",
+      "household_id": "syn_t001_h0000005",
+      "age": 6,
+      "relationship": "Adopted son or daughter",
+      "pums_static": {
+        "sex": "Male",
+        "education": "Kindergarten",
+        "employment": null,
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Adopted son or daughter"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": null,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": false,
+      "decision_policy": "dependent",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 0.625,
+        "evacuation_friction": 0.0357142857142857,
+        "home_person_threat": 0.0625,
+        "infrastructure_rescue": 0.25,
+        "property_security": 0.0,
+        "work_obligation": 0.25,
+        "trust_item_1": 0.75,
+        "trust_item_2": 0.75,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.75,
+        "trust_item_6": 0.75,
+        "trust_item_7": 0.5,
+        "trust_item_8": 1.0,
+        "trust_item_9": 1.0,
+        "trust_item_10": 0.75,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.65,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.75,
+        "age_band": "55_64",
+        "household_band": "2",
+        "vehicle_band": "3_plus",
+        "income_band": "100k_plus"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000007_r001",
+      "household_id": "syn_t001_h0000007",
+      "age": 40,
+      "relationship": "Reference person",
+      "pums_static": {
+        "sex": "Female",
+        "education": "Grade 6",
+        "employment": "Civilian employed, at work",
+        "weeks_worked": "50 to 52 weeks worked during past 12 months",
+        "hours_worked": 12,
+        "commute_mode": "Other method",
+        "commute_minutes": 30,
+        "relationship": "Reference person"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 0.75,
+        "evacuation_friction": 0.25,
+        "home_person_threat": 0.5625,
+        "infrastructure_rescue": 0.5,
+        "property_security": 1.0,
+        "work_obligation": 0.0,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.5,
+        "trust_item_6": 0.5,
+        "trust_item_7": 0.5,
+        "trust_item_8": 0.5,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.5,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.65,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "35_44",
+        "household_band": "3_4",
+        "vehicle_band": "2",
+        "income_band": "100k_plus"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000007_r002",
+      "household_id": "syn_t001_h0000007",
+      "age": 15,
+      "relationship": "Biological son or daughter",
+      "pums_static": {
+        "sex": "Female",
+        "education": "Grade 9",
+        "employment": null,
+        "weeks_worked": null,
+        "hours_worked": null,
+        "commute_mode": null,
+        "commute_minutes": null,
+        "relationship": "Biological son or daughter"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": false,
+      "decision_policy": "dependent",
+      "needs_execution_assistance": true,
+      "latent_traits": {
+        "hazard_worry": 0.25,
+        "evacuation_friction": 0.25,
+        "home_person_threat": 0.5625,
+        "infrastructure_rescue": 0.4166666666666667,
+        "property_security": 0.75,
+        "work_obligation": 0.0,
+        "trust_item_1": 1.0,
+        "trust_item_2": 1.0,
+        "trust_item_3": 0.75,
+        "trust_item_4": 0.75,
+        "trust_item_5": 0.75,
+        "trust_item_6": 0.5,
+        "trust_item_7": 0.25,
+        "trust_item_8": 1.0,
+        "trust_item_9": 0.75,
+        "trust_item_10": 0.5,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 0.0,
+        "helping_tendency": 0.55,
+        "prior_evacuation_count_capped": 1,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "55_64",
+        "household_band": "2",
+        "vehicle_band": "2",
+        "income_band": "lt_25k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    },
+    {
+      "resident_id": "syn_t001_h0000007_r003",
+      "household_id": "syn_t001_h0000007",
+      "age": 40,
+      "relationship": "Unmarried partner",
+      "pums_static": {
+        "sex": "Male",
+        "education": "Regular high school diploma",
+        "employment": "Civilian employed, at work",
+        "weeks_worked": "50 to 52 weeks worked during past 12 months",
+        "hours_worked": 40,
+        "commute_mode": "Other method",
+        "commute_minutes": 5,
+        "relationship": "Unmarried partner"
+      },
+      "functional_limitations": {
+        "DEAR": false,
+        "DEYE": false,
+        "DREM": false,
+        "DPHY": false,
+        "DOUT": false,
+        "DDRS": false
+      },
+      "veteran_service_connected_rating": null,
+      "decision_capable": true,
+      "decision_policy": "generative",
+      "needs_execution_assistance": false,
+      "latent_traits": {
+        "hazard_worry": 0.875,
+        "evacuation_friction": 0.5,
+        "home_person_threat": 0.25,
+        "infrastructure_rescue": 0.5,
+        "property_security": 0.5,
+        "work_obligation": 1.0,
+        "trust_item_1": 0.75,
+        "trust_item_2": 0.75,
+        "trust_item_3": 0.5,
+        "trust_item_4": 0.5,
+        "trust_item_5": 0.5,
+        "trust_item_6": 0.5,
+        "trust_item_7": 0.5,
+        "trust_item_8": 0.5,
+        "trust_item_9": 0.5,
+        "trust_item_10": 0.5,
+        "trust_item_11": 0.5,
+        "trust_item_12": 0.5,
+        "general_trust": 1.0,
+        "helping_tendency": 0.8,
+        "prior_evacuation_count_capped": 0,
+        "prior_evacuation_topcoded": false,
+        "decision_participation_propensity": 0.5,
+        "age_band": "35_44",
+        "household_band": "3_4",
+        "vehicle_band": "2",
+        "income_band": "50_99k"
+      },
+      "source_by_field": {
+        "sex": "pums_person_observed",
+        "education": "pums_person_observed",
+        "employment": "pums_person_observed",
+        "weeks_worked": "pums_person_observed",
+        "hours_worked": "pums_person_observed",
+        "commute_mode": "pums_person_observed",
+        "commute_minutes": "pums_person_observed",
+        "relationship": "pums_person_observed",
+        "hazard_worry": "carr_train_person_hotdeck_retrospective",
+        "evacuation_friction": "carr_train_person_hotdeck_retrospective",
+        "home_person_threat": "carr_train_person_hotdeck_retrospective",
+        "infrastructure_rescue": "carr_train_person_hotdeck_retrospective",
+        "property_security": "carr_train_person_hotdeck_retrospective",
+        "work_obligation": "carr_train_person_hotdeck_retrospective",
+        "trust_item_1": "carr_train_person_hotdeck_retrospective",
+        "trust_item_2": "carr_train_person_hotdeck_retrospective",
+        "trust_item_3": "carr_train_person_hotdeck_retrospective",
+        "trust_item_4": "carr_train_person_hotdeck_retrospective",
+        "trust_item_5": "carr_train_person_hotdeck_retrospective",
+        "trust_item_6": "carr_train_person_hotdeck_retrospective",
+        "trust_item_7": "carr_train_person_hotdeck_retrospective",
+        "trust_item_8": "carr_train_person_hotdeck_retrospective",
+        "trust_item_9": "carr_train_person_hotdeck_retrospective",
+        "trust_item_10": "carr_train_person_hotdeck_retrospective",
+        "trust_item_11": "carr_train_person_hotdeck_retrospective",
+        "trust_item_12": "carr_train_person_hotdeck_retrospective",
+        "general_trust": "carr_train_person_hotdeck_retrospective",
+        "helping_tendency": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_count_capped": "carr_train_person_hotdeck_retrospective",
+        "prior_evacuation_topcoded": "carr_train_person_hotdeck_retrospective",
+        "decision_participation_propensity": "carr_train_person_hotdeck_retrospective",
+        "age_band": "carr_train_person_hotdeck_retrospective",
+        "household_band": "carr_train_person_hotdeck_retrospective",
+        "vehicle_band": "carr_train_person_hotdeck_retrospective",
+        "income_band": "carr_train_person_hotdeck_retrospective",
+        "decision_capable": "derived",
+        "decision_policy": "derived",
+        "needs_execution_assistance": "derived"
+      }
+    }
+  ],
+  "residents": {
+    "syn_t001_h0000001_r001": {
+      "id": "syn_t001_h0000001_r001",
+      "household_id": "syn_t001_h0000001",
+      "evacuating": true,
+      "evac_step": 7,
+      "inbox": [],
+      "memories": [
+        {
+          "kind": "official_receipt",
+          "severity": "mandatory",
+          "source_event_id": "order_m_2",
+          "processed_step": 7
+        },
+        {
+          "kind": "execution",
+          "step": 7,
+          "status": "executed",
+          "action": "evacuate",
+          "reason": null
+        }
+      ],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [
+        {
+          "step": 7,
+          "status": "executed",
+          "executed_action": "evacuate",
+          "reason": null
+        }
+      ],
+      "receipts": [
+        {
+          "receipt_id": "receipt_order_m_2_syn_t001_h0000001_r001",
+          "resident_id": "syn_t001_h0000001_r001",
+          "source_event_id": "order_m_2",
+          "severity": "mandatory",
+          "channel": "official_direct",
+          "issued_step": 7,
+          "delivered_step": 7,
+          "processed_step": 7
+        }
+      ]
+    },
+    "syn_t001_h0000002_r001": {
+      "id": "syn_t001_h0000002_r001",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": true,
+      "evac_step": 8,
+      "inbox": [],
+      "memories": [
+        {
+          "kind": "official_receipt",
+          "severity": "voluntary",
+          "source_event_id": "order_v_3",
+          "processed_step": 3
+        },
+        {
+          "kind": "execution",
+          "step": 3,
+          "status": "executed",
+          "action": "prepare",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 4,
+          "status": "executed",
+          "action": "prepare",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 5,
+          "status": "executed",
+          "action": "stay",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 6,
+          "status": "executed",
+          "action": "stay",
+          "reason": null
+        },
+        {
+          "kind": "official_receipt",
+          "severity": "mandatory",
+          "source_event_id": "order_m_4",
+          "processed_step": 7
+        },
+        {
+          "kind": "execution",
+          "step": 7,
+          "status": "rejected",
+          "action": "evacuate",
+          "reason": "invalid_accompanying_members"
+        },
+        {
+          "kind": "execution",
+          "step": 8,
+          "status": "executed",
+          "action": "evacuate",
+          "reason": null
+        }
+      ],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": {
+        "goal": "Evacuate immediately under mandatory order and keep monitoring en route.",
+        "steps": [
+          {
+            "action": "monitor",
+            "due_step": 9,
+            "description": "After departing alone on tiger_primary, monitor official guidance, route status, and hazard updates."
+          }
+        ],
+        "reason": "Mandatory order is in effect, no household member requires assistance, and routes are open; leave now with the household vehicle.",
+        "created_step": 8,
+        "status": "completed",
+        "completed_step": 8
+      },
+      "plan_history": [
+        {
+          "goal": "Be ready to evacuate if the situation worsens",
+          "steps": [
+            {
+              "action": "prepare",
+              "due_step": 4,
+              "description": "Gather essentials and make sure the household vehicle is ready."
+            },
+            {
+              "action": "monitor",
+              "due_step": 5,
+              "description": "Watch for updated official instructions and changes in hazard distance."
+            }
+          ],
+          "reason": "The order is voluntary and the hazard is still relatively far, but preparing now preserves the option to evacuate quickly.",
+          "created_step": 3,
+          "status": "active",
+          "ended_step": 5,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Remain ready to evacuate quickly if conditions worsen.",
+          "steps": [
+            {
+              "action": "monitor",
+              "due_step": 6,
+              "description": "Continue watching for official instructions, route status, and hazard changes."
+            },
+            {
+              "action": "prepare",
+              "due_step": 7,
+              "description": "If the order becomes mandatory or hazard nears, use household vehicle syn_t001_h0000002:vehicle:1 to evacuate."
+            }
+          ],
+          "reason": "Hazard is still relatively far and routes are open; having prepared already, staying while monitoring is appropriate.",
+          "created_step": 5,
+          "status": "active",
+          "ended_step": 7,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Evacuate now under mandatory order and continue monitoring.",
+          "steps": [
+            {
+              "action": "monitor",
+              "due_step": 8,
+              "description": "While en route, monitor official guidance, route status, and hazard updates."
+            }
+          ],
+          "reason": "A mandatory official receipt arrived; routes are open and the household is prepared, so departing now is safest.",
+          "created_step": 7,
+          "status": "active",
+          "last_failure": {
+            "step": 7,
+            "reason": "invalid_accompanying_members"
+          },
+          "ended_step": 8,
+          "end_reason": "revised"
+        }
+      ],
+      "recent_execution_feedback": [
+        {
+          "step": 4,
+          "status": "executed",
+          "executed_action": "prepare",
+          "reason": null
+        },
+        {
+          "step": 5,
+          "status": "executed",
+          "executed_action": "stay",
+          "reason": null
+        },
+        {
+          "step": 6,
+          "status": "executed",
+          "executed_action": "stay",
+          "reason": null
+        },
+        {
+          "step": 7,
+          "status": "rejected",
+          "executed_action": "evacuate",
+          "reason": "invalid_accompanying_members",
+          "last_failure": "invalid_accompanying_members"
+        },
+        {
+          "step": 8,
+          "status": "executed",
+          "executed_action": "evacuate",
+          "reason": null
+        }
+      ],
+      "receipts": [
+        {
+          "receipt_id": "receipt_order_v_3_syn_t001_h0000002_r001",
+          "resident_id": "syn_t001_h0000002_r001",
+          "source_event_id": "order_v_3",
+          "severity": "voluntary",
+          "channel": "official_direct",
+          "issued_step": 3,
+          "delivered_step": 3,
+          "processed_step": 3
+        },
+        {
+          "receipt_id": "receipt_order_m_4_syn_t001_h0000002_r001",
+          "resident_id": "syn_t001_h0000002_r001",
+          "source_event_id": "order_m_4",
+          "severity": "mandatory",
+          "channel": "official_direct",
+          "issued_step": 7,
+          "delivered_step": 7,
+          "processed_step": 7
+        }
+      ]
+    },
+    "syn_t001_h0000002_r002": {
+      "id": "syn_t001_h0000002_r002",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [
+        {
+          "kind": "message",
+          "message_id": "m8:syn_t001_h0000002_r001:0",
+          "content": "Mandatory evacuation is in effect. I am taking the household vehicle and leaving now; please make your own evacuation arrangements.",
+          "source_event_id": null,
+          "source_message_id": null,
+          "processed_step": 11
+        },
+        {
+          "kind": "execution",
+          "step": 11,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 12,
+          "status": "executed",
+          "action": "prepare",
+          "reason": null
+        }
+      ],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": {
+        "goal": "Reach the controlled safe zone without the household vehicle.",
+        "steps": [
+          {
+            "action": "depart",
+            "due_step": 13,
+            "description": "Evacuate on foot to controlled_safe_zone via tiger_primary if the route remains open."
+          }
+        ],
+        "reason": "Help request is unanswered and the only vehicle is at controlled_safe_zone; mandatory evacuation requires leaving while routes are open.",
+        "created_step": 12,
+        "status": "active"
+      },
+      "plan_history": [
+        {
+          "goal": "Get to the controlled safe zone despite not having access to the household vehicle.",
+          "steps": [
+            {
+              "action": "seek_help",
+              "due_step": 11,
+              "description": "Request a ride or evacuation assistance from r001 or community."
+            },
+            {
+              "action": "prepare",
+              "due_step": 12,
+              "description": "Prepare essential items and be ready to leave by foot if help does not come."
+            }
+          ],
+          "reason": "Mandatory evacuation is in effect and the only vehicle is with another household member at the safe zone.",
+          "created_step": 11,
+          "status": "active",
+          "ended_step": 12,
+          "end_reason": "revised"
+        }
+      ],
+      "recent_execution_feedback": [
+        {
+          "step": 11,
+          "status": "executed",
+          "executed_action": "seek_help",
+          "reason": null
+        },
+        {
+          "step": 12,
+          "status": "executed",
+          "executed_action": "prepare",
+          "reason": null
+        }
+      ],
+      "receipts": []
+    },
+    "syn_t001_h0000005_r001": {
+      "id": "syn_t001_h0000005_r001",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [
+        {
+          "kind": "official_receipt",
+          "severity": "mandatory",
+          "source_event_id": "order_m_1",
+          "processed_step": 7
+        },
+        {
+          "kind": "execution",
+          "step": 7,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 8,
+          "status": "executed",
+          "action": "prepare",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 9,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 10,
+          "status": "executed",
+          "action": "prepare",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 11,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        },
+        {
+          "kind": "execution",
+          "step": 12,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        }
+      ],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": {
+        "goal": "Evacuate all six household members without exceeding vehicle capacity; secure one additional seat/ride.",
+        "steps": [
+          {
+            "action": "monitor",
+            "due_step": 13,
+            "description": "Keep watching for ride offers/proposals and continue packing so we can leave immediately when capacity appears."
+          },
+          {
+            "action": "seek_help",
+            "due_step": 14,
+            "description": "Re-request an extra vehicle or ride if no capacity has been confirmed."
+          },
+          {
+            "action": "prepare",
+            "due_step": 15,
+            "description": "Maintain readiness and recheck routes/vehicle if a second ride is arranged."
+          }
+        ],
+        "reason": "Only a 5-capacity vehicle exists for 6 people under a mandatory evacuation; repeated help requests have not yet produced extra capacity, so do not overload or abandon anyone.",
+        "created_step": 12,
+        "status": "active"
+      },
+      "plan_history": [
+        {
+          "goal": "Evacuate all six household members safely despite one 5-capacity vehicle and the resident needing assistance.",
+          "steps": [
+            {
+              "action": "coordinate",
+              "due_step": 8,
+              "description": "Coordinate with spouse and available responders on an extra ride or a safe split/two-leg evacuation."
+            },
+            {
+              "action": "prepare",
+              "due_step": 9,
+              "description": "Finish packing medicines, documents, child supplies, and pet supplies; secure the house."
+            },
+            {
+              "action": "depart",
+              "due_step": 10,
+              "description": "Depart via tiger_primary under confirmed arrangements once all household members have transport."
+            }
+          ],
+          "reason": "Mandatory order is active, but six household members exceed the one vehicle's capacity and I need execution assistance.",
+          "created_step": 7,
+          "status": "active",
+          "ended_step": 8,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Safely evacuate all six household members and pets using one vehicle plus an additional ride/trip; do not leave dependents without supervision.",
+          "steps": [
+            {
+              "action": "prepare",
+              "due_step": 8,
+              "description": "Pack essentials and pet carrier; stage everyone near the door while continuing to seek/coordinate extra transport."
+            },
+            {
+              "action": "seek_help",
+              "due_step": 9,
+              "description": "Request an additional vehicle or ride from neighbors/emergency responders because seated capacity is 5 for 6 people."
+            },
+            {
+              "action": "depart",
+              "due_step": 10,
+              "description": "Evacuate via tiger_primary once extra capacity/vehicle is confirmed; otherwise revise plan before departure."
+            }
+          ],
+          "reason": "Mandatory evacuation requires all members, but current vehicle capacity and assistance needs make immediate single-trip evacuation impossible.",
+          "created_step": 8,
+          "status": "active",
+          "ended_step": 9,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Evacuate all six household members together once additional vehicle capacity or a ride is confirmed; do not overfill the 5-seat vehicle.",
+          "steps": [
+            {
+              "action": "prepare",
+              "due_step": 10,
+              "description": "Keep everyone packed and staged so we can leave immediately once extra transport is arranged."
+            },
+            {
+              "action": "seek_help",
+              "due_step": 11,
+              "description": "Request another vehicle/ride again if none has arrived; do not depart without enough seats for all six members."
+            },
+            {
+              "action": "monitor",
+              "due_step": 12,
+              "description": "Reassess the hazard and available routes/rides; revise the plan if no additional capacity is secured."
+            }
+          ],
+          "reason": "Mandatory evacuation requires leaving, but the household has six people and only one 5-seat vehicle, so an additional ride/vehicle is necessary before everyone can safely depart.",
+          "created_step": 9,
+          "status": "active",
+          "ended_step": 10,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Evacuate all six members together without overloading the 5-seat vehicle; confirm extra ride before departure.",
+          "steps": [
+            {
+              "action": "coordinate",
+              "due_step": 11,
+              "description": "Renew request for another vehicle/ride and accept any offer that can carry all six members together; if a safe party proposal arrives, coordinate departure."
+            },
+            {
+              "action": "monitor",
+              "due_step": 12,
+              "description": "Reassess hazard and open routes; if no extra capacity has been secured, escalate with another help request and consider feasible alternatives."
+            }
+          ],
+          "reason": "With six household members and one 5-seat vehicle, one additional seat/vehicle is needed to evacuate together safely. Completing prep now and coordinating at the next step avoids overfilling and keeps everyone ready.",
+          "created_step": 10,
+          "status": "active",
+          "ended_step": 11,
+          "end_reason": "revised"
+        },
+        {
+          "goal": "Evacuate all six household members together after securing an extra vehicle/ride; do not overload the 5-seat vehicle.",
+          "steps": [
+            {
+              "action": "seek_help",
+              "due_step": 12,
+              "description": "Request another vehicle or ride again; no external capacity has been secured yet and the mandatory evacuation order remains."
+            },
+            {
+              "action": "monitor",
+              "due_step": 13,
+              "description": "Watch for ride offers or party proposals and recheck hazard/routes; if extra capacity is confirmed, accept and depart without overloading."
+            },
+            {
+              "action": "prepare",
+              "due_step": 14,
+              "description": "Keep the household packed and ready; if still no extra ride materializes, continue seeking help rather than leaving anyone behind."
+            }
+          ],
+          "reason": "Six residents require evacuation but the only household vehicle has capacity for five. Repeated requests for extra capacity have not yet produced an offer; mandatory evacuation makes continued help-seeking necessary.",
+          "created_step": 11,
+          "status": "active",
+          "ended_step": 12,
+          "end_reason": "revised"
+        }
+      ],
+      "recent_execution_feedback": [
+        {
+          "step": 8,
+          "status": "executed",
+          "executed_action": "prepare",
+          "reason": null
+        },
+        {
+          "step": 9,
+          "status": "executed",
+          "executed_action": "seek_help",
+          "reason": null
+        },
+        {
+          "step": 10,
+          "status": "executed",
+          "executed_action": "prepare",
+          "reason": null
+        },
+        {
+          "step": 11,
+          "status": "executed",
+          "executed_action": "seek_help",
+          "reason": null
+        },
+        {
+          "step": 12,
+          "status": "executed",
+          "executed_action": "seek_help",
+          "reason": null
+        }
+      ],
+      "receipts": [
+        {
+          "receipt_id": "receipt_order_m_1_syn_t001_h0000005_r001",
+          "resident_id": "syn_t001_h0000005_r001",
+          "source_event_id": "order_m_1",
+          "severity": "mandatory",
+          "channel": "official_direct",
+          "issued_step": 7,
+          "delivered_step": 7,
+          "processed_step": 7
+        }
+      ]
+    },
+    "syn_t001_h0000005_r002": {
+      "id": "syn_t001_h0000005_r002",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [
+        {
+          "message_id": "m8:syn_t001_h0000005_r001:0",
+          "sender_id": "syn_t001_h0000005_r001",
+          "recipient_ids": [
+            "syn_t001_h0000005_r002"
+          ],
+          "kind": "message",
+          "content": "We cannot all fit in one car (6 people, 5 seats). Please help coordinate an extra ride or prepare for a two-leg trip: take the children to safety and return for me.",
+          "channel": "community",
+          "payload": {},
+          "issued_step": 8,
+          "delivered_step": 12,
+          "processed_step": null,
+          "status": "sent",
+          "disposition": null,
+          "recipient_states": {
+            "syn_t001_h0000005_r002": {
+              "delivered_step": 12,
+              "processed_step": null,
+              "disposition": null,
+              "response_step": null
+            }
+          },
+          "message_kind": "notice"
+        }
+      ],
+      "memories": [
+        {
+          "kind": "message",
+          "message_id": "m7:syn_t001_h0000005_r001:0",
+          "content": "The mandatory evacuation order is in effect. Our car seats only five and there are six of us, and I need help with moving. Please help coordinate an extra ride or plan to split the evacuation safely so no one is left behind.",
+          "source_event_id": null,
+          "source_message_id": null,
+          "processed_step": 12
+        },
+        {
+          "kind": "execution",
+          "step": 12,
+          "status": "executed",
+          "action": "seek_help",
+          "reason": null
+        }
+      ],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": {
+        "goal": "Evacuate all six household members without leaving anyone behind.",
+        "steps": [
+          {
+            "action": "prepare",
+            "due_step": 13,
+            "description": "Pack emergency supplies, car seats, and pet items; get everyone ready to move quickly."
+          },
+          {
+            "action": "coordinate",
+            "due_step": 14,
+            "description": "Wait for community offers and finalize a second ride/vehicle for the sixth member."
+          },
+          {
+            "action": "depart",
+            "due_step": 15,
+            "description": "Depart together using our car and the arranged extra ride so nobody is left behind."
+          }
+        ],
+        "reason": "Our one vehicle seats only 5, but the household has 6 people and evacuation is mandatory.",
+        "created_step": 12,
+        "status": "active"
+      },
+      "plan_history": [],
+      "recent_execution_feedback": [
+        {
+          "step": 12,
+          "status": "executed",
+          "executed_action": "seek_help",
+          "reason": null
+        }
+      ],
+      "receipts": []
+    },
+    "syn_t001_h0000007_r001": {
+      "id": "syn_t001_h0000007_r001",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    "syn_t001_h0000007_r003": {
+      "id": "syn_t001_h0000007_r003",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    }
+  },
+  "households": {
+    "syn_t001_h0000001": {
+      "v2_commitments": {
+        "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "status": "executed",
+          "created_step": 7,
+          "accepted_by": [
+            "syn_t001_h0000001_r001"
+          ],
+          "household_id": "syn_t001_h0000001",
+          "supersedes_id": null,
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000001_r001"
+            ],
+            "accompanying_member_ids": [],
+            "caregiver_by_member": [],
+            "vehicle_id": "syn_t001_h0000001:vehicle:1",
+            "route_id": "tiger_primary",
+            "depart_step": 7
+          }
+        }
+      },
+      "departure_records": [
+        {
+          "household_id": "syn_t001_h0000001",
+          "party_id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "commitment_id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "step": 7,
+          "traveler_ids": [
+            "syn_t001_h0000001_r001"
+          ],
+          "accompanying_member_ids": [],
+          "caregiver_by_member": [],
+          "vehicle_id": "syn_t001_h0000001:vehicle:1",
+          "route_id": "tiger_primary",
+          "coordinated": true,
+          "outcome": "executed",
+          "reason_code": null
+        }
+      ]
+    },
+    "syn_t001_h0000002": {
+      "v2_commitments": {
+        "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001",
+          "status": "executed",
+          "created_step": 8,
+          "accepted_by": [
+            "syn_t001_h0000002_r001"
+          ],
+          "household_id": "syn_t001_h0000002",
+          "supersedes_id": null,
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000002_r001"
+            ],
+            "accompanying_member_ids": [],
+            "caregiver_by_member": [],
+            "vehicle_id": "syn_t001_h0000002:vehicle:1",
+            "route_id": "tiger_primary",
+            "depart_step": 8
+          }
+        }
+      },
+      "departure_records": [
+        {
+          "household_id": "syn_t001_h0000002",
+          "party_id": "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001",
+          "commitment_id": "auto_e1_repaired_4hh_seed7201:8:syn_t001_h0000002_r001",
+          "step": 8,
+          "traveler_ids": [
+            "syn_t001_h0000002_r001"
+          ],
+          "accompanying_member_ids": [],
+          "caregiver_by_member": [],
+          "vehicle_id": "syn_t001_h0000002:vehicle:1",
+          "route_id": "tiger_primary",
+          "coordinated": false,
+          "outcome": "executed",
+          "reason_code": null
+        }
+      ]
+    },
+    "syn_t001_h0000005": {
+      "v2_commitments": {},
+      "departure_records": []
+    },
+    "syn_t001_h0000007": {
+      "v2_commitments": {},
+      "departure_records": []
+    }
+  }
+}

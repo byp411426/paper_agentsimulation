@@ -1,0 +1,9 @@
+step,kind,zone,text,channels
+0,advisory,west_redding,Fire reported near French Gulch. Monitoring situation.,tv;radio
+3,voluntary,keswick_dam,Voluntary evacuation recommended for areas near Keswick Dam.,wea;tv
+6,mandatory,west_redding,MANDATORY EVACUATION for all areas west of Sacramento River.,wea;tv;radio
+9,mandatory,redding_central,MANDATORY EVACUATION expanded to central Redding neighborhoods.,wea;tv;radio
+12,shelter,all,Emergency shelters open at Shasta College and Shasta Fairgrounds.,wea;tv
+18,mandatory,shasta_lake,MANDATORY EVACUATION for Shasta Lake area.,wea;tv;radio
+24,update,all,Fire 0% contained. Multiple structures destroyed. Continue evacuation.,wea;tv
+36,update,all,Fire 5% contained. DO NOT return until all-clear given.,tv;radio

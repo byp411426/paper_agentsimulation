@@ -1,0 +1,61 @@
+{
+  "rows": [
+    {
+      "model": "qwen",
+      "feedback_manipulation": "0.969 [0.869, 1.068]",
+      "feedback_downstream": "-6.719 [-7.160, -6.278]",
+      "interaction_manipulation": "0.906 [0.608, 1.205]",
+      "interaction_downstream": "0.406 [0.216, 0.597]"
+    },
+    {
+      "model": "glm",
+      "feedback_manipulation": "0.984 [0.935, 1.034]",
+      "feedback_downstream": "-6.656 [-6.756, -6.557]",
+      "interaction_manipulation": "0.969 [0.869, 1.068]",
+      "interaction_downstream": "0.500 [0.270, 0.730]"
+    },
+    {
+      "model": "gpt54mini",
+      "feedback_manipulation": "0.672 [0.502, 0.842]",
+      "feedback_downstream": "-1.688 [-1.802, -1.573]",
+      "interaction_manipulation": "0.750 [0.520, 0.980]",
+      "interaction_downstream": "0.031 [-0.068, 0.131]"
+    },
+    {
+      "model": "qwen27b",
+      "feedback_manipulation": "1.000 [1.000, 1.000]",
+      "feedback_downstream": "-8.219 [-8.517, -7.920]",
+      "interaction_manipulation": "1.000 [1.000, 1.000]",
+      "interaction_downstream": "0.469 [0.369, 0.568]"
+    },
+    {
+      "model": "gemma4",
+      "feedback_manipulation": "1.000 [1.000, 1.000]",
+      "feedback_downstream": "-6.156 [-6.750, -5.562]",
+      "interaction_manipulation": "1.000 [1.000, 1.000]",
+      "interaction_downstream": "0.375 [0.213, 0.537]"
+    },
+    {
+      "model": "qwen36",
+      "feedback_manipulation": "1.000 [1.000, 1.000]",
+      "feedback_downstream": "-9.406 [-10.425, -8.387]",
+      "interaction_manipulation": "1.000 [1.000, 1.000]",
+      "interaction_downstream": "0.562 [0.306, 0.819]"
+    },
+    {
+      "model": "deepseek",
+      "feedback_manipulation": "0.953 [0.858, 1.048]",
+      "feedback_downstream": "-6.844 [-6.943, -6.744]",
+      "interaction_manipulation": "0.906 [0.716, 1.097]",
+      "interaction_downstream": "0.781 [0.371, 1.191]"
+    },
+    {
+      "model": "All models (pooled)",
+      "feedback_manipulation": "0.940 [0.892, 0.987]",
+      "feedback_downstream": "-6.527 [-7.414, -5.639]",
+      "interaction_manipulation": "0.933 [0.885, 0.981]",
+      "interaction_downstream": "0.446 [0.350, 0.543]"
+    }
+  ],
+  "note": "注：Δ = full − full_minus_module，正值表示移除该模块后指标下降（即模块有正向作用）；关闭路拒绝为负值表示 full 下拒绝更少。95% CI 为配对 t 区间（每模型 n=4 seed；pooled 行 n=28）。"
+}

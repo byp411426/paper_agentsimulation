@@ -1,0 +1,49 @@
+{
+  "run_seed": 2107,
+  "planned_steps": 10,
+  "completed_steps": 0,
+  "last_completed_step": null,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 1,
+    "hazard_distance_m": 5300.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {},
+    "route_closures": []
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_v1_claude_full_seed2107",
+    "spent": 0.124764,
+    "n_ok": 0,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 19603,
+    "live_completion_tokens": 4397,
+    "logical_prompt_tokens": 19603,
+    "logical_completion_tokens": 4397
+  },
+  "wall_clock_seconds": 52.924018,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t011_h0000001_r001, step=1: 1 validation error for ResidentDecision\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```json\\n{\\n  \"assessmen...001_r002.\"\\n  ]\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

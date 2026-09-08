@@ -1,0 +1,62 @@
+{
+  "status": "VERIFIED",
+  "source_csv": "Wong_Carr_Wildfire_Dataset.csv",
+  "source_sha256": "5259798e5efe426542bbe5363745125888e5bcbff68c611c6c364721829d4d90",
+  "questionnaire_pdf": "Wong_Carr_Wildfire_Survey.pdf",
+  "mapping": {
+    "evacuated": "Q9.1",
+    "evacuated_at": [
+      "Q13.3",
+      "Q13.4"
+    ],
+    "order_types": [
+      "Q5.2_1",
+      "Q5.2_2",
+      "Q5.2_4"
+    ],
+    "mandatory_order_at": [
+      "Q6.2",
+      "Q6.3"
+    ],
+    "voluntary_order_at": [
+      "Q7.2",
+      "Q7.3"
+    ],
+    "channels": [
+      "Q6.1_1..13",
+      "Q7.1_1..13"
+    ]
+  },
+  "n_raw_responses": 647,
+  "n_finished": 335,
+  "n_evaluation_eligible": 330,
+  "n_excluded_missing_screen": 5,
+  "n_evacuated": 293,
+  "n_not_evacuated": 37,
+  "evacuation_rate": 0.8878787878787879,
+  "n_evacuated_with_datetime": 292,
+  "n_evacuated_missing_datetime": 1,
+  "n_with_order_datetime": 246,
+  "n_warning_after_evacuation": 36,
+  "n_order_response_inconsistent": 15,
+  "channel_selection_counts": {
+    "reverse_911": 85,
+    "text": 91,
+    "television": 59,
+    "radio": 22,
+    "flyer": 2,
+    "public_official": 72,
+    "social_media": 44,
+    "subscribed_service": 27,
+    "website": 44,
+    "smartphone_app": 29,
+    "interpersonal": 97,
+    "billboard": 0,
+    "other": 23
+  },
+  "notes": [
+    "Channel fields are multi-select prevalence indicators, not first-heard shares.",
+    "Q13.6 departure perceptions are post-outcome variables and excluded from prediction inputs.",
+    "Historical model results were generated before this repair and remain INVALID_FOR_CLAIM."
+  ]
+}

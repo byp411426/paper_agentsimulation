@@ -1,0 +1,92 @@
+{
+  "status": "PILOT",
+  "activity_type": "V6_PROTOCOL_VALIDATION",
+  "decision_model": "mock",
+  "metric_protocol_version": "v6",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "design": {
+    "n_households_per_run": 20,
+    "seeds": [101, 202, 303, 404, 505, 606, 707, 808, 909, 1010],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "terminal_runs": 50
+  },
+  "execution": {
+    "terminal_status_counts": {"VALID": 50},
+    "n_logical_decisions": 12520,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "estimated_cost_usd": 0.0,
+    "invalid_proposal_attempts": 0,
+    "invalid_acceptance_attempts": 0
+  },
+  "interaction_funnel_all_conditions": {
+    "sent": 1000,
+    "delivered": 1000,
+    "processed": 1000,
+    "accepted": 1000,
+    "rejected": 0,
+    "delivered_unprocessed_at_end": 0,
+    "dropped": 0
+  },
+  "full_condition_checks": {
+    "household_opportunities": 200,
+    "post_closure_feasible_commitments": 200,
+    "post_closure_feasible_commitment_rate_by_seed": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "coordinated_departure_rate_by_seed": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "uncoordinated_departure_rate_by_seed": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "realized_closure_steps": [3, 4, 3, 3, 4, 3, 4, 3, 3, 4]
+  },
+  "paired_summary": [
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "positive_direction_fraction": 1.0
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "positive_direction_fraction": 1.0
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "positive_direction_fraction": 1.0
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 1.0,
+      "sd_paired_difference": 0.0,
+      "positive_direction_fraction": 1.0
+    }
+  ],
+  "source": {
+    "config": "experiments/carr/configs/carr_s_mechanism_v6_mock_pilot.yaml",
+    "config_sha256": "50fe37a582e87c8d2b19f56ea759db08452e8d4fa0fda256904c5596a279ba99",
+    "raw_matrix": "experiments/carr/runs/carr_s_mechanism_v6_mock_pilot/pilot_matrix.json",
+    "raw_matrix_sha256": "1808e6140ba8138cf66355c5f3d12e6bd8b3df0c611f3efe7adc943703b05a25"
+  },
+  "gate_assessment": {
+    "zero_cost_protocol_validation_passed": true,
+    "formal_seed_count_frozen": false,
+    "paid_execution_authorized": false,
+    "reason": "The transparent mock is intentionally saturated and provides wiring evidence but no declared-backend paired-difference variance."
+  },
+  "claim_boundary": "The result verifies v6 protocol execution, message timing, commitment feasibility, and controlled household closure under a transparent mock. It is not a formal mechanism-effect estimate, Carr empirical validation, or evidence about a paid model."
+}

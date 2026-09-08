@@ -1,0 +1,148 @@
+{
+  "status": "PILOT_VALIDATION_ONLY",
+  "track": "Carr-R",
+  "n_paired": 66,
+  "test_split_opened": false,
+  "prompt_versions": {
+    "base": "carr_r_static_demographics_v1",
+    "context": "carr_r_fixed_preoutcome_context_v1"
+  },
+  "metric_comparison": {
+    "accuracy": {
+      "base": 0.8636363636363636,
+      "context": 0.8636363636363636,
+      "context_minus_base": 0.0
+    },
+    "macro_f1": {
+      "base": 0.4634146341463415,
+      "context": 0.4634146341463415,
+      "context_minus_base": 0.0
+    },
+    "brier": {
+      "base": 0.1269909090909091,
+      "context": 0.1451666666666667,
+      "context_minus_base": 0.018175757575757595
+    },
+    "ece": {
+      "base": 0.17757575757575747,
+      "context": 0.19696969696969707,
+      "context_minus_base": 0.019393939393939602
+    }
+  },
+  "decision_switches": {
+    "n_switched": 4,
+    "base_to_context_table": {
+      "evacuate": {
+        "evacuate": 62,
+        "stay": 2
+      },
+      "stay": {
+        "evacuate": 2,
+        "stay": 0
+      }
+    }
+  },
+  "paired_probability_difference": {
+    "estimand": "context minus demographic-only probability_evacuated",
+    "mean": -0.04454545454545456,
+    "sd": 0.11862263136235292,
+    "mcse": 0.014601436558283776,
+    "paired_t_95_ci": [
+      -0.07370653701298396,
+      -0.015384372077925163
+    ],
+    "median": -0.04999999999999999,
+    "minimum": -0.43000000000000005,
+    "maximum": 0.30000000000000004
+  },
+  "subgroup_diagnostics": [
+    {
+      "group": "age_65plus",
+      "n": 16,
+      "outcome_prevalence": 1.0,
+      "base_error_rate": 0.0625,
+      "context_error_rate": 0.0,
+      "base_mean_probability": 0.7075,
+      "context_mean_probability": 0.678125
+    },
+    {
+      "group": "age_under65",
+      "n": 50,
+      "outcome_prevalence": 0.86,
+      "base_error_rate": 0.16,
+      "context_error_rate": 0.18,
+      "base_mean_probability": 0.7524000000000001,
+      "context_mean_probability": 0.7030000000000001
+    },
+    {
+      "group": "household_size_3plus",
+      "n": 32,
+      "outcome_prevalence": 0.84375,
+      "base_error_rate": 0.15625,
+      "context_error_rate": 0.21875,
+      "base_mean_probability": 0.7693749999999999,
+      "context_mean_probability": 0.6915625000000001
+    },
+    {
+      "group": "household_size_1to2",
+      "n": 33,
+      "outcome_prevalence": 0.9393939393939394,
+      "base_error_rate": 0.12121212121212122,
+      "context_error_rate": 0.06060606060606061,
+      "base_mean_probability": 0.7127272727272728,
+      "context_mean_probability": 0.702121212121212
+    },
+    {
+      "group": "zero_vehicles",
+      "n": 0,
+      "outcome_prevalence": null,
+      "base_error_rate": null,
+      "context_error_rate": null,
+      "base_mean_probability": null,
+      "context_mean_probability": null
+    },
+    {
+      "group": "oneplus_vehicles",
+      "n": 66,
+      "outcome_prevalence": 0.8939393939393939,
+      "base_error_rate": 0.13636363636363635,
+      "context_error_rate": 0.13636363636363635,
+      "base_mean_probability": 0.7415151515151516,
+      "context_mean_probability": 0.696969696969697
+    },
+    {
+      "group": "income_below_50k",
+      "n": 23,
+      "outcome_prevalence": 0.8695652173913043,
+      "base_error_rate": 0.21739130434782608,
+      "context_error_rate": 0.21739130434782608,
+      "base_mean_probability": 0.6617391304347826,
+      "context_mean_probability": 0.6356521739130434
+    },
+    {
+      "group": "income_50k_plus",
+      "n": 35,
+      "outcome_prevalence": 0.9428571428571428,
+      "base_error_rate": 0.05714285714285714,
+      "context_error_rate": 0.05714285714285714,
+      "base_mean_probability": 0.7862857142857143,
+      "context_mean_probability": 0.738
+    }
+  ],
+  "interpretation": {
+    "context_improved_macro_f1": false,
+    "context_improved_brier": false,
+    "context_improved_ece": false,
+    "context_true_non_evacuated_identified": 0
+  },
+  "claim_boundary": "Paired validation-only prompt-context sensitivity. This cannot select a final prompt by test performance and is not platform-validity evidence.",
+  "provenance": {
+    "base_result_sha256": "d6c613846423a8de29357ec6ef5290cc098709abd211bf3e71e30b15addbd36d",
+    "base_predictions_sha256": "d516cbcd7dd955d49448d7157372abc9dca7cb8567c8a971c7b86bb81c175b4d",
+    "context_result_sha256": "790cc74233c2eaab1bdfcaa1c216fd1170d843734b5be040df8cda0324398c78",
+    "context_predictions_sha256": "3a9aa27cbb23bdd411bc2b2bc42d30791b2c5468e2ad48fb82d4cb8a443f10f1",
+    "context_config_sha256": "dbba29deafef7441e207b1d4ee950f6e6696c17097f0e82485a82338149383c0",
+    "freeze_sha256": "a684816006094a9bcb4a698f91d7ce881cfb6453223b6c325903e07fc8dc421d",
+    "runner_sha256": "73ea7bf4c3c9d1cf204d3ec6040f68a39c969feeee3f89a484edfae6ad8522f1"
+  }
+}

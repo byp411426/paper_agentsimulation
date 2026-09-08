@@ -1,0 +1,23 @@
+{
+  "status": "PILOT",
+  "condition": "full",
+  "seed": 505,
+  "n_households": 20,
+  "n_decision_residents": 40,
+  "warning_retention_rate": 0.5,
+  "primary_to_alternate_update_rate": 1.0,
+  "successful_replan_rate": 0.3,
+  "compatible_commitment_rate": 0.4,
+  "coordinated_departure_rate": 0.3,
+  "uncoordinated_departure_rate": 0.0,
+  "resource_conflict_rejections_per_household": 0.0,
+  "dependent_left_behind_rejections": 0,
+  "accepted_message_receipts": 15,
+  "delivered_message_receipts": 16,
+  "dropped_message_deliveries": 91,
+  "realized_closure_step": 4,
+  "n_logical_decisions": 205,
+  "run_terminal_status": "VALID",
+  "fallback_rate": 0.0,
+  "cost_usd": 0.0
+}

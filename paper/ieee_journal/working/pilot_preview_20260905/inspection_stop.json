@@ -1,0 +1,9 @@
+{
+  "reason": "Live trace showed execution at step 5 despite current resident departure intent step 6; stop diagnostic on unresolved execution contract, not outcome direction",
+  "affected_trace": "real_r2/e1_preview_4hh_seed7201/events/events.jsonl step 5",
+  "signal": "SIGINT",
+  "owned_pids": [
+    3653
+  ],
+  "resume_automatically": false
+}

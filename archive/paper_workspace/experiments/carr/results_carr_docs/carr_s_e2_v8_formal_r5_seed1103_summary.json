@@ -1,0 +1,65 @@
+{
+  "status": "PILOT_PENDING_COMPLETE_MATRIX_AUDIT",
+  "activity_type": "PUBLICATION_FACING_E2_MATRIX_PENDING_AUDIT",
+  "decision_model": "packy-deepseek-v4-flash",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e2_v8_formal_r5.yaml",
+    "config_sha256": "2dc99ff416aa2f4787d6e4772f935255bcb9bc8ddc3e237ef26f516a9aba1f2c"
+  },
+  "protocol": {
+    "declared_seeds": [
+      1103,
+      1201,
+      1301,
+      1409,
+      1511,
+      1601,
+      1709,
+      1801,
+      1907,
+      2003,
+      2111,
+      2203
+    ],
+    "executed_seed_batch": [
+      1103
+    ],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 1,
+    "planned_runs": 5,
+    "reused_terminal_artifacts": 0,
+    "aborted_early": true,
+    "terminal_status_counts": {
+      "ABORTED": 1
+    }
+  },
+  "runs": [
+    {
+      "seed": 1103,
+      "condition": "full",
+      "terminal_status": "ABORTED",
+      "n_ok": 17,
+      "n_cache": 0,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 105.739647,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r5_full_seed1103",
+      "summary_sha256": "2e17961a85774ea2bd06b4bd1bfb29ebd3be6447e22ecdbd3d343aba8f3c07e5",
+      "mechanism_metrics_sha256": "3d45e0dc259cc81ba846b1618efca4a348344941da9f4897a80dd159ea7c461c",
+      "provenance_sha256": "6a60c54681665d436ee5e8cdf6efc633a51c6fca21fefcd599ca7aa02b5e39d1"
+    }
+  ],
+  "claim_boundary": "One immutable seed batch from the publication-facing Carr-S E2 matrix. It remains PILOT until all predeclared seeds are complete and the full matrix, exclusions, provenance, and intervals are audited."
+}

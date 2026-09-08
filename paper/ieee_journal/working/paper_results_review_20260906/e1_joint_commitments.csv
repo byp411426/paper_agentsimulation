@@ -1,0 +1,13 @@
+households,seed,household_id,commitment_id,status,planned_departure_step,scheduled_beyond_window
+24,7201,syn_t002_h0000013,commit:m7:syn_t002_h0000013_r001:0,cancelled,9,False
+24,7201,syn_t002_h0000014,commit:m7:syn_t002_h0000014_r001:0,rejected,9,False
+24,7201,syn_t002_h0000009,commit:m8:syn_t002_h0000009_r001:0,rejected,10,False
+24,7201,syn_t002_h0000013,commit:m9:syn_t002_h0000013_r001:0,rejected,11,False
+24,7201,syn_t002_h0000014,commit:m10:syn_t002_h0000014_r001:0,executed,12,False
+24,7201,syn_t002_h0000013,commit:m12:syn_t002_h0000013_r003:0,executed,14,False
+24,8301,syn_t002_h0000014,commit:m4:syn_t002_h0000014_r001:1,executed,6,False
+24,8301,syn_t001_h0000002,commit:m7:syn_t001_h0000002_r001:0,rejected,9,False
+24,8301,syn_t002_h0000009,commit:m24:syn_t002_h0000009_r001:0,accepted,26,True
+24,9401,syn_t002_h0000014,commit:m4:syn_t002_h0000014_r001:1,executed,6,False
+24,9401,syn_t002_h0000010,commit:m7:syn_t002_h0000010_r001:1,rejected,9,False
+24,9401,syn_t001_h0000002,commit:m24:syn_t001_h0000002_r001:0,accepted,26,True

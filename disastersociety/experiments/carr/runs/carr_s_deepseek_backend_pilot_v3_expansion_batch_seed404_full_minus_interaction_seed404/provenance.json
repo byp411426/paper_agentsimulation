@@ -1,0 +1,108 @@
+{
+  "git_sha": "0f38707d476e60cb858d457eaa787806774eae09",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_deepseek_backend_pilot_v3_expansion_batch_seed404_full_minus_interaction_seed404",
+      "total_steps": 8,
+      "step_minutes": 30,
+      "seed": 404
+    },
+    "llm": {
+      "decision_model": "packy-deepseek-v4-flash",
+      "models_config": "configs/models.yaml",
+      "temperature": 0.0,
+      "max_concurrency": 4,
+      "budget_usd": 0.15,
+      "fallback_threshold": 0.01
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "BACKEND_PILOT_EXPANSION",
+      "prompt_version": "carr_s_controlled_resident_v3",
+      "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 2,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "depart_step": 5,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 8,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 0.65,
+      "social_message_delivery_probability": 0.25,
+      "expansion_protocol": {
+        "prior_pilot_seeds": [
+          101,
+          202
+        ],
+        "new_seeds": [
+          303,
+          404,
+          505
+        ],
+        "execute_all_new_seeds_regardless_of_interim_direction": true,
+        "purpose": "estimate sign stability and paired-difference variance before Gate D",
+        "formal_evidence": false,
+        "formal_seed_count_frozen": false,
+        "test_split_opened": false,
+        "expected_internal_cost_usd": 0.75,
+        "expected_cost_is_proxy_invoice": false
+      },
+      "phase_boundary": {
+        "purpose": "backend behavior, schema adherence, cost, fallback, and variance estimation",
+        "formal_evidence": false,
+        "test_split_opened": false,
+        "historical_closure_reconstruction": false
+      },
+      "route_semantics": {
+        "geometry": "sourced 2018 TIGER/Line road network",
+        "obstruction": "algorithmic controlled perturbation",
+        "historical_closure_observed": false,
+        "traffic_scope": "route-level capacity, not microscopic traffic reconstruction"
+      },
+      "condition": "full_minus_interaction"
+    }
+  },
+  "models": [
+    "packy-deepseek-v4-flash"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "models_config": {
+    "path": "configs/models.yaml",
+    "sha256": "b8284ad554500e6355bebe518a8178ace71a61544b1487ecf49cbe1f2024b044"
+  },
+  "credential_environment_name": "OPENAI_API_KEY",
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "64daee1cc2c9716cfd4ddc6733204dc7ebbf566a79cf36093269cf31c182b67c"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "86aeb30881228159235a7d5eecbbaa542ce2bd2596a397313668c5875fc4a360"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "ad925756e5104d988f0481ce5b1403e853a2e3cf64688b1b555be0c3477111b0"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "9f51455a551482a14c791587aa38d5f79448d3b08608affea33cf968f675ebdb"
+    }
+  }
+}

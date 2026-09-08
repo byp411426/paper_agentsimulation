@@ -1,0 +1,167 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r1",
+  "frozen_at": "2026-08-02T11:19:57+08:00",
+  "status": "FROZEN_FOR_EXECUTION",
+  "evidence_status_before_complete_audit": "PILOT",
+  "paper_claim": "Memory, feedback, planning, and interaction change their predeclared processes within the full DisasterSociety system under a Carr-informed controlled disruption.",
+  "analysis_scales": [
+    "individual",
+    "household_and_network",
+    "group"
+  ],
+  "evidence_type": "mechanism_ablation",
+  "execution_contract": {
+    "decision_model": "packy-deepseek-v4-flash",
+    "thinking_mode": "enabled_high",
+    "prompt_version": "carr_s_controlled_resident_v8",
+    "metric_protocol_version": "v8",
+    "n_households_per_run": 8,
+    "n_decision_residents_per_run": 16,
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "seeds": [
+      1103,
+      1201,
+      1301,
+      1409,
+      1511,
+      1601,
+      1709,
+      1801,
+      1907,
+      2003,
+      2111,
+      2203
+    ],
+    "n_seed_condition_runs": 60,
+    "max_in_run_concurrency": 12,
+    "execute_all_seeds_regardless_of_interim_direction": true,
+    "mock_eligible_for_effect_evidence": false,
+    "carr_r_test_split_opened": false
+  },
+  "metric_contract": {
+    "manipulation_checks": {
+      "memory": "conditional_warning_retention_rate",
+      "feedback": "preclosure_primary_to_postclosure_alternate_update_rate",
+      "planning": "successful_postclosure_replan_rate",
+      "interaction": "post_closure_feasible_commitment_rate"
+    },
+    "downstream_outcomes": {
+      "memory": {
+        "metric": "complete_household_safe_departure_rate",
+        "direction": "higher"
+      },
+      "feedback": {
+        "metric": "closed_route_rejections_per_household",
+        "direction": "lower"
+      },
+      "planning": {
+        "metric": "complete_household_safe_departure_rate",
+        "direction": "higher"
+      },
+      "interaction": {
+        "metric": "coordinated_departure_rate",
+        "direction": "higher"
+      }
+    },
+    "interpretation_rule": "Manipulation checks establish that the target process changed. Downstream outcomes show whether the change propagated to executable household behavior; a structurally zero drop-side manipulation check is not reported as the only evidence.",
+    "no_posthoc_rescue_metric": true
+  },
+  "analysis_contract": {
+    "independent_unit": "seed_x_condition_run",
+    "contrast": "same-seed full minus full-minus-module",
+    "eligibility": "both runs in a pair are VALID",
+    "invalid": "preserve artifacts and exclude the affected pair",
+    "aborted": "stop new paid execution and preserve completed artifacts",
+    "report": [
+      "paired mean",
+      "95% paired t interval",
+      "Monte Carlo standard error",
+      "direction stability",
+      "zero-difference fraction",
+      "all exclusions"
+    ],
+    "seed_sizing": {
+      "development_sd_source": "v7 interaction paired-difference SD 0.144338",
+      "target_mcse": 0.05,
+      "minimum_from_sd": 9,
+      "frozen_n": 12,
+      "adaptive_direction_based_stopping": false
+    }
+  },
+  "claim_boundary": {
+    "case": "Carr-informed controlled scenario",
+    "historical_reconstruction": false,
+    "carr_empirical_validation": false,
+    "population_representative": false,
+    "universal_module_independence": false,
+    "formal_claim_requires_complete_matrix_audit": true
+  },
+  "frozen_sources": [
+    {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal.yaml",
+      "sha256": "09cb4f208d91869d13cc651a8955a6614991d5b956486926acb3b9a18a54a820"
+    },
+    {
+      "path": "experiments/carr/runner.py",
+      "sha256": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    {
+      "path": "ds/world/carr.py",
+      "sha256": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    },
+    {
+      "path": "configs/models.yaml",
+      "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+    },
+    {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "sha256": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "sha256": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    {
+      "path": "eventpacks/carr_2018/environment/west_redding_controlled_routes.json",
+      "sha256": "135e50797b706fe4aaab3b81814c24a279ba7310373ad756384ee3763010caaf"
+    },
+    {
+      "path": "eventpacks/carr_2018/population/pilot_seed42_n1000/synthetic_households.csv",
+      "sha256": "f6dce2cae63839742bd27cf90230241aaf5a08b0afc924e28f227446dc781219"
+    },
+    {
+      "path": "eventpacks/carr_2018/population/pilot_seed42_n1000/synthetic_persons.csv",
+      "sha256": "ec293c8ce7a223d1a2bdf103506cc00b2b2ea934ae0c6d671661e0b8b28e5adc"
+    }
+  ]
+}

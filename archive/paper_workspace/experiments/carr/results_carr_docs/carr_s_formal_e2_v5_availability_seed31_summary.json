@@ -1,0 +1,68 @@
+{
+  "status": "PILOT",
+  "activity_type": "BACKEND_AVAILABILITY_CHECK",
+  "prompt_version": "carr_s_controlled_resident_v5",
+  "decision_model": "packy-deepseek-v4-flash",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_formal_e2_v5_availability.yaml",
+    "config_sha256": "20a3a63759a76b9117b4873ebebb8a52133496a516c88cbf41e70097914c7e3f"
+  },
+  "protocol": {
+    "execute_sequentially": true,
+    "test_split_opened": false,
+    "substitute_for_v3_scientific_pairs": false,
+    "n_checks": 2
+  },
+  "completion": {
+    "terminal_status_counts": {
+      "VALID": 2
+    },
+    "all_checks_valid": true
+  },
+  "usage": {
+    "live_prompt_tokens": 39122,
+    "live_completion_tokens": 116392,
+    "estimated_cost_usd": 0.155514
+  },
+  "runtime": {
+    "sum_run_wall_clock_seconds": 1049.251
+  },
+  "checks": [
+    {
+      "seed": 101,
+      "condition": "full",
+      "diagnosed_v3_failure": "none",
+      "terminal_status": "VALID",
+      "n_ok": 30,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "live_prompt_tokens": 19906,
+      "live_completion_tokens": 61901,
+      "estimated_cost_usd": 0.081807,
+      "wall_clock_seconds": 548.405361,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_availability_seed31_full_seed101",
+      "summary_sha256": "f19815bc98ca64b00a4351c4fb8e0936137431db8f807d644714582667e1ed19",
+      "provenance_sha256": "82f37f1e9a32118c626c200500e4308efcb2f017e518b26c1658e8885a078511"
+    },
+    {
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "diagnosed_v3_failure": "none",
+      "terminal_status": "VALID",
+      "n_ok": 29,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "live_prompt_tokens": 19216,
+      "live_completion_tokens": 54491,
+      "estimated_cost_usd": 0.073707,
+      "wall_clock_seconds": 500.84588,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_availability_seed31_full_minus_memory_seed202",
+      "summary_sha256": "51c4ab7e098fd6d5c1964980e3eba3e527a85a68526a63ee91bca72326eeed17",
+      "provenance_sha256": "2d43eaa11dcb9f6442b9534b04cb6da894246292b4b60c9c5dfaeddb1a02b8af"
+    }
+  ],
+  "gate_interpretation": "Every declared engineering check completed VALID with zero fallback; this does not convert any earlier INVALID run into a scientific observation.",
+  "claim_boundary": "Engineering reliability/availability evidence only. These checks are not eligible for paired mechanism estimates or Carr empirical claims."
+}

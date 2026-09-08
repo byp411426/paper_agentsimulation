@@ -1,0 +1,181 @@
+version: 1
+status: FROZEN_FOR_PILOT
+notes:
+  - Roles are experiment-specific; a field may have a different role in another estimand.
+  - Q13.6 departure perceptions are post-outcome and never enter Carr-R prediction prompts.
+  - Order receipt fields are excluded from the primary prediction because 36 reported order times occur after evacuation and no common decision checkpoint is frozen.
+
+experiments:
+  carr_r_prediction_primary:
+    estimand: respondent-conditioned evacuation outcome on the frozen Carr-R split
+    roles:
+      runtime_input:
+        - age_group
+        - household_size
+        - vehicle_count
+        - income_bracket
+      calibration: []
+      evaluation_only:
+        - evacuated
+      excluded:
+        - respondent_id
+        - evacuation_eval_eligible
+        - exclusion_reason
+        - warned_official
+        - received_mandatory_order
+        - received_voluntary_order
+        - reported_no_official_order
+        - order_response_inconsistent
+        - mandatory_order_at
+        - voluntary_order_at
+        - first_evacuation_order_at
+        - evacuated_at
+        - warning_hour_since_ignition
+        - evacuation_hour_since_ignition
+        - warning_after_evacuation
+        - heard_reverse_911
+        - heard_text
+        - heard_television
+        - heard_radio
+        - heard_flyer
+        - heard_public_official
+        - heard_social_media
+        - heard_subscribed_service
+        - heard_website
+        - heard_smartphone_app
+        - heard_interpersonal
+        - heard_billboard
+        - heard_other
+        - warning_channel_count
+        - departure_fire_perception
+        - departure_smoke_perception
+
+  carr_s_channel_reference:
+    estimand: respondent-sample multi-select order-channel prevalence
+    roles:
+      runtime_input: []
+      calibration:
+        - warned_official
+      evaluation_only:
+        - evacuation_eval_eligible
+        - received_mandatory_order
+        - received_voluntary_order
+        - reported_no_official_order
+        - order_response_inconsistent
+        - heard_reverse_911
+        - heard_text
+        - heard_television
+        - heard_radio
+        - heard_flyer
+        - heard_public_official
+        - heard_social_media
+        - heard_subscribed_service
+        - heard_website
+        - heard_smartphone_app
+        - heard_interpersonal
+        - heard_billboard
+        - heard_other
+        - warning_channel_count
+      excluded:
+        - respondent_id
+        - evacuated
+        - exclusion_reason
+        - mandatory_order_at
+        - voluntary_order_at
+        - first_evacuation_order_at
+        - evacuated_at
+        - warning_hour_since_ignition
+        - evacuation_hour_since_ignition
+        - warning_after_evacuation
+        - departure_fire_perception
+        - departure_smoke_perception
+        - age_group
+        - household_size
+        - vehicle_count
+        - income_bracket
+  carr_s_order_to_departure_reference:
+    estimand: respondent-sample delay from first reported evacuation order to reported departure
+    roles:
+      runtime_input: []
+      calibration: []
+      evaluation_only:
+        - evacuated
+        - evacuation_eval_eligible
+        - order_response_inconsistent
+        - first_evacuation_order_at
+        - evacuated_at
+        - warning_after_evacuation
+      excluded:
+        - respondent_id
+        - exclusion_reason
+        - warned_official
+        - received_mandatory_order
+        - received_voluntary_order
+        - reported_no_official_order
+        - mandatory_order_at
+        - voluntary_order_at
+        - warning_hour_since_ignition
+        - evacuation_hour_since_ignition
+        - heard_reverse_911
+        - heard_text
+        - heard_television
+        - heard_radio
+        - heard_flyer
+        - heard_public_official
+        - heard_social_media
+        - heard_subscribed_service
+        - heard_website
+        - heard_smartphone_app
+        - heard_interpersonal
+        - heard_billboard
+        - heard_other
+        - warning_channel_count
+        - departure_fire_perception
+        - departure_smoke_perception
+        - age_group
+        - household_size
+        - vehicle_count
+        - income_bracket
+  carr_s_departure_reference:
+    estimand: respondent-sample evacuation proportion and departure-time distribution
+    roles:
+      runtime_input: []
+      calibration: []
+      evaluation_only:
+        - evacuated
+        - evacuation_eval_eligible
+        - exclusion_reason
+        - evacuated_at
+        - evacuation_hour_since_ignition
+      excluded:
+        - respondent_id
+        - warned_official
+        - received_mandatory_order
+        - received_voluntary_order
+        - reported_no_official_order
+        - order_response_inconsistent
+        - mandatory_order_at
+        - voluntary_order_at
+        - first_evacuation_order_at
+        - warning_hour_since_ignition
+        - warning_after_evacuation
+        - heard_reverse_911
+        - heard_text
+        - heard_television
+        - heard_radio
+        - heard_flyer
+        - heard_public_official
+        - heard_social_media
+        - heard_subscribed_service
+        - heard_website
+        - heard_smartphone_app
+        - heard_interpersonal
+        - heard_billboard
+        - heard_other
+        - warning_channel_count
+        - departure_fire_perception
+        - departure_smoke_perception
+        - age_group
+        - household_size
+        - vehicle_count
+        - income_bracket

@@ -1,0 +1,1155 @@
+{
+  "status": "PILOT",
+  "activity_type": "E3_CROSS_MODEL_ROBUSTNESS_PILOT_DERIVED_SUMMARY",
+  "case_semantics": "Carr-informed controlled mechanism scenario",
+  "metric_protocol_version": "v6",
+  "n_households_per_run": 2,
+  "seeds": [
+    101,
+    202
+  ],
+  "conditions": [
+    "full",
+    "full_minus_memory",
+    "full_minus_feedback",
+    "full_minus_planning",
+    "full_minus_interaction"
+  ],
+  "models": [
+    "packy-deepseek-v4-flash",
+    "packy-qwen3.5-plus",
+    "packy-glm-5",
+    "packy-minimax-m2.7"
+  ],
+  "selected_run_status_counts": {
+    "VALID": 40
+  },
+  "selected_gateway_totals": {
+    "n_ok": 944,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0
+  },
+  "model_summaries": {
+    "packy-deepseek-v4-flash": {
+      "selected_run_status_counts": {
+        "VALID": 10
+      },
+      "gateway_totals": {
+        "n_ok": 184,
+        "n_cache": 0,
+        "n_failed": 0,
+        "n_fallback": 0
+      },
+      "observed_response_models": [],
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.375,
+          "sd_paired_difference": 0.1767766952966369,
+          "mcse": 0.125,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "interaction",
+          "metric": "post_closure_feasible_commitment_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        },
+        {
+          "module": "memory",
+          "metric": "conditional_warning_retention_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.5,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        }
+      ],
+      "full_condition_opportunity_diagnostics": [
+        {
+          "seed": 101,
+          "planned_primary_count": 4,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 15,
+          "post_closure_feasible_commitment_rate": 1.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        },
+        {
+          "seed": 202,
+          "planned_primary_count": 4,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 16,
+          "post_closure_feasible_commitment_rate": 1.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        }
+      ]
+    },
+    "packy-qwen3.5-plus": {
+      "selected_run_status_counts": {
+        "VALID": 10
+      },
+      "gateway_totals": {
+        "n_ok": 225,
+        "n_cache": 0,
+        "n_failed": 0,
+        "n_fallback": 0
+      },
+      "observed_response_models": [
+        "qwen3.5-plus"
+      ],
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 0.0,
+          "variance_informative": false
+        },
+        {
+          "module": "interaction",
+          "metric": "post_closure_feasible_commitment_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.5,
+          "sd_paired_difference": 0.7071067811865476,
+          "mcse": 0.5,
+          "positive_direction_fraction": 0.5,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "conditional_warning_retention_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        }
+      ],
+      "full_condition_opportunity_diagnostics": [
+        {
+          "seed": 101,
+          "planned_primary_count": 3,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 10,
+          "post_closure_feasible_commitment_rate": 1.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        },
+        {
+          "seed": 202,
+          "planned_primary_count": 4,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 20,
+          "post_closure_feasible_commitment_rate": 0.0,
+          "invalid_proposal_attempts": 1,
+          "invalid_acceptance_attempts": 1
+        }
+      ]
+    },
+    "packy-glm-5": {
+      "selected_run_status_counts": {
+        "VALID": 10
+      },
+      "gateway_totals": {
+        "n_ok": 212,
+        "n_cache": 0,
+        "n_failed": 0,
+        "n_fallback": 0
+      },
+      "observed_response_models": [
+        "glm-5"
+      ],
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.33333333333333337,
+          "sd_paired_difference": 0.47140452079103173,
+          "mcse": 0.33333333333333337,
+          "positive_direction_fraction": 0.5,
+          "variance_informative": true
+        },
+        {
+          "module": "interaction",
+          "metric": "post_closure_feasible_commitment_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.5,
+          "sd_paired_difference": 0.7071067811865476,
+          "mcse": 0.5,
+          "positive_direction_fraction": 0.5,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "conditional_warning_retention_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        }
+      ],
+      "full_condition_opportunity_diagnostics": [
+        {
+          "seed": 101,
+          "planned_primary_count": 1,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 12,
+          "post_closure_feasible_commitment_rate": 1.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        },
+        {
+          "seed": 202,
+          "planned_primary_count": 4,
+          "feedback_or_replanning_opportunity_observed": true,
+          "messages_sent": 18,
+          "post_closure_feasible_commitment_rate": 0.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        }
+      ]
+    },
+    "packy-minimax-m2.7": {
+      "selected_run_status_counts": {
+        "VALID": 10
+      },
+      "gateway_totals": {
+        "n_ok": 323,
+        "n_cache": 0,
+        "n_failed": 0,
+        "n_fallback": 0
+      },
+      "observed_response_models": [
+        "MiniMax/MiniMax-M2.7"
+      ],
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 0.0,
+          "variance_informative": false
+        },
+        {
+          "module": "interaction",
+          "metric": "post_closure_feasible_commitment_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.75,
+          "sd_paired_difference": 0.3535533905932738,
+          "mcse": 0.25,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "conditional_warning_retention_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 1.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": false
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 2,
+          "mean_paired_difference": 0.0,
+          "sd_paired_difference": 0.0,
+          "mcse": 0.0,
+          "positive_direction_fraction": 0.0,
+          "variance_informative": false
+        }
+      ],
+      "full_condition_opportunity_diagnostics": [
+        {
+          "seed": 101,
+          "planned_primary_count": 0,
+          "feedback_or_replanning_opportunity_observed": false,
+          "messages_sent": 23,
+          "post_closure_feasible_commitment_rate": 0.5,
+          "invalid_proposal_attempts": 1,
+          "invalid_acceptance_attempts": 0
+        },
+        {
+          "seed": 202,
+          "planned_primary_count": 0,
+          "feedback_or_replanning_opportunity_observed": false,
+          "messages_sent": 35,
+          "post_closure_feasible_commitment_rate": 1.0,
+          "invalid_proposal_attempts": 0,
+          "invalid_acceptance_attempts": 0
+        }
+      ]
+    }
+  },
+  "paired_primary_differences": [
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.5,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.75,
+      "paired_difference": 0.25,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-deepseek-v4-flash"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 1.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 1.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-qwen3.5-plus"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.3333333333333333,
+      "paired_difference": 0.6666666666666667,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 1.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-glm-5"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 101,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 101,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 101,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "seed": 202,
+      "full": 0.0,
+      "drop_one": 0.0,
+      "paired_difference": 0.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 101,
+      "full": 0.5,
+      "drop_one": 0.0,
+      "paired_difference": 0.5,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "seed": 202,
+      "full": 1.0,
+      "drop_one": 0.0,
+      "paired_difference": 1.0,
+      "predicted_direction": "positive",
+      "model": "packy-minimax-m2.7"
+    }
+  ],
+  "cross_model_module_summary": [
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "n_model_seed_pairs": 8,
+      "positive_pairs": 8,
+      "zero_pairs": 0,
+      "negative_pairs": 0,
+      "positive_fraction": 1.0,
+      "claim_boundary": "Descriptive model-by-seed sign stability only; the eight pairs are not eight independent model replications."
+    },
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "n_model_seed_pairs": 8,
+      "positive_pairs": 3,
+      "zero_pairs": 5,
+      "negative_pairs": 0,
+      "positive_fraction": 0.375,
+      "claim_boundary": "Descriptive model-by-seed sign stability only; the eight pairs are not eight independent model replications."
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "n_model_seed_pairs": 8,
+      "positive_pairs": 6,
+      "zero_pairs": 2,
+      "negative_pairs": 0,
+      "positive_fraction": 0.75,
+      "claim_boundary": "Descriptive model-by-seed sign stability only; the eight pairs are not eight independent model replications."
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "n_model_seed_pairs": 8,
+      "positive_pairs": 6,
+      "zero_pairs": 2,
+      "negative_pairs": 0,
+      "positive_fraction": 0.75,
+      "claim_boundary": "Descriptive model-by-seed sign stability only; the eight pairs are not eight independent model replications."
+    }
+  ],
+  "selected_artifacts": [
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 101,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r1_full_seed101",
+      "summary_sha256": "bc7225001adaa0c86cbbbd17a0850c855c27e7124ba359f0604a200d116d15d2",
+      "mechanism_metrics_sha256": "886eddc98eb90cd6437770b97c3c056ca8a5669408162656d5db59ff9871d3b0",
+      "provenance_sha256": "fec012dfd732fb6580b0ca5ff84260165078825cabd94b549b2f52fc4efe3c98",
+      "llm_calls_sha256": "9d0fcd8e40b6830572c21cf13f514cccb45144faeaccab74e31c3dc6488bc90e"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r1_full_minus_memory_seed101",
+      "summary_sha256": "e0155e2170c413539e080d1ad528949d55f36ef748d2f964e4ca4b84109a2779",
+      "mechanism_metrics_sha256": "46167fa1cb87dafe61daffdefb83a16f487c9acb49d44e44667ff8dc8278c35d",
+      "provenance_sha256": "5c7663164684ba9d5d3ee209435d970ca74789d83a6a799772f5d167878ca661",
+      "llm_calls_sha256": "b8abe7a30598b13c16c272f9ec8f9caa1c199bc4be98ec585475bd42cd21e6c4"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_feedback_seed101",
+      "summary_sha256": "ed6556ec1482d21afe3eaf1972dbb42fd6d66c223b016ea4cf963cfa5091a884",
+      "mechanism_metrics_sha256": "92f5509db09f2b3d5c47013a43bda3fbcee177678892feed2e71f87b01e7dc73",
+      "provenance_sha256": "3c4a0c152e401736b98c7ed67515e6795dec22c781fdff0f1708aaea22470521",
+      "llm_calls_sha256": "36f3d57fc844f88ee3779df6deb49af05ec99016fe740f29c079ea5e040d2b1b"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_planning_seed101",
+      "summary_sha256": "a5c5c73647b75b1b208415c064c4f848f478ebb48cc3cd31818762b5f2b78745",
+      "mechanism_metrics_sha256": "01bfd7e33dde914013da65466b4b841b3e861a135230b969ad008512f7c60fe7",
+      "provenance_sha256": "4310e3f4f0f5fe58c534776aa07f1125d39027b33e606fa4c0965d97ed7503d3",
+      "llm_calls_sha256": "b1ac61abca3906e3bd95016326cbe420f36f72996bacfe3a441b05e88c6cb8f6"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_interaction_seed101",
+      "summary_sha256": "8a3589a13f4da8d6c43e8db40e777f179391cf812d65629e7fa18ce8b01b9034",
+      "mechanism_metrics_sha256": "8ace61358e2ff666ba021c73247e08db5ec3b5d83e32464b2d70b714a5690be0",
+      "provenance_sha256": "5458c52b73d582b7d4ebbe449bf14f4e484e2a02af88f35cdbd83e50c5bf96d6",
+      "llm_calls_sha256": "cd2aa412d13532fb179551d81289e07cc043b9130dde5cbb3a4fd98fac012189"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 202,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_seed202",
+      "summary_sha256": "b9d631760aa0d62d563ea0f374b61b9d49842a02ec5851ad9ac23384bb4f4fee",
+      "mechanism_metrics_sha256": "2e4023a10eabe7895df6fdfa67aeb1cbdbfc843add039fcb653b1eb1777cd0e6",
+      "provenance_sha256": "22f90fb7723f957c8117e32c73dc00345e3c1bd4e67b1ac6ea47165ee8a5663f",
+      "llm_calls_sha256": "86bbfd0611da1490c92eed5aff7100dd9663c30c987f124063237faa7727d62b"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_memory_seed202",
+      "summary_sha256": "7adef40c6cc4dfad190ccc84f48cb7efbee410534c6d736b2b218e1d5b6200f3",
+      "mechanism_metrics_sha256": "906f5ce1a942d9c147d650c03b33035f81d683b1417d7b0f034f9620f944bdd2",
+      "provenance_sha256": "9df6c541221d5382258ddd52dfd1fa35909e5f1438ab51247a77ae1cd539c7b9",
+      "llm_calls_sha256": "4d36489241e0bebc360d04de0b134c05fb6ec58d6ae72bd4e56117933bd02bcd"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 202,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_feedback_seed202",
+      "summary_sha256": "723c0279ceab5c40728d06a209779e56fd9ffbb187f92e5b7cf6386ecbaf5935",
+      "mechanism_metrics_sha256": "a6c231970da0a823094399e0b8b52ac61ad63f85de24716808c7d572138bc54f",
+      "provenance_sha256": "500b760856cfea905fc183feb808a9bcd5e89e1463cfc83d21cedf6446d4bf46",
+      "llm_calls_sha256": "9eb809a07e787e3e1ed4af4987fad24f5f9e89a9ad2ca3ed3f724eb33e14a302"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 202,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_planning_seed202",
+      "summary_sha256": "32f33c65ac1de3a76a88e5dca4b6198110e939ae055f0e9cb23e6ee43452ed8b",
+      "mechanism_metrics_sha256": "d9e0f299c9ae302ea483babdd69bdf2b1ebaa71196fac22d547feceb8cee52db",
+      "provenance_sha256": "725cd70cae4fca1feecb1b264d496a7b54d634fc18838ee0117410de486391e9",
+      "llm_calls_sha256": "b577f676fe4b5b99f7eb0e5a6bab14fd0119eb4e803d7b48b77fce3bc5182c9e"
+    },
+    {
+      "model": "packy-deepseek-v4-flash",
+      "seed": 202,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r2_full_minus_interaction_seed202",
+      "summary_sha256": "b2edb372e0f17414defdfbbabd7e5e8981f1c6dc7c42604bbcdeccf72aee55f4",
+      "mechanism_metrics_sha256": "a7d94412af9dfeefc032a8ac4824f3037ccf6b7841397f9eccabb6f237af4459",
+      "provenance_sha256": "fd80d3b3d41288e62ed6d42c3f1e2ad92f0ce0aec0faa2e02e09b3b5ccb0a5ad",
+      "llm_calls_sha256": "46607382f4eb1997d62e3ee15ac549e850ff33ed11aede2d621cca9c83f5dbd8"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 101,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_seed101",
+      "summary_sha256": "c79705d17210b889a77b843ec3cb6658a20592150678350c14a51836e45b4740",
+      "mechanism_metrics_sha256": "45f8a13a44a5052965fa216c3ef6fc11159dbfa07252eccbbd536746f9536503",
+      "provenance_sha256": "5c07426a19ea1d5da9559afdb007e4d2e4d3020971c85c2fda5ca39bc7976c89",
+      "llm_calls_sha256": "1a8a88bc2191407ce8332df961aee30c6742fab981e0d98d9c9930e42876ba32"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_memory_seed101",
+      "summary_sha256": "0bd3b89663892b7b53b0e8ddce23207dd06370b5387e6ef283060de586dbd7ea",
+      "mechanism_metrics_sha256": "44c06861e75c3a5dd1b8856164d94ae164d244c996be237f6a98f9977023979a",
+      "provenance_sha256": "fd70bfcb5465b94428bb02b2b57ee9ce7cbb790cb3964da920212acf53d0f845",
+      "llm_calls_sha256": "65fbe209537efc13ce8d250098617acda38c3aab87c757052d5b5a3818f76372"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_feedback_seed101",
+      "summary_sha256": "cf686669e6e3b425cfe9be79b1900218d20ae3c5cf0d08b32c0c88a5a4edbff8",
+      "mechanism_metrics_sha256": "431649f9dbf61c87d6c47f7e2ef445942838cf26e9ac68cad7dccb51dff51218",
+      "provenance_sha256": "5cccc0d0b1870238f538cc519dae7733fa4f4d6807abd49ce176c01b42e9b4e3",
+      "llm_calls_sha256": "a0ea9fec532b2a973e12217e09cc52890eacbf6fcf74b18596cb398c31f73df5"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_planning_seed101",
+      "summary_sha256": "2ec5dc60897fc149c5781331d3d0a47611fa6c44445beacd443d19db3e0c52d9",
+      "mechanism_metrics_sha256": "5b626def8202cfa88cf4daeb081718fb912fcba1ba141b629ee708f359f7836b",
+      "provenance_sha256": "3cc8eea18921ff9589e5a511a3b7860ab164f51ca042a804a503833778d87438",
+      "llm_calls_sha256": "dc006ba28ff2b7f18698015ccb2385f9d4be5467bc37509d32ffefa4e2b5f760"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_interaction_seed101",
+      "summary_sha256": "876f7347888b24de3f76d8a2ef6e6a1bdcb19ef218cf32bc99fd0370b8bcc773",
+      "mechanism_metrics_sha256": "b6cf36ff6bd428fd3289a665243e2dc978447f051405f85fa27d48fd4757d5ad",
+      "provenance_sha256": "b8ae1a8d0567ebbf931ed2231be651cef79407c016a075f12068737cddb4c444",
+      "llm_calls_sha256": "19a6d28aaad31c4a6b1d52e788a56c62fa2635cd7a5590786975a711fb97142a"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 202,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_seed202",
+      "summary_sha256": "4718bb2b95b051b81104828f8d10a2e69d23f296c45001e02b4952199f4c980f",
+      "mechanism_metrics_sha256": "95aca152d8273f68929afbd4134448b84bf88a288380735492b98c0249b474c1",
+      "provenance_sha256": "d953ab9b9a8dc95480369f96ff5c8901a977ee44870a840a157c67047487be75",
+      "llm_calls_sha256": "fbbd4a41523d7125e57bb462858fa5c3948fe2b16e5be1b664ec0d5756b582f5"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_memory_seed202",
+      "summary_sha256": "dec2fda625723cb448ae1c99fda794bc6f90012232473792b3e957b58c0c6c9b",
+      "mechanism_metrics_sha256": "f7d2896b5edc98c5c6ed39fde06b2e7897490a158266000ee26be56a886e3be5",
+      "provenance_sha256": "49cc619044004e44872360bb4b5f6ca18f5ffcb54b5224fc655d6673a814f1ce",
+      "llm_calls_sha256": "15f08fdbfa8d4a561f7769d57aa17d3013e5c5bce23ce49b3979d169a57e042d"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 202,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_feedback_seed202",
+      "summary_sha256": "466c126868a74e4b33d483e512f8648d983be28cc910e2b3204ecb2de05be7ea",
+      "mechanism_metrics_sha256": "4600bfedb931f3524d99aca1c895997d84f405e6ec13624a5df342d780bbedeb",
+      "provenance_sha256": "fb7b7ca41d7014f726c650edc967854e8e3ce45723d3a99ed20ed03506362f36",
+      "llm_calls_sha256": "79b351696781497c95c9b34b8814bbb27aa76bbd66608c40b9f8200c086e1037"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 202,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_planning_seed202",
+      "summary_sha256": "b632c82a33c2fd95b1138948ba24ab84739931d5faef68cfba8001babb8f0493",
+      "mechanism_metrics_sha256": "5bac89bdf7f2c6ceae5ef43ef5da2600c02c5081e0fee78cbdf519f8df02a1f3",
+      "provenance_sha256": "c16ff399e45832f3b7ce0cf1020e8aa8c5ec1b182afdb40128ceeb139a3492f7",
+      "llm_calls_sha256": "30ee5dbf97293b5ff31c808b9cb8445de692ffd74170254300522c41de4c33f8"
+    },
+    {
+      "model": "packy-qwen3.5-plus",
+      "seed": 202,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_qwen35_v6_thinking_pilot_r1_full_minus_interaction_seed202",
+      "summary_sha256": "c98bb0413251e3a38676859db7cc8c9cb5769caf16e07abb169aa918e99c3f1b",
+      "mechanism_metrics_sha256": "2876cc6a0c06514465591e7658691ffee723604ebfcf80c90576f9ee103828a8",
+      "provenance_sha256": "dfc6a0e46856e57150b75fd702c19788d9b46d10b4e2be78bf57146a0f4cb730",
+      "llm_calls_sha256": "b01b23e2ac3798f8b84f3f155a03475c53a8f03f5d4c99903459d9b7598c9b21"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 101,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_seed101",
+      "summary_sha256": "238dcab5ce3e8e5d6eb2cb66ef213bb2e64ea8bf744225971f9b591999348bf4",
+      "mechanism_metrics_sha256": "a3d9acc5b54d35dbbb81a216e478b1c1872e81348af8076115c5e48766bd8fa7",
+      "provenance_sha256": "fd0984f09f2b0c532f5ea60c0a9b82995480fb56bbc09a0ef5845c28d98e0675",
+      "llm_calls_sha256": "2ebef4246db8b23dea00adccaef1225658f24bf2f1c18caf65c83f03cd2902e1"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_memory_seed101",
+      "summary_sha256": "7ff2e59c6c601e41c695e8acbcbcb43ab28fff2ea32908549a70c700b27bf17a",
+      "mechanism_metrics_sha256": "bc71b331b36f63eed7f7e913effa962239010a3ed4ad00c9e92a31b5e090e78a",
+      "provenance_sha256": "40a68bc4880aac86d12241e68b2d88d9e85b73632bf0cacdc044d3778f2c8646",
+      "llm_calls_sha256": "29015dae80cb514d453151f1d6d9afca2bea2f64db71f0a0faf417b5cc6de502"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_feedback_seed101",
+      "summary_sha256": "ea6809ecfcdf5106c5f54fda0f1cf45b69ab25d77dd125dc6208de556af6dc86",
+      "mechanism_metrics_sha256": "4ac9d70e703916ce7720bdae708fb8a336e770098a85559707672c0641dd29ec",
+      "provenance_sha256": "0fd230c5bca8af0806a7fdfe7cf4a6b9165ae55093a5bbec94e053443528c633",
+      "llm_calls_sha256": "0a950144119b3e731f69ef08ad4447abfaffe6232c4f6fa76a5f4d7ca9afc304"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_planning_seed101",
+      "summary_sha256": "d1eb350c803614be75b2bba4f1cff3d0c3bc3359c12a0af8a83118669a3482d4",
+      "mechanism_metrics_sha256": "abb53e5bf72df432c034db5924e67143b9082debc6173bceeb0fffaa4c8e9a54",
+      "provenance_sha256": "05dc552d5f087373287d780a68387bde06a8fbc83579dc04c75b763cd66aa54d",
+      "llm_calls_sha256": "49d3ed9a87c9fc6cc5bff5324e654a6be4f7909c73a7407903d955e79774e01b"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_interaction_seed101",
+      "summary_sha256": "f9791fb9826e4317fdc271eb2cf4d6c1f7b37f2db0f8b0c71acd0c7f57796a85",
+      "mechanism_metrics_sha256": "604c3e6f95d738861fbc775c9c06b797a3b3ae8dcba79a61466d8cd9a3284465",
+      "provenance_sha256": "ac00d1e80191643ad5372439f86c4e5a91811011b6595f13afde7f2fe6e512ff",
+      "llm_calls_sha256": "4476b6f5e642ede0d83611a687fbec117c187656b67ebb26264fa7a383d33cfe"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 202,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_seed202",
+      "summary_sha256": "a9ca481b38ae06c0c96bfbb7d508843645999d4e97863344814f5507915194ee",
+      "mechanism_metrics_sha256": "ca347cee81e0db5a0a7c67df6e82cf47d85aa4f76a490c82b8e5b9855ddcf589",
+      "provenance_sha256": "a5a6ca7ffa8ad18f19c694c317ac8ba1acfdc9badd49528dfc3bacab28bfde35",
+      "llm_calls_sha256": "6f1bc5c71338db5676180f548d9baa5988583238850d58c3622688b4028631af"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_memory_seed202",
+      "summary_sha256": "23d02d596f89c6844ee48dc127dc3d14a1f0ef805725c475ff5ffb13c5cc750a",
+      "mechanism_metrics_sha256": "db957a5e44405fbb06130253f27913294a643546ebb69b07f9be20c9750823d2",
+      "provenance_sha256": "f62514da4aea5b41c70b1cce0d11d9992d3bca3531b4e998388f9b10b913406a",
+      "llm_calls_sha256": "ab75fb218acf6d8b35d1a21d473cd82be2df0a90b31e0cf6cf189584a1f22b49"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 202,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_feedback_seed202",
+      "summary_sha256": "9df322c0820a0ef0ec84c7f770e43b7830e5bbbc8a2cc057d3b37fa0a2150b78",
+      "mechanism_metrics_sha256": "a06966b20d2c71dbbf39253d4d864961b196b4d192f20347713fcbac704553b2",
+      "provenance_sha256": "d100c3e7626368e7f7513ca4de62ad49232777fb7f7de8668e6b723de5f1e10b",
+      "llm_calls_sha256": "e380f22a022fc90a4f5b8294656dfa18f82ed08242468c4c32a0fe2384653d53"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 202,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_planning_seed202",
+      "summary_sha256": "0a3127cc8e38a56d76a76845d8c6e21f16536a8b6d9aaad029d514aa114a6168",
+      "mechanism_metrics_sha256": "f8fae1dc833b101899b2d8945581234882097cb499dd2560aca0a93d144821e4",
+      "provenance_sha256": "13da82b8955b06879f8c0e27cc64d04bb99e9deac637888811f3b64f61124cc9",
+      "llm_calls_sha256": "064fe06f51ef1bb3b31f6dbe3aa348ce5af0d00c10182b5fc3f931dd2082a28a"
+    },
+    {
+      "model": "packy-glm-5",
+      "seed": 202,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_glm5_v6_thinking_pilot_r1_full_minus_interaction_seed202",
+      "summary_sha256": "67cacb23bb767701a7c76eb717e5f6e397c338b53d2d7302523e4e8261b79d42",
+      "mechanism_metrics_sha256": "d894d9d2a53f5780ed85742862257c15b64dd26a96326b241250334130f4fccc",
+      "provenance_sha256": "3b1c7d9dae0e94f4b3cdccf9c5a8ede5d6a28f0ab1716868793b432c0bd4ea87",
+      "llm_calls_sha256": "412e99eb8697c232dd577dd36412f65561d0b64f727e20ade1d919a65a837485"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 101,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_seed101",
+      "summary_sha256": "2bd6a88b5b0c81c4e8357cf89dcffd4992b0aca77636fe5db354f28ad91e5b23",
+      "mechanism_metrics_sha256": "af3d0871bd2661650fc6db31c5563f238d3264c2006a55afcfc8350e4886054a",
+      "provenance_sha256": "8561fbb358e09906b589371f397ee9b280fea505d69210b51494d248cbfb86b3",
+      "llm_calls_sha256": "ac6c1c568fff4515e1274ad5abe3c7bf542dfed0e56e06a9ca079fbadf622e38"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_memory_seed101",
+      "summary_sha256": "211a76c2d6cf1f831c0faa4985337240e7eaef09935323f8c61fdce16a3f2a91",
+      "mechanism_metrics_sha256": "b92618dd803b221612a9f7cd41727faa3085fec671c33a36a1c78144bf76dfda",
+      "provenance_sha256": "bf6188bbe10a46a9ea1ebfd5d5dfca33b22ff82a0960149ad6c3e220f2bb3595",
+      "llm_calls_sha256": "450f7e0e8aab3d40b564fa0dcde31b21f34180a20c8d4fba9612fd44952519d9"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_feedback_seed101",
+      "summary_sha256": "c8a1cc6e141ee46769229862b8069a3e3edeafdcb6d3940ac90787051ee17007",
+      "mechanism_metrics_sha256": "eed5f8ff1bc4fe83e17e8d3c8ff1959590782c363de88289e1e7a2b392b80bb9",
+      "provenance_sha256": "c9e2bcd1460b3db4945438cdd243be2573f7bebe19b058a0f2859a01206d313b",
+      "llm_calls_sha256": "4d5c7864034b85eaa1ad83ccb33bc3c904d45e61d9f7b3dea8546b1dc3822e15"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_planning_seed101",
+      "summary_sha256": "c3cb06266bc9ddbd7cfa260d36c14d87abe963d298fe36dd85f23dca6e11698a",
+      "mechanism_metrics_sha256": "2d015432f2566653367039137502681ba405088f52ecd23d6531805edf6f1ecf",
+      "provenance_sha256": "d9fdf4d35ec717ccf8c586e1e2c6c9a7b68585ea7da898cbfd1bc5b58925ae0a",
+      "llm_calls_sha256": "65f1c463f13f0fe3a3ab74f6502252c3182cb52e02838cd4cc14c1cd8701f6ab"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_interaction_seed101",
+      "summary_sha256": "497f8041d52d9307133d1477ef86b16ca0fcde07d8b73984b1f516d6c442126a",
+      "mechanism_metrics_sha256": "2f37aa4ab0077cd8357b03a60726f2b8f3353cd6b320a5a9404938ebeaede3bd",
+      "provenance_sha256": "45cb6fa24ccee0442a986b7df6912fb35db88a3b4722214711184f0aaede3c74",
+      "llm_calls_sha256": "a363592836a9827700c54622e8c4b69fca277fe15d3a080d143b38d8c0f26d31"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 202,
+      "condition": "full",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_seed202",
+      "summary_sha256": "bcdb8b379a23201c48bdacff5abaec8d8a08ad0c0f0ba6d12d23759b1a82772c",
+      "mechanism_metrics_sha256": "6878924751d6695ba355cbfae9d3ce6b8d5bd4d5aa26b4b54ad247875f1ed52a",
+      "provenance_sha256": "ea644195cc841426a88f9bbcdade6056997610f531e3375f78eb54a18f87590b",
+      "llm_calls_sha256": "8628f2d28cf94e2663676271b1e1a62dacde1dec3746bffc8b1b3e98c3a7dff3"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 202,
+      "condition": "full_minus_memory",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_memory_seed202",
+      "summary_sha256": "22ce77ca9d3242a9742e5f124455810cccb15b96b5042e1817f2a64e0a315721",
+      "mechanism_metrics_sha256": "f9715779373695637c66e6edf5c7d4907e26b21215dd2039b53e0f524ed6022c",
+      "provenance_sha256": "54aa72962072c638c5163aa0d5901fe3d11ba6e6ac219d1086b2df6aed46f3e6",
+      "llm_calls_sha256": "59ed399fc532569f4f9629f6b530aa66f4085715bac343cf6a01c73fb0508e7b"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 202,
+      "condition": "full_minus_feedback",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_feedback_seed202",
+      "summary_sha256": "0d951457b7a4168f9f8f63745b29aab2b55c7801b038be910b5e5391c7657e64",
+      "mechanism_metrics_sha256": "001d2ecd15490765199f17027430198ca609b47e4292719d5f271f7acb57ef87",
+      "provenance_sha256": "cdce95ee73e8b6e4de24796f5e86aeef87fc26d41c9cc11a3569098de72ffc6b",
+      "llm_calls_sha256": "a0e375f94ac16ad8a0ec86e40a4f7df9478d432fefa24fabd18c228e37e2e7d6"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 202,
+      "condition": "full_minus_planning",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_planning_seed202",
+      "summary_sha256": "b5ee90b5b332d47556c1413534705bee669f18ab601908eb1ab04e6090404d1b",
+      "mechanism_metrics_sha256": "ca58c5cef63f40d9e4fe860533c17639bee2372274fef0479f81fc30a36d772e",
+      "provenance_sha256": "fa9cb4abd9111b674277dae5ca505e1d92d415a36ec61165f06f438869c323f2",
+      "llm_calls_sha256": "8d2ea001e1f87f7d61df70660fc7f6efdd5420c420b1e8492013fdf2795aa896"
+    },
+    {
+      "model": "packy-minimax-m2.7",
+      "seed": 202,
+      "condition": "full_minus_interaction",
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r3_full_minus_interaction_seed202",
+      "summary_sha256": "f4ad75e948f78792278673880b2906505279b30eda62f52edc6548714dc73b92",
+      "mechanism_metrics_sha256": "1e7908fa0be05bcd9e12f31c3d819cae40e32ef58308d6faed3d8fad5d9f47e0",
+      "provenance_sha256": "1fa7548c2db7cb88b7f58fca284925e5c4a073e9ed5a96573cc85e2f0db83f2f",
+      "llm_calls_sha256": "5d451a15bea12c470c0c13ffba5a5d1cb61aefc0423e5017ce4311e80081e983"
+    }
+  ],
+  "technical_exclusions": [
+    {
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_full_seed101",
+      "status": "ABORTED",
+      "reason_code": "BACKEND_UNAVAILABLE",
+      "abort_reason": "declared backend logical decision failed; agent=syn_t023_h0000012_r001, step=1: litellm.UnsupportedParamsError: openai does not support parameters: ['reasoning_effort'], for model=deepseek-v4-flash. To drop these, set `litellm.drop_params=True` or for proxy:\n\n`litellm_settings:\n drop_params: true`\n. \n If you want to use these params dynamically send allowed_openai_params=['reasoning_effort'] in your request.",
+      "summary_sha256": "3d6122835a9fc9d8e176cd93bee098df79ff839434117c23e122f6e9e680dd68",
+      "scientific_pair_used": false
+    },
+    {
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v6_thinking_high_pilot_r1_full_minus_feedback_seed101",
+      "status": "ABORTED",
+      "reason_code": "BACKEND_UNAVAILABLE",
+      "abort_reason": "declared backend logical decision failed; agent=syn_t023_h0000012_r001, step=3: 1 validation error for ResidentDecision\n  Invalid JSON: EOF while parsing a value at line 1 column 0 [type=json_invalid, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid",
+      "summary_sha256": "39ce9b613fd582a29e396b764cfe22f703e78f2c0cbc01d68184312cb6a2139c",
+      "scientific_pair_used": false
+    },
+    {
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r1_full_minus_planning_seed101",
+      "status": "ABORTED",
+      "reason_code": "BACKEND_UNAVAILABLE",
+      "abort_reason": "declared backend logical decision failed; agent=syn_t047_h0000019_r001, step=3: 1 validation error for ResidentDecision\naction\n  Input should be 'stay', 'prepare', 'evacuate', 'seek_help' or 'offer_help' [type=literal_error, input_value='propose', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+      "summary_sha256": "dc119688e0988ae744a9afdfc4c7f45915ec1c14848b7d5d46df629f4d4e186b",
+      "scientific_pair_used": false
+    },
+    {
+      "run_dir": "experiments/carr/runs/carr_s_e3_minimax_m27_v6_thinking_pilot_r2_full_minus_planning_seed101",
+      "status": "ABORTED",
+      "reason_code": "BACKEND_UNAVAILABLE",
+      "abort_reason": "declared backend logical decision failed; agent=syn_t023_h0000012_r001, step=6: 1 validation error for ResidentDecision\naction\n  Input should be 'stay', 'prepare', 'evacuate', 'seek_help' or 'offer_help' [type=literal_error, input_value='propose', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+      "summary_sha256": "3c1ca60e3c4cb9ec02f387c282333fbc7480e1b87f2ed1530f3d36f2f21f7028",
+      "scientific_pair_used": false
+    }
+  ],
+  "interpretation": {
+    "strongest_directional_stability": "memory",
+    "not_yet_cross_model_stable": [
+      "feedback",
+      "planning",
+      "interaction"
+    ],
+    "opportunity_caveat": "MiniMax full runs formed no primary-route plan, so its zero feedback and planning contrasts also reflect absent exposure to the intended adaptation opportunity.",
+    "formal_claim_allowed": false,
+    "next_action": "Increase households per run and predeclare an opportunity-eligible cohort/scenario before formal seed sizing."
+  },
+  "limitations": [
+    "Two seeds and two households per run are insufficient for formal inference.",
+    "All model families were accessed through the same Packy proxy.",
+    "Model-native thinking and structured-output transports differ by endpoint.",
+    "The controlled route obstruction is not a historical Carr closure.",
+    "The cohort is selected for mechanism identification and is not population-representative."
+  ]
+}

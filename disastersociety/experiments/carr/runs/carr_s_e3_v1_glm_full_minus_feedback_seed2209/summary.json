@@ -1,0 +1,71 @@
+{
+  "run_seed": 2209,
+  "planned_steps": 10,
+  "completed_steps": 10,
+  "last_completed_step": 10,
+  "status": "VALID",
+  "world_final": {
+    "step": 10,
+    "hazard_distance_m": 0.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "departure scheduled for a future step": 5,
+      "dependent member would be left behind": 6,
+      "route closed": 53,
+      "vehicle allocated to syn_t011_h0000001_r001": 1,
+      "vehicle allocated to syn_t011_h0000001_r003": 4,
+      "vehicle allocated to syn_t017_h0000005_r001": 3,
+      "vehicle allocated to syn_t023_h0000012_r001": 2,
+      "vehicle allocated to syn_t023_h0000012_r002": 3,
+      "vehicle allocated to syn_t026_h0000006_r001": 3,
+      "vehicle allocated to syn_t026_h0000006_r002": 2,
+      "vehicle allocated to syn_t028_h0000006_r001": 4,
+      "vehicle allocated to syn_t028_h0000006_r002": 1,
+      "vehicle allocated to syn_t029_h0000014_r001": 2,
+      "vehicle allocated to syn_t029_h0000014_r003": 3,
+      "vehicle allocated to syn_t035_h0000011_r001": 3,
+      "vehicle allocated to syn_t035_h0000011_r004": 1,
+      "vehicle allocated to syn_t046_h0000009_r001": 3,
+      "vehicle allocated to syn_t046_h0000009_r003": 2
+    },
+    "route_closures": [
+      {
+        "step": 4,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_v1_glm_full_minus_feedback_seed2209",
+    "spent": 0.425926,
+    "n_ok": 160,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 168146,
+    "live_completion_tokens": 44817,
+    "logical_prompt_tokens": 168146,
+    "logical_completion_tokens": 44817
+  },
+  "wall_clock_seconds": 1027.344086
+}

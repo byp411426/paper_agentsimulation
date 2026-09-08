@@ -1,0 +1,52 @@
+{
+  "run_seed": 4201,
+  "planned_steps": 25,
+  "completed_steps": 25,
+  "last_completed_step": 25,
+  "status": "VALID",
+  "world_final": {
+    "step": 25,
+    "route_state": {
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -225.6852486134335,
+      "syn_t001_h0000002": -115.53710438277653,
+      "syn_t001_h0000003": 59.95137769490242,
+      "syn_t001_h0000004": 72.03792699319513,
+      "syn_t001_h0000005": 22.278777846823687,
+      "syn_t001_h0000006": 22.851923271162605
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "('home', 'syn_t001_h0000001')",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000003_r001": "('home', 'syn_t001_h0000003')",
+      "syn_t001_h0000004_r001": "controlled_safe_zone",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000006_r001": "controlled_safe_zone"
+    }
+  },
+  "gateway": {
+    "run_id": "carr_s_e1_v2_preflight",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 86,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 0,
+    "live_completion_tokens": 0,
+    "logical_prompt_tokens": 113563,
+    "logical_completion_tokens": 270848
+  },
+  "wall_clock_seconds": 0.009393
+}

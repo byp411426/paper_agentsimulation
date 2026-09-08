@@ -1,0 +1,34 @@
+{
+  "protocol_id": "carr_s_resident_adapter_reconstruction",
+  "amendment_id": "carr_py_gateway_refreeze_20260815",
+  "frozen_at": "2026-08-15",
+  "status": "FROZEN_REFREEZE_COMPLETED",
+  "basis": "Closes the pending item of carr_py_reconstruction_20260804: 'a formal re-freeze of the resident-adapter hash is required before the frozen-hash guard can pass'.",
+  "resident_adapter": {
+    "path": "ds/agents/carr.py",
+    "original_frozen_sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+    "reconstructed_sha256": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4",
+    "reference_going_forward": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4",
+    "usage": {
+      "original": "E2 v8 r7 60 cells; E3 v1 lanes qwen/glm/gpt54mini/qwen27b and part of gemma4 (55 cells)",
+      "reconstructed": "E3 v1 lanes deepseek/qwen36 and part of gemma4 (29 cells); E3a 24 cells; E3c scale-100 2 runs; current working copy"
+    },
+    "difference": "Two one-line docstrings whose exact wording was unrecoverable; method-line layout re-verified 2026-08-15 (MechanismFlags now at line 24 vs 23, all other anchors identical: CarrResident:45, __init__:48, initialize_route_observation:96, initialize_controlled_plan:106, record_emitted_message:134, should_wake:148, decide:163, rule_fallback:187, commit_execution:193, snapshot:276, _route_observation:302, _carr_messages:330).",
+    "reverification_20260815": "tests/test_carr_pilot.py, test_carr_e1_v2.py, test_carr_interaction_v2.py, test_carr_routes.py: 39 passed, 1 failed; the single failure is test_v8_formal_protocol_is_frozen_real_backend_and_test_sealed, the byte-identity guard itself, exactly as predicted by carr_py_reconstruction_20260804."
+  },
+  "gateway": {
+    "path": "ds/llm/gateway.py",
+    "e2_v8_frozen_sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d",
+    "current_sha256": "132b787e400d515c0c3f857c5d4a21a9b87d9743d24f8364935e9e7c57ae70c0",
+    "reference_going_forward": "132b787e400d515c0c3f857c5d4a21a9b87d9743d24f8364935e9e7c57ae70c0",
+    "usage": {
+      "e2_v8_frozen": "E2 v8 r7 60 cells; E3 v1 lanes qwen/glm and part of gpt54mini (26 cells)",
+      "current": "E3 v1 lanes deepseek/qwen27b/qwen36, part of gpt54mini, all gemma4 (58 cells); E3a 24 cells; E3c scale-100 2 runs"
+    },
+    "difference_assessment": "Transport/parsing hardening only, accumulated as uncommitted edits during 2026-08-03/04 E3 operations: markdown-fence stripping before schema validation, per-model configurable request_timeout_seconds and max_attempts, repair prompt echoes the exact JSON schema, abort_on_call_failure flag, additional per-call logging fields (response_model, finish_reason, reasoning_chars). No decision-content logic changed; the gateway does not author decisions.",
+    "verification": "Diff of git commit ec2d069 against the current working copy shows only the changes listed above (78 diff lines, all in transport/parsing)."
+  },
+  "science_unchanged": true,
+  "claim_boundary": "This re-freeze records provenance references for already-completed runs; it does not alter any experimental number, and the E3 v1 matrix remains a same-proxy model-family sensitivity study, not provider-independence evidence.",
+  "evidence_label": "ENGINEERING_REFREEZE"
+}

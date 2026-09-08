@@ -1,0 +1,8 @@
+{"step": 6, "type": "warning_broadcast", "count": 1, "text": "Mandatory evacuation order issued for all resident..."}
+{"step": 6, "type": "evacuation", "agent_id": "hh_0"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_1"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_2"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_3"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_4"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_5"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_6"}

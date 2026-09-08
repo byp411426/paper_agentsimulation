@@ -1,0 +1,61 @@
+# Cross-model registry for the bounded Carr-S E3 robustness pilot.
+#
+# The three endpoints share a proxy credential that is deliberately separate
+# from the DeepSeek credential. Proxy billing has not been independently
+# verified, so prices below are conservative internal budget guards only.
+models:
+  packy-qwen3.5-plus:
+    backend: litellm
+    model_id: openai/qwen3.5-plus
+    base_url: https://www.packyapi.com/v1
+    api_key_env: PACKY_CROSS_MODEL_API_KEY
+    input_per_m: 2.0
+    output_per_m: 2.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    call_kwargs:
+      max_tokens: 16384
+      max_retries: 0
+      extra_body:
+        enable_thinking: true
+        thinking_budget: 8192
+    request_timeout_seconds: 240
+    max_attempts: 1
+    provider_seed_max: 2147483647
+
+  packy-minimax-m2.7:
+    backend: litellm
+    model_id: openai/MiniMax-M2.7
+    base_url: https://www.packyapi.com/v1
+    api_key_env: PACKY_CROSS_MODEL_API_KEY
+    input_per_m: 2.0
+    output_per_m: 2.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    call_kwargs:
+      max_completion_tokens: 16384
+      max_retries: 0
+      reasoning_split: true
+      structured_output_mode: tool
+      # M2.7's official OpenAI-compatible schema does not declare JSON mode.
+      # The prompt and local Pydantic validator enforce structured output.
+      response_format: null
+    request_timeout_seconds: 240
+    max_attempts: 1
+    provider_seed_max: 2147483647
+
+  packy-glm-5:
+    backend: litellm
+    model_id: openai/glm-5
+    base_url: https://www.packyapi.com/v1
+    api_key_env: PACKY_CROSS_MODEL_API_KEY
+    input_per_m: 2.0
+    output_per_m: 2.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    call_kwargs:
+      max_tokens: 16384
+      max_retries: 0
+      extra_body:
+        thinking:
+          type: enabled
+    request_timeout_seconds: 240
+    max_attempts: 1
+    provider_seed_max: 2147483647

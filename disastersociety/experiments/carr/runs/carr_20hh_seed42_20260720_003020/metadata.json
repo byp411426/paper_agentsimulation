@@ -1,0 +1,10 @@
+{
+  "run_id": "carr_20hh_seed42_20260720_003020",
+  "eventpack": "carr_2018",
+  "n_agents": 20,
+  "max_step": 24,
+  "seed": 42,
+  "model": "deepseek-v4-flash",
+  "budget_usd": 2.0,
+  "timestamp": "2026-07-20T00:30:58.820757"
+}

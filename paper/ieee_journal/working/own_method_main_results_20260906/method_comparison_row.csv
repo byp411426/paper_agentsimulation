@@ -1,0 +1,2 @@
+method,households_per_run,decision_residents_per_run,existing_complete_runs,input_source_violation_rate,input_denominator,commitment_record_precision,commitment_record_recall,reference_commitment_events,world_conflict_step_rate,world_step_denominator,scope
+DisasterSociety,24,31,3,0.0,659,1.0,1.0,12,0.0,75,retrospective structured record consistency; not human realism

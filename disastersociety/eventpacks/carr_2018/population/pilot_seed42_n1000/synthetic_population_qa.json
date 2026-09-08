@@ -1,0 +1,2236 @@
+{
+  "n_households": 1000,
+  "n_persons": 2345,
+  "n_tracts": 48,
+  "tracts": {
+    "14000US06089010100": {
+      "n_households": 10,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 3.974045625909639e-08,
+      "fractional_errors": {
+        "household_income": 3.974045625909639e-08,
+        "vehicle_count": 2.4388006281128582e-08,
+        "household_structure": 2.0309562920317603e-09,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.5784447476125512,
+        "vehicle_count": 2.315143246930423,
+        "household_structure": 2.0995907230559343,
+        "household_older_adult_presence": 1.2442019099590729
+      },
+      "fractional_weight_ess": 323.31946048932707,
+      "unique_donors": 10,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010200": {
+      "n_households": 16,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 4.514725970850009e-08,
+      "fractional_errors": {
+        "household_income": 2.917753283426805e-08,
+        "vehicle_count": 4.514725970850009e-08,
+        "household_structure": 3.2941560590415975e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.1466666666666665,
+        "vehicle_count": 1.1351111111111107,
+        "household_structure": 1.6880000000000002,
+        "household_older_adult_presence": 0.9697777777777787
+      },
+      "fractional_weight_ess": 1027.4536712008096,
+      "unique_donors": 16,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010300": {
+      "n_households": 22,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 4.974392986412113e-08,
+      "fractional_errors": {
+        "household_income": 1.4038979312402944e-08,
+        "vehicle_count": 4.974392986412113e-08,
+        "household_structure": 2.080722261155188e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.7506527415143602,
+        "vehicle_count": 1.1044386422976498,
+        "household_structure": 3.5574412532637076,
+        "household_older_adult_presence": 1.5913838120104442
+      },
+      "fractional_weight_ess": 1947.6930437951914,
+      "unique_donors": 22,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010400": {
+      "n_households": 23,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 4.0383192345672114e-08,
+      "fractional_errors": {
+        "household_income": 4.0383192345672114e-08,
+        "vehicle_count": 2.6764816141167103e-08,
+        "household_structure": 2.2742341343473527e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.814285714285714,
+        "vehicle_count": 1.8000000000000003,
+        "household_structure": 0.7857142857142856,
+        "household_older_adult_presence": 1.4857142857142858
+      },
+      "fractional_weight_ess": 1591.8107706720082,
+      "unique_donors": 23,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010500": {
+      "n_households": 30,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 9.404143064273285e-08,
+      "fractional_errors": {
+        "household_income": 9.404143064273285e-08,
+        "vehicle_count": 5.314525886035426e-08,
+        "household_structure": 2.11258566196193e-10,
+        "household_older_adult_presence": 3.552713678800501e-15
+      },
+      "integerized_errors": {
+        "household_income": 3.664335664335664,
+        "vehicle_count": 2.6223776223776216,
+        "household_structure": 1.8181818181818183,
+        "household_older_adult_presence": 1.9860139860139867
+      },
+      "fractional_weight_ess": 1197.541911564761,
+      "unique_donors": 30,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010601": {
+      "n_households": 14,
+      "ipf_converged": true,
+      "ipf_iterations": 11,
+      "fractional_max_abs_error": 4.8783123762774494e-08,
+      "fractional_errors": {
+        "household_income": 1.4790531466246648e-08,
+        "vehicle_count": 4.8783123762774494e-08,
+        "household_structure": 3.5061198389030324e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 1.5949367088607596,
+        "vehicle_count": 2.5168776371308015,
+        "household_structure": 0.759493670886076,
+        "household_older_adult_presence": 2.2109704641350216
+      },
+      "fractional_weight_ess": 1507.417941823246,
+      "unique_donors": 14,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010602": {
+      "n_households": 34,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 9.767990860609643e-08,
+      "fractional_errors": {
+        "household_income": 3.112674740179955e-08,
+        "vehicle_count": 9.767990860609643e-08,
+        "household_structure": 4.036859735379039e-10,
+        "household_older_adult_presence": 3.552713678800501e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.260008254230293,
+        "vehicle_count": 3.2934378869170438,
+        "household_structure": 3.845233182005778,
+        "household_older_adult_presence": 2.6392901361948002
+      },
+      "fractional_weight_ess": 1319.5614972075784,
+      "unique_donors": 34,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010603": {
+      "n_households": 8,
+      "ipf_converged": true,
+      "ipf_iterations": 17,
+      "fractional_max_abs_error": 4.2284668877456966e-08,
+      "fractional_errors": {
+        "household_income": 3.9530303475032724e-08,
+        "vehicle_count": 4.2284668877456966e-08,
+        "household_structure": 1.5987211554602254e-11,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.7031802120141344,
+        "vehicle_count": 1.8798586572438163,
+        "household_structure": 1.968197879858657,
+        "household_older_adult_presence": 0.4063604240282688
+      },
+      "fractional_weight_ess": 1674.6166610879136,
+      "unique_donors": 8,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010702": {
+      "n_households": 22,
+      "ipf_converged": true,
+      "ipf_iterations": 20,
+      "fractional_max_abs_error": 3.5797707909068777e-08,
+      "fractional_errors": {
+        "household_income": 2.7258256540818593e-08,
+        "vehicle_count": 3.5797707909068777e-08,
+        "household_structure": 3.2682367923086986e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.0,
+        "vehicle_count": 1.3216783216783217,
+        "household_structure": 2.5524475524475516,
+        "household_older_adult_presence": 0.3636363636363633
+      },
+      "fractional_weight_ess": 1191.179502462828,
+      "unique_donors": 22,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010703": {
+      "n_households": 24,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 9.139646306444149e-08,
+      "fractional_errors": {
+        "household_income": 9.139646306444149e-08,
+        "vehicle_count": 5.420774940034789e-08,
+        "household_structure": 2.6541719932993146e-09,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.4865350089766607,
+        "vehicle_count": 4.328545780969479,
+        "household_structure": 5.834829443447038,
+        "household_older_adult_presence": 2.569120287253142
+      },
+      "fractional_weight_ess": 909.3636757538117,
+      "unique_donors": 24,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010704": {
+      "n_households": 26,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 4.829903232916877e-08,
+      "fractional_errors": {
+        "household_income": 3.5696505307214466e-08,
+        "vehicle_count": 4.829903232916877e-08,
+        "household_structure": 1.1433303193086886e-09,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.8934203371397498,
+        "vehicle_count": 3.848830886351278,
+        "household_structure": 1.435562805872757,
+        "household_older_adult_presence": 1.0560087003806427
+      },
+      "fractional_weight_ess": 1211.9564250788312,
+      "unique_donors": 26,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010803": {
+      "n_households": 33,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 5.218500831460915e-08,
+      "fractional_errors": {
+        "household_income": 4.4247316921541824e-08,
+        "vehicle_count": 5.218500831460915e-08,
+        "household_structure": 4.3075232269984554e-10,
+        "household_older_adult_presence": 3.552713678800501e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.0963282937365006,
+        "vehicle_count": 3.7209503239740833,
+        "household_structure": 4.058315334773218,
+        "household_older_adult_presence": 2.049676025917927
+      },
+      "fractional_weight_ess": 1268.235907287409,
+      "unique_donors": 33,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010804": {
+      "n_households": 12,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 6.751074543842606e-08,
+      "fractional_errors": {
+        "household_income": 2.00149419260498e-08,
+        "vehicle_count": 6.751074543842606e-08,
+        "household_structure": 8.767508941076585e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 2.4794520547945207,
+        "vehicle_count": 1.178082191780822,
+        "household_structure": 1.1780821917808222,
+        "household_older_adult_presence": 0.4520547945205484
+      },
+      "fractional_weight_ess": 1831.0274501428614,
+      "unique_donors": 12,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010805": {
+      "n_households": 27,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 8.631451864360429e-08,
+      "fractional_errors": {
+        "household_income": 8.631451864360429e-08,
+        "vehicle_count": 7.477962515878289e-08,
+        "household_structure": 1.5520598140028596e-09,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 3.9208709506107273,
+        "vehicle_count": 3.0276155071694104,
+        "household_structure": 1.5618693574083906,
+        "household_older_adult_presence": 0.09559214020180562
+      },
+      "fractional_weight_ess": 2063.314381551716,
+      "unique_donors": 27,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010806": {
+      "n_households": 20,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 4.4827089151766586e-08,
+      "fractional_errors": {
+        "household_income": 4.4827089151766586e-08,
+        "vehicle_count": 2.728284975717088e-08,
+        "household_structure": 3.580531426905509e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.0985010706638114,
+        "vehicle_count": 1.5160599571734474,
+        "household_structure": 5.851534618129907,
+        "household_older_adult_presence": 2.404710920770878
+      },
+      "fractional_weight_ess": 1196.4255981876736,
+      "unique_donors": 20,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010807": {
+      "n_households": 24,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 8.424936837059249e-08,
+      "fractional_errors": {
+        "household_income": 4.8338846259099455e-08,
+        "vehicle_count": 8.424936837059249e-08,
+        "household_structure": 1.2084733214123844e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.0129183793305927,
+        "vehicle_count": 2.716382853787434,
+        "household_structure": 1.0833822665883734,
+        "household_older_adult_presence": 0.7950675278919555
+      },
+      "fractional_weight_ess": 1636.8451468952294,
+      "unique_donors": 24,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089010900": {
+      "n_households": 24,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 9.465884653891976e-08,
+      "fractional_errors": {
+        "household_income": 9.465884653891976e-08,
+        "vehicle_count": 2.387224107280872e-08,
+        "household_structure": 9.908740494779522e-11,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.733880422039859,
+        "vehicle_count": 2.386869871043377,
+        "household_structure": 3.0187573270808907,
+        "household_older_adult_presence": 2.82063305978898
+      },
+      "fractional_weight_ess": 1443.6681594130316,
+      "unique_donors": 24,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011001": {
+      "n_households": 9,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 8.615986857307689e-08,
+      "fractional_errors": {
+        "household_income": 8.615986857307689e-08,
+        "vehicle_count": 2.4655889663272035e-08,
+        "household_structure": 1.1826052359609207e-09,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.1870047543581617,
+        "vehicle_count": 1.275752773375594,
+        "household_structure": 0.7099841521394605,
+        "household_older_adult_presence": 0.30903328050713164
+      },
+      "fractional_weight_ess": 1522.666252575867,
+      "unique_donors": 9,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011002": {
+      "n_households": 29,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 3.8305524086013065e-08,
+      "fractional_errors": {
+        "household_income": 3.8305524086013065e-08,
+        "vehicle_count": 3.7414871201235655e-08,
+        "household_structure": 1.5507595207964187e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.268446601941748,
+        "vehicle_count": 1.3936893203883494,
+        "household_structure": 3.454368932038835,
+        "household_older_adult_presence": 0.8956310679611654
+      },
+      "fractional_weight_ess": 2055.3380047577566,
+      "unique_donors": 29,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011100": {
+      "n_households": 17,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 3.343822418955256e-08,
+      "fractional_errors": {
+        "household_income": 3.243779689299231e-09,
+        "vehicle_count": 3.343822418955256e-08,
+        "household_structure": 9.889511431993014e-11,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 1.302479338842975,
+        "vehicle_count": 2.0380165289256196,
+        "household_structure": 0.8859504132231404,
+        "household_older_adult_presence": 1.0148760330578526
+      },
+      "fractional_weight_ess": 1554.4189505420636,
+      "unique_donors": 17,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011209": {
+      "n_households": 31,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 6.367260851902756e-08,
+      "fractional_errors": {
+        "household_income": 6.066110591618212e-08,
+        "vehicle_count": 6.367260851902756e-08,
+        "household_structure": 5.01843899769483e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 2.6193755739210287,
+        "vehicle_count": 1.0358126721763086,
+        "household_structure": 1.576216712580349,
+        "household_older_adult_presence": 0.2768595041322328
+      },
+      "fractional_weight_ess": 1308.5789873510157,
+      "unique_donors": 31,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011300": {
+      "n_households": 26,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 6.68378010715287e-08,
+      "fractional_errors": {
+        "household_income": 3.3847001423836787e-08,
+        "vehicle_count": 6.68378010715287e-08,
+        "household_structure": 1.3700329759558372e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 4.971551261406335,
+        "vehicle_count": 2.876006441223833,
+        "household_structure": 3.698872785829307,
+        "household_older_adult_presence": 1.2801932367149753
+      },
+      "fractional_weight_ess": 1489.1832546329338,
+      "unique_donors": 26,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011401": {
+      "n_households": 21,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 5.635041411267139e-08,
+      "fractional_errors": {
+        "household_income": 2.1274844108631896e-08,
+        "vehicle_count": 5.635041411267139e-08,
+        "household_structure": 1.5062973091062304e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 5.019986675549633,
+        "vehicle_count": 4.906728847435043,
+        "household_structure": 2.3930712858094605,
+        "household_older_adult_presence": 0.30512991339107387
+      },
+      "fractional_weight_ess": 1700.1519470732944,
+      "unique_donors": 21,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011402": {
+      "n_households": 16,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 2.7542578884265367e-08,
+      "fractional_errors": {
+        "household_income": 6.799490304132405e-09,
+        "vehicle_count": 2.7542578884265367e-08,
+        "household_structure": 2.1072377176523105e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 1.8748913987836664,
+        "vehicle_count": 3.341442224152911,
+        "household_structure": 1.109470026064292,
+        "household_older_adult_presence": 2.8097306689834927
+      },
+      "fractional_weight_ess": 1550.7092212183175,
+      "unique_donors": 16,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011403": {
+      "n_households": 15,
+      "ipf_converged": true,
+      "ipf_iterations": 12,
+      "fractional_max_abs_error": 5.140494163669018e-08,
+      "fractional_errors": {
+        "household_income": 1.1763437335332583e-08,
+        "vehicle_count": 5.140494163669018e-08,
+        "household_structure": 3.372691015357532e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.9517502365184485,
+        "vehicle_count": 1.221381267738884,
+        "household_structure": 1.1428571428571428,
+        "household_older_adult_presence": 1.6007568590350054
+      },
+      "fractional_weight_ess": 1730.0487708653307,
+      "unique_donors": 15,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011500": {
+      "n_households": 31,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 8.03883555278162e-08,
+      "fractional_errors": {
+        "household_income": 3.235531398360081e-08,
+        "vehicle_count": 8.03883555278162e-08,
+        "household_structure": 3.923261715499393e-11,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.7320772058823533,
+        "vehicle_count": 2.6925551470588234,
+        "household_structure": 4.930606617647058,
+        "household_older_adult_presence": 1.177849264705884
+      },
+      "fractional_weight_ess": 1658.1123843356704,
+      "unique_donors": 31,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011600": {
+      "n_households": 21,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 9.454067662062471e-08,
+      "fractional_errors": {
+        "household_income": 9.454067662062471e-08,
+        "vehicle_count": 6.266562646572993e-08,
+        "household_structure": 9.638991826932397e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.6804123711340204,
+        "vehicle_count": 2.830927835051545,
+        "household_structure": 3.5051546391752577,
+        "household_older_adult_presence": 0.758762886597939
+      },
+      "fractional_weight_ess": 1717.528610394611,
+      "unique_donors": 21,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011701": {
+      "n_households": 12,
+      "ipf_converged": true,
+      "ipf_iterations": 12,
+      "fractional_max_abs_error": 7.255961820273882e-08,
+      "fractional_errors": {
+        "household_income": 7.255961820273882e-08,
+        "vehicle_count": 1.568458163347941e-08,
+        "household_structure": 5.722279317055268e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.1852286049237983,
+        "vehicle_count": 1.8980070339976556,
+        "household_structure": 3.780773739742087,
+        "household_older_adult_presence": 0.9249706916764362
+      },
+      "fractional_weight_ess": 1718.6924338725285,
+      "unique_donors": 12,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011702": {
+      "n_households": 18,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 3.184733587957567e-08,
+      "fractional_errors": {
+        "household_income": 3.184733587957567e-08,
+        "vehicle_count": 2.3014952610367345e-08,
+        "household_structure": 1.2961276496525898e-09,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.2415384615384615,
+        "vehicle_count": 1.7661538461538457,
+        "household_structure": 1.5138461538461536,
+        "household_older_adult_presence": 0.8076923076923084
+      },
+      "fractional_weight_ess": 1129.8777068638722,
+      "unique_donors": 18,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011703": {
+      "n_households": 17,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 4.9319718975482374e-08,
+      "fractional_errors": {
+        "household_income": 4.9319718975482374e-08,
+        "vehicle_count": 4.1586496912771054e-08,
+        "household_structure": 1.5660717167520488e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 1.3109105824446268,
+        "vehicle_count": 1.5110746513535682,
+        "household_structure": 1.5594749794913865,
+        "household_older_adult_presence": 3.3552091878589003
+      },
+      "fractional_weight_ess": 1674.375295687202,
+      "unique_donors": 17,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011801": {
+      "n_households": 13,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 8.232184056655711e-08,
+      "fractional_errors": {
+        "household_income": 8.232184056655711e-08,
+        "vehicle_count": 9.982516591122703e-09,
+        "household_structure": 8.540030904669038e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 1.8336980306345734,
+        "vehicle_count": 1.4660831509846828,
+        "household_structure": 2.089715536105033,
+        "household_older_adult_presence": 0.9496717724288839
+      },
+      "fractional_weight_ess": 1981.6170586350595,
+      "unique_donors": 13,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011802": {
+      "n_households": 14,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 5.8024246851751116e-08,
+      "fractional_errors": {
+        "household_income": 5.8024246851751116e-08,
+        "vehicle_count": 2.9352653641012694e-08,
+        "household_structure": 8.431590980961801e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.995837669094693,
+        "vehicle_count": 2.707596253902185,
+        "household_structure": 2.1716961498439122,
+        "household_older_adult_presence": 0.3902185223725292
+      },
+      "fractional_weight_ess": 1510.631081321216,
+      "unique_donors": 14,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011803": {
+      "n_households": 15,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 3.4384559199907017e-08,
+      "fractional_errors": {
+        "household_income": 5.148589776737822e-09,
+        "vehicle_count": 3.4384559199907017e-08,
+        "household_structure": 8.72706351628949e-11,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.8753514526710404,
+        "vehicle_count": 2.1471415182755385,
+        "household_structure": 1.4339268978444235,
+        "household_older_adult_presence": 0.1152764761012186
+      },
+      "fractional_weight_ess": 1874.8704559348937,
+      "unique_donors": 15,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089011900": {
+      "n_households": 24,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 6.384204631615376e-08,
+      "fractional_errors": {
+        "household_income": 2.457872927408289e-08,
+        "vehicle_count": 6.384204631615376e-08,
+        "household_structure": 6.782303607621998e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 3.7789661319073082,
+        "vehicle_count": 3.3921568627450975,
+        "household_structure": 2.019607843137255,
+        "household_older_adult_presence": 4.602495543672015
+      },
+      "fractional_weight_ess": 1723.2587470225544,
+      "unique_donors": 24,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012000": {
+      "n_households": 25,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 7.708765359382141e-08,
+      "fractional_errors": {
+        "household_income": 7.708765359382141e-08,
+        "vehicle_count": 8.384210659073688e-09,
+        "household_structure": 3.065006026758965e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.7899774774774775,
+        "vehicle_count": 2.0540540540540544,
+        "household_structure": 1.8823198198198199,
+        "household_older_adult_presence": 2.4048423423423424
+      },
+      "fractional_weight_ess": 1087.892056405251,
+      "unique_donors": 25,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012101": {
+      "n_households": 25,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 4.8884354342249026e-08,
+      "fractional_errors": {
+        "household_income": 7.1797794376493584e-09,
+        "vehicle_count": 4.8884354342249026e-08,
+        "household_structure": 8.375877769140061e-11,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 3.7300683371298406,
+        "vehicle_count": 2.8667425968109335,
+        "household_structure": 0.8929384965831435,
+        "household_older_adult_presence": 0.36047835990888544
+      },
+      "fractional_weight_ess": 1741.446039694705,
+      "unique_donors": 25,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012102": {
+      "n_households": 13,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 4.799174102565473e-08,
+      "fractional_errors": {
+        "household_income": 4.799174102565473e-08,
+        "vehicle_count": 7.555747139065261e-09,
+        "household_structure": 1.0908784986440878e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.417693169092945,
+        "vehicle_count": 1.3113101903695408,
+        "household_structure": 1.284434490481523,
+        "household_older_adult_presence": 0.9148936170212769
+      },
+      "fractional_weight_ess": 1150.7723049303402,
+      "unique_donors": 13,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012200": {
+      "n_households": 31,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 7.793561307423147e-08,
+      "fractional_errors": {
+        "household_income": 7.793561307423147e-08,
+        "vehicle_count": 3.1869703320808185e-08,
+        "household_structure": 4.86951812206371e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.5269016697588125,
+        "vehicle_count": 1.174860853432282,
+        "household_structure": 5.218923933209647,
+        "household_older_adult_presence": 0.2722634508348811
+      },
+      "fractional_weight_ess": 1851.0080191898692,
+      "unique_donors": 31,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012301": {
+      "n_households": 16,
+      "ipf_converged": true,
+      "ipf_iterations": 13,
+      "fractional_max_abs_error": 7.698590676064043e-08,
+      "fractional_errors": {
+        "household_income": 7.698590676064043e-08,
+        "vehicle_count": 7.610391605794575e-08,
+        "household_structure": 2.6063595726100175e-10,
+        "household_older_adult_presence": 1.7763568394002505e-15
+      },
+      "integerized_errors": {
+        "household_income": 2.4171122994652405,
+        "vehicle_count": 2.5793226381461682,
+        "household_structure": 1.4153297682709445,
+        "household_older_adult_presence": 1.7664884135472372
+      },
+      "fractional_weight_ess": 1209.5394490856786,
+      "unique_donors": 16,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012302": {
+      "n_households": 29,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 8.769080750425928e-08,
+      "fractional_errors": {
+        "household_income": 1.125048365580028e-08,
+        "vehicle_count": 8.769080750425928e-08,
+        "household_structure": 6.061462443085475e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.975763451284537,
+        "vehicle_count": 2.682985942801745,
+        "household_structure": 2.199224430441105,
+        "household_older_adult_presence": 0.9646146388754246
+      },
+      "fractional_weight_ess": 1469.5797294401243,
+      "unique_donors": 29,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012303": {
+      "n_households": 22,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 5.650358492204077e-08,
+      "fractional_errors": {
+        "household_income": 5.308890527189192e-08,
+        "vehicle_count": 5.650358492204077e-08,
+        "household_structure": 7.272942248448544e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.5168539325842696,
+        "vehicle_count": 4.8697951090548575,
+        "household_structure": 1.4282881692002647,
+        "household_older_adult_presence": 0.7065432914738929
+      },
+      "fractional_weight_ess": 2025.0194089245633,
+      "unique_donors": 22,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012400": {
+      "n_households": 22,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 8.454079369890621e-08,
+      "fractional_errors": {
+        "household_income": 8.454079369890621e-08,
+        "vehicle_count": 6.956520248735387e-08,
+        "household_structure": 7.790568190557678e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.9035598705501617,
+        "vehicle_count": 4.627831715210356,
+        "household_structure": 4.673139158576053,
+        "household_older_adult_presence": 3.0705501618122977
+      },
+      "fractional_weight_ess": 2032.9116807698283,
+      "unique_donors": 22,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012500": {
+      "n_households": 10,
+      "ipf_converged": true,
+      "ipf_iterations": 17,
+      "fractional_max_abs_error": 4.15644030304918e-08,
+      "fractional_errors": {
+        "household_income": 4.15644030304918e-08,
+        "vehicle_count": 2.7888797493602624e-08,
+        "household_structure": 2.2852297831832402e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.814504881450488,
+        "vehicle_count": 2.514644351464435,
+        "household_structure": 1.99581589958159,
+        "household_older_adult_presence": 0.7461645746164578
+      },
+      "fractional_weight_ess": 1827.7987185615157,
+      "unique_donors": 10,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012601": {
+      "n_households": 28,
+      "ipf_converged": true,
+      "ipf_iterations": 17,
+      "fractional_max_abs_error": 3.429136263832788e-08,
+      "fractional_errors": {
+        "household_income": 5.444316109048941e-09,
+        "vehicle_count": 3.429136263832788e-08,
+        "household_structure": 1.1731060567399254e-11,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.9045226130653266,
+        "vehicle_count": 3.7266331658291456,
+        "household_structure": 2.0542713567839215,
+        "household_older_adult_presence": 0.011055276381910062
+      },
+      "fractional_weight_ess": 2137.2243593264056,
+      "unique_donors": 28,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012603": {
+      "n_households": 25,
+      "ipf_converged": true,
+      "ipf_iterations": 14,
+      "fractional_max_abs_error": 9.581521709378649e-08,
+      "fractional_errors": {
+        "household_income": 3.5046535451499494e-08,
+        "vehicle_count": 9.581521709378649e-08,
+        "household_structure": 6.680220820953764e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 1.7707261292166954,
+        "vehicle_count": 2.4391080617495717,
+        "household_structure": 1.3344768439108066,
+        "household_older_adult_presence": 0.9216695254431109
+      },
+      "fractional_weight_ess": 1876.4819520196975,
+      "unique_donors": 25,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012604": {
+      "n_households": 14,
+      "ipf_converged": true,
+      "ipf_iterations": 16,
+      "fractional_max_abs_error": 6.316164347097697e-08,
+      "fractional_errors": {
+        "household_income": 2.5343318776904766e-08,
+        "vehicle_count": 6.316164347097697e-08,
+        "household_structure": 3.9241321303506993e-10,
+        "household_older_adult_presence": 8.881784197001252e-16
+      },
+      "integerized_errors": {
+        "household_income": 1.7165437302423603,
+        "vehicle_count": 1.4836670179135933,
+        "household_structure": 1.2023182297154893,
+        "household_older_adult_presence": 0.8777660695468912
+      },
+      "fractional_weight_ess": 1697.024654384629,
+      "unique_donors": 14,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012701": {
+      "n_households": 26,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 6.310723854596745e-08,
+      "fractional_errors": {
+        "household_income": 1.3590808922714359e-08,
+        "vehicle_count": 6.310723854596745e-08,
+        "household_structure": 2.1300650132616283e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.20342730790492,
+        "vehicle_count": 3.9303482587064678,
+        "household_structure": 4.389165284687673,
+        "household_older_adult_presence": 0.01160862354892167
+      },
+      "fractional_weight_ess": 1769.2335812953063,
+      "unique_donors": 26,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    },
+    "14000US06089012702": {
+      "n_households": 16,
+      "ipf_converged": true,
+      "ipf_iterations": 15,
+      "fractional_max_abs_error": 4.5344555665849384e-08,
+      "fractional_errors": {
+        "household_income": 5.866297225765038e-09,
+        "vehicle_count": 4.5344555665849384e-08,
+        "household_structure": 1.446132102955744e-10,
+        "household_older_adult_presence": 0.0
+      },
+      "integerized_errors": {
+        "household_income": 2.3206865401987353,
+        "vehicle_count": 2.345076784101174,
+        "household_structure": 0.6079494128274616,
+        "household_older_adult_presence": 4.614272809394761
+      },
+      "fractional_weight_ess": 1505.3451095595456,
+      "unique_donors": 16,
+      "repeated_donor_fraction": 0.0,
+      "max_donor_copies": 1,
+      "integerization_method": "truncate_replicate_sample"
+    }
+  },
+  "fitted_household_attributes": [
+    "household_income",
+    "vehicle_count",
+    "household_structure",
+    "household_older_adult_presence"
+  ],
+  "person_level_fit": false,
+  "person_age_diagnostic": {
+    "used_in_fit": false,
+    "tracts": {
+      "14000US06089010100": {
+        "n_persons": 13,
+        "observed_share": {
+          "0_17": 0.0,
+          "18_34": 0.0,
+          "35_64": 0.6153846153846154,
+          "65_plus": 0.38461538461538464
+        },
+        "target_share": {
+          "0_17": 0.08366800535475234,
+          "18_34": 0.16666666666666666,
+          "35_64": 0.6030789825970548,
+          "65_plus": 0.1465863453815261
+        },
+        "percentage_point_error": {
+          "0_17": -8.366800535475234,
+          "18_34": -16.666666666666664,
+          "35_64": 1.2305632787560583,
+          "65_plus": 23.802903923385855
+        },
+        "mean_absolute_percentage_point_error": 12.516733601070953,
+        "max_absolute_percentage_point_error": 23.802903923385855
+      },
+      "14000US06089010200": {
+        "n_persons": 25,
+        "observed_share": {
+          "0_17": 0.16,
+          "18_34": 0.24,
+          "35_64": 0.28,
+          "65_plus": 0.32
+        },
+        "target_share": {
+          "0_17": 0.13636363636363635,
+          "18_34": 0.2690746753246753,
+          "35_64": 0.39163961038961037,
+          "65_plus": 0.20292207792207792
+        },
+        "percentage_point_error": {
+          "0_17": 2.363636363636365,
+          "18_34": -2.9074675324675336,
+          "35_64": -11.163961038961034,
+          "65_plus": 11.707792207792208
+        },
+        "mean_absolute_percentage_point_error": 7.035714285714285,
+        "max_absolute_percentage_point_error": 11.707792207792208
+      },
+      "14000US06089010300": {
+        "n_persons": 54,
+        "observed_share": {
+          "0_17": 0.12962962962962962,
+          "18_34": 0.3148148148148148,
+          "35_64": 0.46296296296296297,
+          "65_plus": 0.09259259259259259
+        },
+        "target_share": {
+          "0_17": 0.24319159101767798,
+          "18_34": 0.22694696607740086,
+          "35_64": 0.37267080745341613,
+          "65_plus": 0.15719063545150502
+        },
+        "percentage_point_error": {
+          "0_17": -11.356196138804837,
+          "18_34": 8.786784873741396,
+          "35_64": 9.029215550954683,
+          "65_plus": -6.459804285891243
+        },
+        "mean_absolute_percentage_point_error": 8.90800021234804,
+        "max_absolute_percentage_point_error": 11.356196138804837
+      },
+      "14000US06089010400": {
+        "n_persons": 52,
+        "observed_share": {
+          "0_17": 0.19230769230769232,
+          "18_34": 0.25,
+          "35_64": 0.34615384615384615,
+          "65_plus": 0.21153846153846154
+        },
+        "target_share": {
+          "0_17": 0.2,
+          "18_34": 0.15243757431629013,
+          "35_64": 0.4839476813317479,
+          "65_plus": 0.16361474435196194
+        },
+        "percentage_point_error": {
+          "0_17": -0.7692307692307693,
+          "18_34": 9.756242568370988,
+          "35_64": -13.779383517790178,
+          "65_plus": 4.79237171864996
+        },
+        "mean_absolute_percentage_point_error": 7.274307143510474,
+        "max_absolute_percentage_point_error": 13.779383517790178
+      },
+      "14000US06089010500": {
+        "n_persons": 79,
+        "observed_share": {
+          "0_17": 0.34177215189873417,
+          "18_34": 0.13924050632911392,
+          "35_64": 0.45569620253164556,
+          "65_plus": 0.06329113924050633
+        },
+        "target_share": {
+          "0_17": 0.19796682718031033,
+          "18_34": 0.24255395041911895,
+          "35_64": 0.4332084893882647,
+          "65_plus": 0.12627073301230604
+        },
+        "percentage_point_error": {
+          "0_17": 14.380532471842383,
+          "18_34": -10.331344409000504,
+          "35_64": 2.2487713143380885,
+          "65_plus": -6.2979593771799705
+        },
+        "mean_absolute_percentage_point_error": 8.314651893090236,
+        "max_absolute_percentage_point_error": 14.380532471842383
+      },
+      "14000US06089010601": {
+        "n_persons": 41,
+        "observed_share": {
+          "0_17": 0.0975609756097561,
+          "18_34": 0.24390243902439024,
+          "35_64": 0.3902439024390244,
+          "65_plus": 0.2682926829268293
+        },
+        "target_share": {
+          "0_17": 0.2204563977180114,
+          "18_34": 0.0745721271393643,
+          "35_64": 0.46577017114914426,
+          "65_plus": 0.23920130399348002
+        },
+        "percentage_point_error": {
+          "0_17": -12.28954221082553,
+          "18_34": 16.933031188502596,
+          "35_64": -7.552626871011986,
+          "65_plus": 2.909137893334926
+        },
+        "mean_absolute_percentage_point_error": 9.921084540918761,
+        "max_absolute_percentage_point_error": 16.933031188502596
+      },
+      "14000US06089010602": {
+        "n_persons": 78,
+        "observed_share": {
+          "0_17": 0.21794871794871795,
+          "18_34": 0.14102564102564102,
+          "35_64": 0.4358974358974359,
+          "65_plus": 0.20512820512820512
+        },
+        "target_share": {
+          "0_17": 0.23104499014160243,
+          "18_34": 0.10718766804086755,
+          "35_64": 0.4386090697257573,
+          "65_plus": 0.22315827209177272
+        },
+        "percentage_point_error": {
+          "0_17": -1.3096272192884477,
+          "18_34": 3.383797298477348,
+          "35_64": -0.27116338283214025,
+          "65_plus": -1.8030066963567597
+        },
+        "mean_absolute_percentage_point_error": 1.6918986492386738,
+        "max_absolute_percentage_point_error": 3.383797298477348
+      },
+      "14000US06089010603": {
+        "n_persons": 27,
+        "observed_share": {
+          "0_17": 0.3333333333333333,
+          "18_34": 0.18518518518518517,
+          "35_64": 0.2962962962962963,
+          "65_plus": 0.18518518518518517
+        },
+        "target_share": {
+          "0_17": 0.25,
+          "18_34": 0.11757425742574257,
+          "35_64": 0.42017326732673266,
+          "65_plus": 0.21225247524752475
+        },
+        "percentage_point_error": {
+          "0_17": 8.333333333333332,
+          "18_34": 6.7610927759442605,
+          "35_64": -12.387697103043639,
+          "65_plus": -2.706729006233957
+        },
+        "mean_absolute_percentage_point_error": 7.547213054638797,
+        "max_absolute_percentage_point_error": 12.387697103043639
+      },
+      "14000US06089010702": {
+        "n_persons": 34,
+        "observed_share": {
+          "0_17": 0.029411764705882353,
+          "18_34": 0.14705882352941177,
+          "35_64": 0.5,
+          "65_plus": 0.3235294117647059
+        },
+        "target_share": {
+          "0_17": 0.2111663902708679,
+          "18_34": 0.13266998341625208,
+          "35_64": 0.4640685461580984,
+          "65_plus": 0.19209508015478166
+        },
+        "percentage_point_error": {
+          "0_17": -18.17546255649855,
+          "18_34": 1.4388840113159689,
+          "35_64": 3.5931453841901604,
+          "65_plus": 13.143433160992423
+        },
+        "mean_absolute_percentage_point_error": 9.087731278249276,
+        "max_absolute_percentage_point_error": 18.17546255649855
+      },
+      "14000US06089010703": {
+        "n_persons": 60,
+        "observed_share": {
+          "0_17": 0.2833333333333333,
+          "18_34": 0.26666666666666666,
+          "35_64": 0.2,
+          "65_plus": 0.25
+        },
+        "target_share": {
+          "0_17": 0.1538227231190984,
+          "18_34": 0.24946695095948826,
+          "35_64": 0.37770332013402375,
+          "65_plus": 0.21900700578738957
+        },
+        "percentage_point_error": {
+          "0_17": 12.951061021423493,
+          "18_34": 1.7199715707178402,
+          "35_64": -17.770332013402374,
+          "65_plus": 3.0992994212610423
+        },
+        "mean_absolute_percentage_point_error": 8.885166006701189,
+        "max_absolute_percentage_point_error": 17.770332013402374
+      },
+      "14000US06089010704": {
+        "n_persons": 49,
+        "observed_share": {
+          "0_17": 0.1836734693877551,
+          "18_34": 0.12244897959183673,
+          "35_64": 0.42857142857142855,
+          "65_plus": 0.2653061224489796
+        },
+        "target_share": {
+          "0_17": 0.1682889344262295,
+          "18_34": 0.16854508196721313,
+          "35_64": 0.39677254098360654,
+          "65_plus": 0.26639344262295084
+        },
+        "percentage_point_error": {
+          "0_17": 1.5384534961525613,
+          "18_34": -4.609610237537639,
+          "35_64": 3.179888758782201,
+          "65_plus": -0.1087320173971229
+        },
+        "mean_absolute_percentage_point_error": 2.3591711274673814,
+        "max_absolute_percentage_point_error": 4.609610237537639
+      },
+      "14000US06089010803": {
+        "n_persons": 67,
+        "observed_share": {
+          "0_17": 0.07462686567164178,
+          "18_34": 0.31343283582089554,
+          "35_64": 0.44776119402985076,
+          "65_plus": 0.16417910447761194
+        },
+        "target_share": {
+          "0_17": 0.26365475387727577,
+          "18_34": 0.1889750505731625,
+          "35_64": 0.38975050573162506,
+          "65_plus": 0.15761968981793661
+        },
+        "percentage_point_error": {
+          "0_17": -18.902788820563398,
+          "18_34": 12.445778524773305,
+          "35_64": 5.80106882982257,
+          "65_plus": 0.6559414659675328
+        },
+        "mean_absolute_percentage_point_error": 9.4513944102817,
+        "max_absolute_percentage_point_error": 18.902788820563398
+      },
+      "14000US06089010804": {
+        "n_persons": 24,
+        "observed_share": {
+          "0_17": 0.041666666666666664,
+          "18_34": 0.20833333333333334,
+          "35_64": 0.5,
+          "65_plus": 0.25
+        },
+        "target_share": {
+          "0_17": 0.15037593984962405,
+          "18_34": 0.3142857142857143,
+          "35_64": 0.337593984962406,
+          "65_plus": 0.19774436090225564
+        },
+        "percentage_point_error": {
+          "0_17": -10.87092731829574,
+          "18_34": -10.595238095238093,
+          "35_64": 16.2406015037594,
+          "65_plus": 5.225563909774436
+        },
+        "mean_absolute_percentage_point_error": 10.733082706766918,
+        "max_absolute_percentage_point_error": 16.2406015037594
+      },
+      "14000US06089010805": {
+        "n_persons": 57,
+        "observed_share": {
+          "0_17": 0.17543859649122806,
+          "18_34": 0.19298245614035087,
+          "35_64": 0.40350877192982454,
+          "65_plus": 0.22807017543859648
+        },
+        "target_share": {
+          "0_17": 0.2144469525959368,
+          "18_34": 0.1434434639852247,
+          "35_64": 0.475271906423148,
+          "65_plus": 0.16683767699569055
+        },
+        "percentage_point_error": {
+          "0_17": -3.9008356104708737,
+          "18_34": 4.9538992155126165,
+          "35_64": -7.176313449332344,
+          "65_plus": 6.123249844290593
+        },
+        "mean_absolute_percentage_point_error": 5.538574529901607,
+        "max_absolute_percentage_point_error": 7.176313449332344
+      },
+      "14000US06089010806": {
+        "n_persons": 39,
+        "observed_share": {
+          "0_17": 0.3076923076923077,
+          "18_34": 0.05128205128205128,
+          "35_64": 0.41025641025641024,
+          "65_plus": 0.23076923076923078
+        },
+        "target_share": {
+          "0_17": 0.17240192704748797,
+          "18_34": 0.13695801789401238,
+          "35_64": 0.46696490020646936,
+          "65_plus": 0.2236751548520303
+        },
+        "percentage_point_error": {
+          "0_17": 13.529038064481973,
+          "18_34": -8.56759666119611,
+          "35_64": -5.670848995005912,
+          "65_plus": 0.7094075917200487
+        },
+        "mean_absolute_percentage_point_error": 7.119222828101011,
+        "max_absolute_percentage_point_error": 13.529038064481973
+      },
+      "14000US06089010807": {
+        "n_persons": 58,
+        "observed_share": {
+          "0_17": 0.1724137931034483,
+          "18_34": 0.22413793103448276,
+          "35_64": 0.3793103448275862,
+          "65_plus": 0.22413793103448276
+        },
+        "target_share": {
+          "0_17": 0.1893362350380849,
+          "18_34": 0.17584330794341677,
+          "35_64": 0.37823721436343855,
+          "65_plus": 0.25658324265505983
+        },
+        "percentage_point_error": {
+          "0_17": -1.69224419346366,
+          "18_34": 4.829462309106599,
+          "35_64": 0.10731304641476425,
+          "65_plus": -3.2445311620577066
+        },
+        "mean_absolute_percentage_point_error": 2.4683876777606826,
+        "max_absolute_percentage_point_error": 4.829462309106599
+      },
+      "14000US06089010900": {
+        "n_persons": 64,
+        "observed_share": {
+          "0_17": 0.328125,
+          "18_34": 0.21875,
+          "35_64": 0.34375,
+          "65_plus": 0.109375
+        },
+        "target_share": {
+          "0_17": 0.2615675165250236,
+          "18_34": 0.12275731822474033,
+          "35_64": 0.38243626062322944,
+          "65_plus": 0.2332389046270066
+        },
+        "percentage_point_error": {
+          "0_17": 6.655748347497642,
+          "18_34": 9.599268177525968,
+          "35_64": -3.868626062322944,
+          "65_plus": -12.38639046270066
+        },
+        "mean_absolute_percentage_point_error": 8.127508262511803,
+        "max_absolute_percentage_point_error": 12.38639046270066
+      },
+      "14000US06089011001": {
+        "n_persons": 22,
+        "observed_share": {
+          "0_17": 0.13636363636363635,
+          "18_34": 0.18181818181818182,
+          "35_64": 0.45454545454545453,
+          "65_plus": 0.22727272727272727
+        },
+        "target_share": {
+          "0_17": 0.22293739028671739,
+          "18_34": 0.10005851375073142,
+          "35_64": 0.473376243417203,
+          "65_plus": 0.20362785254534815
+        },
+        "percentage_point_error": {
+          "0_17": -8.657375392308102,
+          "18_34": 8.17596680674504,
+          "35_64": -1.8830788871748494,
+          "65_plus": 2.364487472737911
+        },
+        "mean_absolute_percentage_point_error": 5.2702271397414755,
+        "max_absolute_percentage_point_error": 8.657375392308102
+      },
+      "14000US06089011002": {
+        "n_persons": 57,
+        "observed_share": {
+          "0_17": 0.12280701754385964,
+          "18_34": 0.3333333333333333,
+          "35_64": 0.2982456140350877,
+          "65_plus": 0.24561403508771928
+        },
+        "target_share": {
+          "0_17": 0.21044365920691008,
+          "18_34": 0.12308598351001178,
+          "35_64": 0.4308990969768355,
+          "65_plus": 0.23557126030624265
+        },
+        "percentage_point_error": {
+          "0_17": -8.763664166305043,
+          "18_34": 21.024734982332156,
+          "35_64": -13.265348294174778,
+          "65_plus": 1.0042774781476638
+        },
+        "mean_absolute_percentage_point_error": 11.01450623023991,
+        "max_absolute_percentage_point_error": 21.024734982332156
+      },
+      "14000US06089011100": {
+        "n_persons": 39,
+        "observed_share": {
+          "0_17": 0.23076923076923078,
+          "18_34": 0.2564102564102564,
+          "35_64": 0.28205128205128205,
+          "65_plus": 0.23076923076923078
+        },
+        "target_share": {
+          "0_17": 0.2591170825335892,
+          "18_34": 0.062060140754958415,
+          "35_64": 0.49488163787587974,
+          "65_plus": 0.18394113883557262
+        },
+        "percentage_point_error": {
+          "0_17": -2.8347851764358447,
+          "18_34": 19.4350115655298,
+          "35_64": -21.28303558245977,
+          "65_plus": 4.6828091933658165
+        },
+        "mean_absolute_percentage_point_error": 12.058910379447806,
+        "max_absolute_percentage_point_error": 21.28303558245977
+      },
+      "14000US06089011209": {
+        "n_persons": 71,
+        "observed_share": {
+          "0_17": 0.18309859154929578,
+          "18_34": 0.28169014084507044,
+          "35_64": 0.4225352112676056,
+          "65_plus": 0.11267605633802817
+        },
+        "target_share": {
+          "0_17": 0.2880664889446448,
+          "18_34": 0.2261251372118551,
+          "35_64": 0.3630233652187549,
+          "65_plus": 0.12278500862474517
+        },
+        "percentage_point_error": {
+          "0_17": -10.496789739534904,
+          "18_34": 5.556500363321534,
+          "35_64": 5.951184604885073,
+          "65_plus": -1.0108952286717001
+        },
+        "mean_absolute_percentage_point_error": 5.753842484103302,
+        "max_absolute_percentage_point_error": 10.496789739534904
+      },
+      "14000US06089011300": {
+        "n_persons": 63,
+        "observed_share": {
+          "0_17": 0.14285714285714285,
+          "18_34": 0.2222222222222222,
+          "35_64": 0.5079365079365079,
+          "65_plus": 0.12698412698412698
+        },
+        "target_share": {
+          "0_17": 0.2520008208495793,
+          "18_34": 0.17997127026472398,
+          "35_64": 0.44038579930227784,
+          "65_plus": 0.12764210958341884
+        },
+        "percentage_point_error": {
+          "0_17": -10.914367799243646,
+          "18_34": 4.225095195749823,
+          "35_64": 6.755070863423008,
+          "65_plus": -0.06579825992918675
+        },
+        "mean_absolute_percentage_point_error": 5.490083029586416,
+        "max_absolute_percentage_point_error": 10.914367799243646
+      },
+      "14000US06089011401": {
+        "n_persons": 61,
+        "observed_share": {
+          "0_17": 0.2459016393442623,
+          "18_34": 0.22950819672131148,
+          "35_64": 0.32786885245901637,
+          "65_plus": 0.19672131147540983
+        },
+        "target_share": {
+          "0_17": 0.21343975283213182,
+          "18_34": 0.10968074150360453,
+          "35_64": 0.4703913491246138,
+          "65_plus": 0.20648815653964986
+        },
+        "percentage_point_error": {
+          "0_17": 3.246188651213047,
+          "18_34": 11.982745521770696,
+          "35_64": -14.252249666559742,
+          "65_plus": -0.9766845064240026
+        },
+        "mean_absolute_percentage_point_error": 7.614467086491872,
+        "max_absolute_percentage_point_error": 14.252249666559742
+      },
+      "14000US06089011402": {
+        "n_persons": 46,
+        "observed_share": {
+          "0_17": 0.2391304347826087,
+          "18_34": 0.15217391304347827,
+          "35_64": 0.5217391304347826,
+          "65_plus": 0.08695652173913043
+        },
+        "target_share": {
+          "0_17": 0.21348314606741572,
+          "18_34": 0.13999392651078044,
+          "35_64": 0.4740358335863954,
+          "65_plus": 0.17248709383540844
+        },
+        "percentage_point_error": {
+          "0_17": 2.5647288715192977,
+          "18_34": 1.2179986532697833,
+          "35_64": 4.77032968483872,
+          "65_plus": -8.553057209627802
+        },
+        "mean_absolute_percentage_point_error": 4.276528604813901,
+        "max_absolute_percentage_point_error": 8.553057209627802
+      },
+      "14000US06089011403": {
+        "n_persons": 33,
+        "observed_share": {
+          "0_17": 0.18181818181818182,
+          "18_34": 0.030303030303030304,
+          "35_64": 0.5454545454545454,
+          "65_plus": 0.24242424242424243
+        },
+        "target_share": {
+          "0_17": 0.28640275387263336,
+          "18_34": 0.07641996557659209,
+          "35_64": 0.4746987951807229,
+          "65_plus": 0.16247848537005163
+        },
+        "percentage_point_error": {
+          "0_17": -10.458457205445153,
+          "18_34": -4.611693527356178,
+          "35_64": 7.075575027382253,
+          "65_plus": 7.99457570541908
+        },
+        "mean_absolute_percentage_point_error": 7.535075366400666,
+        "max_absolute_percentage_point_error": 10.458457205445153
+      },
+      "14000US06089011500": {
+        "n_persons": 66,
+        "observed_share": {
+          "0_17": 0.15151515151515152,
+          "18_34": 0.24242424242424243,
+          "35_64": 0.3333333333333333,
+          "65_plus": 0.2727272727272727
+        },
+        "target_share": {
+          "0_17": 0.20966304154038154,
+          "18_34": 0.0809413442681405,
+          "35_64": 0.45052594045284367,
+          "65_plus": 0.25886967373863434
+        },
+        "percentage_point_error": {
+          "0_17": -5.814789002523002,
+          "18_34": 16.148289815610195,
+          "35_64": -11.719260711951035,
+          "65_plus": 1.3857598988638364
+        },
+        "mean_absolute_percentage_point_error": 8.767024857237018,
+        "max_absolute_percentage_point_error": 16.148289815610195
+      },
+      "14000US06089011600": {
+        "n_persons": 47,
+        "observed_share": {
+          "0_17": 0.19148936170212766,
+          "18_34": 0.23404255319148937,
+          "35_64": 0.3191489361702128,
+          "65_plus": 0.2553191489361702
+        },
+        "target_share": {
+          "0_17": 0.20427863292460213,
+          "18_34": 0.1747978085050874,
+          "35_64": 0.40751369684320377,
+          "65_plus": 0.21340986172710671
+        },
+        "percentage_point_error": {
+          "0_17": -1.2789271222474474,
+          "18_34": 5.924474468640198,
+          "35_64": -8.836476067299099,
+          "65_plus": 4.1909287209063475
+        },
+        "mean_absolute_percentage_point_error": 5.057701594773272,
+        "max_absolute_percentage_point_error": 8.836476067299099
+      },
+      "14000US06089011701": {
+        "n_persons": 30,
+        "observed_share": {
+          "0_17": 0.26666666666666666,
+          "18_34": 0.23333333333333334,
+          "35_64": 0.4,
+          "65_plus": 0.1
+        },
+        "target_share": {
+          "0_17": 0.2975510204081633,
+          "18_34": 0.12897959183673469,
+          "35_64": 0.4097959183673469,
+          "65_plus": 0.1636734693877551
+        },
+        "percentage_point_error": {
+          "0_17": -3.088435374149662,
+          "18_34": 10.435374149659864,
+          "35_64": -0.979591836734689,
+          "65_plus": -6.367346938775508
+        },
+        "mean_absolute_percentage_point_error": 5.21768707482993,
+        "max_absolute_percentage_point_error": 10.435374149659864
+      },
+      "14000US06089011702": {
+        "n_persons": 54,
+        "observed_share": {
+          "0_17": 0.3333333333333333,
+          "18_34": 0.2222222222222222,
+          "35_64": 0.2962962962962963,
+          "65_plus": 0.14814814814814814
+        },
+        "target_share": {
+          "0_17": 0.22266973532796316,
+          "18_34": 0.1852704257767549,
+          "35_64": 0.4525316455696203,
+          "65_plus": 0.1395281933256617
+        },
+        "percentage_point_error": {
+          "0_17": 11.066359800537015,
+          "18_34": 3.695179644546731,
+          "35_64": -15.6235349273324,
+          "65_plus": 0.8619954822486453
+        },
+        "mean_absolute_percentage_point_error": 7.811767463666198,
+        "max_absolute_percentage_point_error": 15.6235349273324
+      },
+      "14000US06089011703": {
+        "n_persons": 38,
+        "observed_share": {
+          "0_17": 0.2631578947368421,
+          "18_34": 0.2631578947368421,
+          "35_64": 0.39473684210526316,
+          "65_plus": 0.07894736842105263
+        },
+        "target_share": {
+          "0_17": 0.23328380386329867,
+          "18_34": 0.1411589895988113,
+          "35_64": 0.46924219910846954,
+          "65_plus": 0.1563150074294205
+        },
+        "percentage_point_error": {
+          "0_17": 2.9874090873543424,
+          "18_34": 12.19989051380308,
+          "35_64": -7.450535700320637,
+          "65_plus": -7.736763900836788
+        },
+        "mean_absolute_percentage_point_error": 7.593649800578712,
+        "max_absolute_percentage_point_error": 12.19989051380308
+      },
+      "14000US06089011801": {
+        "n_persons": 33,
+        "observed_share": {
+          "0_17": 0.06060606060606061,
+          "18_34": 0.36363636363636365,
+          "35_64": 0.36363636363636365,
+          "65_plus": 0.21212121212121213
+        },
+        "target_share": {
+          "0_17": 0.19278131634819534,
+          "18_34": 0.1278131634819533,
+          "35_64": 0.4615711252653928,
+          "65_plus": 0.2178343949044586
+        },
+        "percentage_point_error": {
+          "0_17": -13.217525574213473,
+          "18_34": 23.582320015441034,
+          "35_64": -9.793476162902914,
+          "65_plus": -0.5713182783246479
+        },
+        "mean_absolute_percentage_point_error": 11.791160007720517,
+        "max_absolute_percentage_point_error": 23.582320015441034
+      },
+      "14000US06089011802": {
+        "n_persons": 40,
+        "observed_share": {
+          "0_17": 0.125,
+          "18_34": 0.2,
+          "35_64": 0.375,
+          "65_plus": 0.3
+        },
+        "target_share": {
+          "0_17": 0.19366322534709862,
+          "18_34": 0.11747953008187967,
+          "35_64": 0.4702741189035244,
+          "65_plus": 0.21858312566749732
+        },
+        "percentage_point_error": {
+          "0_17": -6.866322534709862,
+          "18_34": 8.252046991812033,
+          "35_64": -9.527411890352438,
+          "65_plus": 8.141687433250267
+        },
+        "mean_absolute_percentage_point_error": 8.196867212531151,
+        "max_absolute_percentage_point_error": 9.527411890352438
+      },
+      "14000US06089011803": {
+        "n_persons": 31,
+        "observed_share": {
+          "0_17": 0.06451612903225806,
+          "18_34": 0.0967741935483871,
+          "35_64": 0.5161290322580645,
+          "65_plus": 0.3225806451612903
+        },
+        "target_share": {
+          "0_17": 0.14268632921482663,
+          "18_34": 0.12355520127540853,
+          "35_64": 0.479473893981666,
+          "65_plus": 0.25428457552809886
+        },
+        "percentage_point_error": {
+          "0_17": -7.817020018256857,
+          "18_34": -2.6781007727021438,
+          "35_64": 3.665513827639849,
+          "65_plus": 6.829606963319145
+        },
+        "mean_absolute_percentage_point_error": 5.247560395479498,
+        "max_absolute_percentage_point_error": 7.817020018256857
+      },
+      "14000US06089011900": {
+        "n_persons": 63,
+        "observed_share": {
+          "0_17": 0.2222222222222222,
+          "18_34": 0.14285714285714285,
+          "35_64": 0.2698412698412698,
+          "65_plus": 0.36507936507936506
+        },
+        "target_share": {
+          "0_17": 0.18603058662405844,
+          "18_34": 0.10408582515407441,
+          "35_64": 0.48641862588450124,
+          "65_plus": 0.2234649623373659
+        },
+        "percentage_point_error": {
+          "0_17": 3.6191635598163767,
+          "18_34": 3.8771317703068435,
+          "35_64": -21.657735604323143,
+          "65_plus": 14.161440274199915
+        },
+        "mean_absolute_percentage_point_error": 10.82886780216157,
+        "max_absolute_percentage_point_error": 21.657735604323143
+      },
+      "14000US06089012000": {
+        "n_persons": 56,
+        "observed_share": {
+          "0_17": 0.2857142857142857,
+          "18_34": 0.3392857142857143,
+          "35_64": 0.30357142857142855,
+          "65_plus": 0.07142857142857142
+        },
+        "target_share": {
+          "0_17": 0.2855919503318347,
+          "18_34": 0.14450867052023122,
+          "35_64": 0.4448726182830229,
+          "65_plus": 0.12502676086491116
+        },
+        "percentage_point_error": {
+          "0_17": 0.012233538245098874,
+          "18_34": 19.477704376548306,
+          "35_64": -14.130118971159433,
+          "65_plus": -5.359818943633973
+        },
+        "mean_absolute_percentage_point_error": 9.744968957396702,
+        "max_absolute_percentage_point_error": 19.477704376548306
+      },
+      "14000US06089012101": {
+        "n_persons": 53,
+        "observed_share": {
+          "0_17": 0.18867924528301888,
+          "18_34": 0.22641509433962265,
+          "35_64": 0.39622641509433965,
+          "65_plus": 0.18867924528301888
+        },
+        "target_share": {
+          "0_17": 0.25984930032292786,
+          "18_34": 0.24198062432723358,
+          "35_64": 0.34897739504843917,
+          "65_plus": 0.14919268030139934
+        },
+        "percentage_point_error": {
+          "0_17": -7.117005503990898,
+          "18_34": -1.5565529987610933,
+          "35_64": 4.724902004590048,
+          "65_plus": 3.9486564981619536
+        },
+        "mean_absolute_percentage_point_error": 4.336779251375998,
+        "max_absolute_percentage_point_error": 7.117005503990898
+      },
+      "14000US06089012102": {
+        "n_persons": 28,
+        "observed_share": {
+          "0_17": 0.10714285714285714,
+          "18_34": 0.2857142857142857,
+          "35_64": 0.2857142857142857,
+          "65_plus": 0.32142857142857145
+        },
+        "target_share": {
+          "0_17": 0.1869587366276108,
+          "18_34": 0.09628120224146715,
+          "35_64": 0.4335201222618441,
+          "65_plus": 0.28323993886907795
+        },
+        "percentage_point_error": {
+          "0_17": -7.981587948475368,
+          "18_34": 18.943308347281857,
+          "35_64": -14.78058365475584,
+          "65_plus": 3.818863255949351
+        },
+        "mean_absolute_percentage_point_error": 11.381085801615605,
+        "max_absolute_percentage_point_error": 18.943308347281857
+      },
+      "14000US06089012200": {
+        "n_persons": 87,
+        "observed_share": {
+          "0_17": 0.26436781609195403,
+          "18_34": 0.25287356321839083,
+          "35_64": 0.3793103448275862,
+          "65_plus": 0.10344827586206896
+        },
+        "target_share": {
+          "0_17": 0.2755600471618663,
+          "18_34": 0.1662455785750379,
+          "35_64": 0.41940373926225366,
+          "65_plus": 0.13879063500084218
+        },
+        "percentage_point_error": {
+          "0_17": -1.119223106991224,
+          "18_34": 8.662798464335292,
+          "35_64": -4.0093394434667475,
+          "65_plus": -3.534235913877322
+        },
+        "mean_absolute_percentage_point_error": 4.331399232167646,
+        "max_absolute_percentage_point_error": 8.662798464335292
+      },
+      "14000US06089012301": {
+        "n_persons": 33,
+        "observed_share": {
+          "0_17": 0.12121212121212122,
+          "18_34": 0.24242424242424243,
+          "35_64": 0.36363636363636365,
+          "65_plus": 0.2727272727272727
+        },
+        "target_share": {
+          "0_17": 0.19365798414496035,
+          "18_34": 0.07889769724424311,
+          "35_64": 0.5235938089845225,
+          "65_plus": 0.20385050962627407
+        },
+        "percentage_point_error": {
+          "0_17": -7.244586293283914,
+          "18_34": 16.35265451799993,
+          "35_64": -15.99574453481588,
+          "65_plus": 6.887676310099863
+        },
+        "mean_absolute_percentage_point_error": 11.620165414049897,
+        "max_absolute_percentage_point_error": 16.35265451799993
+      },
+      "14000US06089012302": {
+        "n_persons": 76,
+        "observed_share": {
+          "0_17": 0.2236842105263158,
+          "18_34": 0.14473684210526316,
+          "35_64": 0.42105263157894735,
+          "65_plus": 0.21052631578947367
+        },
+        "target_share": {
+          "0_17": 0.22533109494497294,
+          "18_34": 0.08916246968849095,
+          "35_64": 0.45028912516321584,
+          "65_plus": 0.23521731020332026
+        },
+        "percentage_point_error": {
+          "0_17": -0.16468844186571518,
+          "18_34": 5.557437241677221,
+          "35_64": -2.9236493584268497,
+          "65_plus": -2.469099441384659
+        },
+        "mean_absolute_percentage_point_error": 2.778718620838611,
+        "max_absolute_percentage_point_error": 5.557437241677221
+      },
+      "14000US06089012303": {
+        "n_persons": 61,
+        "observed_share": {
+          "0_17": 0.2459016393442623,
+          "18_34": 0.26229508196721313,
+          "35_64": 0.3442622950819672,
+          "65_plus": 0.14754098360655737
+        },
+        "target_share": {
+          "0_17": 0.18748403575989783,
+          "18_34": 0.10012771392081737,
+          "35_64": 0.5256704980842912,
+          "65_plus": 0.18671775223499362
+        },
+        "percentage_point_error": {
+          "0_17": 5.841760358436446,
+          "18_34": 16.216736804639574,
+          "35_64": -18.140820300232402,
+          "65_plus": -3.9176768628436247
+        },
+        "mean_absolute_percentage_point_error": 11.029248581538011,
+        "max_absolute_percentage_point_error": 18.140820300232402
+      },
+      "14000US06089012400": {
+        "n_persons": 43,
+        "observed_share": {
+          "0_17": 0.18604651162790697,
+          "18_34": 0.046511627906976744,
+          "35_64": 0.5581395348837209,
+          "65_plus": 0.20930232558139536
+        },
+        "target_share": {
+          "0_17": 0.19081364829396325,
+          "18_34": 0.08661417322834646,
+          "35_64": 0.4879265091863517,
+          "65_plus": 0.2346456692913386
+        },
+        "percentage_point_error": {
+          "0_17": -0.4767136666056271,
+          "18_34": -4.010254532136972,
+          "35_64": 7.02130256973692,
+          "65_plus": -2.5343343709943236
+        },
+        "mean_absolute_percentage_point_error": 3.5106512848684606,
+        "max_absolute_percentage_point_error": 7.02130256973692
+      },
+      "14000US06089012500": {
+        "n_persons": 19,
+        "observed_share": {
+          "0_17": 0.05263157894736842,
+          "18_34": 0.2631578947368421,
+          "35_64": 0.3684210526315789,
+          "65_plus": 0.3157894736842105
+        },
+        "target_share": {
+          "0_17": 0.14540973505853358,
+          "18_34": 0.11891558841651263,
+          "35_64": 0.45471349353049906,
+          "65_plus": 0.2809611829944547
+        },
+        "percentage_point_error": {
+          "0_17": -9.277815611116516,
+          "18_34": 14.424230632032947,
+          "35_64": -8.629244089892014,
+          "65_plus": 3.482829068975579
+        },
+        "mean_absolute_percentage_point_error": 8.953529850504262,
+        "max_absolute_percentage_point_error": 14.424230632032947
+      },
+      "14000US06089012601": {
+        "n_persons": 64,
+        "observed_share": {
+          "0_17": 0.203125,
+          "18_34": 0.234375,
+          "35_64": 0.34375,
+          "65_plus": 0.21875
+        },
+        "target_share": {
+          "0_17": 0.18712273641851107,
+          "18_34": 0.0766599597585513,
+          "35_64": 0.5056338028169014,
+          "65_plus": 0.23058350100603622
+        },
+        "percentage_point_error": {
+          "0_17": 1.600226358148893,
+          "18_34": 15.77150402414487,
+          "35_64": -16.18838028169014,
+          "65_plus": -1.1833501006036222
+        },
+        "mean_absolute_percentage_point_error": 8.685865191146881,
+        "max_absolute_percentage_point_error": 16.18838028169014
+      },
+      "14000US06089012603": {
+        "n_persons": 60,
+        "observed_share": {
+          "0_17": 0.2,
+          "18_34": 0.15,
+          "35_64": 0.35,
+          "65_plus": 0.3
+        },
+        "target_share": {
+          "0_17": 0.13431372549019607,
+          "18_34": 0.06936274509803922,
+          "35_64": 0.48137254901960785,
+          "65_plus": 0.31495098039215685
+        },
+        "percentage_point_error": {
+          "0_17": 6.568627450980394,
+          "18_34": 8.063725490196077,
+          "35_64": -13.137254901960787,
+          "65_plus": -1.4950980392156865
+        },
+        "mean_absolute_percentage_point_error": 7.316176470588236,
+        "max_absolute_percentage_point_error": 13.137254901960787
+      },
+      "14000US06089012604": {
+        "n_persons": 39,
+        "observed_share": {
+          "0_17": 0.2564102564102564,
+          "18_34": 0.15384615384615385,
+          "35_64": 0.358974358974359,
+          "65_plus": 0.23076923076923078
+        },
+        "target_share": {
+          "0_17": 0.14712751050910788,
+          "18_34": 0.08220457730032694,
+          "35_64": 0.4880896777206913,
+          "65_plus": 0.2825782344698739
+        },
+        "percentage_point_error": {
+          "0_17": 10.92827459011485,
+          "18_34": 7.164157654582691,
+          "35_64": -12.91153187463323,
+          "65_plus": -5.180900370064312
+        },
+        "mean_absolute_percentage_point_error": 9.04621612234877,
+        "max_absolute_percentage_point_error": 12.91153187463323
+      },
+      "14000US06089012701": {
+        "n_persons": 73,
+        "observed_share": {
+          "0_17": 0.3424657534246575,
+          "18_34": 0.1643835616438356,
+          "35_64": 0.3150684931506849,
+          "65_plus": 0.1780821917808219
+        },
+        "target_share": {
+          "0_17": 0.25583282613106106,
+          "18_34": 0.13106106715358085,
+          "35_64": 0.3986609860012173,
+          "65_plus": 0.2144451207141408
+        },
+        "percentage_point_error": {
+          "0_17": 8.663292729359645,
+          "18_34": 3.3322494490254764,
+          "35_64": -8.359249285053238,
+          "65_plus": -3.6362928933318885
+        },
+        "mean_absolute_percentage_point_error": 5.997771089192562,
+        "max_absolute_percentage_point_error": 8.663292729359645
+      },
+      "14000US06089012702": {
+        "n_persons": 38,
+        "observed_share": {
+          "0_17": 0.18421052631578946,
+          "18_34": 0.07894736842105263,
+          "35_64": 0.21052631578947367,
+          "65_plus": 0.5263157894736842
+        },
+        "target_share": {
+          "0_17": 0.17173196631270596,
+          "18_34": 0.10362504577077994,
+          "35_64": 0.4683266202856097,
+          "65_plus": 0.25631636763090443
+        },
+        "percentage_point_error": {
+          "0_17": 1.2478560003083505,
+          "18_34": -2.467767734972731,
+          "35_64": -25.7800304496136,
+          "65_plus": 26.999942184277977
+        },
+        "mean_absolute_percentage_point_error": 14.123899092293165,
+        "max_absolute_percentage_point_error": 26.999942184277977
+      }
+    }
+  },
+  "run_seed": 42,
+  "target_n": 1000,
+  "input_sha256": {
+    "donor_households": "ae5f3e68506fc09af95ea43cacced7eba51e11cdc79dcce9dd6eab00a1f8c4fa",
+    "donor_persons": "495cfd43aea03b4e41dd1ce08bef4f2d49bb2cf8e7719d6d3ca0a196e66140ed",
+    "acs_marginals": "c6ed4d1e679f46ea26cff3a6803868faa1c5c0a323e2e2dd2ed487d5c1bf721f"
+  },
+  "serialno_in_public_households": false,
+  "serialno_in_public_persons": false
+}

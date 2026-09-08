@@ -1,0 +1,57 @@
+{
+  "run_seed": 2303,
+  "planned_steps": 10,
+  "completed_steps": 6,
+  "last_completed_step": 7,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 7,
+    "hazard_distance_m": 1100.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "dependent member would be left behind": 5,
+      "route closed": 16
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e3a_v8b_full_minus_feedback_seed2303",
+    "spent": 0.169637,
+    "n_ok": 111,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 136934,
+    "live_completion_tokens": 537378,
+    "logical_prompt_tokens": 136934,
+    "logical_completion_tokens": 537378
+  },
+  "wall_clock_seconds": 1155.013917,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t044_h0000013_r001, step=7: 1 validation error for ResidentDecision\n  Invalid JSON: EOF while parsing a value at line 1 column 0 [type=json_invalid, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

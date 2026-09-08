@@ -1,0 +1,11 @@
+{
+  "n": 335,
+  "priority": "push>media>neighbor>social",
+  "marginals": {
+    "official_push": 0.4985,
+    "media": 0.0418,
+    "neighbor": 0.0239,
+    "social": 0.009,
+    "none": 0.4269
+  }
+}

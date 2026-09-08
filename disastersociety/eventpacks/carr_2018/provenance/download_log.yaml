@@ -1,0 +1,95 @@
+retrieved_at: 2026-07-19
+
+sources:
+  carr_perimeter:
+    publisher: CAL FIRE / California Department of Forestry and Fire Protection
+    access: public_government_data
+    endpoint: https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/2018_California_Fire_Perimeters_View/FeatureServer/0/query
+    query: "YEAR_=2018 AND FIRE_NAME='CARR'"
+    result: "1 feature; FIRE_NAME=CARR; GIS_ACRES=229651.4; alarm date=2018-07-23; containment date=2018-09-01"
+    retained_raw: raw/cal_fire_2018_perimeters_all.geojson
+    retained_raw_sha256: 5ef0e8528555c1ef60216c2109e8726e3a04cb9a472e09a346e7cdda3292ac60
+    retained_raw_description: "All 416 records in the public 2018 CAL FIRE perimeter view; the output selects Carr from this file."
+    output: hazard/perimeters.geojson
+    sha256: 6547ad054ac4b5c774b4dc7bfe6ccd36efa1749e0db9884b488b728b03d9e921
+    caveat: "This is the official final perimeter, not a time series. The added timestamp is the local CONT_DATE for the documented buffer-based approximation."
+
+  acs_pums:
+    publisher: U.S. Census Bureau
+    access: public_government_data
+    vintage: "2014-2018 ACS 5-year PUMS"
+    source_urls:
+      - https://www2.census.gov/programs-surveys/acs/data/pums/2018/5-Year/csv_hca.zip
+      - https://www2.census.gov/programs-surveys/acs/data/pums/2018/5-Year/csv_pca.zip
+    raw_sha256:
+      csv_hca.zip: 1c09428290fcfdde00cfee1276a1b64ce1031081b56055dea6e1c04505718daa
+      csv_pca.zip: 0b55d01ab0a9926892c101704b31d2224f9ec7714fecaca5b7f4065562acb111
+    retained_raw:
+      housing: raw/census_pums_2018_5yr_ca_housing.csv.zip
+      person: raw/census_pums_2018_5yr_ca_person.csv.zip
+    filter:
+      state_fips: "06"
+      puma_2010: "08900"
+      puma_geoid: "0608900"
+      puma_name: "Shasta County--Redding City PUMA"
+      record_type: "occupied housing-unit household records with HHT 1-7"
+    derivation: "Household income, vehicles, and HHT were binned to ACS marginal categories. Person records set presence of any 65+ resident and reference-person age group. SERIALNO was removed and replaced with synthetic sample_id."
+    output: population/pums.csv
+    sha256: eba005857d3891f271ca0d3939d24fe6febfe78671acf9360940ee57b012dfe7
+    caveat: "PUMS is a survey sample used as a seed distribution, never a list of real simulated residents."
+
+  acs_marginals:
+    publisher: U.S. Census Bureau
+    access: public_government_data
+    vintage: "2018 ACS 5-year Summary File"
+    geography: "All Census tracts in Shasta County, California (state 06, county 089; 48 tracts)"
+    source_base: https://www2.census.gov/programs-surveys/acs/summary_file/2018/
+    source_files:
+      g20185ca.csv: 70575ee3a6e0ca8fea2305f5e07094c2173986b1de2ea95001ea8bc9cd614901
+      20185ca0002000.zip: da3ea7ccda279d5d0828fdf444380a1cd9fb2e9068e011e8001f26a1ca43538a
+      20185ca0028000.zip: 2c092b10e8056cfd30e3ee435780551438e3b71aa455fbd99992c704412c80b2
+      20185ca0036000.zip: 0971c919149e3dda93b76c5a9fc9853d2d7fe5b07a93c21dd509688006100769
+      20185ca0037000.zip: 7d974e7c601fec4d275f1e7bbe807c7b1461138134d2ef25ff7e42ff668c205e
+      20185ca0059000.zip: 0d6b8e69293d7bb325a7778f7bad6cbc0c7df783a897c4061918973cf2b1a186
+    retained_raw_directory: raw/acs_summary_2018_5yr_ca_tracts
+    tables:
+      B01001: "person age groups"
+      B08201: "households by vehicles available"
+      B11001: "household type"
+      B11007: "households by presence of people 65 years and over"
+      B19001: "household income"
+    output: population/acs_marginals.csv
+    sha256: c6ed4d1e679f46ea26cff3a6803868faa1c5c0a323e2e2dd2ed487d5c1bf721f
+    caveat: "Values are ACS estimates; margins of error are not included in this MVP input."
+
+  tiger_line:
+    publisher: U.S. Census Bureau
+    access: public_government_data
+    vintage: 2018
+    source_urls:
+      roads: https://www2.census.gov/geo/tiger/TIGER2018/ROADS/tl_2018_06089_roads.zip
+      tracts: https://www2.census.gov/geo/tiger/TIGER2018/TRACT/tl_2018_06_tract.zip
+      pumas: https://www2.census.gov/geo/tiger/TIGER2018/PUMA/tl_2018_06_puma10.zip
+    retained_raw:
+      roads: raw/tiger_2018/tl_2018_06089_roads.zip
+      roads_sha256: 8144cf83339ef062ad471a5fbb77fa8517ccae6dc94399fae5999dd4d9ddc8d0
+      tracts: raw/tiger_2018/tl_2018_06_tract.zip
+      tracts_sha256: 60617d2d680e9cc38cfd35657e56faffe3616e2ff0ccbe424edd26c73c496037
+      pumas: raw/tiger_2018/tl_2018_06_puma10.zip
+      pumas_sha256: bde3a6c6fa25b3a101a762c8f9872c7d0b89f539592dcb61995f6cdd6d19220a
+    derivation: "Converted to EPSG:4326; tracts filtered to COUNTYFP=089; PUMAs clipped to the Shasta tract extent."
+    outputs:
+      population/tiger/roads/shasta_roads.geojson: e2b331afcdef0db65b2a6d14a39f5c44554af4e6127ba0d0daa899fa457def1f
+      population/tiger/tracts/shasta_tracts.geojson: 4d3d035ad0560df2c1a3af059f7257d516dbf20de7a39d246f32e01920d23e8d
+      population/tiger/pumas/shasta_intersecting_pumas.geojson: 3e79ab29e1e6fe2891a3f352dfae7b3f74eba3f1fed049dc515af080ffd8cf57
+
+derived_assets:
+  west_redding_controlled_routes:
+    source_roads: population/tiger/roads/shasta_roads.geojson
+    source_perimeter: hazard/perimeters.geojson
+    configuration: experiments/carr/configs/carr_controlled_routes.yaml
+    builder: scripts/build_carr_controlled_routes.py
+    outputs:
+      environment/west_redding_controlled_routes.json: 135e50797b706fe4aaab3b81814c24a279ba7310373ad756384ee3763010caaf
+      environment/west_redding_controlled_routes.geojson: 6702478b55f8db35fb4dddb24233fd3c5cacd86d3a0bedd851923d3e8a429c01
+    semantics: "Actual 2018 TIGER road geometry with an algorithmically selected controlled obstruction; not an observed Carr road-closure record."

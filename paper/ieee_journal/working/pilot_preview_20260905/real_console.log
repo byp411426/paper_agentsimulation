@@ -1,0 +1,13 @@
+{"step": 1, "awake": 0}
+{"step": 2, "awake": 0}
+{"provider_request_started": 1}
+{"step": 3, "awake": 1}
+{"provider_request_started": 2}
+{"step": 4, "awake": 1}
+{"provider_request_started": 3}
+{"provider_request_started": 4}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+{"status": "ABORTED", "completed_steps": 4, "provider_requests": 4, "elapsed_seconds": 177.24}

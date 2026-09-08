@@ -1,0 +1,50 @@
+{
+  "protocol": "carr_s_formal_e2_v5",
+  "status": "PAUSED",
+  "evidence_status": "PILOT",
+  "decision_date": "2026-08-01",
+  "completed_seed_batches": [101, 202],
+  "completed_terminal_runs": 10,
+  "planned_terminal_runs": 80,
+  "remaining_seed_batches_not_authorized": [
+    303,
+    404,
+    505,
+    606,
+    707,
+    808,
+    909,
+    1010,
+    1111,
+    1212,
+    1313,
+    1414,
+    1515,
+    1616
+  ],
+  "pause_reason_codes": [
+    "INTERACTION_EXPOSURE_FAILURE",
+    "PROPOSAL_TEMPORAL_MISMATCH",
+    "METRIC_OPPORTUNITY_MISALIGNMENT"
+  ],
+  "pause_is_based_on_interim_effect_direction": false,
+  "raw_artifacts_preserved": true,
+  "carr_r_test_split_opened": false,
+  "source": {
+    "config": "experiments/carr/configs/carr_s_formal_e2_v5.yaml",
+    "config_sha256": "46cc6f9889af2ddce227f80f63724f501267e767706b526f73004a0623dc1579",
+    "seed_summaries": [
+      {
+        "seed": 101,
+        "path": "experiments/carr/results/carr_s_formal_e2_v5_seed101_summary.json",
+        "sha256": "0beb5b945261d284659e565a0c14ef3d3841e07047bb909042bf40294fd592a5"
+      },
+      {
+        "seed": 202,
+        "path": "experiments/carr/results/carr_s_formal_e2_v5_seed202_summary.json",
+        "sha256": "5c95dc22951b408bc6621f7d9cf2852ef13883f590479bcbaa6cb53773b5d6f4"
+      }
+    ]
+  },
+  "next_gate": "Repair and freeze v6, pass zero-cost mock validation, then separately authorize a declared-backend pilot."
+}

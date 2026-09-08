@@ -1,0 +1,232 @@
+{
+  "encoding": {
+    "Q29.3_worry": {
+      "Not at all worried": 0.0,
+      "Slightly worried": 0.25,
+      "Moderately worried": 0.5,
+      "Very worried": 0.75,
+      "Extremely worried": 1.0
+    },
+    "Q29.4_likelihood": {
+      "Extremely unlikely": 0.0,
+      "Somewhat unlikely": 0.25,
+      "Neither likely nor unlikely": 0.5,
+      "Somewhat likely": 0.75,
+      "Extremely likely": 1.0
+    },
+    "Q32.9_Q32.10": {
+      "No": false,
+      "Yes": true
+    },
+    "Q35.3_trustworthiness": {
+      "Almost never trustworthy": 0.0,
+      "Not usually trustworthy": 0.25,
+      "Sometimes trustworthy": 0.5,
+      "Generally trustworthy": 0.75,
+      "Almost always trustworthy": 1.0
+    },
+    "Q35.4_general_trust": {
+      "We can never be too cautious in our dealings with other people.": 0.0,
+      "It is possible to trust most people.": 1.0
+    },
+    "Q35.6_helping": {
+      "1 (not at all true)": 0.0,
+      "2": 0.25,
+      "3": 0.5,
+      "4": 0.75,
+      "5 (very true)": 1.0
+    },
+    "Q34.4_decision_participation": {
+      "Another person is the sole decision maker": 0.0,
+      "I provide input into the decisions, but I am not the primary decision maker": 0.25,
+      "I share equally in making decisions with another household member(s)": 0.5,
+      "I am the primary decision maker with input from another household member": 0.75,
+      "I am the sole decision maker": 1.0,
+      "Prefer not to answer": null
+    },
+    "Q34.2_prior_evacuation": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "More than 5": 6,
+      "topcode_only_for_more_than_5": true
+    },
+    "Q32.8_household_size": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "10 or more": 10
+    },
+    "Q32.11_vehicle_count": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "More than 5": 6
+    },
+    "Q32.2_age_band": {
+      "18 - 24": "18_24",
+      "25 - 34": "25_34",
+      "35 - 44": "35_44",
+      "45 - 54": "45_54",
+      "55 - 64": "55_64",
+      "65 - 74": "65_74",
+      "75 - 84": "75_84",
+      "85 or older": "85_plus"
+    },
+    "Q32.13_income_band": {
+      "Less than $10,000": "lt_10k",
+      "$10,000 - $14,999": "10_15k",
+      "$15,000 - $24,999": "15_25k",
+      "$25,000 - $34,999": "25_35k",
+      "$35,000 - $49,999": "35_50k",
+      "$50,000 - $74,999": "50_75k",
+      "$75,000 - $99,999": "75_100k",
+      "$100,000 - $149,999": "100_150k",
+      "$150,000 - $199,999": "150_200k",
+      "More than $200,000": "200k_plus"
+    }
+  },
+  "factors": {
+    "hazard_worry": {
+      "items": [
+        "Q29.3_1",
+        "Q29.3_2"
+      ],
+      "minimum_valid": 1
+    },
+    "evacuation_friction": {
+      "items": [
+        "Q29.3_3",
+        "Q29.3_4",
+        "Q29.3_5",
+        "Q29.3_6",
+        "Q29.3_7",
+        "Q29.3_8",
+        "Q29.3_9"
+      ],
+      "minimum_valid": 4
+    },
+    "home_person_threat": {
+      "items": [
+        "Q29.4_1",
+        "Q29.4_2",
+        "Q29.4_4",
+        "Q29.4_5"
+      ],
+      "minimum_valid": 2
+    },
+    "infrastructure_rescue": {
+      "items": [
+        "Q29.4_3",
+        "Q29.4_7",
+        "Q29.4_8"
+      ],
+      "minimum_valid": 2
+    },
+    "property_security": {
+      "items": [
+        "Q29.4_6"
+      ],
+      "minimum_valid": 1
+    },
+    "work_obligation": {
+      "items": [
+        "Q29.4_9"
+      ],
+      "minimum_valid": 1
+    }
+  },
+  "helping_tendency": {
+    "items": [
+      "Q35.6_1",
+      "Q35.6_2",
+      "Q35.6_3",
+      "Q35.6_4",
+      "Q35.6_5"
+    ],
+    "minimum_valid": 3
+  },
+  "item_text_mapping": {
+    "Q29.4_7": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - First responders would NOT be available and would NOT perform rescue operations.",
+    "Q29.4_2": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - You or a member of your household would be injured or killed during the disaster.",
+    "Q35.6_4": "Please answer the following questions honestly and quickly using the scale from 1 to 5. \n1 = not at all true of me5 = very true of me - I would rather engage in actions that help others, even though they are strangers, than engage in actions that would help me.",
+    "Q34.4": "What is the extent of your involvement in emergency planning and evacuation decisions for the household?",
+    "Q35.3_11": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Uber/Lyft Drivers",
+    "Q29.4_1": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - Your residence was at risk of burning down",
+    "Q35.3_8": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Local law enforcement",
+    "Q32.9": "Do you own any pets?",
+    "Q29.3_1": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Severity of the wildfires",
+    "Q29.4_6": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - Your personal belongings would be stolen.",
+    "Q35.3_2": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Your friends",
+    "Q29.3_2": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Speed of the wildfires",
+    "Q32.13": "What was your total household income in 2018?",
+    "Q29.4_9": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - You or a member of your household would be required to report to work during the time span of the evacuation.",
+    "Q32.10": "Do you own any livestock?",
+    "Q35.3_7": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Strangers",
+    "Q35.6_3": "Please answer the following questions honestly and quickly using the scale from 1 to 5. \n1 = not at all true of me5 = very true of me - One of the activities that provides me with the most meaning to my life is helping others in the world when they need help.",
+    "Q32.8_1": "Answer the following statements based on household  (including yourself). - Number of individuals in your household",
+    "Q35.3_3": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Your co-workers",
+    "Q29.3_5": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Finding housing for the evacuation",
+    "Q32.2": "What is your age?",
+    "Q35.3_10": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Bus Drivers",
+    "Q35.6_2": "Please answer the following questions honestly and quickly using the scale from 1 to 5. \n1 = not at all true of me5 = very true of me - I tend to feel compassion for people, even though I do not know them.",
+    "Q29.4_3": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - Your residence would lose any type of utility (e.g., water, electricity).",
+    "Q35.3_12": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Taxi Drivers",
+    "Q29.4_8": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - You or a member of your household would require rescuing.",
+    "Q34.2": "How many times have you evacuated from any residence prior to this disaster?",
+    "Q35.6_5": "Please answer the following questions honestly and quickly using the scale from 1 to 5. \n1 = not at all true of me5 = very true of me - I often have tender feelings toward people (strangers) when they seem to be in need.",
+    "Q29.3_9": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Cost of housing for the evacuation",
+    "Q32.11": "How many automobiles (car, SUV, pickup, or van) does your household currently have?",
+    "Q29.3_7": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Finding food and water during the evacuation",
+    "Q29.4_4": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - Your residence would suffer major structural or internal damage from possible fire.",
+    "Q35.3_4": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Your neighbors",
+    "Q35.4": "Generally speaking, would you say that it is possible to trust mostpeople or, on the contrary, that we can never be too cautious in our dealings withother people?",
+    "Q35.3_5": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - People from your town/city",
+    "Q29.3_6": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Finding gasoline during the evacuation",
+    "Q29.3_4": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Traffic during the evacuation",
+    "Q35.6_1": "Please answer the following questions honestly and quickly using the scale from 1 to 5. \n1 = not at all true of me5 = very true of me - When I hear about someone (a stranger) going through a difficult time, I feel a great deal of compassion for him or her.",
+    "Q29.3_8": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Cost of transportation for the evacuation",
+    "Q29.4_5": "To what extent did you believe about the following items BEFORE you made an evacuation decision. - Your personal belongings in your residence would suffer major damage from possible fire.",
+    "Q35.3_6": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - People from other towns/cities",
+    "Q29.3_3": "To what extent were you worried about the following items BEFORE you made an evacuation decision. - Evacuation Process",
+    "Q35.3_9": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Local government",
+    "Q35.3_1": "We are going to mention some people in particular and we would like you to tell us if they are trustworthy or not. Do you find the following people trustworthy? - Members of your family"
+  },
+  "lineage": {
+    "age_band": "raw_matching_inputs.Q32.2",
+    "household_size_capped": "raw_matching_inputs.Q32.8_1",
+    "vehicle_count_capped": "raw_matching_inputs.Q32.11",
+    "income_band": "raw_matching_inputs.Q32.13",
+    "pet_or_livestock": "raw_household_trait_inputs.Q32.9",
+    "home_owner": "raw_household_trait_inputs.Q32.10",
+    "hazard_worry": "raw_person_trait_inputs.Q29.3_1,Q29.3_2",
+    "evacuation_friction": "raw_person_trait_inputs.Q29.3_3..Q29.3_9",
+    "home_person_threat": "raw_person_trait_inputs.Q29.4_1,Q29.4_2,Q29.4_4,Q29.4_5",
+    "infrastructure_rescue": "raw_person_trait_inputs.Q29.4_3,Q29.4_7,Q29.4_8",
+    "property_security": "raw_person_trait_inputs.Q29.4_6",
+    "work_obligation": "raw_person_trait_inputs.Q29.4_9",
+    "prior_evacuation_count_capped": "raw_person_trait_inputs.Q34.2",
+    "decision_participation_propensity": "raw_person_trait_inputs.Q34.4",
+    "trust_items": "raw_person_trait_inputs.Q35.3_1..Q35.3_12",
+    "general_trust": "raw_person_trait_inputs.Q35.4",
+    "helping_tendency": "raw_person_trait_inputs.Q35.6_1..Q35.6_5"
+  },
+  "source_tag": {
+    "q29_retrospective_pre_event_report": true
+  },
+  "notes": {
+    "q29_retrospective_pre_event_report": true,
+    "q34.4_not_coordinator_truth": true,
+    "q35.3_item_text_mapping": "generic positions only; no family/neighbor/government labels"
+  }
+}

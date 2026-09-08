@@ -1,0 +1,141 @@
+{
+  "git_sha": "39f5a686b6139ab68637a4f4de48baac6399c6f4",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_mechanism_v6_mock_pilot_full_seed101",
+      "total_steps": 10,
+      "step_minutes": 30,
+      "seed": 101
+    },
+    "llm": {
+      "decision_model": "mock",
+      "temperature": 0.0,
+      "max_concurrency": 16,
+      "budget_usd": 1.0,
+      "fallback_threshold": 0.01
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "V6_PROTOCOL_VALIDATION",
+      "metric_protocol_version": "v6",
+      "prompt_version": "carr_s_controlled_resident_v6",
+      "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 20,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4
+      ],
+      "depart_step": 5,
+      "coordination_deadline_step": 7,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 20,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 1.0,
+      "household_dm_delivery_probability": 1.0,
+      "community_message_delivery_probability": 0.15,
+      "v6_gate": {
+        "protocol_status": "FROZEN_FOR_ZERO_COST_VALIDATION",
+        "seeds": [
+          101,
+          202,
+          303,
+          404,
+          505,
+          606,
+          707,
+          808,
+          909,
+          1010
+        ],
+        "conditions": [
+          "full",
+          "full_minus_memory",
+          "full_minus_feedback",
+          "full_minus_planning",
+          "full_minus_interaction"
+        ],
+        "paid_execution_authorized": false,
+        "formal_seed_count_frozen": false,
+        "test_split_opened": false,
+        "pass_requirements": [
+          "all runs have VALID terminal status",
+          "zero fallback and zero invalid proposal or acceptance attempts",
+          "direct-message delivery is separated from community delivery",
+          "full interaction condition forms feasible household commitments",
+          "paired primary differences follow the predeclared positive direction"
+        ]
+      },
+      "metric_contract": {
+        "memory": {
+          "metric": "conditional_warning_retention_rate",
+          "denominator": "coordinators who actually received the warning",
+          "direction": "positive"
+        },
+        "feedback": {
+          "metric": "primary_to_alternate_update_rate",
+          "denominator": "decision residents with a recorded primary-route plan",
+          "direction": "positive"
+        },
+        "planning": {
+          "metric": "successful_replan_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        },
+        "interaction": {
+          "metric": "post_closure_feasible_commitment_rate",
+          "denominator": "controlled households",
+          "direction": "positive"
+        }
+      },
+      "scenario_controls": [
+        "All coordinators receive the controlled warning to guarantee the memory opportunity.",
+        "Household direct messages deliver with probability 1.0 for mechanism identification.",
+        "Community propagation retains a separate probability of 0.15.",
+        "Proposals must schedule departure no earlier than the recipient processing phase.",
+        "Accepted commitments are validated against household membership, vehicle ownership, and time feasibility.",
+        "The primary route closes at paired-seed-selected step 3 or 4, before the controlled departure checkpoint.",
+        "This validation is zero-cost wiring evidence, not a Carr empirical result or formal LLM effect estimate."
+      ],
+      "condition": "full"
+    }
+  },
+  "models": [
+    "mock"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "models_config": {
+    "path": null,
+    "sha256": null
+  },
+  "credential_environment_name": null,
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "826349c5d73928f1b8ccba9aad9938449d69b0943d3d590c4191fec499271962"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "eab59e62d72a380be688f1af11a2b7c197433b63e17be8365414f99af4946a9a"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "c066e6cae0476c71aa48b40d68b69a1dc71d5d5c05291b48c301b653e0907e89"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "94ea13c27590a05d8689cdca4406da52079347fcf6bbab28cbadabf216617052"
+    }
+  }
+}

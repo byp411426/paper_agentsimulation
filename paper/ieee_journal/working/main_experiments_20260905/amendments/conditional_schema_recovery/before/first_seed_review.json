@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "freeze_sha256": "57510fc89f5114e3a5f1eccea0210e9bb7c5a72ff385f0990f14859e187a17bf",
+  "reviewed_at": 1788610686.204389,
+  "attempt": 3,
+  "complete_steps": 25,
+  "logical_decisions": 247,
+  "metric_denominators": {
+    "decision_residents": 31,
+    "all_households": 24,
+    "multi_decision_households": 7
+  },
+  "checks": [
+    "25 complete steps and all 44 members accounted for",
+    "247 decisions correspond to 94 new and 153 cached model responses; no failed or fallback decisions",
+    "13 executed parties checked against locations, current intents, times and route constraints",
+    "76 delivered recipient events checked for graph bounds and delivery/processing time order",
+    "all 6 multi-decision commitment versions backed by actual message acceptance",
+    "two household joint departures after route closure and replanning verified at steps12 and14",
+    "code/input/model hashes match frozen version",
+    "per-seed plot rendered and visually reviewed; no behavior-success threshold used",
+    "cache replay runtime and historical attempt cost separately reported"
+  ],
+  "original_review_freeze_sha256": "06ca8a7017c1b09d477f3e8a0c1a6e6b31a70e31e36bb125bd6ca957d5da6c7e",
+  "transport_amendment_review": {
+    "time_utc": "2026-09-05T16:06:32.529980+00:00",
+    "original_review": "amendments/concurrency_limit_3/before/first_seed_review.json",
+    "old_freeze": "amendments/concurrency_limit_3/before/freeze.json",
+    "scientific_inputs_and_behavior_code_unchanged": true,
+    "24hh_config_unchanged": true,
+    "100hh_only_concurrency_and_wall_limit_changed": true,
+    "offline_replay": "amendments/concurrency_limit_3/offline_replay_check.json",
+    "all_366_cached_responses_reused": true,
+    "nine_complete_snapshots_byte_identical": true
+  }
+}

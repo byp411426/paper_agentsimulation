@@ -1,0 +1,15 @@
+{
+  "reason": "First attempt stopped at step 5 after a 120-second timeout; do not select on behavioral outcome",
+  "source_attempt": "real",
+  "destination_attempt": "real_r2",
+  "timeout_seconds": 300,
+  "sdk_retries": 0,
+  "gateway_attempts": 1,
+  "max_new_provider_requests": 92,
+  "max_wall_seconds": 1000,
+  "replay": "new run from initial state, isolated copy of successful request cache, no event-log splicing",
+  "implementation_changed": false,
+  "model_prompt_cohort_seed_changed": false,
+  "no_further_automatic_recovery": true,
+  "launcher_sha256": "5f37fe5b50d76e467b6a1b761c50163a13f1a3f9d5c7b36ab7d047d747e52c6e"
+}

@@ -1,0 +1,142 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r7",
+  "audit_status": "COMPLETE_VALID",
+  "primary_manipulation_checks": [
+    {
+      "module": "feedback",
+      "metric": "preclosure_primary_to_postclosure_alternate_update_rate",
+      "mean_diff": 0.9635416666666666,
+      "sd_diff": 0.04956009131867244,
+      "mcse": 0.014306766031948985,
+      "ci95": [
+        0.9320526869414438,
+        0.9950306463918894
+      ],
+      "positive_fraction": 1.0,
+      "dz": 19.441886425734634,
+      "variance_informative": true
+    },
+    {
+      "module": "interaction",
+      "metric": "post_closure_feasible_commitment_rate",
+      "mean_diff": 0.9375,
+      "sd_diff": 0.08427498280790525,
+      "mcse": 0.024328092005047593,
+      "ci95": [
+        0.8839542305235462,
+        0.9910457694764538
+      ],
+      "positive_fraction": 1.0,
+      "dz": 11.124297730643494,
+      "variance_informative": true
+    },
+    {
+      "module": "memory",
+      "metric": "conditional_warning_retention_rate",
+      "mean_diff": 1.0,
+      "sd_diff": 0.0,
+      "mcse": 0.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "positive_fraction": 1.0,
+      "dz": null,
+      "variance_informative": false
+    },
+    {
+      "module": "planning",
+      "metric": "successful_postclosure_replan_rate",
+      "mean_diff": 0.90625,
+      "sd_diff": 0.09422229518055113,
+      "mcse": 0.027199633743077788,
+      "ci95": [
+        0.846384009771558,
+        0.966115990228442
+      ],
+      "positive_fraction": 1.0,
+      "dz": 9.61821189203066,
+      "variance_informative": true
+    }
+  ],
+  "downstream_outcomes": [
+    {
+      "module": "feedback",
+      "metric": "closed_route_rejections_per_household",
+      "predicted_direction": "lower",
+      "mean_directional_diff": 6.541666666666667,
+      "sd_diff": 0.6706792124858247,
+      "mcse": 0.19360841193428857,
+      "ci95": [
+        6.115537425130389,
+        6.967795908202945
+      ],
+      "positive_fraction": 1.0,
+      "zero_fraction": 0.0,
+      "dz": 9.753793683899111,
+      "variance_informative": true
+    },
+    {
+      "module": "interaction",
+      "metric": "coordinated_departure_rate",
+      "predicted_direction": "higher",
+      "mean_directional_diff": 0.8125,
+      "sd_diff": 0.15539539012701525,
+      "mcse": 0.04485878516032959,
+      "ci95": [
+        0.7137664795623756,
+        0.9112335204376244
+      ],
+      "positive_fraction": 1.0,
+      "zero_fraction": 0.0,
+      "dz": 5.228597832508984,
+      "variance_informative": true
+    },
+    {
+      "module": "memory",
+      "metric": "complete_household_safe_departure_rate",
+      "predicted_direction": "higher",
+      "mean_directional_diff": -0.10416666666666667,
+      "sd_diff": 0.16713948085538036,
+      "mcse": 0.04824901213203408,
+      "ci95": [
+        -0.2103620263583551,
+        0.0020286930250217605
+      ],
+      "positive_fraction": 0.16666666666666666,
+      "zero_fraction": 0.25,
+      "dz": -0.6232319625115879,
+      "variance_informative": true
+    },
+    {
+      "module": "planning",
+      "metric": "complete_household_safe_departure_rate",
+      "predicted_direction": "higher",
+      "mean_directional_diff": 0.010416666666666666,
+      "sd_diff": 0.13545308368135395,
+      "mcse": 0.039101937162997306,
+      "ci95": [
+        -0.07564611675992614,
+        0.09647945009325948
+      ],
+      "positive_fraction": 0.4166666666666667,
+      "zero_fraction": 0.16666666666666666,
+      "dz": 0.07690239589651064,
+      "variance_informative": true
+    }
+  ],
+  "run_stats": {
+    "n_runs": 60,
+    "n_valid": 60,
+    "terminal_status_counts": {
+      "VALID": 60
+    },
+    "total_wall_clock_seconds": 75850.133016,
+    "mean_wall_clock_seconds": 1264.1688836,
+    "total_llm_calls": 6693,
+    "total_ok": 6693,
+    "total_cache": 0,
+    "total_failed": 0,
+    "total_fallback": 0
+  }
+}

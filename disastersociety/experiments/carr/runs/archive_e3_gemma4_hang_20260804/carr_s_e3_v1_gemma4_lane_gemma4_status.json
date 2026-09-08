@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e3_v1_gemma4",
+  "lane": "gemma4",
+  "pid": 45834,
+  "config": "experiments/carr/configs/carr_s_e3_v1_gemma4.yaml",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209
+  ],
+  "current_seed": 2303,
+  "state": "RUNNING",
+  "stop_reason": null
+}

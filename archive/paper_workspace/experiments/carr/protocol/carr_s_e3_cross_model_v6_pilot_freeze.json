@@ -1,0 +1,105 @@
+{
+  "protocol": "carr_s_e3_cross_model_v6_pilot.1",
+  "status": "PILOT_COMPLETED",
+  "evidence_status": "PILOT",
+  "freeze_date": "2026-08-01",
+  "claim": "The directions of the frozen v6 mechanism contrasts are not unique to the DeepSeek endpoint.",
+  "design": {
+    "reference_backend": "packy-deepseek-v4-flash",
+    "alternate_backends": [
+      "packy-qwen3.5-plus",
+      "packy-minimax-m2.7",
+      "packy-glm-5"
+    ],
+    "n_households_per_run": 2,
+    "seeds": [101, 202],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "prompt_version": "carr_s_controlled_resident_v6",
+    "metric_protocol_version": "v6",
+    "paired_unit": "seed-by-condition run",
+    "model_native_thinking_enabled": true,
+    "model_quality_ranking": false
+  },
+  "reuse": {
+    "e1_process_rows": "The full condition rows may also describe process-validity indicators; no separate multi-model E1 matrix is required.",
+    "not_multiplied_across_all_models": [
+      "E0 deterministic system verification",
+      "Carr-R auxiliary prediction",
+      "population synthesis and QA",
+      "prompt sensitivity",
+      "100/500/1000-agent system scale measurements"
+    ]
+  },
+  "execution": {
+    "maximum_concurrent_model_matrices": 2,
+    "maximum_concurrency_per_matrix": 4,
+    "maximum_total_in_flight_requests": 8,
+    "reason": "Each two-household run has at most four simultaneously awake decision residents; extra useful concurrency is at the model-matrix level.",
+    "continue_independent_of_effect_direction": true,
+    "abort_one_model_matrix_on_nonvalid_run": true,
+    "retry_policy": "Preserve the failed attempt and rerun only missing cells under a new run ID after diagnosis."
+  },
+  "adapter_amendment": {
+    "date": "2026-08-01",
+    "trigger": "MiniMax r1 returned action=propose twice, including the generic repair call, so the selected run terminated ABORTED.",
+    "change": "The common repair prompt now embeds the Pydantic JSON Schema and exact enum values.",
+    "scientific_scenario_prompt_or_metric_changed": false,
+    "observed_effect_direction_used": false,
+    "artifact_policy": "Preserve r1 and rerun only missing MiniMax cells under r2."
+  },
+  "minimax_tool_schema_amendment": {
+    "date": "2026-08-01",
+    "trigger": "MiniMax r2 repeated action=propose after receiving the full JSON Schema in the repair prompt.",
+    "change": "Use the provider-supported forced function schema as MiniMax's structured-output transport; do not map invalid enum values in application code.",
+    "scientific_scenario_prompt_or_metric_changed": false,
+    "observed_effect_direction_used": false,
+    "terminal_rule": "If the forced-schema r3 still fails, classify MiniMax as incompatible with this protocol and do not retry again."
+  },
+  "completion": {
+    "date": "2026-08-01",
+    "derived_summary": "experiments/carr/results/carr_s_e3_cross_model_v6_pilot_summary.json",
+    "selected_logical_cells": 40,
+    "selected_terminal_status_counts": {"VALID": 40},
+    "selected_logical_decisions": 944,
+    "selected_failed_decisions": 0,
+    "selected_fallback_decisions": 0,
+    "technical_aborted_attempts_excluded": 4,
+    "positive_model_seed_pairs": {
+      "memory": "8/8",
+      "feedback": "3/8",
+      "planning": "6/8",
+      "interaction": "6/8"
+    },
+    "formal_seed_count_frozen": false,
+    "formal_claim_allowed": false
+  },
+  "primary_metrics": {
+    "memory": "conditional_warning_retention_rate",
+    "feedback": "primary_to_alternate_update_rate",
+    "planning": "successful_replan_rate",
+    "interaction": "post_closure_feasible_commitment_rate"
+  },
+  "frozen_sources": [
+    {"path": "ds/interaction/engine.py", "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"},
+    {"path": "ds/interaction/messages.py", "sha256": "b57db984262c2484fd26ddd30e2fecdb6174b9d40383017d73f2ae6b47abed2e"},
+    {"path": "ds/households/state.py", "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"},
+    {"path": "ds/agents/carr.py", "sha256": "eab59e62d72a380be688f1af11a2b7c197433b63e17be8365414f99af4946a9a"},
+    {"path": "ds/agents/decide.py", "sha256": "19f622f06ca1f57ab8fa20bb43901d4e54151728bd8c88a2dce49e0cf30cd7b4"},
+    {"path": "experiments/carr/runner.py", "sha256": "cb0f1b6a2f643aced1a9ed6c7d012d1036ecace0975edab195270d144a6c12e9"},
+    {"path": "ds/kernel/engine.py", "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"},
+    {"path": "ds/llm/gateway.py", "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"},
+    {"path": "ds/llm/backends.py", "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"},
+    {"path": "configs/models_cross_model.yaml", "sha256": "32bb3a3fa568242c9791e03b2cb6c08ae4f61a13fcf2eaf6ee5d543d08c548bf"},
+    {"path": "experiments/carr/configs/carr_s_e3_cross_model_v6_pilot.yaml", "sha256": "c3fa2d0498768866860767b752b321485ece68bc217c91892a945087102ce961"},
+    {"path": "scripts/run_carr_backend_pilot.py", "sha256": "1c909c4da00afa179b615e56ef67c0cf1a2c9b5c879299695bf9258ef4928be0"},
+    {"path": "scripts/summarize_carr_e3_cross_model_v6.py", "sha256": "3d59ab6fd27081d3769b07738a3f763abca8704495ce9014dbf0eca1fd642dcc"},
+    {"path": "experiments/carr/results/carr_s_e3_cross_model_v6_pilot_summary.json", "sha256": "0efef93ed6c644a7de07fc072007226ee880d9ec5c392c5d6e8d7b57c44e5051"}
+  ],
+  "claim_boundary": "This completed bounded pilot evaluates endpoint sensitivity only. It cannot establish Carr empirical validity, population representativeness, model ranking, a formal seed count, universal model independence, or a historical closure reconstruction."
+}

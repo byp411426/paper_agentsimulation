@@ -1,0 +1,21 @@
+{
+  "protocol_id": "carr_s_e3_v1_qwen",
+  "lane": "qwen",
+  "pid": 21477,
+  "config": "experiments/carr/configs/carr_s_e3_v1_qwen.yaml",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "current_seed": null,
+  "state": "COMPLETE",
+  "stop_reason": null
+}

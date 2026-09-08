@@ -1,0 +1,74 @@
+{
+  "run_status": "ABORTED",
+  "completed_steps": 4,
+  "households": [
+    {
+      "household": "H1",
+      "household_id": "syn_t001_h0000001",
+      "members": 1,
+      "decision_residents": 1,
+      "vehicles": 1,
+      "safe_members": 0,
+      "unknown_members": 0,
+      "state": "尚无人到达安全区"
+    },
+    {
+      "household": "H2",
+      "household_id": "syn_t001_h0000002",
+      "members": 2,
+      "decision_residents": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "unknown_members": 0,
+      "state": "尚无人到达安全区"
+    },
+    {
+      "household": "H3",
+      "household_id": "syn_t001_h0000005",
+      "members": 6,
+      "decision_residents": 2,
+      "vehicles": 1,
+      "safe_members": 0,
+      "unknown_members": 0,
+      "state": "尚无人到达安全区"
+    },
+    {
+      "household": "H4",
+      "household_id": "syn_t001_h0000007",
+      "members": 3,
+      "decision_residents": 2,
+      "vehicles": 0,
+      "safe_members": 0,
+      "unknown_members": 0,
+      "state": "尚无人到达安全区"
+    }
+  ],
+  "last_metrics": {
+    "step": 4,
+    "hours": 2.0,
+    "official_recipients": 1,
+    "decision_departed": 0,
+    "multi_member_agreement_households": 0,
+    "all_safe_households": 0,
+    "unknown_members": 0
+  },
+  "action_counts": {
+    "prepare": 1,
+    "evacuate": 1
+  },
+  "commitment_states": {
+    "accepted": 1
+  },
+  "automatic_commitments": 1,
+  "message_commitments": 0,
+  "real_successful_decisions": 3,
+  "cached_decisions": 0,
+  "committed_decisions": 2,
+  "call_status_counts": {
+    "ok": 3,
+    "failed": 1
+  },
+  "violations": [],
+  "elapsed_seconds": 177.24,
+  "provider_requests": 4
+}

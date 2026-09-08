@@ -1,0 +1,26 @@
+{
+  "protocol_id": "carr_s_e3_v1_qwen36",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_BOUNDED_CROSS_MODEL_REPLICATION_LOCAL",
+  "basis": "User 2026-08-04 instruction to switch the E3 lane to the locally deployed qwen3.6-27B-fp8 (same seeds, conditions and metrics as the qwen27b/gemma4 local lanes).",
+  "design": {
+    "per_model": {
+      "seeds": [2107, 2209, 2303, 2411],
+      "conditions": ["full", "full_minus_feedback", "full_minus_interaction"],
+      "n_runs": 12
+    },
+    "total_runs": 12,
+    "cohort_prompt_scenario": "identical to carr_s_e2_v8_formal_r7 and the qwen27b/gemma4 local lanes",
+    "metrics": "v8 frozen summarizer; model-internal paired effect and same-seed cross-model difference"
+  },
+  "transport": {
+    "server": "10.13.22.212:8000 local vLLM",
+    "model": "/home/data/share/LLM_model/Qwen3.6-27B-FP8",
+    "gpu": "tensor-parallel 2",
+    "structured_output": "vLLM guided json_schema (structured_output_mode: json_schema)",
+    "cost": "local deployment, no proxy billing"
+  },
+  "stop_rule": "Lane stops on first exception or non-three-for-three-VALID batch; artifacts preserved and excluded from scientific pairs pending an audited recovery amendment.",
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "claim_boundary": "Limited cross-model direction sensitivity in a Carr-informed controlled scenario; not provider independence, not empirical validation."
+}

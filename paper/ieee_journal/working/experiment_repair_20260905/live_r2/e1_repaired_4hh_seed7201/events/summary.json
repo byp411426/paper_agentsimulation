@@ -1,0 +1,81 @@
+{
+  "run_seed": 7201,
+  "planned_steps": 12,
+  "completed_steps": 11,
+  "last_completed_step": 12,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 12,
+    "route_state": {
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000007": -104.0339241862599
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {
+        "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000001_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000001_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000001:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000002": {},
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000007": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "controlled_safe_zone",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')"
+    }
+  },
+  "gateway": {
+    "run_id": "e1_repaired_4hh_seed7201",
+    "spent": 0.293438,
+    "n_ok": 13,
+    "n_cache": 11,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 67030,
+    "live_completion_tokens": 226408,
+    "logical_prompt_tokens": 104503,
+    "logical_completion_tokens": 301354
+  },
+  "wall_clock_seconds": 951.407659,
+  "reason_code": "UNHANDLED_EXCEPTION",
+  "abort_reason": "CancelledError: "
+}

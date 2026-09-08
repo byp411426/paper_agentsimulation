@@ -1,0 +1,22 @@
+{
+  "protocol_id": "carr_s_e3a_prompt_sensitivity",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_PROMPT_SENSITIVITY",
+  "basis": "User 2026-08-04 instruction to start E3a equivalent-prompt sensitivity on the frozen v8 semantics.",
+  "design": {
+    "variants": ["v8a", "v8b"],
+    "per_variant": {
+      "seeds": [2107, 2209, 2303, 2411],
+      "conditions": ["full", "full_minus_feedback", "full_minus_interaction"],
+      "n_runs": 12
+    },
+    "total_runs": 24,
+    "invariance": "Same state JSON, schema, mechanism switches and action set as carr_s_controlled_resident_v8; only system instruction wording differs.",
+    "model": "opencode-deepseek-v4-flash (OpenCode Go gateway)",
+    "metrics": "v8 frozen summarizer; variant-internal paired effect and same-seed variant comparison"
+  },
+  "stop_rule": "Each variant lane stops on first exception or non-three-for-three-VALID batch; artifacts preserved and excluded from scientific pairs pending an audited recovery amendment.",
+  "selection_rule": "No direction-based prompt selection; both variants are reported regardless of interim direction.",
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "claim_boundary": "Prompt-wording sensitivity on one gateway/model; not evidence of prompt invariance across models or providers."
+}

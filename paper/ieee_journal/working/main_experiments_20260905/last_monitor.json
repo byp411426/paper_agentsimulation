@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-05T14:15:06.861660+00:00",
+  "accepted_runs": 3,
+  "last_completed_seed": 9401,
+  "last_completed_scale": 24,
+  "additional_review_passed": true,
+  "current_scale": 100,
+  "current_seed": 101,
+  "status": "WAITING_FOR_PROVIDER_CREDIT",
+  "checked_at_utc": "2026-09-06T03:19:04.532583+00:00",
+  "completed": 3,
+  "total": 5,
+  "current": {
+    "job": "100hh_seed101",
+    "attempt": 3,
+    "complete_steps": 24,
+    "successful_cached_responses": 774,
+    "step25_missing_decisions": 43
+  },
+  "recovery": "conditional_schema_recovery: four offline replays passed; real prefix byte-identical; original seed sequence continues serially",
+  "active_process_count": 0,
+  "blocking_reason": "PROVIDER_CREDIT_EXHAUSTED",
+  "user_notified": true,
+  "paid_processes_running": false
+}

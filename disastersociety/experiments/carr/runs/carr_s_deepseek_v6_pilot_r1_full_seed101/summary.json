@@ -1,0 +1,54 @@
+{
+  "run_seed": 101,
+  "planned_steps": 10,
+  "completed_steps": 2,
+  "last_completed_step": 3,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 3,
+    "hazard_distance_m": 3900.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 2,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 2,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 1,
+    "n_safe_dependents": 2,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 1,
+    "rejections": {},
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_deepseek_v6_pilot_r1_full_seed101",
+    "spent": 0.035359,
+    "n_ok": 4,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 1,
+    "fallback_rate": 0.2,
+    "live_prompt_tokens": 7354,
+    "live_completion_tokens": 28005,
+    "logical_prompt_tokens": 7354,
+    "logical_completion_tokens": 28005
+  },
+  "wall_clock_seconds": 321.435373,
+  "reason_code": "UNHANDLED_EXCEPTION",
+  "abort_reason": "CancelledError: "
+}

@@ -1,0 +1,20 @@
+{
+  "protocol_id": "carr_s_e3_v1_claude",
+  "lane": "claude",
+  "pid": 93756,
+  "config": "experiments/carr/configs/carr_s_e3_v1_claude.yaml",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209,
+    2303
+  ],
+  "current_seed": 2411,
+  "state": "STOPPED_NONVALID_BATCH",
+  "stop_reason": "seed 2411 did not finish three-for-three VALID"
+}

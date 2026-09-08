@@ -1,0 +1,24 @@
+{
+  "protocol_id": "carr_s_e3_v1_qwen27b",
+  "amendment_id": "r3_json_schema_transport_recovery_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_RECOVERY_RERUN",
+  "trigger": {
+    "type": "repeated_schema_invalid_transport",
+    "observed_error": "schema invalid after repair: ResidentDecision.action Field required at step 4, seed 2107 full. Occurred on two independent attempts (first agent syn_t047_h0000019_r002, second agent syn_t026_h0000012_r001), each after ~62-63 successful local calls.",
+    "affected_runs": [
+      "carr_s_e3_v1_qwen27b_full_seed2107 (ABORTED, attempt 1)",
+      "carr_s_e3_v1_qwen27b_full_seed2107 (ABORTED, attempt 2)"
+    ],
+    "lane_state": "STOPPED_NONVALID_BATCH",
+    "root_cause": "Local vLLM endpoint in default json_object mode does not force the full ResidentDecision schema; at replan decisions the model returns a partial JSON object without the required action field, and the one repair call repeats the same partial shape.",
+    "verification": "Direct probe against the same endpoint with response_format json_schema returns schema-compliant decisions (action present) in ~4s; gateway-level test with structured_output_mode json_schema returned a valid ResidentDecision."
+  },
+  "disposition": {
+    "old_attempts": "All prior carr_s_e3_v1_qwen27b artifacts (connection-error attempt and both schema-invalid attempts) archived under experiments/carr/runs/archive_e3_qwen27b_schema_20260804 and excluded; no cross-attempt splicing.",
+    "transport_change": "Local model registry entry local-qwen35-27b-fp8 now uses structured_output_mode=json_schema (vLLM guided JSON schema); ds/llm/backends.py gained an additive json_schema branch used only when a model entry requests it.",
+    "science_unchanged": "Same frozen E3 science config carr_s_e3_v1_qwen27b.yaml for prompt, seeds [2107,2209,2303,2411], conditions [full, full_minus_feedback, full_minus_interaction], metrics and scenario; no prompt or metric change.",
+    "rerun": "Full 4 seeds x 3 conditions rerun from scratch under the same protocol_id."
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

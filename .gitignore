@@ -1,0 +1,37 @@
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+# Private input data and respondent-level records
+**/Wong_Carr_Wildfire_Dataset.csv
+**/Wong_Carr_Wildfire_Survey.pdf
+**/survey_raw.csv
+**/survey_clean*.csv
+**/evaluation_respondents.csv
+**/eventpacks/*/restricted/
+**/eventpacks/*/raw/*
+!**/eventpacks/*/raw/README.md
+**/*_predictions.csv
+**/carr-r-*/
+
+# Runtime caches and build intermediates; experiment JSON/JSONL remain tracked
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.pid
+*.aux
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz

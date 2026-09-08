@@ -1,0 +1,54 @@
+{
+  "git_sha": "0361ddeedf7d85ba485b90fb35bdcc0f1b86612b",
+  "git_dirty": true,
+  "config": {
+    "run": {
+      "run_id": "carr_s_mechanism_pilot_full_seed505",
+      "total_steps": 8,
+      "step_minutes": 30,
+      "seed": 505
+    },
+    "llm": {
+      "decision_model": "mock",
+      "temperature": 0.0,
+      "max_concurrency": 16,
+      "budget_usd": 1.0,
+      "fallback_threshold": 0.01
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "case_semantics": "Carr-informed controlled mechanism scenario",
+      "eventpack_root": "eventpacks/carr_2018",
+      "n_households": 20,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step": 3,
+      "depart_step": 5,
+      "primary_route_id": "controlled_primary",
+      "alternate_route_id": "controlled_alternate",
+      "route_capacity_per_step": 100,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "population_scope": {
+        "source": "population/pilot_seed42_n1000",
+        "filter": "exactly two adults, one vehicle, one or two dependent members",
+        "purpose": "controlled mechanism identification, not population estimation"
+      },
+      "scenario_controls": [
+        "Initial official warning is delivered only to the household coordinator.",
+        "The primary abstract route closes at step 3.",
+        "The controlled departure checkpoint is step 5.",
+        "Both routes are abstract experimental resources, not historical Carr closures."
+      ],
+      "condition": "full"
+    }
+  },
+  "models": [
+    "mock"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario"
+}

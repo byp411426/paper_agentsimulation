@@ -1,0 +1,10 @@
+{
+  "run_id": "carr_100hh_seed42_20260719_223613",
+  "eventpack": "carr_2018",
+  "n_agents": 100,
+  "max_step": 48,
+  "seed": 42,
+  "model": "gpt-4o-mini",
+  "budget_usd": 0.1,
+  "timestamp": "2026-07-19T22:36:14.244033"
+}

@@ -1,0 +1,98 @@
+{
+  "model": "deepseek-v4-flash",
+  "n": 60,
+  "seeds": [
+    41
+  ],
+  "params": {
+    "P_MEDIA": 0.007,
+    "P_SOCIAL": 0.002,
+    "P_RELAY": 0.02,
+    "P_ENV": 0.04,
+    "K": 6,
+    "RULE_ORDER": [
+      0.8,
+      0.3
+    ],
+    "RULE_ENV": [
+      0.4,
+      0.15
+    ],
+    "calibration_note": "信息层按渠道边际粗校准;决策层未调,撤离率为样本外验证"
+  },
+  "truth": {
+    "official_push": 0.4985,
+    "media": 0.0418,
+    "neighbor": 0.0239,
+    "social": 0.009,
+    "none": 0.4269
+  },
+  "summary": {
+    "full": {
+      "order_cov_mean": 0.5666666666666667,
+      "order_cov_std": NaN,
+      "aware_mean": 0.6666666666666666,
+      "aware_std": NaN,
+      "evac_mean": 0.6,
+      "evac_std": NaN,
+      "l1_mean": 0.1015,
+      "l1_std": NaN,
+      "med_step": 6.0
+    },
+    "rule": {
+      "order_cov_mean": 0.5666666666666667,
+      "order_cov_std": NaN,
+      "aware_mean": 0.6666666666666666,
+      "aware_std": NaN,
+      "evac_mean": 0.55,
+      "evac_std": NaN,
+      "l1_mean": 0.1015,
+      "l1_std": NaN,
+      "med_step": 6.0
+    }
+  },
+  "per_run": [
+    {
+      "arm": "full",
+      "seed": 41,
+      "n": 60,
+      "order_coverage": 0.5666666666666667,
+      "any_awareness": 0.6666666666666666,
+      "env_share": 0.1,
+      "evac_rate": 0.6,
+      "channel_l1": 0.1015,
+      "sim_channels": {
+        "official_push": 0.5333333333333333,
+        "media": 0.0,
+        "neighbor": 0.03333333333333333,
+        "social": 0.0,
+        "none": 0.43333333333333335
+      },
+      "median_evac_step": 6.0,
+      "llm_calls": 46,
+      "llm_failures": 0,
+      "fail_rate": 0.0
+    },
+    {
+      "arm": "rule",
+      "seed": 41,
+      "n": 60,
+      "order_coverage": 0.5666666666666667,
+      "any_awareness": 0.6666666666666666,
+      "env_share": 0.1,
+      "evac_rate": 0.55,
+      "channel_l1": 0.1015,
+      "sim_channels": {
+        "official_push": 0.5333333333333333,
+        "media": 0.0,
+        "neighbor": 0.03333333333333333,
+        "social": 0.0,
+        "none": 0.43333333333333335
+      },
+      "median_evac_step": 6.0,
+      "llm_calls": 0,
+      "llm_failures": 0,
+      "fail_rate": 0.0
+    }
+  ]
+}

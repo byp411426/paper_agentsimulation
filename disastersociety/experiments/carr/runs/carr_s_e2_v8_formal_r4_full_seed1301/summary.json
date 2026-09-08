@@ -1,0 +1,56 @@
+{
+  "run_seed": 1301,
+  "planned_steps": 10,
+  "completed_steps": 3,
+  "last_completed_step": 4,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 4,
+    "hazard_distance_m": 3200.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "departure scheduled for a future step": 1
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e2_v8_formal_r4_full_seed1301",
+    "spent": 0.264634,
+    "n_ok": 53,
+    "n_cache": 0,
+    "n_failed": 5,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 63459,
+    "live_completion_tokens": 201175,
+    "logical_prompt_tokens": 63459,
+    "logical_completion_tokens": 201175
+  },
+  "wall_clock_seconds": 425.399353,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t035_h0000025_r003, step=4: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error."
+}

@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e3_v1_deepseek",
+  "amendment_id": "r2_balance_recovery_20260803",
+  "frozen_at": "2026-08-03",
+  "status": "FROZEN_RECOVERY_RERUN",
+  "trigger": {
+    "type": "provider_insufficient_balance",
+    "observed_error": "402 Insufficient Balance on the PACKY_API_KEY credential",
+    "affected_run": "carr_s_e3_v1_deepseek_full_minus_feedback_seed2107 (ABORTED)",
+    "lane_state": "STOPPED_NONVALID_BATCH",
+    "root_cause": "Keychain PACKY_API_KEY pointed to a depleted credential; user supplied a valid replacement key (verified HTTP 200 on /v1/models)."
+  },
+  "disposition": {
+    "old_attempt": "All prior carr_s_e3_v1_deepseek artifacts archived under experiments/carr/runs/archive_e3_deepseek_balance_abort_20260803 and excluded; no cross-attempt splicing.",
+    "rerun": "Full 4 seeds x 3 conditions rerun with the same frozen E3 science config; only credential fixed."
+  },
+  "science_unchanged": true,
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

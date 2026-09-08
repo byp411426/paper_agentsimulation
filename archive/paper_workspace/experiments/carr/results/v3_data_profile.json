@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "artifact_type": "empirical_data_profile_not_simulation",
+  "q9_answered": 330,
+  "evacuation_share": 0.8878787878787879,
+  "complete_departure_times": 292,
+  "warning_departure_pairs": 230,
+  "departure_before_reported_warning": 36,
+  "warning_to_departure_hours_nonnegative": {
+    "n": 194,
+    "median": 1.0
+  },
+  "measurement_notes": [
+    "warning channels are multi-label, not first-channel observations",
+    "stayers have no observed departure time and remain in the cumulative-incidence denominator",
+    "negative warning-to-departure delays are retained as an empirical sequence diagnostic",
+    "Q13.6 departure perceptions are excluded from pre-decision cognition"
+  ]
+}

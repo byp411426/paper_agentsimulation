@@ -1,0 +1,99 @@
+{
+  "status": "PILOT",
+  "case_semantics": "Carr-informed non-saturated controlled mechanism scenario",
+  "run_date": "2026-07-31",
+  "n_households_per_run": 20,
+  "n_seeds": 10,
+  "n_conditions": 5,
+  "n_runs": 50,
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606,
+    707,
+    808,
+    909,
+    1010
+  ],
+  "conditions": [
+    "full",
+    "full_minus_memory",
+    "full_minus_feedback",
+    "full_minus_planning",
+    "full_minus_interaction"
+  ],
+  "terminal_statuses": [
+    "VALID"
+  ],
+  "maximum_fallback_rate": 0.0,
+  "total_estimated_cost_usd": 0.0,
+  "paired_summary": [
+    {
+      "module": "feedback",
+      "metric": "primary_to_alternate_update_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 0.975,
+      "sd_paired_difference": 0.07905694150420949,
+      "mcse": 0.024999999999999998,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": true
+    },
+    {
+      "module": "interaction",
+      "metric": "coordinated_departure_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 0.48,
+      "sd_paired_difference": 0.22010098692292238,
+      "mcse": 0.069602043392737,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": true
+    },
+    {
+      "module": "memory",
+      "metric": "warning_retention_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 0.58,
+      "sd_paired_difference": 0.17029386365926402,
+      "mcse": 0.05385164807134504,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": true
+    },
+    {
+      "module": "planning",
+      "metric": "successful_replan_rate",
+      "n_seeds": 10,
+      "mean_paired_difference": 0.455,
+      "sd_paired_difference": 0.2488305983328149,
+      "mcse": 0.07868714422741917,
+      "positive_direction_fraction": 1.0,
+      "variance_informative": true
+    }
+  ],
+  "realized_full_condition_closure_step_counts": {
+    "3": 3,
+    "4": 2,
+    "5": 3,
+    "6": 2
+  },
+  "pilot_gate_assessment": {
+    "mechanism_paths_directionally_distinguishable": true,
+    "seed_variance_informative": true,
+    "next_action": "Use the controlled-mock variance to size the next declared-backend pilot; do not freeze the formal seed count until that backend pilot is complete."
+  },
+  "limitations": [
+    "Uses the deterministic mock decision policy rather than a publication-facing LLM backend.",
+    "Uses declared Bernoulli warning/message perturbations and abstract route closures rather than historical Carr exposure or closure probabilities.",
+    "Drop-one metrics are module-proximal and zero by construction when the named mechanism is disabled.",
+    "The controlled cohort is not population-representative.",
+    "No formal interval, significance, or empirical-validity claim is supported."
+  ],
+  "provenance": {
+    "config_path": "experiments/carr/configs/carr_s_mechanism_nonsaturated_pilot.yaml",
+    "config_sha256": "c9223ca71d48a1717bf3011018e3c2a8d86f45cda915e5f8a8a3a719f4bb2772",
+    "ignored_full_matrix_path": "experiments/carr/runs/carr_s_mechanism_nonsaturated_pilot/pilot_matrix.json",
+    "ignored_full_matrix_sha256": "6f6e531e4fa9f764cf343ec7573225c9123e6662b64578f0957db8d68fed1e8e"
+  }
+}

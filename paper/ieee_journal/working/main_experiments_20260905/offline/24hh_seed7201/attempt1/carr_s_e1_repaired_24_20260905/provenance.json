@@ -1,0 +1,10 @@
+{
+  "backend": "mock",
+  "seed": 7201,
+  "households": 24,
+  "freeze_sha256": "0390cc74a20b5c3f46e66dfe84b5120c839628fa37b8819b519dd8788bf644f5",
+  "resume_cache": null,
+  "model": "packy-deepseek-v4-flash",
+  "temperature": 0.0,
+  "hash_seed": "0"
+}

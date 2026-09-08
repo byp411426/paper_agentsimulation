@@ -1,0 +1,50 @@
+run:
+  run_id: carr_s_deepseek_backend_pilot_v3
+  total_steps: 8
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 4
+  budget_usd: 2.0
+  fallback_threshold: 0.01
+
+experiment:
+  evidence_status: PILOT
+  activity_type: BACKEND_PILOT
+  prompt_version: carr_s_controlled_resident_v3
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 2
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices:
+    - 3
+    - 4
+    - 5
+    - 6
+  depart_step: 5
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 8
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 0.65
+  social_message_delivery_probability: 0.25
+
+  phase_boundary:
+    purpose: backend behavior, schema adherence, cost, fallback, and variance estimation
+    formal_evidence: false
+    test_split_opened: false
+    historical_closure_reconstruction: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

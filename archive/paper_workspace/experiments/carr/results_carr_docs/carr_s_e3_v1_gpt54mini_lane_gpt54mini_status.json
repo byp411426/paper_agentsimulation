@@ -1,0 +1,21 @@
+{
+  "protocol_id": "carr_s_e3_v1_gpt54mini",
+  "lane": "gpt54mini",
+  "pid": 34694,
+  "config": "experiments/carr/configs/carr_s_e3_v1_gpt54mini.yaml",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "current_seed": null,
+  "state": "COMPLETE",
+  "stop_reason": null
+}

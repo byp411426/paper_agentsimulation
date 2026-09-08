@@ -1,0 +1,86 @@
+run:
+  run_id: carr_s_deepseek_v8_execution_feedback_pilot_r1
+  total_steps: 10
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 8
+  budget_usd: 1.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT
+  activity_type: V8_EXECUTION_FEEDBACK_BACKEND_PILOT
+  metric_protocol_version: v7
+  prompt_version: carr_s_controlled_resident_v8
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 4
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices: [3, 4]
+  depart_step: 5
+  coordination_deadline_step: 7
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 4
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 1.0
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.15
+  abort_matrix_on_nonvalid_run: true
+  route_observation_mode: feedback_gated
+  seed_controlled_initial_plan: true
+
+  execution_feedback_recheck:
+    paid_execution_authorized: true
+    authorization_basis: repeated explicit user authorization in the active task
+    seed: 101
+    condition: full
+    execute_regardless_of_direction: true
+    comparison_reference: carr_s_deepseek_v7_controlled_pilot_r2_full_seed101
+    development_targets:
+      - increase coordinated_departure_rate
+      - reduce dependent_left_behind_rejections
+      - reduce resource_conflict_rejections_per_household
+      - avoid repeated use of a vehicle already reserved by a departed member
+    changes:
+      - expose current_plan.last_failure when feedback is enabled
+      - expose recent execution feedback when feedback is enabled
+      - expose household vehicle reservation and occupancy state
+      - state exact action semantics for an accepted household commitment
+    no_change:
+      - model
+      - cohort selector
+      - seed
+      - controlled closure
+      - route asset
+      - metric definitions
+    formal_evidence: false
+    unbiased_prompt_comparison: false
+    carr_r_test_split_opened: false
+
+  claim_boundary:
+    purpose: >-
+      Development recheck of the execution-feedback repair on the previously
+      diagnosed seed 101 full condition. It may show whether the repair removes
+      the observed failure chain, but it is not a pre-registered prompt comparison.
+    formal_evidence: false
+    mechanism_effect_evidence: false
+    carr_empirical_validation: false
+    population_representative: false
+    test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

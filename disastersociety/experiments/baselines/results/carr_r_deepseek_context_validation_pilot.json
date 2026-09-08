@@ -1,0 +1,88 @@
+{
+  "status": "PILOT_VALIDATION_ONLY",
+  "track": "Carr-R",
+  "mode": "validation",
+  "test_split_opened": false,
+  "model_alias": "packy-deepseek-v4-flash",
+  "model_id": "openai/deepseek-v4-flash",
+  "prompt_version": "carr_r_fixed_preoutcome_context_v1",
+  "prompt_template_sha256": "f38e7fa833f162b2eca7c2553f0c98729adafbf4b9569e0251c5deef135e8115",
+  "features": [
+    "age_group",
+    "household_size",
+    "vehicle_count",
+    "income_bracket"
+  ],
+  "n_requested": 66,
+  "n_failed": 0,
+  "metrics": {
+    "n": 66,
+    "outcome_prevalence": 0.8939393939393939,
+    "predicted_positive_rate": 0.9696969696969697,
+    "accuracy": 0.8636363636363636,
+    "macro_f1": 0.4634146341463415,
+    "brier": 0.1451666666666667,
+    "ece": 0.19696969696969707,
+    "confusion_matrix_labels_0_1": [
+      [
+        0,
+        7
+      ],
+      [
+        2,
+        57
+      ]
+    ],
+    "decision_probability_consistency_rate": 1.0,
+    "conditional_stratified_bootstrap_95pct": {
+      "accuracy": [
+        0.8181818181818182,
+        0.8939393939393939
+      ],
+      "macro_f1": [
+        0.45,
+        0.472
+      ],
+      "brier": [
+        0.12722064393939395,
+        0.1645935227272727
+      ],
+      "ece": [
+        0.1752992424242425,
+        0.2546969696969697
+      ]
+    }
+  },
+  "gateway": {
+    "run_id": "carr-r-deepseek-carr_r_fixed_preoutcome_context_v1-validation",
+    "spent": 0.033972,
+    "n_ok": 66,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 21918,
+    "live_completion_tokens": 12054,
+    "logical_prompt_tokens": 21918,
+    "logical_completion_tokens": 12054
+  },
+  "pricing_status": "internal_budget_estimate_not_verified_proxy_billing",
+  "claim_boundary": "Validation-only fixed pre-outcome contextual one-shot baseline using the same four frozen demographic fields and one identical non-respondent-specific scenario checkpoint. The test split remains sealed. This is auxiliary Carr-R evidence, not a multi-step social simulation or platform-validity result.",
+  "provenance": {
+    "runner": {
+      "path": "experiments/baselines/run_carr_r_deepseek.py",
+      "sha256": "ffe5197c78afa961b34126e16d993b6e93a070f3834c1c2d4c7d6e2459029309"
+    },
+    "configuration": {
+      "path": "experiments/baselines/configs/carr_r_deepseek_context_validation.yaml",
+      "sha256": "dbba29deafef7441e207b1d4ee950f6e6696c17097f0e82485a82338149383c0"
+    },
+    "models_config_sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4",
+    "respondent_id_exported": false,
+    "credential_environment_name": "PACKY_API_KEY",
+    "credential_value_recorded": false,
+    "python": "3.13.5",
+    "litellm": "1.93.0",
+    "command": "uv run --extra ml python experiments/baselines/run_carr_r_deepseek.py"
+  }
+}

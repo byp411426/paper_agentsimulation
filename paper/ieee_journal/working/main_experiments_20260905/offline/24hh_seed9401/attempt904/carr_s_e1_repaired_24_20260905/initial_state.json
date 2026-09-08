@@ -1,0 +1,828 @@
+{
+  "world": {
+    "step": 0,
+    "route_state": {
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": 149.9529358801941,
+      "syn_t001_h0000002": -44.78809356889519,
+      "syn_t001_h0000003": -96.98450879330593,
+      "syn_t001_h0000004": 7.312487087221427,
+      "syn_t001_h0000005": 170.1766396080356,
+      "syn_t001_h0000006": -142.16300632017663,
+      "syn_t001_h0000007": 213.53264798276246,
+      "syn_t001_h0000008": -85.29040892541357,
+      "syn_t001_h0000009": 146.1950368777596,
+      "syn_t001_h0000010": -9.458650906172693,
+      "syn_t002_h0000001": 75.07490682439709,
+      "syn_t002_h0000002": -181.48949371624235,
+      "syn_t002_h0000003": -71.3860119402857,
+      "syn_t002_h0000004": 102.69908602385789,
+      "syn_t002_h0000005": -145.19374819775643,
+      "syn_t002_h0000006": 85.67028403628734,
+      "syn_t002_h0000007": 25.854466457579633,
+      "syn_t002_h0000008": 41.345197516436315,
+      "syn_t002_h0000009": 63.43894173099551,
+      "syn_t002_h0000010": 43.021704983993345,
+      "syn_t002_h0000011": -169.64649265706467,
+      "syn_t002_h0000012": 25.01312246559803,
+      "syn_t002_h0000013": 184.64634420595843,
+      "syn_t002_h0000014": 107.66104282568739
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {},
+      "syn_t001_h0000002": {},
+      "syn_t001_h0000003": {},
+      "syn_t001_h0000004": {},
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000006": {},
+      "syn_t001_h0000007": {},
+      "syn_t001_h0000008": {},
+      "syn_t001_h0000009": {},
+      "syn_t001_h0000010": {},
+      "syn_t002_h0000001": {},
+      "syn_t002_h0000002": {},
+      "syn_t002_h0000003": {},
+      "syn_t002_h0000004": {},
+      "syn_t002_h0000005": {},
+      "syn_t002_h0000006": {},
+      "syn_t002_h0000007": {},
+      "syn_t002_h0000008": {},
+      "syn_t002_h0000009": {},
+      "syn_t002_h0000010": {},
+      "syn_t002_h0000011": {},
+      "syn_t002_h0000012": {},
+      "syn_t002_h0000013": {},
+      "syn_t002_h0000014": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "('home', 'syn_t001_h0000001')",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000003_r001": "('home', 'syn_t001_h0000003')",
+      "syn_t001_h0000004_r001": "('home', 'syn_t001_h0000004')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000006_r001": "('home', 'syn_t001_h0000006')",
+      "syn_t001_h0000006_r002": "('home', 'syn_t001_h0000006')",
+      "syn_t001_h0000006_r003": "('home', 'syn_t001_h0000006')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000008_r001": "('home', 'syn_t001_h0000008')",
+      "syn_t001_h0000009_r001": "('home', 'syn_t001_h0000009')",
+      "syn_t001_h0000010_r001": "('home', 'syn_t001_h0000010')",
+      "syn_t002_h0000001_r001": "('home', 'syn_t002_h0000001')",
+      "syn_t002_h0000002_r001": "('home', 'syn_t002_h0000002')",
+      "syn_t002_h0000003_r001": "('home', 'syn_t002_h0000003')",
+      "syn_t002_h0000004_r001": "('home', 'syn_t002_h0000004')",
+      "syn_t002_h0000005_r001": "('home', 'syn_t002_h0000005')",
+      "syn_t002_h0000006_r001": "('home', 'syn_t002_h0000006')",
+      "syn_t002_h0000006_r002": "('home', 'syn_t002_h0000006')",
+      "syn_t002_h0000006_r003": "('home', 'syn_t002_h0000006')",
+      "syn_t002_h0000007_r001": "('home', 'syn_t002_h0000007')",
+      "syn_t002_h0000008_r001": "('home', 'syn_t002_h0000008')",
+      "syn_t002_h0000008_r002": "('home', 'syn_t002_h0000008')",
+      "syn_t002_h0000008_r003": "('home', 'syn_t002_h0000008')",
+      "syn_t002_h0000009_r001": "('home', 'syn_t002_h0000009')",
+      "syn_t002_h0000009_r002": "('home', 'syn_t002_h0000009')",
+      "syn_t002_h0000010_r001": "('home', 'syn_t002_h0000010')",
+      "syn_t002_h0000010_r002": "('home', 'syn_t002_h0000010')",
+      "syn_t002_h0000011_r001": "('home', 'syn_t002_h0000011')",
+      "syn_t002_h0000011_r002": "('home', 'syn_t002_h0000011')",
+      "syn_t002_h0000012_r001": "('home', 'syn_t002_h0000012')",
+      "syn_t002_h0000013_r001": "('home', 'syn_t002_h0000013')",
+      "syn_t002_h0000013_r002": "('home', 'syn_t002_h0000013')",
+      "syn_t002_h0000013_r003": "('home', 'syn_t002_h0000013')",
+      "syn_t002_h0000014_r001": "('home', 'syn_t002_h0000014')",
+      "syn_t002_h0000014_r002": "('home', 'syn_t002_h0000014')"
+    }
+  },
+  "agents": [
+    {
+      "id": "syn_t001_h0000001_r001",
+      "household_id": "syn_t001_h0000001",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000002_r001",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000002_r002",
+      "household_id": "syn_t001_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000003_r001",
+      "household_id": "syn_t001_h0000003",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000004_r001",
+      "household_id": "syn_t001_h0000004",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000005_r001",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000005_r002",
+      "household_id": "syn_t001_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000006_r001",
+      "household_id": "syn_t001_h0000006",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000007_r001",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000007_r003",
+      "household_id": "syn_t001_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000008_r001",
+      "household_id": "syn_t001_h0000008",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000009_r001",
+      "household_id": "syn_t001_h0000009",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t001_h0000010_r001",
+      "household_id": "syn_t001_h0000010",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000001_r001",
+      "household_id": "syn_t002_h0000001",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000002_r001",
+      "household_id": "syn_t002_h0000002",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000003_r001",
+      "household_id": "syn_t002_h0000003",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000004_r001",
+      "household_id": "syn_t002_h0000004",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000005_r001",
+      "household_id": "syn_t002_h0000005",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000006_r001",
+      "household_id": "syn_t002_h0000006",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000007_r001",
+      "household_id": "syn_t002_h0000007",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000008_r001",
+      "household_id": "syn_t002_h0000008",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000009_r001",
+      "household_id": "syn_t002_h0000009",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000009_r002",
+      "household_id": "syn_t002_h0000009",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000010_r001",
+      "household_id": "syn_t002_h0000010",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000010_r002",
+      "household_id": "syn_t002_h0000010",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000011_r001",
+      "household_id": "syn_t002_h0000011",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000012_r001",
+      "household_id": "syn_t002_h0000012",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000013_r001",
+      "household_id": "syn_t002_h0000013",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000013_r003",
+      "household_id": "syn_t002_h0000013",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000014_r001",
+      "household_id": "syn_t002_h0000014",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    },
+    {
+      "id": "syn_t002_h0000014_r002",
+      "household_id": "syn_t002_h0000014",
+      "evacuating": false,
+      "evac_step": -1,
+      "inbox": [],
+      "memories": [],
+      "perceived_routes": {
+        "tiger_primary": {
+          "open": true,
+          "name": "tiger_primary"
+        },
+        "tiger_alternate": {
+          "open": true,
+          "name": "tiger_alternate"
+        }
+      },
+      "my_commitments": [],
+      "current_plan": null,
+      "plan_history": [],
+      "recent_execution_feedback": [],
+      "receipts": []
+    }
+  ]
+}

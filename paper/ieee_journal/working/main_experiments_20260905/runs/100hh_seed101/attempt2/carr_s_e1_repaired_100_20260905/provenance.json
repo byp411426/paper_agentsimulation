@@ -1,0 +1,12 @@
+{
+  "backend": "real",
+  "seed": 101,
+  "households": 100,
+  "freeze_sha256": "57510fc89f5114e3a5f1eccea0210e9bb7c5a72ff385f0990f14859e187a17bf",
+  "resume_cache": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/100hh_seed101/attempt1/cache.sqlite",
+  "model": "packy-deepseek-v4-flash",
+  "temperature": 0.0,
+  "hash_seed": "0",
+  "max_concurrency": 3,
+  "wall_clock_limit_seconds": 43200
+}

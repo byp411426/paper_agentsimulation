@@ -1,0 +1,79 @@
+{
+  "status": "PILOT",
+  "activity_type": "V8_EXECUTION_FEEDBACK_DEVELOPMENT_AND_CONFIRMATION_SUMMARY",
+  "decision_model": "packy-deepseek-v4-flash",
+  "backend_mode": "thinking enabled, reasoning effort high",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "n_households_per_run": 4,
+  "development_seed": 101,
+  "frozen_confirmation_seeds": [404, 505],
+  "run_status_counts": {"VALID": 3},
+  "gateway_totals": {
+    "n_ok": 125,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "internal_estimated_cost_usd": 0.734953
+  },
+  "runs": [
+    {
+      "seed": 101,
+      "role": "posthoc_development_recheck",
+      "coordinated_departure_rate": 1.0,
+      "successful_postclosure_replan_rate": 1.0,
+      "dependent_left_behind_rejections": 0,
+      "resource_conflict_rejections_per_household": 0.0,
+      "n_logical_decisions": 40,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v8_execution_feedback_pilot_r1_full_seed101",
+      "summary_sha256": "25b9f22a2a5baea0c6dafd392777af8f287132c1d28b127e876ec37cce7da918",
+      "mechanism_metrics_sha256": "fc0ebf0315ebe9157d57e549ccf6c4801821fa5e47493e62005861cfaf0b3863",
+      "provenance_sha256": "127ec7283daa308a24fda43b9116eeba0295a4be955e45a071eb6497e51c9904"
+    },
+    {
+      "seed": 404,
+      "role": "frozen_confirmation",
+      "coordinated_departure_rate": 0.75,
+      "successful_postclosure_replan_rate": 1.0,
+      "dependent_left_behind_rejections": 1,
+      "resource_conflict_rejections_per_household": 0.25,
+      "n_logical_decisions": 45,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v8_execution_feedback_confirm_seed404_r1_full_seed404",
+      "summary_sha256": "b1ccd697f252c8e72abd70bc3b66199cf34b71a72e968d35635b7d84dc478d84",
+      "mechanism_metrics_sha256": "c8e6b035964dc6235f6750c654beab3b4a25c6e8e4f5d8ac950cdd358974def9",
+      "provenance_sha256": "90dca598869ab82e40fff763644a7c2e6e801a7533529eba18a71805aca11d55"
+    },
+    {
+      "seed": 505,
+      "role": "frozen_confirmation",
+      "coordinated_departure_rate": 1.0,
+      "successful_postclosure_replan_rate": 1.0,
+      "dependent_left_behind_rejections": 0,
+      "resource_conflict_rejections_per_household": 0.0,
+      "n_logical_decisions": 40,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_v8_execution_feedback_confirm_seed505_r1_full_seed505",
+      "summary_sha256": "eb92ec3b3950c9bcabd14cf2f11b4b235fa68c8eeb17588fe355bcaa71b35262",
+      "mechanism_metrics_sha256": "e232d00c89607f5fab092c7e1a9e8d1623ebe30ecfe75370a56a025ffeb37deb",
+      "provenance_sha256": "b1f4310f19e5dfdfee763da8e6175bec81a36f283286b88537a4c322231daefa"
+    }
+  ],
+  "descriptive_summary_all_three_seeds": {
+    "mean_coordinated_departure_rate": 0.9166666666666666,
+    "mean_successful_postclosure_replan_rate": 1.0,
+    "total_dependent_left_behind_rejections": 1,
+    "mean_resource_conflict_rejections_per_household": 0.08333333333333333,
+    "total_logical_decisions": 125
+  },
+  "v7_seed101_reference": {
+    "coordinated_departure_rate": 0.25,
+    "successful_postclosure_replan_rate": 0.75,
+    "dependent_left_behind_rejections": 3,
+    "resource_conflict_rejections_per_household": 4.0,
+    "n_logical_decisions": 54
+  },
+  "interpretation": "The posthoc development seed and both frozen confirmation seeds support the execution-feedback repair. The result justifies keeping the repair, but does not estimate a formal prompt effect or replace a full v8 mechanism matrix.",
+  "claim_boundary": [
+    "Seed101 was used to diagnose and design the repair, so its before-after change is posthoc development evidence.",
+    "Seeds404/505 were frozen before their v8 results, but no matched v7 runs were predeclared for them.",
+    "All results remain PILOT and are not Carr empirical validation, formal mechanism effects, or population estimates."
+  ]
+}

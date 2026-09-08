@@ -1,0 +1,1962 @@
+[
+  {
+    "step": 3,
+    "resident": "syn_t001_h0000004_r001",
+    "household": "H4",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Single adult at home; voluntary official notice received. Hazard is ~8.3 km away and both routes are open, so no imminent need to evacuate. Vehicle is available; preparing now is prudent.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Stay ready to evacuate if official guidance or hazard conditions change.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 3,
+          "description": "Assemble a small go-bag and verify the vehicle and tiger_primary route are ready."
+        },
+        {
+          "action": "monitor",
+          "due_step": 4,
+          "description": "Watch for new official guidance and hazard movement; if needed, evacuate via tiger_primary."
+        }
+      ],
+      "reason": "No mandatory order has been received, the hazard is about 8 km away, and the household has an available vehicle. Preparing now preserves the ability to evacuate quickly if conditions worsen."
+    }
+  },
+  {
+    "step": 3,
+    "resident": "syn_t001_h0000008_r001",
+    "household": "H8",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation order received; hazard is ~8 km away but I am 88 with physical limitations and live alone. Waiting risks needing help after roads close, so I will leave now while tiger_primary is open.",
+    "departure_mode": "solo",
+    "plan_update": null
+  },
+  {
+    "step": 3,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice received; hazard about 8.4 km away with roads open. No immediate threat, but household has vehicle and pet. I will prepare go-bag and monitor, with plan to leave if danger approaches or order becomes mandatory.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Prepare to evacuate safely with partner and pet if hazard grows",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 4,
+          "description": "Pack go-bags, pet carrier/supplies, important documents and secure home"
+        },
+        {
+          "action": "monitor",
+          "due_step": 5,
+          "description": "Re-check route status and official guidance for any mandatory order"
+        },
+        {
+          "action": "depart",
+          "due_step": 6,
+          "description": "If threat worsens or order becomes mandatory, take vehicle on open route to safety"
+        }
+      ],
+      "reason": "Voluntary order and significant distance allow time to prepare while staying ready to act."
+    }
+  },
+  {
+    "step": 3,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice received; hazard is about 8.4 km away and both routes are open. We have no vehicle and my 15-year-old son requires help, so I should prepare now and seek transportation assistance.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Be ready to evacuate self and dependent son when needed, with external transportation help since we have no vehicle.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 4,
+          "description": "Pack go bags for self and son, include medications/pet needs/important documents."
+        },
+        {
+          "action": "seek_help",
+          "due_step": 5,
+          "description": "Ask nearby households/officials for evacuation transportation for two people plus pet."
+        },
+        {
+          "action": "monitor",
+          "due_step": 6,
+          "description": "Reassess hazard distance, route status, and evacuation order to decide whether to evacuate."
+        }
+      ],
+      "reason": "Hazard is still 8km away but evacuation notice is issued. No vehicle and dependent child requires assistance, so preparing and arranging transport is prudent."
+    }
+  },
+  {
+    "step": 3,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation advisory received; hazard is ~8.3 km away and both routes are open. I live alone with a pet and have a vehicle, so I should prepare now and monitor for escalation.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Be ready to evacuate if the voluntary notice escalates.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 4,
+          "description": "Gather go-bag, pet supplies, important documents, and ensure vehicle fuel is adequate."
+        },
+        {
+          "action": "monitor",
+          "due_step": 5,
+          "description": "Check official channels and hazard updates; be ready to leave if conditions worsen."
+        }
+      ],
+      "reason": "Voluntary evacuation order received, hazard is still distant, and routes are open, so no immediate evacuation is necessary, but preparation improves readiness."
+    }
+  },
+  {
+    "step": 4,
+    "resident": "syn_t001_h0000004_r001",
+    "household": "H4",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation order received, but hazard is about 8 km away and routes remain open; I am prepared and will continue monitoring before deciding to evacuate.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Remain prepared and monitor conditions for any escalation that would require evacuation.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 5,
+          "description": "Watch for official updates and changes in hazard distance."
+        },
+        {
+          "action": "prepare",
+          "due_step": 5,
+          "description": "Keep go-bag and vehicle ready in case immediate evacuation becomes necessary."
+        }
+      ],
+      "reason": "Hazard is not imminent, routes are open, and I am already prepared; staying to monitor while remaining ready is appropriate."
+    }
+  },
+  {
+    "step": 4,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice is active but no mandatory order yet. Hazard is about 8.1 km away and both routes are open. Household remains home and prepared; continue readiness and monitor for escalation.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Keep household ready and evacuate if hazard escalates or a mandatory order is issued.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 5,
+          "description": "Re-check official guidance, hazard distance, and route status; maintain ready state with partner and pet."
+        },
+        {
+          "action": "depart",
+          "due_step": 6,
+          "description": "If conditions worsen or evacuation becomes mandatory, depart with partner and pet in the household vehicle via an open route."
+        }
+      ],
+      "reason": "No mandatory order is in effect and the hazard is still about 8 km away, so preparing and monitoring now preserves the ability to evacuate safely if needed."
+    }
+  },
+  {
+    "step": 4,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice is active, but the hazard is still about 8.1 km away. There is no household vehicle and my 15-year-old son needs assistance, so I am requesting transport help now while keeping supplies ready.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Secure transport to evacuate self, dependent son, and pet if the hazard nears or the order strengthens.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 5,
+          "description": "Watch for help offers and check hazard distance/route status."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 6,
+          "description": "Confirm pickup details with any available transport (2 people + pet)."
+        },
+        {
+          "action": "depart",
+          "due_step": 7,
+          "description": "Leave together with my son using confirmed transport once arranged."
+        }
+      ],
+      "reason": "No vehicle in household; dependent son needs assistance; voluntary evacuation notice is in effect and hazard is about 8 km away, so transport must be arranged before departure."
+    }
+  },
+  {
+    "step": 4,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice received; hazard is ~8.1 km away and routes are open. Household has prepared, no dependents; continue readiness and monitor for escalation.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 5,
+    "resident": "syn_t001_h0000004_r001",
+    "household": "H4",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Hazard is about 7.8 km away, both routes are open, and I have already prepared. Staying to monitor remains appropriate.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Remain prepared and monitor conditions for any escalation that would require evacuation.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 6,
+          "description": "Watch for official updates and changes in hazard distance."
+        },
+        {
+          "action": "prepare",
+          "due_step": 6,
+          "description": "Keep go-bag and vehicle ready in case immediate evacuation becomes necessary."
+        }
+      ],
+      "reason": "Hazard is not imminent, routes are open, and I am already prepared; staying to monitor while remaining ready is appropriate."
+    }
+  },
+  {
+    "step": 5,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No mandatory order; voluntary warning only and hazard remains about 7.9 km away, so staying is safe while continuing to monitor.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Maintain household readiness and evacuate promptly if mandatory order or hazard escalation occurs.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 6,
+          "description": "Check official orders, hazard distance, and route availability."
+        },
+        {
+          "action": "prepare",
+          "due_step": 7,
+          "description": "Ensure partner, pet, and household supplies remain ready; continue monitoring."
+        }
+      ],
+      "reason": "No mandatory evacuation is in effect and the hazard is several kilometers away; staying at home while prepared is the appropriate protective action now."
+    }
+  },
+  {
+    "step": 5,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No help offers in inbox yet. Voluntary order stands, hazard ~7.9 km away, routes open. I still have no vehicle and my 15yo son needs assistance, so I will keep requesting evacuation transport for us and our pet.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Get confirmed transport to evacuate our 2-person household and pet before the hazard gets closer.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 5,
+          "description": "Repeat request for evacuation transport for 2 people plus pet."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 6,
+          "description": "Confirm pickup time, route, and vehicle with anyone offering transport."
+        },
+        {
+          "action": "depart",
+          "due_step": 7,
+          "description": "Depart together with son (and pet) once transport is arranged."
+        }
+      ],
+      "reason": "No household vehicle, no offers after earlier help request, and the dependent son requires assistance; transport must be secured before departure."
+    }
+  },
+  {
+    "step": 5,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary notice received, hazard is currently about 7.8 km away, and both routes remain open. I have already prepared twice and no immediate threat is present, so I will stay and continue monitoring.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Remain ready to evacuate if the voluntary notice escalates or hazard conditions degrade.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 6,
+          "description": "Re-check official channels, hazard distance, and route status."
+        },
+        {
+          "action": "prepare",
+          "due_step": 7,
+          "description": "If conditions worsen but evacuation is not yet necessary, verify go-bag, pet supplies, and vehicle readiness remain intact."
+        }
+      ],
+      "reason": "No immediate threat given the hazard distance and open routes; staying while monitoring is appropriate after initial preparation for a voluntary notice."
+    }
+  },
+  {
+    "step": 6,
+    "resident": "syn_t001_h0000004_r001",
+    "household": "H4",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "A voluntary evacuation order has been issued and the hazard is about 7.6 km away while both routes remain open. I live alone and have a vehicle, so evacuating now is the safest option before roads may close.",
+    "departure_mode": "solo",
+    "plan_update": {
+      "goal": "Leave the hazard area now and remain informed about returning.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 7,
+          "description": "Monitor official updates for safe shelter and reentry guidance after evacuating."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "Coordinate with local officials or emergency services if longer-term shelter arrangements are needed."
+        }
+      ],
+      "reason": "Voluntary evacuation order exists, routes are open, and my vehicle is available; evacuating now avoids the risk of being trapped if conditions worsen."
+    }
+  },
+  {
+    "step": 6,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No mandatory evacuation is in effect; hazard is ~7.6 km away and both routes are open. Household is already prepared, so staying while monitoring is appropriate.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Maintain household readiness and evacuate promptly if mandatory order or hazard escalation occurs.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 7,
+          "description": "Verify partner, pet, and supplies are ready; keep monitoring."
+        },
+        {
+          "action": "monitor",
+          "due_step": 8,
+          "description": "Recheck official orders, hazard distance, and route availability."
+        }
+      ],
+      "reason": "No mandatory evacuation is in effect and the hazard is several kilometers away; staying at home while monitoring is appropriate now, with readiness maintained."
+    }
+  },
+  {
+    "step": 6,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation advisory remains active and hazard is about 7.6 km away. No household vehicle, no transport offers have arrived, and my dependent son needs assistance, so I still need outside help before we can leave safely with our pe",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Secure confirmed transport to evacuate our 2-person household and pet; stay ready and do not depart without a workable way to move safely.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 7,
+          "description": "Repeat request for evacuation transport/carpool or official vehicle for 2 people plus pet."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "If a feasible offer arrives, confirm party, vehicle, route, pickup time, and acceptance for the son, self, and pet."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Leave together using confirmed transport; if none exists by then, keep preparing and continue seeking help instead."
+        }
+      ],
+      "reason": "We have no household vehicle, earlier help requests have not produced an offer, and the teenage dependent needs assistance, so a confirmed ride is necessary before evacuating."
+    }
+  },
+  {
+    "step": 6,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Hazard distance ~7.6 km, both routes open, no mandatory evacuation order. Household is prepared and safe to remain sheltering while continuing to monitor.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t001_h0000002_r001",
+    "household": "H2",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory official evacuation order received; hazard ~7.4 km away; both routes open; vehicle available at home; evacuating immediately.",
+    "departure_mode": "solo",
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t001_h0000003_r001",
+    "household": "H3",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Received a mandatory official receipt; hazard is about 7.3 km away and both routes are open. I am alone, my vehicle is at home, and I can leave immediately via tiger_primary.",
+    "departure_mode": "solo",
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t001_h0000005_r001",
+    "household": "H5",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received. Household has 6 people but only one 5-seat vehicle, and I have functional limitations requiring assistance. I cannot evacuate everyone safely in one trip, so I need help with transport/capacity.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all 6 household members to safety despite having only a 5-seat vehicle",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Pack essential items, secure children and pets, and get documents ready."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 9,
+          "description": "Arrange additional transport or a shuttle plan so every household member can leave."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart together on tiger_primary once capacity is resolved."
+        }
+      ],
+      "reason": "Mandatory evacuation plus household size exceeding vehicle capacity requires coordination/help before everyone can evacuate."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t001_h0000006_r001",
+    "household": "H6",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory official evacuation order received; hazard is about 7.3 km away, both routes are open, household vehicle is available, and all family members are at home. Evacuating immediately is the safest action.",
+    "departure_mode": "solo",
+    "plan_update": {
+      "goal": "Evacuate the household to safety immediately after the mandatory order",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 7,
+          "description": "Load both sons into the household vehicle and depart on tiger_primary now."
+        }
+      ],
+      "reason": "Mandatory order received; route and vehicle are available; delaying increases risk."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t001_h0000007_r001",
+    "household": "H7",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Official mandatory evacuation notice received; hazard is ~7.1 km away and routes are open, but household has no vehicle and my son needs execution assistance. I need transport help to evacuate everyone, including our pet.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all 3 household members and our pet safely despite having no vehicle.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Pack emergency supplies for three people and pet; gather ID, medicine, and essentials."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "Continue arranging evacuation transport/ride for household of 3 plus pet with authorities or neighbors."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Depart together via open route tiger_primary once ride/transport is secured."
+        }
+      ],
+      "reason": "Mandatory evacuation order received at step 7; no household vehicle, son requires execution assistance, and pet must go too."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000001_r001",
+    "household": "H11",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received. I live alone, have no vehicle, and require execution assistance, so I cannot safely evacuate independently. I will request help while preparing.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate to safety with official assistance after mandatory order.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Pack essential documents, medications, and pet supplies."
+        },
+        {
+          "action": "monitor",
+          "due_step": 8,
+          "description": "Watch for response from emergency officials and updated route/order information."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Leave using assisted transport or an open route once evacuation help is confirmed."
+        }
+      ],
+      "reason": "No vehicle and functional limitations mean I need outside assistance to evacuate; I am requesting help now and will leave once transportation is arranged."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000002_r001",
+    "household": "H12",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Official mandatory evacuation receipt received; hazard is not immediate but routes are open and I have a vehicle, no dependents. Leaving now.",
+    "departure_mode": "solo",
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000003_r001",
+    "household": "H13",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Received mandatory evacuation notice; hazard is about 7.2 km away and routes are open, but I live alone, have no vehicle, have DOUT/DREM assistance needs, and own a pet. I cannot independently execute an evacuation safely.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Get transportation and evacuation assistance while routes are still open.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 8,
+          "description": "Alert officials/neighbors that I need evacuation assistance and have no vehicle."
+        },
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Gather ID, medications, water, phone, pet, and other essentials while waiting for help."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Leave via an open route once assistance is confirmed."
+        }
+      ],
+      "reason": "Mandatory notice received and hazard is approaching, but I cannot travel independently because I lack a vehicle and need execution assistance."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000004_r001",
+    "household": "H14",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received; hazard about 7.3 km away and roads are open. However, I live alone, have no vehicle, and have functional limitations needing execution assistance, so I cannot self-evacuate.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Arrange assisted evacuation and leave before routes become unsafe",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 7,
+          "description": "Request evacuation transportation/assistance from emergency managers or nearby responders; no vehicle and mobility/self-care limitations."
+        },
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Pack medications, documents, water, and pet essentials while waiting for assistance."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Evacuate using confirmed assisted transport once available."
+        }
+      ],
+      "reason": "Mandatory order received; lone household with no vehicle and resident needs execution assistance due to physical and self-care limitations."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000005_r001",
+    "household": "H15",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Received mandatory official order; hazard roughly 7.2 km away, evacuation routes are open, and my vehicle is available. I am evacuating now.",
+    "departure_mode": "solo",
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "invalid_accompanying_members",
+    "assessment": "Mandatory evacuation order (order_m_16) received; tiger_primary is open and the household vehicle is available, so evacuating now with my partner is warranted.",
+    "departure_mode": "solo",
+    "plan_update": {
+      "goal": "Evacuate immediately under mandatory order.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 7,
+          "description": "Evacuate now with partner via tiger_primary in household vehicle."
+        }
+      ],
+      "reason": "Mandatory order order_m_16 received; tiger_primary is open and vehicle is available."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No vehicle or carpool offer yet at step 7. Hazard is ~7.4 km away; we need a confirmed ride for 2 people (adult + teen needing assistance) and pet. Repeat transport request and stay ready.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary evacuation notice only; hazard is about 7.3 km away and both tiger_primary and tiger_alternate routes are open. Household is just me, no mobility/dependence needs, and my vehicle/pet preparations are in place, so no immediate evac",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Continue monitoring the voluntary notice and remain ready to evacuate only if conditions worsen.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 8,
+          "description": "Re-check official channels, hazard distance, and route status; if the notice escalates or a route closes, reassess evacuation."
+        }
+      ],
+      "reason": "No mandatory evacuation and no immediate threat at ~7.3 km with routes open; preparation is complete, so periodic monitoring is the appropriate next action."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000013_r001",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received; hazard is ~7 km away and both nearby routes are open. Our household has one vehicle with ample capacity, and all members are at home. I need to coordinate with my adult sibling for care/assistance while ",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate entire household safely under mandatory evacuation order",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "Confirm evacuation plan with sibling; pack essentials and prepare child for travel."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Depart in family vehicle via tiger_primary with all household members."
+        }
+      ],
+      "reason": "Mandatory evacuation was received. Vehicle and routes are available, but we need coordination and preparation before the proposed departure."
+    }
+  },
+  {
+    "step": 7,
+    "resident": "syn_t002_h0000014_r001",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Official mandatory notice received; hazard is about 7.4 km away. Both household members and the vehicle are at home, and tiger_primary is open. I need assistance from the other household member, so I am proposing a joint evacuation at step ",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate the household with the other member to safety.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Assemble essentials, ensure the vehicle is ready, and wait for household member confirmation."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "If the joint proposal is accepted, depart via tiger_primary in the household vehicle."
+        }
+      ],
+      "reason": "Mandatory official notice and approaching hazard; coordination is needed to evacuate together."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t001_h0000005_r001",
+    "household": "H5",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation in effect, but household of 6 cannot fit in 5-seat vehicle. No transport help has arrived yet. Continue preparing while still coordinating capacity.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 8,
+    "resident": "syn_t001_h0000007_r001",
+    "household": "H7",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order is active; household has no vehicle and still no confirmed transportation for 3 people plus pet. I will pack now and keep trying to secure a ride before leaving.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all 3 household members plus our pet safely despite having no vehicle.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Pack emergency supplies for three people and pet; gather IDs, medicine, and essentials."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 9,
+          "description": "Contact/confirm evacuation transportation for household of 3 plus pet; if none is available, seek help again."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart together via open route tiger_primary once ride/transport is confirmed."
+        }
+      ],
+      "reason": "Mandatory evacuation order received at step 7; no household vehicle, son requires execution assistance, pet must go, and no ride is confirmed yet."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000001_r001",
+    "household": "H11",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order is active, but I have no vehicle and need execution assistance. No helper has confirmed yet, so I am using this time to pack essentials and pet supplies while awaiting a response.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000003_r001",
+    "household": "H13",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active; hazard is about 7 km away and routes are open. I am alone, have no vehicle, need evacuation assistance, and no helper has confirmed yet. I should finish preparing while continuing to arrange transport.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Use remaining time to prepare and secure arranged evacuation transport before the hazard arrives.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Gather my ID, medications, water, phone, pet, and important items so I can leave immediately once help arrives."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 9,
+          "description": "Check for any response to my earlier request for evacuation assistance; contact authorities again if no transport is arranged."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Evacuate via an open route as soon as a ride and assistance are confirmed."
+        }
+      ],
+      "reason": "Mandatory evacuation notice received and hazard distance is closing. I lack a vehicle and need execution assistance, so preparation plus follow-up coordination is necessary before a safe departure."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000004_r001",
+    "household": "H14",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active; hazard still ~7 km away and routes are open, but I have no vehicle and no confirmed assisted transport yet. Preparing while waiting for help is the right action.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active. My prior attempt failed because I tried to include an independent household member as a dependent. A joint party proposal is the correct way to move both of us; earliest new-party departure is step 10.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate both household members under mandatory order.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "Send party proposal for joint evacuation on tiger_primary at step 10."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart with partner in household vehicle via tiger_primary once proposal is accepted."
+        }
+      ],
+      "reason": "Mandatory order received; earlier solo attempt with dependent field was rejected. Need coordinated party to include independent partner, and earliest allowed new-party departure is step 10."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Still at home with my teen dependent and pet; routes are open, but our household has no vehicle and I have received no ride offer despite repeated help requests. Hazard is about 7.1 km away, and I cannot evacuate safely without confirmed tr",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Obtain a confirmed ride for resident r001, the dependent son, and the pet, then leave together once transport is arranged.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 9,
+          "description": "Request transportation/carpool/official evacuation vehicle for 2 people plus pet; we have no household vehicle."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 10,
+          "description": "If a feasible ride offer arrives, confirm exact party, route, vehicle, and pickup time before accepting."
+        },
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Keep go-bags, medications, pet carrier, and documents ready at home while continuing to seek help if no ride is confirmed."
+        }
+      ],
+      "reason": "I cannot move my 15-year-old dependent and pet without a vehicle, and no ride offer has arrived yet, so I must keep seeking help while staying prepared."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary notice only, no mandatory order; hazard is roughly 7.1 km away and both routes are open. Home is prepared, so staying and monitoring is appropriate for now.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Continue quiet readiness and monitor the voluntary notice without evacuating prematurely.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 10,
+          "description": "Check for escalation to mandatory evacuation, changes in hazard distance, or route closures."
+        },
+        {
+          "action": "prepare",
+          "due_step": 12,
+          "description": "Reconfirm vehicle readiness and go-bag if still under a voluntary notice."
+        }
+      ],
+      "reason": "No mandatory evacuation order and no immediate route closure; the threat remains distant enough to justify staying while periodically monitoring conditions."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000013_r001",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received; all household members are at home, the family vehicle is available, and tiger_primary is open. Need to finalize a group departure plan.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate entire household safely under mandatory evacuation order",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 8,
+          "description": "Send group evacuation proposal to household members by step 8."
+        },
+        {
+          "action": "monitor",
+          "due_step": 9,
+          "description": "Confirm acceptance and complete any final readiness before departure."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart all household members in family vehicle via tiger_primary at step 10."
+        }
+      ],
+      "reason": "Mandatory order already received; need one coordination step to confirm the group, then depart using the available open route and vehicle."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000013_r003",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is in effect; local reference person r001 proposes all 3 household members depart together at step 9 on tiger_primary in our family vehicle, with me as caregiver for r001 and r002. I agree and will help everyone prepare",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate household together safely at step 9 via tiger_primary.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Help r001 and r002 get ready; confirm vehicle and route for departure next step."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Depart in family vehicle on tiger_primary with r001, r002, and r003."
+        }
+      ],
+      "reason": "Mandatory evacuation and r001's proposal ensures all household members leave together with available assistance."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000014_r001",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory official evacuation notice was received and the hazard is about 7 km away. Both household members and the only vehicle are at home; tiger_primary is open. I need to coordinate an immediate joint evacuation, but the earliest a new ",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate both household members together safely via tiger_primary.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Finish preparations and keep the vehicle ready while coordination is underway."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 9,
+          "description": "Confirm household member r002 accepts the proposed joint evacuation at step 10."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart together in the household vehicle via tiger_primary once the proposal is accepted."
+        }
+      ],
+      "reason": "Mandatory official notice received; both members and one vehicle are at home, and tiger_primary is currently open."
+    }
+  },
+  {
+    "step": 8,
+    "resident": "syn_t002_h0000014_r002",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Official evacuation order received. r001 needs assistance and proposed departing together at step 9 via tiger_primary. Vehicle is available and route is open. Accepting the proposal and preparing to leave together.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate with r001 at step 9 using tiger_primary after accepting the official order.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 8,
+          "description": "Prepare household and ensure r001 is ready for evacuation."
+        },
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Depart with r001 at step 9 via tiger_primary using our vehicle."
+        }
+      ],
+      "reason": "Official evacuation order, r001 requires assistance, and the group proposal has been accepted."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t001_h0000005_r001",
+    "household": "H5",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Home with mandatory evacuation notice; six household members but only one 5-seat vehicle. No extra transport offer has arrived yet, so I need an additional seat/ride before we can all evacuate safely.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all six household members to safety despite having one 5-seat vehicle.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 10,
+          "description": "Continue negotiating/receiving an offer for an extra vehicle or one additional seat for the sixth household member."
+        },
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Evacuate the whole household together via tiger_primary once extra capacity is arranged."
+        }
+      ],
+      "reason": "Mandatory evacuation is active; household size exceeds vehicle capacity, and external transport is required before all members can leave."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t001_h0000007_r001",
+    "household": "H7",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active; no household vehicle, one dependent needs assistance, and pet must go. No ride is confirmed yet, so I must keep requesting transport while staying ready.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all 3 household members plus our pet safely once transportation is arranged.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 10,
+          "description": "Keep emergency bags packed and monitor for any ride offer or proposal."
+        },
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Request evacuation transport again for 3 people plus pet; household has no vehicle."
+        },
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Depart together via open tiger_primary/tiger_alternate when a vehicle/ride is confirmed."
+        }
+      ],
+      "reason": "Mandatory evacuation received; no household vehicle and no confirmed ride; son needs assistance and pet must accompany us."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000001_r001",
+    "household": "H11",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order is active, but I have no household vehicle and need execution assistance due to functional limitations. Routes are open, but no transportation help has been confirmed yet.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate to safety as soon as transportation assistance is confirmed.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Continue requesting evacuation transportation help, including for my pet."
+        },
+        {
+          "action": "monitor",
+          "due_step": 11,
+          "description": "Watch for responses or offers of assistance and any route changes."
+        },
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Leave immediately once confirmed transportation is available."
+        }
+      ],
+      "reason": "I cannot evacuate independently because I do not have a vehicle and my functional limitations require assistance. I must secure confirmed help before departing."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000003_r001",
+    "household": "H13",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is in effect, but I have no vehicle and no confirmed assistance yet. I need execution support to leave safely, so I am re-requesting help.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Secure evacuation assistance and depart before the hazard arrives.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Contact emergency support again; earlier request has not been answered."
+        },
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Keep bag, medication, water, phone, and pet ready for immediate departure once help arrives."
+        },
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Leave immediately via an open route once a confirmed ride and assistant are available."
+        }
+      ],
+      "reason": "I live alone, have no household vehicle, and need execution assistance. The evacuation order is mandatory and the hazard is approaching, but no transport help has been confirmed yet."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000004_r001",
+    "household": "H14",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation remains in effect; I have no vehicle and need execution assistance due to physical/self-care limitations. No pickup/assistance is confirmed yet, so I cannot depart independently.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Get confirmed assisted transport and evacuate while routes remain open.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Repeat request for evacuation transportation/assistance; no vehicle and mobility/self-care limits."
+        },
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Continue keeping medications, documents, water, and pet supplies ready until transport is confirmed."
+        }
+      ],
+      "reason": "Mandatory order is active, but evacuation cannot be done solo because there is no vehicle and the resident requires execution assistance."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "At home with partner under mandatory order; vehicle available and tiger_primary is open. No accepted commitment yet, so I will propose a coordinated joint evacuation for the earliest permissible new-proposal departure step of 11.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate both household members together under mandatory order.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 10,
+          "description": "Confirm the party proposal with r002 and ensure commitment before departure."
+        },
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Depart together in household vehicle via tiger_primary once the proposal is accepted."
+        }
+      ],
+      "reason": "New-proposal protocol requires depart_step at least 11; coordinated joint trip needs a confirmed commitment before leaving."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000009_r002",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active. Partner proposed evacuating both of us together via tiger_primary using our vehicle. Route is open and vehicle is available. I agree and will prepare now for the step-10 departure.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate both household members together under the mandatory order.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 9,
+          "description": "Gather essentials, secure pet, and confirm vehicle is ready to leave."
+        },
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Depart with syn_t002_h0000009_r001 via tiger_primary using vehicle syn_t002_h0000009:vehicle:1."
+        }
+      ],
+      "reason": "Partner's evacuation proposal is safe and actionable; tiger_primary is open and our vehicle has capacity."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No vehicle and no ride offer yet; hazard is ~6.9 km away. Continuing to seek transport for myself, my dependent son, and our pet.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary notice only; hazard remains about 6.8 km away and both routes are open. Continue monitoring without evacuating yet.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000013_r001",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Current accepted commitment departs this step but omits my 12-year-old household member r002. I will cancel it and propose a corrected full-household evacuation on the open tiger_primary route at step 11.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all three household members together under the mandatory order without leaving the dependent child behind.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 10,
+          "description": "Confirm the revised three-member party and finalize vehicle readiness."
+        },
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Depart home via tiger_primary in the family vehicle with r001, r002, and r003."
+        }
+      ],
+      "reason": "The accepted commitment only covered r001 and r003, which would strand r002. Cancelling it and reproposing an all-household evacuation on the open route."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000013_r003",
+    "household": "H23",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "commitment_not_active",
+    "assessment": "Executing accepted household evacuation commitment due now via tiger_primary.",
+    "departure_mode": "commitment",
+    "plan_update": null
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000014_r001",
+    "household": "H24",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Accepted commitment is due now; evacuating immediately with household member via tiger_primary.",
+    "departure_mode": "commitment",
+    "plan_update": {
+      "goal": "Complete joint evacuation under accepted commitment.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 9,
+          "description": "Depart at step 9 with r002 via tiger_primary under commitment m7."
+        }
+      ],
+      "reason": "The accepted commitment is due now; evacuating immediately."
+    }
+  },
+  {
+    "step": 9,
+    "resident": "syn_t002_h0000014_r002",
+    "household": "H24",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Commitment m7 is due now at step 9; I am evacuating with r001 via tiger_primary in our vehicle. The new m8 proposal conflicts, so I reject it.",
+    "departure_mode": "commitment",
+    "plan_update": null
+  },
+  {
+    "step": 10,
+    "resident": "syn_t001_h0000002_r002",
+    "household": "H2",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation notice received; household vehicle is not at my current home location (it is at controlled_safe_zone). I have no available vehicle here, so I cannot evacuate by myself now and need assistance.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Obtain evacuation assistance or a vehicle so I can leave home for controlled_safe_zone.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Request pickup/help from household member or community."
+        },
+        {
+          "action": "monitor",
+          "due_step": 11,
+          "description": "Watch for reply or available vehicle."
+        }
+      ],
+      "reason": "Vehicle is not at home and mandatory evacuation is in effect."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t001_h0000005_r001",
+    "household": "H5",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation official order received; household of 6 needs to go but only one 5-capacity vehicle is available. No extra transport offer has been received yet; hazard is ~6.6 km away, so I should keep requesting help and prepare for ",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all six household members to safety using approved route without exceeding vehicle capacity.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 12,
+          "description": "Keep seeking a neighbor or official offer for one additional seat/vehicle; do not leave anyone behind."
+        },
+        {
+          "action": "prepare",
+          "due_step": 13,
+          "description": "Pre-position family members, car seats, essentials, and pets at the vehicle so loading is quick."
+        },
+        {
+          "action": "depart",
+          "due_step": 14,
+          "description": "Depart together via tiger_primary once extra capacity is confirmed and all six can ride."
+        }
+      ],
+      "reason": "Mandatory evacuation is active, but household size exceeds the one vehicle's 5-seat capacity; external assistance is needed, and there has been no offer yet."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t001_h0000007_r001",
+    "household": "H7",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation remains in effect; hazard is ~6.4 km away. Household has no vehicle and still no confirmed ride; son needs assistance and pet must evacuate. Both routes are open, but transport is not secured.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate all 3 household members plus our pet as soon as evacuation transport is confirmed.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 10,
+          "description": "Request evacuation transport again for 3 people plus one pet; household has no vehicle."
+        },
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Keep emergency bags packed and pet ready; monitor inbox for ride offers or proposals."
+        },
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Depart together via an open route once a ride/proposal is confirmed."
+        }
+      ],
+      "reason": "Mandatory evacuation received; no household vehicle or confirmed ride; one child needs assistance and pet must accompany us."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000001_r001",
+    "household": "H11",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Step 10: mandatory evacuation order received; no vehicle in household, needs execution assistance, and has pet. Hazard ~6.3 km away; routes open but no confirmed transport. Continue to request help rather than attempt independent evacuation",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate to safety as soon as transportation assistance is confirmed.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Keep self and pet ready to depart immediately when transport arrives."
+        },
+        {
+          "action": "seek_help",
+          "due_step": 12,
+          "description": "Renew request for evacuation transportation assistance."
+        },
+        {
+          "action": "monitor",
+          "due_step": 13,
+          "description": "Check for offers, route status, and hazard changes; depart once transport is confirmed."
+        }
+      ],
+      "reason": "I cannot drive and have no vehicle; evacuation requires outside transportation. I will keep requesting help while staying ready."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000003_r001",
+    "household": "H13",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order is in effect; I live alone, have no household vehicle, and need execution assistance. Earlier help requests were not answered, but I remain ready and will continue seeking transport/assistance.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Secure evacuation transportation and assistance before the hazard arrives.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 11,
+          "description": "Request transport and execution assistance again; mandatory evacuation but no help confirmed."
+        },
+        {
+          "action": "prepare",
+          "due_step": 12,
+          "description": "Keep essentials, medication, water, phone, and pet packed and ready for immediate departure."
+        },
+        {
+          "action": "depart",
+          "due_step": 13,
+          "description": "Leave on an open route as soon as confirmed assistance and transport are available."
+        }
+      ],
+      "reason": "Living alone with no vehicle and needing execution assistance; evacuation is mandatory but no transport has been arranged."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000004_r001",
+    "household": "H14",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order is active, but I have no vehicle and have functional limitations requiring execution assistance. No help or transport offer has arrived yet. Routes are still open, so I will keep requesting assistance and remain p",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Confirmed joint household evacuation under mandatory order; commitment is due now, leaving on tiger_primary.",
+    "departure_mode": "commitment",
+    "plan_update": null
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000009_r002",
+    "household": "H19",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Current step is 10 and I already have an accepted commitment departing now with r001 via tiger_primary. The new step-11 proposal is not needed; I will reject it and execute the confirmed evacuation.",
+    "departure_mode": "commitment",
+    "plan_update": null
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "I remain home with my dependent son and pet; no ride offer has arrived despite repeated help requests. The hazard is still about 6.6 km away and routes are open, but I have no household vehicle, so I cannot evacuate on my own. Continuing to",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Arrange transport to evacuate together with my dependent son and pet once a ride is confirmed.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 11,
+          "description": "Request a ride/carpool/evacuation vehicle again if no offer has arrived by then."
+        },
+        {
+          "action": "coordinate",
+          "due_step": 12,
+          "description": "If a feasible ride is proposed, confirm the exact party, vehicle, route, and pickup time."
+        },
+        {
+          "action": "prepare",
+          "due_step": 13,
+          "description": "Keep go-bags, medicines, pet carrier, and documents ready in case evacuation becomes possible."
+        }
+      ],
+      "reason": "No household vehicle and no confirmed ride offer means help-seeking and preparation remain the viable route to protect the family; I will leave immediately once transport is confirmed."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Hazard remains distant (~6.6 km), both routes open, no mandatory evacuation order, and no urgent inbox or commitment. Staying to monitor is appropriate.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000013_r001",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "All three household members and the vehicle are at home at step 10. The earlier two-person commitment was canceled because it excluded dependent r002; a revised all-household proposal is needed. tiger_primary is open. I will send a valid pr",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate the entire household together without leaving child r002 behind.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 11,
+          "description": "Finish readiness and wait for confirmation of the all-household proposal scheduled for step 12."
+        },
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Depart with r001, r002, and r003 via tiger_primary in the family vehicle."
+        }
+      ],
+      "reason": "The existing two-person commitment was canceled because it stranded r002; the proposal must use r002 as an accompanying member rather than an invalid traveler, and cannot depart before step 12."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000013_r003",
+    "household": "H23",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Received corrected proposal from r001 to evacuate the full household at step 11 via tiger_primary after the earlier commitment was canceled. I agree to that party and will prepare now.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate household together safely at step 11 via tiger_primary.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 10,
+          "description": "Ensure r001 and r002 are ready and confirm family vehicle is available for departure at step 11."
+        },
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Depart in family vehicle via tiger_primary with r001, r003, and r002 per accepted corrected proposal m9."
+        }
+      ],
+      "reason": "Original step-9 commitment was canceled, so I accepted r001's corrected full-household proposal to depart at step 11. Routes are open and evacuation is mandatory."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000014_r001",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Prior departure on tiger_primary failed because that route is closed. tiger_alternate is open, so I should re-coordinate evacuation with household member r002 via the available route.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate jointly with r002 via the open tiger_alternate route.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 11,
+          "description": "Wait for confirmation of tiger_alternate party proposal from r002."
+        },
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Depart via tiger_alternate if the revised joint commitment is accepted."
+        }
+      ],
+      "reason": "The earlier tiger_primary departure was rejected because the route was closed. tiger_alternate is open, so coordinate a revised joint evacuation."
+    }
+  },
+  {
+    "step": 10,
+    "resident": "syn_t002_h0000014_r002",
+    "household": "H24",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "invalid_accompanying_members",
+    "assessment": "Tiger_primary is closed and the prior attempt at step 9 failed. Tiger_alternate is open and our vehicle is at home; R001 still needs assistance, so evacuation now via tiger_alternate is the safest option.",
+    "departure_mode": "solo",
+    "plan_update": {
+      "goal": "Evacuate with r001 immediately via tiger_alternate.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 10,
+          "description": "Leave home now in household vehicle via tiger_alternate, taking r001."
+        }
+      ],
+      "reason": "Tiger_primary is closed; tiger_alternate is open; mandatory evacuation and r001 needs assistance."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t001_h0000002_r002",
+    "household": "H2",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is in effect; household member took the only vehicle to controlled_safe_zone. I am at home without transport, no assistance reply yet, and hazard is about 6.4 km away, so I will prepare while continuing to request picku",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Obtain a vehicle or pickup and evacuate from home to controlled_safe_zone.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 12,
+          "description": "Request r001 or other assistance for pickup; state readiness to depart."
+        },
+        {
+          "action": "monitor",
+          "due_step": 13,
+          "description": "Check for transport offers and reassess hazard/route status."
+        }
+      ],
+      "reason": "The only household vehicle is not at home, and no assistance reply has arrived. Preparing now while continuing to request help is the best option before transport becomes available."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t001_h0000005_r001",
+    "household": "H5",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is still active, but no extra vehicle or seat has been offered. We cannot leave as a complete household with our current 5-seat vehicle for 6 people.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 11,
+    "resident": "syn_t001_h0000007_r001",
+    "household": "H7",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order still applies; at home with no vehicle and no confirmed ride/proposal. Routes open but we cannot move 3 people plus pet without transport; child needs assistance.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Obtain confirmed evacuation transport for all 3 household members plus pet, then depart immediately on an open route.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 11,
+          "description": "Request urgent evacuation transport for 3 people, including teen needing assistance, plus one pet; household has no vehicle."
+        },
+        {
+          "action": "monitor",
+          "due_step": 12,
+          "description": "Watch for ride/proposal or official transport; keep emergency bags and pet ready."
+        },
+        {
+          "action": "seek_help",
+          "due_step": 13,
+          "description": "If still no transport by step 13, escalate help request because mandatory evacuation continues and routes are open."
+        }
+      ],
+      "reason": "Mandatory evacuation order is active and household has no vehicle or confirmed ride. One dependent requires assistance and a pet must accompany us."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000001_r001",
+    "household": "H11",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation notice remains in effect. I am alone, have no vehicle, and need execution assistance, but no transport offer has arrived yet. Staying ready with my pet while continuing to request help is my immediate step.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000003_r001",
+    "household": "H13",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order received; I live alone with no vehicle and need execution assistance. Hazard ~6.2 km away and routes are open, but no transport/helper confirmed despite repeated requests (steps 7,9,10). I cannot physically evacua",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Find confirmed transportation/execution assistance and evacuate before hazard arrives.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 12,
+          "description": "Request transport/assistance again; still no confirmed help or vehicle."
+        },
+        {
+          "action": "prepare",
+          "due_step": 13,
+          "description": "Keep go-bag, pet, medications/papers ready and wait for confirmed transport."
+        },
+        {
+          "action": "depart",
+          "due_step": 14,
+          "description": "Evacuate via open route (tiger_primary or tiger_alternate) once confirmed transport/assistance is available."
+        }
+      ],
+      "reason": "Alone, no vehicle, needs execution assistance, mandatory evacuation; cannot leave without a helper/vehicle so must persist in help-seeking while staying prepared."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000004_r001",
+    "household": "H14",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order active; I live alone, have no vehicle, and need execution assistance due to functional limitations. Routes are still open but I cannot evacuate without confirmed transport help.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Get confirmed assisted transport and evacuate while routes remain open.",
+      "steps": [
+        {
+          "action": "seek_help",
+          "due_step": 12,
+          "description": "Repeat request for evacuation transportation/assistance; no vehicle and mobility/self-care limits."
+        },
+        {
+          "action": "prepare",
+          "due_step": 13,
+          "description": "Continue keeping medications, documents, water, and pet supplies ready until transport is confirmed."
+        }
+      ],
+      "reason": "Mandatory order is active, but evacuation cannot be done solo because there is no vehicle and the resident requires execution assistance."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000009_r001",
+    "household": "H19",
+    "action": "evacuate",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is in effect. Tiger_primary is closed but tiger_alternate is open. A coordinated joint proposal was declined, so to ensure my own safety I will evacuate immediately via the open alternate route and notify my partner to ",
+    "departure_mode": "solo",
+    "plan_update": {
+      "goal": "Reach safety via tiger_alternate after mandatory evacuation order.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Depart home immediately using the open tiger_alternate route."
+        },
+        {
+          "action": "monitor",
+          "due_step": 12,
+          "description": "Confirm successful departure and continue monitoring for updates."
+        }
+      ],
+      "reason": "Primary route is closed and the latest joint proposal was declined; solo evacuation on the open alternate route is the immediate safe action."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000009_r002",
+    "household": "H19",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation is in effect. Tiger_primary is closed, but tiger_alternate is open. We need to coordinate with the other household member and evacuate together via the open alternate route.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate both household members together under mandatory order via the open alternate route.",
+      "steps": [
+        {
+          "action": "prepare",
+          "due_step": 12,
+          "description": "Keep essentials ready and coordinate with household member to accept tiger_alternate departure."
+        },
+        {
+          "action": "depart",
+          "due_step": 13,
+          "description": "Depart with syn_t002_h0000009_r001 using household vehicle via tiger_alternate."
+        }
+      ],
+      "reason": "Original tiger_primary route is closed; tiger_alternate is open. Coordinating joint evacuation via the alternate route."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000011_r001",
+    "household": "H21",
+    "action": "seek_help",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "No vehicle and no confirmed ride yet; hazard is ~6.4 km away. Both routes open. My dependent son needs assistance, and we have a pet. Continuing to request transportation.",
+    "departure_mode": null,
+    "plan_update": null
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000012_r001",
+    "household": "H22",
+    "action": "stay",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Voluntary notice only, hazard ~6.3 km away, routes open, vehicle ready; no mandatory evacuation triggers evacuation now.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Continue quiet readiness, monitor for mandatory orders or route closures, and keep vehicle prep current.",
+      "steps": [
+        {
+          "action": "monitor",
+          "due_step": 12,
+          "description": "Check official channels and hazard distance; reassess if evacuation becomes mandatory."
+        },
+        {
+          "action": "prepare",
+          "due_step": 14,
+          "description": "Reconfirm go-bag, pet supplies, and vehicle readiness if the voluntary notice remains."
+        }
+      ],
+      "reason": "No mandatory evacuation order and no immediate route closure; hazard remains distant enough to stay and monitor while staying prepared."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000013_r001",
+    "household": "H23",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Accepted commitment m9 is due now; evacuating the whole household immediately via tiger_primary in the family vehicle, with r002 accompanying as dependent.",
+    "departure_mode": "commitment",
+    "plan_update": {
+      "goal": "Evacuate the entire household now under accepted commitment m9.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 11,
+          "description": "Leave immediately in the family vehicle via tiger_primary with r001, r002, and r003."
+        }
+      ],
+      "reason": "Commitment m9 is due at step 11; do not strand dependent r002."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000013_r003",
+    "household": "H23",
+    "action": "evacuate",
+    "outcome": "rejected",
+    "reason": "route_closed",
+    "assessment": "Commitment commit:m9 is confirmed for departure at step 11, and routes/vehicle are available. I reject the later step-12 revision because the accepted household commitment is due now.",
+    "departure_mode": "commitment",
+    "plan_update": null
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000014_r001",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Mandatory evacuation order. tiger_primary is closed; tiger_alternate is open. No accepted commitment currently exists, so I will prepare, send a revised joint tiger_alternate proposal, and plan to depart when the proposal can execute.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate jointly with r002 via the open tiger_alternate route.",
+      "steps": [
+        {
+          "action": "coordinate",
+          "due_step": 11,
+          "description": "Send revised tiger_alternate joint proposal to r002 for departure at step 13."
+        },
+        {
+          "action": "prepare",
+          "due_step": 12,
+          "description": "Continue preparing and confirm r002 accepts the revised tiger_alternate commitment."
+        },
+        {
+          "action": "depart",
+          "due_step": 13,
+          "description": "Depart via tiger_alternate with the accepted commitment if confirmed; otherwise seek help or use alternate evacuation arrangements."
+        }
+      ],
+      "reason": "The original tiger_primary route is closed. tiger_alternate is open, but no active accepted commitment exists, so I am proposing a new joint departure on that route."
+    }
+  },
+  {
+    "step": 11,
+    "resident": "syn_t002_h0000014_r002",
+    "household": "H24",
+    "action": "prepare",
+    "outcome": "executed",
+    "reason": null,
+    "assessment": "Hazard ~6.4 km away and tiger_primary is closed. r001 proposes joint evacuation via tiger_alternate at step 12; I accept and will prepare.",
+    "departure_mode": null,
+    "plan_update": {
+      "goal": "Evacuate with r001 via tiger_alternate at step 12.",
+      "steps": [
+        {
+          "action": "depart",
+          "due_step": 12,
+          "description": "Leave home in household vehicle via tiger_alternate with r001 using accepted joint proposal."
+        }
+      ],
+      "reason": "Tiger_primary is closed; tiger_alternate is open; r001 proposed joint evacuation at step 12."
+    }
+  }
+]

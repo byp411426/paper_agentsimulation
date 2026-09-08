@@ -1,0 +1,42 @@
+{
+  "n_households": 1000,
+  "n_members": 2404,
+  "household_match_tiers": {
+    "H0": 868,
+    "H1": 46,
+    "H2": 86,
+    "H3": 0
+  },
+  "person_match_tiers": {
+    "P0": 923,
+    "P1": 619,
+    "P2": 275,
+    "P3": 23,
+    "P4": 564
+  },
+  "person_donor_reuse_count": 128,
+  "person_donor_usage": {
+    "carr_p_donor_0018": 65,
+    "carr_p_donor_0159": 47,
+    "carr_p_donor_0049": 39,
+    "carr_p_donor_0007": 34,
+    "carr_p_donor_0052": 34,
+    "carr_p_donor_0036": 31,
+    "carr_p_donor_0109": 30,
+    "carr_p_donor_0093": 27,
+    "carr_p_donor_0105": 27,
+    "carr_p_donor_0151": 27
+  },
+  "profile_seed": 4201,
+  "method_name": "PUMS whole-household static structure + Carr-informed independently imputed household/person traits",
+  "output_sha256": {
+    "e1_profiles_seed4201.jsonl": "33585612febdcbd06cf7000be4973ccb2ebfe6ebe471e0d5b77adea59330c106",
+    "e1_restricted_linkage_seed4201.csv": "87ec33a9e824af9b7fc9096a511d4a523d87c4495f432c98d905d394e0333d4c"
+  },
+  "input_sha256": {
+    "synthetic_households.csv": "a4eb4cf3f0a52f9539431b2dedb9622cba0fe7fecff6a3234280a5c8ccb8e13d",
+    "synthetic_persons.csv": "b78b78fa12d7f87131290475e58e5161ea58967764dc1474c09c9a7460f54548",
+    "carr_household_trait_donors_v1.csv": "2b8003edf87571eeec85fcf6ee086e4723373fa871c55cb74109daf48d9240b9",
+    "carr_person_trait_donors_v1.csv": "c12b998d907c3466ab1593aa935541d919938c36d48446c03f1470b41887a5ec"
+  }
+}

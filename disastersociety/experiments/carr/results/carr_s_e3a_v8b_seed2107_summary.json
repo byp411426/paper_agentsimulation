@@ -1,0 +1,86 @@
+{
+  "status": "PILOT_PENDING_AUDIT",
+  "activity_type": "E3A_PROMPT_SENSITIVITY",
+  "decision_model": "opencode-deepseek-v4-flash",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "prompt_variant": "v8b",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e3a_v8b.yaml",
+    "config_sha256": "2717f0620077ad3bbcfe3f3ec3c8f7ec4543ce21024a9219313c12206150a34d"
+  },
+  "protocol": {
+    "declared_seeds": [
+      2107,
+      2209,
+      2303,
+      2411
+    ],
+    "executed_seed_batch": [
+      2107
+    ],
+    "conditions": [
+      "full",
+      "full_minus_feedback",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 3,
+    "planned_runs": 3,
+    "reused_terminal_artifacts": 3,
+    "aborted_early": false,
+    "terminal_status_counts": {
+      "VALID": 3
+    }
+  },
+  "runs": [
+    {
+      "seed": 2107,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 94,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1041.739341,
+      "run_dir": "experiments/carr/runs/carr_s_e3a_v8b_full_seed2107",
+      "summary_sha256": "2231e9a0a3000c3f8ea2c2fbe0de9b643c3571ac5397e233c2ce04d0a9db60c8",
+      "mechanism_metrics_sha256": "0314c18559c7aa2527808f05724ff62aaa1272a1645b497b8ddb840f5d1fe147",
+      "provenance_sha256": "f31db8189afcd97c49fbeb92cc793f74acfe34ca9a9eb7db56d388d008ae55e4"
+    },
+    {
+      "seed": 2107,
+      "condition": "full_minus_feedback",
+      "terminal_status": "VALID",
+      "n_ok": 160,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1992.856123,
+      "run_dir": "experiments/carr/runs/carr_s_e3a_v8b_full_minus_feedback_seed2107",
+      "summary_sha256": "6b37a3b0a078ecc754e24b543ce493135a05c7761517a701a6e80b8a3f8d34f2",
+      "mechanism_metrics_sha256": "2f1625b1454adffa91b20dd6b0f054fe7fed696092d36947d54b6dfe6a7d451f",
+      "provenance_sha256": "727e9f72ffbe4f345856b2e8499b3552f489b62a46d4d1abee011f47df37e629"
+    },
+    {
+      "seed": 2107,
+      "condition": "full_minus_interaction",
+      "terminal_status": "VALID",
+      "n_ok": 124,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1179.493514,
+      "run_dir": "experiments/carr/runs/carr_s_e3a_v8b_full_minus_interaction_seed2107",
+      "summary_sha256": "22e9e2cdb8415ca996c35d30a765495cd0c9a7e883416b57e3593b68888cc7c0",
+      "mechanism_metrics_sha256": "b6e8b2867338db6a0b3165457fc6a62a30fee9c128965d8edb7afb4a635e2402",
+      "provenance_sha256": "071d347642730905c769358a857fdb4f61ee8769b6464bdaea1628c316320e14"
+    }
+  ],
+  "claim_boundary": "Prompt-sensitivity check on the frozen v8 semantics; PILOT until audited."
+}

@@ -1,0 +1,92 @@
+run:
+  run_id: carr_s_e3_v1_gpt54mini
+  total_steps: 10
+  step_minutes: 30
+
+llm:
+  decision_model: packy-gpt5.4-mini
+  models_config: configs/models_e3_reliable.yaml
+  temperature: 0.0
+  max_concurrency: 6
+  budget_usd: 6.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT_PENDING_AUDIT
+  activity_type: E3_BOUNDED_CROSS_MODEL_REPLICATION
+  metric_protocol_version: v8
+  prompt_version: carr_s_controlled_resident_v8
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 8
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices: [3, 4]
+  depart_step: 5
+  coordination_deadline_step: 7
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 4
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 1.0
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.15
+  abort_matrix_on_nonvalid_run: true
+  route_observation_mode: feedback_gated
+  seed_controlled_initial_plan: true
+
+  formal_protocol:
+    protocol_id: carr_s_e3_v1_gpt54mini
+    freeze_file: experiments/carr/protocol/carr_s_e3_v1_freeze.json
+    predecessor_protocol_id: carr_s_e2_v8_formal_r7
+    selection_rule: supported_modules_only_feedback_and_interaction
+    execution_transport: five_model_lanes_four_paired_seeds_no_other_paid_jobs
+    conditions:
+      - full
+      - full_minus_feedback
+      - full_minus_interaction
+    seeds: [2107, 2209, 2303, 2411]
+    n_seeds: 4
+    independent_replication_unit: seed_x_condition_run
+    execute_all_seeds_regardless_of_interim_direction: true
+    carr_r_test_split_opened: false
+    raw_run_evidence_status: PILOT_PENDING_AUDIT
+    eligibility_rule: both full and paired drop-one runs must be VALID
+    invalid_rule: preserve artifact and exclude its paired contrast
+    aborted_rule: stop new paid execution and preserve all completed artifacts
+    primary_manipulation_checks:
+      feedback: preclosure_primary_to_postclosure_alternate_update_rate
+      interaction: post_closure_feasible_commitment_rate
+    primary_downstream_outcomes:
+      feedback:
+        metric: closed_route_rejections_per_household
+        direction: lower
+      interaction:
+        metric: coordinated_departure_rate
+        direction: higher
+    inference:
+      report: model-internal paired effect and same-seed cross-model difference
+      no_rescue_metrics_after_results: true
+      module_claim_scope: same-proxy model-family sensitivity, not provider independence
+    paid_execution_authorized: true
+    authorization_basis: user instruction 2026-08-03 to run gpt-5.4-mini in E3
+    use_mock_for_behavior_or_effect_evidence: false
+
+  claim_boundary:
+    formal_only_after_complete_audit: true
+    carr_empirical_validation: false
+    historical_reconstruction: false
+    population_representative: false
+    universal_module_independence: false
+    carr_r_test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

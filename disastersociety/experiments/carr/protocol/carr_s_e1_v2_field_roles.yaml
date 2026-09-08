@@ -1,0 +1,87 @@
+# Carr-S E1 v2 field roles (frozen).
+# Every raw column read by build_carr_e1_trait_donors.py must appear in one of
+# the allowlists below. Q9/Q10/Q11/Q13 (evacuation outcome, departure, and
+# post-outcome behavior) are evaluation-only and must never be read here.
+raw_matching_inputs:
+  - Q32.2
+  - Q32.8_1
+  - Q32.11
+  - Q32.13
+
+raw_household_trait_inputs:
+  - Q32.9
+  - Q32.10
+
+raw_person_trait_inputs:
+  - Q29.3_1
+  - Q29.3_2
+  - Q29.3_3
+  - Q29.3_4
+  - Q29.3_5
+  - Q29.3_6
+  - Q29.3_7
+  - Q29.3_8
+  - Q29.3_9
+  - Q29.4_1
+  - Q29.4_2
+  - Q29.4_3
+  - Q29.4_4
+  - Q29.4_5
+  - Q29.4_6
+  - Q29.4_7
+  - Q29.4_8
+  - Q29.4_9
+  - Q34.2
+  - Q34.4
+  - Q35.3_1
+  - Q35.3_2
+  - Q35.3_3
+  - Q35.3_4
+  - Q35.3_5
+  - Q35.3_6
+  - Q35.3_7
+  - Q35.3_8
+  - Q35.3_9
+  - Q35.3_10
+  - Q35.3_11
+  - Q35.3_12
+  - Q35.4
+  - Q35.6_1
+  - Q35.6_2
+  - Q35.6_3
+  - Q35.6_4
+  - Q35.6_5
+
+raw_evaluation_only_prefixes:
+  - Q9
+  - Q10
+  - Q11
+  - Q13
+
+raw_forbidden_classes:
+  - identity
+  - address
+  - geolocation_free_text
+  - open_response_text
+
+derived_field_lineage:
+  age_band: raw_matching_inputs.Q32.2
+  household_size_capped: raw_matching_inputs.Q32.8_1
+  vehicle_count_capped: raw_matching_inputs.Q32.11
+  income_band: raw_matching_inputs.Q32.13
+  pet_or_livestock: raw_household_trait_inputs.Q32.9
+  home_owner: raw_household_trait_inputs.Q32.10
+  hazard_worry: raw_person_trait_inputs.Q29.3_1,Q29.3_2
+  evacuation_friction: raw_person_trait_inputs.Q29.3_3..Q29.3_9
+  home_person_threat: raw_person_trait_inputs.Q29.4_1,Q29.4_2,Q29.4_4,Q29.4_5
+  infrastructure_rescue: raw_person_trait_inputs.Q29.4_3,Q29.4_7,Q29.4_8
+  property_security: raw_person_trait_inputs.Q29.4_6
+  work_obligation: raw_person_trait_inputs.Q29.4_9
+  prior_evacuation_count_capped: raw_person_trait_inputs.Q34.2
+  decision_participation_propensity: raw_person_trait_inputs.Q34.4
+  trust_items: raw_person_trait_inputs.Q35.3_1..Q35.3_12
+  general_trust: raw_person_trait_inputs.Q35.4
+  helping_tendency: raw_person_trait_inputs.Q35.6_1..Q35.6_5
+
+source_tag:
+  q29_retrospective_pre_event_report: true

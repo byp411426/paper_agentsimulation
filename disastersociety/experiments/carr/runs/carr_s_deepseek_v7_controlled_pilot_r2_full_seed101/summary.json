@@ -1,0 +1,59 @@
+{
+  "run_seed": 101,
+  "planned_steps": 10,
+  "completed_steps": 10,
+  "last_completed_step": 10,
+  "status": "VALID",
+  "world_final": {
+    "step": 10,
+    "hazard_distance_m": 0.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 5,
+    "n_safe_dependents": 5,
+    "coordinated_movements": 1,
+    "uncoordinated_movements": 3,
+    "rejections": {
+      "departure scheduled for a future step": 7,
+      "dependent member would be left behind": 3,
+      "vehicle allocated to syn_t046_h0000009_r003": 1,
+      "vehicle reserved by syn_t023_h0000012_r001": 5,
+      "vehicle reserved by syn_t035_h0000025_r001": 6,
+      "vehicle reserved by syn_t046_h0000009_r003": 4
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_deepseek_v7_controlled_pilot_r2_full_seed101",
+    "spent": 0.345235,
+    "n_ok": 54,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 56185,
+    "live_completion_tokens": 289050,
+    "logical_prompt_tokens": 56185,
+    "logical_completion_tokens": 289050
+  },
+  "wall_clock_seconds": 741.210411
+}

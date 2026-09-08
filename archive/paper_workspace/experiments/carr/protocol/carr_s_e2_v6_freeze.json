@@ -1,0 +1,149 @@
+{
+  "protocol": "carr_s_e2_v6.1",
+  "status": "THINKING_HIGH_BACKEND_PILOT_COMPLETED",
+  "evidence_status": "PILOT",
+  "freeze_date": "2026-08-01",
+  "pre_pilot_amendment": {
+    "date": "2026-08-01",
+    "scientific_contract_changed": false,
+    "reason": "The first live start showed that DeepSeek V4 default high-effort thinking could exhaust a short structured decision budget and compound latency across retries. Before any valid v6 declared-backend run, the backend was frozen to documented non-thinking JSON mode, bounded attempts and timeout, fail-fast run invalidation, and batch stop on a non-VALID run.",
+    "carr_r_test_split_opened": false,
+    "observed_effect_direction_used": false
+  },
+  "thinking_high_amendment": {
+    "date": "2026-08-01",
+    "reason": "After the valid non-thinking diagnostic, the user required the primary DeepSeek path to use thinking mode. That diagnostic had already exposed effect directions, so non-thinking versus thinking-high is not treated as a clean predeclared comparison. The scientific v6 scenario, conditions, prompts, seeds and metrics remained unchanged.",
+    "backend_mode": "thinking enabled, reasoning effort high",
+    "formal_comparison_to_nonthinking": false,
+    "carr_r_test_split_opened": false
+  },
+  "post_pilot_v7_additive_amendment": {
+    "date": "2026-08-02",
+    "reason": "The completed v6 cross-model pilot exposed that live route snapshots could bypass the feedback ablation and that unseeded plans could remove the intended feedback/planning opportunity. Additive v7-only branches were introduced for feedback-gated perceived routes and a controlled private initial plan. The v6 configuration retains live_world and seed_controlled_initial_plan=false defaults, so completed v6 artifacts and their interpretation are preserved rather than rerun or overwritten.",
+    "v6_scientific_contract_changed": false,
+    "v6_raw_artifacts_replaced_or_deleted": false,
+    "v6_evidence_status": "PILOT_DESIGN_DIAGNOSTIC",
+    "carr_r_test_split_opened": false
+  },
+  "post_pilot_v8_additive_amendment": {
+    "date": "2026-08-02",
+    "reason": "A prompt-version-gated v8 branch exposes execution rejection details and household vehicle state after the completed v7 pilot diagnosed repeated unavailable-vehicle requests. v6 and v7 prompt branches are unchanged; all completed raw artifacts remain preserved.",
+    "v6_scientific_contract_changed": false,
+    "v6_raw_artifacts_replaced_or_deleted": false,
+    "carr_r_test_split_opened": false
+  },
+  "replaces_for_future_execution": "carr_s_formal_e2_v5",
+  "v5_artifacts_replaced_or_deleted": false,
+  "frozen_contract": {
+    "decision_unit": "Resident",
+    "coordination_unit": "Household",
+    "message_lifecycle": "sent -> delivered -> processed -> accepted/rejected",
+    "minimum_proposal_departure": "recipient processing step or later",
+    "in_flight_rule": "no replacement proposal during the recipient processing window",
+    "acceptance_checks": [
+      "sender and recipient are decision-capable household members",
+      "route ID is non-empty",
+      "vehicle belongs to the household",
+      "departure step remains feasible"
+    ],
+    "commitment_revision": "new feasible acceptance cancels but does not erase earlier accepted commitments",
+    "delivery_channels": {
+      "household_dm_probability": 1.0,
+      "community_probability": 0.15
+    },
+    "primary_metrics": {
+      "memory": "conditional_warning_retention_rate",
+      "feedback": "primary_to_alternate_update_rate",
+      "planning": "successful_replan_rate",
+      "interaction": "post_closure_feasible_commitment_rate"
+    }
+  },
+  "zero_cost_validation": {
+    "status": "PASSED",
+    "summary": "experiments/carr/results/carr_s_mechanism_v6_mock_pilot_summary.json",
+    "terminal_runs": 50,
+    "terminal_status_counts": {"VALID": 50},
+    "fallbacks": 0,
+    "invalid_proposal_attempts": 0,
+    "invalid_acceptance_attempts": 0,
+    "estimated_cost_usd": 0.0,
+    "full_post_closure_commitment_rate_all_seeds": 1.0,
+    "full_coordinated_departure_rate_all_seeds": 1.0
+  },
+  "execution_gate": {
+    "paid_execution_authorized": true,
+    "authorization_scope": "completed two-household, five-condition, two-seed thinking-high declared-backend pilot",
+    "formal_matrix_authorized": false,
+    "formal_seed_count_frozen": false,
+    "carr_r_test_split_opened": false,
+    "next_required_activity": "increase the controlled cohort before precision-based seed sizing; separately execute the frozen bounded cross-model robustness pilot",
+    "formal_seed_count_basis": "paired-difference variance, MCSE, or target interval half-width after resolving the two-household metric granularity"
+  },
+  "frozen_sources": [
+    {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    {
+      "path": "ds/interaction/messages.py",
+      "sha256": "b57db984262c2484fd26ddd30e2fecdb6174b9d40383017d73f2ae6b47abed2e"
+    },
+    {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    {
+      "path": "ds/agents/decide.py",
+      "sha256": "19f622f06ca1f57ab8fa20bb43901d4e54151728bd8c88a2dce49e0cf30cd7b4"
+    },
+    {
+      "path": "experiments/carr/runner.py",
+      "sha256": "e84a0ad6672c3170dc83d24ca8dcb9011cb79c0f57992396e3eae24694b64283"
+    },
+    {
+      "path": "experiments/carr/configs/carr_s_mechanism_v6_mock_pilot.yaml",
+      "sha256": "50fe37a582e87c8d2b19f56ea759db08452e8d4fa0fda256904c5596a279ba99"
+    },
+    {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    },
+    {
+      "path": "../archive/diagnostic_2026-08-01/disastersociety/configs/models_v6_nonthinking_r2.yaml",
+      "sha256": "9d0b7fbc2fe17d124959abef3b1d80b3d7370c0644053b56f2b0d4eb4e700569"
+    },
+    {
+      "path": "../archive/diagnostic_2026-08-01/disastersociety/experiments/carr/configs/carr_s_deepseek_v6_nonthinking_pilot_r2.yaml",
+      "sha256": "5d6643dba9736750718cbe6ff0c6ca8412f080891ed24a1a88a05bd87636d7e0"
+    },
+    {
+      "path": "configs/models.yaml",
+      "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+    },
+    {
+      "path": "experiments/carr/configs/carr_s_deepseek_v6_pilot.yaml",
+      "sha256": "f0b2ef2fb80dd65f1bc1e196dd45f03b68b6e1d20e39bc73d80cdd67f90815fe"
+    },
+    {
+      "path": "scripts/summarize_carr_v6_thinking_high.py",
+      "sha256": "265ac37af203527ded252eee2cef98eaf268dc1824eccf6f5259f28cab5a2108"
+    },
+    {
+      "path": "experiments/carr/results/carr_s_deepseek_v6_thinking_high_pilot_summary.json",
+      "sha256": "f10568cf04465a60878a90bdcb3475ddf5d67849680870e8d7a35f076bb68a93"
+    }
+  ],
+  "claim_boundary": "The thinking-high run is a backend PILOT: all ten cells were VALID and every predeclared contrast was positive, but two seeds and two households produce coarse fractions and three contrasts had zero observed seed variance. It is not formal mechanism evidence, Carr empirical validation, or a clean comparison with the earlier non-thinking diagnostic."
+}

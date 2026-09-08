@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-13T05:33:28.051592+00:00",
+  "width_in": 7.16,
+  "figures": [
+    {
+      "file": "fig1_household_response.svg",
+      "description": "Fig. 1 — Dynamic disaster household response (running example)",
+      "sha256": "7112e4f761d5a5a62d7358ef2c3b2dc89b9c95eb6212df60cafea81302c39062",
+      "viewBox": "0 0 1440 600",
+      "png_preview": {
+        "file": "fig1_household_response.png",
+        "kind": "png_preview",
+        "dpi": 300,
+        "pixel_size": "2148x895",
+        "sha256": "c9d99dd2e6ebdf659ad4d141ee30fa907419c165757bcd10f4bd7035daeafe6a"
+      },
+      "pdf": {
+        "file": "fig1_household_response.pdf",
+        "kind": "pdf",
+        "sha256": "178ae6f4490a3bee4360bcb5056045ebb506679ceb2ae83519c58a22ac295a48"
+      }
+    },
+    {
+      "file": "fig2_system_architecture.svg",
+      "description": "Fig. 2 — DisasterSociety system architecture",
+      "sha256": "e24a6679b010ae830212752815168961d96183fc83bd44699e6dcf0de1f04960",
+      "viewBox": "0 0 1500 780",
+      "png_preview": {
+        "file": "fig2_system_architecture.png",
+        "kind": "png_preview",
+        "dpi": 300,
+        "pixel_size": "2148x1117",
+        "sha256": "18ea116b105556d1d4ec355624f8fe0c4026843d8921bf7079c3cd7fcfa11be8"
+      },
+      "pdf": {
+        "file": "fig2_system_architecture.pdf",
+        "kind": "pdf",
+        "sha256": "61af218aa6fe37ec7530e02ff0385b05015a7d983a9eb44187b11a96cafa0d81"
+      }
+    },
+    {
+      "file": "fig3_method_mechanism.svg",
+      "description": "Fig. 3 — Resident social-process method mechanism loop",
+      "sha256": "48be917a4c96e22907676cc67b1316ec40b26cc08158ac6cba28b45c40ba10a0",
+      "viewBox": "0 0 1500 920",
+      "png_preview": {
+        "file": "fig3_method_mechanism.png",
+        "kind": "png_preview",
+        "dpi": 300,
+        "pixel_size": "2148x1317",
+        "sha256": "a35aad0af3b8430a2ac09253f5d2f83988c015e9ad8976f66b36616939c49e44"
+      },
+      "pdf": {
+        "file": "fig3_method_mechanism.pdf",
+        "kind": "pdf",
+        "sha256": "2ca11d6a410d96da6a2bfde4d56ee5d2a58fe152d67e7f771e5dd7ef9bfefdd9"
+      }
+    }
+  ]
+}

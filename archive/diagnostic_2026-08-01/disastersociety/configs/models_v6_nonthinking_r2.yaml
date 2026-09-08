@@ -1,0 +1,69 @@
+# Model price & backend registry (spec M0-M3 §1).
+#   input_per_m / output_per_m : USD per 1M tokens (update from vendor pricing)
+#   base_url / api_key_env      : set for OpenAI-compatible proxies & local vLLM
+#   backend                     : "mock" (offline, deterministic, free) | "litellm"
+#
+# The gateway resolves a model name here to decide how to call it and what it costs.
+# `mock` is the CI/default backend: no network, zero cost, deterministic output.
+models:
+  mock:
+    backend: mock
+    input_per_m: 0.0
+    output_per_m: 0.0
+
+  gpt-4o-mini:
+    backend: litellm
+    input_per_m: 0.15
+    output_per_m: 0.60
+
+  claude-haiku-4-5:
+    backend: litellm
+    model_id: claude-haiku-4-5-20251001
+    input_per_m: 1.00
+    output_per_m: 5.00
+
+  # PACKY forwarding proxy — fill in your real base_url before use
+  packy-k3:
+    backend: litellm
+    base_url: https://YOUR_PACKY_FORWARD_ADDRESS/v1
+    api_key_env: PACKY_API_KEY
+    input_per_m: 0.40
+    output_per_m: 0.40
+
+  # Existing project proxy used by the historical Carr development run.
+  # LiteLLM requires the openai/ prefix for custom OpenAI-compatible endpoints.
+  # Proxy billing has not been independently verified; these prices are only a
+  # conservative internal budget estimate and must not be reported as invoices.
+  packy-deepseek-v4-flash:
+    backend: litellm
+    model_id: openai/deepseek-v4-flash
+    base_url: https://www.packyapi.com/v1
+    api_key_env_candidates:
+      - PACKY_API_KEY
+      - LLM_API_KEY
+      - OPENAI_API_KEY
+    input_per_m: 1.0
+    output_per_m: 1.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    # Carr residents return a short structured decision. DeepSeek V4 enables
+    # high-effort thinking by default, which can consume the output budget
+    # before emitting JSON. Use the provider's documented non-thinking mode
+    # for this structured simulation backend.
+    call_kwargs:
+      max_tokens: 1024
+      max_retries: 0
+      extra_body:
+        thinking:
+          type: disabled
+    request_timeout_seconds: 45
+    max_attempts: 2
+    # This proxy rejects unsigned 32-bit values even though the kernel's
+    # component stream intentionally spans 0..2^32-1.
+    provider_seed_max: 2147483647
+
+  # local open-weights via `vllm serve Qwen2.5-14B-Instruct`
+  qwen-local:
+    backend: litellm
+    base_url: http://localhost:8000/v1
+    input_per_m: 0.0
+    output_per_m: 0.0

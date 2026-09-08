@@ -1,0 +1,17 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r7",
+  "lane": "6",
+  "pid": 18995,
+  "config": "experiments/carr/configs/carr_s_e2_v8_formal_r7.yaml",
+  "declared_seeds": [
+    2003,
+    2203
+  ],
+  "completed_seeds": [
+    2003,
+    2203
+  ],
+  "current_seed": null,
+  "state": "COMPLETE",
+  "stop_reason": null
+}

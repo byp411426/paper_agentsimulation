@@ -1,0 +1,35 @@
+{
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_SCALE_EFFICIENCY",
+  "basis": "User 2026-08-04 instruction to start the E3c scale and efficiency experiment (100/500/1000 agents) on a real backend.",
+  "design": {
+    "scenario": "Carr-S E1 v2 natural-timeline scenario (25 steps, 30-minute step, order steps 3/7, hazard 9000m/250m per step, closure step 9)",
+    "sizes_households": [100, 500, 1000],
+    "seeds_per_size": 2,
+    "model": "opencode-deepseek-v4-flash (OpenCode Go gateway)",
+    "cohort_source": "eventpacks/carr_2018/population/pilot_seed42_n1000_v2/synthetic_households.csv (1000-household donor pool)",
+    "metrics": [
+      "completion_rate",
+      "wall_clock_seconds",
+      "llm_calls_total",
+      "decision_resident_count",
+      "awake_decision_count",
+      "tokens_input_output",
+      "internal_cost_usd",
+      "failure_count",
+      "fallback_rate",
+      "event_and_message_backlog",
+      "maximum_stable_size"
+    ],
+    "claim_boundary": "Scale runs support the engineering envelope only (pipeline can run N agents); they do not establish realism, population representativeness, or behavioral validity."
+  },
+  "execution_order": [
+    "Mock preflight at 100 households validates the scale path and artifact completeness.",
+    "Real 100-household run (2 seeds) executes first; audit before 500.",
+    "Real 500 then 1000 execute with the same frozen config; each size audited before the next."
+  ],
+  "stop_rule": "Each size stops on first ABORTED/INVALID run or fallback_rate > 0.01; artifacts preserved and excluded pending an audited recovery amendment.",
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "cost_note": "Real runs consume paid OpenCode Go quota; estimates ~$0.4 (100), ~$2 (500), ~$4 (1000) per seed at flash pricing before audit."
+}

@@ -1,0 +1,54 @@
+{
+  "run_seed": 404,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "INVALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 8,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 8,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 4,
+    "n_safe_dependents": 4,
+    "coordinated_movements": 2,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "departure scheduled for a future step": 5
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_deepseek_backend_pilot_v3_expansion_batch_seed404_full_seed404",
+    "spent": 0.049386,
+    "n_ok": 12,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 1,
+    "fallback_rate": 0.076923,
+    "live_prompt_tokens": 11573,
+    "live_completion_tokens": 37813,
+    "logical_prompt_tokens": 11573,
+    "logical_completion_tokens": 37813
+  },
+  "wall_clock_seconds": 180.649074
+}

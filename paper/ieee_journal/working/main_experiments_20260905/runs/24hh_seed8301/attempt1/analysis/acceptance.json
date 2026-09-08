@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "failures": [],
+  "households": 24,
+  "seed": 8301,
+  "steps": 25,
+  "logical_decisions": 188,
+  "checked_departure_parties": 13,
+  "behavior_threshold_applied": false
+}

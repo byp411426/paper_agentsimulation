@@ -1,0 +1,20 @@
+{
+  "protocol_id": "carr_s_e3a_v8b",
+  "lane": "v8b",
+  "pid": 30256,
+  "config": "experiments/carr/configs/carr_s_e3a_v8b.yaml",
+  "variant": "v8b",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209
+  ],
+  "current_seed": 2303,
+  "state": "STOPPED_NONVALID_BATCH",
+  "stop_reason": "seed 2303 did not finish three-for-three VALID"
+}

@@ -1,0 +1,65 @@
+{
+  "protocol": "carr_s_v8_execution_feedback_confirmation.0",
+  "status": "CONFIRMATION_COMPLETED",
+  "evidence_status": "PILOT",
+  "freeze_date": "2026-08-02",
+  "basis": "The v8 repair succeeded on the diagnosed seed101 development recheck. Before execution, freeze two additional full-condition seeds to test whether execution quality generalizes beyond that diagnosed cell.",
+  "cells": [
+    {"seed": 404, "condition": "full", "run_id": "carr_s_deepseek_v8_execution_feedback_confirm_seed404_r1_full_seed404"},
+    {"seed": 505, "condition": "full", "run_id": "carr_s_deepseek_v8_execution_feedback_confirm_seed505_r1_full_seed505"}
+  ],
+  "execution": {
+    "model": "packy-deepseek-v4-flash",
+    "backend_mode": "thinking enabled, reasoning effort high",
+    "n_households": 4,
+    "max_concurrency_per_cell": 8,
+    "cells_may_run_in_parallel": true,
+    "execute_both_regardless_of_interim_direction": true,
+    "stop_only_on_hard_failure": true
+  },
+  "predeclared_diagnostics": {
+    "coordinated_departure_rate": "report per seed and mean",
+    "successful_postclosure_replan_rate": "report per seed and mean",
+    "dependent_left_behind_rejections": "report per seed and total",
+    "resource_conflict_rejections_per_household": "report per seed and mean",
+    "logical_decisions": "report per seed and total",
+    "failed_and_fallback_decisions": "must be reported; any non-VALID cell is excluded but preserved"
+  },
+  "claim_boundary": {
+    "formal_evidence": false,
+    "formal_prompt_comparison": false,
+    "mechanism_effect_estimate": false,
+    "purpose": "execution-feedback repair confirmation only",
+    "carr_r_test_split_opened": false
+  },
+  "source_hashes": {
+    "ds/agents/carr.py": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+    "experiments/carr/runner.py": "e84a0ad6672c3170dc83d24ca8dcb9011cb79c0f57992396e3eae24694b64283",
+    "configs/models.yaml": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4",
+    "experiments/carr/configs/carr_s_deepseek_v8_execution_feedback_pilot.yaml": "2da913ed5c66d132bc5574686c44e42eaf5bc64276105d3180b79500f0f1c2b9"
+  },
+  "completion_record": {
+    "terminal_status_counts": {"VALID": 2},
+    "logical_decisions": 85,
+    "failed_decisions": 0,
+    "fallback_decisions": 0,
+    "internal_estimated_cost_usd": 0.51909,
+    "seed404": {
+      "coordinated_departure_rate": 0.75,
+      "successful_postclosure_replan_rate": 1.0,
+      "dependent_left_behind_rejections": 1,
+      "resource_conflict_rejections_per_household": 0.25
+    },
+    "seed505": {
+      "coordinated_departure_rate": 1.0,
+      "successful_postclosure_replan_rate": 1.0,
+      "dependent_left_behind_rejections": 0,
+      "resource_conflict_rejections_per_household": 0.0
+    },
+    "summary": {
+      "path": "experiments/carr/results/carr_s_deepseek_v8_execution_feedback_summary.json",
+      "sha256": "b1406302cd2620c32bf733a036021461af1035ef18a5bbf7bd4f5070b9b47e62"
+    },
+    "carr_r_test_split_opened": false
+  }
+}

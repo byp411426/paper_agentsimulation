@@ -1,0 +1,24 @@
+{
+  "schema_version": "v2",
+  "puma": 8900,
+  "n_households": 4317,
+  "n_persons": 9968,
+  "n_excluded_vacant_housing_units": 339,
+  "n_excluded_group_quarters_records": 381,
+  "np_mismatch_count": 0,
+  "duplicate_sporder_count": 0,
+  "invalid_reference_person_count": 0,
+  "households_without_persons": 0,
+  "adjusted_income_changed_fine_bin_count": 722,
+  "unknown_code_counts": {},
+  "housing_zip_sha256": "1c09428290fcfdde00cfee1276a1b64ce1031081b56055dea6e1c04505718daa",
+  "person_zip_sha256": "0b55d01ab0a9926892c101704b31d2224f9ec7714fecaca5b7f4065562acb111",
+  "codebook_sha256": "670706b0a28c987ee955e92ac310e35dfef303924300b84dca7d591817d2bec3",
+  "output_sha256": {
+    "donor_households.csv": "8c3f01fbfbb014da060f2e611b0ba01960e276359b22968667e7a12a10c80b62",
+    "donor_persons.csv": "4403815dfd24b926a5a7ace1779d044775115c3051b727c11b20b789a08e395e",
+    "donor_serialno_linkage.csv": "4711bdd374ffd9f56af9b44fb468aa32a1dfc69645c8053224e953fce801aef9"
+  },
+  "serialno_in_public_households": false,
+  "serialno_in_public_persons": false
+}

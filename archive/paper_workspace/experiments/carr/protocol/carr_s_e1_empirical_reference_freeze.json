@@ -1,0 +1,87 @@
+{
+  "protocol_id": "carr_s_e1_empirical_reference_v1",
+  "frozen_at": "2026-08-02T12:10:01+08:00",
+  "status": "SUPERSEDED_AFTER_EMPTY_GROUP_PREFLIGHT",
+  "superseded_reason": "The first aggregate build stopped because the predeclared zero-vehicle group had n=0. No result artifact was written and no replacement contrast was selected.",
+  "paper_claim": "Carr-S aggregate outcomes and process trajectories will be compared with estimand-aligned respondent-sample references and executable constraints, without treating the survey as weighted population truth.",
+  "analysis_scales": [
+    "individual",
+    "household_and_network",
+    "group"
+  ],
+  "evidence_type": "empirical_and_behavioral_validity",
+  "reference_contract": {
+    "evacuation_outcome": {
+      "cohort": "finished respondents with nonmissing Q9.1",
+      "estimand": "respondent-sample evacuation proportion",
+      "report": [
+        "proportion",
+        "Wilson 95% interval"
+      ]
+    },
+    "order_to_departure_delay": {
+      "estimand": "hours from first reported mandatory or voluntary evacuation order to reported departure",
+      "main": "Q9.1 evacuees with both timestamps, nonnegative temporal order, and no order-response contradiction",
+      "sensitivity": "affirmative-order priority, retaining otherwise valid order-response contradictions",
+      "report": [
+        "n",
+        "mean and SD",
+        "predeclared quantiles",
+        "empirical CDF at 0, 0.5, 1, 2, 3, 4, 5, 6, 8, 10, 12, 24, and 48 hours"
+      ],
+      "absolute_hours_since_ignition_directly_comparable_to_controlled_simulation": false
+    },
+    "warning_channels": {
+      "estimand": "multi-select channel prevalence among reported order recipients",
+      "main": "all finished warned respondents excluding the 15 order-response contradictions",
+      "sensitivity": "affirmative-order priority including those contradictions",
+      "overall_official_receipt_role": "CALIBRATION",
+      "per_channel_report": "prevalence and Wilson 95% interval",
+      "normalized_distribution_distance_prohibited": true,
+      "comparison_to_simulation_first_heard_prohibited": true
+    },
+    "subgroup_evacuation_gaps": {
+      "estimand": "signed respondent-sample evacuation-rate gap",
+      "contrasts": [
+        "age 65+ minus age under 65",
+        "household size 3+ minus household size 1-2",
+        "zero vehicles minus one or more vehicles",
+        "income under $50k minus income $50k+"
+      ],
+      "missingness": "complete cases within each contrast; no imputation",
+      "interval": "20,000-replicate percentile bootstrap",
+      "bootstrap_seed": 20260802
+    }
+  },
+  "simulation_comparison_gate": {
+    "required_before_claim": [
+      "separate real-model Carr-S full-condition runs without controlled initial plans",
+      "matching denominator and time origin",
+      "run-level uncertainty across independent seeds",
+      "constraint and communication-process metrics",
+      "blinded human or expert ratings with agreement"
+    ],
+    "channel_reference_is_independent_validation": false,
+    "respondent_sample_is_population_representative": false,
+    "carr_r_test_split_opened": false
+  },
+  "frozen_sources": [
+    {
+      "path": "scripts/build_carr_s_e1_empirical_reference.py",
+      "sha256": "04b253bebd9d57d8e989349a5dbb0ff40325e12403342c7049d4b506aee9dd1a"
+    },
+    {
+      "path": "experiments/carr/protocol/field_roles.yaml",
+      "sha256": "bb6406ee98e0be2be9274a80bb0cf84e6dedacc4e267d43e7de1e4826702e391"
+    },
+    {
+      "path": "eventpacks/carr_2018/behavior/survey_clean.csv",
+      "sha256": "46539f3162428803a250e59f30d81c87ac9d4d2551c3561d71069ad078daee4b"
+    },
+    {
+      "path": "eventpacks/carr_2018/warnings/delivery_params.yaml",
+      "sha256": "89e3bc80d919717b2a31820876cf071e47710cc71fc27879a8fa3cf2cd2b9aca"
+    }
+  ],
+  "claim_boundary": "The aggregate reference build verifies data transformations and freezes estimands. Empirical compatibility is not established until independently generated real-model Carr-S runs and blinded ratings are analyzed."
+}

@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e3_v1_claude",
+  "amendment_id": "r2_provider_channel_recovery_20260803",
+  "frozen_at": "2026-08-03",
+  "status": "FROZEN_RECOVERY_CONTINUATION",
+  "trigger": {
+    "type": "provider_channel_unavailable",
+    "observed_error": "分组 aws-q 下模型 claude-sonnet-5 无可用渠道 (ServiceUnavailableError)",
+    "affected_run": "carr_s_e3_v1_claude_full_minus_feedback_seed2303 (ABORTED)",
+    "channel_probe_after": "HTTP 200 chat completion on claude-sonnet-5 confirmed restored"
+  },
+  "disposition": {
+    "preserved_valid_cells": "seeds 2107/2209 (full, -feedback, -interaction) and seed2303/full remain VALID and are reused by the same lane on restart",
+    "aborted_artifact": "carr_s_e3_v1_claude_full_minus_feedback_seed2303 archived and excluded",
+    "continuation": "Same protocol id, same seeds/conditions/metrics; only missing cells are executed; no cross-model or cross-seed splicing"
+  },
+  "science_unchanged": true,
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

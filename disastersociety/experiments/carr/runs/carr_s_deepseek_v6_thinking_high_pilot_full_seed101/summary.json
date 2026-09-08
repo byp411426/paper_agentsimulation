@@ -1,0 +1,49 @@
+{
+  "run_seed": 101,
+  "planned_steps": 10,
+  "completed_steps": 0,
+  "last_completed_step": null,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 1,
+    "hazard_distance_m": 5300.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 2,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 2,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {},
+    "route_closures": []
+  },
+  "gateway": {
+    "run_id": "carr_s_deepseek_v6_thinking_high_pilot_full_seed101",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 0,
+    "live_completion_tokens": 0,
+    "logical_prompt_tokens": 0,
+    "logical_completion_tokens": 0
+  },
+  "wall_clock_seconds": 1.591785,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t023_h0000012_r001, step=1: litellm.UnsupportedParamsError: openai does not support parameters: ['reasoning_effort'], for model=deepseek-v4-flash. To drop these, set `litellm.drop_params=True` or for proxy:\n\n`litellm_settings:\n drop_params: true`\n. \n If you want to use these params dynamically send allowed_openai_params=['reasoning_effort'] in your request."
+}

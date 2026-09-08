@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-09-05T17:22:39.465697+00:00",
+  "actual_attempt": 3,
+  "prefix_complete_steps": 11,
+  "prefix_byte_identical": true,
+  "cache_hits": 478,
+  "new_successful_calls": 0,
+  "current_complete_steps": 12,
+  "call_status_counts": {
+    "cache_hit": 478,
+    "ok": 5
+  },
+  "former_failed_decision_recovered": {
+    "step": 12,
+    "agent_id": "syn_t002_h0000007_r001",
+    "action": "seek_help",
+    "schema_repairs": 0,
+    "note": "Initial response in resumed attempt was valid; additional correction was offline-tested but not used for this recovered decision."
+  }
+}

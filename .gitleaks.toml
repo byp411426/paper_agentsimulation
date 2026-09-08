@@ -1,0 +1,14 @@
+title = "DisasterSociety secret scan"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "SHA-256 request cache IDs emitted by LLMCache.make_key, reviewed against gateway/cache source and every flagged record"
+condition = "AND"
+paths = ['''(^|/)llm_calls\.jsonl$''']
+regexTarget = "match"
+regexes = ['''^key": "[0-9a-f]{64}"?$''']

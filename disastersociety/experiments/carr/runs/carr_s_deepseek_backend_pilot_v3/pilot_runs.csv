@@ -1,0 +1,11 @@
+condition,seed,status,n_households,n_decision_residents,warning_retention_rate,primary_to_alternate_update_rate,successful_replan_rate,compatible_commitment_rate,coordinated_departure_rate,uncoordinated_departure_rate,resource_conflict_rejections_per_household,dependent_left_behind_rejections,accepted_message_receipts,delivered_message_receipts,dropped_message_deliveries,realized_closure_step,n_logical_decisions,run_terminal_status,fallback_rate,cost_usd
+full,101,PILOT,2,4,0.5,1.0,1.0,0.5,0.0,1.0,3.5,1,1,4,11,3,15,VALID,0.0,0.06221
+full_minus_memory,101,PILOT,2,4,0.0,1.0,1.0,0.5,0.0,1.0,4.0,0,1,3,10,3,14,VALID,0.0,0.060575
+full_minus_feedback,101,PILOT,2,4,0.5,1.0,1.0,0.5,0.0,1.0,4.0,0,1,2,11,3,14,VALID,0.0,0.054484
+full_minus_planning,101,PILOT,2,4,0.5,0.0,0.0,0.0,0.0,1.0,3.0,0,0,3,8,3,11,VALID,0.0,0.050767
+full_minus_interaction,101,PILOT,2,4,0.5,1.0,1.0,0.0,0.0,1.0,4.0,0,0,0,0,3,14,VALID,0.0,0.035883
+full,202,PILOT,2,4,0.0,0.5,0.0,0.0,0.0,1.0,4.0,0,0,4,6,6,10,VALID,0.0,0.040179
+full_minus_memory,202,PILOT,2,4,0.0,0.6666666666666666,0.5,0.0,0.0,1.0,2.5,1,1,3,8,6,11,VALID,0.0,0.060153
+full_minus_feedback,202,PILOT,2,4,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,3.5,0,0,4,6,6,10,VALID,0.0,0.048775
+full_minus_planning,202,PILOT,2,4,0.0,0.0,0.0,0.0,0.0,1.0,4.0,0,0,4,6,6,10,VALID,0.0,0.052987
+full_minus_interaction,202,PILOT,2,4,0.0,0.5,0.0,0.0,0.0,1.0,4.0,0,0,0,0,6,10,VALID,0.0,0.027563

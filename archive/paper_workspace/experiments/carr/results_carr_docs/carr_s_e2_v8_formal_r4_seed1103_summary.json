@@ -1,0 +1,125 @@
+{
+  "status": "PILOT_PENDING_COMPLETE_MATRIX_AUDIT",
+  "activity_type": "PUBLICATION_FACING_E2_MATRIX_PENDING_AUDIT",
+  "decision_model": "packy-deepseek-v4-flash",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e2_v8_formal_r4.yaml",
+    "config_sha256": "4b4f6d3e245349e1662b8c3a0a797c3ee562b0cad8d5f18535b9194c47b26ee4"
+  },
+  "protocol": {
+    "declared_seeds": [
+      1103,
+      1201,
+      1301,
+      1409,
+      1511,
+      1601,
+      1709,
+      1801,
+      1907,
+      2003,
+      2111,
+      2203
+    ],
+    "executed_seed_batch": [
+      1103
+    ],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 5,
+    "planned_runs": 5,
+    "reused_terminal_artifacts": 0,
+    "aborted_early": false,
+    "terminal_status_counts": {
+      "VALID": 5
+    }
+  },
+  "runs": [
+    {
+      "seed": 1103,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 92,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1189.316063,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r4_full_seed1103",
+      "summary_sha256": "7bd24126f16fa25d84d71ce1cf3ac249f51ebabfffb288fd0dad00b32126417f",
+      "mechanism_metrics_sha256": "bab7d184d0bedbb049c211e0f33355574cd090db146b6a1b3230ae74918a3d39",
+      "provenance_sha256": "aafb61b0674ababf298c8b44e5378d38de25f8fd32aa1911ea10791de511446f"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_memory",
+      "terminal_status": "VALID",
+      "n_ok": 94,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1249.529521,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r4_full_minus_memory_seed1103",
+      "summary_sha256": "e4cbca9397551b198ee4b1ff90e52b07c122bd44c7d4f302dd3a6c0d4f4c1dd9",
+      "mechanism_metrics_sha256": "07e8a9a98452202ec0b4399aeff19733fc5647f9873555a3876601411329cb8a",
+      "provenance_sha256": "45067eb608df823aca847479ea1ea569753f8e06b3732e37752793f790d707be"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_feedback",
+      "terminal_status": "VALID",
+      "n_ok": 152,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1972.975837,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r4_full_minus_feedback_seed1103",
+      "summary_sha256": "4bd704bf9b361e1e67bd615183cf151724a3bc45440cb36219acda019599ef0c",
+      "mechanism_metrics_sha256": "5ef9cc6af465bde3c4e4bc8f6c195a95a31c3d6c715fed31f068489f2850c235",
+      "provenance_sha256": "3bcb485b824b0d43ed3819ee7f099f16f54d7c4b7c7a247478431d6b1710c86e"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_planning",
+      "terminal_status": "VALID",
+      "n_ok": 92,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1167.392705,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r4_full_minus_planning_seed1103",
+      "summary_sha256": "3880a66c7fb851fac07d336b4598181932ca7bb0c83a1447addce8bf843ecbdc",
+      "mechanism_metrics_sha256": "8701d8dd3093c55aa5c8e1bf33f501a562b6e66962e813f30afca9a48a8ae2a9",
+      "provenance_sha256": "a1d80bbd1ebdc370408116e79694bf8cb496d4d406538769c1c8b4a97c5403ca"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_interaction",
+      "terminal_status": "VALID",
+      "n_ok": 109,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1088.991752,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r4_full_minus_interaction_seed1103",
+      "summary_sha256": "fee7e85bba8b33c305dd010ff2bd5f0799a288255823af6e896119ac3e624a77",
+      "mechanism_metrics_sha256": "8d9357e1a936366ff30d652d8135a371592a98f39a3fd9c30633abfebe4de952",
+      "provenance_sha256": "0df35806de28ea30ee3d1b54ef105f64784eaac1279c841660cd19a6895b2ac9"
+    }
+  ],
+  "claim_boundary": "One immutable seed batch from the publication-facing Carr-S E2 matrix. It remains PILOT until all predeclared seeds are complete and the full matrix, exclusions, provenance, and intervals are audited."
+}

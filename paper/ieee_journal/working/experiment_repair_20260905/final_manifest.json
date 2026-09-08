@@ -1,0 +1,29 @@
+{
+  "evidence_status": "PILOT",
+  "households": 4,
+  "members": 12,
+  "seed": 7201,
+  "total_steps": 12,
+  "hashes": {
+    "implementation_final/ds/agents/e1_contracts.py": "72e6558cc61c19c719be5ba74e7cc9dcb2e05ac4733926f6792f386425deda81",
+    "implementation_final/ds/agents/carr_empirical_v2.py": "bd5b7e644ba7d932c8d9789f6ecf35dc47a9f4d7df8cf15b74a49dcb9d668329",
+    "implementation_final/ds/world/carr_empirical_v2.py": "f0c8dfe744672c26abd6218a6c5766482125396c1e3b9535fff2a2aee0c30d14",
+    "implementation_final/ds/interaction/carr_empirical_v2.py": "7e41de9e90a09a376f3871ff6b7e71dd1db2d6aac57c54bcf67c649734c56f40",
+    "implementation_final/ds/households/state.py": "28504e6560ed6e1a76424a3cc6e30759cabcb674dbca4b81d9932567ae9963ca",
+    "implementation_final/ds/kernel/engine.py": "b28039c733505f8a70c154da9d3bbf851974641fbcc8c9dd35609d14384b7773",
+    "implementation_final/experiments/carr/empirical_v2_runner.py": "68ec033daa2d031578d98b7d19a0b1dc2c6f16a673e891f59d32d7fcbcbac4a5",
+    "profiles.jsonl": "c4c5094140c92b1ccc8798183619cc358630376ae39aac98a3bb9ec56f46adce",
+    "pilot.yaml": "28b64f31ea42a5cc950e4e765d0eefd21e01e36d89f73896463f7c2542a215e6",
+    "models.yaml": "acae72f17ab82648a634fc8524d83ffb8b054b2d3252af97c3cb253d1db05257",
+    "run_final.py": "2251c839a9af2d00b6facc0c50c36c9487c1e13a19a444a5cb5d1f71db939d8f",
+    "models_final.yaml": "5a62924aa19d7b0e84e486f68fdc6f9a3845fbf7f928bb83218cdbddb856ff11"
+  },
+  "changes": "Protocol timing clarified for new versus received proposals; fresh model response cache.",
+  "output_budget_amendment": {
+    "max_tokens": 32768,
+    "timeout_seconds": 600,
+    "reason": "Prior model responses exhausted thinking/output allocation and returned empty content; same model and thinking mode retained.",
+    "request_cap": 120,
+    "wall_seconds_cap": 1800
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED_PROTOCOL_ARTIFACT",
+  "track": "Carr-R",
+  "source_sha256": "5cc642186cba75d36e0b2617d3bccfe1bb51b1a328eb98cb0a5391a9ea0ba031",
+  "source_rows": 330,
+  "public_key": "evaluation_index",
+  "respondent_id_exported": false,
+  "algorithm": "outcome-stratified SHA-256 ordering with largest-remainder allocation",
+  "seed": 20260731,
+  "proportions": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "counts": {
+    "test": {
+      "n": 66,
+      "n_evacuated": 58,
+      "n_not_evacuated": 8
+    },
+    "train": {
+      "n": 198,
+      "n_evacuated": 176,
+      "n_not_evacuated": 22
+    },
+    "validation": {
+      "n": 66,
+      "n_evacuated": 59,
+      "n_not_evacuated": 7
+    }
+  },
+  "field_roles_sha256": "f88944d421ec8d313b64ff272052a6b36d62f9b4e8dcbdf4e34410b0ecb3b4ba",
+  "channel_inconsistency_rule": {
+    "main": "Exclude order_response_inconsistent=True records from order-channel prevalence estimands only.",
+    "sensitivity": "Retain them using affirmative-order priority: a reported mandatory/voluntary receipt and its selected channels take precedence over the contradictory no-official-order response.",
+    "evacuation_outcome": "Do not exclude otherwise eligible Q9.1 outcomes solely for this channel inconsistency."
+  }
+}

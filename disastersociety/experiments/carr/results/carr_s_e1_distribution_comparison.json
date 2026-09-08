@@ -1,0 +1,574 @@
+{
+ "status": "DISTRIBUTION_LEVEL_COMPARISON",
+ "evidence_boundary": "Survey values are respondent-sample aggregate references (frozen carr_s_e1_empirical_reference_v1_1), not weighted population truth. The freeze prohibits comparing survey channel prevalence to simulated first-heard shares and prohibits any normalized distribution distance; this artifact reports estimand-aligned multi-select prevalence only. The simulated scenario window is 25 steps x 0.5 h = 12.5 h, so CDF grid points beyond 12.5 h are saturated by construction and carry no information about the survey's 24/48 h tail.",
+ "step_hours": 0.5,
+ "grid_hours": [
+  0,
+  0.5,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  24,
+  48
+ ],
+ "runs": [
+  {
+   "n_households": 24,
+   "n_members": 44,
+   "n_order_recipient_households": 17,
+   "channel_prevalence": {
+    "official_direct": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    },
+    "community": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    },
+    "household_dm": {
+     "n": 17,
+     "k": 6,
+     "share": 0.35294117647058826
+    },
+    "any_interpersonal": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    }
+   },
+   "order_to_departure": {
+    "n_households": 12,
+    "mean_hours": 0.125,
+    "median_hours": 0.0,
+    "cdf": {
+     "0": 0.75,
+     "0.5": 1.0,
+     "1": 1.0,
+     "2": 1.0,
+     "3": 1.0,
+     "4": 1.0,
+     "5": 1.0,
+     "6": 1.0,
+     "8": 1.0,
+     "10": 1.0,
+     "12": 1.0,
+     "24": 1.0,
+     "48": 1.0
+    },
+    "max_delay_hours": 0.5
+   },
+   "individual_departure": {
+    "departed": 19,
+    "members": 44,
+    "share": 0.4318181818181818
+   },
+   "individual_departure_recipient_cohort": {
+    "departed": 19,
+    "members": 32,
+    "share": 0.59375
+   },
+   "study": "e1_v2",
+   "seed": 7201,
+   "run_dir": "experiments/carr/runs/e1_formal_r7_seed7201/carr_s_e1_v2_formal",
+   "config_n_households": 24
+  },
+  {
+   "n_households": 24,
+   "n_members": 44,
+   "n_order_recipient_households": 17,
+   "channel_prevalence": {
+    "official_direct": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    },
+    "community": {
+     "n": 17,
+     "k": 11,
+     "share": 0.6470588235294118
+    },
+    "household_dm": {
+     "n": 17,
+     "k": 5,
+     "share": 0.29411764705882354
+    },
+    "any_interpersonal": {
+     "n": 17,
+     "k": 12,
+     "share": 0.7058823529411765
+    }
+   },
+   "order_to_departure": {
+    "n_households": 13,
+    "mean_hours": 0.34615384615384615,
+    "median_hours": 0.0,
+    "cdf": {
+     "0": 0.6153846153846154,
+     "0.5": 0.8461538461538461,
+     "1": 0.9230769230769231,
+     "2": 1.0,
+     "3": 1.0,
+     "4": 1.0,
+     "5": 1.0,
+     "6": 1.0,
+     "8": 1.0,
+     "10": 1.0,
+     "12": 1.0,
+     "24": 1.0,
+     "48": 1.0
+    },
+    "max_delay_hours": 2.0
+   },
+   "individual_departure": {
+    "departed": 22,
+    "members": 44,
+    "share": 0.5
+   },
+   "individual_departure_recipient_cohort": {
+    "departed": 22,
+    "members": 31,
+    "share": 0.7096774193548387
+   },
+   "study": "e1_v2",
+   "seed": 8301,
+   "run_dir": "experiments/carr/runs/e1_formal_r10_seed8301/carr_s_e1_v2_formal",
+   "config_n_households": 24
+  },
+  {
+   "n_households": 24,
+   "n_members": 44,
+   "n_order_recipient_households": 17,
+   "channel_prevalence": {
+    "official_direct": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    },
+    "community": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    },
+    "household_dm": {
+     "n": 17,
+     "k": 5,
+     "share": 0.29411764705882354
+    },
+    "any_interpersonal": {
+     "n": 17,
+     "k": 17,
+     "share": 1.0
+    }
+   },
+   "order_to_departure": {
+    "n_households": 12,
+    "mean_hours": 0.25,
+    "median_hours": 0.0,
+    "cdf": {
+     "0": 0.6666666666666666,
+     "0.5": 0.8333333333333334,
+     "1": 1.0,
+     "2": 1.0,
+     "3": 1.0,
+     "4": 1.0,
+     "5": 1.0,
+     "6": 1.0,
+     "8": 1.0,
+     "10": 1.0,
+     "12": 1.0,
+     "24": 1.0,
+     "48": 1.0
+    },
+    "max_delay_hours": 1.0
+   },
+   "individual_departure": {
+    "departed": 21,
+    "members": 44,
+    "share": 0.4772727272727273
+   },
+   "individual_departure_recipient_cohort": {
+    "departed": 21,
+    "members": 33,
+    "share": 0.6363636363636364
+   },
+   "study": "e1_v2",
+   "seed": 9401,
+   "run_dir": "experiments/carr/runs/e1_formal_r9_seed9401/carr_s_e1_v2_formal",
+   "config_n_households": 24
+  },
+  {
+   "n_households": 100,
+   "n_members": 201,
+   "n_order_recipient_households": 73,
+   "channel_prevalence": {
+    "official_direct": {
+     "n": 73,
+     "k": 73,
+     "share": 1.0
+    },
+    "community": {
+     "n": 73,
+     "k": 73,
+     "share": 1.0
+    },
+    "household_dm": {
+     "n": 73,
+     "k": 34,
+     "share": 0.4657534246575342
+    },
+    "any_interpersonal": {
+     "n": 73,
+     "k": 73,
+     "share": 1.0
+    }
+   },
+   "order_to_departure": {
+    "n_households": 43,
+    "mean_hours": 0.313953488372093,
+    "median_hours": 0.5,
+    "cdf": {
+     "0": 0.4883720930232558,
+     "0.5": 0.8372093023255814,
+     "1": 0.9302325581395349,
+     "2": 1.0,
+     "3": 1.0,
+     "4": 1.0,
+     "5": 1.0,
+     "6": 1.0,
+     "8": 1.0,
+     "10": 1.0,
+     "12": 1.0,
+     "24": 1.0,
+     "48": 1.0
+    },
+    "max_delay_hours": 2.0
+   },
+   "individual_departure": {
+    "departed": 77,
+    "members": 201,
+    "share": 0.38308457711442784
+   },
+   "individual_departure_recipient_cohort": {
+    "departed": 73,
+    "members": 156,
+    "share": 0.46794871794871795
+   },
+   "study": "e3c_scale100",
+   "seed": 101,
+   "run_dir": "experiments/carr/runs/e1_scale_100_packy_seed101_r5/carr_s_e1_scale_100_packy",
+   "config_n_households": 100
+  },
+  {
+   "n_households": 100,
+   "n_members": 201,
+   "n_order_recipient_households": 73,
+   "channel_prevalence": {
+    "official_direct": {
+     "n": 73,
+     "k": 73,
+     "share": 1.0
+    },
+    "community": {
+     "n": 73,
+     "k": 64,
+     "share": 0.8767123287671232
+    },
+    "household_dm": {
+     "n": 73,
+     "k": 33,
+     "share": 0.4520547945205479
+    },
+    "any_interpersonal": {
+     "n": 73,
+     "k": 66,
+     "share": 0.9041095890410958
+    }
+   },
+   "order_to_departure": {
+    "n_households": 34,
+    "mean_hours": 0.27941176470588236,
+    "median_hours": 0.0,
+    "cdf": {
+     "0": 0.5588235294117647,
+     "0.5": 0.8823529411764706,
+     "1": 1.0,
+     "2": 1.0,
+     "3": 1.0,
+     "4": 1.0,
+     "5": 1.0,
+     "6": 1.0,
+     "8": 1.0,
+     "10": 1.0,
+     "12": 1.0,
+     "24": 1.0,
+     "48": 1.0
+    },
+    "max_delay_hours": 1.0
+   },
+   "individual_departure": {
+    "departed": 61,
+    "members": 201,
+    "share": 0.3034825870646766
+   },
+   "individual_departure_recipient_cohort": {
+    "departed": 45,
+    "members": 141,
+    "share": 0.3191489361702128
+   },
+   "study": "e3c_scale100",
+   "seed": 202,
+   "run_dir": "experiments/carr/runs/e1_scale_100_packy_seed202_r2/carr_s_e1_scale_100_packy",
+   "config_n_households": 100
+  }
+ ],
+ "pooled": {
+  "n_runs": 5,
+  "channel_prevalence": {
+   "official_direct": {
+    "n": 197,
+    "k": 197,
+    "share": 1.0
+   },
+   "community": {
+    "n": 197,
+    "k": 182,
+    "share": 0.9238578680203046
+   },
+   "household_dm": {
+    "n": 197,
+    "k": 83,
+    "share": 0.4213197969543147
+   },
+   "any_interpersonal": {
+    "n": 197,
+    "k": 185,
+    "share": 0.9390862944162437
+   }
+  },
+  "order_to_departure": {
+   "n_households": 114,
+   "mean_hours": 0.2807017543859649,
+   "median_hours": 0.0,
+   "cdf": {
+    "0": 0.5701754385964912,
+    "0.5": 0.868421052631579,
+    "1": 0.9649122807017544,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "8": 1.0,
+    "10": 1.0,
+    "12": 1.0,
+    "24": 1.0,
+    "48": 1.0
+   }
+  },
+  "individual_departure": {
+   "departed": 200,
+   "members": 534,
+   "share": 0.37453183520599254
+  },
+  "individual_departure_recipient_cohort": {
+   "departed": 180,
+   "members": 393,
+   "share": 0.4580152671755725
+  }
+ },
+ "survey_reference": {
+  "sha256": "0d899eb35bce343903ab91e05f885e9a329d5d66194edaac437b2712b423d691",
+  "evacuation_outcome": {
+   "cohort": "Q9.1 evaluation-eligible finished respondents",
+   "n": 330,
+   "successes": 293,
+   "proportion": 0.8878787878787879,
+   "wilson_95_ci": [
+    0.8492771840490105,
+    0.9175538767315419
+   ]
+  },
+  "order_to_departure_delay_main": {
+   "n": 186,
+   "mean_hours": 7.112903225806452,
+   "sd_hours": 21.49728191897984,
+   "quantiles_hours": {
+    "0": 0.0,
+    "0.25": 0.0,
+    "0.5": 1.0,
+    "0.75": 5.0,
+    "0.9": 13.5,
+    "0.95": 26.75,
+    "1": 169.0
+   },
+   "cdf": {
+    "0": 0.44623655913978494,
+    "0.5": 0.44623655913978494,
+    "1": 0.6344086021505376,
+    "2": 0.6559139784946236,
+    "3": 0.6935483870967742,
+    "4": 0.7419354838709677,
+    "5": 0.7741935483870968,
+    "6": 0.7795698924731183,
+    "8": 0.8172043010752689,
+    "10": 0.8548387096774194,
+    "12": 0.8924731182795699,
+    "24": 0.9408602150537635,
+    "48": 0.967741935483871
+   }
+  },
+  "warning_channel_prevalence_main": [
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "reverse_911",
+    "n": 234,
+    "successes": 84,
+    "proportion": 0.358974358974359,
+    "wilson_95_ci": [
+     0.3002455380777468,
+     0.4222586866808281
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "text",
+    "n": 234,
+    "successes": 89,
+    "proportion": 0.3803418803418803,
+    "wilson_95_ci": [
+     0.32054677302144163,
+     0.44400226616765215
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "television",
+    "n": 234,
+    "successes": 54,
+    "proportion": 0.23076923076923078,
+    "wilson_95_ci": [
+     0.18139606166732986,
+     0.28883927650813135
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "radio",
+    "n": 234,
+    "successes": 20,
+    "proportion": 0.08547008547008547,
+    "wilson_95_ci": [
+     0.05600876862772991,
+     0.1283218314202024
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "flyer",
+    "n": 234,
+    "successes": 0,
+    "proportion": 0.0,
+    "wilson_95_ci": [
+     0.0,
+     0.01615134232585647
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "public_official",
+    "n": 234,
+    "successes": 67,
+    "proportion": 0.2863247863247863,
+    "wilson_95_ci": [
+     0.23222314722818346,
+     0.3473287084666269
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "social_media",
+    "n": 234,
+    "successes": 40,
+    "proportion": 0.17094017094017094,
+    "wilson_95_ci": [
+     0.12811753289545003,
+     0.22439232487455807
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "subscribed_service",
+    "n": 234,
+    "successes": 25,
+    "proportion": 0.10683760683760683,
+    "wilson_95_ci": [
+     0.07341914319860629,
+     0.15295627127984496
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "website",
+    "n": 234,
+    "successes": 40,
+    "proportion": 0.17094017094017094,
+    "wilson_95_ci": [
+     0.12811753289545003,
+     0.22439232487455807
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "smartphone_app",
+    "n": 234,
+    "successes": 26,
+    "proportion": 0.1111111111111111,
+    "wilson_95_ci": [
+     0.0769614301036495,
+     0.15782294726090554
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "interpersonal",
+    "n": 234,
+    "successes": 87,
+    "proportion": 0.3717948717948718,
+    "wilson_95_ci": [
+     0.31241109476580975,
+     0.4353200186510765
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "billboard",
+    "n": 234,
+    "successes": 0,
+    "proportion": 0.0,
+    "wilson_95_ci": [
+     0.0,
+     0.01615134232585647
+    ]
+   },
+   {
+    "cohort": "main_consistent_warned",
+    "channel": "other",
+    "n": 234,
+    "successes": 19,
+    "proportion": 0.0811965811965812,
+    "wilson_95_ci": [
+     0.052595514302580255,
+     0.12332612285924827
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,115 @@
+run:
+  run_id: carr_s_e2_v8_formal_r3
+  total_steps: 10
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 12
+  budget_usd: 2.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT
+  activity_type: PUBLICATION_FACING_E2_MATRIX_PENDING_AUDIT
+  metric_protocol_version: v8
+  prompt_version: carr_s_controlled_resident_v8
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 8
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices: [3, 4]
+  depart_step: 5
+  coordination_deadline_step: 7
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 4
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 1.0
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.15
+  abort_matrix_on_nonvalid_run: true
+  route_observation_mode: feedback_gated
+  seed_controlled_initial_plan: true
+
+  formal_protocol:
+    protocol_id: carr_s_e2_v8_formal_r3
+    freeze_file: experiments/carr/protocol/carr_s_e2_v8_formal_r3_detached_recovery_freeze.json
+    predecessor_protocol_id: carr_s_e2_v8_formal_r2
+    recovery_reason: repeated_host_task_interruption_before_seed_batch_terminal_summary
+    selection_rule: use_r3_for_all_12_seeds_and_all_5_conditions
+    execution_transport: detached_two_lane_nohup
+    conditions:
+      - full
+      - full_minus_memory
+      - full_minus_feedback
+      - full_minus_planning
+      - full_minus_interaction
+    seeds: [1103, 1201, 1301, 1409, 1511, 1601, 1709, 1801, 1907, 2003, 2111, 2203]
+    n_seeds: 12
+    independent_replication_unit: seed_x_condition_run
+    execute_all_seeds_regardless_of_interim_direction: true
+    carr_r_test_split_opened: false
+    raw_run_evidence_status: PILOT_PENDING_COMPLETE_MATRIX_AUDIT
+    eligibility_rule: both full and paired drop-one runs must be VALID
+    invalid_rule: preserve artifact and exclude its paired contrast
+    aborted_rule: stop new paid execution and preserve all completed artifacts
+    primary_manipulation_checks:
+      memory: conditional_warning_retention_rate
+      feedback: preclosure_primary_to_postclosure_alternate_update_rate
+      planning: successful_postclosure_replan_rate
+      interaction: post_closure_feasible_commitment_rate
+    primary_downstream_outcomes:
+      memory:
+        metric: complete_household_safe_departure_rate
+        direction: higher
+      feedback:
+        metric: closed_route_rejections_per_household
+        direction: lower
+      planning:
+        metric: complete_household_safe_departure_rate
+        direction: higher
+      interaction:
+        metric: coordinated_departure_rate
+        direction: higher
+    supporting_outcomes:
+      - decision_resident_evacuation_rate
+      - dependent_safety_rate
+      - execution_rejections_per_household
+      - resource_conflict_rejections_per_household
+      - dependent_left_behind_rejections_per_household
+    inference:
+      report: paired mean, 95% t interval, MCSE, direction stability, and all exclusions
+      no_rescue_metrics_after_results: true
+      module_claim_scope: conditional removal effect in this controlled scenario
+    sizing_basis:
+      source: v7 interaction paired-difference SD 0.144338 over three development seeds
+      target_mcse_at_or_below: 0.05
+      calculated_minimum_seeds: 9
+      frozen_seeds: 12
+      reason: conservative allowance for small-sample uncertainty and v8/cohort changes
+    paid_execution_authorized: true
+    authorization_basis: repeated explicit user authorization in the active task
+    use_mock_for_behavior_or_effect_evidence: false
+
+  claim_boundary:
+    formal_only_after_complete_audit: true
+    carr_empirical_validation: false
+    historical_reconstruction: false
+    population_representative: false
+    universal_module_independence: false
+    carr_r_test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

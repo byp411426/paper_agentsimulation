@@ -1,0 +1,86 @@
+{
+  "status": "PILOT",
+  "activity_type": "BACKEND_RELIABILITY_CHECK",
+  "prompt_version": "carr_s_controlled_resident_v4",
+  "decision_model": "packy-deepseek-v4-flash",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_deepseek_backend_reliability_v4.yaml",
+    "config_sha256": "71d7093249e5c05b9a99bb61ed830d49522f31cd5c045ded9cf2d2462af6193e"
+  },
+  "protocol": {
+    "execute_sequentially": true,
+    "test_split_opened": false,
+    "substitute_for_v3_scientific_pairs": false,
+    "n_checks": 3
+  },
+  "completion": {
+    "terminal_status_counts": {
+      "VALID": 2,
+      "INVALID": 1
+    },
+    "all_checks_valid": false
+  },
+  "usage": {
+    "live_prompt_tokens": 36277,
+    "live_completion_tokens": 149049,
+    "estimated_cost_usd": 0.185326
+  },
+  "runtime": {
+    "sum_run_wall_clock_seconds": 1218.78
+  },
+  "checks": [
+    {
+      "seed": 404,
+      "condition": "full",
+      "diagnosed_v3_failure": "assessment_exceeded_schema_length",
+      "terminal_status": "VALID",
+      "n_ok": 16,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "live_prompt_tokens": 12970,
+      "live_completion_tokens": 56116,
+      "estimated_cost_usd": 0.069086,
+      "wall_clock_seconds": 583.802471,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_reliability_v4_project_env_full_seed404",
+      "summary_sha256": "f09355e7720a2489740ae7e8579d4af00d59032a0db47adcb1ddb727bfa41c28",
+      "provenance_sha256": "0249567a4511e8ad13ec9f5691f27c4cc9c2ce29c2c91e40abebd71f0e0775a7"
+    },
+    {
+      "seed": 303,
+      "condition": "full_minus_memory",
+      "diagnosed_v3_failure": "backend_timeout_under_parallel_batch_load",
+      "terminal_status": "VALID",
+      "n_ok": 14,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "live_prompt_tokens": 11700,
+      "live_completion_tokens": 49658,
+      "estimated_cost_usd": 0.061358,
+      "wall_clock_seconds": 299.828353,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_reliability_v4_project_env_full_minus_memory_seed303",
+      "summary_sha256": "c3c8d3235dcd3fa762749404a91a4224252ce52fecb6681abe6c31137da83d1b",
+      "provenance_sha256": "794e247f6144e28bc2efa791fc99752b0e4444d5514e51508175f86f622aed2a"
+    },
+    {
+      "seed": 505,
+      "condition": "full_minus_memory",
+      "diagnosed_v3_failure": "backend_timeout_under_parallel_batch_load",
+      "terminal_status": "INVALID",
+      "n_ok": 14,
+      "n_failed": 3,
+      "n_fallback": 3,
+      "fallback_rate": 0.176471,
+      "live_prompt_tokens": 11607,
+      "live_completion_tokens": 43275,
+      "estimated_cost_usd": 0.054882,
+      "wall_clock_seconds": 335.149401,
+      "run_dir": "experiments/carr/runs/carr_s_deepseek_backend_reliability_v4_project_env_full_minus_memory_seed505",
+      "summary_sha256": "613bb3fb54578bfd5b9425b263b57241e348d50aa49629fe9bb0a1306f0b61fa",
+      "provenance_sha256": "eee500763f0b1d82baf1ad85d2858b54475af71a95d8f07b26f92de90116ff13"
+    }
+  ],
+  "gate_interpretation": "At least one check was INVALID, so backend reliability remains open. The preserved call log identifies its cause as provider Insufficient Balance rather than a recurrence of the v3 schema/timeout failure; formal mechanism runs must not start.",
+  "claim_boundary": "Engineering reliability evidence only. These repaired reruns are not eligible for paired mechanism estimates or Carr empirical claims."
+}

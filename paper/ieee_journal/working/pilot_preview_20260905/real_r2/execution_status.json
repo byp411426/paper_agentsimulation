@@ -1,0 +1,19 @@
+{
+  "backend": "real",
+  "evidence_status": "DIAGNOSTIC_PILOT",
+  "gateway": {
+    "run_id": "e1_preview_4hh_seed7201",
+    "spent": 0.074121,
+    "n_ok": 6,
+    "n_cache": 3,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 12172,
+    "live_completion_tokens": 61949,
+    "logical_prompt_tokens": 18123,
+    "logical_completion_tokens": 76063
+  },
+  "provider_requests": 8,
+  "elapsed_seconds": 418.82
+}

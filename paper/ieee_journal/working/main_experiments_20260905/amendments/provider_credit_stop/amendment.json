@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-09-05T19:39:22.534339+00:00",
+  "reason": "Provider returned exhausted credit in Chinese at step25; previous classifier only recognized English billing errors and unnecessarily retried.",
+  "previous_freeze_sha256": "d812a036b03dc742cc9797d99ddfb7e959920a63f64bcc74845669b20cc1ab6d",
+  "change": "Recognize Chinese exhausted-credit messages as fatal provider errors; temporary concurrency and rate-limit errors remain retryable.",
+  "normal_requests_responses_prompts_and_world_behavior_unchanged": true,
+  "targeted_tests_passed": 21,
+  "paid_recovery_not_started": true,
+  "requires_external_credit_restoration": true
+}

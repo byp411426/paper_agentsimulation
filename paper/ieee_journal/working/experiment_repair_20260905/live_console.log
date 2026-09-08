@@ -1,0 +1,22 @@
+{"step": 1, "awake": 0}
+{"step": 2, "awake": 0}
+{"provider_request_started": 1}
+{"step": 3, "awake": 1}
+{"provider_request_started": 2}
+{"step": 4, "awake": 1}
+{"provider_request_started": 3}
+{"step": 5, "awake": 1}
+{"provider_request_started": 4}
+{"provider_request_started": 5}
+{"step": 6, "awake": 2}
+{"provider_request_started": 6}
+{"provider_request_started": 7}
+{"provider_request_started": 8}
+{"provider_request_started": 9}
+{"provider_request_started": 10}
+{"step": 7, "awake": 4}
+{"provider_request_started": 11}
+{"provider_request_started": 12}
+{"provider_request_started": 13}
+{"provider_request_started": 14}
+{"status": "ABORTED", "completed_steps": 7, "provider_requests": 14, "elapsed_seconds": 356.11}

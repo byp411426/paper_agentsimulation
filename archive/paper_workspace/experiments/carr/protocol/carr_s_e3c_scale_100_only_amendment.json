@@ -1,0 +1,19 @@
+{
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "amendment_id": "r5_scale_100_only_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_SCOPE_REDUCTION",
+  "trigger": {
+    "type": "user_scope_decision",
+    "detail": "User decided E3c executes only the 100-household scale point; 500 and 1000 are not executed in this paper cycle."
+  },
+  "changes": {
+    "executed_sizes": [100],
+    "not_executed": [500, 1000],
+    "seeds_per_size": 2,
+    "science_unchanged": true,
+    "claim_boundary": "Scale/efficiency claims are limited to the 100-household envelope (2 seeds). No 500/1000 stability, throughput, or maximum-stable-size claim may be made; the master-plan minimum 'three scale points' is consciously downgraded by user decision."
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "note": "This amendment does not alter E1/E2/E3a or the 100-household protocol itself; it only records the deliberate non-execution of 500/1000."
+}

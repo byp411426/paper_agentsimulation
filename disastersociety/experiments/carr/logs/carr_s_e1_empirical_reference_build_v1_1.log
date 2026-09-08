@@ -1,0 +1,498 @@
+{
+  "status": "VERIFIED_AGGREGATE_REFERENCE_CONSTRUCTION",
+  "evidence_boundary": "These are respondent-sample aggregate references, not weighted population truth or proof that Carr-S behavior is realistic.",
+  "evacuation_outcome": {
+    "cohort": "Q9.1 evaluation-eligible finished respondents",
+    "n": 330,
+    "successes": 293,
+    "proportion": 0.8878787878787879,
+    "wilson_95_ci": [
+      0.8492771840490105,
+      0.9175538767315419
+    ]
+  },
+  "order_to_departure_delay": {
+    "main_consistent_temporal_order": {
+      "n": 186,
+      "mean_hours": 7.112903225806452,
+      "sd_hours": 21.49728191897984,
+      "quantiles_hours": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 1.0,
+        "0.75": 5.0,
+        "0.9": 13.5,
+        "0.95": 26.75,
+        "1": 169.0
+      },
+      "cdf": {
+        "0": 0.44623655913978494,
+        "0.5": 0.44623655913978494,
+        "1": 0.6344086021505376,
+        "2": 0.6559139784946236,
+        "3": 0.6935483870967742,
+        "4": 0.7419354838709677,
+        "5": 0.7741935483870968,
+        "6": 0.7795698924731183,
+        "8": 0.8172043010752689,
+        "10": 0.8548387096774194,
+        "12": 0.8924731182795699,
+        "24": 0.9408602150537635,
+        "48": 0.967741935483871
+      }
+    },
+    "sensitivity_affirmative_order_priority": {
+      "n": 194,
+      "mean_hours": 7.015463917525773,
+      "sd_hours": 21.11024032726433,
+      "quantiles_hours": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 1.0,
+        "0.75": 5.0,
+        "0.9": 13.700000000000017,
+        "0.95": 26.349999999999994,
+        "1": 169.0
+      },
+      "cdf": {
+        "0": 0.44329896907216493,
+        "0.5": 0.44329896907216493,
+        "1": 0.634020618556701,
+        "2": 0.654639175257732,
+        "3": 0.6907216494845361,
+        "4": 0.7371134020618557,
+        "5": 0.7731958762886598,
+        "6": 0.7783505154639175,
+        "8": 0.8195876288659794,
+        "10": 0.8556701030927835,
+        "12": 0.8917525773195877,
+        "24": 0.9432989690721649,
+        "48": 0.9690721649484536
+      }
+    }
+  },
+  "warning_channel_prevalence": {
+    "estimand": "multi-select prevalence among reported order recipients",
+    "overall_official_receipt_role": "CALIBRATION",
+    "comparison_to_first_heard_prohibited": true,
+    "rows": [
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "reverse_911",
+        "n": 234,
+        "successes": 84,
+        "proportion": 0.358974358974359,
+        "wilson_95_ci": [
+          0.3002455380777468,
+          0.4222586866808281
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "text",
+        "n": 234,
+        "successes": 89,
+        "proportion": 0.3803418803418803,
+        "wilson_95_ci": [
+          0.32054677302144163,
+          0.44400226616765215
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "television",
+        "n": 234,
+        "successes": 54,
+        "proportion": 0.23076923076923078,
+        "wilson_95_ci": [
+          0.18139606166732986,
+          0.28883927650813135
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "radio",
+        "n": 234,
+        "successes": 20,
+        "proportion": 0.08547008547008547,
+        "wilson_95_ci": [
+          0.05600876862772991,
+          0.1283218314202024
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "flyer",
+        "n": 234,
+        "successes": 0,
+        "proportion": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.01615134232585647
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "public_official",
+        "n": 234,
+        "successes": 67,
+        "proportion": 0.2863247863247863,
+        "wilson_95_ci": [
+          0.23222314722818346,
+          0.3473287084666269
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "social_media",
+        "n": 234,
+        "successes": 40,
+        "proportion": 0.17094017094017094,
+        "wilson_95_ci": [
+          0.12811753289545003,
+          0.22439232487455807
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "subscribed_service",
+        "n": 234,
+        "successes": 25,
+        "proportion": 0.10683760683760683,
+        "wilson_95_ci": [
+          0.07341914319860629,
+          0.15295627127984496
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "website",
+        "n": 234,
+        "successes": 40,
+        "proportion": 0.17094017094017094,
+        "wilson_95_ci": [
+          0.12811753289545003,
+          0.22439232487455807
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "smartphone_app",
+        "n": 234,
+        "successes": 26,
+        "proportion": 0.1111111111111111,
+        "wilson_95_ci": [
+          0.0769614301036495,
+          0.15782294726090554
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "interpersonal",
+        "n": 234,
+        "successes": 87,
+        "proportion": 0.3717948717948718,
+        "wilson_95_ci": [
+          0.31241109476580975,
+          0.4353200186510765
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "billboard",
+        "n": 234,
+        "successes": 0,
+        "proportion": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.01615134232585647
+        ]
+      },
+      {
+        "cohort": "main_consistent_warned",
+        "channel": "other",
+        "n": 234,
+        "successes": 19,
+        "proportion": 0.0811965811965812,
+        "wilson_95_ci": [
+          0.052595514302580255,
+          0.12332612285924827
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "reverse_911",
+        "n": 249,
+        "successes": 85,
+        "proportion": 0.3413654618473896,
+        "wilson_95_ci": [
+          0.28527978691789424,
+          0.40227145420975685
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "text",
+        "n": 249,
+        "successes": 91,
+        "proportion": 0.3654618473895582,
+        "wilson_95_ci": [
+          0.3081134620516053,
+          0.42689835004399757
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "television",
+        "n": 249,
+        "successes": 59,
+        "proportion": 0.23694779116465864,
+        "wilson_95_ci": [
+          0.18838062769382946,
+          0.2935081392393641
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "radio",
+        "n": 249,
+        "successes": 22,
+        "proportion": 0.08835341365461848,
+        "wilson_95_ci": [
+          0.05907060962806273,
+          0.1301446363360951
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "flyer",
+        "n": 249,
+        "successes": 2,
+        "proportion": 0.008032128514056224,
+        "wilson_95_ci": [
+          0.0022054700679438443,
+          0.028807872669708204
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "public_official",
+        "n": 249,
+        "successes": 72,
+        "proportion": 0.2891566265060241,
+        "wilson_95_ci": [
+          0.2363855505263556,
+          0.3483344535040668
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "social_media",
+        "n": 249,
+        "successes": 44,
+        "proportion": 0.17670682730923695,
+        "wilson_95_ci": [
+          0.13434870919611694,
+          0.22888863031719728
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "subscribed_service",
+        "n": 249,
+        "successes": 27,
+        "proportion": 0.10843373493975904,
+        "wilson_95_ci": [
+          0.07559880260930602,
+          0.15316691916147826
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "website",
+        "n": 249,
+        "successes": 44,
+        "proportion": 0.17670682730923695,
+        "wilson_95_ci": [
+          0.13434870919611694,
+          0.22888863031719728
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "smartphone_app",
+        "n": 249,
+        "successes": 29,
+        "proportion": 0.11646586345381527,
+        "wilson_95_ci": [
+          0.08232604241002012,
+          0.16225986968341474
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "interpersonal",
+        "n": 249,
+        "successes": 97,
+        "proportion": 0.3895582329317269,
+        "wilson_95_ci": [
+          0.331104777645549,
+          0.4513676054180056
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "billboard",
+        "n": 249,
+        "successes": 0,
+        "proportion": 0.0,
+        "wilson_95_ci": [
+          8.673617379884035e-19,
+          0.015193152415001476
+        ]
+      },
+      {
+        "cohort": "sensitivity_affirmative_order_priority",
+        "channel": "other",
+        "n": 249,
+        "successes": 23,
+        "proportion": 0.09236947791164658,
+        "wilson_95_ci": [
+          0.06233962009478198,
+          0.13478572103070113
+        ]
+      }
+    ]
+  },
+  "subgroup_evacuation_gaps": [
+    {
+      "contrast": "age_65plus_minus_under65",
+      "definition": "age 65+ minus age under 65",
+      "status": "ESTIMABLE",
+      "group_a": {
+        "label": "age 65+",
+        "n": 81,
+        "successes": 68,
+        "proportion": 0.8395061728395061,
+        "wilson_95_ci": [
+          0.7445295089488065,
+          0.9037384577328867
+        ]
+      },
+      "group_b": {
+        "label": "age under 65",
+        "n": 248,
+        "successes": 224,
+        "proportion": 0.9032258064516129,
+        "wilson_95_ci": [
+          0.8600465643265103,
+          0.9341038544986755
+        ]
+      },
+      "signed_gap": -0.06371963361210675,
+      "bootstrap_percentile_95_ci": [
+        -0.15392273994424532,
+        0.022451214655515694
+      ],
+      "bootstrap_seed": 20260802,
+      "bootstrap_replicates": 20000
+    },
+    {
+      "contrast": "household_3plus_minus_1to2",
+      "definition": "household size 3+ minus household size 1-2",
+      "status": "ESTIMABLE",
+      "group_a": {
+        "label": "household size 3+",
+        "n": 153,
+        "successes": 139,
+        "proportion": 0.9084967320261438,
+        "wilson_95_ci": [
+          0.8522726912042017,
+          0.944710459423744
+        ]
+      },
+      "group_b": {
+        "label": "household size 1-2",
+        "n": 175,
+        "successes": 152,
+        "proportion": 0.8685714285714285,
+        "wilson_95_ci": [
+          0.81050792689613,
+          0.9108013313186275
+        ]
+      },
+      "signed_gap": 0.03992530345471523,
+      "bootstrap_percentile_95_ci": [
+        -0.027861811391223124,
+        0.10689075630252098
+      ],
+      "bootstrap_seed": 20260802,
+      "bootstrap_replicates": 20000
+    },
+    {
+      "contrast": "zero_vehicle_minus_oneplus",
+      "definition": "zero vehicles minus one or more vehicles",
+      "status": "UNAVAILABLE_EMPTY_GROUP",
+      "group_a": {
+        "label": "zero vehicles",
+        "n": 0,
+        "successes": 0,
+        "proportion": null,
+        "wilson_95_ci": null
+      },
+      "group_b": {
+        "label": "one or more vehicles",
+        "n": 329,
+        "successes": 292,
+        "proportion": 0.8875379939209727,
+        "wilson_95_ci": [
+          0.8488307326673606,
+          0.9172997875614061
+        ]
+      },
+      "signed_gap": null,
+      "bootstrap_percentile_95_ci": null,
+      "bootstrap_seed": 20260802,
+      "bootstrap_replicates": 0,
+      "replacement_contrast_added": false
+    },
+    {
+      "contrast": "income_under50k_minus_50kplus",
+      "definition": "income under $50k minus income $50k+",
+      "status": "ESTIMABLE",
+      "group_a": {
+        "label": "income under $50k",
+        "n": 79,
+        "successes": 67,
+        "proportion": 0.8481012658227848,
+        "wilson_95_ci": [
+          0.7530014556229535,
+          0.9109173210736826
+        ]
+      },
+      "group_b": {
+        "label": "income $50k+",
+        "n": 211,
+        "successes": 192,
+        "proportion": 0.909952606635071,
+        "wilson_95_ci": [
+          0.8636502634123817,
+          0.941594687676808
+        ]
+      },
+      "signed_gap": -0.06185134081228627,
+      "bootstrap_percentile_95_ci": [
+        -0.15201871737956685,
+        0.023516707660927394
+      ],
+      "bootstrap_seed": 20260802,
+      "bootstrap_replicates": 20000
+    }
+  ],
+  "source": {
+    "survey": "eventpacks/carr_2018/behavior/survey_clean.csv",
+    "survey_sha256": "46539f3162428803a250e59f30d81c87ac9d4d2551c3561d71069ad078daee4b",
+    "protocol": "experiments/carr/protocol/carr_s_e1_empirical_reference_v1_1_freeze.json",
+    "protocol_sha256": "17b508c322a6b8afb24f810558f0637e76f63a185a1197f1ae5b92eacb533bb4"
+  }
+}

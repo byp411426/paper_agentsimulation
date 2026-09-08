@@ -1,0 +1,1013 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DisasterSociety — IEEE journal working manuscript
+% Rebuilt in the dedicated IEEEtran workspace on 2026-08-14.
+% Quantitative findings are intentionally deferred to a separate evidence-sync pass.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal]{IEEEtran}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{placeins}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{threeparttable}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+
+\title{DisasterSociety: A Generative-Agent Platform for Simulating Resident and Collective Responses in Urban Disasters}
+
+% PENDING(final submission metadata): replace with real authors and affiliations.
+\author{Anonymous Author(s)%
+\thanks{Author names, affiliations, funding information, and the corresponding
+author will be added after the target IEEE journal and review policy are fixed.}}
+
+\markboth{IEEE Transactions Journal Draft, August 2026}%
+{Anonymous Author(s): DisasterSociety}
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Urban disaster response emerges from a sequence of socially situated decisions:
+residents receive unequal information, interpret changing conditions, negotiate
+with household members, revise plans after disruption, and act under shared
+physical and resource constraints. A one-shot evacuation label cannot represent
+these coupled information, cognition, coordination, and execution processes. We
+present \emph{DisasterSociety}, a generative-agent platform for studying resident,
+household, network, and collective response in a dynamic urban-disaster world.
+The platform separates three forms of state that are often conflated: private
+resident cognition, household-shared constraints and accepted commitments, and
+authoritative physical state. A resident language model can propose a structured
+intention, but only deterministic household and world logic can allocate
+resources or execute it. Message disposition is likewise kept separate from
+validated household commitment and physical execution. An \emph{EventPack}
+interface supplies time-indexed hazard, warning, road, resource, and provenance
+data, while an event-driven kernel connects limited observation, memory,
+feedback, planning, interaction, batched arbitration, and execution in a closed
+multi-step loop. We further define a multi-scale, multi-evidence evaluation
+methodology that distinguishes software and process verification, empirical and
+behavioral reasonableness, mechanism-specific ablation, and robustness and
+efficiency evidence. A Carr-informed controlled case operationalizes the
+framework without claiming historical reconstruction or population-level
+prediction. The resulting research prototype is intended as an inspectable
+computational framework for asking how heterogeneous resident actions become
+household and collective disaster-response processes.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Generative agents, multi-agent simulation, urban disaster response, household
+coordination, social simulation, event-driven simulation, mechanism ablation.
+\end{IEEEkeywords}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Urban disaster response is not an isolated choice made at the instant a warning
+arrives. Protective-action research distinguishes message receipt and
+comprehension from threat appraisal, action appraisal, and the practical
+impediments that shape whether and when a resident acts
+\cite{lindell2012padm,mileti1992warnings,huang2012ike}. Wildfire studies likewise
+show that warning exposure, preparation, and departure unfold over time rather
+than collapsing into a single binary outcome
+\cite{kuligowski2021wildfire,grajdura2021awareness}. The process is also social.
+Household members may begin in different locations, coordinate gathering and
+shared-vehicle use, decide whether to reunite, and depart together or in separate
+groups \cite{liu2014uniting,maghelal2017split}.
+Consider the controlled running example in \cref{fig:running-example}: Resident A
+receives an official warning while Resident B does not; the two exchange
+proposals about driver, companions, route, and departure time; after the primary
+route closes, the original plan fails and the household must form a feasible
+revision before the world permits execution. A useful simulation must preserve
+every distinction in this chain---who observed what, which proposal was merely
+sent, what the household actually accepted, and which action the physical world
+ultimately executed.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/fig1_running_example.png}
+  \caption{A disaster evacuation is a coupled information, household, and
+  execution process rather than a one-shot label. (A) Unequal warning exposure
+  produces different private resident beliefs even within one household.
+  (B) Messages can negotiate a route, vehicle, companions, and departure time,
+  but only an accepted and feasible proposal becomes shared coordination state.
+  (C) A road closure invalidates the original intention; feedback supports a
+  revised plan, and world arbitration determines whether the revision executes.
+  The scenario is Carr-informed and controlled; it illustrates the modeled
+  mechanisms rather than reconstructing the historical Carr Fire timeline.}
+  \label{fig:running-example}
+\end{figure*}
+
+Agent-based models provide a natural bottom-up representation of heterogeneous
+actors and their interactions, while large language models (LLMs) make it
+possible to express context-sensitive judgments and communication without
+enumerating every behavioral rule. Generative Agents connected memory,
+reflection, planning, and interaction in a persistent artificial community
+\cite{park2023generativeagents}; subsequent systems have scaled societal and
+urban simulation with LLM agents, in some cases through hybrid
+LLM/numerical-agent designs,
+\cite{zhang2025agentsociety,bougie2025citysim,zhou2026gasim}. Disaster-oriented
+work now spans theory-informed individual evacuation prediction
+\cite{chen2025flare}, LLM residents embedded in spatial fire or crowd simulators
+\cite{dang2025fireagents,yang2026whenagents}, and integrated hazard--population
+demonstrations \cite{sultimov2026respond}. These advances establish important
+components, but they also expose three separations that a resident-society
+simulation must make explicit. A dynamic world is not the same object as a
+resident's belief about it; a household is neither an indivisible actor nor a
+shared mind; and a linguistically plausible action is not necessarily an
+executable action. The cited systems expose different subsets of these concerns
+and do so at different levels of abstraction. Our goal is therefore not to
+claim that any individual component is unprecedented, but to make their
+interfaces explicit in one executable research framework.
+
+We study the following problem. Given a time-indexed disaster scenario,
+heterogeneous residents grouped into resource- and care-constrained households,
+and an evolving physical environment, generate a sequence of resident
+observations, private state updates, communications, intentions, and executed
+outcomes from which individual, household, network, and collective processes can
+be inspected. The problem has three hard requirements. First, information must
+be exposure-bounded: co-residence cannot automatically synchronize inboxes,
+memories, route beliefs, or unexpressed plans. Second, coordination must be
+commitment-bounded: sending, delivering, or accepting words does not itself
+reserve a vehicle, satisfy a care dependency, or make a departure time feasible.
+Third, action must be world-bounded: all contemporaneous intentions must be
+resolved against one authoritative snapshot so that closed roads, vehicle
+capacity, member position, and competing resource claims have consistent
+consequences. These requirements turn disaster response from a prediction task
+into a stateful social-process simulation problem.
+
+Satisfying the three requirements creates corresponding methodological
+challenges. The first is to represent resident cognition across time without
+leaking global state into every prompt: memory must contain processed
+experience, feedback must reflect observed or executed outcomes, and planning
+must remain an intention until execution. The second is to represent household
+coordination without inventing a household-level language model: private
+residents communicate through a lossy channel, while a separate household object
+holds membership, resources, care obligations, and versioned commitments. The
+third is evidential. Verification of a simulation implementation, empirical
+reasonableness of its behavior, causal evidence from a mechanism ablation, and
+robustness across stochastic or model conditions answer different questions
+\cite{sargent2013verification,klugl2008validation,grimm2005pattern}. A credible
+evaluation must preserve those distinctions instead of treating a unit test, a
+single aggregate fit, or an LLM plausibility judgment as interchangeable proof.
+
+DisasterSociety addresses these challenges through the architecture developed in
+\cref{sec:method}. An \emph{EventPack} and scenario adapter organize external
+hazard, warning, population, road, resource, and provenance inputs. The
+event-driven kernel exposes each resident only to delivery- and
+location-appropriate information; resident adapters maintain private memory,
+feedback, and plans; the interaction layer advances messages through explicit
+life-cycle states; the household layer validates and versions coordination
+commitments; and the world batches all submitted intentions before committing
+physical change. Crucially, the language model is used inside the resident
+cognition boundary, not as the source of physical truth or the resolver of shared
+resources. The same boundaries expose mechanism switches, state snapshots,
+message and commitment histories, execution reasons, model-call metadata, and
+terminal run status for evaluation and audit.
+
+This paper makes three contributions. First, it presents DisasterSociety, a
+configurable generative-agent platform that connects heterogeneous residents and
+households to a time-indexed disaster world while preserving explicit
+information, state, and execution boundaries (\cref{sec:method}). Second, it
+defines a resident social-process model in which private cognition, lossy
+interaction, household-shared constraints, versioned commitments, batched world
+arbitration, and execution feedback form a closed multi-step loop
+(\cref{sec:dynamic-loop}). Third, it develops a multi-scale, multi-evidence
+evaluation methodology that maps claims about residents, households and
+networks, collective outcomes, and system operation to appropriate system,
+empirical, mechanism, and robustness evidence (\cref{sec:evaluation-method}). A
+Carr-informed controlled case instantiates these contributions as an empirical
+test bed; it is not presented as a historical reconstruction, an automatic city
+generator, or a population-level evacuation predictor.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Work}
+
+\subsection{Protective Action, Household Coordination, and Warning Diffusion}
+
+Protective-action research treats disaster response as a staged process. In the
+Protective Action Decision Model, environmental and social cues and warning
+messages first have to be received, attended to, and understood; subsequent
+threat and action appraisals remain subject to situational facilitators and
+impediments \cite{lindell2012padm}. Studies of disaster warnings and hurricane
+evacuation similarly distinguish communication from action and the decision to
+evacuate from the timing of departure
+\cite{mileti1992warnings,huang2012ike,kuligowski2021wildfire}. This literature
+motivates our separation of a world event, a delivered observation, a processed
+resident memory, a plan, and an executed outcome. It does not, by itself, dictate
+the software state machine or establish that an LLM reproduces those processes.
+
+Households add another level of organization. Multi-adult households may need to
+gather members distributed across locations and allocate shared vehicles;
+observed and stated plans do not always place all members in one group or at one
+departure time
+\cite{liu2014uniting,maghelal2017split}. At the inter-household level, agent-based
+studies have represented networked information through different abstractions.
+Nagarajan et al. simulate rule-governed neighbor warning dissemination, while
+Roy et al. model how multiple information sources shape risk-perception dynamics
+and evacuation decisions \cite{dawson2012warning,raihan2022information}. Our
+focus is complementary: decision-capable residents retain separate cognition,
+whereas the household is a shared constraint and commitment object, and the
+message state is kept separate from resident memory and physical execution.
+
+Evacuation simulation also has a substantial transportation and operations
+lineage. Dynamic traffic models represent participation, departure time,
+destination, route choice, network assignment, and changing capacity at
+different levels of behavioral detail \cite{pel2012travel,murraytuite2013overview}.
+This literature is indispensable for estimating clearance, congestion, and
+traffic-management consequences, and it already recognizes time-varying
+information and en-route adaptation. DisasterSociety does not replace a
+high-fidelity traffic simulator. Its contribution is upstream and social: it
+preserves the resident information and household coordination process that
+produces departure parties and route intentions, after which a detailed network
+model could implement the same arbitration interface.
+
+\subsection{Generative Agents and Urban Social Simulation}
+
+Generative-agent research provides mechanisms for persistent, language-mediated
+behavior. Generative Agents combined an episodic memory stream, retrieval,
+reflection, planning, and communication, and evaluated both perceived
+believability and emergent social behavior with component ablations
+\cite{park2023generativeagents}. Social Simulacra used populated prototypes to
+support social-computing design \cite{park2022socialsimulacra}, while SOTOPIA
+evaluates social intelligence through interactive goals and relationships
+\cite{zhou2024sotopia}. These systems make interaction and persistent state
+first-class objects, but their evidence concerns artificial communities, social
+competence, or design prototyping; it cannot be transferred directly into a
+claim about disaster behavior.
+
+Recent platforms broaden the scale and environment of LLM-agent simulation.
+AgentSociety integrates parallelized LLM agents with realistic societal
+environments and interactions \cite{zhang2025agentsociety}; CitySim models
+long-horizon urban schedules, goals, spatial memory, mobility, and aggregate city
+patterns \cite{bougie2025citysim}; GASim combines LLM-driven core agents with
+graph-accelerated numerical agents to accelerate memory retrieval and numerical
+agent updates while reducing token use
+\cite{zhou2026gasim}. Their contributions center on scalable societal or urban
+simulation. DisasterSociety instead centers on short-horizon, disruption-driven
+social processes where unequal information, household dependencies, resource
+conflicts, and rejected actions must be represented without allowing resident
+language models to overwrite physical truth.
+
+\subsection{LLM Agents for Disaster and Evacuation}
+
+LLMs have recently been introduced at several points in the disaster-modeling
+pipeline. FLARE uses behavioral theory and LLM reasoning for individual wildfire
+evacuation prediction on post-event surveys \cite{chen2025flare}. Its unit and
+estimand are therefore different from a multi-step resident society, even though
+the behavioral factors are relevant. Dang et al. embed LLM agents with memory,
+cognition, communication, and movement in a cellular-automata fire environment
+\cite{dang2025fireagents}. Yang et al. couple LLM decision histories and agent
+communication with pedestrian and vehicle evacuation in a dynamic ABM
+\cite{yang2026whenagents}. RESPOND joins flood forecasting, alerts, road
+closures, social signals, and population agents in an integrated demonstration
+\cite{sultimov2026respond}; generative-agent work has also addressed
+socio-technical disaster recovery \cite{blagojevic2026sociotechnical}. These
+studies show that individual prediction, spatial evacuation, dynamic hazards,
+communication, and integrated platforms are all active research directions.
+
+Our distinction is consequently an interface claim rather than a priority claim.
+Across the systems compared above, resident-private cognition,
+household-shared resources and care obligations, explicit message state,
+batched world arbitration, and mechanism-linked evaluation are distributed
+across different task definitions and abstraction levels. DisasterSociety makes
+their joint interfaces explicit to study how resident actions become social
+processes. It does not claim the first use of agents, households, warnings, LLM
+memory, or evacuation simulation.
+
+\subsection{Synthetic Household Populations}
+
+Synthetic reconstruction connects aggregate small-area constraints to
+microdata. Classical work uses iterative proportional fitting (IPF) to estimate
+weights over household microdata and then selects donor households
+\cite{beckman1996synthetic}. Carrying a whole donor household preserves observed
+member relationships and attributes inside that record, which is useful when
+shared vehicles, co-residence, and care dependencies must be instantiated
+together. It does not imply that all person-level marginals are fitted.
+Household--person methods such as iterative proportional updating and related
+extensions explicitly introduce person controls while adjusting household
+weights \cite{ye2009ipu,pritchard2012population,guo2007population}.
+DisasterSociety's current population path fits selected household-level tract
+margins from weighted donor records and reports person-level distributions as
+diagnostics. We retain this distinction because a plausible household structure,
+a calibrated person population, and validated resident behavior are separate
+claims.
+
+\subsection{Verification and Evaluation of Agent-Based Social Simulation}
+
+Simulation credibility is purpose-dependent. Conceptual-model validity,
+implementation verification, data validity, and operational validity address
+different questions \cite{sargent2013verification}. ABM-specific methodology
+accordingly combines, rather than conflates, face, calibration, sensitivity, and
+statistical evidence \cite{klugl2008validation}. Pattern-oriented modeling
+further argues that bottom-up mechanisms should be confronted with multiple
+observed patterns at different levels instead of a single aggregate target
+\cite{grimm2005pattern}. For stochastic models, systematic experimental design
+and repeated runs are needed to characterize run-to-run variation
+\cite{lorscheid2012blackbox}; local mechanism perturbations and global
+sensitivity analyses answer different questions in nonlinear ABMs
+\cite{tenbroeke2016sensitivity}.
+
+Generative social simulation adds language-model and prompt dependence to these
+longstanding concerns. Generative Agents uses human believability judgments and
+component ablations \cite{park2023generativeagents}, while SOTOPIA provides an
+interactive social-intelligence benchmark \cite{zhou2024sotopia}. Broader
+social-science work identifies both opportunities and bias, replication, and
+validity risks for generative AI \cite{bail2024generativeai}. These evidence
+forms address different constructs; none alone verifies event causality,
+household feasibility, or model robustness. We
+therefore distinguish two orthogonal dimensions. \emph{Analysis scale} denotes
+individual, household and network, collective, or system-level outcomes;
+\emph{evidence type} denotes software and process verification, empirical and
+behavioral reasonableness, mechanism ablation, or robustness and efficiency.
+This organization is our evaluation design, not a claim that every cell is
+already validated or that calibrated targets constitute independent evidence.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method}
+\label{sec:method}
+
+DisasterSociety is a discrete-time, event-driven platform for studying how
+resident-level cognition and communication produce household and collective
+outcomes under a changing disaster environment. The method is organized around
+contracts rather than a monolithic ``LLM simulator.'' A resident model may
+interpret information and return a typed intention but cannot directly mutate
+shared resources or physical state. Interaction and household layers validate
+responses and maintain versioned coordination records under adapter-specific
+checks. Deterministic household and world code then allocate shared resources
+and apply execution state; a stored commitment is therefore a validated
+coordination record, not a guarantee of global feasibility before world
+arbitration. This decomposition is documented consistently with ODD's emphasis
+on explicit entities, state variables, process scheduling, observation, and
+stochasticity \cite{grimm2020odd}. It also lets the
+same event-driven kernel host two Carr-informed adapters: an empirical-process
+path with richer resident profiles and departure parties, and a controlled
+mechanism path with switchable memory, feedback, planning, and interaction.
+They share causal and state boundaries but do not falsely share one internal
+cognitive representation.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/fig2_system_architecture.png}
+  \caption{Static architecture of DisasterSociety. Time-indexed external events,
+  household donor records, and controlled case configuration enter an
+  event-driven engine. Resident-private cognition, the explicit interaction
+  channel, household-shared constraints and commitments, and world physical
+  facts are separate state owners. A resident produces a structured intention;
+  deterministic household and world logic produces the execution outcome.
+  Per-step traces preserve world, resident, interaction, intention, and outcome
+  records; the controlled adapter additionally records a configuration and
+  selected-source fingerprint. The diagram shows
+  the shared platform contracts; adapter-specific cognition and coordination
+  implementations are detailed in the text.}
+  \label{fig:architecture}
+\end{figure*}
+
+\subsection{Problem Formulation and State Boundaries}
+
+Let residents be indexed by $i\in\mathcal{R}$ and households by
+$h\in\mathcal{H}$, with a membership function $g(i)=h$. At simulation step $t$,
+the state is
+\begin{equation}
+  S_t=\left(W_t,\{C_{i,t}\}_{i\in\mathcal{R}},
+  \{H_{h,t}\}_{h\in\mathcal{H}},Q_t\right),
+  \label{eq:state}
+\end{equation}
+where $W_t$ is authoritative world state, $C_{i,t}$ is resident $i$'s private
+cognitive state, $H_{h,t}$ contains shared household constraints and accepted
+coordination state, and $Q_t$ contains events and adapter-specific message,
+receipt, and ledger state. These are separately owned namespaces. Updating
+$C_{i,t}$ does not imply an update to $C_{j,t}$, and neither a private plan nor a
+private belief becomes household or world state without an explicit protocol
+transition. Thus, two co-resident adults may hold different warnings or route
+beliefs; an unexpressed private plan is not a household agreement; and a
+resident's belief that a road is open cannot reopen it in the physical world.
+
+An access function $\Omega_i$ maps world state and delivery records to the
+resident's bounded observation,
+\begin{equation}
+  O_{i,t}=\Omega_i(W_t,Q_{\leq t};A_{i,t}),
+\end{equation}
+where $A_{i,t}$ encodes channel, recipient, location, and adapter-specific
+access rules. Resident $i$ returns a typed intention
+\begin{equation}
+  I_{i,t}=\Pi_i(C_{i,t},O_{i,t};\theta,\phi),
+  \label{eq:intention}
+\end{equation}
+where $\theta$ denotes the declared model backend and $\phi$ the enabled
+mechanisms and prompt protocol. $I_{i,t}$ is a proposal, not a state mutation.
+After decisions, an interaction transition processes the current inbox and
+returned message responses into intermediate private and coordination state,
+\begin{equation}
+  (\widetilde C_t,\widetilde H_t,\widetilde Q_t)=
+  \mathcal{P}(C_t,H_t,Q_t,\{I_{i,t}\}).
+  \label{eq:interaction-transition}
+\end{equation}
+The world then resolves all contemporaneous intentions against one physical
+snapshot and the intermediate coordination state,
+\begin{equation}
+  \{R_{i,t}\}=\mathcal{A}\!\left(W_t,\{\widetilde H_{h,t}\},
+  \{I_{i,t}\}\right),
+  \label{eq:arbitration}
+\end{equation}
+and returns a keyed execution outcome $R_{i,t}$ containing status, executed
+action, rejection reason, resource allocations, and state delta. Only keyed
+outcomes can commit execution-derived resident fields or physical movement;
+other cognitive and coordination transitions occur through delivery,
+observation, and interaction processing.
+
+The four principal objects in \cref{fig:architecture} therefore have distinct
+ownership. A \emph{Resident} is a cognitive and decision unit. A
+\emph{Household} is a system object that owns membership, vehicles, care
+requirements, and accepted commitments; it is not a household-level LLM. The
+\emph{Interaction} layer owns message state. The \emph{World} owns authoritative
+hazard, route, location, and movement arbitration, while the Household owns
+membership, commitments, care, and household-resource state. Neither is
+writable by the resident model. Resident attributes also distinguish
+\texttt{decision\_capable}, a persistent eligibility property;
+\texttt{decision\_policy}, which may be generative, rule-based, or dependent;
+and a step-specific wake gate. A dependent member can retain location, safety,
+caregiver, and transit state without making a language-model call.
+
+\subsection{Scenario Data and the EventPack Interface}
+
+An \emph{EventPack} is a provenance-aware scenario data package rather than an
+LLM prompt or an assertion that every experiment uses the same raw file format.
+Its validated manifest declares an event identifier, hazard type, time zone,
+spatial reference system, simulation step length, named data assets, and a
+provenance record. The current loader validates manifest fields and the
+existence of declared assets and a declared provenance file; it does not yet
+verify content checksums or the internal provenance schema. A scenario adapter
+converts those assets, or a separately frozen experimental configuration, into
+the small
+\texttt{EventSource} contract consumed by the kernel. This contract returns the
+exogenous events due at step $t$; warnings, orders, hazard updates, and road
+events are not generated by resident language models.
+
+The separation between data package and adapter is important in the current
+prototype. The controlled mechanism path loads its Carr EventPack through the
+validated interface and references a manifest-declared route asset, although the
+current runner resolves that configured path directly rather than enforcing
+manifest membership through the asset accessor. The empirical-process path
+assembles official-order and route-closure events from frozen profiles,
+calibration quantities, and scenario
+configuration before passing them to the same kernel contract. Consequently,
+EventPack is the reusable platform interface, but we do not claim that all
+existing runners already pass through one identical typed loader.
+
+The Carr-informed case is deliberately a controlled scenario. Its final fire
+perimeter is a single endpoint, not a historical hazard time series; its two
+routes are derived experimental assets, and the road disruption is a controlled
+perturbation rather than an observed Carr closure. The world may therefore hold
+hazard distance, route state and capacity, resident and dependent locations,
+vehicle state, care obligations, and household commitments, while the paper
+does not describe the case as a reconstruction of the historical fire or of
+historical traffic operations. Neither current adapter converts the final
+perimeter into a time-varying fire surface: both use declared scalar
+hazard-distance trajectories and controlled route closures, with the sourced
+perimeter retained as case provenance.
+
+\subsection{Household Population and Resident Initialization}
+
+The population pipeline starts from weighted household microdata. Public-use
+donor weights initialize the household distribution; iterative proportional
+fitting then adjusts donor weights within tract for four groups of household
+margins: income, vehicle availability, household structure, and older-adult
+presence. Sampling is atomic at the donor-household level: when a donor is
+selected, its member records are copied together and receive new synthetic
+identifiers. This retains internally observed relationships and compatible
+household attributes, following the established household-IPF tradition
+\cite{beckman1996synthetic}. It does not imply person-level calibration.
+Age, education, employment, and other member distributions are therefore
+reported as diagnostics unless explicitly fitted. Full household--person
+procedures such as IPU address a stronger target and are not claimed as the
+current implementation \cite{ye2009ipu,pritchard2012population,guo2007population}.
+
+Initialization converts each sampled household into member, resource, and care
+state. In the current Carr initialization, age 18 or older defines the
+transparent decision-capable baseline. Functional limitations and need for
+execution assistance are separate care properties and do not automatically
+remove an adult's decision capability; minors are dependent execution members.
+E1 prefers the public-use reference person as coordinator, with a stable
+adult-ID fallback, whereas E2 assigns the first ordering-key adult as the
+controlled coordinator. Vehicles have household ownership, location, capacity,
+occupancy, and reservation state. E1 derives vehicle count from the profile but
+assigns a common five-seat capacity. E2 selects exactly-one-vehicle households
+and sets capacity at or above household size, so its mechanism experiment does
+not estimate empirical vehicle-capacity scarcity. The richer empirical-process
+adapter combines these household records with static and latent profile fields
+sampled only from the designated Carr training data without using evacuation
+outcomes; it records field-level source labels so donor attributes and survey-
+informed traits remain distinguishable.
+
+\subsection{Event-Driven Kernel and Causal Step Order}
+\label{sec:dynamic-loop}
+
+The kernel executes ten per-step operations, followed by run-level terminal
+classification (\cref{fig:dynamic-loop}). It (1) advances the clock and world,
+(2) applies due exogenous events, (3) creates official warning or order
+receipts, (4) evaluates the wake gate, and (5) collects decisions concurrently
+while physical world state is immutable. It then (6) processes the current
+inbox and returned message responses, potentially updating private memory and
+household coordination state; (7) wraps all decisions, resolves the complete
+physical-action batch against one world snapshot, and applies the resolved
+actions; (8) commits keyed execution outcomes and emits outgoing messages; (9)
+advances message delivery; and (10) records the step snapshot. After the loop or
+an exception, the run is classified as \textsc{valid}, \textsc{invalid}, or
+\textsc{aborted} under the frozen operating protocol.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/fig3_dynamic_loop.png}
+  \caption{Dynamic method loop and its two explicit state chains. The upper
+  loop separates limited observation, private memory, belief and feedback
+  update, planning, household interaction, and world arbitration. The message
+  chain illustrates the controlled E2 recipient-receipt protocol by
+  distinguishing sending, delivery, processing, response, and validated
+  commitment formation. The action chain distinguishes an intention from
+  batched resolution, executed or rejected outcome, and subsequent state
+  update. Mechanism toggles in the figure denote the controlled E2
+  operationalization; the empirical E1 adapter shares the kernel and state
+  boundaries but uses the private-state representation described below.}
+  \label{fig:dynamic-loop}
+\end{figure*}
+
+The order prevents several common causal errors. A resident cannot act on a raw
+warning it did not receive, because delivery precedes waking and the prompt
+reads the private inbox rather than the event list. All decisions observe the
+same physical phase, and typed outcomes precede execution-derived resident
+updates. The controlled E2 world further verifies that rejected movement does
+not consume or mutate the corresponding physical resource. The current E1 world
+uses the same typed boundary but still has audit findings around unknown-route
+handling, capacity bookkeeping after party rejection, and out-of-party intent
+matching; until those checks are corrected, this invariant is claimed for the
+verified contracts and E2 path, not for every malformed E1 input.
+
+Message timing and receipt granularity are adapter-specific within this common
+schedule. In the controlled interaction implementation, household direct
+messages and community messages have separate delivery models,
+recipient-specific receipts, and future processing phases. In the empirical
+adapter, one social-message record may address several recipients and stores a
+shared status and timestamps, although delivered copies enter particular
+resident inboxes. Both message classes advance at step end and are processed
+when a recipient next wakes. For messages with recipients, enqueueing alone
+does not update recipient memory. E1 additionally has a zero-recipient
+self-acceptance path and may form a solo party from an evacuation intention;
+neither path is evidence of message-mediated household coordination.
+
+\subsection{Two Carr-Informed Resident Adapters}
+
+The shared kernel deliberately supports different operationalizations of
+resident cognition. Treating the two current adapters as one implementation
+would obscure which claims each can support.
+
+\paragraph{Empirical-process adapter (E1).}
+Each decision-capable adult has a private inbox, a bounded recent-memory list,
+perceived routes, a private view of commitments, and recent execution feedback.
+The prompt exposes a richer resident and household profile, including household
+members, functional limitations, available vehicles, housing, and relevant
+care context. Official orders are assigned according to frozen empirical quotas
+and timing profiles and then delivered directly to preassigned recipients; they
+are not redrawn from the controlled adapter's Bernoulli delivery model. When a
+recipient processes an order or message, a processing timestamp and source
+identifier are retained. Current route belief changes after a closed-route
+execution rejection; the present implementation does not infer structured route
+truth from arbitrary household or community text.
+
+E1 represents a structured \texttt{DepartureParty} with traveler IDs,
+accompanying dependents, caregiver assignments, vehicle, route, and departure
+step. The current acceptance checker verifies household membership, acceptance
+for traveler IDs marked decision-capable, caregiver inclusion, known vehicle,
+vehicle capacity and location, a nonempty route, valid time fields, and active-
+party overlap. Route existence and openness are intended to be checked by the
+world. Execution requires matching intentions from every listed traveler ID. A
+valid solo adult
+intention may form a solo party without prior household negotiation; hence the
+adapter studies coordination when it occurs but does not force every departure
+through a household dialogue. E1 currently has no persistent executable
+\texttt{current\_plan}; its private-process record instead contains recent
+memories, commitments, and execution feedback.
+
+The formal E1 configuration takes the first $n$ whole households from a frozen,
+ordered profile file rather than resampling members independently for each run.
+Hamilton largest-remainder allocation converts calibrated order-sequence
+proportions into household counts; a named run-seed stream shuffles household
+IDs before assigning voluntary-only, mandatory-only, both-order, or no-order
+sequences. Orders are addressed to the household's designated focal resident.
+In the current 30-minute-step configuration, voluntary and mandatory orders are
+issued at steps 3 and 7, the controlled primary-route closure occurs at step 9,
+and household hazard distance follows a linear approach from 9,000 m at 250 m
+per step with a seeded household offset in $[-250,250]$ m. These quantities are
+scenario controls, not reconstructed Carr timestamps.
+
+E1 constructs an undirected decision-resident graph from three overlays:
+household cliques, up to six nearest neighbors within 1,500 m, and a
+Watts--Strogatz friend ring with degree four and rewiring probability 0.1.
+Household messages use the household channel, whereas community messages are
+routed to graph neighbors before delivery sampling. The run currently rebuilds
+but does not persist the exact edge list, and missing geographic locations fall
+back to a process-hash-derived coordinate; the graph is therefore a modeled
+communication substrate rather than observed Carr social ties, and current E1
+artifacts do not guarantee cross-process graph identity.
+
+The E1 social-message ledger does not yet provide recipient-specific proof that
+every addressed traveler accepted. One response can set the shared message
+status to accepted before party feasibility is known, and the current
+\texttt{accepted\_by} construction includes all addressed recipients. Message
+disposition, party-acceptance result, and execution record must therefore be
+audited separately; the current runner does not establish recipient-level
+mutual acknowledgment or multi-adult message-mediated coordination.
+
+An E1 resident wakes only when decision-capable and at least one of four
+conditions holds: its inbox is nonempty, recent execution feedback is present,
+a departure party involving it is due, or its household-specific hazard
+distance is below 3,000 m. Consequently, a message can be delivered yet remain
+unprocessed until a later wake opportunity; delivery counts and processed
+counts have different denominators.
+
+The current E1 implementation has an additional terminal-state defect that
+prevents confirmatory use of its existing run artifacts. Recent execution
+feedback is appended after each decision but is not consumed by the wake gate,
+and the gate does not exclude a resident already in the safe zone. Once first
+activated, a resident can therefore remain awake in later steps and continue to
+send messages after its first safe arrival. The current party path also does not
+recheck traveler origin or prior safe arrival, so repeated executed departures
+by one already-safe resident are possible. Such records are invariant
+violations, not distinct evacuations or split departures. E1 behavioral,
+communication, departure, and efficiency quantities consequently require a
+corrected terminal-state contract and a fresh run; the existing artifacts are
+retained only for engineering diagnosis.
+
+\paragraph{Controlled-mechanism adapter (E2).}
+The controlled adapter gives paired conditions the same household cohort,
+initial private primary-route plan, time-indexed disruption, and component-
+isolated exogenous streams. Four code-level flags enable or remove memory,
+feedback, planning, and interaction. The resident prompt contains its private
+route observation, inbox, accepted household commitments, the same controlled
+initial plan in every condition, and recent execution failures when feedback is
+enabled. With planning enabled, a model decision may replace or revise the
+initial plan; with planning disabled, it remains observable but cannot be
+replaced through that update path. A true closure always affects world
+arbitration. In feedback-enabled conditions, the next decision copies changed
+world route state into the private view; rejected execution may additionally
+provide bounded failure feedback. With feedback disabled, the pre-closure route
+view persists. An \texttt{ExecutablePlan} records route,
+vehicle, departure step, accompanying dependents, status, and last failure, and
+plan history preserves revisions.
+
+An E2 resident does not wake after reaching safety or when it is not a decision
+unit. Otherwise it wakes for a nonempty inbox, a noncompleted plan, any accepted
+household commitment, or hazard distance below 3,000 m. Because the controlled
+initial plan is present in every paired condition, this gate provides a common
+opportunity to decide while the planning flag changes only the plan-update
+path. Community audiences in E2 expand to all controlled residents before
+delivery sampling; this is a broadcast audience, not an explicit network
+topology or a test of network diffusion.
+
+Memory in the publication-facing controlled adapter has a deliberately narrow
+operational meaning: delivery-gated warning retention and model-emitted memory
+writes provide a cross-step historical signal. The platform also implements a
+general bounded memory with rule-assigned importance, protected warning,
+injury, and family items, low-importance/old-first eviction, and
+importance--decay top-$k$ retrieval; these protection and eviction rules are
+DisasterSociety-specific. The broader use of persistent ranked memory is
+inspired by Generative Agents \cite{park2023generativeagents}. That full
+retrieval path is used by the
+base resident interface, but it is not presented as the exact mechanism tested
+by the current controlled Carr adapter. This distinction keeps platform
+capability and experiment-specific manipulation aligned.
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Current Carr adapter contracts. Both adapters use the shared kernel,
+typed intention--outcome boundary, and household/world state separation, but
+their cohorts, private-state representations, communication records, and
+estimands are intentionally different.}
+\label{tab:adapter-contracts}
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth}Y Y@{}}
+\toprule
+Contract & E1 empirical-process adapter & E2 controlled-mechanism adapter \\
+\midrule
+Purpose and cohort & Carr-informed full-condition process study with richer
+PUMS/Carr trait profiles; profile ordering and formal cohort are frozen &
+Mechanism identification with seed-selected households containing exactly two
+adults, at least one dependent, and exactly one reported vehicle \\
+Hazard and roads & Household-offset scalar hazard trajectory, frozen order
+timing, and controlled primary-route closure & Common scalar hazard trajectory,
+controlled closure, and paired private primary-route initialization \\
+Private cognition & Inbox, recent memory list, perceived routes, private
+commitment view, and execution feedback; no persistent executable plan &
+Mechanism flags, warning-history signal, feedback-gated route view, executable
+plan and plan history, accepted commitments, and recent failure feedback \\
+Communication & Recipient-specific official receipts; social messages use a
+message-level record over a recipient list and a constructed social graph &
+Recipient-specific receipts; household direct and community-audience delivery
+are distinct, but the community audience is not a social-network topology \\
+Coordination & Structured departure parties with care, vehicle, member, time,
+and overlap checks, plus an allowed solo auto-party path & Versioned controlled
+household proposals and commitments for the two decision members, with final
+execution checks in the world \\
+Vehicle setting & Profile-derived vehicle count with common five-seat capacity
+in the formal configuration & One vehicle whose capacity is at least household
+size; capacity scarcity is intentionally nonbinding \\
+Trace and inference & Domain ledgers for orders, messages, commitments,
+departures, resident state, and profiles; empirical reasonableness and process
+constraints, subject to the current E1 ledger limitations & Per-step state and
+call trace plus configuration/model/selected-source fingerprint; paired
+full-versus-drop-one mechanism contrasts \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Bounded Cognition and Structured Intentions}
+
+All resident adapters obey an information boundary even though their JSON
+payloads differ. A decision may include a profile, household facts visible to
+that member, received inbox items, privately perceived hazard or routes,
+selected private history, accepted commitments visible to the resident, and
+recent execution outcomes. It never receives authority to edit the world. In
+particular, co-residence does not synchronize inboxes, memories, beliefs, or
+unexpressed plans, and the full world route snapshot is not copied into the E1
+prompt.
+
+The model returns a typed decision containing an assessment, an action from a
+closed action set, optional destination, route, vehicle, and departure step,
+accompanying dependents, outgoing messages, responses to received message IDs,
+and optional memory writes. Schema validation constrains enums, field types,
+and required structure; it does not prove that a syntactically valid identifier
+exists. The controlled adapter deterministically rejects unknown route and
+vehicle references. E1 validates household vehicle membership and a nonempty
+route string, but does not yet offer a generic guarantee for destination IDs,
+social-message recipient IDs, or unknown routes; an unknown E1 route can
+currently abort instead of returning a clean rejection. These are implementation
+limitations, not properties established by JSON validation. Malformed output
+receives one schema-guided repair attempt before the gateway records a logical
+failure.
+
+\subsection{Messages and Versioned Household Commitments}
+
+Messages carry sender, recipient or audience, channel, content, kind, structured
+payload, sending step, and lifecycle metadata. At the platform-contract level,
+implemented with recipient-specific receipts in the controlled adapter, the
+guaranteed lifecycle prefix is
+\begin{equation}
+  \textit{sent}\rightarrow\textit{delivered}\rightarrow
+  \textit{processed}.
+  \label{eq:message-lifecycle}
+\end{equation}
+Only if the resident returns an explicit response may a processed receipt take
+the disposition transition
+\begin{equation}
+  \textit{processed}\xrightarrow{\text{explicit response}}
+  \{\textit{accepted},\textit{rejected}\};
+  \label{eq:message-disposition}
+\end{equation}
+otherwise it may remain processed. The states are not rhetorical labels:
+delivery determines inbox membership, and processing controls when the message
+enters private history. E1 official information also uses recipient-specific
+receipts, but E1 social messages currently use one message-level status and
+timestamp record for a recipient list. Its social-message funnel must not be
+interpreted as recipient-level reach or mutual acknowledgment, and an accepted
+social-message status records response disposition rather than proof that party
+acceptance succeeded. In particular,
+$\textit{sent}\not\Rightarrow\textit{delivered}$ and
+$\textit{accepted words}\not\Rightarrow\textit{executable action}$.
+
+The controlled adapter validates proposal structure and timing on emission and,
+on acceptance, verifies the two household decision members, a known household
+vehicle, nonempty route and vehicle fields, and departure-time legality. Route
+openness, movement compatibility, dependent care, and capacity are world-
+arbitrated. E1 party acceptance adds member, caregiver, vehicle-capacity and
+location, time, and overlap checks, but currently checks route syntax rather
+than route membership or openness; execution supplies a separate check. When a
+newer validated commitment revises an existing one, the prior version is
+cancelled but retained
+with a supersession link. The shared household commitment is authoritative;
+private member views need not be automatically synchronized. In the controlled
+adapter, the separate records support message, commitment, and execution
+funnels. In E1, message-level acceptance is not treated as mutual acknowledgment
+or feasible coordination without independent party-acceptance evidence.
+
+\subsection{World Arbitration and Execution Feedback}
+
+For each batch, the world converts intentions into resolved actions and checks
+them against the physical snapshot. The Carr-controlled world checks route
+openness and capacity, household vehicle state, dependent accompaniment, and a
+compatible household commitment where required. Contending vehicle requests
+are resolved using stable request attributes and a named random stream only as
+the final tie-break, preventing condition labels from changing the exogenous
+draw. The empirical world independently maintains true routes and capacities,
+matches due departure parties to traveler intentions, and applies household
+movement only after party checks succeed. Its batch processing does not claim
+the identical seeded ordering policy used by the controlled adapter.
+
+A keyed execution outcome is the only bridge from physical arbitration to
+execution-derived resident fields and physical movement. Private cognition and
+coordination may also change through official delivery, bounded route
+observation, inbox processing, response handling, and memory updates. An
+executed evacuation moves the verified residents and dependents and updates
+vehicle and safety state. Commitment validation can reject a proposal for
+member, caregiver, vehicle, time, or overlap reasons. World arbitration can
+separately reject an executable intention for a closed route, route capacity,
+vehicle conflict, future departure, missing traveler intention, or dependent-
+accompaniment failure. When feedback is enabled, recent reasons and the current
+plan's
+\texttt{last\_failure} become bounded input to a later decision, allowing the
+resident to revise its intention without granting the LLM direct world access.
+The resulting loop resembles reasoning with action feedback
+\cite{yao2023react,shinn2023reflexion}, but checked feasibility comes from
+deterministic validators rather than self-correction language alone. The E1
+arbitration limitations identified above remain outside this verified claim.
+
+\subsection{Reproducibility, Failure Handling, and Trace}
+
+All language-model calls pass through a gateway that controls concurrency,
+timeouts, transient retry, budgets, schema validation, and one repair attempt.
+The current cache key includes the declared model alias, serialized messages,
+logical seed, and temperature; resolved provider identity and schema are not
+part of that key and remain separate provenance concerns.
+For providers with a narrower seed range, the logical seed is deterministically
+mapped and both values are logged. Successful and cache-hit decisions record
+model alias, seeds, status, token counts, estimated cost, and latency fields;
+failure and fallback records preserve status and reason but do not populate
+every success metric. A successful schema repair is not separately tagged in
+the final record. Controlled E2 non-LLM randomness uses a component-isolated key
+\begin{equation}
+  k=(s_{\mathrm{run}},\,n_{\mathrm{stream}},\,i,\,t,\,d),
+\end{equation}
+where $d$ is a draw index; the experiment condition name is excluded so paired
+conditions can share exogenous draws. E1 uses the same helper for several
+components, but its current graph fallback and delivery counter still depend on
+Python's process hash and therefore do not guarantee cross-process replay.
+
+Failed model calls either abort under the frozen protocol or enter a logged
+rule fallback whose intention remains subject to world arbitration. The
+fallback rate is
+\begin{equation}
+  r_{\mathrm{fb}}=
+  \frac{n_{\mathrm{fallback}}}
+  {n_{\mathrm{ok}}+n_{\mathrm{cache}}+n_{\mathrm{fallback}}},
+  \label{eq:fallback}
+\end{equation}
+while unrecovered failures are reported separately. A step record stores the
+world snapshot, awake residents, typed intentions, keyed execution outcomes,
+resident state, and interaction state; a terminal summary stores completion and
+gateway statistics. The controlled runner additionally writes configuration,
+selected-source, model-registry, and repository fingerprints. The empirical runner writes
+official-receipt, message, commitment, departure, resident-state, and profile
+ledgers, but the current prototype does not claim an identical provenance
+bundle or cross-process byte identity for both adapters.
+
+\subsection{Evaluation Methodology}
+\label{sec:evaluation-method}
+
+Evaluation is organized along two orthogonal dimensions. \emph{Analysis scale}
+identifies whether a quantity concerns an individual, a household or network,
+a collective population, or system operation. \emph{Evidence type} identifies
+whether a result verifies implementation and causal contracts, assesses
+empirical or behavioral reasonableness, estimates a mechanism-specific removal
+effect, or measures robustness and efficiency. The distinction prevents a
+deterministic replay from being presented as behavioral validity, a calibrated
+warning margin from being reused as independent validation, or a large run from
+being treated as proof of realism.
+
+\begin{table*}[t]
+\centering
+\caption{Claim--evidence map used to design the evaluation. Scales and evidence
+types are independent; the table gives the primary combination rather than a
+requirement to populate every possible cell.}
+\label{tab:evidence-map}
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}Y Y@{}}
+\toprule
+Claim family & Primary quantities and analysis scale & Evidence required and
+interpretive boundary \\
+\midrule
+Process and software correctness & Event order, delivery and processing
+lifecycle, intention--execution invariants, resource conservation, terminal
+status, and replay at system and household scales & Executed tests, invariant
+checks, logs, provenance, failure and fallback accounting; does not establish
+human behavioral validity \\
+Empirical reasonableness & Warning/channel exposure, departure timing,
+household constraints and group differences at individual, household, and
+collective scales & Independent or prospectively held-out targets where
+available; otherwise explicitly bounded respondent-sample references,
+constraint violations, and planned human or expert judgment; calibrated inputs
+are not independent confirmation \\
+Mechanism function & Module-specific manipulation checks and downstream
+household or collective consequences & Paired full-versus-removal runs with
+predeclared direction and opportunity-to-act checks; estimates a conditional
+removal effect, not every module interaction \\
+Research utility and robustness & Seed, model, prompt, scale, latency, token,
+cost, and failure variation at run and system scales & Multiple independent
+runs and declared sensitivity conditions; operational scale alone is not
+realism \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+The Carr case uses two non-interchangeable populations. Carr-R retains a
+version-frozen, de-identified respondent table for bounded empirical references
+and auxiliary development diagnostics. Its former test partition has been
+opened for diagnostic analysis and is not an untouched holdout. Carr-S contains
+synthetic households for multi-step social-process
+experiments; its agents are not one-to-one replicas of Carr-R respondents. A
+survey field is assigned in advance to runtime input, calibration,
+evaluation-only, or exclusion, and the same field cannot be both a run input and
+its evaluation target in one experiment.
+
+E1 uses train-designated, non-outcome-conditioned Carr trait blocks, but the
+same survey also supplies some aggregate outcome and timing references. These
+comparisons assess Carr-informed reasonableness rather than independent external
+validation. Overall official reception is a calibration quantity, and
+multi-select channel prevalence is not a first-heard distribution. The small
+non-evacuator group and the absence of completed blinded human or expert review
+further bound behavioral-validity claims.
+
+For controlled mechanism evaluation, each module has a v8 runner-aligned check.
+Memory uses conditional retention of a delivered official warning. Feedback
+uses the share of residents with a pre-closure primary-route plan who later
+record a post-closure alternate-route update. Planning uses the household share
+that completes a post-closure alternate-route replan. Interaction uses the
+household share that forms, after closure, an all-decision-member commitment
+referencing the controlled alternate route, a known household vehicle, and an
+integer departure step. These are scenario-specific manipulation checks rather
+than general psychological-validity measures; the current runner does not
+separately compute unsupported contradiction or update-delay metrics.
+
+Downstream quantities include all-member safe location, closed-route rejection,
+multi-adult co-departure, dependent safety or left-behind rejection, and shared-
+resource conflict. For the forthcoming E1 results analysis, quantities will be
+recomputed from initialized member identities, final authoritative locations,
+recipient official-order receipts, and departure-party ledgers rather than
+accepted from existing summary labels. Its present
+\texttt{complete\_safe\_household\_departure} summary counts any household with
+an executed party, while \texttt{coordinated\_household} may include a
+one-decision-adult solo party; the current split and social-message acceptance
+fields are likewise intermediate labels. None is eligible for Results until the
+definitions below are implemented in a hashed, auditable analysis artifact. A
+mechanism cannot receive credit from a metric it has no opportunity to affect.
+
+The E1 analysis will keep analytically distinct denominators. Resident safe
+arrival is the fraction of unique initialized decision-capable resident IDs
+whose authoritative final location is the safe zone. Any-party household
+departure requires at least one first-time valid arrival, whereas complete
+household departure requires every initialized member to end in the safe zone.
+Multi-adult coordinated departure is evaluated only among
+households with at least two decision-capable adults and requires at least two
+such adults to execute in the same party; a solo auto-party does not qualify.
+Split departure requires at least two distinct household members to make their
+first valid safe-zone arrivals in different executed parties or at different
+departure steps. Multiple departure records for the same already-safe resident
+are invariant violations, not split departure. Official-order reach is counted
+from recipient receipts, while the current social-message funnel can be
+reported only at message level until recipient receipts are implemented.
+Message response, commitment feasibility, and physical execution rejection are
+separate quantities. Order-to-departure delay is evaluated only for households
+with both a delivered official-order receipt and a first-time valid household
+departure, and is converted using the 30-minute step. Households with no
+delivered order, no valid departure, or departure before the first delivered
+order are reported as separate categories; negative lags are not truncated.
+These definitions prevent current summary labels from silently changing the
+estimand.
+
+The controlled contrast for module $m$ and paired seed $s$ is
+\begin{equation}
+  \Delta_{m,s}=Y_{s,\mathrm{full}}-
+  Y_{s,\mathrm{full}-m}.
+  \label{eq:ablation}
+\end{equation}
+The estimand is the conditional effect of removing $m$ while the other modules
+remain present; it is not a full factorial decomposition and does not identify
+all interactions. The smallest run-level observation is a complete
+$\text{seed}\times\text{condition}$ run, not a resident, household, or
+resident-step. Full and removal cells sharing a seed form one paired contrast;
+independent replication for that contrast is across distinct seeds, not between
+the two cells within a seed. Differences are first formed within each paired
+seed and only then summarized across seeds with uncertainty and sensitivity
+analyses. This
+evaluation design defines what evidence the experiments must supply; it does
+not pre-announce their outcome.
+
+
+% Experiments, Results, Discussion, and Conclusions are intentionally omitted
+% from this pre-experiment working draft. They will be inserted only after a
+% separate evidence-state synchronization and metric audit.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+{\small
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+}
+
+\end{document}

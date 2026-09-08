@@ -1,0 +1,9 @@
+method,metric,numerator,denominator,value,direction
+DisasterSociety,structured_information_source_violation_rate,0,659,0.0,lower
+DisasterSociety,delivery_record_precision,125,125,1.0,higher
+DisasterSociety,delivery_record_recall,125,125,1.0,higher
+DisasterSociety,processing_record_precision,59,59,1.0,higher
+DisasterSociety,processing_record_recall,59,59,1.0,higher
+DisasterSociety,feasible_agreement_record_precision,12,12,1.0,higher
+DisasterSociety,feasible_agreement_record_recall,12,12,1.0,higher
+DisasterSociety,logged_world_state_conflict_step_rate,0,75,0.0,lower

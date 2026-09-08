@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-09-05T17:16:29.537288+00:00",
+  "reason": "100hh seed101 step12 proposed on-foot evacuation with null vehicle_id; original answer and first schema repair both failed the existing conditional execution validator.",
+  "previous_freeze_sha256": "57510fc89f5114e3a5f1eccea0210e9bb7c5a72ff385f0990f14859e187a17bf",
+  "schema_recovery_policy_changed": true,
+  "max_schema_repairs_before": 1,
+  "max_schema_repairs_after": 2,
+  "default_for_other_model_configs": 1,
+  "normal_messages_and_first_schema_repair_identical": true,
+  "json_schema_and_valid_action_contract_identical": true,
+  "new_guidance_only_after_first_repair_also_fails": true,
+  "world_agent_process_inputs_model_seed_metrics_budget_unchanged": true,
+  "invalid_actions_never_committed_or_cached": true,
+  "new_action_types_or_resources_added": false,
+  "old_successful_responses_preserved": true,
+  "targeted_tests_passed": 42,
+  "replay_required_before_paid_recovery": true
+}

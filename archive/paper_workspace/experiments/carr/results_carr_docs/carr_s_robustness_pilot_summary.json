@@ -1,0 +1,345 @@
+{
+  "status": "PILOT",
+  "activity_type": "ROBUSTNESS_DEVELOPMENT_GRID",
+  "track": "Carr-S",
+  "case_semantics": "Carr-informed controlled robustness scenario grid",
+  "n_households_per_run": 20,
+  "n_seeds": 10,
+  "n_conditions": 5,
+  "n_scenarios": 3,
+  "n_runs": 150,
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606,
+    707,
+    808,
+    909,
+    1010
+  ],
+  "conditions": [
+    "full",
+    "full_minus_memory",
+    "full_minus_feedback",
+    "full_minus_planning",
+    "full_minus_interaction"
+  ],
+  "scenarios": {
+    "low_reception_low_capacity": {
+      "controls": {
+        "official_warning_delivery_probability": 0.45,
+        "social_message_delivery_probability": 0.15,
+        "route_capacity_per_step": 5
+      },
+      "n_runs": 50,
+      "all_runs_valid": true,
+      "maximum_fallback_rate": 0.0,
+      "total_estimated_cost_usd": 0.0,
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.97,
+          "sd_paired_difference": 0.07888106377466154,
+          "mcse": 0.02494438257849294,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "interaction",
+          "metric": "coordinated_departure_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.295,
+          "sd_paired_difference": 0.07245688373094719,
+          "mcse": 0.0229128784747792,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "warning_retention_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.385,
+          "sd_paired_difference": 0.1650757401921918,
+          "mcse": 0.05220153254455275,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.265,
+          "sd_paired_difference": 0.10013879257199867,
+          "mcse": 0.03166666666666666,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "ignored_matrix": {
+        "path": "experiments/carr/runs/carr_s_robustness_pilot_low_reception_low_capacity/pilot_matrix.json",
+        "sha256": "5de15fa8704beec7341cd2e8243c4376defc3bedcc1272fddef7179dbb7f70ac"
+      }
+    },
+    "reference": {
+      "controls": {
+        "official_warning_delivery_probability": 0.65,
+        "social_message_delivery_probability": 0.25,
+        "route_capacity_per_step": 8
+      },
+      "n_runs": 50,
+      "all_runs_valid": true,
+      "maximum_fallback_rate": 0.0,
+      "total_estimated_cost_usd": 0.0,
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.975,
+          "sd_paired_difference": 0.07905694150420949,
+          "mcse": 0.024999999999999998,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "interaction",
+          "metric": "coordinated_departure_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.48,
+          "sd_paired_difference": 0.22010098692292238,
+          "mcse": 0.069602043392737,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "warning_retention_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.58,
+          "sd_paired_difference": 0.17029386365926402,
+          "mcse": 0.05385164807134504,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.455,
+          "sd_paired_difference": 0.2488305983328149,
+          "mcse": 0.07868714422741917,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "ignored_matrix": {
+        "path": "experiments/carr/runs/carr_s_robustness_pilot_reference/pilot_matrix.json",
+        "sha256": "0008ef177ef8c96f14e619840f2ae369e6f2a5c0d69d2c478672ec6a22807d45"
+      }
+    },
+    "high_reception_high_capacity": {
+      "controls": {
+        "official_warning_delivery_probability": 0.85,
+        "social_message_delivery_probability": 0.45,
+        "route_capacity_per_step": 12
+      },
+      "n_runs": 50,
+      "all_runs_valid": true,
+      "maximum_fallback_rate": 0.0,
+      "total_estimated_cost_usd": 0.0,
+      "paired_summary": [
+        {
+          "module": "feedback",
+          "metric": "primary_to_alternate_update_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.89,
+          "sd_paired_difference": 0.23309511649396117,
+          "mcse": 0.07371114795831993,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "interaction",
+          "metric": "coordinated_departure_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.8,
+          "sd_paired_difference": 0.097182531580755,
+          "mcse": 0.030731814857642953,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "memory",
+          "metric": "warning_retention_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.81,
+          "sd_paired_difference": 0.08755950357709132,
+          "mcse": 0.027688746209726917,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "module": "planning",
+          "metric": "successful_replan_rate",
+          "n_seeds": 10,
+          "mean_paired_difference": 0.69,
+          "sd_paired_difference": 0.23664319132398465,
+          "mcse": 0.07483314773547882,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "ignored_matrix": {
+        "path": "experiments/carr/runs/carr_s_robustness_pilot_high_reception_high_capacity/pilot_matrix.json",
+        "sha256": "acc4e9d0652774ee9b6df155005981d1c552cc26abf8672387b099384233448a"
+      }
+    }
+  },
+  "cross_scenario": [
+    {
+      "module": "feedback",
+      "scenario_results": [
+        {
+          "scenario": "low_reception_low_capacity",
+          "mean_paired_difference": 0.97,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "reference",
+          "mean_paired_difference": 0.975,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "high_reception_high_capacity",
+          "mean_paired_difference": 0.89,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "minimum_mean_paired_difference": 0.89,
+      "maximum_mean_paired_difference": 0.975,
+      "positive_in_every_scenario": true,
+      "seed_variance_informative_in_every_scenario": true
+    },
+    {
+      "module": "interaction",
+      "scenario_results": [
+        {
+          "scenario": "low_reception_low_capacity",
+          "mean_paired_difference": 0.295,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "reference",
+          "mean_paired_difference": 0.48,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "high_reception_high_capacity",
+          "mean_paired_difference": 0.8,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "minimum_mean_paired_difference": 0.295,
+      "maximum_mean_paired_difference": 0.8,
+      "positive_in_every_scenario": true,
+      "seed_variance_informative_in_every_scenario": true
+    },
+    {
+      "module": "memory",
+      "scenario_results": [
+        {
+          "scenario": "low_reception_low_capacity",
+          "mean_paired_difference": 0.385,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "reference",
+          "mean_paired_difference": 0.58,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "high_reception_high_capacity",
+          "mean_paired_difference": 0.81,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "minimum_mean_paired_difference": 0.385,
+      "maximum_mean_paired_difference": 0.81,
+      "positive_in_every_scenario": true,
+      "seed_variance_informative_in_every_scenario": true
+    },
+    {
+      "module": "planning",
+      "scenario_results": [
+        {
+          "scenario": "low_reception_low_capacity",
+          "mean_paired_difference": 0.265,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "reference",
+          "mean_paired_difference": 0.455,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        },
+        {
+          "scenario": "high_reception_high_capacity",
+          "mean_paired_difference": 0.69,
+          "positive_direction_fraction": 1.0,
+          "variance_informative": true
+        }
+      ],
+      "minimum_mean_paired_difference": 0.265,
+      "maximum_mean_paired_difference": 0.69,
+      "positive_in_every_scenario": true,
+      "seed_variance_informative_in_every_scenario": true
+    }
+  ],
+  "claim_boundary": "Controlled zero-cost robustness evidence only. The grid is not calibrated to Carr observations and does not establish empirical mechanism effects or formal sensitivity intervals.",
+  "provenance": {
+    "protocol": {
+      "path": "experiments/carr/configs/carr_s_robustness_pilot.yaml",
+      "sha256": "3f391bbd6d32887c709f14c0b3a87dc00e206cb4e34c96a641ea22abf529a0ae"
+    },
+    "base_config": {
+      "path": "experiments/carr/configs/carr_s_mechanism_nonsaturated_pilot.yaml",
+      "sha256": "c9223ca71d48a1717bf3011018e3c2a8d86f45cda915e5f8a8a3a719f4bb2772"
+    },
+    "runner": {
+      "path": "scripts/run_carr_robustness_pilot.py",
+      "sha256": "237a03da1ac8b9f2cf015d52a37ff70953b707ed02672bbb08ff8613339fc852"
+    },
+    "common_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "de68532681358fc257e8ffeb8bf384e72f803a48d44733bfff4dc859964e809e"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "22ce2ddf22d04e30fce3db0c6ea4ce361e7048bce7be1f45aa459cde815ab73e"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "3dc6ae3036d0998094da4ae75f0454870f9cf7588f744f25ea3d3ef369d7e8b8"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "6fd318486285253515bd35d40ad4b1a75e10e1ae1c8c2ae2adf2a693bb66a625"
+    },
+    "command": "uv run python scripts/run_carr_robustness_pilot.py"
+  }
+}

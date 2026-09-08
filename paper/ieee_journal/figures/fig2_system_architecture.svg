@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 780" width="7.16in" height="3.7232in" font-family="Helvetica, Arial, sans-serif" fill="#1F1F1F" font-variant-numeric="tabular-nums">
+<defs>
+<marker id="arr-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1F"/></marker>
+<marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2166AC"/></marker>
+<marker id="arr-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D9720A"/></marker>
+<marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7B3294"/></marker>
+<marker id="arr-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#383838"/></marker>
+<marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1B7837"/></marker>
+<marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B2182B"/></marker>
+<marker id="arr-line" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker>
+</defs>
+
+<rect x="16" y="16" width="1468" height="748" rx="16" fill="#FFFFFF" stroke="#383838" stroke-width="2.5" stroke-dasharray="10,6"/>
+<text x="38" y="52" font-size="30" text-anchor="start" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">DisasterSociety</text>
+<rect x="34" y="76" width="300" height="640" rx="12" fill="#EDEDED" stroke="#8A8A8A" stroke-width="2"/>
+<text x="184" y="106" font-size="24" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">A  Inputs</text>
+<rect x="50" y="130" width="268" height="118" rx="10" fill="#FFFFFF" stroke="#383838" stroke-width="2"/>
+<text x="184" y="174" font-size="21" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">EventPack manifest</text>
+<text x="184" y="204" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">time-indexed events</text>
+<rect x="50" y="266" width="268" height="118" rx="10" fill="#FFFFFF" stroke="#383838" stroke-width="2"/>
+<text x="184" y="310" font-size="21" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">Population &amp; whole-household donors</text>
+<text x="184" y="340" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">members, vehicles, income</text>
+<rect x="50" y="402" width="268" height="118" rx="10" fill="#FFFFFF" stroke="#383838" stroke-width="2"/>
+<text x="184" y="446" font-size="21" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">Warning / hazard / road / resource events</text>
+<text x="184" y="476" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">dynamic scenario</text>
+<rect x="50" y="538" width="268" height="118" rx="10" fill="#FFFFFF" stroke="#383838" stroke-width="2"/>
+<text x="184" y="582" font-size="21" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">Case-specific adapters</text>
+<text x="184" y="612" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">Carr-informed controlled case</text>
+<rect x="360" y="76" width="460" height="640" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="590" y="106" font-size="24" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">B  Resident &amp; household social state</text>
+<rect x="380" y="128" width="100" height="180" rx="10" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="430" cy="168" r="16" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<text x="430" y="208" font-size="19" text-anchor="middle" fill="#2166AC" font-weight="bold" font-style="normal" opacity="1.0">Resident i</text>
+<text x="430" y="232" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">private</text>
+<text x="430" y="252" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">cognition</text>
+<text x="430" y="272" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">&amp; decision</text>
+<rect x="488" y="128" width="100" height="180" rx="10" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="538" cy="168" r="16" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<text x="538" y="208" font-size="19" text-anchor="middle" fill="#2166AC" font-weight="bold" font-style="normal" opacity="1.0">Resident j</text>
+<text x="538" y="232" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">private</text>
+<text x="538" y="252" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">cognition</text>
+<text x="538" y="272" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">&amp; decision</text>
+<rect x="596" y="128" width="100" height="180" rx="10" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="646" cy="168" r="16" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<text x="646" y="208" font-size="19" text-anchor="middle" fill="#2166AC" font-weight="bold" font-style="normal" opacity="1.0">Resident k</text>
+<text x="646" y="232" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">private</text>
+<text x="646" y="252" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">cognition</text>
+<text x="646" y="272" font-size="16" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">&amp; decision</text>
+<rect x="380" y="330" width="420" height="150" rx="12" fill="#FBE7D0" stroke="#D9720A" stroke-width="2.5"/>
+<text x="590" y="362" font-size="24" text-anchor="middle" fill="#D9720A" font-weight="bold" font-style="normal" opacity="1.0">Household</text>
+<text x="590" y="392" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">members  ·  vehicles  ·  care responsibilities</text>
+<text x="590" y="418" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">commitments</text>
+<text x="590" y="446" font-size="17" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">shared constraints, not one shared mind</text>
+<line x1="430" y1="308" x2="590" y2="330" stroke="#D9720A" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"/>
+<line x1="538" y1="308" x2="590" y2="330" stroke="#D9720A" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"/>
+<line x1="646" y1="308" x2="590" y2="330" stroke="#D9720A" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"/>
+<rect x="380" y="510" width="420" height="130" rx="12" fill="#EBDCF0" stroke="#7B3294" stroke-width="2.5"/>
+<text x="590" y="546" font-size="24" text-anchor="middle" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">Interaction</text>
+<text x="590" y="580" font-size="20" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">message exchange and coordination</text>
+<text x="590" y="610" font-size="17" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">warning · household DM · community</text>
+<rect x="850" y="76" width="340" height="640" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="1020" y="106" font-size="24" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">C  Runtime &amp; shared world</text>
+<rect x="870" y="130" width="300" height="150" rx="12" fill="#DCEEE1" stroke="#1B7837" stroke-width="2.5"/>
+<text x="1020" y="170" font-size="24" text-anchor="middle" fill="#1B7837" font-weight="bold" font-style="normal" opacity="1.0">Event-driven Engine</text>
+<text x="1020" y="204" font-size="20" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">simulation kernel</text>
+<text x="1020" y="234" font-size="17" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">multi-step decision loop</text>
+<rect x="870" y="320" width="300" height="330" rx="12" fill="#EDEDED" stroke="#383838" stroke-width="2.5"/>
+<text x="1020" y="356" font-size="24" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">World</text>
+<text x="1020" y="392" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">hazard state</text>
+<text x="1020" y="426" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">roads &amp; closures</text>
+<text x="1020" y="460" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">locations</text>
+<text x="1020" y="494" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">vehicle / resource state</text>
+<text x="1020" y="528" font-size="19" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">action arbitration</text>
+<line x1="1020" y1="280" x2="1020" y2="320" stroke="#383838" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<line x1="1046" y1="320" x2="1046" y2="280" stroke="#383838" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="1220" y="76" width="246" height="640" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="1343" y="106" font-size="24" text-anchor="middle" fill="#1F1F1F" font-weight="bold" font-style="normal" opacity="1.0">D  Evidence</text>
+<rect x="1234" y="130" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="167" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">trajectory snapshots</text>
+<rect x="1234" y="206" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="243" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">message &amp; commitment records</text>
+<rect x="1234" y="282" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="319" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">intent &amp; execution outcomes</text>
+<rect x="1234" y="358" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="395" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">model calls · tokens · cost</text>
+<rect x="1234" y="434" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="471" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">failure / fallback</text>
+<rect x="1234" y="510" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="547" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">config · data · code hashes</text>
+<rect x="1234" y="586" width="218" height="62" rx="8" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.8"/>
+<text x="1343" y="623" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">run terminal status</text>
+<line x1="184" y1="216" x2="870" y2="205" stroke="#1B7837" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<text x="527.0" y="190" font-size="17" text-anchor="middle" fill="#1B7837" font-weight="normal" font-style="normal" opacity="1.0">time-indexed events</text>
+<line x1="870" y1="245" x2="800" y2="200" stroke="#2166AC" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="835.0" y="226" font-size="17" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">decision &amp; communication interface</text>
+<line x1="800" y1="560" x2="870" y2="520" stroke="#7B3294" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<text x="1080" y="302" font-size="16" text-anchor="start" fill="#383838" font-weight="normal" font-style="normal" opacity="1.0">state &amp; execution
+interface</text>
+<line x1="800" y1="370" x2="1234" y2="300" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,4" marker-end="url(#arr-ink)"/>
+<line x1="1170" y1="400" x2="1234" y2="380" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,4" marker-end="url(#arr-ink)"/>
+<text x="1202.0" y="368" font-size="17" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">trace records</text>
+</svg>

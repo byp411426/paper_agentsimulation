@@ -1,0 +1,72 @@
+{
+  "status": "PILOT_PENDING_AUDIT",
+  "activity_type": "E3A_PROMPT_SENSITIVITY",
+  "decision_model": "opencode-deepseek-v4-flash",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "prompt_variant": "v8b",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e3a_v8b.yaml",
+    "config_sha256": "2717f0620077ad3bbcfe3f3ec3c8f7ec4543ce21024a9219313c12206150a34d"
+  },
+  "protocol": {
+    "declared_seeds": [
+      2107,
+      2209,
+      2303,
+      2411
+    ],
+    "executed_seed_batch": [
+      2303
+    ],
+    "conditions": [
+      "full",
+      "full_minus_feedback",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 2,
+    "planned_runs": 3,
+    "reused_terminal_artifacts": 1,
+    "aborted_early": true,
+    "terminal_status_counts": {
+      "VALID": 1,
+      "ABORTED": 1
+    }
+  },
+  "runs": [
+    {
+      "seed": 2303,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 96,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1268.876439,
+      "run_dir": "experiments/carr/runs/carr_s_e3a_v8b_full_seed2303",
+      "summary_sha256": "9d82eb458e50b850cac744636051e46a174ffa79a4b608eb6f897564af7c88d6",
+      "mechanism_metrics_sha256": "f8a93712e5095f6ef93e6bedf836745b7fb456034b40b8518044f823daebd0be",
+      "provenance_sha256": "cf8b4812622d96db76b0805e2011f7e2765f8c6428360b4c8da0e13dce80e5f7"
+    },
+    {
+      "seed": 2303,
+      "condition": "full_minus_feedback",
+      "terminal_status": "ABORTED",
+      "n_ok": 159,
+      "n_cache": 0,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 1578.99164,
+      "run_dir": "experiments/carr/runs/carr_s_e3a_v8b_full_minus_feedback_seed2303",
+      "summary_sha256": "b3583d120dbdd8bdcab2dfc7ddde9160a7ea942319e5fdf89f6f390d01122cff",
+      "mechanism_metrics_sha256": "e7632a8435da47b88d26ca0b5a2bd3611495148956c282fdd7442697dcc2d139",
+      "provenance_sha256": "6ee2cff02026bcb4afca5991ca09c4d88574cc18226a5293b28fdb3281e08c7d"
+    }
+  ],
+  "claim_boundary": "Prompt-sensitivity check on the frozen v8 semantics; PILOT until audited."
+}

@@ -1,0 +1,81 @@
+{
+  "protocol_id": "carr_r_deepseek_context_validation_v1",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_BEFORE_LIVE_VALIDATION_EXECUTION",
+  "track": "Carr-R",
+  "purpose": "Measure validation-only sensitivity to adding one common pre-outcome Carr context to the already frozen four-demographic one-shot baseline.",
+  "design": {
+    "evaluation_split": "validation",
+    "sealed_splits": [
+      "test"
+    ],
+    "n_expected": 66,
+    "paired_reference": "carr_r_static_demographics_v1 validation predictions on the same evaluation_index records",
+    "runtime_fields": [
+      "age_group",
+      "household_size",
+      "vehicle_count",
+      "income_bracket"
+    ],
+    "common_context_only": true,
+    "respondent_specific_warning_or_order_input": false,
+    "post_outcome_input": false,
+    "respondent_id_exported": false,
+    "model_alias": "packy-deepseek-v4-flash",
+    "prompt_version": "carr_r_fixed_preoutcome_context_v1",
+    "temperature": 0.0,
+    "base_seed": 20260731,
+    "decision_threshold": 0.5,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260731,
+    "max_concurrency": 4,
+    "max_calls": 66,
+    "stop_rule": "Preserve any failure and do not open or substitute test records. Do not choose the final prompt from validation metric direction alone."
+  },
+  "reporting": {
+    "primary_descriptive_metrics": [
+      "macro_f1",
+      "brier",
+      "ece",
+      "confusion_matrix",
+      "decision_probability_consistency_rate"
+    ],
+    "paired_prompt_sensitivity": [
+      "prediction switch count and direction",
+      "paired probability difference summary",
+      "subgroup error diagnostics"
+    ],
+    "claim_boundary": "Auxiliary validation-only Carr-R prompt-context sensitivity; not a multi-step simulation, platform-validity result, or test-set estimate."
+  },
+  "frozen_artifacts": {
+    "runner": {
+      "path": "experiments/baselines/run_carr_r_deepseek.py",
+      "sha256": "ffe5197c78afa961b34126e16d993b6e93a070f3834c1c2d4c7d6e2459029309"
+    },
+    "configuration": {
+      "path": "experiments/baselines/configs/carr_r_deepseek_context_validation.yaml",
+      "sha256": "dbba29deafef7441e207b1d4ee950f6e6696c17097f0e82485a82338149383c0"
+    },
+    "field_roles": {
+      "path": "experiments/carr/protocol/field_roles.yaml",
+      "sha256": "bb6406ee98e0be2be9274a80bb0cf84e6dedacc4e267d43e7de1e4826702e391"
+    },
+    "split": {
+      "path": "experiments/carr/protocol/carr_r_split.csv",
+      "sha256": "5e52b396b2cf1e9c456005d434f8d1bf5b5edec9e080b187a98812b54c3074ae"
+    },
+    "clean_survey": {
+      "path": "eventpacks/carr_2018/behavior/survey_clean.csv",
+      "sha256": "46539f3162428803a250e59f30d81c87ac9d4d2551c3561d71069ad078daee4b"
+    },
+    "evaluation_linkage": {
+      "path": "eventpacks/carr_2018/behavior/evaluation_respondents.csv",
+      "sha256": "5cc642186cba75d36e0b2617d3bccfe1bb51b1a328eb98cb0a5391a9ea0ba031"
+    },
+    "models_config": {
+      "path": "configs/models.yaml",
+      "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+    }
+  },
+  "carr_r_test_split_opened": false
+}

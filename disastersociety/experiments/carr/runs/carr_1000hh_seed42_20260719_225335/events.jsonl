@@ -1,0 +1,1031 @@
+{"step": 0, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 1, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 2, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 3, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 4, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 5, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 1000}
+{"step": 6, "type": "warning_broadcast", "count": 1, "text": "MANDATORY EVACUATION for all areas west of Sacrame..."}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_1"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_2"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_3"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_7"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_8"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_9"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_10"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_11"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_12"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_13"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_16"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_19"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_22"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_23"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_25"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_26"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_27"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_34"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_41"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_42"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_43"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_44"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_45"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_46"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_47"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_49"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_50"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_51"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_52"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_56"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_58"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_59"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_66"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_67"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_68"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_69"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_70"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_73"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_75"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_77"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_78"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_79"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_81"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_84"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_85"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_87"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_88"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_89"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_90"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_93"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_94"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_95"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_100"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_104"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_106"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_107"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_108"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_111"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_112"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_113"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_116"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_119"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_124"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_125"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_126"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_130"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_131"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_134"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_135"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_136"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_139"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_140"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_142"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_144"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_145"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_148"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_149"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_152"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_154"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_155"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_156"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_158"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_159"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_160"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_162"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_165"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_166"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_168"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_169"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_172"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_175"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_176"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_177"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_178"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_179"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_183"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_184"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_185"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_187"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_188"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_189"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_190"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_191"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_192"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_194"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_197"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_203"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_204"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_205"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_206"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_207"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_208"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_210"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_212"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_213"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_218"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_219"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_224"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_226"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_228"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_230"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_231"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_234"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_235"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_237"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_240"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_244"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_246"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_247"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_249"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_250"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_252"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_253"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_256"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_257"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_258"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_262"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_263"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_269"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_271"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_274"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_275"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_276"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_278"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_281"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_283"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_284"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_287"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_288"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_289"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_290"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_293"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_296"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_297"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_298"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_304"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_305"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_306"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_311"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_312"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_313"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_316"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_318"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_324"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_326"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_331"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_333"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_336"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_338"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_339"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_341"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_342"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_343"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_344"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_347"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_349"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_353"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_355"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_357"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_358"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_359"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_361"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_364"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_366"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_368"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_374"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_375"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_377"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_378"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_381"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_382"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_383"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_384"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_385"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_386"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_387"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_392"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_394"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_395"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_396"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_399"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_400"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_401"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_402"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_405"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_406"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_409"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_413"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_414"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_415"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_416"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_417"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_419"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_420"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_422"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_424"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_425"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_427"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_430"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_431"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_432"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_435"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_436"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_438"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_447"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_452"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_453"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_454"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_459"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_460"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_461"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_462"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_463"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_465"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_466"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_469"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_470"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_472"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_473"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_474"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_480"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_481"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_482"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_486"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_490"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_491"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_492"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_493"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_494"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_496"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_497"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_498"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_499"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_501"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_502"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_504"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_506"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_507"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_508"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_509"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_510"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_511"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_513"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_516"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_517"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_518"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_521"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_527"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_528"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_529"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_530"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_533"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_536"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_539"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_542"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_543"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_544"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_547"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_549"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_552"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_556"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_559"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_560"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_561"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_562"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_563"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_566"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_571"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_574"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_577"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_578"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_580"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_583"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_585"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_586"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_588"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_589"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_591"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_592"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_594"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_597"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_598"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_600"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_602"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_606"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_608"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_609"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_611"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_613"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_615"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_617"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_619"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_620"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_621"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_622"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_623"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_626"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_627"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_628"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_632"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_633"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_634"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_635"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_636"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_637"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_639"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_643"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_645"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_648"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_649"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_650"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_651"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_653"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_655"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_656"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_658"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_659"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_661"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_663"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_667"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_669"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_670"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_673"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_678"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_679"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_681"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_682"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_683"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_684"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_685"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_687"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_688"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_691"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_698"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_703"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_704"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_705"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_708"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_709"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_713"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_714"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_715"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_716"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_717"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_718"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_719"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_720"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_727"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_728"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_730"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_733"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_736"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_737"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_738"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_739"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_742"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_744"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_748"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_749"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_750"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_752"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_757"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_758"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_759"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_763"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_766"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_768"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_771"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_772"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_775"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_778"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_779"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_781"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_783"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_784"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_787"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_789"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_791"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_794"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_796"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_798"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_800"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_801"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_804"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_805"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_807"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_810"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_811"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_812"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_815"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_817"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_821"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_825"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_826"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_827"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_831"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_833"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_835"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_837"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_838"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_840"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_846"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_847"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_851"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_852"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_857"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_858"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_861"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_864"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_866"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_867"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_868"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_872"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_873"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_876"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_878"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_879"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_880"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_881"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_882"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_886"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_887"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_888"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_891"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_892"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_894"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_895"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_896"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_897"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_901"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_904"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_908"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_910"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_912"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_915"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_925"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_926"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_929"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_930"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_932"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_933"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_939"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_941"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_944"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_945"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_947"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_954"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_956"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_958"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_964"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_965"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_966"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_970"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_971"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_974"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_975"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_976"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_978"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_979"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_980"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_982"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_983"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_987"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_989"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_990"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_991"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_992"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_993"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_995"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_996"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_997"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_2", "reason": "mock: received official warning, high urgency", "confidence": 0.793161402215707}
+{"step": 6, "type": "evacuation", "agent_id": "hh_7", "reason": "mock: received official warning, high urgency", "confidence": 0.7099973089485624}
+{"step": 6, "type": "evacuation", "agent_id": "hh_9", "reason": "mock: received official warning, high urgency", "confidence": 0.806753590615983}
+{"step": 6, "type": "evacuation", "agent_id": "hh_10", "reason": "mock: received official warning, high urgency", "confidence": 0.7447039526273284}
+{"step": 6, "type": "evacuation", "agent_id": "hh_11", "reason": "mock: received official warning, high urgency", "confidence": 0.870006566955181}
+{"step": 6, "type": "evacuation", "agent_id": "hh_12", "reason": "mock: received official warning, high urgency", "confidence": 0.8312235266040173}
+{"step": 6, "type": "evacuation", "agent_id": "hh_16", "reason": "mock: received official warning, high urgency", "confidence": 0.8390759669337555}
+{"step": 6, "type": "evacuation", "agent_id": "hh_19", "reason": "mock: received official warning, high urgency", "confidence": 0.7908033550849475}
+{"step": 6, "type": "evacuation", "agent_id": "hh_25", "reason": "mock: received official warning, high urgency", "confidence": 0.7259135145923269}
+{"step": 6, "type": "evacuation", "agent_id": "hh_27", "reason": "mock: received official warning, high urgency", "confidence": 0.7868992919346467}
+{"step": 6, "type": "evacuation", "agent_id": "hh_41", "reason": "mock: received official warning, high urgency", "confidence": 0.8596408369743805}
+{"step": 6, "type": "evacuation", "agent_id": "hh_43", "reason": "mock: received official warning, high urgency", "confidence": 0.7848612197105598}
+{"step": 6, "type": "evacuation", "agent_id": "hh_45", "reason": "mock: received official warning, high urgency", "confidence": 0.8539202373684684}
+{"step": 6, "type": "evacuation", "agent_id": "hh_46", "reason": "mock: received official warning, high urgency", "confidence": 0.887607269132215}
+{"step": 6, "type": "evacuation", "agent_id": "hh_47", "reason": "mock: received official warning, high urgency", "confidence": 0.8974234555995367}
+{"step": 6, "type": "evacuation", "agent_id": "hh_50", "reason": "mock: received official warning, high urgency", "confidence": 0.7913886342558576}
+{"step": 6, "type": "evacuation", "agent_id": "hh_52", "reason": "mock: received official warning, high urgency", "confidence": 0.7981601290659485}
+{"step": 6, "type": "evacuation", "agent_id": "hh_56", "reason": "mock: received official warning, high urgency", "confidence": 0.8082932586476802}
+{"step": 6, "type": "evacuation", "agent_id": "hh_58", "reason": "mock: received official warning, high urgency", "confidence": 0.7698677541071359}
+{"step": 6, "type": "evacuation", "agent_id": "hh_59", "reason": "mock: received official warning, high urgency", "confidence": 0.8368753817266639}
+{"step": 6, "type": "evacuation", "agent_id": "hh_66", "reason": "mock: received official warning, high urgency", "confidence": 0.8297538524572132}
+{"step": 6, "type": "evacuation", "agent_id": "hh_68", "reason": "mock: received official warning, high urgency", "confidence": 0.7367622245827595}
+{"step": 6, "type": "evacuation", "agent_id": "hh_69", "reason": "mock: received official warning, high urgency", "confidence": 0.8001317925806017}
+{"step": 6, "type": "evacuation", "agent_id": "hh_70", "reason": "mock: received official warning, high urgency", "confidence": 0.755050124587854}
+{"step": 6, "type": "evacuation", "agent_id": "hh_73", "reason": "mock: received official warning, high urgency", "confidence": 0.7477841643272818}
+{"step": 6, "type": "evacuation", "agent_id": "hh_75", "reason": "mock: received official warning, high urgency", "confidence": 0.7286388232363191}
+{"step": 6, "type": "evacuation", "agent_id": "hh_77", "reason": "mock: received official warning, high urgency", "confidence": 0.7903687594339646}
+{"step": 6, "type": "evacuation", "agent_id": "hh_78", "reason": "mock: received official warning, high urgency", "confidence": 0.784547250283126}
+{"step": 6, "type": "evacuation", "agent_id": "hh_79", "reason": "mock: received official warning, high urgency", "confidence": 0.7171320728235014}
+{"step": 6, "type": "evacuation", "agent_id": "hh_81", "reason": "mock: received official warning, high urgency", "confidence": 0.7078107969529244}
+{"step": 6, "type": "evacuation", "agent_id": "hh_84", "reason": "mock: received official warning, high urgency", "confidence": 0.8853960219996578}
+{"step": 6, "type": "evacuation", "agent_id": "hh_85", "reason": "mock: received official warning, high urgency", "confidence": 0.7122374126314799}
+{"step": 6, "type": "evacuation", "agent_id": "hh_87", "reason": "mock: received official warning, high urgency", "confidence": 0.7625373485155112}
+{"step": 6, "type": "evacuation", "agent_id": "hh_88", "reason": "mock: received official warning, high urgency", "confidence": 0.7003996089234767}
+{"step": 6, "type": "evacuation", "agent_id": "hh_89", "reason": "mock: received official warning, high urgency", "confidence": 0.8290415770930137}
+{"step": 6, "type": "evacuation", "agent_id": "hh_94", "reason": "mock: received official warning, high urgency", "confidence": 0.7582775556603547}
+{"step": 6, "type": "evacuation", "agent_id": "hh_100", "reason": "mock: received official warning, high urgency", "confidence": 0.7397630597557538}
+{"step": 6, "type": "evacuation", "agent_id": "hh_104", "reason": "mock: received official warning, high urgency", "confidence": 0.8459647600231242}
+{"step": 6, "type": "evacuation", "agent_id": "hh_106", "reason": "mock: received official warning, high urgency", "confidence": 0.8060058457088594}
+{"step": 6, "type": "evacuation", "agent_id": "hh_107", "reason": "mock: received official warning, high urgency", "confidence": 0.841960146408709}
+{"step": 6, "type": "evacuation", "agent_id": "hh_111", "reason": "mock: received official warning, high urgency", "confidence": 0.7414466270424943}
+{"step": 6, "type": "evacuation", "agent_id": "hh_112", "reason": "mock: received official warning, high urgency", "confidence": 0.7664239195804992}
+{"step": 6, "type": "evacuation", "agent_id": "hh_113", "reason": "mock: received official warning, high urgency", "confidence": 0.8314796248375633}
+{"step": 6, "type": "evacuation", "agent_id": "hh_116", "reason": "mock: received official warning, high urgency", "confidence": 0.8984457935474709}
+{"step": 6, "type": "evacuation", "agent_id": "hh_119", "reason": "mock: received official warning, high urgency", "confidence": 0.7227631758180382}
+{"step": 6, "type": "evacuation", "agent_id": "hh_124", "reason": "mock: received official warning, high urgency", "confidence": 0.7140794589359016}
+{"step": 6, "type": "evacuation", "agent_id": "hh_125", "reason": "mock: received official warning, high urgency", "confidence": 0.858198432976782}
+{"step": 6, "type": "evacuation", "agent_id": "hh_126", "reason": "mock: received official warning, high urgency", "confidence": 0.7942398325617709}
+{"step": 6, "type": "evacuation", "agent_id": "hh_130", "reason": "mock: received official warning, high urgency", "confidence": 0.7189326142509928}
+{"step": 6, "type": "evacuation", "agent_id": "hh_131", "reason": "mock: received official warning, high urgency", "confidence": 0.8319237643524708}
+{"step": 6, "type": "evacuation", "agent_id": "hh_134", "reason": "mock: received official warning, high urgency", "confidence": 0.8241881561618455}
+{"step": 6, "type": "evacuation", "agent_id": "hh_135", "reason": "mock: received official warning, high urgency", "confidence": 0.7007639649537352}
+{"step": 6, "type": "evacuation", "agent_id": "hh_136", "reason": "mock: received official warning, high urgency", "confidence": 0.8066548371785303}
+{"step": 6, "type": "evacuation", "agent_id": "hh_139", "reason": "mock: received official warning, high urgency", "confidence": 0.7016886821069388}
+{"step": 6, "type": "evacuation", "agent_id": "hh_142", "reason": "mock: received official warning, high urgency", "confidence": 0.8690580611090138}
+{"step": 6, "type": "evacuation", "agent_id": "hh_144", "reason": "mock: received official warning, high urgency", "confidence": 0.7995426587103984}
+{"step": 6, "type": "evacuation", "agent_id": "hh_145", "reason": "mock: received official warning, high urgency", "confidence": 0.7719771479977336}
+{"step": 6, "type": "evacuation", "agent_id": "hh_148", "reason": "mock: received official warning, high urgency", "confidence": 0.7816439800192805}
+{"step": 6, "type": "evacuation", "agent_id": "hh_149", "reason": "mock: received official warning, high urgency", "confidence": 0.808364695479192}
+{"step": 6, "type": "evacuation", "agent_id": "hh_152", "reason": "mock: received official warning, high urgency", "confidence": 0.7900377354180279}
+{"step": 6, "type": "evacuation", "agent_id": "hh_155", "reason": "mock: received official warning, high urgency", "confidence": 0.8903547952246962}
+{"step": 6, "type": "evacuation", "agent_id": "hh_156", "reason": "mock: received official warning, high urgency", "confidence": 0.7847917102246278}
+{"step": 6, "type": "evacuation", "agent_id": "hh_159", "reason": "mock: received official warning, high urgency", "confidence": 0.8081798332145892}
+{"step": 6, "type": "evacuation", "agent_id": "hh_160", "reason": "mock: received official warning, high urgency", "confidence": 0.8184485173525439}
+{"step": 6, "type": "evacuation", "agent_id": "hh_162", "reason": "mock: received official warning, high urgency", "confidence": 0.8205559669199781}
+{"step": 6, "type": "evacuation", "agent_id": "hh_165", "reason": "mock: received official warning, high urgency", "confidence": 0.8484341989263379}
+{"step": 6, "type": "evacuation", "agent_id": "hh_166", "reason": "mock: received official warning, high urgency", "confidence": 0.8831796606362942}
+{"step": 6, "type": "evacuation", "agent_id": "hh_168", "reason": "mock: received official warning, high urgency", "confidence": 0.761070890661562}
+{"step": 6, "type": "evacuation", "agent_id": "hh_172", "reason": "mock: received official warning, high urgency", "confidence": 0.7057615395187062}
+{"step": 6, "type": "evacuation", "agent_id": "hh_175", "reason": "mock: received official warning, high urgency", "confidence": 0.7738266353151247}
+{"step": 6, "type": "evacuation", "agent_id": "hh_177", "reason": "mock: received official warning, high urgency", "confidence": 0.721324439702047}
+{"step": 6, "type": "evacuation", "agent_id": "hh_178", "reason": "mock: received official warning, high urgency", "confidence": 0.7855187793295695}
+{"step": 6, "type": "evacuation", "agent_id": "hh_179", "reason": "mock: received official warning, high urgency", "confidence": 0.8645037035715418}
+{"step": 6, "type": "evacuation", "agent_id": "hh_184", "reason": "mock: received official warning, high urgency", "confidence": 0.7065200313770661}
+{"step": 6, "type": "evacuation", "agent_id": "hh_187", "reason": "mock: received official warning, high urgency", "confidence": 0.7038395519235463}
+{"step": 6, "type": "evacuation", "agent_id": "hh_188", "reason": "mock: received official warning, high urgency", "confidence": 0.8737321071763039}
+{"step": 6, "type": "evacuation", "agent_id": "hh_190", "reason": "mock: received official warning, high urgency", "confidence": 0.7488136183370561}
+{"step": 6, "type": "evacuation", "agent_id": "hh_191", "reason": "mock: received official warning, high urgency", "confidence": 0.8744078467599279}
+{"step": 6, "type": "evacuation", "agent_id": "hh_192", "reason": "mock: received official warning, high urgency", "confidence": 0.8643554636094617}
+{"step": 6, "type": "evacuation", "agent_id": "hh_194", "reason": "mock: received official warning, high urgency", "confidence": 0.8962048048507661}
+{"step": 6, "type": "evacuation", "agent_id": "hh_197", "reason": "mock: received official warning, high urgency", "confidence": 0.886466814934279}
+{"step": 6, "type": "evacuation", "agent_id": "hh_204", "reason": "mock: received official warning, high urgency", "confidence": 0.853784683341718}
+{"step": 6, "type": "evacuation", "agent_id": "hh_206", "reason": "mock: received official warning, high urgency", "confidence": 0.7384402296562368}
+{"step": 6, "type": "evacuation", "agent_id": "hh_207", "reason": "mock: received official warning, high urgency", "confidence": 0.7995271625552909}
+{"step": 6, "type": "evacuation", "agent_id": "hh_208", "reason": "mock: received official warning, high urgency", "confidence": 0.7327460445485512}
+{"step": 6, "type": "evacuation", "agent_id": "hh_212", "reason": "mock: received official warning, high urgency", "confidence": 0.7513514308228137}
+{"step": 6, "type": "evacuation", "agent_id": "hh_213", "reason": "mock: received official warning, high urgency", "confidence": 0.8795667967942103}
+{"step": 6, "type": "evacuation", "agent_id": "hh_219", "reason": "mock: received official warning, high urgency", "confidence": 0.7939464339415772}
+{"step": 6, "type": "evacuation", "agent_id": "hh_224", "reason": "mock: received official warning, high urgency", "confidence": 0.820861940501044}
+{"step": 6, "type": "evacuation", "agent_id": "hh_228", "reason": "mock: received official warning, high urgency", "confidence": 0.8565370897420812}
+{"step": 6, "type": "evacuation", "agent_id": "hh_230", "reason": "mock: received official warning, high urgency", "confidence": 0.8691518757416415}
+{"step": 6, "type": "evacuation", "agent_id": "hh_231", "reason": "mock: received official warning, high urgency", "confidence": 0.7872066322256861}
+{"step": 6, "type": "evacuation", "agent_id": "hh_234", "reason": "mock: received official warning, high urgency", "confidence": 0.7638656443874303}
+{"step": 6, "type": "evacuation", "agent_id": "hh_235", "reason": "mock: received official warning, high urgency", "confidence": 0.8963929690624718}
+{"step": 6, "type": "evacuation", "agent_id": "hh_237", "reason": "mock: received official warning, high urgency", "confidence": 0.8561265179328831}
+{"step": 6, "type": "evacuation", "agent_id": "hh_246", "reason": "mock: received official warning, high urgency", "confidence": 0.7102932894659387}
+{"step": 6, "type": "evacuation", "agent_id": "hh_247", "reason": "mock: received official warning, high urgency", "confidence": 0.8825635448147178}
+{"step": 6, "type": "evacuation", "agent_id": "hh_249", "reason": "mock: received official warning, high urgency", "confidence": 0.7183729315569333}
+{"step": 6, "type": "evacuation", "agent_id": "hh_252", "reason": "mock: received official warning, high urgency", "confidence": 0.8731402654440096}
+{"step": 6, "type": "evacuation", "agent_id": "hh_253", "reason": "mock: received official warning, high urgency", "confidence": 0.8423932026693097}
+{"step": 6, "type": "evacuation", "agent_id": "hh_256", "reason": "mock: received official warning, high urgency", "confidence": 0.8460129352922301}
+{"step": 6, "type": "evacuation", "agent_id": "hh_257", "reason": "mock: received official warning, high urgency", "confidence": 0.7715657603444531}
+{"step": 6, "type": "evacuation", "agent_id": "hh_258", "reason": "mock: received official warning, high urgency", "confidence": 0.7689272053293593}
+{"step": 6, "type": "evacuation", "agent_id": "hh_262", "reason": "mock: received official warning, high urgency", "confidence": 0.7987711777440722}
+{"step": 6, "type": "evacuation", "agent_id": "hh_263", "reason": "mock: received official warning, high urgency", "confidence": 0.7067339461428926}
+{"step": 6, "type": "evacuation", "agent_id": "hh_269", "reason": "mock: received official warning, high urgency", "confidence": 0.7106942734782297}
+{"step": 6, "type": "evacuation", "agent_id": "hh_271", "reason": "mock: received official warning, high urgency", "confidence": 0.8371570754984724}
+{"step": 6, "type": "evacuation", "agent_id": "hh_274", "reason": "mock: received official warning, high urgency", "confidence": 0.8493163392282079}
+{"step": 6, "type": "evacuation", "agent_id": "hh_276", "reason": "mock: received official warning, high urgency", "confidence": 0.7722658265814845}
+{"step": 6, "type": "evacuation", "agent_id": "hh_278", "reason": "mock: received official warning, high urgency", "confidence": 0.7389767481169528}
+{"step": 6, "type": "evacuation", "agent_id": "hh_281", "reason": "mock: received official warning, high urgency", "confidence": 0.7587087757071926}
+{"step": 6, "type": "evacuation", "agent_id": "hh_284", "reason": "mock: received official warning, high urgency", "confidence": 0.7672306370398827}
+{"step": 6, "type": "evacuation", "agent_id": "hh_287", "reason": "mock: received official warning, high urgency", "confidence": 0.8082487648373999}
+{"step": 6, "type": "evacuation", "agent_id": "hh_288", "reason": "mock: received official warning, high urgency", "confidence": 0.8516311431516977}
+{"step": 6, "type": "evacuation", "agent_id": "hh_289", "reason": "mock: received official warning, high urgency", "confidence": 0.8300920331053224}
+{"step": 6, "type": "evacuation", "agent_id": "hh_290", "reason": "mock: received official warning, high urgency", "confidence": 0.7637629986388548}
+{"step": 6, "type": "evacuation", "agent_id": "hh_293", "reason": "mock: received official warning, high urgency", "confidence": 0.7170249855623337}
+{"step": 6, "type": "evacuation", "agent_id": "hh_296", "reason": "mock: received official warning, high urgency", "confidence": 0.8814591746592536}
+{"step": 6, "type": "evacuation", "agent_id": "hh_297", "reason": "mock: received official warning, high urgency", "confidence": 0.7635609357690248}
+{"step": 6, "type": "evacuation", "agent_id": "hh_298", "reason": "mock: received official warning, high urgency", "confidence": 0.8236725025479228}
+{"step": 6, "type": "evacuation", "agent_id": "hh_304", "reason": "mock: received official warning, high urgency", "confidence": 0.7525503438627466}
+{"step": 6, "type": "evacuation", "agent_id": "hh_305", "reason": "mock: received official warning, high urgency", "confidence": 0.8276455791809014}
+{"step": 6, "type": "evacuation", "agent_id": "hh_311", "reason": "mock: received official warning, high urgency", "confidence": 0.8830439055900251}
+{"step": 6, "type": "evacuation", "agent_id": "hh_312", "reason": "mock: received official warning, high urgency", "confidence": 0.7020073423571552}
+{"step": 6, "type": "evacuation", "agent_id": "hh_313", "reason": "mock: received official warning, high urgency", "confidence": 0.8929054190477818}
+{"step": 6, "type": "evacuation", "agent_id": "hh_316", "reason": "mock: received official warning, high urgency", "confidence": 0.7023795455906942}
+{"step": 6, "type": "evacuation", "agent_id": "hh_318", "reason": "mock: received official warning, high urgency", "confidence": 0.7036318452013464}
+{"step": 6, "type": "evacuation", "agent_id": "hh_324", "reason": "mock: received official warning, high urgency", "confidence": 0.7278143649449993}
+{"step": 6, "type": "evacuation", "agent_id": "hh_333", "reason": "mock: received official warning, high urgency", "confidence": 0.7940570926758497}
+{"step": 6, "type": "evacuation", "agent_id": "hh_336", "reason": "mock: received official warning, high urgency", "confidence": 0.785197678503853}
+{"step": 6, "type": "evacuation", "agent_id": "hh_339", "reason": "mock: received official warning, high urgency", "confidence": 0.7748378837583848}
+{"step": 6, "type": "evacuation", "agent_id": "hh_343", "reason": "mock: received official warning, high urgency", "confidence": 0.8924620832277296}
+{"step": 6, "type": "evacuation", "agent_id": "hh_344", "reason": "mock: received official warning, high urgency", "confidence": 0.7215211510998576}
+{"step": 6, "type": "evacuation", "agent_id": "hh_353", "reason": "mock: received official warning, high urgency", "confidence": 0.709115212826135}
+{"step": 6, "type": "evacuation", "agent_id": "hh_355", "reason": "mock: received official warning, high urgency", "confidence": 0.8567683247811934}
+{"step": 6, "type": "evacuation", "agent_id": "hh_358", "reason": "mock: received official warning, high urgency", "confidence": 0.7147764568248659}
+{"step": 6, "type": "evacuation", "agent_id": "hh_359", "reason": "mock: received official warning, high urgency", "confidence": 0.7192498498866716}
+{"step": 6, "type": "evacuation", "agent_id": "hh_361", "reason": "mock: received official warning, high urgency", "confidence": 0.7714301267457968}
+{"step": 6, "type": "evacuation", "agent_id": "hh_366", "reason": "mock: received official warning, high urgency", "confidence": 0.8387889867276199}
+{"step": 6, "type": "evacuation", "agent_id": "hh_368", "reason": "mock: received official warning, high urgency", "confidence": 0.8924330263093861}
+{"step": 6, "type": "evacuation", "agent_id": "hh_374", "reason": "mock: received official warning, high urgency", "confidence": 0.7839838438331816}
+{"step": 6, "type": "evacuation", "agent_id": "hh_378", "reason": "mock: received official warning, high urgency", "confidence": 0.7397093402785482}
+{"step": 6, "type": "evacuation", "agent_id": "hh_381", "reason": "mock: received official warning, high urgency", "confidence": 0.7274244954523438}
+{"step": 6, "type": "evacuation", "agent_id": "hh_382", "reason": "mock: received official warning, high urgency", "confidence": 0.850928179363682}
+{"step": 6, "type": "evacuation", "agent_id": "hh_383", "reason": "mock: received official warning, high urgency", "confidence": 0.8074221686973573}
+{"step": 6, "type": "evacuation", "agent_id": "hh_384", "reason": "mock: received official warning, high urgency", "confidence": 0.8206102084268714}
+{"step": 6, "type": "evacuation", "agent_id": "hh_385", "reason": "mock: received official warning, high urgency", "confidence": 0.728484913384734}
+{"step": 6, "type": "evacuation", "agent_id": "hh_386", "reason": "mock: received official warning, high urgency", "confidence": 0.8339070238596598}
+{"step": 6, "type": "evacuation", "agent_id": "hh_387", "reason": "mock: received official warning, high urgency", "confidence": 0.7425202300734521}
+{"step": 6, "type": "evacuation", "agent_id": "hh_392", "reason": "mock: received official warning, high urgency", "confidence": 0.8172844946550746}
+{"step": 6, "type": "evacuation", "agent_id": "hh_394", "reason": "mock: received official warning, high urgency", "confidence": 0.7922427792151189}
+{"step": 6, "type": "evacuation", "agent_id": "hh_396", "reason": "mock: received official warning, high urgency", "confidence": 0.8881664315863383}
+{"step": 6, "type": "evacuation", "agent_id": "hh_399", "reason": "mock: received official warning, high urgency", "confidence": 0.7386422860332998}
+{"step": 6, "type": "evacuation", "agent_id": "hh_401", "reason": "mock: received official warning, high urgency", "confidence": 0.7063601861021328}
+{"step": 6, "type": "evacuation", "agent_id": "hh_402", "reason": "mock: received official warning, high urgency", "confidence": 0.8427226724302382}
+{"step": 6, "type": "evacuation", "agent_id": "hh_406", "reason": "mock: received official warning, high urgency", "confidence": 0.8282564036364485}
+{"step": 6, "type": "evacuation", "agent_id": "hh_413", "reason": "mock: received official warning, high urgency", "confidence": 0.8416316236780992}
+{"step": 6, "type": "evacuation", "agent_id": "hh_414", "reason": "mock: received official warning, high urgency", "confidence": 0.8794790690214097}
+{"step": 6, "type": "evacuation", "agent_id": "hh_415", "reason": "mock: received official warning, high urgency", "confidence": 0.7983035965496776}
+{"step": 6, "type": "evacuation", "agent_id": "hh_416", "reason": "mock: received official warning, high urgency", "confidence": 0.7287872509286583}
+{"step": 6, "type": "evacuation", "agent_id": "hh_417", "reason": "mock: received official warning, high urgency", "confidence": 0.8686451572123859}
+{"step": 6, "type": "evacuation", "agent_id": "hh_419", "reason": "mock: received official warning, high urgency", "confidence": 0.8816844121242154}
+{"step": 6, "type": "evacuation", "agent_id": "hh_420", "reason": "mock: received official warning, high urgency", "confidence": 0.8083929326930339}
+{"step": 6, "type": "evacuation", "agent_id": "hh_424", "reason": "mock: received official warning, high urgency", "confidence": 0.8814646929922827}
+{"step": 6, "type": "evacuation", "agent_id": "hh_430", "reason": "mock: received official warning, high urgency", "confidence": 0.8620957080114189}
+{"step": 6, "type": "evacuation", "agent_id": "hh_431", "reason": "mock: received official warning, high urgency", "confidence": 0.8847445613817185}
+{"step": 6, "type": "evacuation", "agent_id": "hh_432", "reason": "mock: received official warning, high urgency", "confidence": 0.8450821865653437}
+{"step": 6, "type": "evacuation", "agent_id": "hh_435", "reason": "mock: received official warning, high urgency", "confidence": 0.7178133974961376}
+{"step": 6, "type": "evacuation", "agent_id": "hh_436", "reason": "mock: received official warning, high urgency", "confidence": 0.7932028455823992}
+{"step": 6, "type": "evacuation", "agent_id": "hh_447", "reason": "mock: received official warning, high urgency", "confidence": 0.8390779484264429}
+{"step": 6, "type": "evacuation", "agent_id": "hh_452", "reason": "mock: received official warning, high urgency", "confidence": 0.7649839472612189}
+{"step": 6, "type": "evacuation", "agent_id": "hh_453", "reason": "mock: received official warning, high urgency", "confidence": 0.8370737988064119}
+{"step": 6, "type": "evacuation", "agent_id": "hh_459", "reason": "mock: received official warning, high urgency", "confidence": 0.7757687122772567}
+{"step": 6, "type": "evacuation", "agent_id": "hh_460", "reason": "mock: received official warning, high urgency", "confidence": 0.8426383284980998}
+{"step": 6, "type": "evacuation", "agent_id": "hh_461", "reason": "mock: received official warning, high urgency", "confidence": 0.7915998989070894}
+{"step": 6, "type": "evacuation", "agent_id": "hh_462", "reason": "mock: received official warning, high urgency", "confidence": 0.824488933483767}
+{"step": 6, "type": "evacuation", "agent_id": "hh_465", "reason": "mock: received official warning, high urgency", "confidence": 0.805697220812226}
+{"step": 6, "type": "evacuation", "agent_id": "hh_466", "reason": "mock: received official warning, high urgency", "confidence": 0.774178032732357}
+{"step": 6, "type": "evacuation", "agent_id": "hh_469", "reason": "mock: received official warning, high urgency", "confidence": 0.8780323488842805}
+{"step": 6, "type": "evacuation", "agent_id": "hh_470", "reason": "mock: received official warning, high urgency", "confidence": 0.8234440427068226}
+{"step": 6, "type": "evacuation", "agent_id": "hh_472", "reason": "mock: received official warning, high urgency", "confidence": 0.7570596286890819}
+{"step": 6, "type": "evacuation", "agent_id": "hh_473", "reason": "mock: received official warning, high urgency", "confidence": 0.7408080905348774}
+{"step": 6, "type": "evacuation", "agent_id": "hh_474", "reason": "mock: received official warning, high urgency", "confidence": 0.7730528660588768}
+{"step": 6, "type": "evacuation", "agent_id": "hh_480", "reason": "mock: received official warning, high urgency", "confidence": 0.7595746163582745}
+{"step": 6, "type": "evacuation", "agent_id": "hh_481", "reason": "mock: received official warning, high urgency", "confidence": 0.8371140144351769}
+{"step": 6, "type": "evacuation", "agent_id": "hh_482", "reason": "mock: received official warning, high urgency", "confidence": 0.8350276980837299}
+{"step": 6, "type": "evacuation", "agent_id": "hh_486", "reason": "mock: received official warning, high urgency", "confidence": 0.7178460361327672}
+{"step": 6, "type": "evacuation", "agent_id": "hh_490", "reason": "mock: received official warning, high urgency", "confidence": 0.7782866053134543}
+{"step": 6, "type": "evacuation", "agent_id": "hh_491", "reason": "mock: received official warning, high urgency", "confidence": 0.8400318448377715}
+{"step": 6, "type": "evacuation", "agent_id": "hh_492", "reason": "mock: received official warning, high urgency", "confidence": 0.8360564727543214}
+{"step": 6, "type": "evacuation", "agent_id": "hh_493", "reason": "mock: received official warning, high urgency", "confidence": 0.8664791074388681}
+{"step": 6, "type": "evacuation", "agent_id": "hh_494", "reason": "mock: received official warning, high urgency", "confidence": 0.7738555559018813}
+{"step": 6, "type": "evacuation", "agent_id": "hh_497", "reason": "mock: received official warning, high urgency", "confidence": 0.7177241426794726}
+{"step": 6, "type": "evacuation", "agent_id": "hh_498", "reason": "mock: received official warning, high urgency", "confidence": 0.874516359753673}
+{"step": 6, "type": "evacuation", "agent_id": "hh_499", "reason": "mock: received official warning, high urgency", "confidence": 0.7770600896212474}
+{"step": 6, "type": "evacuation", "agent_id": "hh_501", "reason": "mock: received official warning, high urgency", "confidence": 0.8936543256228113}
+{"step": 6, "type": "evacuation", "agent_id": "hh_502", "reason": "mock: received official warning, high urgency", "confidence": 0.76287222793487}
+{"step": 6, "type": "evacuation", "agent_id": "hh_506", "reason": "mock: received official warning, high urgency", "confidence": 0.7621074393260774}
+{"step": 6, "type": "evacuation", "agent_id": "hh_507", "reason": "mock: received official warning, high urgency", "confidence": 0.7259523580040755}
+{"step": 6, "type": "evacuation", "agent_id": "hh_509", "reason": "mock: received official warning, high urgency", "confidence": 0.8144535080164507}
+{"step": 6, "type": "evacuation", "agent_id": "hh_510", "reason": "mock: received official warning, high urgency", "confidence": 0.7553574381717647}
+{"step": 6, "type": "evacuation", "agent_id": "hh_511", "reason": "mock: received official warning, high urgency", "confidence": 0.8681273750245806}
+{"step": 6, "type": "evacuation", "agent_id": "hh_513", "reason": "mock: received official warning, high urgency", "confidence": 0.7272752269719415}
+{"step": 6, "type": "evacuation", "agent_id": "hh_517", "reason": "mock: received official warning, high urgency", "confidence": 0.7883359929890952}
+{"step": 6, "type": "evacuation", "agent_id": "hh_518", "reason": "mock: received official warning, high urgency", "confidence": 0.891127424790966}
+{"step": 6, "type": "evacuation", "agent_id": "hh_528", "reason": "mock: received official warning, high urgency", "confidence": 0.725769562541169}
+{"step": 6, "type": "evacuation", "agent_id": "hh_530", "reason": "mock: received official warning, high urgency", "confidence": 0.7941280372526676}
+{"step": 6, "type": "evacuation", "agent_id": "hh_533", "reason": "mock: received official warning, high urgency", "confidence": 0.8109996508247079}
+{"step": 6, "type": "evacuation", "agent_id": "hh_536", "reason": "mock: received official warning, high urgency", "confidence": 0.8377532514481555}
+{"step": 6, "type": "evacuation", "agent_id": "hh_539", "reason": "mock: received official warning, high urgency", "confidence": 0.7372520362611293}
+{"step": 6, "type": "evacuation", "agent_id": "hh_542", "reason": "mock: received official warning, high urgency", "confidence": 0.7268639252667568}
+{"step": 6, "type": "evacuation", "agent_id": "hh_544", "reason": "mock: received official warning, high urgency", "confidence": 0.8939264972308735}
+{"step": 6, "type": "evacuation", "agent_id": "hh_549", "reason": "mock: received official warning, high urgency", "confidence": 0.8994776069638111}
+{"step": 6, "type": "evacuation", "agent_id": "hh_552", "reason": "mock: received official warning, high urgency", "confidence": 0.7844022604222621}
+{"step": 6, "type": "evacuation", "agent_id": "hh_560", "reason": "mock: received official warning, high urgency", "confidence": 0.8111194433291047}
+{"step": 6, "type": "evacuation", "agent_id": "hh_562", "reason": "mock: received official warning, high urgency", "confidence": 0.7081204259762477}
+{"step": 6, "type": "evacuation", "agent_id": "hh_563", "reason": "mock: received official warning, high urgency", "confidence": 0.8676786014611603}
+{"step": 6, "type": "evacuation", "agent_id": "hh_566", "reason": "mock: received official warning, high urgency", "confidence": 0.7005133034992381}
+{"step": 6, "type": "evacuation", "agent_id": "hh_571", "reason": "mock: received official warning, high urgency", "confidence": 0.8065385015754838}
+{"step": 6, "type": "evacuation", "agent_id": "hh_577", "reason": "mock: received official warning, high urgency", "confidence": 0.8205186828898114}
+{"step": 6, "type": "evacuation", "agent_id": "hh_578", "reason": "mock: received official warning, high urgency", "confidence": 0.7318606203935153}
+{"step": 6, "type": "evacuation", "agent_id": "hh_580", "reason": "mock: received official warning, high urgency", "confidence": 0.8565029575644038}
+{"step": 6, "type": "evacuation", "agent_id": "hh_585", "reason": "mock: received official warning, high urgency", "confidence": 0.7144901646023494}
+{"step": 6, "type": "evacuation", "agent_id": "hh_586", "reason": "mock: received official warning, high urgency", "confidence": 0.7453464441764008}
+{"step": 6, "type": "evacuation", "agent_id": "hh_588", "reason": "mock: received official warning, high urgency", "confidence": 0.7980953823218887}
+{"step": 6, "type": "evacuation", "agent_id": "hh_589", "reason": "mock: received official warning, high urgency", "confidence": 0.7540146273408105}
+{"step": 6, "type": "evacuation", "agent_id": "hh_597", "reason": "mock: received official warning, high urgency", "confidence": 0.7257890088099163}
+{"step": 6, "type": "evacuation", "agent_id": "hh_598", "reason": "mock: received official warning, high urgency", "confidence": 0.8570832856651213}
+{"step": 6, "type": "evacuation", "agent_id": "hh_600", "reason": "mock: received official warning, high urgency", "confidence": 0.7576324038658693}
+{"step": 6, "type": "evacuation", "agent_id": "hh_602", "reason": "mock: received official warning, high urgency", "confidence": 0.7568677905791755}
+{"step": 6, "type": "evacuation", "agent_id": "hh_606", "reason": "mock: received official warning, high urgency", "confidence": 0.8356006354928165}
+{"step": 6, "type": "evacuation", "agent_id": "hh_608", "reason": "mock: received official warning, high urgency", "confidence": 0.7140422224383081}
+{"step": 6, "type": "evacuation", "agent_id": "hh_609", "reason": "mock: received official warning, high urgency", "confidence": 0.7434312922535589}
+{"step": 6, "type": "evacuation", "agent_id": "hh_611", "reason": "mock: received official warning, high urgency", "confidence": 0.7699519690496377}
+{"step": 6, "type": "evacuation", "agent_id": "hh_613", "reason": "mock: received official warning, high urgency", "confidence": 0.8313040702331086}
+{"step": 6, "type": "evacuation", "agent_id": "hh_615", "reason": "mock: received official warning, high urgency", "confidence": 0.8067817378294808}
+{"step": 6, "type": "evacuation", "agent_id": "hh_617", "reason": "mock: received official warning, high urgency", "confidence": 0.8829901375259914}
+{"step": 6, "type": "evacuation", "agent_id": "hh_620", "reason": "mock: received official warning, high urgency", "confidence": 0.768374877058703}
+{"step": 6, "type": "evacuation", "agent_id": "hh_623", "reason": "mock: received official warning, high urgency", "confidence": 0.7466758157273874}
+{"step": 6, "type": "evacuation", "agent_id": "hh_626", "reason": "mock: received official warning, high urgency", "confidence": 0.8173524438552136}
+{"step": 6, "type": "evacuation", "agent_id": "hh_627", "reason": "mock: received official warning, high urgency", "confidence": 0.7789080320884882}
+{"step": 6, "type": "evacuation", "agent_id": "hh_633", "reason": "mock: received official warning, high urgency", "confidence": 0.8849824608973822}
+{"step": 6, "type": "evacuation", "agent_id": "hh_634", "reason": "mock: received official warning, high urgency", "confidence": 0.8463869027149226}
+{"step": 6, "type": "evacuation", "agent_id": "hh_635", "reason": "mock: received official warning, high urgency", "confidence": 0.8303865262618858}
+{"step": 6, "type": "evacuation", "agent_id": "hh_636", "reason": "mock: received official warning, high urgency", "confidence": 0.736455559844392}
+{"step": 6, "type": "evacuation", "agent_id": "hh_637", "reason": "mock: received official warning, high urgency", "confidence": 0.7568003880214347}
+{"step": 6, "type": "evacuation", "agent_id": "hh_639", "reason": "mock: received official warning, high urgency", "confidence": 0.8528181874489407}
+{"step": 6, "type": "evacuation", "agent_id": "hh_643", "reason": "mock: received official warning, high urgency", "confidence": 0.8622776743408387}
+{"step": 6, "type": "evacuation", "agent_id": "hh_645", "reason": "mock: received official warning, high urgency", "confidence": 0.7658470752473472}
+{"step": 6, "type": "evacuation", "agent_id": "hh_648", "reason": "mock: received official warning, high urgency", "confidence": 0.8143707008267655}
+{"step": 6, "type": "evacuation", "agent_id": "hh_649", "reason": "mock: received official warning, high urgency", "confidence": 0.8212378819773665}
+{"step": 6, "type": "evacuation", "agent_id": "hh_650", "reason": "mock: received official warning, high urgency", "confidence": 0.865363517429236}
+{"step": 6, "type": "evacuation", "agent_id": "hh_651", "reason": "mock: received official warning, high urgency", "confidence": 0.8442842874157444}
+{"step": 6, "type": "evacuation", "agent_id": "hh_653", "reason": "mock: received official warning, high urgency", "confidence": 0.7520480170994991}
+{"step": 6, "type": "evacuation", "agent_id": "hh_656", "reason": "mock: received official warning, high urgency", "confidence": 0.8825086222257481}
+{"step": 6, "type": "evacuation", "agent_id": "hh_659", "reason": "mock: received official warning, high urgency", "confidence": 0.8122095766703443}
+{"step": 6, "type": "evacuation", "agent_id": "hh_661", "reason": "mock: received official warning, high urgency", "confidence": 0.7415926318640395}
+{"step": 6, "type": "evacuation", "agent_id": "hh_663", "reason": "mock: received official warning, high urgency", "confidence": 0.7627219164446625}
+{"step": 6, "type": "evacuation", "agent_id": "hh_667", "reason": "mock: received official warning, high urgency", "confidence": 0.7509189627113839}
+{"step": 6, "type": "evacuation", "agent_id": "hh_670", "reason": "mock: received official warning, high urgency", "confidence": 0.7510170437123326}
+{"step": 6, "type": "evacuation", "agent_id": "hh_673", "reason": "mock: received official warning, high urgency", "confidence": 0.8140489014638557}
+{"step": 6, "type": "evacuation", "agent_id": "hh_678", "reason": "mock: received official warning, high urgency", "confidence": 0.75295173691839}
+{"step": 6, "type": "evacuation", "agent_id": "hh_679", "reason": "mock: received official warning, high urgency", "confidence": 0.8301083923730632}
+{"step": 6, "type": "evacuation", "agent_id": "hh_681", "reason": "mock: received official warning, high urgency", "confidence": 0.8586532794295807}
+{"step": 6, "type": "evacuation", "agent_id": "hh_682", "reason": "mock: received official warning, high urgency", "confidence": 0.7353234356292315}
+{"step": 6, "type": "evacuation", "agent_id": "hh_683", "reason": "mock: received official warning, high urgency", "confidence": 0.8442235182958294}
+{"step": 6, "type": "evacuation", "agent_id": "hh_685", "reason": "mock: received official warning, high urgency", "confidence": 0.7404466366130639}
+{"step": 6, "type": "evacuation", "agent_id": "hh_687", "reason": "mock: received official warning, high urgency", "confidence": 0.7994932410764819}
+{"step": 6, "type": "evacuation", "agent_id": "hh_688", "reason": "mock: received official warning, high urgency", "confidence": 0.7702790873786883}
+{"step": 6, "type": "evacuation", "agent_id": "hh_691", "reason": "mock: received official warning, high urgency", "confidence": 0.7331035647837261}
+{"step": 6, "type": "evacuation", "agent_id": "hh_698", "reason": "mock: received official warning, high urgency", "confidence": 0.7675326076263842}
+{"step": 6, "type": "evacuation", "agent_id": "hh_705", "reason": "mock: received official warning, high urgency", "confidence": 0.8181897399637861}
+{"step": 6, "type": "evacuation", "agent_id": "hh_708", "reason": "mock: received official warning, high urgency", "confidence": 0.8324515309994935}
+{"step": 6, "type": "evacuation", "agent_id": "hh_709", "reason": "mock: received official warning, high urgency", "confidence": 0.8615874865285971}
+{"step": 6, "type": "evacuation", "agent_id": "hh_713", "reason": "mock: received official warning, high urgency", "confidence": 0.7223873026283123}
+{"step": 6, "type": "evacuation", "agent_id": "hh_714", "reason": "mock: received official warning, high urgency", "confidence": 0.8855322636614652}
+{"step": 6, "type": "evacuation", "agent_id": "hh_715", "reason": "mock: received official warning, high urgency", "confidence": 0.7792876812782076}
+{"step": 6, "type": "evacuation", "agent_id": "hh_716", "reason": "mock: received official warning, high urgency", "confidence": 0.8118599273336815}
+{"step": 6, "type": "evacuation", "agent_id": "hh_717", "reason": "mock: received official warning, high urgency", "confidence": 0.8552451032907773}
+{"step": 6, "type": "evacuation", "agent_id": "hh_718", "reason": "mock: received official warning, high urgency", "confidence": 0.7163536140537087}
+{"step": 6, "type": "evacuation", "agent_id": "hh_719", "reason": "mock: received official warning, high urgency", "confidence": 0.8785367034829366}
+{"step": 6, "type": "evacuation", "agent_id": "hh_720", "reason": "mock: received official warning, high urgency", "confidence": 0.8783698171698985}
+{"step": 6, "type": "evacuation", "agent_id": "hh_727", "reason": "mock: received official warning, high urgency", "confidence": 0.8151008195447094}
+{"step": 6, "type": "evacuation", "agent_id": "hh_730", "reason": "mock: received official warning, high urgency", "confidence": 0.8999328844174167}
+{"step": 6, "type": "evacuation", "agent_id": "hh_733", "reason": "mock: received official warning, high urgency", "confidence": 0.7420787840079488}
+{"step": 6, "type": "evacuation", "agent_id": "hh_736", "reason": "mock: received official warning, high urgency", "confidence": 0.8200774888083141}
+{"step": 6, "type": "evacuation", "agent_id": "hh_737", "reason": "mock: received official warning, high urgency", "confidence": 0.8628332280924315}
+{"step": 6, "type": "evacuation", "agent_id": "hh_738", "reason": "mock: received official warning, high urgency", "confidence": 0.714516453863639}
+{"step": 6, "type": "evacuation", "agent_id": "hh_739", "reason": "mock: received official warning, high urgency", "confidence": 0.8832419239131291}
+{"step": 6, "type": "evacuation", "agent_id": "hh_744", "reason": "mock: received official warning, high urgency", "confidence": 0.7197543694097951}
+{"step": 6, "type": "evacuation", "agent_id": "hh_748", "reason": "mock: received official warning, high urgency", "confidence": 0.8560214153500776}
+{"step": 6, "type": "evacuation", "agent_id": "hh_749", "reason": "mock: received official warning, high urgency", "confidence": 0.8486975302570843}
+{"step": 6, "type": "evacuation", "agent_id": "hh_750", "reason": "mock: received official warning, high urgency", "confidence": 0.7071745528931701}
+{"step": 6, "type": "evacuation", "agent_id": "hh_752", "reason": "mock: received official warning, high urgency", "confidence": 0.8647252587828849}
+{"step": 6, "type": "evacuation", "agent_id": "hh_757", "reason": "mock: received official warning, high urgency", "confidence": 0.7575070738317656}
+{"step": 6, "type": "evacuation", "agent_id": "hh_759", "reason": "mock: received official warning, high urgency", "confidence": 0.7966480079528884}
+{"step": 6, "type": "evacuation", "agent_id": "hh_763", "reason": "mock: received official warning, high urgency", "confidence": 0.7477637975374151}
+{"step": 6, "type": "evacuation", "agent_id": "hh_766", "reason": "mock: received official warning, high urgency", "confidence": 0.8683322679393669}
+{"step": 6, "type": "evacuation", "agent_id": "hh_768", "reason": "mock: received official warning, high urgency", "confidence": 0.7313244920485678}
+{"step": 6, "type": "evacuation", "agent_id": "hh_771", "reason": "mock: received official warning, high urgency", "confidence": 0.7251727252014871}
+{"step": 6, "type": "evacuation", "agent_id": "hh_775", "reason": "mock: received official warning, high urgency", "confidence": 0.8058510856327377}
+{"step": 6, "type": "evacuation", "agent_id": "hh_778", "reason": "mock: received official warning, high urgency", "confidence": 0.7428252919089797}
+{"step": 6, "type": "evacuation", "agent_id": "hh_779", "reason": "mock: received official warning, high urgency", "confidence": 0.7353060994725533}
+{"step": 6, "type": "evacuation", "agent_id": "hh_781", "reason": "mock: received official warning, high urgency", "confidence": 0.7670513013629587}
+{"step": 6, "type": "evacuation", "agent_id": "hh_783", "reason": "mock: received official warning, high urgency", "confidence": 0.7589206253295333}
+{"step": 6, "type": "evacuation", "agent_id": "hh_784", "reason": "mock: received official warning, high urgency", "confidence": 0.7618771309734864}
+{"step": 6, "type": "evacuation", "agent_id": "hh_787", "reason": "mock: received official warning, high urgency", "confidence": 0.7201980076944302}
+{"step": 6, "type": "evacuation", "agent_id": "hh_789", "reason": "mock: received official warning, high urgency", "confidence": 0.7355780974710716}
+{"step": 6, "type": "evacuation", "agent_id": "hh_791", "reason": "mock: received official warning, high urgency", "confidence": 0.7818852117862423}
+{"step": 6, "type": "evacuation", "agent_id": "hh_794", "reason": "mock: received official warning, high urgency", "confidence": 0.7920945083493844}
+{"step": 6, "type": "evacuation", "agent_id": "hh_798", "reason": "mock: received official warning, high urgency", "confidence": 0.7264869043513937}
+{"step": 6, "type": "evacuation", "agent_id": "hh_800", "reason": "mock: received official warning, high urgency", "confidence": 0.7399390546917882}
+{"step": 6, "type": "evacuation", "agent_id": "hh_801", "reason": "mock: received official warning, high urgency", "confidence": 0.7898403218071864}
+{"step": 6, "type": "evacuation", "agent_id": "hh_804", "reason": "mock: received official warning, high urgency", "confidence": 0.7238113508357614}
+{"step": 6, "type": "evacuation", "agent_id": "hh_807", "reason": "mock: received official warning, high urgency", "confidence": 0.8903994428827933}
+{"step": 6, "type": "evacuation", "agent_id": "hh_810", "reason": "mock: received official warning, high urgency", "confidence": 0.8789633127091794}
+{"step": 6, "type": "evacuation", "agent_id": "hh_811", "reason": "mock: received official warning, high urgency", "confidence": 0.7973970312624293}
+{"step": 6, "type": "evacuation", "agent_id": "hh_815", "reason": "mock: received official warning, high urgency", "confidence": 0.7455542201191332}
+{"step": 6, "type": "evacuation", "agent_id": "hh_817", "reason": "mock: received official warning, high urgency", "confidence": 0.8737971225130824}
+{"step": 6, "type": "evacuation", "agent_id": "hh_821", "reason": "mock: received official warning, high urgency", "confidence": 0.8173074210388255}
+{"step": 6, "type": "evacuation", "agent_id": "hh_826", "reason": "mock: received official warning, high urgency", "confidence": 0.7573877365836311}
+{"step": 6, "type": "evacuation", "agent_id": "hh_833", "reason": "mock: received official warning, high urgency", "confidence": 0.8750219796334593}
+{"step": 6, "type": "evacuation", "agent_id": "hh_835", "reason": "mock: received official warning, high urgency", "confidence": 0.8596059508650744}
+{"step": 6, "type": "evacuation", "agent_id": "hh_837", "reason": "mock: received official warning, high urgency", "confidence": 0.8088883662303328}
+{"step": 6, "type": "evacuation", "agent_id": "hh_838", "reason": "mock: received official warning, high urgency", "confidence": 0.7529442662458978}
+{"step": 6, "type": "evacuation", "agent_id": "hh_840", "reason": "mock: received official warning, high urgency", "confidence": 0.7524661761992978}
+{"step": 6, "type": "evacuation", "agent_id": "hh_846", "reason": "mock: received official warning, high urgency", "confidence": 0.7404325258274411}
+{"step": 6, "type": "evacuation", "agent_id": "hh_847", "reason": "mock: received official warning, high urgency", "confidence": 0.881967675530468}
+{"step": 6, "type": "evacuation", "agent_id": "hh_852", "reason": "mock: received official warning, high urgency", "confidence": 0.8298784112346114}
+{"step": 6, "type": "evacuation", "agent_id": "hh_857", "reason": "mock: received official warning, high urgency", "confidence": 0.75089541681932}
+{"step": 6, "type": "evacuation", "agent_id": "hh_861", "reason": "mock: received official warning, high urgency", "confidence": 0.7261961242205202}
+{"step": 6, "type": "evacuation", "agent_id": "hh_864", "reason": "mock: received official warning, high urgency", "confidence": 0.8717819522592551}
+{"step": 6, "type": "evacuation", "agent_id": "hh_866", "reason": "mock: received official warning, high urgency", "confidence": 0.8891943992616927}
+{"step": 6, "type": "evacuation", "agent_id": "hh_867", "reason": "mock: received official warning, high urgency", "confidence": 0.8253176905571117}
+{"step": 6, "type": "evacuation", "agent_id": "hh_868", "reason": "mock: received official warning, high urgency", "confidence": 0.7285687838057286}
+{"step": 6, "type": "evacuation", "agent_id": "hh_873", "reason": "mock: received official warning, high urgency", "confidence": 0.8259819946637045}
+{"step": 6, "type": "evacuation", "agent_id": "hh_876", "reason": "mock: received official warning, high urgency", "confidence": 0.8161527786347249}
+{"step": 6, "type": "evacuation", "agent_id": "hh_878", "reason": "mock: received official warning, high urgency", "confidence": 0.8927668857307721}
+{"step": 6, "type": "evacuation", "agent_id": "hh_879", "reason": "mock: received official warning, high urgency", "confidence": 0.8697226758477974}
+{"step": 6, "type": "evacuation", "agent_id": "hh_880", "reason": "mock: received official warning, high urgency", "confidence": 0.7634295672786818}
+{"step": 6, "type": "evacuation", "agent_id": "hh_881", "reason": "mock: received official warning, high urgency", "confidence": 0.7739513822558872}
+{"step": 6, "type": "evacuation", "agent_id": "hh_882", "reason": "mock: received official warning, high urgency", "confidence": 0.7826049961445273}
+{"step": 6, "type": "evacuation", "agent_id": "hh_886", "reason": "mock: received official warning, high urgency", "confidence": 0.8001389248908218}
+{"step": 6, "type": "evacuation", "agent_id": "hh_887", "reason": "mock: received official warning, high urgency", "confidence": 0.7504410108061352}
+{"step": 6, "type": "evacuation", "agent_id": "hh_891", "reason": "mock: received official warning, high urgency", "confidence": 0.8687822789799167}
+{"step": 6, "type": "evacuation", "agent_id": "hh_894", "reason": "mock: received official warning, high urgency", "confidence": 0.777836347698189}
+{"step": 6, "type": "evacuation", "agent_id": "hh_896", "reason": "mock: received official warning, high urgency", "confidence": 0.846711474114652}
+{"step": 6, "type": "evacuation", "agent_id": "hh_897", "reason": "mock: received official warning, high urgency", "confidence": 0.8810899853043984}
+{"step": 6, "type": "evacuation", "agent_id": "hh_904", "reason": "mock: received official warning, high urgency", "confidence": 0.8135836388263367}
+{"step": 6, "type": "evacuation", "agent_id": "hh_912", "reason": "mock: received official warning, high urgency", "confidence": 0.8250933975742432}
+{"step": 6, "type": "evacuation", "agent_id": "hh_915", "reason": "mock: received official warning, high urgency", "confidence": 0.836924378489771}
+{"step": 6, "type": "evacuation", "agent_id": "hh_925", "reason": "mock: received official warning, high urgency", "confidence": 0.8464931299727511}
+{"step": 6, "type": "evacuation", "agent_id": "hh_926", "reason": "mock: received official warning, high urgency", "confidence": 0.7625273913067577}
+{"step": 6, "type": "evacuation", "agent_id": "hh_929", "reason": "mock: received official warning, high urgency", "confidence": 0.8413515602166182}
+{"step": 6, "type": "evacuation", "agent_id": "hh_930", "reason": "mock: received official warning, high urgency", "confidence": 0.7510774029988516}
+{"step": 6, "type": "evacuation", "agent_id": "hh_939", "reason": "mock: received official warning, high urgency", "confidence": 0.7336514899649723}
+{"step": 6, "type": "evacuation", "agent_id": "hh_945", "reason": "mock: received official warning, high urgency", "confidence": 0.8251422494909894}
+{"step": 6, "type": "evacuation", "agent_id": "hh_954", "reason": "mock: received official warning, high urgency", "confidence": 0.7291803992989284}
+{"step": 6, "type": "evacuation", "agent_id": "hh_956", "reason": "mock: received official warning, high urgency", "confidence": 0.8026579901140566}
+{"step": 6, "type": "evacuation", "agent_id": "hh_958", "reason": "mock: received official warning, high urgency", "confidence": 0.8468198728028012}
+{"step": 6, "type": "evacuation", "agent_id": "hh_964", "reason": "mock: received official warning, high urgency", "confidence": 0.8010634140275605}
+{"step": 6, "type": "evacuation", "agent_id": "hh_965", "reason": "mock: received official warning, high urgency", "confidence": 0.7256216288822904}
+{"step": 6, "type": "evacuation", "agent_id": "hh_966", "reason": "mock: received official warning, high urgency", "confidence": 0.8371263111432619}
+{"step": 6, "type": "evacuation", "agent_id": "hh_970", "reason": "mock: received official warning, high urgency", "confidence": 0.8297797340943109}
+{"step": 6, "type": "evacuation", "agent_id": "hh_971", "reason": "mock: received official warning, high urgency", "confidence": 0.8065426263785175}
+{"step": 6, "type": "evacuation", "agent_id": "hh_974", "reason": "mock: received official warning, high urgency", "confidence": 0.7257994020427884}
+{"step": 6, "type": "evacuation", "agent_id": "hh_975", "reason": "mock: received official warning, high urgency", "confidence": 0.8462722755223928}
+{"step": 6, "type": "evacuation", "agent_id": "hh_976", "reason": "mock: received official warning, high urgency", "confidence": 0.8533265586135665}
+{"step": 6, "type": "evacuation", "agent_id": "hh_978", "reason": "mock: received official warning, high urgency", "confidence": 0.8721785143377316}
+{"step": 6, "type": "evacuation", "agent_id": "hh_982", "reason": "mock: received official warning, high urgency", "confidence": 0.7032492235671314}
+{"step": 6, "type": "evacuation", "agent_id": "hh_983", "reason": "mock: received official warning, high urgency", "confidence": 0.7134150201525986}
+{"step": 6, "type": "evacuation", "agent_id": "hh_987", "reason": "mock: received official warning, high urgency", "confidence": 0.8411644343792416}
+{"step": 6, "type": "evacuation", "agent_id": "hh_989", "reason": "mock: received official warning, high urgency", "confidence": 0.8001967657189571}
+{"step": 6, "type": "evacuation", "agent_id": "hh_990", "reason": "mock: received official warning, high urgency", "confidence": 0.8895115011468152}
+{"step": 6, "type": "evacuation", "agent_id": "hh_991", "reason": "mock: received official warning, high urgency", "confidence": 0.8171868992503635}
+{"step": 6, "type": "evacuation", "agent_id": "hh_992", "reason": "mock: received official warning, high urgency", "confidence": 0.7102796187669268}
+{"step": 6, "type": "evacuation", "agent_id": "hh_993", "reason": "mock: received official warning, high urgency", "confidence": 0.7645156169852482}
+{"step": 6, "type": "evacuation", "agent_id": "hh_995", "reason": "mock: received official warning, high urgency", "confidence": 0.8280671080392839}
+{"step": 6, "type": "evacuation", "agent_id": "hh_996", "reason": "mock: received official warning, high urgency", "confidence": 0.8501130307121679}
+{"step": 6, "type": "evacuation", "agent_id": "hh_997", "reason": "mock: received official warning, high urgency", "confidence": 0.7551199687919902}
+{"step": 6, "type": "step_summary", "warned_total": 491, "evacuated_total": 380, "agents_total": 1000}
+{"step": 7, "type": "evacuation", "agent_id": "hh_8", "reason": "mock: received official warning, high urgency", "confidence": 0.8263808666273631}
+{"step": 7, "type": "evacuation", "agent_id": "hh_13", "reason": "mock: received official warning, high urgency", "confidence": 0.8855988475540595}
+{"step": 7, "type": "evacuation", "agent_id": "hh_22", "reason": "mock: received official warning, high urgency", "confidence": 0.8935061681317913}
+{"step": 7, "type": "evacuation", "agent_id": "hh_23", "reason": "mock: received official warning, high urgency", "confidence": 0.8433286799787816}
+{"step": 7, "type": "evacuation", "agent_id": "hh_26", "reason": "mock: received official warning, high urgency", "confidence": 0.8996651716840864}
+{"step": 7, "type": "evacuation", "agent_id": "hh_34", "reason": "mock: received official warning, high urgency", "confidence": 0.7893686292116168}
+{"step": 7, "type": "evacuation", "agent_id": "hh_42", "reason": "mock: received official warning, high urgency", "confidence": 0.7937226096827567}
+{"step": 7, "type": "evacuation", "agent_id": "hh_44", "reason": "mock: received official warning, high urgency", "confidence": 0.799984965274704}
+{"step": 7, "type": "evacuation", "agent_id": "hh_49", "reason": "mock: received official warning, high urgency", "confidence": 0.8894309186728271}
+{"step": 7, "type": "evacuation", "agent_id": "hh_67", "reason": "mock: received official warning, high urgency", "confidence": 0.8336943118197674}
+{"step": 7, "type": "evacuation", "agent_id": "hh_90", "reason": "mock: received official warning, high urgency", "confidence": 0.8599918105149383}
+{"step": 7, "type": "evacuation", "agent_id": "hh_93", "reason": "mock: received official warning, high urgency", "confidence": 0.8572459348032931}
+{"step": 7, "type": "evacuation", "agent_id": "hh_95", "reason": "mock: received official warning, high urgency", "confidence": 0.7389444520006989}
+{"step": 7, "type": "evacuation", "agent_id": "hh_140", "reason": "mock: received official warning, high urgency", "confidence": 0.7062334739615685}
+{"step": 7, "type": "evacuation", "agent_id": "hh_154", "reason": "mock: received official warning, high urgency", "confidence": 0.8038962091697724}
+{"step": 7, "type": "evacuation", "agent_id": "hh_158", "reason": "mock: received official warning, high urgency", "confidence": 0.8756609117018662}
+{"step": 7, "type": "evacuation", "agent_id": "hh_169", "reason": "mock: received official warning, high urgency", "confidence": 0.7259870524742876}
+{"step": 7, "type": "evacuation", "agent_id": "hh_176", "reason": "mock: received official warning, high urgency", "confidence": 0.8939723831724818}
+{"step": 7, "type": "evacuation", "agent_id": "hh_183", "reason": "mock: received official warning, high urgency", "confidence": 0.8270952068127628}
+{"step": 7, "type": "evacuation", "agent_id": "hh_185", "reason": "mock: received official warning, high urgency", "confidence": 0.7542402959830686}
+{"step": 7, "type": "evacuation", "agent_id": "hh_189", "reason": "mock: received official warning, high urgency", "confidence": 0.8246529555176667}
+{"step": 7, "type": "evacuation", "agent_id": "hh_203", "reason": "mock: received official warning, high urgency", "confidence": 0.7830513400292084}
+{"step": 7, "type": "evacuation", "agent_id": "hh_205", "reason": "mock: received official warning, high urgency", "confidence": 0.8972320576498751}
+{"step": 7, "type": "evacuation", "agent_id": "hh_210", "reason": "mock: received official warning, high urgency", "confidence": 0.8254764542487796}
+{"step": 7, "type": "evacuation", "agent_id": "hh_218", "reason": "mock: received official warning, high urgency", "confidence": 0.7091315508075233}
+{"step": 7, "type": "evacuation", "agent_id": "hh_226", "reason": "mock: received official warning, high urgency", "confidence": 0.7020399507919439}
+{"step": 7, "type": "evacuation", "agent_id": "hh_244", "reason": "mock: received official warning, high urgency", "confidence": 0.7847459507726032}
+{"step": 7, "type": "evacuation", "agent_id": "hh_283", "reason": "mock: received official warning, high urgency", "confidence": 0.7070691674839116}
+{"step": 7, "type": "evacuation", "agent_id": "hh_326", "reason": "mock: received official warning, high urgency", "confidence": 0.8098918688790537}
+{"step": 7, "type": "evacuation", "agent_id": "hh_331", "reason": "mock: received official warning, high urgency", "confidence": 0.7215404671879184}
+{"step": 7, "type": "evacuation", "agent_id": "hh_341", "reason": "mock: received official warning, high urgency", "confidence": 0.7566811271638939}
+{"step": 7, "type": "evacuation", "agent_id": "hh_342", "reason": "mock: received official warning, high urgency", "confidence": 0.8615402167553694}
+{"step": 7, "type": "evacuation", "agent_id": "hh_347", "reason": "mock: received official warning, high urgency", "confidence": 0.8799908306630672}
+{"step": 7, "type": "evacuation", "agent_id": "hh_349", "reason": "mock: received official warning, high urgency", "confidence": 0.7208321318079929}
+{"step": 7, "type": "evacuation", "agent_id": "hh_357", "reason": "mock: received official warning, high urgency", "confidence": 0.8479475900890366}
+{"step": 7, "type": "evacuation", "agent_id": "hh_364", "reason": "mock: received official warning, high urgency", "confidence": 0.7769632806833215}
+{"step": 7, "type": "evacuation", "agent_id": "hh_375", "reason": "mock: received official warning, high urgency", "confidence": 0.7089947842147523}
+{"step": 7, "type": "evacuation", "agent_id": "hh_377", "reason": "mock: received official warning, high urgency", "confidence": 0.7859435423296891}
+{"step": 7, "type": "evacuation", "agent_id": "hh_395", "reason": "mock: received official warning, high urgency", "confidence": 0.7341157738129723}
+{"step": 7, "type": "evacuation", "agent_id": "hh_400", "reason": "mock: received official warning, high urgency", "confidence": 0.712713714086425}
+{"step": 7, "type": "evacuation", "agent_id": "hh_409", "reason": "mock: received official warning, high urgency", "confidence": 0.7855937121871096}
+{"step": 7, "type": "evacuation", "agent_id": "hh_425", "reason": "mock: received official warning, high urgency", "confidence": 0.8448979018534548}
+{"step": 7, "type": "evacuation", "agent_id": "hh_438", "reason": "mock: received official warning, high urgency", "confidence": 0.7967547283658443}
+{"step": 7, "type": "evacuation", "agent_id": "hh_454", "reason": "mock: received official warning, high urgency", "confidence": 0.8470751182374214}
+{"step": 7, "type": "evacuation", "agent_id": "hh_463", "reason": "mock: received official warning, high urgency", "confidence": 0.8754277380917881}
+{"step": 7, "type": "evacuation", "agent_id": "hh_504", "reason": "mock: received official warning, high urgency", "confidence": 0.8304502658048296}
+{"step": 7, "type": "evacuation", "agent_id": "hh_508", "reason": "mock: received official warning, high urgency", "confidence": 0.8682596721037982}
+{"step": 7, "type": "evacuation", "agent_id": "hh_516", "reason": "mock: received official warning, high urgency", "confidence": 0.8077812440699557}
+{"step": 7, "type": "evacuation", "agent_id": "hh_521", "reason": "mock: received official warning, high urgency", "confidence": 0.8191136162203247}
+{"step": 7, "type": "evacuation", "agent_id": "hh_527", "reason": "mock: received official warning, high urgency", "confidence": 0.7743262423902126}
+{"step": 7, "type": "evacuation", "agent_id": "hh_529", "reason": "mock: received official warning, high urgency", "confidence": 0.7230752943895775}
+{"step": 7, "type": "evacuation", "agent_id": "hh_547", "reason": "mock: received official warning, high urgency", "confidence": 0.8843575675769437}
+{"step": 7, "type": "evacuation", "agent_id": "hh_556", "reason": "mock: received official warning, high urgency", "confidence": 0.8094714135571388}
+{"step": 7, "type": "evacuation", "agent_id": "hh_559", "reason": "mock: received official warning, high urgency", "confidence": 0.8238489614082278}
+{"step": 7, "type": "evacuation", "agent_id": "hh_561", "reason": "mock: received official warning, high urgency", "confidence": 0.8720085332641758}
+{"step": 7, "type": "evacuation", "agent_id": "hh_583", "reason": "mock: received official warning, high urgency", "confidence": 0.7274715141510253}
+{"step": 7, "type": "evacuation", "agent_id": "hh_591", "reason": "mock: received official warning, high urgency", "confidence": 0.7389988038242836}
+{"step": 7, "type": "evacuation", "agent_id": "hh_592", "reason": "mock: received official warning, high urgency", "confidence": 0.7166887663511059}
+{"step": 7, "type": "evacuation", "agent_id": "hh_594", "reason": "mock: received official warning, high urgency", "confidence": 0.7241253448349796}
+{"step": 7, "type": "evacuation", "agent_id": "hh_621", "reason": "mock: received official warning, high urgency", "confidence": 0.7681737489289036}
+{"step": 7, "type": "evacuation", "agent_id": "hh_622", "reason": "mock: received official warning, high urgency", "confidence": 0.7317945330205046}
+{"step": 7, "type": "evacuation", "agent_id": "hh_628", "reason": "mock: received official warning, high urgency", "confidence": 0.7819200328563634}
+{"step": 7, "type": "evacuation", "agent_id": "hh_632", "reason": "mock: received official warning, high urgency", "confidence": 0.7388871942063612}
+{"step": 7, "type": "evacuation", "agent_id": "hh_655", "reason": "mock: received official warning, high urgency", "confidence": 0.8150140742684995}
+{"step": 7, "type": "evacuation", "agent_id": "hh_669", "reason": "mock: received official warning, high urgency", "confidence": 0.7921686738445871}
+{"step": 7, "type": "evacuation", "agent_id": "hh_684", "reason": "mock: received official warning, high urgency", "confidence": 0.8784630542566212}
+{"step": 7, "type": "evacuation", "agent_id": "hh_703", "reason": "mock: received official warning, high urgency", "confidence": 0.7927644780046261}
+{"step": 7, "type": "evacuation", "agent_id": "hh_704", "reason": "mock: received official warning, high urgency", "confidence": 0.8312283138138123}
+{"step": 7, "type": "evacuation", "agent_id": "hh_728", "reason": "mock: received official warning, high urgency", "confidence": 0.717006524834569}
+{"step": 7, "type": "evacuation", "agent_id": "hh_742", "reason": "mock: received official warning, high urgency", "confidence": 0.8494258934849908}
+{"step": 7, "type": "evacuation", "agent_id": "hh_758", "reason": "mock: received official warning, high urgency", "confidence": 0.8100492368135566}
+{"step": 7, "type": "evacuation", "agent_id": "hh_772", "reason": "mock: received official warning, high urgency", "confidence": 0.8464891017341334}
+{"step": 7, "type": "evacuation", "agent_id": "hh_825", "reason": "mock: received official warning, high urgency", "confidence": 0.89917474256998}
+{"step": 7, "type": "evacuation", "agent_id": "hh_827", "reason": "mock: received official warning, high urgency", "confidence": 0.7052367980549847}
+{"step": 7, "type": "evacuation", "agent_id": "hh_831", "reason": "mock: received official warning, high urgency", "confidence": 0.7803710939144651}
+{"step": 7, "type": "evacuation", "agent_id": "hh_888", "reason": "mock: received official warning, high urgency", "confidence": 0.7472461070692629}
+{"step": 7, "type": "evacuation", "agent_id": "hh_892", "reason": "mock: received official warning, high urgency", "confidence": 0.8701403738714244}
+{"step": 7, "type": "evacuation", "agent_id": "hh_895", "reason": "mock: received official warning, high urgency", "confidence": 0.7851581955367309}
+{"step": 7, "type": "evacuation", "agent_id": "hh_901", "reason": "mock: received official warning, high urgency", "confidence": 0.7443626792013153}
+{"step": 7, "type": "evacuation", "agent_id": "hh_908", "reason": "mock: received official warning, high urgency", "confidence": 0.7166662598049137}
+{"step": 7, "type": "evacuation", "agent_id": "hh_910", "reason": "mock: received official warning, high urgency", "confidence": 0.7553957975490748}
+{"step": 7, "type": "evacuation", "agent_id": "hh_932", "reason": "mock: received official warning, high urgency", "confidence": 0.8984945666553898}
+{"step": 7, "type": "evacuation", "agent_id": "hh_933", "reason": "mock: received official warning, high urgency", "confidence": 0.7472161698215415}
+{"step": 7, "type": "evacuation", "agent_id": "hh_941", "reason": "mock: received official warning, high urgency", "confidence": 0.8623499956223006}
+{"step": 7, "type": "evacuation", "agent_id": "hh_944", "reason": "mock: received official warning, high urgency", "confidence": 0.8373616566148191}
+{"step": 7, "type": "evacuation", "agent_id": "hh_947", "reason": "mock: received official warning, high urgency", "confidence": 0.7897084047227243}
+{"step": 7, "type": "evacuation", "agent_id": "hh_979", "reason": "mock: received official warning, high urgency", "confidence": 0.7393496509672798}
+{"step": 7, "type": "evacuation", "agent_id": "hh_980", "reason": "mock: received official warning, high urgency", "confidence": 0.8068352053082383}
+{"step": 7, "type": "step_summary", "warned_total": 491, "evacuated_total": 468, "agents_total": 1000}
+{"step": 8, "type": "evacuation", "agent_id": "hh_1", "reason": "mock: received official warning, high urgency", "confidence": 0.8515452169648832}
+{"step": 8, "type": "evacuation", "agent_id": "hh_3", "reason": "mock: received official warning, high urgency", "confidence": 0.893371248029855}
+{"step": 8, "type": "evacuation", "agent_id": "hh_51", "reason": "mock: received official warning, high urgency", "confidence": 0.8220717284658299}
+{"step": 8, "type": "evacuation", "agent_id": "hh_108", "reason": "mock: received official warning, high urgency", "confidence": 0.8928781980738367}
+{"step": 8, "type": "evacuation", "agent_id": "hh_240", "reason": "mock: received official warning, high urgency", "confidence": 0.8518703731096257}
+{"step": 8, "type": "evacuation", "agent_id": "hh_250", "reason": "mock: received official warning, high urgency", "confidence": 0.7449901292503154}
+{"step": 8, "type": "evacuation", "agent_id": "hh_275", "reason": "mock: received official warning, high urgency", "confidence": 0.8700079538092064}
+{"step": 8, "type": "evacuation", "agent_id": "hh_306", "reason": "mock: received official warning, high urgency", "confidence": 0.8158664067417213}
+{"step": 8, "type": "evacuation", "agent_id": "hh_338", "reason": "mock: received official warning, high urgency", "confidence": 0.8739467451007071}
+{"step": 8, "type": "evacuation", "agent_id": "hh_405", "reason": "mock: received official warning, high urgency", "confidence": 0.7830835791759535}
+{"step": 8, "type": "evacuation", "agent_id": "hh_422", "reason": "mock: received official warning, high urgency", "confidence": 0.7438676329675497}
+{"step": 8, "type": "evacuation", "agent_id": "hh_427", "reason": "mock: received official warning, high urgency", "confidence": 0.8125561327574009}
+{"step": 8, "type": "evacuation", "agent_id": "hh_496", "reason": "mock: received official warning, high urgency", "confidence": 0.7214715761055281}
+{"step": 8, "type": "evacuation", "agent_id": "hh_543", "reason": "mock: received official warning, high urgency", "confidence": 0.8593664377823927}
+{"step": 8, "type": "evacuation", "agent_id": "hh_574", "reason": "mock: received official warning, high urgency", "confidence": 0.8007295345355863}
+{"step": 8, "type": "evacuation", "agent_id": "hh_619", "reason": "mock: received official warning, high urgency", "confidence": 0.8932759998208052}
+{"step": 8, "type": "evacuation", "agent_id": "hh_658", "reason": "mock: received official warning, high urgency", "confidence": 0.7598055872030162}
+{"step": 8, "type": "evacuation", "agent_id": "hh_796", "reason": "mock: received official warning, high urgency", "confidence": 0.7499142875695882}
+{"step": 8, "type": "evacuation", "agent_id": "hh_805", "reason": "mock: received official warning, high urgency", "confidence": 0.8317707996405256}
+{"step": 8, "type": "evacuation", "agent_id": "hh_812", "reason": "mock: received official warning, high urgency", "confidence": 0.8520255241805904}
+{"step": 8, "type": "evacuation", "agent_id": "hh_851", "reason": "mock: received official warning, high urgency", "confidence": 0.784966729691563}
+{"step": 8, "type": "evacuation", "agent_id": "hh_858", "reason": "mock: received official warning, high urgency", "confidence": 0.847306316436458}
+{"step": 8, "type": "evacuation", "agent_id": "hh_872", "reason": "mock: received official warning, high urgency", "confidence": 0.8596695049275742}
+{"step": 8, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 9, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 10, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 11, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 12, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 13, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 14, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 15, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 16, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 17, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 18, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 19, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 20, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 21, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 22, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 23, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 24, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 25, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 26, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 27, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 28, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 29, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 30, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 31, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 32, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 33, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 34, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 35, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 36, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 37, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 38, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 39, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 40, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 41, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 42, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 43, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 44, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 45, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 46, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}
+{"step": 47, "type": "step_summary", "warned_total": 491, "evacuated_total": 491, "agents_total": 1000}

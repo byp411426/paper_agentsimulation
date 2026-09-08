@@ -1,0 +1,27 @@
+{
+  "arm": "named",
+  "model": "deepseek-v4-flash",
+  "n": 335,
+  "k": 8,
+  "total_calls": 2680,
+  "failed_calls": 0,
+  "fail_rate": 0.0,
+  "accuracy": 0.7014925373134329,
+  "f1_macro": 0.46396569380440345,
+  "brier": 0.2651119402985075,
+  "ece": 0.23134328358208953,
+  "auc": 0.49133744279443353,
+  "confusion_matrix": [
+    [
+      6,
+      80
+    ],
+    [
+      20,
+      229
+    ]
+  ],
+  "pred_evac_rate": 0.9223880597014925,
+  "mean_prob": 0.8694029850746269,
+  "true_evac_rate": 0.7432835820895523
+}

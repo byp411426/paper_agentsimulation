@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "initial_and_first_repair_messages_identical": true,
+  "first_repair_success_result_identical": true,
+  "json_schema_identical": true,
+  "paid_calls": 0,
+  "targeted_tests_passed": 42
+}

@@ -1,0 +1,52 @@
+{
+  "source": "Carr 2018 survey Q5/Q6/Q7-derived command type and time fields",
+  "eligible_n": 330,
+  "excluded_contradictory_n": 15,
+  "sequences": [
+    "none",
+    "voluntary_only",
+    "mandatory_only",
+    "voluntary_then_mandatory"
+  ],
+  "calibration": {
+    "main_excluding_15_contradictions": {
+      "n": 315,
+      "counts": {
+        "none": 83,
+        "voluntary_only": 27,
+        "mandatory_only": 158,
+        "voluntary_then_mandatory": 40
+      },
+      "proportions": {
+        "none": 0.263492,
+        "voluntary_only": 0.085714,
+        "mandatory_only": 0.501587,
+        "voluntary_then_mandatory": 0.126984
+      },
+      "extra_reported": {
+        "mandatory_then_voluntary": 7
+      }
+    },
+    "sensitivity_affirmative_priority": {
+      "n": 330,
+      "counts": {
+        "none": 83,
+        "voluntary_only": 33,
+        "mandatory_only": 161,
+        "voluntary_then_mandatory": 44
+      },
+      "proportions": {
+        "none": 0.251515,
+        "voluntary_only": 0.1,
+        "mandatory_only": 0.487879,
+        "voluntary_then_mandatory": 0.133333
+      },
+      "extra_reported": {
+        "mandatory_then_voluntary": 8,
+        "unclassifiable_both_orders": 1
+      }
+    }
+  },
+  "usage": "Fixed scenario quotas by Hamilton largest-remainder; assignment uses named stream e1_order_assignment, not traits or outcomes",
+  "input_sha256": "5259798e5efe426542bbe5363745125888e5bcbff68c611c6c364721829d4d90"
+}

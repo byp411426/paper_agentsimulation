@@ -1,0 +1,56 @@
+{
+  "run_seed": 101,
+  "planned_steps": 10,
+  "completed_steps": 2,
+  "last_completed_step": 3,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 3,
+    "hazard_distance_m": 3900.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 2,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": false,
+        "capacity_per_step": 2,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "departure scheduled for a future step": 2
+    },
+    "route_closures": [
+      {
+        "step": 3,
+        "route_id": "tiger_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_minimax_m27_v6_thinking_pilot_r1_full_minus_planning_seed101",
+    "spent": 0.02619,
+    "n_ok": 6,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 6777,
+    "live_completion_tokens": 6318,
+    "logical_prompt_tokens": 6777,
+    "logical_completion_tokens": 6318
+  },
+  "wall_clock_seconds": 59.089666,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t047_h0000019_r001, step=3: 1 validation error for ResidentDecision\naction\n  Input should be 'stay', 'prepare', 'evacuate', 'seek_help' or 'offer_help' [type=literal_error, input_value='propose', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+}

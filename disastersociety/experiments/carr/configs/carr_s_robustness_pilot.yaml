@@ -1,0 +1,37 @@
+version: 1
+status: PILOT
+track: Carr-S
+base_config: experiments/carr/configs/carr_s_mechanism_nonsaturated_pilot.yaml
+
+seeds:
+  - 101
+  - 202
+  - 303
+  - 404
+  - 505
+  - 606
+  - 707
+  - 808
+  - 909
+  - 1010
+
+scenarios:
+  low_reception_low_capacity:
+    official_warning_delivery_probability: 0.45
+    social_message_delivery_probability: 0.15
+    route_capacity_per_step: 5
+  reference:
+    official_warning_delivery_probability: 0.65
+    social_message_delivery_probability: 0.25
+    route_capacity_per_step: 8
+  high_reception_high_capacity:
+    official_warning_delivery_probability: 0.85
+    social_message_delivery_probability: 0.45
+    route_capacity_per_step: 12
+
+reporting:
+  runs_dir: experiments/carr/runs
+  result_json: experiments/carr/results/carr_s_robustness_pilot_summary.json
+  interpretation: >-
+    Zero-cost robustness development evidence. The scenario grid is declared
+    for controlled stress testing and is not fitted to Carr observations.

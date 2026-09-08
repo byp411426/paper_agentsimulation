@@ -1,0 +1,5 @@
+{
+  "aggregate_sha256": "d61868b78874f70418039e2d7b2a62af0bc1fa87e2f43ec09c9cd8836deb9bb3",
+  "uses_only_predeclared_behavior_metrics": true,
+  "accounting_amendment": "Report replay/cache and development attempts separately; never present cached replay speed as model efficiency."
+}

@@ -1,0 +1,18 @@
+{
+  "run_seed": 99,
+  "total_steps": 48,
+  "world_final": {
+    "fire_size": 100,
+    "n_evacuated": 48,
+    "n_injured": 8
+  },
+  "gateway": {
+    "run_id": "toy_smoke_seed99",
+    "spent": 0.0,
+    "n_ok": 2169,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0
+  }
+}

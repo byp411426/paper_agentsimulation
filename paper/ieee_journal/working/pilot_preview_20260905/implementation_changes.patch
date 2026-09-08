@@ -1,0 +1,302 @@
+--- original/ds/world/carr_empirical_v2.py
++++ repaired/ds/world/carr_empirical_v2.py
+@@ -40,8 +40,9 @@
+         }
+         self.closure_step = int(config.get("closure_step", 9))
+         self.member_locations = {
+-            resident_id: ("home", resident.household_id)
+-            for resident_id, resident in residents.items()
++            member_id: ("home", household.id)
++            for household in households.values()
++            for member_id in household.member_ids
+         }
+         self.route_usage: dict[str, int] = {}
+         self._step = 0
+@@ -154,11 +155,12 @@
+         )
+ 
+     # ---- arbitration ------------------------------------------------------ #
+-    def _matching_party(self, household: Household, decision: Any) -> Any | None:
++    def _matching_party(self, household: Household, decision: Any, agent_id: str) -> Any | None:
+         for commitment in household.active_v2_parties():
+             party = commitment.party
+             if (
+                 party.depart_step == self._step
++                and agent_id in party.traveler_ids
+                 and party.route_id == decision.route_id
+                 and party.vehicle_id == decision.vehicle_id
+             ):
+@@ -183,7 +185,12 @@
+                 )
+                 continue
+             household = self.households[envelope.agent.household_id]
+-            party = self._matching_party(household, decision)
++            if self.member_locations.get(envelope.agent_id) != ("home", household.id):
++                resolved.append(ResolvedIntent(decision_id=envelope.decision_id,
++                    agent_id=envelope.agent_id, agent=envelope.agent, decision=decision,
++                    action=("rejected", "resident_not_at_origin")))
++                continue
++            party = self._matching_party(household, decision, envelope.agent_id)
+             if party is None:
+                 # Auto-form a party from a valid evacuation intent when no
+                 # message-formed commitment exists.  Travelers = the
+@@ -199,6 +206,7 @@
+                         member_id
+                         for member_id in household.dependent_ids
+                         if member_id in self._care_requirements
++                        and self.member_locations.get(member_id) == ("home", household.id)
+                     )
+                     caregiver_by_member = tuple(
+                         (member_id, envelope.agent_id)
+@@ -289,7 +297,26 @@
+                         reason="party_not_active",
+                     )
+                 continue
++            if commitment.party.depart_step != clock.t:
++                for intent in intents:
++                    outcomes[intent.decision_id] = ExecutionOutcome(
++                        decision_id=intent.decision_id, agent_id=intent.agent_id,
++                        status="rejected", executed_action="evacuate", reason="party_not_due")
++                continue
++            if any(self.member_locations.get(m) != ("home", household_id)
++                   for m in commitment.party.member_ids):
++                for intent in intents:
++                    outcomes[intent.decision_id] = ExecutionOutcome(
++                        decision_id=intent.decision_id, agent_id=intent.agent_id,
++                        status="rejected", executed_action="evacuate", reason="party_member_not_at_origin")
++                continue
+             route_id = commitment.party.route_id
++            if route_id not in self.route_state:
++                for intent in intents:
++                    outcomes[intent.decision_id] = ExecutionOutcome(
++                        decision_id=intent.decision_id, agent_id=intent.agent_id,
++                        status="rejected", executed_action="evacuate", reason="unknown_route")
++                continue
+             if (
+                 not self.route_state[route_id]["open"]
+                 or self.route_usage.get(route_id, 0)
+@@ -319,8 +346,9 @@
+                 origin=("home", household_id),
+                 destination=self.safe_zone,
+             )
+-            self.route_usage[route_id] = self.route_usage.get(route_id, 0) + 1
+             executed = record.outcome == "executed"
++            if executed:
++                self.route_usage[route_id] = self.route_usage.get(route_id, 0) + 1
+             for intent in intents:
+                 outcomes[intent.decision_id] = ExecutionOutcome(
+                     decision_id=intent.decision_id,
+@@ -361,6 +389,15 @@
+             "step": self._step,
+             "route_state": self.route_state,
+             "hazard_offsets": self.hazard_offsets,
++            "household_commitments": {
++                hh.id: {c.id: {"id": c.id, "created_step": c.created_step,
++                    "status": c.status, "supersedes_id": c.supersedes_id,
++                    "accepted_by": sorted(c.accepted_by),
++                    "party": {"traveler_ids": sorted(c.party.traveler_ids),
++                        "accompanying_member_ids": sorted(c.party.accompanying_member_ids),
++                        "route_id": c.party.route_id, "vehicle_id": c.party.vehicle_id,
++                        "depart_step": c.party.depart_step}}
++                    for c in hh.v2_commitments.values()} for hh in self.households.values()},
+             "member_locations": {
+                 key: str(value) for key, value in self.member_locations.items()
+             },
+--- original/ds/agents/carr_empirical_v2.py
++++ repaired/ds/agents/carr_empirical_v2.py
+@@ -143,6 +143,8 @@
+ 
+     # ---- wake gate -------------------------------------------------------- #
+     def should_wake(self, *, events: list, world: Any, step: int) -> bool:
++        if self.state.evacuating or world.member_locations.get(self.id) == world.safe_zone:
++            return False
+         if not self.static.decision_capable:
+             return False
+         if self.inbox or self.recent_execution_feedback:
+@@ -188,6 +190,10 @@
+             if not key.endswith("_band")
+         }
+         return {
++            "current_step": step,
++            "resident_id": self.id,
++            "household_id": self.household_id,
++            "current_location": world.member_locations.get(self.id),
+             "resident_profile": {
+                 "static": self.profile.get("pums_static", {}),
+                 "functional_limitations": self.profile.get(
+@@ -261,6 +267,10 @@
+                 ),
+             },
+         ]
++        audit_path = gateway.log_path.parent / "decision_inputs.jsonl"
++        with audit_path.open("a") as handle:
++            handle.write(json.dumps({"step": step, "resident_id": self.id,
++                "payload": payload}, ensure_ascii=False, default=str) + "\n")
+         seed = stream_seed(
+             gateway.run_seed,
+             "llm_decision",
+@@ -284,7 +294,7 @@
+         """Normalize depart steps on the decision and any proposal payloads."""
+         depart_step = decision.depart_step
+         if depart_step is not None:
+-            depart_step = max(int(depart_step), step + 1)
++            depart_step = max(int(depart_step), step)
+         messages = []
+         for message in decision.messages:
+             payload = dict(message.payload or {})
+@@ -353,6 +363,8 @@
+         return {
+             "id": self.id,
+             "household_id": self.household_id,
++            "evacuating": self.state.evacuating,
++            "evac_step": self.state.evac_step,
+             "inbox": self.inbox,
+             "memories": self.memories,
+             "perceived_routes": self.perceived_routes,
+--- original/ds/interaction/carr_empirical_v2.py
++++ repaired/ds/interaction/carr_empirical_v2.py
+@@ -46,6 +46,7 @@
+         self.receipts: list[OfficialInformationReceipt] = []
+         self._receipts_by_id: dict[str, OfficialInformationReceipt] = {}
+         self._step = 0
++        self.commitment_notifications: list[dict] = []
+ 
+     # ---- official orders -------------------------------------------------- #
+     def deliver_warnings(
+@@ -126,6 +127,9 @@
+                 "processed_step": None,
+                 "status": "sent",
+                 "disposition": None,
++                "recipient_states": {r: {"delivered_step": None,
++                    "processed_step": None, "disposition": None, "response_step": None}
++                    for r in recipients},
+             }
+             self.messages[message_id] = record
+             if (
+@@ -145,10 +149,17 @@
+             if message_id and message_id in self.messages:
+                 self.messages[message_id]["processed_step"] = clock.t
+                 self.messages[message_id]["status"] = "processed"
++                delivery = self.messages[message_id]["recipient_states"].get(agent.id)
++                if delivery is not None:
++                    delivery["processed_step"] = clock.t
+         for response in decision.message_responses:
+             message = self.messages.get(response.message_id)
+             if message is None:
+                 continue
++            delivery = message.get("recipient_states", {}).get(agent.id)
++            if delivery is None or delivery["processed_step"] is None:
++                continue
++            delivery.update(disposition=response.disposition, response_step=clock.t)
+             message["disposition"] = response.disposition
+             message["status"] = (
+                 "accepted" if response.disposition == "accepted" else "rejected"
+@@ -168,6 +179,8 @@
+         self_accept: bool = False,
+     ) -> None:
+         household = self.households[agent.household_id]
++        if message.get("acceptance", {}).get("accepted"):
++            return
+         payload = message["payload"]
+         required = {
+             "traveler_ids",
+@@ -212,8 +225,9 @@
+             id=f"commit_{step}_{message['message_id']}",
+             protocol_version="e1_party_v2",
+             party=party,
+-            accepted_by=frozenset({message["sender_id"]})
+-            | (frozenset(message["recipient_ids"]) if not self_accept else frozenset()),
++            accepted_by=frozenset({message["sender_id"]}) | frozenset(
++                member for member, state in message.get("recipient_states", {}).items()
++                if state["disposition"] == "accepted" and state["processed_step"] is not None),
+             created_step=step,
+         )
+         result = household.try_accept_commitment_v2(
+@@ -229,15 +243,16 @@
+             "reason_code": result.reason_code,
+         }
+         if result.accepted:
+-            agent.my_commitments.append(
+-                {
+-                    "commitment_id": commitment.id,
+-                    "depart_step": party.depart_step,
+-                    "route_id": party.route_id,
++            # Explicit protocol acknowledgement, only to the consenting travelers.
++            for member_id in sorted(party.traveler_ids & commitment.accepted_by):
++                notice = {"commitment_id": commitment.id,
++                    "source_message_id": message["message_id"],
++                    "recipient_id": member_id, "delivered_step": step,
++                    "depart_step": party.depart_step, "route_id": party.route_id,
+                     "vehicle_id": party.vehicle_id,
+-                    "traveler_ids": sorted(party.traveler_ids),
+-                }
+-            )
++                    "traveler_ids": sorted(party.traveler_ids)}
++                self.residents[member_id].my_commitments.append(dict(notice))
++                self.commitment_notifications.append(notice)
+             if self_accept:
+                 message["status"] = "accepted"
+                 message["disposition"] = "accepted"
+@@ -253,9 +268,10 @@
+     # ---- delivery --------------------------------------------------------- #
+     def deliver(self, clock: Clock) -> None:
+         for message in self.messages.values():
+-            if message["status"] != "sent":
+-                continue
+             for recipient_id in message["recipient_ids"]:
++                recipient_state = message["recipient_states"][recipient_id]
++                if recipient_state["delivered_step"] is not None:
++                    continue
+                 recipient = self.residents.get(recipient_id)
+                 if recipient is None:
+                     continue
+@@ -273,8 +289,9 @@
+                 )
+                 if rng.random() >= probability:
+                     continue
+-                recipient.deliver_message(message)
+-                message["delivered_step"] = clock.t
++                recipient_state["delivered_step"] = clock.t
++                recipient.deliver_message({**message, "delivered_step": clock.t})
++                message["delivered_step"] = message["delivered_step"] or clock.t
+                 message["status"] = "delivered"
+ 
+     def snapshot(self) -> dict:
+@@ -292,4 +309,5 @@
+         return {
+             "messages": self.messages,
+             "receipts": current_receipts,
++            "commitment_notifications": self.commitment_notifications,
+         }
+--- original/ds/kernel/engine.py
++++ repaired/ds/kernel/engine.py
+@@ -138,6 +138,9 @@
+                     if a.should_wake(events=events, world=self.world, step=step)
+                 ]
+ 
++                import copy
++                self._audit_before = {"world": copy.deepcopy(self.world.snapshot()),
++                    "agents": copy.deepcopy([a.snapshot() for a in self.agents])}
+                 # ⑤ collect intentions while the world is immutable for this phase
+                 decisions = await asyncio.gather(
+                     *(
+@@ -251,6 +254,7 @@
+             "sim_minutes": self.clock.sim_minutes,
+             "world": self.world.snapshot(),
+             "n_awake": len(awake),
++            "state_before_decisions": self._audit_before,
+             "decisions": [
+                 {
+                     "agent": a.id,
+--- original/experiments/carr/empirical_v2_runner.py
++++ repaired/experiments/carr/empirical_v2_runner.py
+@@ -406,6 +406,9 @@
+                     key: {
+                         "id": value.id,
+                         "status": value.status,
++                        "created_step": value.created_step,
++                        "accepted_by": sorted(value.accepted_by),
++                        "household_id": household_id,
+                         "supersedes_id": value.supersedes_id,
+                         "party": {
+                             "traveler_ids": sorted(value.party.traveler_ids),

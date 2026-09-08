@@ -1,0 +1,18 @@
+{
+  "protocol_id": "carr_s_e3_v1_deepseek",
+  "amendment_id": "r3_hang_recovery_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_RECOVERY_RERUN",
+  "trigger": {
+    "type": "provider_request_hang",
+    "observed": "Lane process alive with 0% CPU; last successful call logged at 09:55 (latency 484s); no new llm_calls for ~50 minutes; single ESTABLISHED TCP connection to the local proxy 127.0.0.1:7890; configured request timeout did not fire.",
+    "affected_run": "carr_s_e3_v1_deepseek_full_seed2107 (partial; 100 calls logged, 0 failures, no terminal summary)",
+    "lane_state": "RUNNING_HUNG"
+  },
+  "disposition": {
+    "old_attempt": "Partial artifacts archived under experiments/carr/runs/archive_e3_deepseek_hang_20260804 and excluded; no cross-attempt splicing.",
+    "rerun": "Full 4 seeds x 3 conditions rerun with the same frozen E3 science config (carr_s_e3_v1_deepseek.yaml), same prompts, seeds, conditions and metrics; no science or prompt change. The archived attempt's per-run cache is not reused; the rerun re-executes the same calls."
+  },
+  "science_unchanged": true,
+  "evidence_label": "PILOT_PENDING_AUDIT"
+}

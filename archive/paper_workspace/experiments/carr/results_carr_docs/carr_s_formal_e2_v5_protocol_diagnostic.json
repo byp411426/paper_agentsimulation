@@ -1,0 +1,99 @@
+{
+  "status": "PILOT_DIAGNOSTIC",
+  "protocol": "carr_s_formal_e2_v5",
+  "completed_full_condition_seeds": [
+    101,
+    202
+  ],
+  "per_seed": [
+    {
+      "seed": 101,
+      "run_terminal_status": "VALID",
+      "funnel": {
+        "messages_sent": 29,
+        "messages_reconstructed": 29,
+        "messages_delivered": 3,
+        "messages_dropped": 26,
+        "messages_processed": 1,
+        "messages_delivered_unprocessed_at_end": 2,
+        "message_responses_observed": 1,
+        "accepted_receipts_at_end": 0,
+        "rejected_receipts_at_end": 1,
+        "stale_proposal_responses": 1,
+        "accepted_proposal_responses": 0,
+        "accepted_feasible_at_response": 0,
+        "receipt_states_at_end": {
+          "delivered": 2,
+          "rejected": 1
+        },
+        "configured_legacy_delivery_probability": 0.15
+      },
+      "current_metric_compatible_commitments": 0,
+      "source": {
+        "events": "experiments/carr/runs/carr_s_formal_e2_v5_full_seed101/events.jsonl",
+        "events_sha256": "07a347943cd570fb2e2d4c09fe122dbd7df919efd021adf0577c4c54895ac912",
+        "mechanism_metrics": "experiments/carr/runs/carr_s_formal_e2_v5_full_seed101/mechanism_metrics.json",
+        "mechanism_metrics_sha256": "5fa244ff0cf060b941f94359c3c6be760c4f21866ef19674c7b68b658c3595e2"
+      }
+    },
+    {
+      "seed": 202,
+      "run_terminal_status": "VALID",
+      "funnel": {
+        "messages_sent": 33,
+        "messages_reconstructed": 33,
+        "messages_delivered": 9,
+        "messages_dropped": 24,
+        "messages_processed": 6,
+        "messages_delivered_unprocessed_at_end": 3,
+        "message_responses_observed": 6,
+        "accepted_receipts_at_end": 1,
+        "rejected_receipts_at_end": 5,
+        "stale_proposal_responses": 6,
+        "accepted_proposal_responses": 1,
+        "accepted_feasible_at_response": 0,
+        "receipt_states_at_end": {
+          "rejected": 5,
+          "accepted": 1,
+          "delivered": 3
+        },
+        "configured_legacy_delivery_probability": 0.15
+      },
+      "current_metric_compatible_commitments": 0,
+      "source": {
+        "events": "experiments/carr/runs/carr_s_formal_e2_v5_full_seed202/events.jsonl",
+        "events_sha256": "a7cc7ff17b619d41bf6d749dda5a901b2a9b3f428503dc0e50878fad96accad2",
+        "mechanism_metrics": "experiments/carr/runs/carr_s_formal_e2_v5_full_seed202/mechanism_metrics.json",
+        "mechanism_metrics_sha256": "51c69c896d2d71f3acf618b8ecc3effda94a16ac43422d2e8714f0ba4c223696"
+      }
+    }
+  ],
+  "aggregate_funnel": {
+    "messages_sent": 62,
+    "messages_delivered": 12,
+    "messages_dropped": 50,
+    "messages_processed": 7,
+    "messages_delivered_unprocessed_at_end": 5,
+    "accepted_receipts_at_end": 1,
+    "rejected_receipts_at_end": 6,
+    "stale_proposal_responses": 7,
+    "accepted_proposal_responses": 1,
+    "accepted_feasible_at_response": 0,
+    "current_metric_compatible_commitments": 0
+  },
+  "diagnosis": [
+    {
+      "code": "INTERACTION_EXPOSURE_FAILURE",
+      "evidence": "Household direct messages shared the 0.15 delivery probability intended for social propagation."
+    },
+    {
+      "code": "PROPOSAL_TEMPORAL_MISMATCH",
+      "evidence": "Messages are processed in a later decision phase, while v5 allowed proposals whose depart_step was already past."
+    },
+    {
+      "code": "METRIC_OPPORTUNITY_MISALIGNMENT",
+      "evidence": "The v5 interaction metric required one exact route, vehicle, and fixed departure step instead of measuring validated commitment formation after exposure."
+    }
+  ],
+  "claim_boundary": "This read-only diagnostic explains why v5 is unsuitable for a formal interaction-effect claim. It does not invalidate the raw runs, estimate a corrected effect, or use the Carr-R test split."
+}

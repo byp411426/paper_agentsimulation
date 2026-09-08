@@ -1,0 +1,24 @@
+{
+  "protocol_id": "carr_s_resident_adapter_reconstruction",
+  "amendment_id": "carr_py_reconstruction_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "RECONSTRUCTION_RECORDED_AWAITING_REFREEZE",
+  "incident": {
+    "type": "uncommitted_file_reverted_by_mistake",
+    "detail": "During E3a prompt-variant preparation, `git checkout -- ds/agents/carr.py` reverted an uncommitted v7/v8 resident-adapter version (route_observation_mode, initialize_route_observation/initialize_controlled_plan, execution_feedback_v8). The original bytes were not in git and were not recoverable byte-for-byte from session artifacts.",
+    "original_frozen_sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+    "reconstructed_sha256": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4"
+  },
+  "recovery": {
+    "method": "Reconstructed from session traces: exact method-line layout matches the frozen version (MechanismFlags:23, CarrResident:45, __init__:48, initialize_route_observation:96, initialize_controlled_plan:106, record_emitted_message:134, should_wake:148, decide:163, rule_fallback:187, commit_execution:193, snapshot:276, _route_observation:302, _carr_messages:330).",
+    "verification": "tests/test_carr_pilot.py, test_carr_e1_v2.py, test_carr_interaction_v2.py, test_carr_routes.py: 39 passed; only the frozen-hash guard fails because bytes differ in two one-line docstrings whose exact wording is unrecoverable.",
+    "functional_equivalence": "All mechanism/mock and E1 v2 tests pass; _build_parts no longer raises the route_observation_mode TypeError."
+  },
+  "impact": {
+    "completed_runs": "E2 r7 audit and E3 lanes started before the revert are unaffected: their provenance recorded the original sha256 at run start.",
+    "new_runs": "Any new E2/E3/E3a run now uses the reconstructed file; audits must reference the reconstructed sha256.",
+    "pending": "A formal re-freeze of the resident-adapter hash is required before the frozen-hash guard can pass; this amendment documents the change basis and keeps both hashes."
+  },
+  "evidence_label": "ENGINEERING_RECONSTRUCTION",
+  "claim_boundary": "This is an engineering/provenance amendment, not a science change; no experimental numbers are altered."
+}

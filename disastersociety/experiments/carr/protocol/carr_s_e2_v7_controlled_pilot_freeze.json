@@ -1,0 +1,144 @@
+{
+  "protocol": "carr_s_e2_v7.0",
+  "status": "DECLARED_BACKEND_PILOT_COMPLETED",
+  "evidence_status": "PILOT",
+  "freeze_date": "2026-08-02",
+  "reason_for_revision": {
+    "v6_feedback_bypass": "The resident prompt exposed world.route_snapshot() in every condition, so full_minus_feedback could observe a closure without the feedback path.",
+    "v6_opportunity_failure": "Free plan generation allowed some valid backend runs to contain no primary-route plan, making feedback and replanning outcomes partly opportunity-limited.",
+    "treatment_of_v6": "Preserve every raw result and use v6 only as a backend and design diagnostic; do not reinterpret it as formal mechanism evidence."
+  },
+  "frozen_contract": {
+    "decision_unit": "Resident",
+    "coordination_unit": "Household",
+    "true_world_state": "Authoritative physical arbitration state; the route closes in every condition.",
+    "resident_route_state": "A copied perceived snapshot, never a live reference to true world state.",
+    "feedback_enabled": "Refresh perceived routes after world changes and expose the refreshed perception at the next decision.",
+    "feedback_disabled": "Retain the pre-closure perceived route snapshot; rejected physical actions do not directly reveal the hidden closure.",
+    "controlled_initial_plan": "Every decision resident privately begins with tiger_primary, the household vehicle, and departure step 5. This is an experimental initial condition, not generated behavior or a shared commitment.",
+    "planning_enabled": "A resident decision may replace the private plan after the controlled closure.",
+    "planning_disabled": "The controlled initial plan remains, but model decisions cannot replace the private plan.",
+    "interaction": "Shared household coordination still requires sent -> delivered -> processed -> accepted/rejected messages.",
+    "primary_metrics": {
+      "memory": "conditional_warning_retention_rate",
+      "feedback": "preclosure_primary_to_postclosure_alternate_update_rate",
+      "planning": "successful_postclosure_replan_rate",
+      "interaction": "post_closure_feasible_commitment_rate"
+    },
+    "estimand": "Paired full minus full-minus-module conditional removal effect in this controlled system state; not a universal standalone module effect."
+  },
+  "execution_contract": {
+    "decision_model": "packy-deepseek-v4-flash",
+    "backend_mode": "thinking enabled, reasoning effort high",
+    "n_households_per_run": 4,
+    "decision_residents_per_household": 2,
+    "seeds": [101, 202, 303],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "n_declared_cells": 15,
+    "max_concurrency_within_run": 8,
+    "execute_all_cells_regardless_of_interim_effect_direction": true,
+    "abort_matrix_on_nonvalid_run": true,
+    "paired_exclusion_rule": "Exclude a module-seed pair if either cell is not VALID; preserve all attempts and never overwrite a run ID.",
+    "formal_seed_count_frozen": false,
+    "formal_matrix_authorized": false,
+    "carr_r_test_split_opened": false
+  },
+  "pre_execution_validation": {
+    "pytest": "84 passed",
+    "mock_use_boundary": "The deterministic backend was used only for structural invariants and CI, never as behavioral effect evidence.",
+    "asserted_invariants": [
+      "The true primary route closes in full and full_minus_feedback.",
+      "Only feedback-enabled residents refresh the perceived route state.",
+      "Every condition receives the same controlled private initial plan.",
+      "The v7 feedback metric is temporally ordered around the closure."
+    ]
+  },
+  "frozen_sources": [
+    {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    {
+      "path": "experiments/carr/runner.py",
+      "sha256": "e84a0ad6672c3170dc83d24ca8dcb9011cb79c0f57992396e3eae24694b64283"
+    },
+    {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    {
+      "path": "ds/agents/decide.py",
+      "sha256": "19f622f06ca1f57ab8fa20bb43901d4e54151728bd8c88a2dce49e0cf30cd7b4"
+    },
+    {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    },
+    {
+      "path": "configs/models.yaml",
+      "sha256": "f1b51e0e0d7460bf257c1f2262e02bf3be11c3c57438d7cd9bb9642cb4a126d4"
+    },
+    {
+      "path": "experiments/carr/configs/carr_s_deepseek_v7_controlled_pilot.yaml",
+      "sha256": "31b3834ea6cc426912c5a3ed54a6f024fc5a655172715976d47b6a58be5b815d"
+    },
+    {
+      "path": "tests/test_carr_pilot.py",
+      "sha256": "c9c54bb935ecba16fae0fbfe30fbcd825682ce24883c4542bd399326716c06cd"
+    }
+  ],
+  "completion_record": {
+    "date": "2026-08-02",
+    "selected_cells": 15,
+    "terminal_status_counts": {"VALID": 15},
+    "logical_decisions": 796,
+    "failed_decisions": 0,
+    "fallback_decisions": 0,
+    "internal_estimated_cost_usd": 4.467429,
+    "scheduling_amendment": "After one valid full/seed101 cell, the remaining non-overlapping cells were distributed across two worker processes solely to reduce wall time. No seed, condition, prompt, metric, cohort, model, or stopping rule changed.",
+    "technical_exclusions": 2,
+    "summary": {
+      "path": "experiments/carr/results/carr_s_deepseek_v7_controlled_pilot_summary.json",
+      "sha256": "beee51b61e83fbd9fea87b57f64bca14bd82c79122ae9e32455f3ea4e6b00e8e"
+    },
+    "summary_script": {
+      "path": "scripts/summarize_carr_v7_controlled_pilot.py",
+      "sha256": "8da1b96d653b193d8244bab8a6fffb603348134fa4f274ddcf597321f4c46fac"
+    },
+    "paired_mean_differences": {
+      "memory": 1.0,
+      "feedback": 0.9583333333333334,
+      "planning": 0.75,
+      "interaction": 0.9166666666666666
+    },
+    "formal_seed_count_frozen": false,
+    "carr_r_test_split_opened": false
+  },
+  "post_pilot_v8_additive_amendment": {
+    "date": "2026-08-02",
+    "reason": "The completed v7 full runs exposed that execution rejection reasons were stored but not returned to the next resident prompt. A prompt-version-gated v8 branch adds current-plan failure, recent execution feedback, household vehicle state, and explicit accepted-commitment execution guidance. The v7 prompt branch and all selected raw artifacts are unchanged.",
+    "v7_scientific_contract_changed": false,
+    "v7_raw_artifacts_replaced_or_deleted": false,
+    "v8_comparison_is_posthoc_development_only": true,
+    "carr_r_test_split_opened": false
+  },
+  "claim_boundary": "This declared DeepSeek run remains a PILOT for structural mechanism isolation, backend reliability, effect direction and paired-variance diagnosis. It is not Carr empirical validation, a historical closure reconstruction, a population estimate, or formal confirmatory evidence."
+}

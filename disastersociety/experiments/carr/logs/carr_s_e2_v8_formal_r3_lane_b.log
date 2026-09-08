@@ -1,0 +1,81 @@
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+{
+  "status": "PILOT_PENDING_COMPLETE_MATRIX_AUDIT",
+  "activity_type": "PUBLICATION_FACING_E2_MATRIX_PENDING_AUDIT",
+  "decision_model": "packy-deepseek-v4-flash",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e2_v8_formal_r3.yaml",
+    "config_sha256": "c891a3c993a13c6ac6c137f2576754b7b6485331c76e8bf44c4d42dc04e29785"
+  },
+  "protocol": {
+    "declared_seeds": [
+      1103,
+      1201,
+      1301,
+      1409,
+      1511,
+      1601,
+      1709,
+      1801,
+      1907,
+      2003,
+      2111,
+      2203
+    ],
+    "executed_seed_batch": [
+      1201
+    ],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 1,
+    "planned_runs": 5,
+    "reused_terminal_artifacts": 0,
+    "aborted_early": true,
+    "terminal_status_counts": {
+      "ABORTED": 1
+    }
+  },
+  "runs": [
+    {
+      "seed": 1201,
+      "condition": "full",
+      "terminal_status": "ABORTED",
+      "n_ok": 88,
+      "n_cache": 0,
+      "n_failed": 2,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 740.12335,
+      "run_dir": "experiments/carr/runs/carr_s_e2_v8_formal_r3_full_seed1201",
+      "summary_sha256": "eedeaa77e14cf65377587796506aae0f7b8ae94b052092d498e72beede7c9363",
+      "mechanism_metrics_sha256": "cc46a563657fac98a67028520cc8a913cf25410d39080d31be7007cef8e88db3",
+      "provenance_sha256": "f712ec6a636654ce25065470da3708d73de9bfc925263bf08483f318ae66b6c0"
+    }
+  ],
+  "claim_boundary": "One immutable seed batch from the publication-facing Carr-S E2 matrix. It remains PILOT until all predeclared seeds are complete and the full matrix, exclusions, provenance, and intervals are audited."
+}

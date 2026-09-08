@@ -1,0 +1,1207 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r5",
+  "audit_status": "NOT_READY_FOR_CLAIM",
+  "expected_cells": 60,
+  "actual_cells": 2,
+  "n_valid_cells": 0,
+  "terminal_status_counts": {
+    "ABORTED": 2,
+    "MISSING": 58
+  },
+  "missing_cells": [
+    [
+      1103,
+      "full_minus_feedback"
+    ],
+    [
+      1103,
+      "full_minus_interaction"
+    ],
+    [
+      1103,
+      "full_minus_memory"
+    ],
+    [
+      1103,
+      "full_minus_planning"
+    ],
+    [
+      1201,
+      "full_minus_feedback"
+    ],
+    [
+      1201,
+      "full_minus_interaction"
+    ],
+    [
+      1201,
+      "full_minus_memory"
+    ],
+    [
+      1201,
+      "full_minus_planning"
+    ],
+    [
+      1301,
+      "full"
+    ],
+    [
+      1301,
+      "full_minus_feedback"
+    ],
+    [
+      1301,
+      "full_minus_interaction"
+    ],
+    [
+      1301,
+      "full_minus_memory"
+    ],
+    [
+      1301,
+      "full_minus_planning"
+    ],
+    [
+      1409,
+      "full"
+    ],
+    [
+      1409,
+      "full_minus_feedback"
+    ],
+    [
+      1409,
+      "full_minus_interaction"
+    ],
+    [
+      1409,
+      "full_minus_memory"
+    ],
+    [
+      1409,
+      "full_minus_planning"
+    ],
+    [
+      1511,
+      "full"
+    ],
+    [
+      1511,
+      "full_minus_feedback"
+    ],
+    [
+      1511,
+      "full_minus_interaction"
+    ],
+    [
+      1511,
+      "full_minus_memory"
+    ],
+    [
+      1511,
+      "full_minus_planning"
+    ],
+    [
+      1601,
+      "full"
+    ],
+    [
+      1601,
+      "full_minus_feedback"
+    ],
+    [
+      1601,
+      "full_minus_interaction"
+    ],
+    [
+      1601,
+      "full_minus_memory"
+    ],
+    [
+      1601,
+      "full_minus_planning"
+    ],
+    [
+      1709,
+      "full"
+    ],
+    [
+      1709,
+      "full_minus_feedback"
+    ],
+    [
+      1709,
+      "full_minus_interaction"
+    ],
+    [
+      1709,
+      "full_minus_memory"
+    ],
+    [
+      1709,
+      "full_minus_planning"
+    ],
+    [
+      1801,
+      "full"
+    ],
+    [
+      1801,
+      "full_minus_feedback"
+    ],
+    [
+      1801,
+      "full_minus_interaction"
+    ],
+    [
+      1801,
+      "full_minus_memory"
+    ],
+    [
+      1801,
+      "full_minus_planning"
+    ],
+    [
+      1907,
+      "full"
+    ],
+    [
+      1907,
+      "full_minus_feedback"
+    ],
+    [
+      1907,
+      "full_minus_interaction"
+    ],
+    [
+      1907,
+      "full_minus_memory"
+    ],
+    [
+      1907,
+      "full_minus_planning"
+    ],
+    [
+      2003,
+      "full"
+    ],
+    [
+      2003,
+      "full_minus_feedback"
+    ],
+    [
+      2003,
+      "full_minus_interaction"
+    ],
+    [
+      2003,
+      "full_minus_memory"
+    ],
+    [
+      2003,
+      "full_minus_planning"
+    ],
+    [
+      2111,
+      "full"
+    ],
+    [
+      2111,
+      "full_minus_feedback"
+    ],
+    [
+      2111,
+      "full_minus_interaction"
+    ],
+    [
+      2111,
+      "full_minus_memory"
+    ],
+    [
+      2111,
+      "full_minus_planning"
+    ],
+    [
+      2203,
+      "full"
+    ],
+    [
+      2203,
+      "full_minus_feedback"
+    ],
+    [
+      2203,
+      "full_minus_interaction"
+    ],
+    [
+      2203,
+      "full_minus_memory"
+    ],
+    [
+      2203,
+      "full_minus_planning"
+    ]
+  ],
+  "unexpected_cells": [],
+  "duplicate_seed_conditions": {},
+  "frozen_artifact_hashes": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal_r5.yaml",
+      "ok": true,
+      "actual": "2dc99ff416aa2f4787d6e4772f935255bcb9bc8ddc3e237ef26f516a9aba1f2c",
+      "expected": "2dc99ff416aa2f4787d6e4772f935255bcb9bc8ddc3e237ef26f516a9aba1f2c"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "ok": true,
+      "actual": "7462f20d0dbb5fd0768afca2bde24f6520b6bdf03cd6ae98f5693987de7666ea",
+      "expected": "7462f20d0dbb5fd0768afca2bde24f6520b6bdf03cd6ae98f5693987de7666ea"
+    },
+    "single_seed_science_runner": {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "ok": true,
+      "actual": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320",
+      "expected": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    "r5_lane_supervisor": {
+      "path": "scripts/run_carr_e2_v8_r5_lane.py",
+      "ok": true,
+      "actual": "1c134b7ba76d5e7a00702ff49c888bb37770419bc59f85310af2a6a796c12eea",
+      "expected": "1c134b7ba76d5e7a00702ff49c888bb37770419bc59f85310af2a6a796c12eea"
+    },
+    "frozen_v8_summarizer": {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "ok": true,
+      "actual": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5",
+      "expected": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    "r5_protocol_filename_adapter": {
+      "path": "scripts/summarize_carr_e2_v8_r5.py",
+      "ok": true,
+      "actual": "1227389125c2e9001cd0b474ddd795a1035c97a5f0ab2908e5b92379666e5891",
+      "expected": "1227389125c2e9001cd0b474ddd795a1035c97a5f0ab2908e5b92379666e5891"
+    },
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "ok": true,
+      "actual": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65",
+      "expected": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "ok": true,
+      "actual": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+      "expected": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "ok": true,
+      "actual": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a",
+      "expected": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "ok": true,
+      "actual": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28",
+      "expected": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "ok": true,
+      "actual": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f",
+      "expected": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "ok": true,
+      "actual": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e",
+      "expected": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "ok": true,
+      "actual": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d",
+      "expected": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "ok": true,
+      "actual": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970",
+      "expected": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    }
+  },
+  "cells": [
+    {
+      "seed": 1103,
+      "condition": "full",
+      "present": true,
+      "status": "ABORTED",
+      "identity_ok": false,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 17,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.078757,
+      "wall_clock_seconds": 105.739647,
+      "n_logical_decisions": 17,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 0,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1103,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1201,
+      "condition": "full",
+      "present": true,
+      "status": "ABORTED",
+      "identity_ok": false,
+      "accounting_ok": true,
+      "terminal_status_consistent": true,
+      "n_ok": 10,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "spent_usd": 0.045104,
+      "wall_clock_seconds": 65.568041,
+      "n_logical_decisions": 10,
+      "opportunity_denominators": {
+        "memory": {
+          "warning_exposed_coordinator_count": 8,
+          "n_decision_residents": 16
+        },
+        "feedback": {
+          "preclosure_primary_plan_count": 0,
+          "n_decision_residents": 16
+        },
+        "planning": {
+          "postclosure_replanned_household_count": 0,
+          "n_households": 8
+        },
+        "interaction": {
+          "n_households": 8,
+          "post_closure_feasible_commitment_count": 0
+        }
+      }
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1201,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1301,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1301,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1409,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1409,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1511,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1511,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1601,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1601,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1709,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1709,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1801,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1801,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1907,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 1907,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2003,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2003,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2111,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2111,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2203,
+      "condition": "full",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_feedback",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_interaction",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_memory",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    },
+    {
+      "seed": 2203,
+      "condition": "full_minus_planning",
+      "present": false,
+      "status": "MISSING",
+      "exclusion_reason": "run directory missing"
+    }
+  ],
+  "paired_contrasts": {
+    "memory": {
+      "valid_pairs": 0,
+      "n_seeds": 12,
+      "excluded": [
+        {
+          "seed": 1103,
+          "full_status": "ABORTED",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1201,
+          "full_status": "ABORTED",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1301,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1409,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1511,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1601,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1709,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1801,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1907,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2003,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2111,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2203,
+          "full_status": "MISSING",
+          "full_minus_memory_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        }
+      ]
+    },
+    "feedback": {
+      "valid_pairs": 0,
+      "n_seeds": 12,
+      "excluded": [
+        {
+          "seed": 1103,
+          "full_status": "ABORTED",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1201,
+          "full_status": "ABORTED",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1301,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1409,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1511,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1601,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1709,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1801,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1907,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2003,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2111,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2203,
+          "full_status": "MISSING",
+          "full_minus_feedback_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        }
+      ]
+    },
+    "planning": {
+      "valid_pairs": 0,
+      "n_seeds": 12,
+      "excluded": [
+        {
+          "seed": 1103,
+          "full_status": "ABORTED",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1201,
+          "full_status": "ABORTED",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1301,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1409,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1511,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1601,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1709,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1801,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1907,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2003,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2111,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2203,
+          "full_status": "MISSING",
+          "full_minus_planning_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        }
+      ]
+    },
+    "interaction": {
+      "valid_pairs": 0,
+      "n_seeds": 12,
+      "excluded": [
+        {
+          "seed": 1103,
+          "full_status": "ABORTED",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1201,
+          "full_status": "ABORTED",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1301,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1409,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1511,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1601,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1709,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1801,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 1907,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2003,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2111,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        },
+        {
+          "seed": 2203,
+          "full_status": "MISSING",
+          "full_minus_interaction_status": "MISSING",
+          "reason": "one or both paired runs not VALID"
+        }
+      ]
+    }
+  },
+  "opportunity_denominators": {
+    "memory": {
+      "primary_denominator_field": "warning_exposed_coordinator_count",
+      "valid_cell_denominator_values": [],
+      "n_cells_with_zero_or_missing_denominator": 0
+    },
+    "feedback": {
+      "primary_denominator_field": "preclosure_primary_plan_count",
+      "valid_cell_denominator_values": [],
+      "n_cells_with_zero_or_missing_denominator": 0
+    },
+    "planning": {
+      "primary_denominator_field": "postclosure_replanned_household_count",
+      "valid_cell_denominator_values": [],
+      "n_cells_with_zero_or_missing_denominator": 0
+    },
+    "interaction": {
+      "primary_denominator_field": "n_households",
+      "valid_cell_denominator_values": [],
+      "n_cells_with_zero_or_missing_denominator": 0
+    }
+  },
+  "problems": [
+    "identity mismatch: full/seed1103 (metrics=full/1103, provenance=None)",
+    "missing run directory: full_minus_feedback/seed1103",
+    "missing run directory: full_minus_interaction/seed1103",
+    "missing run directory: full_minus_memory/seed1103",
+    "missing run directory: full_minus_planning/seed1103",
+    "identity mismatch: full/seed1201 (metrics=full/1201, provenance=None)",
+    "missing run directory: full_minus_feedback/seed1201",
+    "missing run directory: full_minus_interaction/seed1201",
+    "missing run directory: full_minus_memory/seed1201",
+    "missing run directory: full_minus_planning/seed1201",
+    "missing run directory: full/seed1301",
+    "missing run directory: full_minus_feedback/seed1301",
+    "missing run directory: full_minus_interaction/seed1301",
+    "missing run directory: full_minus_memory/seed1301",
+    "missing run directory: full_minus_planning/seed1301",
+    "missing run directory: full/seed1409",
+    "missing run directory: full_minus_feedback/seed1409",
+    "missing run directory: full_minus_interaction/seed1409",
+    "missing run directory: full_minus_memory/seed1409",
+    "missing run directory: full_minus_planning/seed1409",
+    "missing run directory: full/seed1511",
+    "missing run directory: full_minus_feedback/seed1511",
+    "missing run directory: full_minus_interaction/seed1511",
+    "missing run directory: full_minus_memory/seed1511",
+    "missing run directory: full_minus_planning/seed1511",
+    "missing run directory: full/seed1601",
+    "missing run directory: full_minus_feedback/seed1601",
+    "missing run directory: full_minus_interaction/seed1601",
+    "missing run directory: full_minus_memory/seed1601",
+    "missing run directory: full_minus_planning/seed1601",
+    "missing run directory: full/seed1709",
+    "missing run directory: full_minus_feedback/seed1709",
+    "missing run directory: full_minus_interaction/seed1709",
+    "missing run directory: full_minus_memory/seed1709",
+    "missing run directory: full_minus_planning/seed1709",
+    "missing run directory: full/seed1801",
+    "missing run directory: full_minus_feedback/seed1801",
+    "missing run directory: full_minus_interaction/seed1801",
+    "missing run directory: full_minus_memory/seed1801",
+    "missing run directory: full_minus_planning/seed1801",
+    "missing run directory: full/seed1907",
+    "missing run directory: full_minus_feedback/seed1907",
+    "missing run directory: full_minus_interaction/seed1907",
+    "missing run directory: full_minus_memory/seed1907",
+    "missing run directory: full_minus_planning/seed1907",
+    "missing run directory: full/seed2003",
+    "missing run directory: full_minus_feedback/seed2003",
+    "missing run directory: full_minus_interaction/seed2003",
+    "missing run directory: full_minus_memory/seed2003",
+    "missing run directory: full_minus_planning/seed2003",
+    "missing run directory: full/seed2111",
+    "missing run directory: full_minus_feedback/seed2111",
+    "missing run directory: full_minus_interaction/seed2111",
+    "missing run directory: full_minus_memory/seed2111",
+    "missing run directory: full_minus_planning/seed2111",
+    "missing run directory: full/seed2203",
+    "missing run directory: full_minus_feedback/seed2203",
+    "missing run directory: full_minus_interaction/seed2203",
+    "missing run directory: full_minus_memory/seed2203",
+    "missing run directory: full_minus_planning/seed2203"
+  ]
+}

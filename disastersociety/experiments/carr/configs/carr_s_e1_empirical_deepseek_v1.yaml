@@ -1,0 +1,85 @@
+run:
+  run_id: carr_s_e1_empirical_deepseek_v1
+  total_steps: 25
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models_e2_reliable.yaml
+  temperature: 0.0
+  max_concurrency: 8
+  budget_usd: 20.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT_PENDING_COMPLETE_MULTI_SEED_AUDIT
+  activity_type: CARR_S_E1_EMPIRICAL_REASONABLENESS
+  prompt_version: carr_s_empirical_resident_v1
+  case_semantics: Carr-informed controlled natural-timing social scenario
+  eventpack_root: eventpacks/carr_2018
+  empirical_reference: experiments/carr/results/carr_s_e1_empirical_reference/reference_summary.json
+  route_asset: environment/west_redding_controlled_routes.json
+  controlled_zone: west_redding
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 10
+  initial_hazard_distance_m: 9000
+  hazard_approach_per_step_m: 250
+  scenario_start_hour: 8
+  order_step: 1
+  followup_interval_steps: 4
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.35
+  network_radius_m: 1500
+  network_k_neighbors: 6
+  network_k_friends: 4
+  network_rewire_probability: 0.1
+  cohort_seed: 20260802
+  n_households: 50
+  maximum_decision_adults_per_household: 2
+  cdf_horizons_hours: [0, 0.5, 1, 2, 3, 4, 5, 6, 8, 10, 12]
+
+  formal_protocol:
+    protocol_id: carr_s_e1_empirical_v1
+    freeze_file: experiments/carr/protocol/carr_s_e1_empirical_v1_freeze.json
+    seeds: [3109, 3203, 3301, 3407, 3511]
+    n_seeds: 5
+    execute_all_seeds_regardless_of_interim_similarity: true
+    stop_on_nonvalid_run: true
+    no_automatic_retry: true
+    carr_r_test_split_opened: false
+    use_mock_for_behavior_evidence: false
+    focal_resident_rule: first adult by donor SPORDER within each sampled household
+    cohort_rule: fixed hash-ordered sample of households with one or two adults
+    external_comparisons:
+      - focal resident evacuation rate
+      - order-to-departure CDF through the 12-hour administrative horizon
+      - age, household-size, vehicle, and income evacuation gaps
+    internal_process_metrics:
+      - complete household safe departure
+      - coordinated departure
+      - dependent safety
+      - vehicle and dependent constraint violations
+      - message delivery and processing states
+
+  claim_boundary:
+    population_status: development-only household-marginal synthetic population
+    person_level_calibration: false
+    historical_reconstruction: false
+    historical_road_timeline: false
+    warning_channel_official_receipt_is_calibration: true
+    survey_channel_prevalence_equals_first_heard: false
+    blind_human_or_expert_rating_included_in_this_run: false
+    carr_r_test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    closures: none in E1 v1
+    historical_traffic_reconstruction: false
+    traffic_scope: controlled route-level capacity only
+
+reporting:
+  runs_dir: experiments/carr/runs
+  results_dir: experiments/carr/results
+  cumulative_summary: experiments/carr/results/carr_s_e1_empirical_v1_cumulative_summary.json

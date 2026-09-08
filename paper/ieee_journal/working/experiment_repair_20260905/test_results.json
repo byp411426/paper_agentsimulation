@@ -1,0 +1,13 @@
+{
+  "targeted_tests": {
+    "passed": 61,
+    "failed": 0
+  },
+  "shared_kernel_mechanism_carr_tests": {
+    "passed": 28,
+    "failed": 0
+  },
+  "total_unique_passed": 89,
+  "whole_repository_suite": false,
+  "historical_test_amended_without_changing_freeze": true
+}

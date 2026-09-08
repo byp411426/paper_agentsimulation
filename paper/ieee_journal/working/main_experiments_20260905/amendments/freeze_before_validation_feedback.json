@@ -1,0 +1,101 @@
+{
+  "research_scope": "Existing Carr-informed controlled E1, not cross-hazard V4 reconstruction",
+  "source_matches_validated_pilot": true,
+  "seed_order": [
+    [
+      24,
+      7201
+    ],
+    [
+      24,
+      8301
+    ],
+    [
+      24,
+      9401
+    ],
+    [
+      100,
+      101
+    ],
+    [
+      100,
+      202
+    ]
+  ],
+  "steps": 25,
+  "metric_protocol": "e1_process_repair_20260905",
+  "files_sha256": {
+    "frozen/ds/config.py": "4d3f69acbbd706b699e17e92ea58035904c8c2e4779df9ab733829cf841f4e69",
+    "frozen/ds/__init__.py": "4d904f73658d062f917d12130005b2a36b7ea994a2c8552b28de888a754bca40",
+    "frozen/ds/cli.py": "872317e1fc587cfe8bd4bfa93a4ace6ed18aa918a4892599934a7faa3f6ca010",
+    "frozen/ds/provenance.py": "bdf55677ca07d05d041c07bb6bd9daec9b61dd4a72ff7eda43864a015d4dc8ce",
+    "frozen/experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/experiments/carr/runner.py": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65",
+    "frozen/experiments/carr/empirical_runner.py": "50af225f651b4e704835850a99013ff49b00f7e8ce0334fd5a06b7542077631b",
+    "frozen/experiments/carr/empirical_v2_runner.py": "68ec033daa2d031578d98b7d19a0b1dc2c6f16a673e891f59d32d7fcbcbac4a5",
+    "frozen/experiments/carr/eval_individual.py": "0c091ea3b8ac9352ea50fbe374ccdc8584078e666543b7ecb4c1f159b8fc8ced",
+    "frozen/experiments/carr/eval_group.py": "eb5a735236122dde1cc24c1977145c5b18165f1392e35ffe7ba0e5ceba8feede",
+    "frozen/ds/llm/gateway.py": "ae4194ee34190208d42d1a4ce4cc85ceacde2371c09ddbfc5712abb7f8a23445",
+    "frozen/ds/llm/cache.py": "3393fba6ddeec202102e059fb2d77f9c5e90c0362e46aebb2ba3376793cd91c0",
+    "frozen/ds/llm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/llm/backends.py": "9ec9d669e3810220b79bb53b25410635509aa122a74b7c574fab1a395a819bc2",
+    "frozen/ds/eventpack/__init__.py": "230151fa14091571f24ebaaf259c0e6626a18bc51083c633fd7a659bcb834343",
+    "frozen/ds/eventpack/loader.py": "ac14a356bee480cdce8966fcae7068d4a58c87674b42f60ea856d400b1c6c9ea",
+    "frozen/ds/eventpack/schema.py": "d4a128a21d9093d175f886ab5fae547c7113541cc3739c1923a7209a1bd5db7f",
+    "frozen/ds/world/queue_model.py": "036c3898fe1e0dc7913a23968eb8b9f71efdbe83d5886842ddf378f86271f1b7",
+    "frozen/ds/world/__init__.py": "6c9024eeb92c814db28511267049f2f6d247e8d98738632eb0513b34fef5d09a",
+    "frozen/ds/world/carr_empirical_v2.py": "f0c8dfe744672c26abd6218a6c5766482125396c1e3b9535fff2a2aee0c30d14",
+    "frozen/ds/world/toy.py": "0f0d908bb4d1a540ed5f6c0c2de7786c4cb14e59968fc7184fdb97f666a07688",
+    "frozen/ds/world/carr.py": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a",
+    "frozen/ds/agents/e1_contracts.py": "72e6558cc61c19c719be5ba74e7cc9dcb2e05ac4733926f6792f386425deda81",
+    "frozen/ds/agents/carr_empirical.py": "373747bfc765ece39e659de8bd3a7bf3825e16a75a0c268519a6ffe80329172a",
+    "frozen/ds/agents/memory.py": "dc15b4bd88997a6126249bb9474ffcd8a2f5399a09a6dc45b90a0c3f0151da1a",
+    "frozen/ds/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/agents/decide.py": "2f7a64d77c2b8208f293c76a6352fda0d16357657f6e2c5cc95e5d84d0000ad6",
+    "frozen/ds/agents/carr_prompt_variants.py": "c3997f86372c46fbd0c59a8210177f6d628a8bc2272d22b924cdd49026891dd3",
+    "frozen/ds/agents/trust.py": "3ac7f4a7e4ca20957910754c1d5a18cb3f067a91354b2ba1a70cedab8b9f48b8",
+    "frozen/ds/agents/planning.py": "f3395f329fb5063c71c0d3a48fa7713d9590a8a1decd1678de83ee36e5160493",
+    "frozen/ds/agents/carr_empirical_v2.py": "bd5b7e644ba7d932c8d9789f6ecf35dc47a9f4d7df8cf15b74a49dcb9d668329",
+    "frozen/ds/agents/carr.py": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4",
+    "frozen/ds/agents/state.py": "76650303cb1289f8df298233609a90a908d2f9bf9eab90c11800ce6363a4456a",
+    "frozen/ds/population/e1_profiles.py": "872ca490b8994612b95b95080d434394eb501dc0b2e0f65616eddebcec647ec5",
+    "frozen/ds/population/synth.py": "eec94b9e8571d469c97db50032561bdd025a54a74931fdfca2a1e72b5233e9aa",
+    "frozen/ds/population/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/population/networks.py": "f34213c7d031a0ac39fb3dca63bbfe8ccfdce821270826bd6b085b729a2a5b0f",
+    "frozen/ds/households/__init__.py": "f90d7647321bfa97563f3806b5e11a34e27b3ad1c5dc12b6e7745298c986dc68",
+    "frozen/ds/households/state.py": "28504e6560ed6e1a76424a3cc6e30759cabcb674dbca4b81d9932567ae9963ca",
+    "frozen/ds/eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/eval/mechanism.py": "78270a0789a45fe841441a584276fe28e7a229a8f25bcebc53e3269bd4073432",
+    "frozen/ds/eval/individual.py": "4b9c177bbf54f3da8ed7510a2552f05dcec183bbc5d4ce42a03a2c2cccd7e8d2",
+    "frozen/ds/eval/group.py": "60f1404d6b92a05bf90206287983af8182e9a136469b5d11fe84a313b84e38a6",
+    "frozen/ds/eval/carr_protocol.py": "6c6689a0207e618f4e71d08bea566be6043fd10e942123c01c25f6e673dff8b4",
+    "frozen/ds/eval/cost.py": "4e49e86c1a72a42c43cd3c3a59121dcba67bde12c7e091c13a3b03f7833ce35d",
+    "frozen/ds/eval/report.py": "d44da2dc9b82bc9db31a3d2d7155457cc7891a41e09da41270759d330b81caa8",
+    "frozen/ds/interaction/delivery.py": "0f81a86a0875ea60f74488451e07b27e2fdf4a4c8649cd11281e93fd238ed99e",
+    "frozen/ds/interaction/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/interaction/engine.py": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f",
+    "frozen/ds/interaction/messages.py": "b57db984262c2484fd26ddd30e2fecdb6174b9d40383017d73f2ae6b47abed2e",
+    "frozen/ds/interaction/carr_empirical_v2.py": "7e41de9e90a09a376f3871ff6b7e71dd1db2d6aac57c54bcf67c649734c56f40",
+    "frozen/ds/kernel/rng.py": "9fcc78d15ee2af1c5ff844917cc996e88056e6ddc06791a0f8c29c264ae2ce24",
+    "frozen/ds/kernel/clock.py": "fbba2a72414b8b2db11d220fbd7f39c0df00d8038d6264efed93aa6dd3b681cb",
+    "frozen/ds/kernel/actions.py": "19aa9ef70e7b8e152d1827e270ca1c9b8dd71e97009dc1144fe639df9695a74a",
+    "frozen/ds/kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen/ds/kernel/logger.py": "d46fbf581086537967f44c3702a82095c95b752793f89e570270b1ebc09a7a82",
+    "frozen/ds/kernel/engine.py": "b28039c733505f8a70c154da9d3bbf851974641fbcc8c9dd35609d14384b7773",
+    "inputs/profiles.jsonl": "33585612febdcbd06cf7000be4973ccb2ebfe6ebe471e0d5b77adea59330c106",
+    "inputs/order_calibration.json": "322b3df202681c2ec0f66c6617914209c41a66c8288f913c3a81c133b1ed1791",
+    "configs/models.yaml": "6daabc352574043652b514175d2146dfe8bd90eb38d121484c41af1367ee6ba3",
+    "configs/24.yaml": "e628f8575efc0e8d5c18512ce7957ca73e9683534283523fe0e8cf8ceec77340",
+    "configs/100.yaml": "ac130fb7114c21eef89f6c9870d8ba1425feebfd0aa659f82138b68efa6507e0"
+  },
+  "analyzer_sha256": "8c3c93ae5eeb3599fea5ce905674624b42f91109cbd2f6a985e585d1cdbf92fd",
+  "first_seed_requires_agent_review": true,
+  "behavioral_success_threshold": null,
+  "execution_scripts_sha256": {
+    "worker.py": "389dca7ce493f16f1961e846c1aabf8239fa576f0865a45cf345c21bee47a0f9",
+    "gate.py": "50590dc0f2f972a2724da1796232ccfa7ddc0b60e0583b218c5c827cdb1cb0ce",
+    "controller.py": "e20e1ae562540fc9a531c5a28d4ad57e6584648a22647f50729200b57cb2c0f6",
+    "\u6307\u6807\u4e0e\u6267\u884c\u987a\u5e8f.md": "4997ca2f3630b5f428557331fdb73ebbead92367f3e18519c4489de5a444d04e"
+  }
+}

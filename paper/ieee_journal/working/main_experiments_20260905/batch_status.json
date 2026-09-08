@@ -1,0 +1,23 @@
+{
+  "status": "WAITING_FOR_PROVIDER_CREDIT",
+  "index": 3,
+  "households": 100,
+  "seed": 101,
+  "attempt": 3,
+  "reason_code": "PROVIDER_CREDIT_EXHAUSTED",
+  "reported_balance_usd": -0.109176,
+  "completed_steps": 24,
+  "planned_steps": 25,
+  "successful_cached_responses": 774,
+  "step25_expected_decisions": 57,
+  "step25_successful_decisions": 14,
+  "step25_missing_decisions": 43,
+  "completed_runs": 3,
+  "total_runs": 5,
+  "paid_processes_running": false,
+  "requires": "User reports that original Packy API credit has been restored. Do not probe with paid calls or change model/provider.",
+  "next_recovery_attempt": 4,
+  "resume_cache": "runs/100hh_seed101/attempt3/cache.sqlite",
+  "freeze_sha256": "44a06f58d207cc449bacae9fc3e61eae94fbb7bd1aa9f9be48dd6eb24a8ab837",
+  "recorded_at_utc": "2026-09-05T19:40:05.317317+00:00"
+}

@@ -1,0 +1,145 @@
+{
+  "protocol": "carr_s_e1_v2_formal_minimal_sample",
+  "seeds": [
+    {
+      "seed": 7201,
+      "run_status": "VALID",
+      "reason_code": null,
+      "planned_steps": 25,
+      "completed_steps": 25,
+      "n_llm_calls": 486,
+      "llm_status_counts": {
+        "ok": 361,
+        "cache_hit": 125
+      },
+      "complete_safe_household_departure_rate": 0.5,
+      "coordinated_household_rate": 0.2916666666666667,
+      "split_departure_household_rate": 0.0,
+      "violation_counts": {
+        "care_recipient_left_behind": 0,
+        "vehicle_conflict": 0,
+        "capacity_rejection": 0,
+        "caregiver_violation": 0
+      },
+      "message_funnel": {
+        "sent": 380,
+        "delivered": 230,
+        "processed": 214,
+        "accepted": 156,
+        "rejected": 27
+      },
+      "official_receipt_counts": {
+        "voluntary": 5,
+        "mandatory": 15
+      }
+    },
+    {
+      "seed": 8301,
+      "run_status": "VALID",
+      "reason_code": null,
+      "planned_steps": 25,
+      "completed_steps": 25,
+      "n_llm_calls": 455,
+      "llm_status_counts": {
+        "cache_hit": 300,
+        "ok": 155
+      },
+      "complete_safe_household_departure_rate": 0.5416666666666666,
+      "coordinated_household_rate": 0.375,
+      "split_departure_household_rate": 0.08333333333333333,
+      "violation_counts": {
+        "care_recipient_left_behind": 0,
+        "vehicle_conflict": 0,
+        "capacity_rejection": 0,
+        "caregiver_violation": 0
+      },
+      "message_funnel": {
+        "sent": 353,
+        "delivered": 179,
+        "processed": 168,
+        "accepted": 130,
+        "rejected": 14
+      },
+      "official_receipt_counts": {
+        "voluntary": 5,
+        "mandatory": 15
+      }
+    },
+    {
+      "seed": 9401,
+      "run_status": "VALID",
+      "reason_code": null,
+      "planned_steps": 25,
+      "completed_steps": 25,
+      "n_llm_calls": 556,
+      "llm_status_counts": {
+        "cache_hit": 155,
+        "ok": 401
+      },
+      "complete_safe_household_departure_rate": 0.5,
+      "coordinated_household_rate": 0.3333333333333333,
+      "split_departure_household_rate": 0.041666666666666664,
+      "violation_counts": {
+        "care_recipient_left_behind": 0,
+        "vehicle_conflict": 0,
+        "capacity_rejection": 0,
+        "caregiver_violation": 0
+      },
+      "message_funnel": {
+        "sent": 481,
+        "delivered": 301,
+        "processed": 283,
+        "accepted": 181,
+        "rejected": 32
+      },
+      "official_receipt_counts": {
+        "voluntary": 5,
+        "mandatory": 15
+      }
+    }
+  ],
+  "aggregate": {
+    "n_runs": 3,
+    "all_runs_valid_and_complete": true,
+    "complete_safe_household_departure_rate_mean": 0.5138888888888888,
+    "complete_safe_household_departure_rate_sd": 0.024056261216234387,
+    "per_seed_values": [
+      0.5,
+      0.5416666666666666,
+      0.5
+    ],
+    "coordinated_household_rate_mean": 0.3333333333333333,
+    "coordinated_household_rate_sd": 0.04166666666666666,
+    "per_seed_values_coordinated": [
+      0.2916666666666667,
+      0.375,
+      0.3333333333333333
+    ],
+    "split_departure_household_rate_mean": 0.041666666666666664,
+    "message_funnel_totals": {
+      "sent": 1214,
+      "delivered": 710,
+      "processed": 665,
+      "accepted": 467,
+      "rejected": 73
+    },
+    "violation_totals": {
+      "care_recipient_left_behind": 0,
+      "vehicle_conflict": 0,
+      "capacity_rejection": 0,
+      "caregiver_violation": 0
+    }
+  },
+  "reference_comparison": {
+    "survey_individual_evacuation_rate": 0.8878787878787879,
+    "survey_wilson_95_ci": [
+      0.8492771840490105,
+      0.9175538767315419
+    ],
+    "survey_order_to_departure_5h_cdf": 0.7741935483870968,
+    "simulation_estimand": "complete safe household departure (all members reach safe zone)",
+    "comparison_status": "DIRECTIONAL_ONLY_DIFFERENT_ESTIMANDS"
+  },
+  "evidence_label": "RUNNING_PENDING_AUDIT",
+  "claim_boundary": "Carr-informed controlled scenario; not historical reconstruction, not population representative, not individual-level validation."
+}

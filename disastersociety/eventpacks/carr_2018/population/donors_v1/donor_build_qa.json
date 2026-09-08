@@ -1,0 +1,11 @@
+{
+  "puma": 8900,
+  "n_households": 4317,
+  "n_persons": 9968,
+  "n_excluded_vacant_housing_units": 339,
+  "n_excluded_group_quarters_records": 381,
+  "housing_zip_sha256": "1c09428290fcfdde00cfee1276a1b64ce1031081b56055dea6e1c04505718daa",
+  "person_zip_sha256": "0b55d01ab0a9926892c101704b31d2224f9ec7714fecaca5b7f4065562acb111",
+  "serialno_in_public_households": false,
+  "serialno_in_public_persons": false
+}

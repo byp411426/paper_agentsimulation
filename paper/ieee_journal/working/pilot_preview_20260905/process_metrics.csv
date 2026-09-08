@@ -1,0 +1,8 @@
+step,hours,official_recipients,decision_departed,multi_member_agreement_households,all_safe_households,unknown_members
+1,0.5,0,0,0,0,0
+2,1.0,0,0,0,0,0
+3,1.5,1,0,0,0,0
+4,2.0,1,0,0,0,0
+5,2.5,1,1,0,0,0
+6,3.0,1,1,0,0,0
+7,3.5,3,2,0,1,0

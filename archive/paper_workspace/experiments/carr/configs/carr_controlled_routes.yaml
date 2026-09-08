@@ -1,0 +1,35 @@
+version: 1
+status: CONTROLLED_DERIVED_ASSET
+case_semantics: Carr-informed controlled road-route asset
+
+sources:
+  roads: eventpacks/carr_2018/population/tiger/roads/shasta_roads.geojson
+  perimeter: eventpacks/carr_2018/hazard/perimeters.geojson
+
+selection:
+  bbox_wgs84:
+    - -122.55
+    - 40.50
+    - -122.33
+    - 40.68
+  allowed_mtfcc:
+    - S1100
+    - S1200
+    - S1400
+  projected_crs: EPSG:3310
+  node_rounding_m: 0.01
+  safe_anchor_vertical_band_m: 1000
+  maximum_alternate_length_ratio: 1.5
+
+route_ids:
+  primary: tiger_primary
+  alternate: tiger_alternate
+
+outputs:
+  route_asset: eventpacks/carr_2018/environment/west_redding_controlled_routes.json
+  route_geojson: eventpacks/carr_2018/environment/west_redding_controlled_routes.geojson
+
+claim_boundary: >-
+  Routes are derived from 2018 TIGER/Line road geometry inside a declared
+  controlled bounding box. The obstruction is selected algorithmically for
+  mechanism identification and is not an observed Carr Fire road closure.

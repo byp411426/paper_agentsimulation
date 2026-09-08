@@ -1,0 +1,48 @@
+{
+  "amendment_id": "carr_s_e1_reference_q136_mapping_2026_08_02",
+  "status": "VERIFIED_DERIVED_FIELD_CORRECTION",
+  "date": "2026-08-02",
+  "scope": "Correct two post-outcome departure-perception columns in the canonical Carr clean survey table without changing any E1 aggregate reference estimand or value.",
+  "source_evidence": {
+    "questionnaire_pdf": {
+      "path": "Wong_Carr_Wildfire_Survey.pdf",
+      "sha256": "2ed98a19e53ac686bca8035694a5a44a93c092aa32628431a0dd5d7a4c49df67"
+    },
+    "qualtrics_header": {
+      "Q13.6_1": "Visual fire level",
+      "Q13.6_2": "Smoke level",
+      "Q13.6_3": "Pressure by officials to leave"
+    }
+  },
+  "correction": {
+    "departure_fire_perception": {
+      "old_source": "Q13.6_2",
+      "new_source": "Q13.6_1"
+    },
+    "departure_smoke_perception": {
+      "old_source": "Q13.6_3",
+      "new_source": "Q13.6_2"
+    }
+  },
+  "hashes": {
+    "survey_clean_before": "46539f3162428803a250e59f30d81c87ac9d4d2551c3561d71069ad078daee4b",
+    "survey_clean_after": "341aca67259fd036f2fcf66acc63f8b7e2f2b3902260d56e2441aa5e8b77e1e7",
+    "evaluation_respondents_unchanged": "5cc642186cba75d36e0b2617d3bccfe1bb51b1a328eb98cb0a5391a9ea0ba031",
+    "survey_clean_qa_before": "126a30c012a0a6040c57f5db7754e28e8a1f199bd92c8d721e72a10170cb0c2b",
+    "survey_clean_qa_after": "f55e487bcc4dba21bd945dd331298c734ee9b411d42b44737f0be8c31ec330db",
+    "cleaner_after": "63c3974c5cc26b8b43239ed410c09ec920a75a27be0804279e4c7b0f7b55f826",
+    "mapping_test_after": "14a5813aed1ad4711f956c1e54d0796a7ff040b79d926178e5e923e88a3a7969",
+    "preserved_reference_summary": "0d899eb35bce343903ab91e05f885e9a329d5d66194edaac437b2712b423d691"
+  },
+  "impact_audit": {
+    "q9_1_outcome_changed": false,
+    "departure_datetime_changed": false,
+    "warning_or_channel_fields_changed": false,
+    "carr_r_runtime_inputs_changed": false,
+    "e1_reference_core_recomputed_identical": true,
+    "reference_summary_overwritten": false,
+    "reason": "Both corrected columns are measured at departure, excluded from Carr-R runtime inputs, and unused by the E1 v1.1 aggregate reference builder. The reference core was recomputed in memory from the corrected table and matched the preserved reference exactly."
+  },
+  "archive": "archive/diagnostic_2026-08-02_q136_mapping/",
+  "claim_boundary": "The correction verifies the two derived column mappings only. Q13.6 remains post-outcome and cannot be used as an ex-ante resident input or prediction feature."
+}

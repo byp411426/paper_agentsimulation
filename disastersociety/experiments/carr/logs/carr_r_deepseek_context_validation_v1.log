@@ -1,0 +1,2 @@
+status=PILOT_VALIDATION_ONLY n=66 failed=0 test_opened=False
+macro_f1=0.463 brier=0.145 ece=0.197

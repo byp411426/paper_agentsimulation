@@ -1,0 +1,82 @@
+{
+  "accepted_runs": 3,
+  "complete_steps": 75,
+  "household_run_records": 72,
+  "multi_household_modes": {
+    "partly_safe": 3,
+    "none_safe": 12,
+    "all_safe_with_joint": 4,
+    "all_safe_without_joint": 2
+  },
+  "joint_commitment_statuses": {
+    "cancelled": 1,
+    "rejected": 5,
+    "executed": 4,
+    "accepted": 2
+  },
+  "pending_beyond_window": 2,
+  "all_four_final_metrics_match_existing_analysis": true,
+  "note": "New descriptive cross-tabulation of existing logs, not a new confirmatory endpoint; only accepted complete runs included.",
+  "input_files": [
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/accepted.json",
+      "sha256": "cffa44908b417a9a49eaf90a6fd4ad7811d3bba8297fd325e59fefcde0532222"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/analysis/results.json",
+      "sha256": "d1e7f3c3e5cd4f38f49a6e5f0e9d29bceaac11f20cbd6d69235315ea1faceb3d"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/events/events.jsonl",
+      "sha256": "6281f1d7dcab0f02b2890c064a90f8abaf6143d6c21e6191c57d78ec90bd4a86"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl",
+      "sha256": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt3/carr_s_e1_repaired_24_20260905/initial_state.json",
+      "sha256": "ad6cc56eb62d24581049ae50c47d46b1664351bf195c13dcad5204138d076406"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/accepted.json",
+      "sha256": "ee5e3025a2a3b2438f5cca9a2b4e5543e1eefe5284a8d6b0fcbe7b7b5efd6709"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/analysis/results.json",
+      "sha256": "ac77ac7bd7585c4cac374c6a04cc5edc7190a52ec8aec44f52bdf1bd5e8b259a"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/events/events.jsonl",
+      "sha256": "665cbeb682d2fcfc8543300d6de349b8d43fc24c2acd5cae5c1b358b15c4e21e"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl",
+      "sha256": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed8301/attempt1/carr_s_e1_repaired_24_20260905/initial_state.json",
+      "sha256": "3d2b2363ddb996ceb1f807423a190ae554562a64d41e1da51bf27411c6cb0b4f"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/accepted.json",
+      "sha256": "3128ff2a8b21bd89902acabd3c4bf00096a9dc08e9f5aa550425dfe427501296"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/analysis/results.json",
+      "sha256": "340dc141929c7349bf26a2ffc40727c5dbab4ce5e0eba027406dd8afcfc73ae1"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/events/events.jsonl",
+      "sha256": "a2177c224eb20d12f10214788fd0d61f5867f1dab9c4f885e2549a42f1b87abf"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/selected_profiles.jsonl",
+      "sha256": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3"
+    },
+    {
+      "path": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed9401/attempt1/carr_s_e1_repaired_24_20260905/initial_state.json",
+      "sha256": "cc220b6ba033fd5ed1b3fbba4c0fbcdf01d73775eeccc864a166fffe5f3a3857"
+    }
+  ]
+}

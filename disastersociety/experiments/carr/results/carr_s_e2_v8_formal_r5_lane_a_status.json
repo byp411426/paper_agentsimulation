@@ -1,0 +1,18 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r5",
+  "lane": "a",
+  "pid": 26128,
+  "config": "experiments/carr/configs/carr_s_e2_v8_formal_r5.yaml",
+  "declared_seeds": [
+    1103,
+    1301,
+    1511,
+    1709,
+    1907,
+    2111
+  ],
+  "completed_seeds": [],
+  "current_seed": 1103,
+  "state": "STOPPED_NONVALID_BATCH",
+  "stop_reason": "seed 1103 did not finish five-for-five VALID"
+}

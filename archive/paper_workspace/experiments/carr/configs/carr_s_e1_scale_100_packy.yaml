@@ -1,0 +1,53 @@
+run:
+  run_id: carr_s_e1_scale_100_packy
+  total_steps: 25
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models_e2_reliable.yaml
+  temperature: 0.0
+  max_concurrency: 12
+  budget_usd: 8.0
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT_PENDING_AUDIT
+  metric_protocol_version: e1_v2
+  n_households: 100
+  profile_seed: 4201
+  profiles_dir: eventpacks/carr_2018/population/e1_profiles_v2_seed4201
+  profiles_file: e1_profiles_seed4201.jsonl
+  order_calibration: eventpacks/carr_2018/behavior/order_sequence_calibration.json
+  formal_seeds: [101, 202]
+  social_graph:
+    radius_m: 1500
+    k_neighbors: 6
+    k_friends: 4
+    rewire_p: 0.1
+  hazard:
+    initial_distance_m: 9000
+    approach_per_step_m: 250
+    offset_range_m: [-250, 250]
+  routes:
+    primary_route_id: tiger_primary
+    alternate_route_id: tiger_alternate
+    closure_step: 9
+    route_capacity_per_step: 10
+  orders:
+    voluntary_step: 3
+    mandatory_step: 7
+    direct_delivery_probability: 1.0
+  delivery:
+    household_dm_probability: 1.0
+    community_message_probability: 0.15
+  vehicles:
+    capacity: 5
+    topcode_min_vehicles: 4
+  safe_zone: controlled_safe_zone
+  claim_boundary:
+    historical_reconstruction: false
+    population_representative: false
+    carr_informed_controlled_scenario: true
+    scale_envelope_only: true

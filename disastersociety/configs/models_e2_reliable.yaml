@@ -1,0 +1,44 @@
+# Transport profile for the Carr-S E2 v8 recovery matrix.
+#
+# Scientific model identity and thinking settings are unchanged from
+# configs/models.yaml.  The timeout is extended and the matrix config lowers
+# per-run concurrency after r3 exposed provider timeouts under two concurrent
+# 12-request lanes plus a separate four-request validation job.
+#
+# r6 amendment (2026-08-02): max_attempts 1 -> 3 after r4 and r5 aborted on
+# intermittent provider connection errors.  The gateway retries only
+# non-fatal BackendError conditions (connection-level failures); fatal errors
+# such as insufficient balance or invalid credentials still stop immediately.
+# Prompt, model identity, thinking mode, temperature, seed mapping and all
+# scientific parameters are unchanged.
+#
+# r7 amendment (2026-08-02): r6 aborted on a Cloudflare 520 origin error.
+# The OpenAI SDK retries every 5xx (including 520) and connection errors with
+# its own exponential backoff, so call_kwargs.max_retries was raised 0 -> 3,
+# then 3 -> 6 in the r7 speedup amendment (2026-08-02) to survive
+# tens-of-seconds provider outages.  Gateway-level max_attempts stays 3.
+# Still transport-only: prompts, model identity, thinking mode, temperature,
+# seed mapping and scientific parameters are unchanged; fatal errors still
+# stop immediately.  All science code files remain byte-identical to the
+# original v8 freeze.
+models:
+  packy-deepseek-v4-flash:
+    backend: litellm
+    model_id: openai/deepseek-v4-flash
+    base_url: https://www.packyapi.com/v1
+    api_key_env_candidates:
+      - PACKY_API_KEY
+      - LLM_API_KEY
+      - OPENAI_API_KEY
+    input_per_m: 1.0
+    output_per_m: 1.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    call_kwargs:
+      max_tokens: 16384
+      max_retries: 6
+      extra_body:
+        thinking:
+          type: enabled
+    request_timeout_seconds: 600
+    max_attempts: 3
+    provider_seed_max: 2147483647

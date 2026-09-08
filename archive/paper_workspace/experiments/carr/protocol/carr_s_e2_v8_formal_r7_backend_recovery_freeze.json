@@ -1,0 +1,160 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r7",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_FULL_60_CELL_RERUN_WITH_SDK_LEVEL_RETRY_BACKOFF",
+  "predecessor_protocol_id": "carr_s_e2_v8_formal_r6",
+  "recovery_trigger": {
+    "type": "cloudflare_520_origin_error_under_frozen_stop_rule",
+    "aborted_run": {
+      "run": "carr_s_e2_v8_formal_r6_full_minus_interaction_seed1409",
+      "terminal_status": "ABORTED",
+      "completed_steps": 3,
+      "planned_steps": 10,
+      "n_ok": 56,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "spent_usd": 0.27564,
+      "reason_code": "BACKEND_UNAVAILABLE",
+      "observed_error": "litellm.InternalServerError: OpenAIException - Error code: 520 (Cloudflare origin error; payload retryable=True, retry_after=60)"
+    },
+    "peer_lane_action": "Lane A was terminated immediately after lane B stopped to avoid new paid spend on the excluded r6 attempt; its in-flight seed1301 run was left without a terminal summary as an audit record.",
+    "r6_completed_cells": 19,
+    "r6_completed_seed_batches": [1103, 1201],
+    "r6_partial_seed_batches": [
+      {"seed": 1301, "valid_cells": 4, "in_flight": "full_minus_planning"},
+      {"seed": 1409, "valid_cells": 4, "aborted_cell": "full_minus_interaction"}
+    ],
+    "r6_spend_usd_estimate": 13.5,
+    "root_cause_assessment": "Provider 520 origin errors can persist for tens of seconds; the gateway-level retry loop uses millisecond backoff and the OpenAI SDK retry was disabled (call_kwargs.max_retries=0), so a 60-second-scale outage exhausted all attempts within milliseconds.",
+    "endpoint_diagnostic_at_freeze": {
+      "models_probe_http_status": 200,
+      "dns_ok": true,
+      "tls_ok": true,
+      "diagnostic_scope": "connectivity check only; not a scientific result"
+    },
+    "scientific_effect_interpretation_allowed": false
+  },
+  "prior_attempt_disposition": {
+    "rule": "All r1, r2, r3, r4, r5, and r6 artifacts are operational audit records only and are excluded from the selected r7 scientific matrix.",
+    "cross_attempt_pairing_allowed": false,
+    "note": "r4 completed ten VALID cells; r6 completed nineteen VALID cells across two full seed batches and two partial batches; none of these cells are combined with r7."
+  },
+  "r7_execution_contract": {
+    "selection_rule": "Use r7 for all 12 frozen seeds and all five frozen conditions; never combine with r1, r2, r3, r4, r5, or r6.",
+    "science_configuration_equal_to_r6": true,
+    "scientific_changes": [],
+    "transport_changes": [
+      {
+        "setting": "call_kwargs.max_retries",
+        "from": 0,
+        "to": 3,
+        "scope": "configs/models_e2_reliable.yaml only; enables the OpenAI SDK's own exponential-backoff retry for all 5xx responses (including Cloudflare 520) and connection errors",
+        "code_files_unchanged": true,
+        "gateway_max_attempts_stays": 3,
+        "fatal_errors_still_abort_immediately": true,
+        "science_identity_unchanged": true
+      }
+    ],
+    "permitted_operational_changes": [
+      "new run and protocol identifiers (r7)",
+      "per-run maximum concurrency stays at 6",
+      "request timeout stays at 600 seconds",
+      "two detached lanes remain; no other paid experiment may overlap",
+      "protocol-specific seed-batch filenames prevent cross-attempt overwrite"
+    ],
+    "lane_a_seeds": [
+      1103,
+      1301,
+      1511,
+      1709,
+      1907,
+      2111
+    ],
+    "lane_b_seeds": [
+      1201,
+      1409,
+      1601,
+      1801,
+      2003,
+      2203
+    ],
+    "n_selected_seed_condition_runs": 60,
+    "stop_rule": "Each lane stops on its first exception or non-five-for-five-VALID batch. Any failure stops all new paid jobs pending an explicit audited recovery amendment.",
+    "carr_r_test_split_opened": false,
+    "no_direction_based_stopping": true,
+    "mock_eligible_for_effect_evidence": false
+  },
+  "authorization": {
+    "paid_execution_authorized": true,
+    "authorization_basis": "Explicit user instruction on 2026-08-02 to execute Plan A (full 60-cell rerun) and to continue without stopping; r7 amendment records the SDK-level retry transport change for the same user-authorized objective.",
+    "user_choice": "Plan A: full 60-cell matrix; r1-r6 excluded as operational audit records"
+  },
+  "frozen_artifacts": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal_r7.yaml",
+      "sha256": "715e4c161db4e653fbceb5a625127b1b3b5381cb713392b753d7d74ffafa803d"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "sha256": "3e54912ec2202dbc90755614345571e634a0c8292b6afe805da80926fe8bf0e8"
+    },
+    "single_seed_science_runner": {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "sha256": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    "r7_lane_supervisor": {
+      "path": "scripts/run_carr_e2_v8_r7_lane.py",
+      "sha256": "9802d5ea16263c8885e94ac5cccafd728c4dccd34ee95bde6550324bc171964a"
+    },
+    "frozen_v8_summarizer": {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "sha256": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    "r7_protocol_filename_adapter": {
+      "path": "scripts/summarize_carr_e2_v8_r7.py",
+      "sha256": "2bb972c0065422ea95096d4b6076d36ad16fdf8b0de0ca5e7e0c886239aa45ba"
+    },
+    "publication_audit": {
+      "path": "scripts/audit_carr_e2_v8_r5_publication.py",
+      "sha256": "2d04a0432dc1da17ece0f8b480b0af99202015eb787543897e1aa04517e7a649"
+    },
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "sha256": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    }
+  },
+  "analysis_file_amendment": {
+    "timing": "Applied before any r7 seed batch had a terminal summary.",
+    "reason": "The original v8 summarizer is frozen by the r1 protocol. A new r7-only wrapper maps protocol-specific batch filenames into a temporary audit view and delegates all estimators to the frozen summarizer.",
+    "scientific_change": false
+  },
+  "claim_boundary": "r7 changes only protocol/run identity and the SDK-level retry transport (config-only; every science code file remains byte-identical to the original v8 freeze). It does not change the E2 cohort, prompt, model identity, thinking mode, temperature, seed mapping, conditions, seeds, metrics, estimands, sample size, or scientific exclusion rules."
+}

@@ -1,0 +1,56 @@
+{
+  "protocol_id": "carr_s_e2_v8_rule_arm",
+  "frozen_at": "2026-08-15",
+  "status": "FROZEN_FOR_EXECUTION",
+  "reference_protocol_id": "carr_s_e2_v8_formal_r7",
+  "paper_claim": "A deterministic PADM-style rule policy (the platform's transparent controlled policy, carr_controlled_policy) is run through the identical kernel, message, and arbitration pipeline on the full v8 condition to answer the reference question 'what does the same scenario produce without the LLM?'. It is a non-generative policy-class reference arm, reported next to the generative full-condition levels; it is not mechanism evidence for the generative pipeline and not behavioral validation.",
+  "evidence_type": "policy_class_reference",
+  "analysis_scales": ["household_and_network"],
+  "execution_contract": {
+    "decision_policy": "carr_controlled_policy",
+    "decision_policy_location": "ds/agents/carr.py:522",
+    "backend": "MockBackend (offline, deterministic, zero-cost)",
+    "llm_calls": 0,
+    "scenario": "identical to carr_s_e2_v8_formal_r7 (8 households, 16 decision residents, 10 steps x 30 min, warning step 1, closure step in {3,4}, depart step 5, coordination deadline 7, controlled initial plan seeded, feedback-gated route observation)",
+    "conditions": ["full"],
+    "seeds": [1103, 1201, 1301, 1409, 1511, 1601, 1709, 1801, 1907, 2003, 2111, 2203],
+    "n_seed_condition_runs": 12,
+    "metric_protocol_version": "v8",
+    "prompt_version": "carr_s_controlled_resident_v8",
+    "execute_all_seeds_regardless_of_interim_direction": true,
+    "carr_r_test_split_opened_na": "rule arm touches no Carr-R data"
+  },
+  "metric_contract": {
+    "levels": [
+      "complete_household_safe_departure_rate",
+      "coordinated_departure_rate",
+      "closed_route_rejections_per_household",
+      "decision_resident_evacuation_rate",
+      "dependent_safety_rate",
+      "execution_rejections_per_household"
+    ],
+    "manipulation_checks_observational_only": [
+      "conditional_warning_retention_rate",
+      "preclosure_primary_to_postclosure_alternate_update_rate",
+      "successful_postclosure_replan_rate",
+      "post_closure_feasible_commitment_rate"
+    ],
+    "comparison": "levels-only against the generative full condition of carr_s_e2_v8_formal_r7 (12 seeds); no paired removal contrasts exist for the rule arm because it does not implement module removals",
+    "no_rescue_metrics_after_results": true
+  },
+  "claim_boundary": {
+    "non_generative_reference_arm": true,
+    "mechanism_evidence_for_generative_pipeline": false,
+    "mock_effect_evidence": false,
+    "behavioral_validation": false,
+    "population_representative": false,
+    "padm_interpretation": "the policy encodes warning-receipt -> confirmation/milling via proposal exchange -> protective action with feedback-driven rerouting; it is PADM-style, not a fitted PADM model"
+  },
+  "frozen_sources": [
+    {"path": "experiments/carr/configs/carr_s_e2_v8_rule_arm.yaml", "sha256": "db8f28293888e92f22c13f4f441a46174a047a8450aea17028e1679cba29d6be"},
+    {"path": "ds/agents/carr.py", "sha256": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4"},
+    {"path": "experiments/carr/runner.py", "sha256": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"},
+    {"path": "ds/kernel/engine.py", "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"},
+    {"path": "ds/llm/gateway.py", "sha256": "132b787e400d515c0c3f857c5d4a21a9b87d9743d24f8364935e9e7c57ae70c0"}
+  ]
+}

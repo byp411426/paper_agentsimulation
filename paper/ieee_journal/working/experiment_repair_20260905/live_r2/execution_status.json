@@ -1,0 +1,21 @@
+{
+  "backend": "real",
+  "evidence_status": "DIAGNOSTIC_PILOT",
+  "status": "ABORTED",
+  "exception_type": "TimeoutError",
+  "gateway": {
+    "run_id": "e1_repaired_4hh_seed7201",
+    "spent": 0.293438,
+    "n_ok": 13,
+    "n_cache": 11,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 67030,
+    "live_completion_tokens": 226408,
+    "logical_prompt_tokens": 104503,
+    "logical_completion_tokens": 301354
+  },
+  "provider_requests": 18,
+  "elapsed_seconds": 951.41
+}

@@ -1,0 +1,25 @@
+{
+  "status": "RUNNING",
+  "households": 24,
+  "seed": 7201,
+  "attempt": 2,
+  "step": 17,
+  "planned_steps": 25,
+  "awake": 9,
+  "elapsed_seconds": 2412.5,
+  "gateway": {
+    "run_id": "carr_s_e1_repaired_24_20260905",
+    "spent": 1.477649,
+    "n_ok": 147,
+    "n_cache": 0,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 532829,
+    "live_completion_tokens": 944820,
+    "logical_prompt_tokens": 532829,
+    "logical_completion_tokens": 944820
+  },
+  "provider_requests": 159,
+  "run_dir": "/Users/linnuo/tmp/disastersociety/paper/ieee_journal/working/main_experiments_20260905/runs/24hh_seed7201/attempt2/carr_s_e1_repaired_24_20260905"
+}

@@ -1,0 +1,156 @@
+{
+  "protocol_id": "carr_s_e2_v8_formal_r5",
+  "frozen_at": "2026-08-02",
+  "status": "FROZEN_FULL_60_CELL_RERUN_AFTER_R4_CONNECTION_ERROR_ABORTS",
+  "predecessor_protocol_id": "carr_s_e2_v8_formal_r4",
+  "recovery_trigger": {
+    "type": "provider_connection_error_under_frozen_stop_rule",
+    "aborted_runs": [
+      {
+        "run": "carr_s_e2_v8_formal_r4_full_seed1301",
+        "terminal_status": "ABORTED",
+        "completed_steps": 3,
+        "planned_steps": 10,
+        "n_ok": 53,
+        "n_failed": 5,
+        "n_fallback": 0,
+        "reason_code": "BACKEND_UNAVAILABLE",
+        "observed_error": "litellm.InternalServerError: OpenAIException - Connection error; agent=syn_t035_h0000025_r003, step=4"
+      },
+      {
+        "run": "carr_s_e2_v8_formal_r4_full_seed1409",
+        "terminal_status": "ABORTED",
+        "completed_steps": 8,
+        "planned_steps": 10,
+        "n_ok": 98,
+        "n_failed": 1,
+        "n_fallback": 0,
+        "reason_code": "BACKEND_UNAVAILABLE",
+        "observed_error": "litellm.InternalServerError: OpenAIException - Connection error; agent=syn_t041_h0000005_r002, step=9"
+      }
+    ],
+    "lane_a_status": {
+      "state": "STOPPED_NONVALID_BATCH",
+      "completed_seeds": [1103],
+      "current_seed": 1301,
+      "stop_reason": "seed 1301 did not finish five-for-five VALID"
+    },
+    "lane_b_status": {
+      "state": "STOPPED_NONVALID_BATCH",
+      "completed_seeds": [1201],
+      "current_seed": 1409,
+      "stop_reason": "seed 1409 did not finish five-for-five VALID"
+    },
+    "r4_completed_valid_cells": 10,
+    "r4_completed_valid_seed_batches": [1103, 1201],
+    "r4_spend_usd": 7.300344,
+    "scientific_effect_interpretation_allowed": false
+  },
+  "prior_attempt_disposition": {
+    "rule": "All r1, r2, r3, and r4 artifacts are operational audit records only and are excluded from the selected r5 scientific matrix.",
+    "cross_attempt_pairing_allowed": false,
+    "note": "r4 completed ten VALID cells in two complete seed batches and aborted two full runs on provider connection errors; none of these are combined with r5 cells."
+  },
+  "r5_execution_contract": {
+    "selection_rule": "Use r5 for all 12 frozen seeds and all five frozen conditions; never combine with r1, r2, r3, or r4.",
+    "science_configuration_equal_to_r4_after_transport_and_protocol_identity_exclusions": true,
+    "scientific_changes": [],
+    "permitted_operational_changes": [
+      "new run and protocol identifiers (r5)",
+      "per-run maximum concurrency stays at 6 (unchanged from r4)",
+      "request timeout stays at 600 seconds (unchanged from r4)",
+      "two detached lanes remain; no other paid experiment may overlap (unchanged from r4)",
+      "protocol-specific seed-batch filenames prevent cross-attempt overwrite"
+    ],
+    "lane_a_seeds": [
+      1103,
+      1301,
+      1511,
+      1709,
+      1907,
+      2111
+    ],
+    "lane_b_seeds": [
+      1201,
+      1409,
+      1601,
+      1801,
+      2003,
+      2203
+    ],
+    "n_selected_seed_condition_runs": 60,
+    "stop_rule": "Each lane stops on its first exception or non-five-for-five-VALID batch. Any failure stops all new paid jobs pending an explicit audited recovery amendment.",
+    "carr_r_test_split_opened": false,
+    "no_direction_based_stopping": true,
+    "mock_eligible_for_effect_evidence": false
+  },
+  "authorization": {
+    "paid_execution_authorized": true,
+    "authorization_basis": "Explicit user instruction on 2026-08-02 to execute Plan A (full 60-cell r5 rerun) and to continue without stopping; recorded in the active task.",
+    "user_choice": "Plan A: re-run all 60 cells in r5; r1-r4 excluded as operational audit records"
+  },
+  "frozen_artifacts": {
+    "configuration": {
+      "path": "experiments/carr/configs/carr_s_e2_v8_formal_r5.yaml",
+      "sha256": "2dc99ff416aa2f4787d6e4772f935255bcb9bc8ddc3e237ef26f516a9aba1f2c"
+    },
+    "model_transport": {
+      "path": "configs/models_e2_reliable.yaml",
+      "sha256": "7462f20d0dbb5fd0768afca2bde24f6520b6bdf03cd6ae98f5693987de7666ea"
+    },
+    "single_seed_science_runner": {
+      "path": "scripts/run_carr_e2_v8_formal.py",
+      "sha256": "ff3af3fde1cf45cd9d235353fdb7c05d3a6460775b24ae416d317ca3d5602320"
+    },
+    "r5_lane_supervisor": {
+      "path": "scripts/run_carr_e2_v8_r5_lane.py",
+      "sha256": "1c134b7ba76d5e7a00702ff49c888bb37770419bc59f85310af2a6a796c12eea"
+    },
+    "frozen_v8_summarizer": {
+      "path": "scripts/summarize_carr_e2_v8_formal.py",
+      "sha256": "e03988c99d41cf3c8bb71b7ffa32e5a44699c490c54abc0bfb3be75f310589b5"
+    },
+    "r5_protocol_filename_adapter": {
+      "path": "scripts/summarize_carr_e2_v8_r5.py",
+      "sha256": "1227389125c2e9001cd0b474ddd795a1035c97a5f0ab2908e5b92379666e5891"
+    },
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "5519f244a1b2fbaec8ce551ea8e92829ee20f7d018e202bdb4437ae50e912d65"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab"
+    },
+    "world": {
+      "path": "ds/world/carr.py",
+      "sha256": "5ff2cb2c6b389bcdda4da589ecc4632b6953757e3f5c683097c1703561ac467a"
+    },
+    "kernel": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28"
+    },
+    "interaction": {
+      "path": "ds/interaction/engine.py",
+      "sha256": "a2ce01403544326841e2ea7119beb32d200bc83f1a453b6306fe695967106f3f"
+    },
+    "household": {
+      "path": "ds/households/state.py",
+      "sha256": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e"
+    },
+    "gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d"
+    },
+    "backends": {
+      "path": "ds/llm/backends.py",
+      "sha256": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970"
+    }
+  },
+  "analysis_file_amendment": {
+    "timing": "Applied before any r5 seed batch had a terminal summary.",
+    "reason": "The original v8 summarizer is frozen by the r1 protocol and was restored byte-for-byte. A new r5-only wrapper maps protocol-specific batch filenames into a temporary audit view and delegates all estimators to the frozen summarizer.",
+    "scientific_change": false
+  },
+  "claim_boundary": "r5 changes only protocol/run identity after r4 aborted on provider connection errors. It does not change the E2 cohort, prompt, model identity, thinking mode, conditions, seeds, metrics, estimands, sample size, or scientific exclusion rules."
+}

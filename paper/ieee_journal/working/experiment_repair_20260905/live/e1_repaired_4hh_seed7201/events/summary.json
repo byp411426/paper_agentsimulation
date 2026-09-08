@@ -1,0 +1,81 @@
+{
+  "run_seed": 7201,
+  "planned_steps": 12,
+  "completed_steps": 7,
+  "last_completed_step": 8,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 8,
+    "route_state": {
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 10
+      },
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 10
+      }
+    },
+    "hazard_offsets": {
+      "syn_t001_h0000001": -96.68420301377338,
+      "syn_t001_h0000002": 161.36697213331627,
+      "syn_t001_h0000005": 114.9986085442763,
+      "syn_t001_h0000007": -104.0339241862599
+    },
+    "household_commitments": {
+      "syn_t001_h0000001": {
+        "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001": {
+          "id": "auto_e1_repaired_4hh_seed7201:7:syn_t001_h0000001_r001",
+          "created_step": 7,
+          "status": "executed",
+          "supersedes_id": null,
+          "accepted_by": [
+            "syn_t001_h0000001_r001"
+          ],
+          "party": {
+            "traveler_ids": [
+              "syn_t001_h0000001_r001"
+            ],
+            "accompanying_member_ids": [],
+            "route_id": "tiger_primary",
+            "vehicle_id": "syn_t001_h0000001:vehicle:1",
+            "depart_step": 7
+          }
+        }
+      },
+      "syn_t001_h0000002": {},
+      "syn_t001_h0000005": {},
+      "syn_t001_h0000007": {}
+    },
+    "member_locations": {
+      "syn_t001_h0000001_r001": "controlled_safe_zone",
+      "syn_t001_h0000002_r001": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000002_r002": "('home', 'syn_t001_h0000002')",
+      "syn_t001_h0000005_r001": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r002": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r003": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r004": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r005": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000005_r006": "('home', 'syn_t001_h0000005')",
+      "syn_t001_h0000007_r001": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r002": "('home', 'syn_t001_h0000007')",
+      "syn_t001_h0000007_r003": "('home', 'syn_t001_h0000007')"
+    }
+  },
+  "gateway": {
+    "run_id": "e1_repaired_4hh_seed7201",
+    "spent": 0.134312,
+    "n_ok": 11,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 46523,
+    "live_completion_tokens": 87789,
+    "logical_prompt_tokens": 46523,
+    "logical_completion_tokens": 87789
+  },
+  "wall_clock_seconds": 356.093937,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t001_h0000002_r001, step=8: 1 validation error for E1Decision\nplan_update.reason\n  String should have at most 240 characters [type=string_too_long, input_value='Official mandatory evacu...lear evacuation action.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_too_long"
+}

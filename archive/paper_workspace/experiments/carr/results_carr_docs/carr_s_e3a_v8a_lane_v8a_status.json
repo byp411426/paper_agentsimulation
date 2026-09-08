@@ -1,0 +1,22 @@
+{
+  "protocol_id": "carr_s_e3a_v8a",
+  "lane": "v8a",
+  "pid": 30255,
+  "config": "experiments/carr/configs/carr_s_e3a_v8a.yaml",
+  "variant": "v8a",
+  "declared_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "completed_seeds": [
+    2107,
+    2209,
+    2303,
+    2411
+  ],
+  "current_seed": null,
+  "state": "COMPLETE",
+  "stop_reason": null
+}

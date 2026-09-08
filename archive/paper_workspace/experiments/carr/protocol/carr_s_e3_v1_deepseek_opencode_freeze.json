@@ -1,0 +1,23 @@
+{
+  "protocol_id": "carr_s_e3_v1_deepseek",
+  "amendment_id": "r4_opencode_go_transport_20260804",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_TRANSPORT_SWITCH_PENDING_OPTIN",
+  "trigger": {
+    "type": "provider_transport_switch_user_requested",
+    "reason": "User 2026-08-04 requested DeepSeek v4 flash E3 transport be switched from the Packy proxy to OpenCode Go (https://opencode.ai/zen/go) because the Packy path has been unstable (repeated hangs through the local proxy 127.0.0.1:7890 without timeout).",
+    "observed_errors": [
+      "Packy lane hang #1: 50 minutes with no llm_calls and 0% CPU",
+      "Packy lane hang #2: resumed intermittently but unstable",
+      "OpenCode Go RegionError on deepseek-v4-flash: requires explicit opt-in for models hosted in China (workspace URL https://opencode.ai/workspace/wrk_01KXSV0QT8FC91TAETD491SZ0A/go)"
+    ]
+  },
+  "pending_gate": "Launch only after the user confirms the OpenCode Go workspace opt-in (Enable models hosted in China) is active; a chat-completion probe on deepseek-v4-flash must return 200 before the lane starts.",
+  "disposition": {
+    "old_attempts": "All Packy-transport partial artifacts for carr_s_e3_v1_deepseek archived under experiments/carr/runs/archive_e3_deepseek_hang_20260804 and archive_e3_deepseek_packy_switch_20260804 and excluded; no cross-attempt splicing.",
+    "rerun": "Full 4 seeds x 3 conditions rerun with the same frozen E3 science config (seeds, conditions, prompts, metrics), transport changed to OpenCode Go only.",
+    "science_unchanged": true,
+    "evidence_label": "PILOT_PENDING_AUDIT"
+  },
+  "claim_boundary": "OpenCode Go is a separate gateway context from the Packy proxy; results remain bounded cross-model sensitivity, not provider independence."
+}

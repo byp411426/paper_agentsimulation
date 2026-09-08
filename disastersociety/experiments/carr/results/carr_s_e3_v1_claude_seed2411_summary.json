@@ -1,0 +1,71 @@
+{
+  "status": "PILOT_PENDING_AUDIT",
+  "activity_type": "E3_BOUNDED_CROSS_MODEL_REPLICATION",
+  "decision_model": "packy-claude-sonnet-5",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e3_v1_claude.yaml",
+    "config_sha256": "136f2752d7f8f49eddd7e1d54c316288cf1f60cd4686bbfaf1570847307f4c84"
+  },
+  "protocol": {
+    "declared_seeds": [
+      2107,
+      2209,
+      2303,
+      2411
+    ],
+    "executed_seed_batch": [
+      2411
+    ],
+    "conditions": [
+      "full",
+      "full_minus_feedback",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 2,
+    "planned_runs": 3,
+    "reused_terminal_artifacts": 0,
+    "aborted_early": true,
+    "terminal_status_counts": {
+      "VALID": 1,
+      "ABORTED": 1
+    }
+  },
+  "runs": [
+    {
+      "seed": 2411,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 99,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 625.430288,
+      "run_dir": "experiments/carr/runs/carr_s_e3_v1_claude_full_seed2411",
+      "summary_sha256": "4cee6d0dc88894ed869008f3a78e9edead1f4cd9b14f472603f477bbc867a7ab",
+      "mechanism_metrics_sha256": "0b9ac8bdbef44eb9e16d5b41805957dc1c18ec47bb120dc5441e82c049843e65",
+      "provenance_sha256": "e2ca10b3654f603763c02c244acb50f1e3d70ae10f0bdd705e902aa889270a16"
+    },
+    {
+      "seed": 2411,
+      "condition": "full_minus_feedback",
+      "terminal_status": "ABORTED",
+      "n_ok": 30,
+      "n_cache": 0,
+      "n_failed": 1,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 160.304735,
+      "run_dir": "experiments/carr/runs/carr_s_e3_v1_claude_full_minus_feedback_seed2411",
+      "summary_sha256": "c023e89794d5a6dfce4c8afa749f9a281d23b192cbee6b63214dc21447dbecb6",
+      "mechanism_metrics_sha256": "8ad9bd4e1d3a74cbd132e55231a45f59e29359d1aadae598ea5ab7e8a7c8d8bd",
+      "provenance_sha256": "a784c666117a98dad0c04c02a520b61fdb9408cceaca6ab271ead86555e4ef3c"
+    }
+  ],
+  "claim_boundary": "Bounded same-proxy model-family replication; PILOT until audited."
+}

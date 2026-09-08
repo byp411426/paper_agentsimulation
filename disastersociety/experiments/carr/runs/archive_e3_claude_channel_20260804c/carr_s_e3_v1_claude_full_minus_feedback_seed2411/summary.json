@@ -1,0 +1,49 @@
+{
+  "run_seed": 2411,
+  "planned_steps": 10,
+  "completed_steps": 1,
+  "last_completed_step": 2,
+  "status": "ABORTED",
+  "world_final": {
+    "step": 2,
+    "hazard_distance_m": 4600.0,
+    "routes": {
+      "tiger_alternate": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7842.647526321486,
+        "source_linearid_count": 10,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      },
+      "tiger_primary": {
+        "open": true,
+        "capacity_per_step": 4,
+        "length_m": 7775.262075770729,
+        "source_linearid_count": 11,
+        "asset_status": "CONTROLLED_DERIVED_ASSET"
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {},
+    "route_closures": []
+  },
+  "gateway": {
+    "run_id": "carr_s_e3_v1_claude_full_minus_feedback_seed2411",
+    "spent": 0.253515,
+    "n_ok": 30,
+    "n_cache": 0,
+    "n_failed": 1,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 36485,
+    "live_completion_tokens": 9604,
+    "logical_prompt_tokens": 36485,
+    "logical_completion_tokens": 9604
+  },
+  "wall_clock_seconds": 160.304735,
+  "reason_code": "BACKEND_UNAVAILABLE",
+  "abort_reason": "declared backend logical decision failed; agent=syn_t047_h0000019_r001, step=2: litellm.ServiceUnavailableError: ServiceUnavailableError: OpenAIException - 分组 aws-q 下模型 claude-sonnet-5 无可用渠道（distributor），请尝试切换其他分组 (request id: 01KZ5F5B0QXCB8D1B4E8GPZRFZ)"
+}

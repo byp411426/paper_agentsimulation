@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" width="7.16in" height="2.9833in" font-family="Helvetica, Arial, sans-serif" fill="#1F1F1F" font-variant-numeric="tabular-nums">
+<defs>
+<marker id="arr-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1F"/></marker>
+<marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2166AC"/></marker>
+<marker id="arr-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D9720A"/></marker>
+<marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7B3294"/></marker>
+<marker id="arr-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#383838"/></marker>
+<marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1B7837"/></marker>
+<marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B2182B"/></marker>
+<marker id="arr-line" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker>
+</defs>
+
+<rect x="20" y="16" width="440" height="568" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="42" y="56" font-size="26" text-anchor="start" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">A  Asymmetric warning exposure</text>
+<g>
+<rect x="35.0" y="62.0" width="190" height="52" rx="12" fill="#EBDCF0" stroke="#7B3294" stroke-width="2"/>
+<polygon points="114.0,86.0 138.0,86.0 130.0,116.0" fill="#EBDCF0" stroke="#7B3294" stroke-width="2" stroke-linejoin="round"/>
+<text x="130" y="95.48" font-size="22" text-anchor="middle" fill="#7B3294" font-weight="normal" font-style="normal" opacity="1.0">official warning</text>
+</g>
+<g>
+<rect x="175.0" y="62.0" width="150" height="52" rx="12" fill="#EDEDED" stroke="#383838" stroke-width="2"/>
+<polygon points="234.0,86.0 258.0,86.0 250.0,116.0" fill="#EDEDED" stroke="#383838" stroke-width="2" stroke-linejoin="round"/>
+<text x="250" y="95.48" font-size="22" text-anchor="middle" fill="#383838" font-weight="normal" font-style="normal" opacity="1.0">no warning yet</text>
+</g>
+<g>
+<rect x="114.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="130" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="130" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident A</text>
+<g>
+<rect x="234.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="250" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="250" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident B</text>
+<g>
+<rect x="362.2" y="150" width="25.6" height="25.6" rx="11.200000000000001" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+<circle cx="375" cy="134.0" r="8.8" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+</g>
+<text x="375" y="202" font-size="19" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">dependent</text>
+<text x="375" y="222" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">member (care)</text>
+<g>
+<rect x="159.51999999999998" y="255.12" width="80.96000000000001" height="25.76" rx="7.36" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<rect x="192.64" y="240.4" width="31.28" height="16.560000000000002" rx="5.5200000000000005" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<circle cx="176.07999999999998" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+<circle cx="223.92000000000002" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+</g>
+<text x="200" y="312" font-size="20" text-anchor="middle" fill="#D9720A" font-weight="normal" font-style="normal" opacity="1.0">shared vehicle</text>
+<g>
+<rect x="50" y="340" width="380" height="86.0" rx="10" fill="#EDEDED" stroke="#383838" stroke-width="2"/>
+<polygon points="92.0,359.0 116.0,373.0 112.0,403.0 72.0,403.0 68.0,373.0" fill="#F3D6D9" stroke="#B2182B" stroke-width="2" stroke-linejoin="round"/>
+<text x="92.0" y="388.0" font-size="24.0" text-anchor="middle" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">!</text>
+<polygon points="380.0,401.0 396.0,369.0 412.0,401.0" fill="none" stroke="#383838" stroke-width="2" stroke-linejoin="round"/>
+<text x="396.0" y="361.0" font-size="20.0" text-anchor="middle" fill="#383838" font-weight="normal" font-style="normal" opacity="1.0">safety</text>
+<line x1="126.0" y1="383.0" x2="362.0" y2="383.0" stroke="#1B7837" stroke-width="5" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<text x="244.0" y="373.0" font-size="20.0" text-anchor="middle" fill="#1B7837" font-weight="normal" font-style="normal" opacity="1.0">main route (open)</text>
+</g>
+<text x="240" y="474" font-size="21" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">A is exposed; B is not yet informed</text>
+<rect x="500" y="16" width="440" height="568" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="522" y="56" font-size="26" text-anchor="start" fill="#D9720A" font-weight="bold" font-style="normal" opacity="1.0">B  Household coordination</text>
+<g>
+<rect x="525.0" y="62.0" width="170" height="52" rx="12" fill="#EBDCF0" stroke="#7B3294" stroke-width="2"/>
+<polygon points="594.0,86.0 618.0,86.0 610.0,116.0" fill="#EBDCF0" stroke="#7B3294" stroke-width="2" stroke-linejoin="round"/>
+<text x="610" y="95.48" font-size="22" text-anchor="middle" fill="#7B3294" font-weight="normal" font-style="normal" opacity="1.0">leave? when?</text>
+</g>
+<g>
+<rect x="655.0" y="62.0" width="150" height="52" rx="12" fill="#EBDCF0" stroke="#7B3294" stroke-width="2"/>
+<polygon points="714.0,86.0 738.0,86.0 730.0,116.0" fill="#EBDCF0" stroke="#7B3294" stroke-width="2" stroke-linejoin="round"/>
+<text x="730" y="95.48" font-size="22" text-anchor="middle" fill="#7B3294" font-weight="normal" font-style="normal" opacity="1.0">car + care?</text>
+</g>
+<g>
+<rect x="594.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="610" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="610" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident A</text>
+<g>
+<rect x="714.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="730" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="730" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident B</text>
+<g>
+<rect x="842.2" y="150" width="25.6" height="25.6" rx="11.200000000000001" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+<circle cx="855" cy="134.0" r="8.8" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+</g>
+<text x="855" y="202" font-size="19" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">dependent</text>
+<text x="855" y="222" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">member (care)</text>
+<g>
+<rect x="639.52" y="255.12" width="80.96000000000001" height="25.76" rx="7.36" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<rect x="672.64" y="240.4" width="31.28" height="16.560000000000002" rx="5.5200000000000005" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<circle cx="656.08" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+<circle cx="703.92" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+</g>
+<text x="680" y="312" font-size="20" text-anchor="middle" fill="#D9720A" font-weight="normal" font-style="normal" opacity="1.0">shared vehicle</text>
+<line x1="610" y1="118" x2="680" y2="356" stroke="#7B3294" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,4"/>
+<line x1="730" y1="118" x2="760" y2="356" stroke="#7B3294" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,4"/>
+<rect x="560" y="362" width="320" height="128" rx="12" fill="#FBE7D0" stroke="#D9720A" stroke-width="2.5"/>
+<text x="720" y="392" font-size="23" text-anchor="middle" fill="#D9720A" font-weight="bold" font-style="normal" opacity="1.0">Household plan</text>
+<text x="720" y="420" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">route · vehicle · companions · time</text>
+<text x="720" y="448" font-size="17" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">formed by negotiation</text>
+<text x="720" y="474" font-size="16" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">not a single mind</text>
+<rect x="980" y="16" width="440" height="568" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="1002" y="56" font-size="26" text-anchor="start" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">C  Disruption, feedback, adaptation</text>
+<g>
+<rect x="1074.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="1090" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="1090" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident A</text>
+<g>
+<rect x="1194.0" y="148" width="32.0" height="32.0" rx="14.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+<circle cx="1210" cy="128.0" r="11.0" fill="#DCE7F3" stroke="#2166AC" stroke-width="2"/>
+</g>
+<text x="1210" y="204" font-size="22" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">Resident B</text>
+<g>
+<rect x="1322.2" y="150" width="25.6" height="25.6" rx="11.200000000000001" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+<circle cx="1335" cy="134.0" r="8.8" fill="#EDEDED" stroke="#5F5F5F" stroke-width="2"/>
+</g>
+<text x="1335" y="202" font-size="19" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">dependent</text>
+<text x="1335" y="222" font-size="18" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">member (care)</text>
+<g>
+<rect x="1119.52" y="255.12" width="80.96000000000001" height="25.76" rx="7.36" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<rect x="1152.64" y="240.4" width="31.28" height="16.560000000000002" rx="5.5200000000000005" fill="#FBE7D0" stroke="#D9720A" stroke-width="2"/>
+<circle cx="1136.08" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+<circle cx="1183.92" cy="280.88" r="8.280000000000001" fill="#FFFFFF" stroke="#D9720A" stroke-width="2"/>
+</g>
+<text x="1160" y="312" font-size="20" text-anchor="middle" fill="#D9720A" font-weight="normal" font-style="normal" opacity="1.0">shared vehicle</text>
+<g>
+<rect x="1010" y="330" width="380" height="86.0" rx="10" fill="#EDEDED" stroke="#383838" stroke-width="2"/>
+<polygon points="1052.0,349.0 1076.0,363.0 1072.0,393.0 1032.0,393.0 1028.0,363.0" fill="#F3D6D9" stroke="#B2182B" stroke-width="2" stroke-linejoin="round"/>
+<text x="1052.0" y="378.0" font-size="24.0" text-anchor="middle" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">!</text>
+<polygon points="1340.0,391.0 1356.0,359.0 1372.0,391.0" fill="none" stroke="#383838" stroke-width="2" stroke-linejoin="round"/>
+<text x="1356.0" y="351.0" font-size="20.0" text-anchor="middle" fill="#383838" font-weight="normal" font-style="normal" opacity="1.0">safety</text>
+<line x1="1086.0" y1="373.0" x2="1322.0" y2="373.0" stroke="#383838" stroke-width="5" stroke-linecap="round"/>
+<line x1="1192.0" y1="355.0" x2="1216.0" y2="391.0" stroke="#B2182B" stroke-width="4" stroke-linecap="round"/>
+<line x1="1192.0" y1="391.0" x2="1216.0" y2="355.0" stroke="#B2182B" stroke-width="4" stroke-linecap="round"/>
+<text x="1230.0" y="359.0" font-size="20.0" text-anchor="start" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">CLOSED</text>
+<polyline points="1092.0,373.0 1122.0,399.0 1286.0,399.0 1316.0,373.0" fill="none" stroke="#1B7837" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8,5" marker-end="url(#arr-green)"/>
+<text x="1204.0" y="423.0" font-size="20.0" text-anchor="middle" fill="#1B7837" font-weight="normal" font-style="normal" opacity="1.0">alternate route</text>
+</g>
+<text x="1200" y="444" font-size="19" text-anchor="middle" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">execution feedback</text>
+<line x1="1200" y1="452" x2="1200" y2="478" stroke="#B2182B" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<rect x="1040" y="486" width="320" height="90" rx="12" fill="#DCEEE1" stroke="#1B7837" stroke-width="2.5"/>
+<text x="1200" y="516" font-size="22" text-anchor="middle" fill="#1B7837" font-weight="bold" font-style="normal" opacity="1.0">Updated plan</text>
+<text x="1200" y="542" font-size="18" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">alternate route · same companions</text>
+<text x="1200" y="564" font-size="19" text-anchor="middle" fill="#1B7837" font-weight="bold" font-style="normal" opacity="1.0">✓ passed constraint check</text>
+<line x1="460" y1="300" x2="500" y2="300" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-line)"/>
+<line x1="940" y1="300" x2="980" y2="300" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-line)"/>
+</svg>

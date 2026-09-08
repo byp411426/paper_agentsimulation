@@ -1,0 +1,7 @@
+{
+  "automation_id": "e1",
+  "kind": "heartbeat",
+  "status": "ACTIVE",
+  "purpose": "Review first complete seed, advance remaining jobs only after checks, repair errors and finish result artifacts",
+  "controller_exec_session": 22353
+}

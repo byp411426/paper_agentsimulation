@@ -1,0 +1,37 @@
+version: 1
+status: PILOT_VALIDATION_ONLY
+track: Carr-R
+
+data:
+  clean_survey: eventpacks/carr_2018/behavior/survey_clean.csv
+  evaluation_linkage: eventpacks/carr_2018/behavior/evaluation_respondents.csv
+  split: experiments/carr/protocol/carr_r_split.csv
+  field_roles: experiments/carr/protocol/field_roles.yaml
+
+experiment:
+  field_role_experiment: carr_r_prediction_primary
+  evaluation_splits:
+    - validation
+  sealed_splits:
+    - test
+  model_alias: packy-deepseek-v4-flash
+  prompt_version: carr_r_static_demographics_v1
+  temperature: 0.0
+  base_seed: 20260731
+  decision_threshold: 0.5
+  ece_bins: 10
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20260731
+  max_concurrency: 4
+  max_calls: 66
+  estimated_budget_usd: 1.0
+
+reporting:
+  result_json: experiments/baselines/results/carr_r_deepseek_validation_pilot.json
+  predictions_csv: experiments/baselines/results/carr_r_deepseek_validation_pilot_predictions.csv
+  run_root: experiments/carr/runs
+  cache: experiments/carr/runs/llm_cache.sqlite
+  export_respondent_id: false
+  interpretation: >-
+    Validation-only single-call static persona pilot using only the four frozen
+    Carr-R demographic runtime inputs. The test split remains sealed.

@@ -1,0 +1,21 @@
+{
+  "protocol_id": "carr_s_e3a_v8b_packy",
+  "frozen_at": "2026-08-04",
+  "status": "FROZEN_TRANSPORT_SWITCH",
+  "basis": "User 2026-08-04 instruction to run E3a v8b on the Packy gateway after repeated opencode empty-response aborts.",
+  "design": {
+    "variant": "v8b",
+    "seeds": [2107, 2209, 2303, 2411],
+    "conditions": ["full", "full_minus_feedback", "full_minus_interaction"],
+    "n_runs": 12,
+    "model": "packy-deepseek-v4-flash",
+    "metrics": "v8 frozen summarizer; variant-internal paired effect and same-seed comparison"
+  },
+  "disposition": {
+    "opencode_attempts": "All prior carr_s_e3a_v8b opencode artifacts (completed seeds 2107/2209, partial 2303) preserved under runs/archive_e3a_v8b_opencode_packy_switch_20260804 and excluded; no cross-transport splicing.",
+    "rerun": "Full 4 seeds x 3 conditions rerun on Packy under the new protocol id.",
+    "science_unchanged": true
+  },
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "claim_boundary": "Prompt-wording sensitivity on one gateway/model; Packy transport is the same proxy family as E1/E2/E3."
+}

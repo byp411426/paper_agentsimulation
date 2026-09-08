@@ -1,0 +1,132 @@
+{
+  "git_sha": "2203f525129369683d19500b5b4f882c187ff4fe",
+  "git_dirty": false,
+  "config": {
+    "run": {
+      "run_id": "carr_s_formal_e2_v5_full_minus_feedback_seed101",
+      "total_steps": 8,
+      "step_minutes": 30,
+      "seed": 101
+    },
+    "llm": {
+      "decision_model": "packy-deepseek-v4-flash",
+      "models_config": "configs/models.yaml",
+      "temperature": 0.0,
+      "max_concurrency": 1,
+      "budget_usd": 0.35,
+      "fallback_threshold": 0.01
+    },
+    "experiment": {
+      "evidence_status": "PILOT",
+      "activity_type": "FORMAL_MECHANISM_MATRIX",
+      "prompt_version": "carr_s_controlled_resident_v5",
+      "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+      "eventpack_root": "eventpacks/carr_2018",
+      "route_asset": "environment/west_redding_controlled_routes.json",
+      "n_households": 5,
+      "min_dependents": 1,
+      "max_household_size": 4,
+      "controlled_zone": "west_redding",
+      "warning_step": 1,
+      "closure_step_choices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "depart_step": 5,
+      "primary_route_id": "tiger_primary",
+      "alternate_route_id": "tiger_alternate",
+      "route_capacity_per_step": 8,
+      "initial_hazard_distance_m": 6000,
+      "hazard_approach_per_step_m": 700,
+      "official_warning_delivery_probability": 0.5,
+      "social_message_delivery_probability": 0.15,
+      "formal_protocol": {
+        "execute_sequentially": true,
+        "seeds": [
+          101,
+          202,
+          303,
+          404,
+          505,
+          606,
+          707,
+          808,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          1515,
+          1616
+        ],
+        "n_seeds": 16,
+        "conditions": [
+          "full",
+          "full_minus_memory",
+          "full_minus_feedback",
+          "full_minus_planning",
+          "full_minus_interaction"
+        ],
+        "seed_count_basis": "v3 backend pilot paired-difference SD; binding module planning SD=0.50, so 16 seeds target MCSE 0.125. The reported 95% paired-t interval may be wider and is not replaced by a normal approximation.",
+        "paired_design": "per-seed run-level full vs drop-one paired differences; component-isolated common exogenous streams; condition names excluded from stream keys",
+        "predicted_directions": {
+          "memory": "positive (warning_retention_rate)",
+          "feedback": "positive (primary_to_alternate_update_rate)",
+          "planning": "positive (successful_replan_rate)",
+          "interaction": "positive (compatible_commitment_rate)"
+        },
+        "exclusion_rule": "a mechanism pair is excluded if either run is not VALID; INVALID runs are preserved with artifacts and never rerun into the same run ID",
+        "test_split_opened": false,
+        "expected_internal_cost_usd": 24.0,
+        "expected_cost_is_provider_invoice": false,
+        "raw_run_evidence_status": "PILOT pending completion, artifact audit, and paired analysis; eligible results may be promoted to VERIFIED only through the evidence ledger"
+      },
+      "phase_boundary": {
+        "purpose": "formal E2 mechanism ablation evidence for the first framework paper; estimates conditional drop-one effects under the full system, not universal independent module effects or interactions",
+        "formal_evidence": true,
+        "test_split_opened": false,
+        "historical_closure_reconstruction": false
+      },
+      "route_semantics": {
+        "geometry": "sourced 2018 TIGER/Line road network",
+        "obstruction": "algorithmic controlled perturbation",
+        "historical_closure_observed": false,
+        "traffic_scope": "route-level capacity, not microscopic traffic reconstruction"
+      },
+      "condition": "full_minus_feedback"
+    }
+  },
+  "models": [
+    "packy-deepseek-v4-flash"
+  ],
+  "lockfile_sha": "fceb149895336d85",
+  "eventpack_id": "carr_2018",
+  "case_semantics": "Carr-informed controlled mechanism scenario with TIGER-derived routes",
+  "models_config": {
+    "path": "configs/models.yaml",
+    "sha256": "c8d91f8ae4a0f6f8a250615b657d8783fff9e509167dc11b664a6edbd61de34d"
+  },
+  "credential_environment_name": "PACKY_API_KEY",
+  "credential_value_recorded": false,
+  "source_files": {
+    "carr_runner": {
+      "path": "experiments/carr/runner.py",
+      "sha256": "b24d71a0d4485f21b61b8ebf4bc9a0907359ee0f1eaee4f062cc6631ae09cf0a"
+    },
+    "resident_adapter": {
+      "path": "ds/agents/carr.py",
+      "sha256": "41f0bf3a48c85e8bc03dd9c7a4c19e425b5ecbec3d3f309643decdd796c38817"
+    },
+    "kernel_engine": {
+      "path": "ds/kernel/engine.py",
+      "sha256": "c066e6cae0476c71aa48b40d68b69a1dc71d5d5c05291b48c301b653e0907e89"
+    },
+    "llm_gateway": {
+      "path": "ds/llm/gateway.py",
+      "sha256": "94ea13c27590a05d8689cdca4406da52079347fcf6bbab28cbadabf216617052"
+    }
+  }
+}

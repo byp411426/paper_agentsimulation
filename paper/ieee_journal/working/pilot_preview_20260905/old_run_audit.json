@@ -1,0 +1,533 @@
+[
+  {
+    "run": "e1_formal_r7_seed7201",
+    "seed": 7201,
+    "directory": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/runs/e1_formal_r7_seed7201/carr_s_e1_v2_formal",
+    "n_households": 24,
+    "n_members": 44,
+    "steps": 25,
+    "executed_party_records": 12,
+    "repeated_members": 0,
+    "repeat_examples": [],
+    "premature_execution_count": 12,
+    "premature_examples": [
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000002_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000003_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:4:syn_t001_h0000004_r001",
+        "executed_step": 4,
+        "planned_step": 5
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:8:syn_t001_h0000005_r001",
+        "executed_step": 8,
+        "planned_step": 9
+      }
+    ],
+    "members_missing_final": 6,
+    "missing_decision_members": [],
+    "members_missing_first_snapshot": 13,
+    "accepted_messages_without_recipient_responses": 0,
+    "missing_initial_can_reconstruct_from_code": true,
+    "use_classification": "BEHAVIOR_AFFECTED_REQUIRES_REPAIRED_RERUN_FOR_NEW_PROCESS_CLAIMS"
+  },
+  {
+    "run": "e1_formal_r10_seed8301",
+    "seed": 8301,
+    "directory": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/runs/e1_formal_r10_seed8301/carr_s_e1_v2_formal",
+    "n_households": 24,
+    "n_members": 44,
+    "steps": 25,
+    "executed_party_records": 16,
+    "repeated_members": 3,
+    "repeat_examples": [
+      {
+        "member": "syn_t002_h0000006_r003",
+        "first_departure": 4,
+        "repeat_departure": 6,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2",
+          "syn_t002_h0000006:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000006_r002",
+        "first_departure": 4,
+        "repeat_departure": 6,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2",
+          "syn_t002_h0000006:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000006_r001",
+        "first_departure": 4,
+        "repeat_departure": 6,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2",
+          "syn_t002_h0000006:vehicle:3"
+        ]
+      }
+    ],
+    "premature_execution_count": 16,
+    "premature_examples": [
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000001_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000002_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:4:syn_t001_h0000003_r001",
+        "executed_step": 4,
+        "planned_step": 5
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000004_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      }
+    ],
+    "members_missing_final": 5,
+    "missing_decision_members": [],
+    "members_missing_first_snapshot": 13,
+    "accepted_messages_without_recipient_responses": 0,
+    "missing_initial_can_reconstruct_from_code": true,
+    "use_classification": "BEHAVIOR_AFFECTED_REQUIRES_REPAIRED_RERUN_FOR_NEW_PROCESS_CLAIMS"
+  },
+  {
+    "run": "e1_formal_r9_seed9401",
+    "seed": 9401,
+    "directory": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/runs/e1_formal_r9_seed9401/carr_s_e1_v2_formal",
+    "n_households": 24,
+    "n_members": 44,
+    "steps": 25,
+    "executed_party_records": 13,
+    "repeated_members": 1,
+    "repeat_examples": [
+      {
+        "member": "syn_t002_h0000010_r001",
+        "first_departure": 7,
+        "repeat_departure": 8,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000010:vehicle:1",
+          "syn_t002_h0000010:vehicle:2"
+        ]
+      }
+    ],
+    "premature_execution_count": 13,
+    "premature_examples": [
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:4:syn_t001_h0000001_r001",
+        "executed_step": 4,
+        "planned_step": 5
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:7:syn_t001_h0000003_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:5:syn_t001_h0000004_r001",
+        "executed_step": 5,
+        "planned_step": 6
+      },
+      {
+        "commitment": "auto_carr_s_e1_v2_formal:8:syn_t001_h0000005_r001",
+        "executed_step": 8,
+        "planned_step": 9
+      }
+    ],
+    "members_missing_final": 4,
+    "missing_decision_members": [],
+    "members_missing_first_snapshot": 13,
+    "accepted_messages_without_recipient_responses": 0,
+    "missing_initial_can_reconstruct_from_code": true,
+    "use_classification": "BEHAVIOR_AFFECTED_REQUIRES_REPAIRED_RERUN_FOR_NEW_PROCESS_CLAIMS"
+  },
+  {
+    "run": "e1_scale_100_packy_seed101_r5",
+    "seed": 101,
+    "directory": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/runs/e1_scale_100_packy_seed101_r5/carr_s_e1_scale_100_packy",
+    "n_households": 100,
+    "n_members": 201,
+    "steps": 25,
+    "executed_party_records": 57,
+    "repeated_members": 11,
+    "repeat_examples": [
+      {
+        "member": "syn_t002_h0000010_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000010:vehicle:1",
+          "syn_t002_h0000010:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000021_r001",
+        "first_departure": 4,
+        "repeat_departure": 6,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000021:vehicle:1",
+          "syn_t003_h0000021:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000008_r002",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000008:vehicle:1",
+          "syn_t004_h0000008:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000008_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000008:vehicle:1",
+          "syn_t004_h0000008:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000011_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000011:vehicle:1",
+          "syn_t004_h0000011:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t005_h0000025_r001",
+        "first_departure": 6,
+        "repeat_departure": 7,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t005_h0000025:vehicle:1",
+          "syn_t005_h0000025:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000006_r003",
+        "first_departure": 7,
+        "repeat_departure": 8,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000006_r002",
+        "first_departure": 7,
+        "repeat_departure": 8,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000006_r001",
+        "first_departure": 7,
+        "repeat_departure": 8,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000006:vehicle:1",
+          "syn_t002_h0000006:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t005_h0000014_r002",
+        "first_departure": 9,
+        "repeat_departure": 11,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t005_h0000014:vehicle:2",
+          "syn_t005_h0000014:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000009_r002",
+        "first_departure": 20,
+        "repeat_departure": 22,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000009:vehicle:3",
+          "syn_t003_h0000009:vehicle:2"
+        ]
+      }
+    ],
+    "premature_execution_count": 52,
+    "premature_examples": [
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000001_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:3:syn_t001_h0000002_r001",
+        "executed_step": 3,
+        "planned_step": 4
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000003_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000004_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      }
+    ],
+    "members_missing_final": 20,
+    "missing_decision_members": [],
+    "members_missing_first_snapshot": 48,
+    "accepted_messages_without_recipient_responses": 0,
+    "missing_initial_can_reconstruct_from_code": true,
+    "use_classification": "BEHAVIOR_AFFECTED_REQUIRES_REPAIRED_RERUN_FOR_NEW_PROCESS_CLAIMS"
+  },
+  {
+    "run": "e1_scale_100_packy_seed202_r2",
+    "seed": 202,
+    "directory": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/runs/e1_scale_100_packy_seed202_r2/carr_s_e1_scale_100_packy",
+    "n_households": 100,
+    "n_members": 201,
+    "steps": 25,
+    "executed_party_records": 57,
+    "repeated_members": 17,
+    "repeat_examples": [
+      {
+        "member": "syn_t003_h0000021_r001",
+        "first_departure": 3,
+        "repeat_departure": 4,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000021:vehicle:1",
+          "syn_t003_h0000021:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t005_h0000016_r001",
+        "first_departure": 3,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t005_h0000016:vehicle:1",
+          "syn_t005_h0000016:vehicle:2",
+          "syn_t005_h0000016:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t002_h0000010_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t002_h0000010:vehicle:1",
+          "syn_t002_h0000010:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000016_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000016:vehicle:1",
+          "syn_t003_h0000016:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000011_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000011:vehicle:1",
+          "syn_t004_h0000011:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000019_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000019:vehicle:1",
+          "syn_t004_h0000019:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t005_h0000019_r001",
+        "first_departure": 4,
+        "repeat_departure": 5,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t005_h0000019:vehicle:1",
+          "syn_t005_h0000019:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000001_r001",
+        "first_departure": 7,
+        "repeat_departure": 8,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000001:vehicle:1",
+          "syn_t003_h0000001:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000008_r001",
+        "first_departure": 9,
+        "repeat_departure": 10,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000008:vehicle:2",
+          "syn_t003_h0000008:vehicle:1"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000008_r002",
+        "first_departure": 9,
+        "repeat_departure": 10,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000008:vehicle:2",
+          "syn_t003_h0000008:vehicle:1"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000021_r001",
+        "first_departure": 18,
+        "repeat_departure": 19,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000021:vehicle:1",
+          "syn_t004_h0000021:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000021_r004",
+        "first_departure": 18,
+        "repeat_departure": 19,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000021:vehicle:1",
+          "syn_t004_h0000021:vehicle:2",
+          "syn_t004_h0000021:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000021_r003",
+        "first_departure": 18,
+        "repeat_departure": 19,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000021:vehicle:1",
+          "syn_t004_h0000021:vehicle:2",
+          "syn_t004_h0000021:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000021_r005",
+        "first_departure": 18,
+        "repeat_departure": 19,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000021:vehicle:1",
+          "syn_t004_h0000021:vehicle:2",
+          "syn_t004_h0000021:vehicle:3"
+        ]
+      },
+      {
+        "member": "syn_t003_h0000004_r003",
+        "first_departure": 21,
+        "repeat_departure": 22,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t003_h0000004:vehicle:1",
+          "syn_t003_h0000004:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000008_r002",
+        "first_departure": 24,
+        "repeat_departure": 25,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000008:vehicle:1",
+          "syn_t004_h0000008:vehicle:2"
+        ]
+      },
+      {
+        "member": "syn_t004_h0000008_r001",
+        "first_departure": 24,
+        "repeat_departure": 25,
+        "prior_location": "controlled_safe_zone",
+        "vehicles": [
+          "syn_t004_h0000008:vehicle:1",
+          "syn_t004_h0000008:vehicle:2"
+        ]
+      }
+    ],
+    "premature_execution_count": 54,
+    "premature_examples": [
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000001_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000002_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:5:syn_t001_h0000003_r001",
+        "executed_step": 5,
+        "planned_step": 6
+      },
+      {
+        "commitment": "auto_carr_s_e1_scale_100_packy:7:syn_t001_h0000004_r001",
+        "executed_step": 7,
+        "planned_step": 8
+      }
+    ],
+    "members_missing_final": 32,
+    "missing_decision_members": [],
+    "members_missing_first_snapshot": 48,
+    "accepted_messages_without_recipient_responses": 0,
+    "missing_initial_can_reconstruct_from_code": true,
+    "use_classification": "BEHAVIOR_AFFECTED_REQUIRES_REPAIRED_RERUN_FOR_NEW_PROCESS_CLAIMS"
+  }
+]

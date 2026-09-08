@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "mode": "offline cache-only",
+  "freeze_sha256": "d812a036b03dc742cc9797d99ddfb7e959920a63f64bcc74845669b20cc1ab6d",
+  "checks": [
+    {
+      "households": 24,
+      "seed": 7201,
+      "original_attempt": 3,
+      "complete_steps": 25,
+      "events_byte_identical": true,
+      "cached_rows": 247,
+      "cache_hits": 247,
+      "new_successful_calls": 0,
+      "source_cache_unchanged": true,
+      "correct_terminal_state": true,
+      "passed": true
+    },
+    {
+      "households": 24,
+      "seed": 8301,
+      "original_attempt": 1,
+      "complete_steps": 25,
+      "events_byte_identical": true,
+      "cached_rows": 188,
+      "cache_hits": 188,
+      "new_successful_calls": 0,
+      "source_cache_unchanged": true,
+      "correct_terminal_state": true,
+      "passed": true
+    },
+    {
+      "households": 24,
+      "seed": 9401,
+      "original_attempt": 1,
+      "complete_steps": 25,
+      "events_byte_identical": true,
+      "cached_rows": 224,
+      "cache_hits": 224,
+      "new_successful_calls": 0,
+      "source_cache_unchanged": true,
+      "correct_terminal_state": true,
+      "passed": true
+    },
+    {
+      "households": 100,
+      "seed": 101,
+      "original_attempt": 2,
+      "complete_steps": 11,
+      "events_byte_identical": true,
+      "cached_rows": 478,
+      "cache_hits": 478,
+      "new_successful_calls": 0,
+      "source_cache_unchanged": true,
+      "correct_terminal_state": true,
+      "passed": true
+    }
+  ]
+}

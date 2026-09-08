@@ -1,0 +1,41 @@
+{
+  "run_seed": 505,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "VALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "controlled_alternate": {
+        "open": true,
+        "capacity_per_step": 8
+      },
+      "controlled_primary": {
+        "open": false,
+        "capacity_per_step": 8
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {},
+    "route_closures": [
+      {
+        "step": 4,
+        "route_id": "controlled_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_mechanism_nonsaturated_pilot_full_minus_planning_seed505",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 174,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0
+  }
+}

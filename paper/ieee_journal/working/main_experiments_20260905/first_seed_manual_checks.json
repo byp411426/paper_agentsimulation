@@ -1,0 +1,134 @@
+{
+  "frozen_inputs_match": true,
+  "graph_and_message_time_violations": [],
+  "delivered_message_recipient_events": 76,
+  "departure_trace": [
+    {
+      "step": 3,
+      "resident": "syn_t001_h0000008_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 6,
+      "resident": "syn_t001_h0000004_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000002_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000003_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000006_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t002_h0000002_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t002_h0000005_r001",
+      "route": "tiger_primary",
+      "mode": "solo",
+      "previous_closed_route_rejections": []
+    },
+    {
+      "step": 11,
+      "resident": "syn_t002_h0000009_r001",
+      "route": "tiger_alternate",
+      "mode": "solo",
+      "previous_closed_route_rejections": [
+        10
+      ]
+    },
+    {
+      "step": 12,
+      "resident": "syn_t002_h0000014_r001",
+      "route": "tiger_alternate",
+      "mode": "commitment",
+      "previous_closed_route_rejections": [
+        9
+      ]
+    },
+    {
+      "step": 12,
+      "resident": "syn_t002_h0000014_r002",
+      "route": "tiger_alternate",
+      "mode": "commitment",
+      "previous_closed_route_rejections": [
+        9
+      ]
+    },
+    {
+      "step": 14,
+      "resident": "syn_t002_h0000013_r001",
+      "route": "tiger_alternate",
+      "mode": "commitment",
+      "previous_closed_route_rejections": [
+        11
+      ]
+    },
+    {
+      "step": 14,
+      "resident": "syn_t002_h0000013_r003",
+      "route": "tiger_alternate",
+      "mode": "commitment",
+      "previous_closed_route_rejections": [
+        11
+      ]
+    },
+    {
+      "step": 21,
+      "resident": "syn_t002_h0000006_r001",
+      "route": "tiger_alternate",
+      "mode": "solo",
+      "previous_closed_route_rejections": [
+        20
+      ]
+    },
+    {
+      "step": 21,
+      "resident": "syn_t002_h0000012_r001",
+      "route": "tiger_alternate",
+      "mode": "solo",
+      "previous_closed_route_rejections": [
+        20
+      ]
+    },
+    {
+      "step": 25,
+      "resident": "syn_t002_h0000008_r001",
+      "route": "tiger_alternate",
+      "mode": "solo",
+      "previous_closed_route_rejections": [
+        24
+      ]
+    }
+  ],
+  "metric_denominators": {
+    "decision_residents": 31,
+    "all_households": 24,
+    "multi_decision_households": 7
+  },
+  "logical_decisions": 247
+}

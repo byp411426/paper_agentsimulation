@@ -1,0 +1,51 @@
+{
+  "cwd": "/Users/linnuo/Documents/agentSimulation/disastersociety",
+  "launch_status": "NOT_STARTED_SMALL_PILOT_FIRST",
+  "jobs": [
+    {
+      "households": 24,
+      "seed": 7201,
+      "steps": 25,
+      "status": "PREPARED_NOT_STARTED",
+      "config": "experiments/carr/configs/carr_s_e1_repaired_24.yaml",
+      "output": "experiments/carr/runs/e1_repaired_20260905_24hh_seed7201",
+      "command": "PYTHONHASHSEED=0 PYTHONPATH=. .venv/bin/python scripts/run_carr_e1_v2_preflight.py --config experiments/carr/configs/carr_s_e1_repaired_24.yaml --backend real --n-households 24 --seed 7201 --out-dir experiments/carr/runs/e1_repaired_20260905_24hh_seed7201 --keychain-service PACKY_API_KEY"
+    },
+    {
+      "households": 24,
+      "seed": 8301,
+      "steps": 25,
+      "status": "PREPARED_NOT_STARTED",
+      "config": "experiments/carr/configs/carr_s_e1_repaired_24.yaml",
+      "output": "experiments/carr/runs/e1_repaired_20260905_24hh_seed8301",
+      "command": "PYTHONHASHSEED=0 PYTHONPATH=. .venv/bin/python scripts/run_carr_e1_v2_preflight.py --config experiments/carr/configs/carr_s_e1_repaired_24.yaml --backend real --n-households 24 --seed 8301 --out-dir experiments/carr/runs/e1_repaired_20260905_24hh_seed8301 --keychain-service PACKY_API_KEY"
+    },
+    {
+      "households": 24,
+      "seed": 9401,
+      "steps": 25,
+      "status": "PREPARED_NOT_STARTED",
+      "config": "experiments/carr/configs/carr_s_e1_repaired_24.yaml",
+      "output": "experiments/carr/runs/e1_repaired_20260905_24hh_seed9401",
+      "command": "PYTHONHASHSEED=0 PYTHONPATH=. .venv/bin/python scripts/run_carr_e1_v2_preflight.py --config experiments/carr/configs/carr_s_e1_repaired_24.yaml --backend real --n-households 24 --seed 9401 --out-dir experiments/carr/runs/e1_repaired_20260905_24hh_seed9401 --keychain-service PACKY_API_KEY"
+    },
+    {
+      "households": 100,
+      "seed": 101,
+      "steps": 25,
+      "status": "PREPARED_NOT_STARTED",
+      "config": "experiments/carr/configs/carr_s_e1_repaired_100.yaml",
+      "output": "experiments/carr/runs/e1_repaired_20260905_100hh_seed101",
+      "command": "PYTHONHASHSEED=0 PYTHONPATH=. .venv/bin/python scripts/run_carr_e1_v2_preflight.py --config experiments/carr/configs/carr_s_e1_repaired_100.yaml --backend real --n-households 100 --seed 101 --out-dir experiments/carr/runs/e1_repaired_20260905_100hh_seed101 --keychain-service PACKY_API_KEY"
+    },
+    {
+      "households": 100,
+      "seed": 202,
+      "steps": 25,
+      "status": "PREPARED_NOT_STARTED",
+      "config": "experiments/carr/configs/carr_s_e1_repaired_100.yaml",
+      "output": "experiments/carr/runs/e1_repaired_20260905_100hh_seed202",
+      "command": "PYTHONHASHSEED=0 PYTHONPATH=. .venv/bin/python scripts/run_carr_e1_v2_preflight.py --config experiments/carr/configs/carr_s_e1_repaired_100.yaml --backend real --n-households 100 --seed 202 --out-dir experiments/carr/runs/e1_repaired_20260905_100hh_seed202 --keychain-service PACKY_API_KEY"
+    }
+  ]
+}

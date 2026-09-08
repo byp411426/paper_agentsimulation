@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-09-05T16:08:07.836233+00:00",
+  "real_attempt": 2,
+  "prefix_complete_steps": 9,
+  "prefix_events_byte_identical": true,
+  "cache_hits": 366,
+  "new_successful_calls_observed": 4,
+  "call_status_counts": {
+    "cache_hit": 366,
+    "ok": 4
+  },
+  "freeze_sha256": "57510fc89f5114e3a5f1eccea0210e9bb7c5a72ff385f0990f14859e187a17bf"
+}

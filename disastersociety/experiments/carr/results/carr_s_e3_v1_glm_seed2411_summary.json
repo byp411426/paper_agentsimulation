@@ -1,0 +1,85 @@
+{
+  "status": "PILOT_PENDING_AUDIT",
+  "activity_type": "E3_BOUNDED_CROSS_MODEL_REPLICATION",
+  "decision_model": "packy-glm-5",
+  "prompt_version": "carr_s_controlled_resident_v8",
+  "metric_protocol_version": "v8",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_e3_v1_glm.yaml",
+    "config_sha256": "1033d0a1ed4c4533849166036d86fe5a5a8c7a2c6849f387ef272e8b676a311d"
+  },
+  "protocol": {
+    "declared_seeds": [
+      2107,
+      2209,
+      2303,
+      2411
+    ],
+    "executed_seed_batch": [
+      2411
+    ],
+    "conditions": [
+      "full",
+      "full_minus_feedback",
+      "full_minus_interaction"
+    ],
+    "carr_r_test_split_opened": false
+  },
+  "completion": {
+    "completed_runs": 3,
+    "planned_runs": 3,
+    "reused_terminal_artifacts": 0,
+    "aborted_early": false,
+    "terminal_status_counts": {
+      "VALID": 3
+    }
+  },
+  "runs": [
+    {
+      "seed": 2411,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 114,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 567.919711,
+      "run_dir": "experiments/carr/runs/carr_s_e3_v1_glm_full_seed2411",
+      "summary_sha256": "e6086ed8904557ff699e425093a7f660534c5f818e60946270e7e78c0e17c4bd",
+      "mechanism_metrics_sha256": "71084643a81c10429c9c7efd9c25ceec1829e71719d9254f8bf0ef3c3d83c3b8",
+      "provenance_sha256": "8a647a692d1a8385333b2cc381674e6fd54b8d5bd65fbe4190b9705b90202480"
+    },
+    {
+      "seed": 2411,
+      "condition": "full_minus_feedback",
+      "terminal_status": "VALID",
+      "n_ok": 160,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 185.465286,
+      "run_dir": "experiments/carr/runs/carr_s_e3_v1_glm_full_minus_feedback_seed2411",
+      "summary_sha256": "188105befb03a213d50e25fa5232b980db0ad0d4ff856bdd9450a9e0a9b46708",
+      "mechanism_metrics_sha256": "90fd805c52b40e99c8eefba0c5f79ead6af71e0d79f2c4f818c8b273dcc7a444",
+      "provenance_sha256": "e9cfbfdbbea18c3e084833e8ef7dc7adae6ec726a06b49d165f8ac9fafdb4309"
+    },
+    {
+      "seed": 2411,
+      "condition": "full_minus_interaction",
+      "terminal_status": "VALID",
+      "n_ok": 127,
+      "n_cache": 0,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "wall_clock_seconds": 140.622535,
+      "run_dir": "experiments/carr/runs/carr_s_e3_v1_glm_full_minus_interaction_seed2411",
+      "summary_sha256": "b1595f4ae2b6a3f7e14b26045c6e531d1ff6d2abc8d2133822dcd871c9e0ebf8",
+      "mechanism_metrics_sha256": "aa154ba632b2f68c6fdd0981b3c612df1a4f54aac2fc4bb39479eaad930cc902",
+      "provenance_sha256": "80a17f2fbecdd6a111c08c92a946a2cd136f21a1f83c2f95715a732bd7cafbd4"
+    }
+  ],
+  "claim_boundary": "Bounded same-proxy model-family replication; PILOT until audited."
+}

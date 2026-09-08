@@ -1,0 +1,8 @@
+{
+  "reason": "Explanatory plan reason overran 240-character display limit after repair; normalize explanation text like existing assessment, keep strict action/party validation",
+  "scientific_parameters_changed": false,
+  "json_schema_changed": false,
+  "start": "from initial state with isolated successful-response cache",
+  "attempt1_preserved": true,
+  "new_contract_hash": "ea9a4ee41e155e6e1510119c04c6f0548a62fc383143dc4015738ecb694ef8fd"
+}

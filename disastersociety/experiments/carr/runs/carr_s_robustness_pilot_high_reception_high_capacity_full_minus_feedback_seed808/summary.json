@@ -1,0 +1,53 @@
+{
+  "run_seed": 808,
+  "planned_steps": 8,
+  "completed_steps": 8,
+  "last_completed_step": 8,
+  "status": "VALID",
+  "world_final": {
+    "step": 8,
+    "hazard_distance_m": 400.0,
+    "routes": {
+      "controlled_alternate": {
+        "open": true,
+        "capacity_per_step": 12,
+        "length_m": null,
+        "source_linearid_count": 0,
+        "asset_status": null
+      },
+      "controlled_primary": {
+        "open": false,
+        "capacity_per_step": 12,
+        "length_m": null,
+        "source_linearid_count": 0,
+        "asset_status": null
+      }
+    },
+    "n_evacuated_residents": 0,
+    "n_safe_dependents": 0,
+    "coordinated_movements": 0,
+    "uncoordinated_movements": 0,
+    "rejections": {
+      "route closed": 116
+    },
+    "route_closures": [
+      {
+        "step": 5,
+        "route_id": "controlled_primary"
+      }
+    ]
+  },
+  "gateway": {
+    "run_id": "carr_s_robustness_pilot_high_reception_high_capacity_full_minus_feedback_seed808",
+    "spent": 0.0,
+    "n_ok": 0,
+    "n_cache": 243,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "fallback_rate": 0.0,
+    "live_prompt_tokens": 0,
+    "live_completion_tokens": 0,
+    "logical_prompt_tokens": 156253,
+    "logical_completion_tokens": 26008
+  }
+}

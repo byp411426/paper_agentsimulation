@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 920" width="7.16in" height="4.3915in" font-family="Helvetica, Arial, sans-serif" fill="#1F1F1F" font-variant-numeric="tabular-nums">
+<defs>
+<marker id="arr-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1F"/></marker>
+<marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2166AC"/></marker>
+<marker id="arr-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D9720A"/></marker>
+<marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7B3294"/></marker>
+<marker id="arr-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#383838"/></marker>
+<marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1B7837"/></marker>
+<marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B2182B"/></marker>
+<marker id="arr-line" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker>
+<marker id="arr-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F5F5F"/></marker>
+</defs>
+
+<rect x="20" y="76" width="224" height="250" rx="12" fill="#EDEDED" stroke="#383838" stroke-width="2.5"/>
+<text x="132.0" y="118" font-size="23" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">1  Dynamic events &amp;
+limited observation</text>
+<text x="132.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">EventPack / World emit</text>
+<text x="132.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">warning · hazard · road</text>
+<text x="132.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">events; Interaction emits</text>
+<text x="132.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">social messages. Resident</text>
+<text x="132.0" y="250" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">sees only channel / location /</text>
+<text x="132.0" y="274" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">access-conditioned facts.</text>
+<rect x="266" y="76" width="224" height="250" rx="12" fill="#DCE7F3" stroke="#2166AC" stroke-width="2.5"/>
+<text x="378.0" y="118" font-size="23" text-anchor="middle" fill="#2166AC" font-weight="bold" font-style="normal" opacity="1.0">2  Memory</text>
+<text x="378.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">only processed info enters</text>
+<text x="378.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">private memory; retrieve by</text>
+<text x="378.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">recency, importance and</text>
+<text x="378.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">relevance for the current step.</text>
+<circle cx="468" cy="98" r="11" fill="#FFFFFF" stroke="#2166AC" stroke-width="2"/>
+<line x1="468" y1="88" x2="468" y2="108" stroke="#2166AC" stroke-width="3" stroke-linecap="round"/>
+<text x="450" y="70" font-size="13" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">on/off</text>
+<rect x="512" y="76" width="224" height="250" rx="12" fill="#F3D6D9" stroke="#B2182B" stroke-width="2.5"/>
+<text x="624.0" y="118" font-size="23" text-anchor="middle" fill="#B2182B" font-weight="bold" font-style="normal" opacity="1.0">3  Feedback &amp;
+belief update</text>
+<text x="624.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">local observation + prior</text>
+<text x="624.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">execution result revise route</text>
+<text x="624.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">belief; World state is NOT</text>
+<text x="624.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">auto-synced to every resident.</text>
+<circle cx="714" cy="98" r="11" fill="#FFFFFF" stroke="#B2182B" stroke-width="2"/>
+<line x1="714" y1="88" x2="714" y2="108" stroke="#B2182B" stroke-width="3" stroke-linecap="round"/>
+<text x="696" y="70" font-size="13" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">on/off</text>
+<rect x="758" y="76" width="224" height="250" rx="12" fill="#DCEEE1" stroke="#1B7837" stroke-width="2.5"/>
+<text x="870.0" y="118" font-size="23" text-anchor="middle" fill="#1B7837" font-weight="bold" font-style="normal" opacity="1.0">4  Planning</text>
+<text x="870.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">structured plan: route,</text>
+<text x="870.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">vehicle, companions, departure</text>
+<text x="870.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">time. Plan is intent only —</text>
+<text x="870.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">no physical state change yet.</text>
+<circle cx="960" cy="98" r="11" fill="#FFFFFF" stroke="#1B7837" stroke-width="2"/>
+<line x1="960" y1="88" x2="960" y2="108" stroke="#1B7837" stroke-width="3" stroke-linecap="round"/>
+<text x="942" y="70" font-size="13" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">on/off</text>
+<rect x="1004" y="76" width="224" height="250" rx="12" fill="#EBDCF0" stroke="#7B3294" stroke-width="2.5"/>
+<text x="1116.0" y="118" font-size="23" text-anchor="middle" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">5  Interaction &amp;
+household commitment</text>
+<text x="1116.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">send proposal / response;</text>
+<text x="1116.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">membership, vehicle, route, time</text>
+<text x="1116.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">checks form a versioned</text>
+<text x="1116.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">commitment; history preserved.</text>
+<circle cx="1206" cy="98" r="11" fill="#FFFFFF" stroke="#7B3294" stroke-width="2"/>
+<line x1="1206" y1="88" x2="1206" y2="108" stroke="#7B3294" stroke-width="3" stroke-linecap="round"/>
+<text x="1188" y="70" font-size="13" text-anchor="middle" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">on/off</text>
+<rect x="1250" y="76" width="224" height="250" rx="12" fill="#EDEDED" stroke="#383838" stroke-width="2.5"/>
+<text x="1362.0" y="118" font-size="23" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">6  World arbitration
+&amp; execution</text>
+<text x="1362.0" y="154" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">batch-resolve all intents on</text>
+<text x="1362.0" y="178" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">one shared snapshot; check road,</text>
+<text x="1362.0" y="202" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">vehicle capacity, member</text>
+<text x="1362.0" y="226" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">location, care, time. Only</text>
+<text x="1362.0" y="250" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">executed changes state;</text>
+<text x="1362.0" y="274" font-size="17" text-anchor="middle" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">rejected(reason) returns.</text>
+<line x1="244.0" y1="201.0" x2="266.0" y2="201.0" stroke="#2166AC" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="255.0" y="187.0" font-size="15" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">observable context</text>
+<line x1="490.0" y1="201.0" x2="512.0" y2="201.0" stroke="#2166AC" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="501.0" y="187.0" font-size="15" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">retrieved memory</text>
+<line x1="736.0" y1="201.0" x2="758.0" y2="201.0" stroke="#2166AC" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="747.0" y="187.0" font-size="15" text-anchor="middle" fill="#2166AC" font-weight="normal" font-style="normal" opacity="1.0">updated cognition</text>
+<line x1="982.0" y1="201.0" x2="1004.0" y2="201.0" stroke="#1B7837" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<text x="993.0" y="187.0" font-size="15" text-anchor="middle" fill="#1B7837" font-weight="normal" font-style="normal" opacity="1.0">structured plan / intent</text>
+<line x1="1228.0" y1="201.0" x2="1250.0" y2="201.0" stroke="#7B3294" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<text x="1239.0" y="187.0" font-size="15" text-anchor="middle" fill="#7B3294" font-weight="normal" font-style="normal" opacity="1.0">commitment-constrained intent</text>
+<polyline points="1362.0,326.0 1362.0,386 132.0,386 132.0,326.0" fill="none" stroke="#B2182B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<text x="747.0" y="372" font-size="17" text-anchor="middle" fill="#B2182B" font-weight="normal" font-style="normal" opacity="1.0">execution outcome / feedback</text>
+<text x="34" y="448" font-size="22" text-anchor="start" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">Message and commitment</text>
+<rect x="34" y="460" width="260" height="64" rx="10" fill="#EBDCF0" stroke="#7B3294" stroke-width="2.2"/>
+<text x="164.0" y="499.0" font-size="19" text-anchor="middle" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">sent</text>
+<line x1="294" y1="492.0" x2="316" y2="492.0" stroke="#7B3294" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<rect x="316" y="460" width="260" height="64" rx="10" fill="#EBDCF0" stroke="#7B3294" stroke-width="2.2"/>
+<text x="446.0" y="499.0" font-size="19" text-anchor="middle" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">delivered</text>
+<line x1="576" y1="492.0" x2="598" y2="492.0" stroke="#7B3294" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<rect x="598" y="460" width="260" height="64" rx="10" fill="#EBDCF0" stroke="#7B3294" stroke-width="2.2"/>
+<text x="728.0" y="499.0" font-size="19" text-anchor="middle" fill="#7B3294" font-weight="bold" font-style="normal" opacity="1.0">processed</text>
+<line x1="858" y1="492.0" x2="880" y2="492.0" stroke="#7B3294" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<rect x="880" y="460" width="260" height="64" rx="10" fill="#FBE7D0" stroke="#D9720A" stroke-width="2.2"/>
+<text x="1010.0" y="499.0" font-size="19" text-anchor="middle" fill="#D9720A" font-weight="bold" font-style="normal" opacity="1.0">accepted / rejected</text>
+<line x1="1140" y1="492.0" x2="1162" y2="492.0" stroke="#D9720A" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-orange)"/>
+<rect x="1162" y="460" width="260" height="64" rx="10" fill="#FBE7D0" stroke="#D9720A" stroke-width="2.2"/>
+<text x="1292.0" y="499.0" font-size="19" text-anchor="middle" fill="#D9720A" font-weight="bold" font-style="normal" opacity="1.0">feasible commitment</text>
+<text x="34" y="588" font-size="22" text-anchor="start" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">Action and world state</text>
+<rect x="34" y="600" width="260" height="64" rx="10" fill="#EDEDED" stroke="#383838" stroke-width="2.2"/>
+<text x="164.0" y="639.0" font-size="19" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">intention</text>
+<line x1="294" y1="632.0" x2="316" y2="632.0" stroke="#383838" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="316" y="600" width="260" height="64" rx="10" fill="#EDEDED" stroke="#383838" stroke-width="2.2"/>
+<text x="446.0" y="639.0" font-size="19" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">batched resolution</text>
+<line x1="576" y1="632.0" x2="598" y2="632.0" stroke="#383838" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="598" y="600" width="260" height="64" rx="10" fill="#DCEEE1" stroke="#1B7837" stroke-width="2.2"/>
+<text x="728.0" y="639.0" font-size="19" text-anchor="middle" fill="#1B7837" font-weight="bold" font-style="normal" opacity="1.0">executed / rejected</text>
+<line x1="858" y1="632.0" x2="880" y2="632.0" stroke="#1B7837" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<rect x="880" y="600" width="260" height="64" rx="10" fill="#EDEDED" stroke="#383838" stroke-width="2.2"/>
+<text x="1010.0" y="639.0" font-size="19" text-anchor="middle" fill="#383838" font-weight="bold" font-style="normal" opacity="1.0">state update / feedback</text>
+<polyline points="728.0,460 378.0,440 378.0,326" fill="none" stroke="#2166AC" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6,5" marker-end="url(#arr-blue)"/>
+<polyline points="1292.0,460 1086.0,430 1086.0,326" fill="none" stroke="#D9720A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6,5" marker-end="url(#arr-orange)"/>
+<polyline points="728.0,664 644.0,714 644.0,326" fill="none" stroke="#B2182B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6,5" marker-end="url(#arr-red)"/>
+<text x="34" y="820" font-size="18" text-anchor="start" fill="#5F5F5F" font-weight="normal" font-style="normal" opacity="1.0">Mechanism color</text>
+<circle cx="42" cy="838" r="9" fill="#2166AC" stroke="#2166AC" stroke-width="1"/>
+<text x="58" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">Memory</text>
+<circle cx="212" cy="838" r="9" fill="#B2182B" stroke="#B2182B" stroke-width="1"/>
+<text x="228" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">Feedback</text>
+<circle cx="382" cy="838" r="9" fill="#1B7837" stroke="#1B7837" stroke-width="1"/>
+<text x="398" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">Planning</text>
+<circle cx="552" cy="838" r="9" fill="#7B3294" stroke="#7B3294" stroke-width="1"/>
+<text x="568" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">Interaction / message</text>
+<circle cx="722" cy="838" r="9" fill="#D9720A" stroke="#D9720A" stroke-width="1"/>
+<text x="738" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">Household commitment</text>
+<circle cx="892" cy="838" r="9" fill="#383838" stroke="#383838" stroke-width="1"/>
+<text x="908" y="845" font-size="17" text-anchor="start" fill="#1F1F1F" font-weight="normal" font-style="normal" opacity="1.0">World / physical</text>
+</svg>

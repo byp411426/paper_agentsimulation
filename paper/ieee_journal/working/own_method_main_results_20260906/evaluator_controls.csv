@@ -1,0 +1,4 @@
+run,foreign_receipt_detected,invented_agreement_adds_false_positive,omitted_agreement_adds_false_negative,empty_event_set_is_not_full_score,unexecuted_member_transfer_detected,valid_quiet_step_passes
+24hh_seed7201,True,True,True,True,True,True
+24hh_seed8301,True,True,True,True,True,True
+24hh_seed9401,True,True,True,True,True,True

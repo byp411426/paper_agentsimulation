@@ -1,0 +1,41 @@
+{
+  "frozen_protocol": "/Users/linnuo/Documents/agentSimulation/disastersociety/experiments/carr/protocol/carr_s_e2_v8_formal_freeze.json",
+  "mismatches": [
+    {
+      "file": "ds/agents/carr.py",
+      "expected": "1a6b68a225ed4dc8b077b2ff4a3e1eac4667e29d4625ec9a1b65ff4e548a13ab",
+      "before_this_repair": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4",
+      "current": "c2ebf7e50679d0ae5a7207170ed8aeb4a6a555e504989cc85b56ccfb4daf36b4",
+      "preexisting_mismatch": true
+    },
+    {
+      "file": "ds/kernel/engine.py",
+      "expected": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28",
+      "before_this_repair": "40bdad9bf9b6c6acc960319fe92659415c0def03c0a6fdfee495d38d73a7ad28",
+      "current": "b28039c733505f8a70c154da9d3bbf851974641fbcc8c9dd35609d14384b7773",
+      "preexisting_mismatch": false
+    },
+    {
+      "file": "ds/households/state.py",
+      "expected": "2b5a599139de1380725f9f8365f9bbf7d18a1933edb3c2647d5b7287ef75875e",
+      "before_this_repair": "b30528df862ddd1f00783c4c6116cd5e15722f8c29b8708da6a7e816cdf801cf",
+      "current": "28504e6560ed6e1a76424a3cc6e30759cabcb674dbca4b81d9932567ae9963ca",
+      "preexisting_mismatch": true
+    },
+    {
+      "file": "ds/llm/gateway.py",
+      "expected": "e3c2397b94695a89b1374f4e434044f27d25960b15081579dca7bd736a1cae4d",
+      "before_this_repair": "132b787e400d515c0c3f857c5d4a21a9b87d9743d24f8364935e9e7c57ae70c0",
+      "current": "ae4194ee34190208d42d1a4ce4cc85ceacde2371c09ddbfc5712abb7f8a23445",
+      "preexisting_mismatch": true
+    },
+    {
+      "file": "ds/llm/backends.py",
+      "expected": "fbfcb4db284dbd8602e0a0efb7a26b26c4d5d62b8b63ba1544c0d00698a21970",
+      "before_this_repair": "9ec9d669e3810220b79bb53b25410635509aa122a74b7c574fab1a395a819bc2",
+      "current": "9ec9d669e3810220b79bb53b25410635509aa122a74b7c574fab1a395a819bc2",
+      "preexisting_mismatch": true
+    }
+  ],
+  "unchanged_historical_freeze": true
+}

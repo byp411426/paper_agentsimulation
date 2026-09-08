@@ -1,0 +1,140 @@
+{
+  "status": "PILOT",
+  "activity_type": "FORMAL_MECHANISM_MATRIX",
+  "prompt_version": "carr_s_controlled_resident_v5",
+  "decision_model": "packy-deepseek-v4-flash",
+  "source": {
+    "config": "experiments/carr/configs/carr_s_formal_e2_v5.yaml",
+    "config_sha256": "46cc6f9889af2ddce227f80f63724f501267e767706b526f73004a0623dc1579"
+  },
+  "protocol": {
+    "execute_sequentially": true,
+    "test_split_opened": false,
+    "declared_seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010,
+      1111,
+      1212,
+      1313,
+      1414,
+      1515,
+      1616
+    ],
+    "executed_seed_batch": [
+      101
+    ],
+    "conditions": [
+      "full",
+      "full_minus_memory",
+      "full_minus_feedback",
+      "full_minus_planning",
+      "full_minus_interaction"
+    ],
+    "planned_runs": 5
+  },
+  "completion": {
+    "completed_runs": 5,
+    "aborted_early": false,
+    "reused_terminal_artifacts": 0,
+    "terminal_status_counts": {
+      "VALID": 5
+    }
+  },
+  "usage": {
+    "n_ok": 142,
+    "n_failed": 0,
+    "n_fallback": 0,
+    "live_prompt_tokens": 95085,
+    "live_completion_tokens": 270824,
+    "estimated_cost_usd": 0.365909
+  },
+  "runtime": {
+    "sum_run_wall_clock_seconds": 2542.582
+  },
+  "runs": [
+    {
+      "seed": 101,
+      "condition": "full",
+      "terminal_status": "VALID",
+      "n_ok": 29,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "estimated_cost_usd": 0.072756,
+      "wall_clock_seconds": 531.970235,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_full_seed101",
+      "summary_sha256": "e401866f7490746cd1285ae3267a6d6aad8cfac8fe2a0f8fc2a323d72bc0886a",
+      "mechanism_metrics_sha256": "5fa244ff0cf060b941f94359c3c6be760c4f21866ef19674c7b68b658c3595e2",
+      "provenance_sha256": "89602f5fee3350055828833778fe44c3b305852aa2ac1cb2b395b7358a4eba0d"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_memory",
+      "terminal_status": "VALID",
+      "n_ok": 29,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "estimated_cost_usd": 0.076878,
+      "wall_clock_seconds": 539.843602,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_full_minus_memory_seed101",
+      "summary_sha256": "b472df80b4f0ba3c3c2112653c42d6f68d73a139d2c80ebb87f57be8caf50cbf",
+      "mechanism_metrics_sha256": "8e55480ed26b9a8cf957270186ed98f8def3183f2f01e765049cd14d799a59a1",
+      "provenance_sha256": "ec546e1bd15d9ed9e860ed642de1e4d6783acde3363874db012f34d93c3b9f90"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_feedback",
+      "terminal_status": "VALID",
+      "n_ok": 32,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "estimated_cost_usd": 0.093361,
+      "wall_clock_seconds": 652.520871,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_full_minus_feedback_seed101",
+      "summary_sha256": "2926a54d6846cbbc5497478f70b706b5d837dd25b0969b4051b311a4e2b20483",
+      "mechanism_metrics_sha256": "fb692907707bb3dd7859988e9dd22bde2317c4f6913f899c012d824f7c09ed91",
+      "provenance_sha256": "4ff38f4d03a03e3b23ea7384b112a5b9f622196c8d0ea08624505606787a126a"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_planning",
+      "terminal_status": "VALID",
+      "n_ok": 26,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "estimated_cost_usd": 0.06918,
+      "wall_clock_seconds": 474.972443,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_full_minus_planning_seed101",
+      "summary_sha256": "76453d7bf636651a74fc0d10480b9328559d9254ac56cc34b52251ff7a54bbde",
+      "mechanism_metrics_sha256": "3068c9cb07fcebfb121a2406fc8bed8ded56a9b17681aae08b0c27596d0e00b6",
+      "provenance_sha256": "f58121eb0ab2b80b70dd4ddb2748de79a5af4d9d44a0c9ef503ca330f60d6b41"
+    },
+    {
+      "seed": 101,
+      "condition": "full_minus_interaction",
+      "terminal_status": "VALID",
+      "n_ok": 26,
+      "n_failed": 0,
+      "n_fallback": 0,
+      "fallback_rate": 0.0,
+      "estimated_cost_usd": 0.053734,
+      "wall_clock_seconds": 343.275347,
+      "run_dir": "experiments/carr/runs/carr_s_formal_e2_v5_full_minus_interaction_seed101",
+      "summary_sha256": "14cd874fb15234d97491bbbe3f256cb075911d26156fb61312fa7c91a98cb8c4",
+      "mechanism_metrics_sha256": "673974137d361e111c10e4aebd87e184fc71b94148e4b81e777b07596e86b9ff",
+      "provenance_sha256": "6b4845e43c2d4c028aae5ce9924d13d3faddfab62b1161cb01758eecc8b9f9d6"
+    }
+  ],
+  "claim_boundary": "Publication-facing E2 raw run record with PILOT evidence status pending complete-matrix audit. Mechanism effect estimates are computed only from VALID full/drop-one pairs with the predeclared exclusion rule; INVALID runs are preserved and excluded, and an early ABORTED stop leaves the remaining matrix unexecuted."
+}

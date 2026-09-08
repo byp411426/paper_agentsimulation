@@ -1,0 +1,100 @@
+run:
+  run_id: carr_s_deepseek_v6_thinking_high_pilot_r2
+  total_steps: 10
+  step_minutes: 30
+
+llm:
+  decision_model: packy-deepseek-v4-flash
+  models_config: configs/models.yaml
+  temperature: 0.0
+  max_concurrency: 4
+  budget_usd: 0.6
+  fallback_threshold: 0.01
+  abort_on_call_failure: true
+
+experiment:
+  evidence_status: PILOT
+  activity_type: V6_THINKING_HIGH_BACKEND_PILOT
+  metric_protocol_version: v6
+  prompt_version: carr_s_controlled_resident_v6
+  case_semantics: Carr-informed controlled mechanism scenario with TIGER-derived routes
+  eventpack_root: eventpacks/carr_2018
+  route_asset: environment/west_redding_controlled_routes.json
+  n_households: 2
+  min_dependents: 1
+  max_household_size: 4
+  controlled_zone: west_redding
+  warning_step: 1
+  closure_step_choices: [3, 4]
+  depart_step: 5
+  coordination_deadline_step: 7
+  primary_route_id: tiger_primary
+  alternate_route_id: tiger_alternate
+  route_capacity_per_step: 2
+  initial_hazard_distance_m: 6000
+  hazard_approach_per_step_m: 700
+  official_warning_delivery_probability: 1.0
+  household_dm_delivery_probability: 1.0
+  community_message_delivery_probability: 0.15
+  abort_matrix_on_nonvalid_run: true
+
+  declared_backend_pilot:
+    paid_execution_authorized: true
+    authorization_scope: this two-seed thinking-high declared-backend pilot only
+    seeds: [101, 202]
+    conditions:
+      - full
+      - full_minus_memory
+      - full_minus_feedback
+      - full_minus_planning
+      - full_minus_interaction
+    execute_sequentially: true
+    continuation_rule: >-
+      Run seed 101 first. Continue to the predeclared seed 202 unless a hard
+      credential, balance, provider, budget, or run-validity failure occurs.
+      Do not stop or continue based on observed effect direction.
+    exclusion_rule: >-
+      A mechanism pair is excluded if either run is not VALID. Preserve all
+      artifacts and never rerun into the same run ID.
+    formal_seed_count_frozen: false
+    formal_matrix_authorized: false
+    test_split_opened: false
+    backend_mode: thinking enabled, reasoning effort high
+    expected_internal_cost_usd: 0.6
+    expected_cost_is_provider_invoice: false
+
+  metric_contract:
+    memory:
+      metric: conditional_warning_retention_rate
+      denominator: coordinators who actually received the warning
+      direction: positive
+    feedback:
+      metric: primary_to_alternate_update_rate
+      denominator: decision residents with a recorded primary-route plan
+      direction: positive
+    planning:
+      metric: successful_replan_rate
+      denominator: controlled households
+      direction: positive
+    interaction:
+      metric: post_closure_feasible_commitment_rate
+      denominator: controlled households
+      direction: positive
+
+  claim_boundary:
+    purpose: >-
+      Estimate whether the frozen v6 mechanisms produce directionally
+      distinguishable behavior under the declared DeepSeek thinking-high
+      backend and obtain initial paired-difference variance and reliability
+      diagnostics.
+    formal_evidence: false
+    mock_effect_evidence_allowed: false
+    carr_empirical_validation: false
+    historical_closure_reconstruction: false
+    test_split_opened: false
+
+  route_semantics:
+    geometry: sourced 2018 TIGER/Line road network
+    obstruction: algorithmic controlled perturbation
+    historical_closure_observed: false
+    traffic_scope: route-level capacity, not microscopic traffic reconstruction

@@ -1,0 +1,8 @@
+{
+  "reason": "Live responses mistook earliest new proposal time for earliest acceptance time; distinguish delivered proposal timing explicitly",
+  "new_proposal_min": "current step + 2",
+  "accept_received_min": "current step + 1",
+  "supersedes_id": "accepted commitment ID only, not message ID",
+  "same_population_seed_events_model": true,
+  "new_prompt_requires_fresh_cache": true
+}

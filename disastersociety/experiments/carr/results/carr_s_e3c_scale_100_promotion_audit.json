@@ -1,0 +1,157 @@
+{
+  "study": "E3c scale-100 demonstration (2 seeds x 100 households)",
+  "protocol_id": "carr_s_e3c_scale_efficiency",
+  "scope_note": "FROZEN_SCOPE_REDUCTION r5_scale_100_only_20260804: only the 100-household point executed; no 500/1000 claims.",
+  "runs": [
+    {
+      "seed": 101,
+      "run_dir": "e1_scale_100_packy_seed101_r5",
+      "status": "VALID",
+      "steps": "25/25",
+      "n_households": 100,
+      "n_residents": 153,
+      "n_orders": 86,
+      "wall_clock_seconds": 10888.023939,
+      "gateway": {
+        "run_id": "carr_s_e1_scale_100_packy",
+        "spent": 11.349962,
+        "n_ok": 1466,
+        "n_cache": 1016,
+        "n_failed": 0,
+        "n_fallback": 0,
+        "fallback_rate": 0.0,
+        "live_prompt_tokens": 4191468,
+        "live_completion_tokens": 7158494,
+        "logical_prompt_tokens": 6613220,
+        "logical_completion_tokens": 10827078
+      },
+      "accounting": {
+        "status_counts": {
+          "cache_hit": 1016,
+          "ok": 1466
+        },
+        "n_ok": 1466,
+        "n_cache": 1016,
+        "n_failed": 0,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      },
+      "metrics": {
+        "n_households": 100,
+        "n_executed_parties": 57,
+        "n_rejected_parties": 5,
+        "complete_safe_household_departure_rate": 0.47,
+        "coordinated_household_rate": 0.23,
+        "split_departure_household_rate": 0.1,
+        "violation_counts": {
+          "care_recipient_left_behind": 2,
+          "vehicle_conflict": 0,
+          "capacity_rejection": 0,
+          "caregiver_violation": 0
+        },
+        "message_funnel": {
+          "sent": 2240,
+          "delivered": 1510,
+          "processed": 1413,
+          "accepted": 1193,
+          "rejected": 126
+        },
+        "official_receipt_counts": {
+          "voluntary": 22,
+          "mandatory": 64
+        },
+        "commitment_counts": {
+          "accepted": 53,
+          "cancelled": 0,
+          "executed": 57,
+          "rejected": 5
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "run_dir": "e1_scale_100_packy_seed202_r2",
+      "status": "VALID",
+      "steps": "25/25",
+      "n_households": 100,
+      "n_residents": 153,
+      "n_orders": 86,
+      "wall_clock_seconds": 5559.461792,
+      "gateway": {
+        "run_id": "carr_s_e1_scale_100_packy",
+        "spent": 10.100995,
+        "n_ok": 1328,
+        "n_cache": 1090,
+        "n_failed": 0,
+        "n_fallback": 0,
+        "fallback_rate": 0.0,
+        "live_prompt_tokens": 3753136,
+        "live_completion_tokens": 6347859,
+        "logical_prompt_tokens": 6283900,
+        "logical_completion_tokens": 10469555
+      },
+      "accounting": {
+        "status_counts": {
+          "cache_hit": 1090,
+          "ok": 1328
+        },
+        "n_ok": 1328,
+        "n_cache": 1090,
+        "n_failed": 0,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      },
+      "metrics": {
+        "n_households": 100,
+        "n_executed_parties": 57,
+        "n_rejected_parties": 6,
+        "complete_safe_household_departure_rate": 0.42,
+        "coordinated_household_rate": 0.22,
+        "split_departure_household_rate": 0.13,
+        "violation_counts": {
+          "care_recipient_left_behind": 3,
+          "vehicle_conflict": 0,
+          "capacity_rejection": 0,
+          "caregiver_violation": 0
+        },
+        "message_funnel": {
+          "sent": 2119,
+          "delivered": 1472,
+          "processed": 1370,
+          "accepted": 1166,
+          "rejected": 101
+        },
+        "official_receipt_counts": {
+          "voluntary": 22,
+          "mandatory": 64
+        },
+        "commitment_counts": {
+          "accepted": 55,
+          "cancelled": 0,
+          "executed": 57,
+          "rejected": 6
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "complete_safe_household_departure_rates": [
+      0.47,
+      0.42
+    ],
+    "coordinated_household_rates": [
+      0.23,
+      0.22
+    ],
+    "split_departure_household_rates": [
+      0.1,
+      0.13
+    ],
+    "total_spent_usd": 21.450957,
+    "total_calls": 4900
+  },
+  "problems": [],
+  "all_gates_pass": true,
+  "evidence_label": "COMPLETE_VALID",
+  "claim_boundary": "Scale/efficiency claims limited to the 100-household envelope (2 seeds); no 500/1000 stability, throughput, or maximum-size claim."
+}

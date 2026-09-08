@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-05T14:14:30.826524+00:00",
+  "freeze_matches": true,
+  "issues": [],
+  "delivered_recipient_events": 20,
+  "departure_trace": [
+    {
+      "step": 6,
+      "resident": "syn_t002_h0000014_r001",
+      "mode": "commitment",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 6,
+      "resident": "syn_t002_h0000014_r002",
+      "mode": "commitment",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000001_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000003_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t001_h0000009_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t002_h0000002_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t002_h0000006_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 7,
+      "resident": "syn_t002_h0000008_r001",
+      "mode": "solo",
+      "route": "tiger_primary",
+      "prior_closed_route_rejections": []
+    },
+    {
+      "step": 10,
+      "resident": "syn_t002_h0000010_r001",
+      "mode": "solo",
+      "route": "tiger_alternate",
+      "prior_closed_route_rejections": [
+        9
+      ]
+    },
+    {
+      "step": 11,
+      "resident": "syn_t002_h0000010_r002",
+      "mode": "solo",
+      "route": "tiger_alternate",
+      "prior_closed_route_rejections": [
+        9
+      ]
+    },
+    {
+      "step": 13,
+      "resident": "syn_t001_h0000008_r001",
+      "mode": "solo",
+      "route": "tiger_alternate",
+      "prior_closed_route_rejections": [
+        12
+      ]
+    },
+    {
+      "step": 25,
+      "resident": "syn_t001_h0000006_r001",
+      "mode": "solo",
+      "route": "tiger_alternate",
+      "prior_closed_route_rejections": [
+        24
+      ]
+    }
+  ],
+  "note": "Additional graph/time/provenance check; execution and all-member accounting independently checked by acceptance.json. No favorable-outcome threshold."
+}

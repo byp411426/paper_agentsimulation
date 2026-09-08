@@ -1,0 +1,22 @@
+{
+  "protocol_id": "carr_s_e3_v1",
+  "frozen_at": "2026-08-03",
+  "status": "FROZEN_BOUNDED_CROSS_MODEL_REPLICATION",
+  "basis": "User 2026-08-03 instruction: E3 with multiple models (Qwen + GLM). W7 support rule admitted feedback and interaction (manipulation check + downstream both passed); memory and planning did not qualify.",
+  "models": ["packy-deepseek-v4-flash", "packy-qwen3.5-plus", "packy-glm-5"],
+  "access": "all three models through the same Packy proxy; claim is same-proxy model-family sensitivity, not provider independence",
+  "design": {
+    "per_model": {
+      "seeds": [2107, 2209, 2303, 2411],
+      "conditions": ["full", "full_minus_feedback", "full_minus_interaction"],
+      "n_runs": 12
+    },
+    "total_runs": 36,
+    "deepseek_rerun": "DeepSeek reruns on the same new paired seeds; no old-seed comparisons",
+    "cohort_prompt_scenario": "identical to carr_s_e2_v8_formal_r7",
+    "metrics": "v8 frozen summarizer; model-internal paired effect and same-seed cross-model difference"
+  },
+  "stop_rule": "Each model lane stops on its first exception or non-three-for-three-VALID batch; any failure stops all new paid jobs pending an audited recovery amendment.",
+  "evidence_label": "PILOT_PENDING_AUDIT",
+  "claim_boundary": "Limited confirmation of positive findings only; not complete model robustness, not provider independence, not empirical validation."
+}

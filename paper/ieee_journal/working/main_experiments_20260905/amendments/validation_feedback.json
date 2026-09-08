@@ -1,0 +1,8 @@
+{
+  "reason": "The schema repair message omitted model_validator errors. An evacuation with no vehicle remained invalid after generic repair.",
+  "normal_decision_prompts_unchanged": true,
+  "schema_repair_includes_specific_errors": true,
+  "invention_of_resources_forbidden": true,
+  "fresh_cache_for_revised_repair_policy": true,
+  "previous_completed_accepted_runs": 0
+}

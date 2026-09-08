@@ -1,0 +1,246 @@
+[
+  {
+    "seed": 7201,
+    "household": "H19",
+    "id": "commit:m8:syn_t002_h0000009_r001:0",
+    "proposal_step": 8,
+    "agreement_step": 9,
+    "planned_departure_step": 10,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 9,
+        "status": "accepted"
+      },
+      {
+        "step": 10,
+        "status": "rejected"
+      }
+    ],
+    "final_status": "rejected",
+    "version": 1
+  },
+  {
+    "seed": 7201,
+    "household": "H23",
+    "id": "commit:m7:syn_t002_h0000013_r001:0",
+    "proposal_step": 7,
+    "agreement_step": 8,
+    "planned_departure_step": 9,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 8,
+        "status": "accepted"
+      },
+      {
+        "step": 9,
+        "status": "cancelled"
+      }
+    ],
+    "final_status": "cancelled",
+    "version": 1
+  },
+  {
+    "seed": 7201,
+    "household": "H23",
+    "id": "commit:m9:syn_t002_h0000013_r001:0",
+    "proposal_step": 9,
+    "agreement_step": 10,
+    "planned_departure_step": 11,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 10,
+        "status": "accepted"
+      },
+      {
+        "step": 11,
+        "status": "rejected"
+      }
+    ],
+    "final_status": "rejected",
+    "version": 2
+  },
+  {
+    "seed": 7201,
+    "household": "H23",
+    "id": "commit:m12:syn_t002_h0000013_r003:0",
+    "proposal_step": 12,
+    "agreement_step": 13,
+    "planned_departure_step": 14,
+    "route": "tiger_alternate",
+    "status_changes": [
+      {
+        "step": 13,
+        "status": "accepted"
+      },
+      {
+        "step": 14,
+        "status": "executed"
+      }
+    ],
+    "final_status": "executed",
+    "version": 3
+  },
+  {
+    "seed": 7201,
+    "household": "H24",
+    "id": "commit:m7:syn_t002_h0000014_r001:0",
+    "proposal_step": 7,
+    "agreement_step": 8,
+    "planned_departure_step": 9,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 8,
+        "status": "accepted"
+      },
+      {
+        "step": 9,
+        "status": "rejected"
+      }
+    ],
+    "final_status": "rejected",
+    "version": 1
+  },
+  {
+    "seed": 7201,
+    "household": "H24",
+    "id": "commit:m10:syn_t002_h0000014_r001:0",
+    "proposal_step": 10,
+    "agreement_step": 11,
+    "planned_departure_step": 12,
+    "route": "tiger_alternate",
+    "status_changes": [
+      {
+        "step": 11,
+        "status": "accepted"
+      },
+      {
+        "step": 12,
+        "status": "executed"
+      }
+    ],
+    "final_status": "executed",
+    "version": 2
+  },
+  {
+    "seed": 8301,
+    "household": "H2",
+    "id": "commit:m7:syn_t001_h0000002_r001:0",
+    "proposal_step": 7,
+    "agreement_step": 8,
+    "planned_departure_step": 9,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 8,
+        "status": "accepted"
+      },
+      {
+        "step": 9,
+        "status": "rejected"
+      }
+    ],
+    "final_status": "rejected",
+    "version": 1
+  },
+  {
+    "seed": 8301,
+    "household": "H19",
+    "id": "commit:m24:syn_t002_h0000009_r001:0",
+    "proposal_step": 24,
+    "agreement_step": 25,
+    "planned_departure_step": 26,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 25,
+        "status": "accepted"
+      }
+    ],
+    "final_status": "accepted",
+    "version": 1
+  },
+  {
+    "seed": 8301,
+    "household": "H24",
+    "id": "commit:m4:syn_t002_h0000014_r001:1",
+    "proposal_step": 4,
+    "agreement_step": 5,
+    "planned_departure_step": 6,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 5,
+        "status": "accepted"
+      },
+      {
+        "step": 6,
+        "status": "executed"
+      }
+    ],
+    "final_status": "executed",
+    "version": 1
+  },
+  {
+    "seed": 9401,
+    "household": "H2",
+    "id": "commit:m24:syn_t001_h0000002_r001:0",
+    "proposal_step": 24,
+    "agreement_step": 25,
+    "planned_departure_step": 26,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 25,
+        "status": "accepted"
+      }
+    ],
+    "final_status": "accepted",
+    "version": 1
+  },
+  {
+    "seed": 9401,
+    "household": "H20",
+    "id": "commit:m7:syn_t002_h0000010_r001:1",
+    "proposal_step": 7,
+    "agreement_step": 8,
+    "planned_departure_step": 9,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 8,
+        "status": "accepted"
+      },
+      {
+        "step": 9,
+        "status": "rejected"
+      }
+    ],
+    "final_status": "rejected",
+    "version": 1
+  },
+  {
+    "seed": 9401,
+    "household": "H24",
+    "id": "commit:m4:syn_t002_h0000014_r001:1",
+    "proposal_step": 4,
+    "agreement_step": 5,
+    "planned_departure_step": 6,
+    "route": "tiger_primary",
+    "status_changes": [
+      {
+        "step": 5,
+        "status": "accepted"
+      },
+      {
+        "step": 6,
+        "status": "executed"
+      }
+    ],
+    "final_status": "executed",
+    "version": 1
+  }
+]

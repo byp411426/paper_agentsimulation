@@ -1,0 +1,65 @@
+{"step": 0, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 1, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 2, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 3, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 4, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 5, "type": "step_summary", "warned_total": 0, "evacuated_total": 0, "agents_total": 100}
+{"step": 6, "type": "warning_broadcast", "count": 1, "text": "Mandatory evacuation order issued for all resident..."}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_1"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_9"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_12"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_19"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_41"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_67"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_89"}
+{"step": 6, "type": "warning_delivered", "agent_id": "hh_94"}
+{"step": 6, "type": "evacuation", "agent_id": "hh_1", "reason": "mock: received official warning, high urgency", "confidence": 0.747926209993318}
+{"step": 6, "type": "evacuation", "agent_id": "hh_19", "reason": "mock: received official warning, high urgency", "confidence": 0.8296734376154555}
+{"step": 6, "type": "evacuation", "agent_id": "hh_41", "reason": "mock: received official warning, high urgency", "confidence": 0.7702234605806741}
+{"step": 6, "type": "evacuation", "agent_id": "hh_67", "reason": "mock: received official warning, high urgency", "confidence": 0.7497549771240271}
+{"step": 6, "type": "evacuation", "agent_id": "hh_89", "reason": "mock: received official warning, high urgency", "confidence": 0.8560492688512075}
+{"step": 6, "type": "step_summary", "warned_total": 8, "evacuated_total": 5, "agents_total": 100}
+{"step": 7, "type": "evacuation", "agent_id": "hh_9", "reason": "mock: received official warning, high urgency", "confidence": 0.8470375483889782}
+{"step": 7, "type": "evacuation", "agent_id": "hh_12", "reason": "mock: received official warning, high urgency", "confidence": 0.7333590415965382}
+{"step": 7, "type": "evacuation", "agent_id": "hh_94", "reason": "mock: received official warning, high urgency", "confidence": 0.7975493988821452}
+{"step": 7, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 8, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 9, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 10, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 11, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 12, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 13, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 14, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 15, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 16, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 17, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 18, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 19, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 20, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 21, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 22, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 23, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 24, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 25, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 26, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 27, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 28, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 29, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 30, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 31, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 32, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 33, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 34, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 35, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 36, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 37, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 38, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 39, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 40, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 41, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 42, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 43, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 44, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 45, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 46, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
+{"step": 47, "type": "step_summary", "warned_total": 8, "evacuated_total": 8, "agents_total": 100}
