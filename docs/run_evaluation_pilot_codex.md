@@ -1,6 +1,6 @@
 # 交给本地 Codex：继续单次 8 户实验
 
-本轮已授权一个修复后小规模真实模型试验。只做当前 8 户、seed 7201、25 步，不扩大到 100 户、不追加 seed 或整套消融，不修改论文数值。此前接口连通性在远程执行环境的网络审批阶段被取消，没有新的真实模型仿真结果。
+本轮已授权一个修复后小规模真实模型试验。只做当前 8 户、seed 7201、25 步，不扩大到 100 户、不追加 seed 或整套消融，不修改论文数值。本轮已验证带鉴权的聊天补全请求可以成功；未鉴权的模型列表请求可能返回 Cloudflare 403，不能据此判断实际模型调用不可用。
 
 ## 运行入口
 
@@ -11,6 +11,8 @@
 ```sh
 python -m scripts.run_evaluation_pilot --output experiments/carr/runs/evaluation_pilot_8hh_attempt1
 ```
+
+如需单独核验接口，执行 `python -m scripts.check_packy_api`。它会读取密钥并发起一次极小的真实模型请求；这会产生少量调用费用，不是离线检查。不要以未鉴权的 `GET /v1/models` 代替模型调用检查。
 
 再运行这一个真实试验：
 
@@ -46,3 +48,17 @@ python -m scripts.collect_behavior_scores \
 ```
 
 最后交付同一批 8 户的行为分数、三项错误条数／检查条数、逐户具体问题、运行是否完整及失败／缓存调用统计。第五项正式场景指标继续标记未实施。不要把旧 24 户的分母挪进新结果，不声称本次小样本证明方法优于基线。
+
+## 生成完整结果报告
+
+程序核验和独立评分都完成后，使用同一批运行的路径执行：
+
+```sh
+python -m scripts.summarize_evaluation_pilot \
+  --run experiments/carr/runs/evaluation_pilot_8hh_attempt1/e1_pilot_8hh_20260910 \
+  --evaluation experiments/carr/runs/evaluation_pilot_8hh_attempt1/evaluation \
+  --scores experiments/carr/runs/evaluation_pilot_8hh_attempt1/evaluation/behavior_scores.json \
+  --output experiments/carr/runs/evaluation_pilot_8hh_attempt1/results
+```
+
+若分给多个独立评审会话，`--scores` 后可接多个评分文件。每户仍只计一次，不得遗漏低分住户。输出 `results.json` 和 `results.md`，包括实际调用统计、同范围指标、逐户意见和行为情形覆盖；原始记录与评分原文的公开发布仍需单独授权。
