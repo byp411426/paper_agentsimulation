@@ -453,7 +453,7 @@ class Audit:
                     (structure == "nonfamily_not_living_alone" and count == 1)):
                 payload_hits.append({"step": step, "resident_id": rid})
         return {"household_description_contradictions": contradictions, "contradictory_decision_inputs": payload_hits,
-                "note": "输入矛盾单独报告，不混入三项状态错误率；本轮不修改原始输入或重新评分。"}
+                "note": "输入矛盾单独报告，不混入三项状态错误率；程序核验不修改原始输入，行为评分另行保留这些矛盾。"}
 
     def audit_exports(self):
         """Terminal ledgers must agree with their recorded final-step sources."""
@@ -476,9 +476,10 @@ class Audit:
         self.evidence["terminal_export_checks"] = records
         return records
 
-    def household_trace(self):
+    def household_trace(self, household_id=None):
         # Choose by initial household structure/ID, before inspecting outcomes.
-        p = next(p for p in sorted(self.profiles, key=lambda p: p["household_id"]) if len(p["decision_resident_ids"]) >= 2)
+        p = (self.profile_h[household_id] if household_id is not None else
+             next(p for p in sorted(self.profiles, key=lambda p: p["household_id"]) if len(p["decision_resident_ids"]) >= 2))
         hid = p["household_id"]
         mids = {m["resident_id"] for m in p["member_profiles"]}
         rows = []
