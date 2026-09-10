@@ -16,9 +16,10 @@ from ds.households.state import CareRequirement, Household, VehicleResource
 from ds.interaction.carr_empirical_v2 import CarrEmpiricalInteractionV2
 from ds.kernel.engine import Engine
 from ds.kernel.logger import RunLogger
-from ds.kernel.rng import stream_rng
+from ds.kernel.rng import stream_rng, stream_seed
 from ds.llm.gateway import LLMGateway
 from ds.population.networks import build_social_graph
+from ds.population.profile_validation import validate_e1_profiles
 from ds.world.carr_empirical_v2 import CarrEmpiricalWorldV2
 
 
@@ -113,6 +114,8 @@ def build_e1_v2_components(
 ) -> tuple[dict, dict, dict, Any, Any, Any, list[Any]]:
     """Return (households, residents, profiles_by_household, world, ix, events, agents)."""
     exp = cfg["experiment"]
+    if n_households < 1:
+        raise ValueError("n_households must be positive")
     profiles = [
         json.loads(line)
         for line in profiles_path.read_text(encoding="utf-8").splitlines()
@@ -122,6 +125,7 @@ def build_e1_v2_components(
         raise ValueError(
             f"need {n_households} profiles, found {len(profiles)}"
         )
+    validate_e1_profiles(profiles)
 
     vehicle_capacity = int(exp["vehicles"]["capacity"])
     households: dict[str, Household] = {}
@@ -215,7 +219,9 @@ def build_e1_v2_components(
             "id": resident_id,
             "household_id": resident.household_id,
             "location": locations.get(
-                resident.household_id, (float(hash(resident_id) % 1000), 0.0)
+                resident.household_id,
+                (float(stream_seed(run_seed, "e1_fallback_location",
+                                   entity_id=resident.household_id) % 1000), 0.0)
             ),
         }
         for resident_id, resident in residents.items()
@@ -334,7 +340,10 @@ def run_e1_v2(
 ) -> dict:
     run_dir = out_dir / cfg["run"]["run_id"]
     run_dir.mkdir(parents=True, exist_ok=True)
-    logger = RunLogger(run_dir / "events")
+    # Existing logs must never be truncated, even when called without the CLI.
+    if any((run_dir / name).exists() for name in
+           ("events/events.jsonl", "initial_state.json", "run_summary.json")):
+        raise FileExistsError(f"Existing simulation is protected: {run_dir}")
     (
         households,
         residents,
@@ -352,6 +361,17 @@ def run_e1_v2(
         households_csv=households_csv,
         tracts_geojson=tracts_geojson,
     )
+    logger = RunLogger(run_dir / "events")
+    (run_dir / "input_events.jsonl").write_text("".join(
+        json.dumps(event.__dict__, ensure_ascii=False) + "\n"
+        for step in sorted(event_source.by_step) for event in event_source.by_step[step]
+    ), encoding="utf-8")
+    (run_dir / "input_graph.json").write_text(json.dumps({
+        "nodes": sorted(ix.graph.nodes()),
+        "edges": sorted(sorted(edge) for edge in ix.graph.edges()),
+        "location_policy": "tract_centroid" if households_csv is not None and tracts_geojson is not None
+                           else "household_seeded_synthetic_location",
+    }, indent=2), encoding="utf-8")
     (run_dir / "initial_state.json").write_text(json.dumps({
         "world": world.snapshot(), "agents": [a.snapshot() for a in agents],
     }, indent=2, default=str), encoding="utf-8")
@@ -372,8 +392,10 @@ def run_e1_v2(
         temperature=float(cfg["llm"]["temperature"]),
         fallback_threshold=float(cfg["llm"]["fallback_threshold"]),
     )
-    result = await_engine(engine)
-    logger.close()
+    try:
+        result = await_engine(engine)
+    finally:
+        logger.close()
     (run_dir / "execution_status.json").write_text(
         json.dumps(result, indent=2, default=str), encoding="utf-8")
 
@@ -450,7 +472,13 @@ def run_e1_v2(
 def await_engine(engine: Engine) -> dict:
     import asyncio
 
-    return asyncio.run(engine.run())
+    async def run_and_close():
+        try:
+            return await engine.run()
+        finally:
+            await engine.gw.aclose()
+
+    return asyncio.run(run_and_close())
 
 
 def write_ledgers(run_dir: Path, payload: dict) -> None:
@@ -471,7 +499,7 @@ def write_ledgers(run_dir: Path, payload: dict) -> None:
             for household in payload["households"].values()
             for commitment in household["v2_commitments"].values()
         ],
-        "resident_state_timeline.jsonl": [
+        "resident_terminal_states.jsonl": [
             snapshot for snapshot in payload["residents"].values()
         ],
         "member_profiles.jsonl": [
@@ -484,3 +512,22 @@ def write_ledgers(run_dir: Path, payload: dict) -> None:
                 handle.write(
                     json.dumps(record, ensure_ascii=False, default=str) + "\n"
                 )
+    with (run_dir / "resident_state_timeline.jsonl").open("w", encoding="utf-8") as timeline:
+        with (run_dir / "events/events.jsonl").open(encoding="utf-8") as events:
+            for line in events:
+                if not line.strip():
+                    continue
+                event = json.loads(line)
+                for resident in event["agents"]:
+                    timeline.write(json.dumps({"step": event["step"],
+                        "phase": "after_step", **resident}, ensure_ascii=False) + "\n")
+    (run_dir / "log_schema.json").write_text(json.dumps({
+        "version": "e1_evaluation_v1",
+        "resident_state_timeline.jsonl": "one resident snapshot per completed step",
+        "resident_terminal_states.jsonl": "one terminal snapshot per decision-capable resident",
+        "executed_action": "actual action on success; null on rejection",
+        "requested_action": "resident action request, including rejected requests",
+        "local_observation_scope": ["hazard_distance_m", "shared_resource_reservations"],
+        "movement_model": "instantaneous transfer to safe zone; no return pickup",
+        "vehicle_occupancy": "instantaneous arrival; no persistent in-transit occupancy",
+    }, indent=2), encoding="utf-8")

@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 
 from ds.kernel.rng import stream_rng
+from ds.population.profile_validation import validate_e1_profiles
 
 
 @dataclass(frozen=True)
@@ -210,6 +211,8 @@ def assemble_e1_profiles(
         household_row = households_by_id.loc[household_id]
         member_rows = persons_by_household[household_id]
         household_size = int(household_row["household_size"])
+        if household_size != len(member_rows):
+            raise ValueError(f"{household_id}: household_size disagrees with member count")
         raw_vehicle = household_row["vehicle_count"]
         vehicle_count = (
             4 if str(raw_vehicle).strip() == "4_plus" else int(raw_vehicle)
@@ -526,6 +529,7 @@ def assemble_e1_profiles(
                 }
             )
 
+    validate_e1_profiles([asdict(profile) for profile in profiles])
     linkage = pd.DataFrame(linkage_rows)
     qa = {
         "n_households": len(profiles),

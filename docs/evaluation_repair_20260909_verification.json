@@ -1,0 +1,129 @@
+{
+  "base_commit": "017279f7b61be5a7f4c59234246dac888db500cb",
+  "tests": {
+    "passed": 183,
+    "tests": 186,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "seconds": 9.242,
+    "skipped_reason": "three tests require excluded private survey input",
+    "command": "python -m pytest tests -q -ra"
+  },
+  "offline_process": {
+    "kind": "scripted_software_check",
+    "checks": {
+      "complete_eight_steps": true,
+      "joint_trip_waits_for_acceptance": true,
+      "closed_route_rejects_both_requests": true,
+      "rejection_has_no_executed_action": true,
+      "rejection_preserves_physical_resources": true,
+      "revised_trip_moves_all_three_members": true,
+      "independent_trip_moves_resident": true,
+      "timeline_covers_every_resident_every_step": true,
+      "terminal_export_has_three_residents": true,
+      "decision_observations_have_matching_sources": true
+    },
+    "all_checks_passed": true,
+    "model_service_requests": 0,
+    "formal_behavior_score": null,
+    "formal_scenario_pass_rate": null,
+    "run_status": "VALID"
+  },
+  "corrected_input": {
+    "kind": "corrected_input_only",
+    "correction": "2018_PUMS_HHT_5_6_mapping",
+    "households": 24,
+    "changes": [
+      {
+        "household_id": "syn_t001_h0000001",
+        "HHT": 6,
+        "member_count": 1,
+        "before": "nonfamily_not_living_alone",
+        "after": "nonfamily_living_alone"
+      },
+      {
+        "household_id": "syn_t001_h0000002",
+        "HHT": 5,
+        "member_count": 2,
+        "before": "nonfamily_living_alone",
+        "after": "nonfamily_not_living_alone"
+      },
+      {
+        "household_id": "syn_t001_h0000008",
+        "HHT": 6,
+        "member_count": 1,
+        "before": "nonfamily_not_living_alone",
+        "after": "nonfamily_living_alone"
+      },
+      {
+        "household_id": "syn_t002_h0000009",
+        "HHT": 5,
+        "member_count": 2,
+        "before": "nonfamily_living_alone",
+        "after": "nonfamily_not_living_alone"
+      }
+    ],
+    "new_simulations": 0,
+    "sources_sha256": {
+      "profiles": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3",
+      "synthetic_households_csv": "a4eb4cf3f0a52f9539431b2dedb9622cba0fe7fecff6a3234280a5c8ccb8e13d"
+    },
+    "old_behavior_relabelled": false,
+    "corrected_profiles_sha256": "c0422b57cf2df7af6f30934dc9bd7efde9a66228e744d1c20da9b5d7d387591c"
+  },
+  "archived_audit": {
+    "seed": 7201,
+    "attempt": 3,
+    "metrics": {
+      "information": {
+        "scope": "居民快照中唯一的结构化接收事实：居民×信息来源；跨步重复保存只计一次。",
+        "status": "computed_for_stated_scope",
+        "errors": 0,
+        "checked": 124,
+        "rate": 0.0,
+        "unverifiable": 0,
+        "limitations": [
+          "直接警报由原始初始化配置和种子重建输入分配；不是外部真实居民标签。",
+          "居民消息对照发送决策、收件人交付状态及实际收件箱；协议通知对照协议通知记录。",
+          "不评价自由文本中的所有事实命题，也不把私人信念与世界真相不一致直接判错。",
+          "当前没有独立的局部观察事件表；本数值限于结构化接收记录，不冒充所有观察来源的全量评价。"
+        ],
+        "full_spec_coverage": "partial: structured receipt facts only"
+      },
+      "consensus": {
+        "scope": "多人共同方案的可见创建／状态变更；单人自动出发记录不充当家庭共识样本。",
+        "status": "computed_for_stated_scope",
+        "errors": 0,
+        "checked": 12,
+        "rate": 0.0,
+        "unverifiable": 0,
+        "limitations": [
+          "核验日志中实际出现的状态变化，不证明尚未出现的情景也会正确。",
+          "使用逐步前后记录和原始接受／撤回决策；同一步内部全部临时状态未逐项持久化。"
+        ],
+        "full_spec_coverage": "logged joint state changes; no claim about unobserved intrastep states"
+      },
+      "execution": {
+        "scope": "每个撤离请求与其执行结果、成员位置、居民执行状态及反馈的一致性。",
+        "status": "computed_for_stated_scope",
+        "errors": 0,
+        "checked": 28,
+        "rate": 0.0,
+        "unverifiable": 0,
+        "limitations": [
+          "这是可计算的出发状态部分：每个 decision_id 计一次；被拒绝请求本身不计错。",
+          "没有逐步完整车辆／占用／道路用量快照；不能据此声称全部资源副作用均已核验。",
+          "另检验全部非出发决策及每步全体成员的位置变化，结果单独保存，避免用大量非出发动作稀释分母。"
+        ],
+        "full_spec_coverage": "partial: departure states; complete resource-side-effect audit unavailable"
+      }
+    },
+    "original_run_files_unchanged": true,
+    "scope": "archived complete run only, not all observations or resources"
+  },
+  "paid_model_requests_this_repair": 0,
+  "formal_behavior_score": null,
+  "formal_comparisons_run": false,
+  "paper_or_frozen_results_modified": false
+}

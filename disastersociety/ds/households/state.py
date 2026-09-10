@@ -240,6 +240,11 @@ class Household:
         """
         members = set(self.member_ids)
         party = commitment.party
+        existing = self.v2_commitments.get(commitment.id)
+        if existing is not None:
+            if existing == commitment and existing.status == "accepted":
+                return CommitmentAcceptanceResult(True, existing.id, None)
+            return CommitmentAcceptanceResult(False, None, "commitment_id_reused")
         all_party_members = party.member_ids
         party_accepters = set(commitment.accepted_by)
         caregivers = dict(party.caregiver_by_member)
@@ -298,6 +303,8 @@ class Household:
             previous=self.v2_commitments.get(supersedes_id)
             if previous is None:
                 return CommitmentAcceptanceResult(False,None,'unknown_superseded_commitment')
+            if not (previous.accepted_by & commitment.accepted_by):
+                return CommitmentAcceptanceResult(False,None,'supersession_not_authorized')
         for active in overlaps:
             self.v2_commitments[active.id]=replace(active,status='cancelled')
         accepted = replace(

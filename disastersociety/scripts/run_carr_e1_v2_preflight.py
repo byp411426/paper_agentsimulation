@@ -15,6 +15,7 @@ import yaml
 from ds.llm.backends import MockBackend
 from ds.llm.cache import LLMCache
 from ds.llm.gateway import LLMGateway
+from ds.population.profile_validation import validate_e1_profiles
 from experiments.carr.empirical_v2_runner import run_e1_v2
 
 
@@ -31,6 +32,10 @@ def main() -> None:
     parser.add_argument("--households-csv", type=Path, default=None)
     parser.add_argument("--tracts", type=Path, default=None)
     parser.add_argument("--total-steps", type=int, default=None)
+    parser.add_argument("--profiles", type=Path, default=None,
+                        help="Explicit new input version; frozen defaults are not rewritten")
+    parser.add_argument("--validate-only", action="store_true",
+                        help="Validate selected profiles without a gateway, cache or model call")
     parser.add_argument("--keychain-service", default=None)
     args = parser.parse_args()
 
@@ -39,10 +44,20 @@ def main() -> None:
         if args.total_steps < 1: raise ValueError("total_steps must be positive")
         cfg["run"]["total_steps"] = args.total_steps
     exp = cfg["experiment"]
-    profiles_path = (
+    profiles_path = args.profiles or (
         PROJECT_ROOT / exp["profiles_dir"] / exp["profiles_file"]
     )
-    n_households = args.n_households or int(exp["n_households"])
+    n_households = args.n_households if args.n_households is not None else int(exp["n_households"])
+    if n_households < 1:
+        raise ValueError("n_households must be positive")
+    selected = [json.loads(s) for s in profiles_path.read_text(encoding="utf-8").splitlines() if s.strip()][:n_households]
+    if len(selected) != n_households:
+        raise ValueError(f"need {n_households} profiles, found {len(selected)}")
+    validate_e1_profiles(selected)
+    if args.validate_only:
+        print(json.dumps({"status": "INPUT_VALIDATED", "households": len(selected), "model_requests": 0}))
+        return
+    exp["order_calibration"] = str((PROJECT_ROOT / exp["order_calibration"]).resolve())
     out_dir = args.out_dir or (
         PROJECT_ROOT / "experiments/carr/runs"
     )
@@ -55,8 +70,6 @@ def main() -> None:
     if run_dir.exists() and any(run_dir.iterdir()):
         raise FileExistsError(f"Existing run is protected; choose a new --out-dir: {run_dir}")
     run_dir.mkdir(parents=True, exist_ok=True)
-    if args.backend == "real" and os.environ.get("PYTHONHASHSEED") != "0":
-        raise ValueError("Launch with PYTHONHASHSEED=0 to freeze the existing spatial hash convention")
     if args.backend == "real" and args.keychain_service:
         key = subprocess.run(["security", "find-generic-password", "-s", args.keychain_service, "-w"],
                              capture_output=True, text=True, timeout=15)
@@ -68,10 +81,14 @@ def main() -> None:
     (run_dir / "execution_config.yaml").write_text(yaml.safe_dump(cfg, sort_keys=False))
     source_files = ["ds/agents/e1_contracts.py", "ds/agents/carr_empirical_v2.py",
                     "ds/world/carr_empirical_v2.py", "ds/interaction/carr_empirical_v2.py",
-                    "ds/households/state.py", "ds/kernel/engine.py", "experiments/carr/empirical_v2_runner.py"]
+                    "ds/households/state.py", "ds/kernel/engine.py", "ds/kernel/actions.py",
+                    "ds/kernel/rng.py", "ds/population/profile_validation.py", "ds/population/networks.py",
+                    "experiments/carr/empirical_v2_runner.py"]
     (run_dir / "provenance.json").write_text(json.dumps({
         "seed": args.seed, "backend": args.backend, "n_households": n_households,
         "python_hash_seed": os.environ.get('PYTHONHASHSEED'),
+        "log_schema_version": "e1_evaluation_v1",
+        "order_calibration_sha256": hashlib.sha256(Path(exp['order_calibration']).read_bytes()).hexdigest(),
         "code_sha256": {f: hashlib.sha256((PROJECT_ROOT/f).read_bytes()).hexdigest() for f in source_files},
         "profiles_sha256": hashlib.sha256(profiles_path.read_bytes()).hexdigest(),
         "model_registry_sha256": hashlib.sha256((PROJECT_ROOT/cfg['llm']['models_config']).read_bytes()).hexdigest()

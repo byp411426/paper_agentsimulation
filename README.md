@@ -9,6 +9,7 @@ DisasterSociety：动态灾害中的生成式居民与家庭社会仿真研究�
 | 内容 | 入口 |
 |---|---|
 | 实际实验源码、配置和测试 | [disastersociety/](disastersociety/) |
+| 9 月 9 日代码修复与离线验证 | [修复说明](docs/evaluation_repair_20260909.md) · [验证记录](docs/evaluation_repair_20260909_verification.json) |
 | 当前英文论文 | [main.tex](paper/ieee_journal/source/main.tex) · [PDF](paper/ieee_journal/source/main.pdf) |
 | 论文图片和可编辑 Draw.io | [figures/](paper/ieee_journal/figures/) |
 | 9 月 5 日实验批次 | [main_experiments_20260905/](paper/ieee_journal/working/main_experiments_20260905/) |
@@ -20,6 +21,7 @@ DisasterSociety：动态灾害中的生成式居民与家庭社会仿真研究�
 
 ## 当前实验状态
 
+- 9 月 9 日已修正家庭背景映射、消息和执行记录等问题，另存修正后的 24 户输入；183 项离线测试通过，3 项因缺少私有问卷跳过。这是代码验证，正式行为评分和方法对比尚未完成。
 - 9 月 5 日批次的三次 24 户运行均有 `accepted.json`，分别对应 seed7201 的 attempt3、seed8301 的 attempt1、seed9401 的 attempt1。此前失败或中断尝试一并保留。
 - 同批次 100 户 seed101 因接口余额耗尽停在 24/25 步，第 25 步尚缺 43 个决策；没有完成标记。seed202 未启动。
 - 已有四项消融和跨模型记录保留原来的实验身份、状态与结论范围。其他历史批次的 100 户记录不能替代上述未完成运行。

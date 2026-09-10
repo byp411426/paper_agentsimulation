@@ -76,6 +76,8 @@ def test_ambiguous_proposal_and_implicit_solo_are_not_accepted():
 def test_undelivered_response_and_decline_do_not_make_joint_agreement():
     rs,hh,w,ix=setup();mid=propose(ix,rs,1,5)
     ix.messages[mid]['recipient_states']['c']['processed_step']=None
+    ix.messages[mid]['recipient_states']['c']['delivered_step']=None
+    rs['c']._delivered_message_ids.discard(mid)  # reset the entire delivery fixture
     rs['c'].inbox=[];accept(ix,rs,'c',mid,2);accept(ix,rs,'b',mid,2)
     assert not hh.v2_commitments
     rs['c'].deliver_message(ix.messages[mid]);ix.process(rs['c'],decision(message_responses=[{'message_id':mid,'disposition':'rejected'}]),Clock(30,3))

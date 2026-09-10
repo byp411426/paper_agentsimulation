@@ -142,12 +142,17 @@ class Engine:
                 self._audit_before = {"world": copy.deepcopy(self.world.snapshot()),
                     "agents": copy.deepcopy([a.snapshot() for a in self.agents])}
                 # ⑤ collect intentions while the world is immutable for this phase
-                decisions = await asyncio.gather(
-                    *(
-                        self._safe_decide(agent, events, step)
-                        for agent in awake
-                    )
-                )
+                tasks = [asyncio.create_task(self._safe_decide(agent, events, step))
+                         for agent in awake]
+                try:
+                    decisions = await asyncio.gather(*tasks)
+                except BaseException:
+                    # Do not let sibling calls write results after the run is finalized.
+                    for task in tasks:
+                        if not task.done():
+                            task.cancel()
+                    await asyncio.gather(*tasks, return_exceptions=True)
+                    raise
                 for agent, decision in zip(awake, decisions):
                     self.ix.process(agent, decision, self.clock)
 
@@ -282,7 +287,7 @@ class Engine:
             "planned_steps": self.total_steps,
             "completed_steps": self.completed_steps,
             "last_completed_step": (
-                self.clock.t if self.completed_steps else None
+                self.completed_steps if self.completed_steps else None
             ),
             "status": status,
             "world_final": self.world.snapshot(),

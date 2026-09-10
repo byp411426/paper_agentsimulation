@@ -9,6 +9,7 @@ rejections, or controlled local observations.
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
@@ -64,7 +65,7 @@ class CarrEmpiricalResidentV2(Resident):
         self.vehicles = vehicles
         self.inbox: list[dict[str, Any]] = []
         self.memories: list[dict[str, Any]] = []
-        self.perceived_routes: dict[str, dict[str, Any]] = dict(
+        self.perceived_routes: dict[str, dict[str, Any]] = deepcopy(
             initial_routes
             or {
                 "primary": {"open": True, "name": "primary"},
@@ -77,9 +78,16 @@ class CarrEmpiricalResidentV2(Resident):
         self.recent_execution_feedback: list[dict[str, Any]] = []
         self._receipts: dict[str, OfficialInformationReceipt] = {}
         self._processed_message_ids: set[str] = set()
+        self._delivered_message_ids: set[str] = set()
+        self._decision_inbox_step: int | None = None
+        self._decision_inbox_keys: set[tuple] = set()
 
     # ---- receipt lifecycle ------------------------------------------------ #
     def deliver_receipt(self, receipt: OfficialInformationReceipt) -> None:
+        if receipt.resident_id != self.id:
+            raise ValueError("official receipt addressed to another resident")
+        if receipt.receipt_id in self._receipts:
+            return
         self._receipts[receipt.receipt_id] = receipt
         self.inbox.append(
             {
@@ -95,7 +103,12 @@ class CarrEmpiricalResidentV2(Resident):
         )
 
     def deliver_message(self, message: dict[str, Any]) -> None:
-        item = dict(message)
+        message_id = message.get("message_id")
+        if message_id and message_id in self._delivered_message_ids:
+            return
+        item = deepcopy(message)
+        if message_id:
+            self._delivered_message_ids.add(message_id)
         item["message_kind"] = item.get("kind")
         item["kind"] = "message"
         item["delivered_step"] = item.get("delivered_step")
@@ -107,6 +120,11 @@ class CarrEmpiricalResidentV2(Resident):
         processed: list[dict[str, Any]] = []
         remaining: list[dict[str, Any]] = []
         for item in self.inbox:
+            key = (item.get("kind"), item.get("receipt_id") or item.get("message_id"))
+            if self._decision_inbox_step == step and key not in self._decision_inbox_keys:
+                # Notices delivered during arbitration were not in this decision's input.
+                remaining.append(item)
+                continue
             if item["kind"] == "official_receipt":
                 receipt = self._receipts[item["receipt_id"]]
                 self._receipts[item["receipt_id"]] = OfficialInformationReceipt(
@@ -166,7 +184,7 @@ class CarrEmpiricalResidentV2(Resident):
 
     # ---- prompt assembly (private cognition only) -------------------------- #
     def _observed_now(self, *, world: Any, step: int) -> dict[str, Any]:
-        hazard = world.hazard_distance_for(self.household_id, step)
+        local = world.observe_resident(self.id, step)
         return {
             "inbox": [
                 {
@@ -182,11 +200,10 @@ class CarrEmpiricalResidentV2(Resident):
                 }
                 for item in self.inbox
             ],
-            "hazard_distance_m": hazard,
-            "perceived_routes": self.perceived_routes,
-            "shared_resource_reservations": world.visible_reservations(
-                self.household_id, viewer_id=self.id
-            ),
+            "observation_id": local["observation_id"],
+            "hazard_distance_m": local["content"]["hazard_distance_m"],
+            "perceived_routes": deepcopy(self.perceived_routes),
+            "shared_resource_reservations": local["content"]["shared_resource_reservations"],
         }
 
     def _prompt_payload(self, *, world: Any, step: int) -> dict[str, Any]:
@@ -250,6 +267,11 @@ class CarrEmpiricalResidentV2(Resident):
     async def decide(
         self, *, events, world: Any, gateway: LLMGateway, step: int
     ) -> E1ResidentDecision:
+        self._decision_inbox_step = step
+        self._decision_inbox_keys = {
+            (item.get("kind"), item.get("receipt_id") or item.get("message_id"))
+            for item in self.inbox
+        }
         payload = self._prompt_payload(world=world, step=step)
         system = (
             "You are one resident making protective-action decisions with private memory and a persistent plan. "
@@ -327,12 +349,16 @@ class CarrEmpiricalResidentV2(Resident):
             self.current_plan = {**update.model_dump(), 'created_step': step, 'status': 'active'}
         status = getattr(outcome, "status", "unknown")
         reason = getattr(outcome, "reason", None)
-        executed = getattr(outcome, "executed_action", None)
-        self.memories.append({"kind": "execution", "step": step, "status": status, "action": executed, "reason": reason})
+        requested = getattr(decision, "action", None)
+        # Older outcome objects may put the requested action in executed_action.
+        executed = getattr(outcome, "executed_action", None) if status == "executed" else None
+        self.memories.append({"kind": "execution", "step": step, "status": status,
+            "requested_action": requested, "action": executed, "reason": reason})
         self.recent_execution_feedback.append(
             {
                 "step": step,
                 "status": status,
+                "requested_action": requested,
                 "executed_action": executed,
                 "reason": reason,
             }

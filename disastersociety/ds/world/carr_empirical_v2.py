@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 from dataclasses import replace
+from copy import deepcopy
 
 from ds.households.state import (
     DepartureParty,
@@ -48,6 +49,7 @@ class CarrEmpiricalWorldV2:
         self.route_usage: dict[str, int] = {}
         self._step = 0
         self._care_requirements = config.get("care_requirements", {})
+        self.observation_records: dict[str, dict] = {}
         self.hazard_offsets = {
             household_id: -250.0
             + 500.0
@@ -110,6 +112,44 @@ class CarrEmpiricalWorldV2:
             }
             for vehicle in household.vehicles.values()
         ]
+
+    def observe_resident(self, resident_id: str, step: int) -> dict:
+        """Record the local observations actually supplied at decision time.
+
+        This interface exposes the same hazard/resources as the existing prompt;
+        it does not reveal the world's hidden route closures.
+        """
+        hid = self.residents[resident_id].household_id
+        observation_id = f"observation:{step}:{resident_id}"
+        record = {
+            "observation_id": observation_id,
+            "resident_id": resident_id,
+            "step": step,
+            "phase": "before_decision",
+            "content": {
+                "hazard_distance_m": self.hazard_distance_for(hid, step),
+                "shared_resource_reservations": self.visible_reservations(hid, resident_id),
+            },
+        }
+        self.observation_records[observation_id] = deepcopy(record)
+        return deepcopy(record)
+
+    def physical_snapshot(self, household_id: str | None = None) -> dict:
+        """Copy authoritative physical facts, independent of resident beliefs."""
+        households = (self.households.values() if household_id is None
+                      else [self.households[household_id]])
+        households = list(households)
+        member_ids = {m for hh in households for m in hh.member_ids}
+        return deepcopy({
+            "member_locations": {m: self.member_locations[m] for m in sorted(member_ids)},
+            "vehicles": {
+                hh.id: {v.id: {"id": v.id, "location": v.location,
+                    "capacity": v.capacity, "occupied_by": sorted(v.occupied_by),
+                    "reserved_by": v.reserved_by} for v in hh.vehicles.values()}
+                for hh in households
+            },
+            "route_usage": self.route_usage,
+        })
 
     def member_summaries(self, household_id: str) -> list[dict]:
         household = self.households[household_id]
@@ -203,11 +243,21 @@ class CarrEmpiricalWorldV2:
 
     def apply_batch(self, resolved, clock):
         outcomes={}; groups={}
-        def finish(intent,status,reason=None,commitment=None):
+        def finish(intent,status,reason=None,commitment=None,physical_before=None):
+            allocations = {}
+            delta = {'commitment_id':commitment} if commitment else {}
+            if physical_before is not None:
+                delta.update(physical_before=physical_before,
+                             physical_after=self.physical_snapshot(intent.agent.household_id))
+            if status == 'executed' and intent.decision.action == 'evacuate':
+                allocations = {'vehicle_id': intent.decision.vehicle_id,
+                               'route_id': intent.decision.route_id,
+                               'party_id': commitment}
             outcomes[intent.decision_id]=ExecutionOutcome(
                 decision_id=intent.decision_id,agent_id=intent.agent_id,status=status,
-                executed_action=intent.decision.action,reason=reason,
-                state_delta={'commitment_id':commitment} if commitment else {})
+                requested_action=intent.decision.action,
+                executed_action=intent.decision.action if status=='executed' else None,
+                reason=reason, resource_allocations=allocations, state_delta=delta)
         ordered=sorted(resolved,key=lambda x:x.agent_id)
         stream_rng(self.run_seed,'e1_world_commit',step=clock.t).shuffle(ordered)
         for intent in ordered:
@@ -234,6 +284,7 @@ class CarrEmpiricalWorldV2:
             groups.setdefault((hh.id,cid),[]).append(intent)
         for (hid,cid),intents in groups.items():
             hh=self.households[hid];c=hh.v2_commitments[cid];party=c.party
+            physical_before = self.physical_snapshot(hid)
             reason=None
             if c.status!='accepted':reason='party_not_active'
             elif party.depart_step!=clock.t:reason='party_not_due'
@@ -243,31 +294,36 @@ class CarrEmpiricalWorldV2:
             elif self.route_usage.get(party.route_id,0)>=self.route_state[party.route_id]['capacity_per_step']:reason='route_capacity_exhausted'
             if reason:
                 hh.v2_commitments[cid]=replace(c,status='rejected')
-                for intent in intents:finish(intent,'rejected',reason,cid)
+                for intent in intents:finish(intent,'rejected',reason,cid,physical_before)
                 continue
             record=hh.execute_v2_party(commitment=c,step=clock.t,
                 traveler_intents={i.agent_id for i in intents},origin=('home',hid),destination=self.safe_zone)
-            for intent in intents:finish(intent,record.outcome,record.reason_code,cid)
             if record.outcome=='executed':
                 self.route_usage[party.route_id]=self.route_usage.get(party.route_id,0)+1
                 for m in party.member_ids:self.member_locations[m]=self.safe_zone
+            for intent in intents:finish(intent,record.outcome,record.reason_code,cid,physical_before)
         return outcomes
 
     def snapshot(self) -> dict:
-        return {
+        return deepcopy({
+            "log_schema_version": "e1_evaluation_v1",
             "step": self._step,
             "route_state": self.route_state,
             "hazard_offsets": self.hazard_offsets,
+            "vehicles": self.physical_snapshot()["vehicles"],
+            "route_usage": self.route_usage,
+            "observations": list(self.observation_records.values()),
             "household_commitments": {
                 hh.id: {c.id: {"id": c.id, "created_step": c.created_step,
                     "status": c.status, "supersedes_id": c.supersedes_id,
                     "accepted_by": sorted(c.accepted_by),
                     "party": {"traveler_ids": sorted(c.party.traveler_ids),
                         "accompanying_member_ids": sorted(c.party.accompanying_member_ids),
+                        "caregiver_by_member": dict(c.party.caregiver_by_member),
                         "route_id": c.party.route_id, "vehicle_id": c.party.vehicle_id,
                         "depart_step": c.party.depart_step}}
                     for c in hh.v2_commitments.values()} for hh in self.households.values()},
             "member_locations": {
                 key: str(value) for key, value in self.member_locations.items()
             },
-        }
+        })

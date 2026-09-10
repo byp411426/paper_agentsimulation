@@ -15,7 +15,7 @@ def _households():
     return pd.DataFrame(
         {
             "synthetic_household_id": ["syn_t001_h0000001", "syn_t001_h0000002"],
-            "household_size": [2, 3],
+            "household_size": [2, 1],
             "vehicle_count": [1, 0],
             "household_income": ["40000_44999", "missing_income"],
             "household_structure": ["married_couple", "nonfamily_living_alone"],

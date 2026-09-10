@@ -364,15 +364,9 @@ def prepare_carr_donor_features(
     households["vehicle_count"] = vehicles.map(
         lambda value: str(value) if value < 4 else "4_plus"
     )
-    structure_map = {
-        1: "married_couple",
-        2: "other_male_householder",
-        3: "other_female_householder",
-        4: "nonfamily_living_alone",
-        5: "nonfamily_living_alone",
-        6: "nonfamily_not_living_alone",
-        7: "nonfamily_not_living_alone",
-    }
+    from ds.population.profile_validation import HHT_STRUCTURE
+
+    structure_map = HHT_STRUCTURE
     household_type = pd.to_numeric(households["HHT"], errors="raise").astype(int)
     households["household_structure"] = household_type.map(structure_map)
     if households["household_structure"].isna().any():

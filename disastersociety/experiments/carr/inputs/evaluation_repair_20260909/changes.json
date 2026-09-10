@@ -1,0 +1,42 @@
+{
+  "kind": "corrected_input_only",
+  "correction": "2018_PUMS_HHT_5_6_mapping",
+  "households": 24,
+  "changes": [
+    {
+      "household_id": "syn_t001_h0000001",
+      "HHT": 6,
+      "member_count": 1,
+      "before": "nonfamily_not_living_alone",
+      "after": "nonfamily_living_alone"
+    },
+    {
+      "household_id": "syn_t001_h0000002",
+      "HHT": 5,
+      "member_count": 2,
+      "before": "nonfamily_living_alone",
+      "after": "nonfamily_not_living_alone"
+    },
+    {
+      "household_id": "syn_t001_h0000008",
+      "HHT": 6,
+      "member_count": 1,
+      "before": "nonfamily_not_living_alone",
+      "after": "nonfamily_living_alone"
+    },
+    {
+      "household_id": "syn_t002_h0000009",
+      "HHT": 5,
+      "member_count": 2,
+      "before": "nonfamily_living_alone",
+      "after": "nonfamily_not_living_alone"
+    }
+  ],
+  "new_simulations": 0,
+  "sources_sha256": {
+    "profiles": "03dccef392caeaa3c75d35d40a453417804b0ba1e691795f34d9e48cfb78d7f3",
+    "synthetic_households_csv": "a4eb4cf3f0a52f9539431b2dedb9622cba0fe7fecff6a3234280a5c8ccb8e13d"
+  },
+  "old_behavior_relabelled": false,
+  "corrected_profiles_sha256": "c0422b57cf2df7af6f30934dc9bd7efde9a66228e744d1c20da9b5d7d387591c"
+}

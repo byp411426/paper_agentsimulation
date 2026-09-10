@@ -4,6 +4,7 @@ import importlib.util
 from pathlib import Path
 
 import pandas as pd
+import pytest
 
 from ds.eval.carr_protocol import (
     freeze_stratified_split,
@@ -33,6 +34,8 @@ def test_parse_survey_datetime():
     assert pd.isna(module.parse_survey_datetime("After Sunday, Aug. 5", "7:00 PM"))
 
 
+@pytest.mark.skipif(not (PROJECT_ROOT / "Wong_Carr_Wildfire_Dataset.csv").exists(),
+                    reason="private respondent dataset is intentionally excluded from public repository")
 def test_carr_cleaning_matches_questionnaire_branches():
     module = _load_module()
     raw = module.load_qualtrics()
@@ -66,6 +69,8 @@ def test_carr_cleaning_matches_questionnaire_branches():
     assert (observed_evac_times >= module.FIRE_START).all()
 
 
+@pytest.mark.skipif(not (PROJECT_ROOT / "Wong_Carr_Wildfire_Dataset.csv").exists(),
+                    reason="private respondent dataset is intentionally excluded from public repository")
 def test_carr_protocol_roles_and_split_are_complete_and_deterministic():
     module = _load_module()
     clean = module.build_clean(module.load_qualtrics())

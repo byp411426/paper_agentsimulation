@@ -32,3 +32,4 @@ class ExecutionOutcome:
     reason: str | None = None
     resource_allocations: dict[str, str] = field(default_factory=dict)
     state_delta: dict[str, Any] = field(default_factory=dict)
+    requested_action: str | None = None

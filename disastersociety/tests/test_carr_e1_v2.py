@@ -234,57 +234,27 @@ def test_focal_and_coordinator_written_in_profiles():
 
 
 def test_mock_preflight_deterministic_ledgers(tmp_path):
+    """Self-contained input fixture; archived population remains immutable."""
     import subprocess
     import sys
 
-    profiles = (
-        PROJECT_ROOT
-        / "eventpacks/carr_2018/population/e1_profiles_v2_seed4201/e1_profiles_seed4201.jsonl"
-    )
-    if not profiles.exists():
-        pytest.skip("profiles not built")
-    config = (
-        PROJECT_ROOT
-        / "experiments/carr/configs/carr_s_e1_empirical_v2_preflight.yaml"
-    )
-    households_csv = (
-        PROJECT_ROOT
-        / "eventpacks/carr_2018/population/pilot_seed42_n1000_v2/synthetic_households.csv"
-    )
-    tracts = (
-        PROJECT_ROOT
-        / "eventpacks/carr_2018/population/tiger/tracts/shasta_tracts.geojson"
-    )
     hashes = []
-    for index in range(2):
+    for index, hash_seed in enumerate(("1", "98765")):
         out = tmp_path / f"run{index}"
         subprocess.run(
-            [
-                sys.executable,
-                str(PROJECT_ROOT / "scripts/run_carr_e1_v2_preflight.py"),
-                "--config",
-                str(config),
-                "--backend",
-                "mock",
-                "--n-households",
-                "6",
-                "--seed",
-                "99",
-                "--out-dir",
-                str(out),
-                "--households-csv",
-                str(households_csv),
-                "--tracts",
-                str(tracts),
-            ],
-            check=True,
-            capture_output=True,
-            cwd=PROJECT_ROOT,
-            env={**os.environ, "PYTHONPATH": str(PROJECT_ROOT)},
+            [sys.executable, "-m", "scripts.check_e1_process", "--output", str(out)],
+            check=True, capture_output=True, cwd=PROJECT_ROOT,
+            env={**os.environ, "PYTHONPATH": str(PROJECT_ROOT), "PYTHONHASHSEED": hash_seed},
         )
+        run = out / "offline_process"
         digest = hashlib.sha256()
-        for path in sorted((out / "carr_s_e1_v2_preflight").glob("*.jsonl")):
-            digest.update(path.read_bytes())
+        for name in ["events/events.jsonl", "decision_inputs.jsonl", "input_graph.json",
+                     "official_receipts.jsonl", "message_ledger.jsonl", "commitment_ledger.jsonl",
+                     "household_departure_ledger.jsonl", "resident_state_timeline.jsonl",
+                     "resident_terminal_states.jsonl"]:
+            digest.update((run / name).read_bytes())
+        result = json.loads((out / "verification.json").read_text())
+        assert result["all_checks_passed"] and result["model_service_requests"] == 0
         hashes.append(digest.hexdigest())
     assert hashes[0] == hashes[1]
 

@@ -80,6 +80,8 @@ class CarrEmpiricalInteractionV2:
                     delivered_step=clock.t,
                     processed_step=None,
                 )
+                if receipt.receipt_id in self._receipts_by_id:
+                    continue
                 agent.deliver_receipt(receipt)
                 self.receipts.append(receipt)
                 self._receipts_by_id[receipt.receipt_id] = receipt
@@ -111,6 +113,9 @@ class CarrEmpiricalInteractionV2:
             if msg.to in ('household','family'):
                 channel='household_dm'
                 recipients=[r for r in self.households[agent.household_id].decision_member_ids if r!=agent.id]
+            elif msg.to in self.households[agent.household_id].decision_member_ids and msg.to != agent.id:
+                channel='household_dm'
+                recipients=[msg.to]
             else:
                 channel='community'
                 neighbors=list(self.graph.neighbors(agent.id)) if self.graph is not None and agent.id in self.graph else []
@@ -206,7 +211,11 @@ class CarrEmpiricalInteractionV2:
                 if rng.random()>=probability:continue
                 state['delivered_step']=clock.t
                 m['delivered_step']=m['delivered_step'] or clock.t
-                self.residents[rid].deliver_message({**m,'delivered_step':clock.t})
+                # Deliver a recipient-local copy, not mutable global delivery/response state.
+                delivered = {key: value for key, value in m.items()
+                    if key not in ('recipient_states', 'acceptance', 'processed_step', 'disposition')}
+                delivered.update(recipient_id=rid, delivered_step=clock.t)
+                self.residents[rid].deliver_message(delivered)
                 if m['status']=='sent':m['status']='delivered'
 
     def snapshot(self):
