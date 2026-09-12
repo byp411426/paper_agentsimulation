@@ -44,6 +44,9 @@ class E1Decision(ResidentDecision):
     @classmethod
     def final_repair_guidance(cls) -> str:
         return (
+            "plan_update must be null (no new plan) or an object with 1-3 actual "
+            "steps. An object with steps:[] is invalid; use plan_update:null when "
+            "there is no new plan. Do not invent a plan merely to fill an optional field. "
             "In this E1 execution contract, evacuate requires a non-empty vehicle_id "
             "from the supplied observations. vehicle_id=null remains invalid when "
             "the narrative proposes walking: on-foot evacuation is not implemented. "

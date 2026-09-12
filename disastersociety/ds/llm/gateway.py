@@ -345,6 +345,7 @@ class LLMGateway:
                     self._record(dict(run_id=self.run_id, decision_id=decision_id,
                         step=step, agent_id=agent_id, model=model, key=key,
                         status="failed", schema_repairs=correction_index,
+                        raw_response=raw, pt=pt, ct=ct, cost=cost,
                         error=f"schema invalid after repair: {validation_error}", **seed_record))
                     self.flush()
                     raise LLMCallFailed(str(validation_error)) from validation_error

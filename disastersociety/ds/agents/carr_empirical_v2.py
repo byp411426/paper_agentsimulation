@@ -277,20 +277,14 @@ class CarrEmpiricalResidentV2(Resident):
             },
         }
 
-    async def decide(
-        self, *, events, world: Any, gateway: LLMGateway, step: int
-    ) -> E1ResidentDecision:
-        self._decision_inbox_step = step
-        self._decision_inbox_keys = {
-            (item.get("kind"), item.get("receipt_id") or item.get("message_id"))
-            for item in self.inbox
-        }
-        payload = self._prompt_payload(world=world, step=step)
-        system = (
+    @staticmethod
+    def decision_system_prompt() -> str:
+        return (
             "You are one resident making protective-action decisions with private memory and a persistent plan. "
             "Use only the supplied observations. Give a short assessment and JSON; do not invent roads or resources. "
             "You may stay, prepare, seek_help, offer_help, or evacuate. Staying is allowed. "
             "Set plan_update only to create or revise a 1-3 step plan; null preserves the existing plan. "
+            "Do not return an empty plan object or steps:[]; use plan_update:null if no new plan is intended. "
             "To coordinate, use party_proposal with explicit traveler IDs, dependents, caregivers, route and vehicle. "
             "The coordination_capabilities field lists the supported household member roles and resources. "
             "traveler_ids contains only decision-making members of YOUR household, including yourself; "
@@ -315,6 +309,17 @@ class CarrEmpiricalResidentV2(Resident):
             "Information messages use messages with kind=notice. Output JSON matching this schema:\n"
             + json.dumps(E1ResidentDecision.model_json_schema(), ensure_ascii=False)
         )
+
+    async def decide(
+        self, *, events, world: Any, gateway: LLMGateway, step: int
+    ) -> E1ResidentDecision:
+        self._decision_inbox_step = step
+        self._decision_inbox_keys = {
+            (item.get("kind"), item.get("receipt_id") or item.get("message_id"))
+            for item in self.inbox
+        }
+        payload = self._prompt_payload(world=world, step=step)
+        system = self.decision_system_prompt()
         messages = [
             {"role": "system", "content": system},
             {

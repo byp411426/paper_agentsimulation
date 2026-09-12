@@ -1,0 +1,42 @@
+[
+  {
+    "project": "AgentSociety",
+    "commit": "670c94fff7c64c4f79b632125f2ccf968155e746",
+    "source_path": "packages/agentsociety/agentsociety/cityagent/blocks/needs_block.py",
+    "source_sha256": "1e09451ff2784a621211f48c24db21da1acb9639e5db8fdd44a0580360058cb6",
+    "local_path": "ds/baselines/vendor/as_needs_block.py",
+    "changes": "Import wiring only; algorithm bodies unchanged."
+  },
+  {
+    "project": "AgentSociety",
+    "commit": "670c94fff7c64c4f79b632125f2ccf968155e746",
+    "source_path": "packages/agentsociety/agentsociety/cityagent/blocks/plan_block.py",
+    "source_sha256": "8f4d7d2055a4b817c2f737b53aa2bea20242da8ca33211172ee2690ff2c9701d",
+    "local_path": "ds/baselines/vendor/as_plan_block.py",
+    "changes": "Import wiring only; algorithm bodies unchanged."
+  },
+  {
+    "project": "AgentSociety",
+    "commit": "670c94fff7c64c4f79b632125f2ccf968155e746",
+    "source_path": "packages/agentsociety/agentsociety/cityagent/blocks/cognition_block.py",
+    "source_sha256": "627462048c8336926f43ab6b538aea3e171193cc23fdef8b3cfc98388ce6c1bc",
+    "local_path": "ds/baselines/vendor/as_cognition_block.py",
+    "changes": "Import wiring only; algorithm bodies unchanged."
+  },
+  {
+    "project": "AgentSociety",
+    "commit": "670c94fff7c64c4f79b632125f2ccf968155e746",
+    "source_path": "packages/agentsociety/agentsociety/cityagent/blocks/utils.py",
+    "source_sha256": "85939c5209fa1a94cbaa77c81399617cf215a64a4c51a7cdb0f0a1e7ec184d05",
+    "local_path": "ds/baselines/vendor/as_utils.py",
+    "changes": "Import wiring only; algorithm bodies unchanged."
+  },
+  {
+    "project": "Generative Agents",
+    "commit": "fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+    "source_path": "reverie/backend_server/persona/cognitive_modules/retrieve.py",
+    "source_sha256": "a609d9ba431dd8cb0f3ec804d128ff9d1755719221127b45a248d20c51dc7120",
+    "local_path": "ds/baselines/vendor/ga_retrieve.py",
+    "changes": "Imports wired to local embedding provider; debug prints muted. Ranking algorithm unchanged."
+  }
+]

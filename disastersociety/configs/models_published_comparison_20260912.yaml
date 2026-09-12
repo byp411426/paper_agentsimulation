@@ -1,0 +1,26 @@
+models:
+  packy-deepseek-v4-flash: &common_model
+    backend: litellm
+    model_id: openai/deepseek-v4-flash
+    base_url: https://www.packyapi.com/v1
+    api_key_env: PACKY_API_KEY
+    input_per_m: 1.0
+    output_per_m: 1.0
+    pricing_status: internal_budget_estimate_not_verified_proxy_billing
+    call_kwargs: &common_call
+      structured_output_mode: tool
+      max_tokens: 16384
+      max_retries: 0
+      extra_body:
+        thinking:
+          type: enabled
+    request_timeout_seconds: 240
+    max_attempts: 2
+    max_schema_repairs: 2
+    provider_seed_max: 2147483647
+    retry_backoff_seconds: 5
+  packy-deepseek-v4-flash_native_json:
+    <<: *common_model
+    call_kwargs:
+      <<: *common_call
+      structured_output_mode: json_object

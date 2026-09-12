@@ -20,6 +20,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+published-baselines = [
+    "fastembed==0.8.0",
+    "json-repair==0.63.4",
+]
 # --- M2 baselines ---
 ml = [
     "scikit-learn>=1.4",

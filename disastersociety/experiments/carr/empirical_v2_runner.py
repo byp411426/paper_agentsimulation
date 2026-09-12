@@ -189,7 +189,13 @@ def build_e1_v2_components(
                 )
             if not member["decision_capable"]:
                 continue
-            resident = CarrEmpiricalResidentV2(
+            method = exp.get("agent_method", "disastersociety")
+            if method == "disastersociety":
+                resident_type = CarrEmpiricalResidentV2
+            else:
+                from ds.baselines.residents import RESIDENT_TYPES
+                resident_type = RESIDENT_TYPES[method]
+            resident = resident_type(
                 agent_id=resident_id,
                 household_id=household_id,
                 profile=member,
