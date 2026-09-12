@@ -62,7 +62,15 @@ def summarize(runs: Path, evaluation: Path, output: Path, process_suite: Path):
             'consensus':audits[method]['metrics']['consensus'],
             'execution':audits[method]['metrics']['execution'],
             'consensus_opportunities':audits[method]['additional_checks']['consensus_formation_opportunities']})
-    result={'kind':'paired_single_seed_pilot_report','rows':rows,'behavior':behavior,
+    omitted=[]
+    for method in METHODS:
+        if method not in methods:
+            path=runs/(method+'_attempt1')/method/'execution_status.json'
+            s=read_json(path) if path.exists() else {}
+            omitted.append({'method':method,'status':s.get('status','not_finalized'),
+                'completed_steps':s.get('completed_steps'),'planned_steps':s.get('planned_steps'),
+                'reason_code':s.get('reason_code'),'behavior_scored':False})
+    result={'kind':'paired_single_seed_pilot_report','rows':rows,'behavior':behavior,'omitted_planned_methods':omitted,
         'run_protocol':read_json(runs/'comparison_protocol.json'),
         'implementation_scenario_suite':read_json(process_suite),
         'source_hashes':{'behavior':digest(evaluation/'behavior_comparison.json'),'manifest':digest(evaluation/'manifest.json')},
@@ -77,6 +85,8 @@ def summarize(runs: Path, evaluation: Path, output: Path, process_suite: Path):
     for r in rows:
         score='N/A' if r['behavior_mean'] is None else f"{r['behavior_mean']:.3f}"
         text.append(f"| {names[r['method']]} | {score} | {r['scored_households']}/{r['households']} | {r['input_tokens']:,}/{r['output_tokens']:,} | {r['minutes']:.2f} |")
+    for missing in omitted:
+        text+=['',f"原计划中未纳入本次评分的方法：{names[missing['method']]}；记录状态 {missing['status']}，完成 {missing['completed_steps']}/{missing['planned_steps']} 步，原因代码 {missing['reason_code']}。未完成轨迹不计为零分，也不混入以上均分；本报告没有声称完成原计划的全部对比。"]
     text+=['','绝对评分每户一次。反向会话对预先指定的两户做重复评分，只用于检查分歧，不替换主评分。家庭之间可能互动，因此 8 户不是 8 次独立仿真实验。',
         '耗时包含实际运行与缓存重放时间，受并行负载和服务端延迟影响，不单独据此排名。若触及初始费用上限，只在验证已完成轨迹逐步完全相同后用缓存继续；表中 token 和费用计入中断前后的全部已记录真实调用，缓存读取不重复计费。该实验比较固定任务，不是固定费用预算下的性能。','',
         '| 相对比较 | 我们的偏好胜率（平局计 0.5） | 双向均可判断/配对户数 | 正反顺序判断不一致 |','|---|---:|---:|---:|']
