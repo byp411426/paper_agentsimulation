@@ -133,7 +133,7 @@ def prepare(root: Path, output: Path, repo: Path):
     if len(kinds) != 1:
         raise ValueError('Cannot mix scripted and real runs')
     output.mkdir(parents=True, exist_ok=True)
-    summaries = {m: evaluate(a.run, repo, output/'audits'/m) for m, a in audits.items()}
+    summaries = {m: evaluate(a.run, a.repo, output/'audits'/m) for m, a in audits.items()}
     references={m:audit_reference_resolutions(a) for m,a in audits.items()}
     dump(output/'reference_resolution_checks.json',references)
     if any(x['errors'] for x in references.values()):
