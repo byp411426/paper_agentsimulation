@@ -110,8 +110,22 @@ def prepare(root: Path, output: Path, repo: Path):
     source_roots = read_json(root/'source_roots.json') if (root/'source_roots.json').exists() else {}
     audits = {m: CurrentRunAudit(root/(m+'_attempt1')/m, Path(source_roots.get(m,repo))) for m in METHODS}
     settings=[]
+    continuations={}
     for a in audits.values():
         cfg=deepcopy(a.cfg);cfg['run'].pop('run_id',None);cfg['experiment'].pop('agent_method',None)
+        replay_path=a.run/'cache_replay.json'
+        if replay_path.exists():
+            replay=read_json(replay_path)
+            previous=Path(replay['previous_run'])
+            if not replay['prefix_verified'] or replay['verified_steps']!=replay['previous_completed_steps']:
+                raise ValueError('Unverified continuation prefix')
+            if digest(previous/'execution_status.json')!=replay['previous_status_sha256'] or digest(previous/'llm_cache.sqlite')!=replay['previous_cache_sha256']:
+                raise ValueError('Continuation source changed')
+            old=read_jsonl(previous/'events/events.jsonl')
+            if a.events[:len(old)]!=old:
+                raise ValueError('Continuation event prefix changed')
+            cfg['llm']['budget_usd']=replay['previous_operational_budget_usd']
+            continuations[a.provenance['method']]=replay
         settings.append({'cfg':cfg,'seed':a.provenance['seed'],
             'registry_sha256':a.provenance['model_registry_sha256'],
             'shared_source':{k:h for k,h in a.provenance['code_sha256'].items()
@@ -186,6 +200,7 @@ def prepare(root: Path, output: Path, repo: Path):
         'paired_settings_sha256':hashlib.sha256(json.dumps(settings[0],sort_keys=True).encode()).hexdigest(),
         'arm_runs':{m:str(a.run) for m,a in audits.items()},
         'arm_source_roots':{m:str(a.repo) for m,a in audits.items()},
+        'operational_budget_continuations':continuations,
         'rubric_sha256':digest(review/'rubric.md'),'projection':PROJECTION,
         'cases':entries,'batches':batches,'pairs':pairs,
         'score_aggregation':'primary: one forward score per household; repeat scores are reliability only',

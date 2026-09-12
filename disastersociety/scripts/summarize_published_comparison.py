@@ -39,13 +39,20 @@ def summarize(runs: Path, evaluation: Path, output: Path, process_suite: Path):
         joint={cid: (hid,c) for e in events for cid,(hid,c) in commitments(e['world']).items()
                if len(c['party']['traveler_ids'])>=2}
         gw=status['gateway']
+        replay=read_json(run/'cache_replay.json') if (run/'cache_replay.json').exists() else None
+        prior=replay['previous_gateway'] if replay else {}
+        previous_calls=read_jsonl(Path(replay['previous_run'])/'llm_calls.jsonl') if replay else []
+        billed_calls=previous_calls+[c for c in calls if c['status']!='cache_hit']
         rows.append({'method':method,'behavior_mean':behavior['scores'][method]['mean'],
             'scored_households':behavior['scores'][method]['scored'],'households':len(profiles),
-            'independent_worlds':1,'decisions':len(decisions),'successful_gateway_calls':gw['n_ok'],
-            'schema_repairs':sum(r.get('schema_repairs',0) for r in calls if r['status']=='ok'),
-            'provider_retries':sum(r['status']=='provider_retry' for r in calls),
-            'input_tokens':gw['live_prompt_tokens'],'output_tokens':gw['live_completion_tokens'],
-            'estimated_cost_usd':gw['spent'],'minutes':status['wall_clock_seconds']/60,
+            'independent_worlds':1,'decisions':len(decisions),'successful_gateway_calls':gw['n_ok']+prior.get('n_ok',0),
+            'cache_replay_hits':gw['n_cache'],'cache_replay':replay,
+            'schema_repairs':sum(r.get('schema_repairs',0) for r in billed_calls if r['status']=='ok'),
+            'provider_retries':sum(r['status']=='provider_retry' for r in billed_calls),
+            'input_tokens':gw['live_prompt_tokens']+prior.get('live_prompt_tokens',0),
+            'output_tokens':gw['live_completion_tokens']+prior.get('live_completion_tokens',0),
+            'estimated_cost_usd':gw['spent']+prior.get('spent',0),
+            'minutes':(status['wall_clock_seconds']+(replay['previous_wall_clock_seconds'] if replay else 0))/60,
             'action_counts':dict(action_counts),'execution_rejections':dict(rejected),
             'evacuated_residents':sum(x==safe for x in locations.values()),'total_residents':len(locations),
             'fully_evacuated_households':fully_evacuated,'joint_commitments':len(joint),
@@ -69,7 +76,8 @@ def summarize(runs: Path, evaluation: Path, output: Path, process_suite: Path):
     for r in rows:
         score='N/A' if r['behavior_mean'] is None else f"{r['behavior_mean']:.3f}"
         text.append(f"| {names[r['method']]} | {score} | {r['scored_households']}/{r['households']} | {r['input_tokens']:,}/{r['output_tokens']:,} | {r['minutes']:.2f} |")
-    text+=['','绝对评分每户一次。反向会话对预先指定的两户做重复评分，只用于检查分歧，不替换主评分。家庭之间可能互动，因此 8 户不是 8 次独立仿真实验。','',
+    text+=['','绝对评分每户一次。反向会话对预先指定的两户做重复评分，只用于检查分歧，不替换主评分。家庭之间可能互动，因此 8 户不是 8 次独立仿真实验。',
+        '耗时包含实际运行与缓存重放时间，受并行负载和服务端延迟影响，不单独据此排名。若触及初始费用上限，只在验证已完成轨迹逐步完全相同后用缓存继续；表中 token 和费用计入中断前后的全部已记录真实调用，缓存读取不重复计费。该实验比较固定任务，不是固定费用预算下的性能。','',
         '| 相对比较 | 我们的偏好胜率（平局计 0.5） | 双向均可判断/配对户数 | 正反顺序判断不一致 |','|---|---:|---:|---:|']
     for m,p in behavior['pairwise'].items():
         value='N/A' if p['ours_win_rate_with_half_ties'] is None else f"{p['ours_win_rate_with_half_ties']:.1%}"

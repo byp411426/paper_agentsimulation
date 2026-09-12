@@ -66,7 +66,8 @@ this pilot and must not appear as a completed comparison.
   the response schema, enabling the ordinary correction path. Only that failed arm is
   rerun. Unchanged arms retain their complete runs and exact source snapshots; no steps
   or households are combined across attempts. The shared runtime, model, scenario and
-  budget must match before the comparison exporter admits the assembled arms.
+  original budget must match before the comparison exporter admits the assembled arms;
+  any operational continuation is separately verified and disclosed below.
 - Provider outages and unparseable outputs abort the run; there is no rule-generated
   behavior fallback. A parsed but incomplete departure intention is instead rejected
   by the environment, recorded without physical execution, and returned as feedback.
@@ -146,3 +147,25 @@ An assembled comparison may use directory references to one original run per arm
 `source_roots.json` pointing to its exact source snapshot. This supports a documented
 baseline-only implementation repair without rerunning unchanged arms. It does not permit
 mixing trajectories within an arm, different shared runtimes, or different model settings.
+
+## Operational budget continuation
+
+The initial USD 5 estimate cap is an operational stop, not information shown to residents
+or a fixed-compute benchmark. If a method reaches this cap before step 25, an optional
+`--resume-from /absolute/budget_stopped/method --budget 12` continuation can complete the
+same task in a new output directory. It accepts only a recorded `BUDGET_EXCEEDED` stop,
+identical model settings, population, scenario, hash seed, embedding artifacts and runtime
+source (apart from this optional launcher extension).
+
+The original SQLite responses are copied read-only. Any cache miss inside an already
+completed step stops before a paid call. Every replayed full event/state record must
+equal the original; only then can new calls continue past the interruption. The result
+is one newly executed complete event log with a verified prefix, not concatenated logs.
+Original attempts and all source snapshots remain intact. Nested continuations are refused.
+
+`cache_replay.json` records source hashes, old/new allowance, the old gateway ledger and
+prefix verification. Evaluation compares the original task settings while separately
+disclosing the operational allowance amendment. Resource reporting sums actual recorded
+calls before and after the stop, including work inside its unfinished step; cache reads
+are not billed twice. Wall time includes replay overhead and is not a controlled latency
+benchmark. No incomplete behavioral score is used to decide whether to continue.

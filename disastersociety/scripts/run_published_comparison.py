@@ -64,7 +64,7 @@ class IntegrationBackend:
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
-def one(method, output, real):
+def one(method, output, real, budget=5.0, resume_from=None):
     if output.exists() and any(output.iterdir()):
         raise FileExistsError("Prior attempt protected; use a new output directory")
     output.mkdir(parents=True,exist_ok=True)
@@ -76,10 +76,16 @@ def one(method, output, real):
     cfg['experiment']['order_calibration']=str((ROOT/cfg['experiment']['order_calibration']).resolve())
     cfg['llm']['models_config']='configs/models_published_comparison_20260912.yaml'
     cfg['llm']['max_concurrency']=3
-    cfg['llm']['budget_usd']=5.0
+    cfg['llm']['budget_usd']=budget
     models_path=ROOT/cfg['llm']['models_config']
     models=yaml.safe_load(models_path.read_text())
     profiles=ROOT/'experiments/carr/inputs/evaluation_repair_20260909/profiles.jsonl'
+    replay=None
+    if resume_from is not None:
+        if not real:
+            raise ValueError('Budget continuation requires a real source')
+        from scripts.comparison_cache_replay import CacheReplay
+        replay=CacheReplay(resume_from,ROOT,method,models_path,profiles,budget,cfg)
     run=output/method
     run.mkdir()
     (run/'execution_config.yaml').write_text(yaml.safe_dump(cfg,sort_keys=False))
@@ -89,6 +95,7 @@ def one(method, output, real):
         'ds/kernel/engine.py','ds/kernel/actions.py','ds/kernel/rng.py','ds/population/profile_validation.py',
         'ds/llm/gateway.py','ds/llm/backends.py','ds/llm/cache.py','ds/agents/decide.py',
         'ds/population/networks.py','experiments/carr/empirical_v2_runner.py','scripts/run_published_comparison.py']]
+    sources.append(ROOT/'scripts/comparison_cache_replay.py')
     provenance={'kind':'paired_single_seed_real_model_comparison' if real else 'scripted_software_check',
         'backend':'real' if real else 'mock','method':method,'seed':7201,'n_households':8,
         'python_hash_seed':os.environ.get('PYTHONHASHSEED'),'log_schema_version':'e1_evaluation_v1',
@@ -99,10 +106,22 @@ def one(method, output, real):
     embedding_dir=Path(os.environ.get('DS_EMBEDDING_CACHE','/nonexistent'))
     provenance['embedding_artifacts_sha256']={str(p.relative_to(embedding_dir)):sha(p)
         for p in embedding_dir.rglob('*') if p.is_file() and p.suffix in ('.onnx','.json')}
+    if replay and provenance['embedding_artifacts_sha256']!=json.loads((replay.previous/'provenance.json').read_text())['embedding_artifacts_sha256']:
+        raise ValueError('Embedding artifacts changed before replay')
     (run/'provenance.json').write_text(json.dumps(provenance,indent=2))
+    if replay:
+        replay.install(run)
     cache=LLMCache(run/'llm_cache.sqlite')
-    gateway=LLMGateway(run_id=method,models_cfg=models,budget_usd=5,max_concurrency=3,log_dir=output,
-        cache=cache,backends=None if real else {key:IntegrationBackend() for key in models['models']},abort_on_call_failure=True)
+    gateway_type=LLMGateway
+    gateway_options={}
+    import experiments.carr.empirical_v2_runner as runner_module
+    original_logger=runner_module.RunLogger
+    if replay:
+        from scripts.comparison_cache_replay import ReplayGateway
+        gateway_type=ReplayGateway;gateway_options['replay']=replay
+        runner_module.RunLogger=replay.logger_type()
+    gateway=gateway_type(run_id=method,models_cfg=models,budget_usd=replay.remaining_budget if replay else budget,max_concurrency=3,log_dir=output,
+        cache=cache,backends=None if real else {key:IntegrationBackend() for key in models['models']},abort_on_call_failure=True,**gateway_options)
     started=time.time()
     try:
         result=run_e1_v2(cfg=cfg,out_dir=output,gateway=gateway,run_seed=7201,n_households=8,profiles_path=profiles)
@@ -113,6 +132,9 @@ def one(method, output, real):
         print(json.dumps({'method':method,'status':result['status'],'elapsed_s':round(time.time()-started,2),
                           'gateway':gateway.stats()},ensure_ascii=False),flush=True)
     finally:
+        runner_module.RunLogger=original_logger
+        if replay:
+            replay.save()
         gateway.close()
         cache.close()
     return 0 if result['status']=='VALID' else 2
@@ -122,19 +144,23 @@ def main():
     ap.add_argument('--run',action='store_true')
     ap.add_argument('--method',choices=METHODS)
     ap.add_argument('--output',type=Path,required=True)
+    ap.add_argument('--budget',type=float,default=5.0,help='Operational USD estimate cap, not a behavioral task target')
+    ap.add_argument('--resume-from',type=Path,help='One budget-stopped method run; exact cache/state replay only')
     args=ap.parse_args()
+    if args.budget<=0 or (args.resume_from and not args.method):
+        raise ValueError('Positive budget required; continuation is per method')
     if args.run and not os.environ.get('PACKY_API_KEY'):
         os.environ['PACKY_API_KEY']=getpass.getpass('Packy API key (hidden): ').strip()
         if not os.environ['PACKY_API_KEY']:
             raise ValueError('No credential supplied')
     if args.method:
-        raise SystemExit(one(args.method,args.output,args.run))
+        raise SystemExit(one(args.method,args.output,args.run,args.budget,args.resume_from))
     if args.output.exists() and any(args.output.iterdir()):
         raise FileExistsError('Use a new comparison output directory')
     args.output.mkdir(parents=True,exist_ok=True)
     protocol={'methods':METHODS,'households':8,'seed':7201,'steps':25,'step_minutes':30,
         'real_model':args.run,'model':'deepseek-v4-flash','thinking':'enabled','temperature':0,
-        'max_output_tokens_per_call':16384,'estimated_budget_per_method_usd':5,
+        'max_output_tokens_per_call':16384,'estimated_budget_per_method_usd':args.budget,
         'max_schema_repairs':2,'empty_optional_plan_guidance':'null, never steps:[]',
         'structured_output_mode':'tool',
         'native_agentsociety_modules':'same model and sampling, native JSON-object response format',
@@ -148,7 +174,7 @@ def main():
     for method in METHODS:
         log=(args.output/(method+'.console.log')).open('w')
         cmd=[sys.executable,'-u','-m','scripts.run_published_comparison','--method',method,
-             '--output',str(args.output/(method+'_attempt1'))]
+             '--output',str(args.output/(method+'_attempt1')),'--budget',str(args.budget)]
         if args.run:
             cmd.append('--run')
         child=subprocess.Popen(cmd,cwd=ROOT,env=dict(os.environ),stdout=log,stderr=subprocess.STDOUT)
