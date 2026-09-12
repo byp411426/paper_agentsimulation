@@ -10,6 +10,7 @@ import yaml
 
 from scripts.audit_archived_run import Audit, agents, commitments, digest, dump, metric, read_json, read_jsonl
 from scripts.export_behavior_review import export_review
+from scripts.consensus_opportunities import audit_formation_opportunities
 
 
 class CurrentRunAudit(Audit):
@@ -169,6 +170,13 @@ class CurrentRunAudit(Audit):
         return metric(self.evidence["execution"], "每个撤离请求、执行状态、位置变化、反馈及相关资源记录。",
             ["无法归属某个请求的全局资源变化另报逐步检查；不能隐藏在零请求错误率后。",
              "单次完整运行不是正式方法对比。"])
+
+    def audit_consensus(self):
+        existing_states = super().audit_consensus()
+        summary, records = audit_formation_opportunities(self)
+        self.evidence['consensus_formation_opportunities'] = records
+        self.extras['consensus_formation_opportunities'] = summary
+        return existing_states
 
     def audit_exports(self):
         final, checks = self.events[-1], []

@@ -1,0 +1,28 @@
+{
+  "suite_id": "household_process_v1_20260912",
+  "scope": "家庭内部信息、共识、照护和执行的受控过程检查；不评价自主居民行为，不证明跨家庭接送能力。",
+  "selection": "在本次修复和运行前固定案例与预期。包含先前试运行暴露的失败类型，属于开发阶段协议验证，非独立留出集。",
+  "aggregation": "每个案例的全部必要断言通过才记为通过；通过案例数/全部案例数，同时报告各组覆盖。异常和未执行均算失败，不删除案例。",
+  "cases": [
+    {"id":"valid_joint","group":"agreement_positive","expected":"所有必要成员接受同一有效方案后，必须创建且只创建一份对应共识。"},
+    {"id":"partial_acceptance","group":"agreement_negative","expected":"少一名必要成员同意时，不得创建共识。"},
+    {"id":"participant_declines","group":"agreement_negative","expected":"必要成员拒绝后，不得创建共识。"},
+    {"id":"undelivered_acceptance","group":"agreement_negative","expected":"尚未送达的消息不能被有效接受。"},
+    {"id":"notice_acceptance","group":"agreement_negative","expected":"接受普通通知不能创建正式共识。"},
+    {"id":"version_specific_acceptance","group":"agreement_negative","expected":"旧方案的同意不能计入更改路线的新方案，新方案必须获得自己的同意。"},
+    {"id":"duplicate_acceptance","group":"agreement_positive","expected":"重复接受同一方案不能重复创建协议或改变已同意的内容。"},
+    {"id":"expired_acceptance","group":"agreement_negative","expected":"已经过期的方案即使被接受，也不能形成可执行共识。"},
+    {"id":"cancelled_execution","group":"execution_negative","expected":"撤回后的共识不能执行，人员及车辆保持原位。"},
+    {"id":"closed_route","group":"execution_negative","expected":"封路时拒绝出发，全部人员和资源不移动，并返回失败反馈。"},
+    {"id":"revised_route_execution","group":"execution_positive","expected":"封路失败后，对新路线重新协商并在到期时提交行动，全体指定成员和车辆应真实出发。"},
+    {"id":"missing_current_intent","group":"execution_negative","expected":"已同意但当步缺少一名决策成员的出发请求，不能代替其执行。"},
+    {"id":"vehicle_capacity","group":"agreement_negative","expected":"超过车辆座位的方案不能形成共识，反馈说明容量问题。"},
+    {"id":"cross_household_feedback","group":"interface_boundary","expected":"当前不支持跨家庭组队时明确告知能力边界和违规成员，而不只给笼统非法人员。"},
+    {"id":"dependent_role_feedback","group":"interface_boundary","expected":"把儿童写入必须独立同意的成员名单时，指出成员及正确字段，不偷偷改写方案。"},
+    {"id":"assisted_adult","group":"care_constraint","expected":"有决策能力但明确需要执行协助的成年人，也必须安排同行照护者。"},
+    {"id":"self_caregiver","group":"care_constraint","expected":"需要协助者不能以给自己指定照护来满足需要他人协助的约束。"},
+    {"id":"empty_recipient_feedback","group":"interface_boundary","expected":"消息没有任何可达收件人时，明确反馈未送达，不能让发送者误以为成功触达。"},
+    {"id":"capabilities_in_input","group":"interface_boundary","expected":"实际决策输入明确允许的家庭决策成员、被照护成员、组队范围及交通能力限制。"},
+    {"id":"independent_departure","group":"execution_positive","expected":"无照护约束的居民可以独立出发；程序不强制全家同行或为提高共识率强迫同意。"}
+  ]
+}

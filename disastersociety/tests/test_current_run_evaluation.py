@@ -23,11 +23,38 @@ def test_complete_run_evaluates_read_only_and_preserves_empty_opportunities(comp
     result = evaluate(complete_run, REPO, tmp_path / "audit")
     assert [(x["errors"], x["checked"]) for x in result["metrics"].values()] == [(0, 24), (0, 4), (0, 5)]
     assert result["additional_checks"]["resource_state_checks"]["errors"] == 0
+    formation = result['additional_checks']['consensus_formation_opportunities']
+    assert formation['errors'] == 0
+    assert formation['positive']['checked'] == 2
+    assert formation['negative']['checked'] == 2
     assert not any(r["issues"] for r in result["terminal_export_checks"])
     assert result["formal_behavior_score"] is None
     assert read_json(tmp_path / "audit/source_manifest.json")["read_only"]
     with pytest.raises(FileExistsError):
         evaluate(complete_run, REPO, tmp_path / "audit")
+
+
+def test_missing_agreement_is_detected_even_if_acceptance_output_claims_success(complete_run):
+    audit = CurrentRunAudit(complete_run, REPO)
+    cid = next(cid for cid in audit.events[1]['world']['household_commitments']['fixture_A'])
+    # Simulate a persistence bug; leave all proposal/response/acceptance records
+    # unchanged, so an oracle that trusts acceptance output would miss it.
+    for event in audit.events:
+        event['world']['household_commitments']['fixture_A'].pop(cid, None)
+        event['state_before_decisions']['world']['household_commitments']['fixture_A'].pop(cid, None)
+    audit.audit_consensus()
+    assert any('effective_acceptance_without_recorded_agreement' in r['issues']
+               for r in audit.evidence['consensus_formation_opportunities'])
+
+
+def test_recorded_agreement_without_actual_acceptance_is_detected(complete_run):
+    audit = CurrentRunAudit(complete_run, REPO)
+    for (step, _), decision in audit.decisions.items():
+        if step == 2:
+            decision['decision']['message_responses'] = []
+    audit.audit_consensus()
+    assert any('agreement_created_without_valid_formation' in r['issues']
+               for r in audit.evidence['consensus_formation_opportunities'])
 
 
 def test_tampered_observation_input_is_detected(complete_run):

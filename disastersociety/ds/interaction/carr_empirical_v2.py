@@ -86,7 +86,17 @@ class CarrEmpiricalInteractionV2:
                 self.receipts.append(receipt)
                 self._receipts_by_id[receipt.receipt_id] = receipt
 
-    def _notify(self, message, step, accepted, reason, commitment=None):
+    def _notify(self, message, step, accepted, reason, commitment=None, *, details=None):
+        hints = {
+            'cross_household_transport_unsupported': 'This protocol supports only members of the proposer household. Cross-household pickup is not implemented; a notice or offer does not move anyone.',
+            'nondecision_traveler': 'traveler_ids must contain decision-making household members. Put non-decision members in accompanying_member_ids and specify a participating caregiver.',
+            'invalid_dependents': 'accompanying_member_ids accepts only non-decision members of this household. Decision-making members must give their own acceptance as travelers.',
+            'missing_caregiver': 'Every party member explicitly requiring execution assistance needs another participating traveler assigned in caregiver_by_member, including decision-making adults.',
+            'caregiver_is_recipient': 'A member requiring another person\'s assistance cannot satisfy it by naming themselves as caregiver.',
+            'caregiver_not_traveler': 'A designated caregiver must be a participating traveler.',
+            'vehicle_capacity': 'The vehicle must have a seat for every traveler and accompanying member.',
+            'no_reachable_recipient': 'No one received this message. Use household/family/community/neighbors or a known reachable resident ID.',
+        }
         recipients={message['sender_id']} | {
             r for r,v in message.get('recipient_states',{}).items() if v['processed_step'] is not None}
         for rid in sorted(recipients):
@@ -95,8 +105,13 @@ class CarrEmpiricalInteractionV2:
                 'kind':'notice','channel':'household_protocol','sender_id':'household_protocol',
                 'source_message_id':message['message_id'],'recipient_id':rid,
                 'issued_step':step,'delivered_step':step,
-                'content': 'Party accepted' if accepted else 'Party not accepted: '+str(reason),
+                'content': ('Party accepted' if accepted else
+                            ('Message not delivered: ' if reason == 'no_reachable_recipient' else 'Party not accepted: ') + str(reason)),
                 'payload':{'accepted':accepted,'reason_code':reason,'commitment_id':commitment.id if commitment else None}}
+            if reason in hints:
+                notice['payload']['correction_hint'] = hints[reason]
+            if details:
+                notice['payload'].update(details)
             if commitment is not None:
                 notice['payload'].update(depart_step=commitment.party.depart_step,
                     route_id=commitment.party.route_id,vehicle_id=commitment.party.vehicle_id,
@@ -135,18 +150,29 @@ class CarrEmpiricalInteractionV2:
                     record['acceptance']={'accepted':False,'reason_code':'explicit_party_fields_required','commitment_id':None}
                     record['status']='rejected';self._notify(record,clock.t,False,'explicit_party_fields_required');continue
                 hh=self.households[agent.household_id]
-                reason=None
-                if not set(party.traveler_ids)<=set(hh.decision_member_ids):reason='invalid_travelers'
-                elif not set(party.accompanying_member_ids)<=set(hh.dependent_ids):reason='invalid_dependents'
+                reason=None; details={}
+                outsiders = (set(party.traveler_ids) | set(party.accompanying_member_ids)) - set(hh.member_ids)
+                nondecision = set(party.traveler_ids) - set(hh.decision_member_ids)
+                invalid_dependents = set(party.accompanying_member_ids) - set(hh.dependent_ids)
+                if outsiders:
+                    reason='cross_household_transport_unsupported'; details['invalid_member_ids']=sorted(outsiders)
+                elif nondecision:
+                    reason='nondecision_traveler'; details['invalid_member_ids']=sorted(nondecision)
+                elif invalid_dependents:
+                    reason='invalid_dependents'; details['invalid_member_ids']=sorted(invalid_dependents)
                 elif agent.id not in party.traveler_ids:reason='proposer_must_join_party'
                 elif party.depart_step<clock.t+2:reason='insufficient_coordination_time'
                 elif channel!='household_dm':reason='party_requires_household_channel'
                 if reason:
                     record['acceptance']={'accepted':False,'reason_code':reason,'commitment_id':None}
-                    record['status']='rejected';self._notify(record,clock.t,False,reason);continue
+                    record['status']='rejected';self._notify(record,clock.t,False,reason,details=details);continue
                 record['recipient_ids']=[r for r in party.traveler_ids if r!=agent.id]
                 record['recipient_states']={r:record['recipient_states'][r] for r in record['recipient_ids']}
                 if not record['recipient_ids']:self._accept_party_proposal(agent,record,clock.t)
+            elif not record['recipient_ids']:
+                record['status'] = 'rejected'
+                record['delivery_error'] = {'reason_code': 'no_reachable_recipient'}
+                self._notify(record, clock.t, False, 'no_reachable_recipient')
 
     def process(self, agent, decision, clock):
         processed=agent.process_inbox(step=clock.t)

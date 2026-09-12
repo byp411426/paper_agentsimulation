@@ -269,12 +269,14 @@ class Household:
 
         assisted = [
             member
-            for member in party.accompanying_member_ids
+            for member in all_party_members
             if member in care_requirements
         ]
         for member in assisted:
             if member not in caregivers:
                 return CommitmentAcceptanceResult(False, None, "missing_caregiver")
+            if caregivers[member] == member:
+                return CommitmentAcceptanceResult(False, None, "caregiver_is_recipient")
         if any(
             caregiver not in party.traveler_ids
             for caregiver in caregivers.values()

@@ -207,6 +207,7 @@ class CarrEmpiricalResidentV2(Resident):
         }
 
     def _prompt_payload(self, *, world: Any, step: int) -> dict[str, Any]:
+        household = world.households[self.household_id]
         latent_traits = {
             key: value
             for key, value in self.profile.get("latent_traits", {}).items()
@@ -220,6 +221,18 @@ class CarrEmpiricalResidentV2(Resident):
             "new_proposal_earliest_depart_step": step + 2,
             "received_proposal_earliest_depart_step": step + 1,
             "own_commitment_statuses": world.commitment_statuses_for(self.id),
+            "coordination_capabilities": {
+                "version": "household_coordination_20260912",
+                "scope": "within_household",
+                "traveler_ids": sorted(household.decision_member_ids),
+                "accompanying_member_ids": sorted(household.dependent_ids),
+                "vehicle_ids": sorted(household.vehicles),
+                "cross_household_transport": False,
+                "return_pickup": False,
+                "walking_departure": False,
+                "safe_zone_residents_decide": False,
+                "message_group_aliases": ["household", "family", "community", "neighbors"],
+            },
             "resident_profile": {
                 "static": self.profile.get("pums_static", {}),
                 "functional_limitations": self.profile.get(
@@ -279,6 +292,15 @@ class CarrEmpiricalResidentV2(Resident):
             "You may stay, prepare, seek_help, offer_help, or evacuate. Staying is allowed. "
             "Set plan_update only to create or revise a 1-3 step plan; null preserves the existing plan. "
             "To coordinate, use party_proposal with explicit traveler IDs, dependents, caregivers, route and vehicle. "
+            "The coordination_capabilities field lists the supported household member roles and resources. "
+            "traveler_ids contains only decision-making members of YOUR household, including yourself; "
+            "non-decision members belong in accompanying_member_ids and need a listed accompanying caregiver. "
+            "Any traveler explicitly requiring execution assistance also needs another participating caregiver; "
+            "having decision capacity does not remove that assistance requirement. "
+            "This world supports household vehicle departures, not cross-household pickup, walking, or return trips. "
+            "After arrival at the safe zone a resident no longer makes decisions. "
+            "Neighbors can exchange information and express requests/offers, but these expressions do not provide a transport service. "
+            "Use a supplied message group alias or a known reachable resident ID, not invented broadcast aliases. "
             "For a NEW proposal, use new_proposal_earliest_depart_step or later. "
             "For an ALREADY RECEIVED proposal, use received_proposal_earliest_depart_step (current_step+1). "
             "Do not apply the NEW-proposal bound to accepting an existing proposal; it already spent one step in delivery. "

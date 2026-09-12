@@ -11,6 +11,7 @@ DisasterSociety：动态灾害中的生成式居民与家庭社会仿真研究�
 | 实际实验源码、配置和测试 | [disastersociety/](disastersociety/) |
 | 9 月 9 日代码修复与离线验证 | [修复说明](docs/evaluation_repair_20260909.md) · [验证记录](docs/evaluation_repair_20260909_verification.json) |
 | 9 月 10 日：8 户实验与评价入口 | [本地 Codex 运行指令](docs/run_evaluation_pilot_codex.md) |
+| 9 月 12 日：家庭协议修复与固定场景检查 | [实现、运行和五指标安排](docs/household_process_validation_20260912.md) |
 | 当前英文论文 | [main.tex](paper/ieee_journal/source/main.tex) · [PDF](paper/ieee_journal/source/main.pdf) |
 | 论文图片和可编辑 Draw.io | [figures/](paper/ieee_journal/figures/) |
 | 9 月 5 日实验批次 | [main_experiments_20260905/](paper/ieee_journal/working/main_experiments_20260905/) |
@@ -22,6 +23,7 @@ DisasterSociety：动态灾害中的生成式居民与家庭社会仿真研究�
 
 ## 当前实验状态
 
+- 9 月 12 日明确家庭内组队和交通能力，补充具体失败反馈及成年人的协助约束；新增固定场景运行器和共识形成的双向核验。过程案例使用固定行为输入，不能作为真实模型行为得分；旧 8 户结果保持原实验身份。
 - 9 月 10 日新增单次 8 户运行入口、程序核验、独立行为评分材料导出／汇总与完整结果报告。已验证带鉴权的聊天补全请求可成功；未鉴权的模型列表请求返回 403 不代表实际模型调用不可用。尚无正式方法对比。
 - 9 月 9 日已修正家庭背景映射、消息和执行记录等问题，另存修正后的 24 户输入。旧记录与论文数值保留。
 - 9 月 5 日批次的三次 24 户运行均有 `accepted.json`，分别对应 seed7201 的 attempt3、seed8301 的 attempt1、seed9401 的 attempt1。此前失败或中断尝试一并保留。
