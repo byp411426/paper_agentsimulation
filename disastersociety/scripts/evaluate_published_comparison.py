@@ -107,7 +107,18 @@ def audit_reference_resolutions(audit):
 def prepare(root: Path, output: Path, repo: Path):
     if output.exists() and any(output.iterdir()):
         raise FileExistsError('Existing cases and evaluations are protected')
-    audits = {m: CurrentRunAudit(root/(m+'_attempt1')/m, repo) for m in METHODS}
+    source_roots = read_json(root/'source_roots.json') if (root/'source_roots.json').exists() else {}
+    audits = {m: CurrentRunAudit(root/(m+'_attempt1')/m, Path(source_roots.get(m,repo))) for m in METHODS}
+    settings=[]
+    for a in audits.values():
+        cfg=deepcopy(a.cfg);cfg['run'].pop('run_id',None);cfg['experiment'].pop('agent_method',None)
+        settings.append({'cfg':cfg,'seed':a.provenance['seed'],
+            'registry_sha256':a.provenance['model_registry_sha256'],
+            'shared_source':{k:h for k,h in a.provenance['code_sha256'].items()
+                if k.startswith(('ds/world/','ds/kernel/','ds/interaction/','ds/households/','ds/population/','ds/llm/','ds/agents/'))
+                or k=='experiments/carr/empirical_v2_runner.py'}})
+    if any(x!=settings[0] for x in settings[1:]):
+        raise ValueError('Model, scenario, seed, budget or shared runtime differs between arms')
     # Verify identical external inputs before looking at behavioral scores.
     common = {}
     for filename in ('selected_profiles.jsonl', 'input_events.jsonl', 'input_graph.json'):
@@ -172,6 +183,9 @@ def prepare(root: Path, output: Path, repo: Path):
             dump(review/(batch_id+'.json'), assignment)
             batches.append({'batch_id':batch_id,'file':batch_id+'.json','sha256':digest(review/(batch_id+'.json'))})
     manifest = {'kind':next(iter(kinds)), 'common_inputs_sha256':common,
+        'paired_settings_sha256':hashlib.sha256(json.dumps(settings[0],sort_keys=True).encode()).hexdigest(),
+        'arm_runs':{m:str(a.run) for m,a in audits.items()},
+        'arm_source_roots':{m:str(a.repo) for m,a in audits.items()},
         'rubric_sha256':digest(review/'rubric.md'),'projection':PROJECTION,
         'cases':entries,'batches':batches,'pairs':pairs,
         'score_aggregation':'primary: one forward score per household; repeat scores are reliability only',

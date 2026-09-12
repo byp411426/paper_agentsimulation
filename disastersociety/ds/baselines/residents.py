@@ -10,8 +10,8 @@ from copy import deepcopy
 from datetime import datetime, timedelta
 import json
 from types import SimpleNamespace
-from typing import Any
-from pydantic import BaseModel, Field, RootModel
+from typing import Any, Annotated, Literal
+from pydantic import BaseModel, Field, RootModel, create_model
 
 from ds.agents.carr_empirical_v2 import CarrEmpiricalResidentV2
 from ds.agents.e1_contracts import E1ActionRequest as E1Decision
@@ -24,6 +24,19 @@ class JsonObject(RootModel[dict[str, Any]]):
 
 class Importance(BaseModel):
     scores: list[int] = Field(min_length=1)
+
+
+def importance_schema(count):
+    """Put the existing cardinality/range contract into provider repair validation."""
+    return create_model('Importance', scores=(list[Annotated[int, Field(ge=1,le=10)]],
+        Field(min_length=count,max_length=count)))
+
+
+def reflection_schema(memory_ids):
+    evidence_type=Literal[tuple(sorted(memory_ids))]
+    insight=create_model('GroundedInsight',thought=(str,...),
+        evidence_ids=(list[evidence_type],Field(min_length=1)))
+    return create_model('Reflection',insights=(list[insight],Field(min_length=1,max_length=5)))
 
 class FocalQuestions(BaseModel):
     questions: list[str] = Field(min_length=1, max_length=3)
@@ -177,7 +190,8 @@ class GenerativeAgentsResident(PublishedResident):
         relevant=self._retrieve(questions.questions,30)
         reflection=await self._call("ga_reflection_insights",
             "Infer up to five higher-level insights from these memories. Each insight must cite the "
-            "actual memory IDs supporting it. Do not treat inference as verified world fact.\n"+json.dumps(relevant),Reflection)
+            "actual memory IDs supporting it. Do not treat inference as verified world fact.\n"+json.dumps(relevant),
+            reflection_schema({n.node_id for n in self.nodes}))
         valid_ids={n.node_id for n in self.nodes}
         for insight in reflection.insights:
             if not set(insight.evidence_ids)<=valid_ids:
@@ -191,7 +205,7 @@ class GenerativeAgentsResident(PublishedResident):
         descriptions=[json.dumps(x,ensure_ascii=False) for x in pending]
         rated=await self._call("ga_importance",
             "Rate the poignancy of EACH memory from 1 (mundane) to 10 (extremely important). "
-            "Return one integer per memory in the same order, under scores.\n"+json.dumps(descriptions),Importance)
+            "Return one integer per memory in the same order, under scores.\n"+json.dumps(descriptions),importance_schema(len(descriptions)))
         if len(rated.scores)!=len(descriptions) or any(not 1<=s<=10 for s in rated.scores):
             raise ValueError("GA importance requires one valid score per memory")
         for desc,score in zip(descriptions,rated.scores):

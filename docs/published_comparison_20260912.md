@@ -61,6 +61,12 @@ this pilot and must not appear as a completed comparison.
   conditional departure fields. They remain development failures, including their costs.
   The final paired attempt restores reasoning uniformly; its higher call budget is frozen
   before scoring and is not adjusted per method's behavioral outcome.
+- A later GA-only development exception exposed an incorrect number of batched importance
+  ratings. The existing count/range and cited-memory requirements are now represented in
+  the response schema, enabling the ordinary correction path. Only that failed arm is
+  rerun. Unchanged arms retain their complete runs and exact source snapshots; no steps
+  or households are combined across attempts. The shared runtime, model, scenario and
+  budget must match before the comparison exporter admits the assembled arms.
 - Provider outages and unparseable outputs abort the run; there is no rule-generated
   behavior fallback. A parsed but incomplete departure intention is instead rejected
   by the environment, recorded without physical execution, and returned as feedback.
@@ -135,3 +141,8 @@ place the key in a shell command, configuration, log, paper or commit. Outputs r
 overwrite existing attempts. `prepare` requires three complete valid runs with identical
 external input hashes and the recorded source version. `collect` rejects missing, duplicate,
 changed or invalidly referenced judgments. No command fabricates behavioral ratings.
+
+An assembled comparison may use directory references to one original run per arm and
+`source_roots.json` pointing to its exact source snapshot. This supports a documented
+baseline-only implementation repair without rerunning unchanged arms. It does not permit
+mixing trajectories within an arm, different shared runtimes, or different model settings.
