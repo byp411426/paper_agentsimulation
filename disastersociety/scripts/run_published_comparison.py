@@ -41,7 +41,7 @@ class IntegrationBackend:
             data={"revise":False,"reason":"Offline wiring check"}
         elif name=="Schedule":
             data={"goal":"Observe current information","activities":[{"due_step":25,"activity":"Wait and observe"}],"reason":"Offline wiring check"}
-        elif name in ("E1Decision","NativeStepDecision"):
+        elif name in ("E1Decision","E1ActionRequest","NativeStepDecision"):
             data={"action":"stay","assessment":"Offline wiring check; not an experimental behavior", "cognitive_step_complete":False,"cognitive_step_reason":"Continue waiting"}
         elif "satisfaction initialization" in prompt:
             data={"current_satisfaction":{"hunger_satisfaction":.8,"energy_satisfaction":.8,"safety_satisfaction":.7,"social_satisfaction":.8}}
@@ -138,6 +138,8 @@ def main():
         'max_schema_repairs':2,'empty_optional_plan_guidance':'null, never steps:[]',
         'structured_output_mode':'tool',
         'native_agentsociety_modules':'same model and sampling, native JSON-object response format',
+        'request_contract':'E1ActionRequest; semantic execution failures are world rejections, not backend outages',
+        'explicit_commitment_reference':'only omitted duplicate fields resolve from the cited accepted record present in the actual input; raw request and resolution are logged',
         'shared_services':['world physics','household commitment protocol','wake gate','action schema'],
         'exclusions':['no human prediction labels','no rule-generated results counted as model outputs'],
         'behavior_rubric':'scripts/export_behavior_review.py:RUBRIC; frozen before judging'}

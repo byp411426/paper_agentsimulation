@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from typing import Any, Literal
 
 from ds.agents.decide import OutMsg, ResidentDecision
-from ds.agents.e1_contracts import E1Decision as E1ResidentDecision
+from ds.agents.e1_contracts import E1ActionRequest as E1ResidentDecision
 from ds.agents.state import Resident, StaticAttrs
 from ds.kernel.rng import stream_seed
 from ds.llm.gateway import LLMGateway
@@ -348,7 +348,31 @@ class CarrEmpiricalResidentV2(Resident):
             seed=seed,
             temperature=gateway.temperature,
         )
+        decision = self._resolve_departure_reference(decision, payload=payload, gateway=gateway, step=step)
         return self._normalize_proposal(decision, step=step)
+
+    def _resolve_departure_reference(self, decision, *, payload, gateway, step):
+        """Resolve only omitted copies of fields from an explicitly cited known party.
+
+        Never choose a party, consent, vehicle, route or time for the resident;
+        preserve explicit conflicting arguments for environment rejection.
+        """
+        if decision.action != 'evacuate' or decision.departure_mode != 'commitment':
+            return decision
+        source = next((c for c in payload['own_commitment_statuses']
+            if c['commitment_id'] == decision.commitment_id and c['status'] == 'accepted'), None)
+        if source is None:
+            return decision
+        fill = {k: source[k] for k in ('vehicle_id', 'route_id', 'depart_step')
+                if getattr(decision, k) is None}
+        if not fill:
+            return decision
+        with (gateway.log_path.parent/'decision_reference_resolutions.jsonl').open('a') as handle:
+            handle.write(json.dumps({'step':step, 'resident_id':self.id,
+                'raw_request':decision.model_dump(), 'commitment_id':decision.commitment_id,
+                'source':'decision_inputs.own_commitment_statuses', 'source_record':source,
+                'resolved_fields':fill}, ensure_ascii=False, default=str)+'\n')
+        return decision.model_copy(update=fill)
 
     def _normalize_proposal(
         self, decision: E1ResidentDecision, *, step: int

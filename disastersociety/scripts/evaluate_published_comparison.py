@@ -64,6 +64,46 @@ def project(audit, hid, cid, mapping):
     return trace
 
 
+def audit_reference_resolutions(audit):
+    """Check the logged copies against actual inputs AND pre-resolution model cache."""
+    import sqlite3
+    logs=read_jsonl(audit.run/'decision_reference_resolutions.jsonl') if (audit.run/'decision_reference_resolutions.jsonl').exists() else []
+    by_id={(r['step'],r['resident_id']):r for r in logs}
+    if len(by_id)!=len(logs):
+        raise ValueError('Duplicate commitment reference resolution')
+    calls={(r['step'],r['agent_id']):r for r in read_jsonl(audit.run/'llm_calls.jsonl')
+           if r['status'] in ('ok','cache_hit') and (r['step'],r['agent_id']) in audit.decisions}
+    records=[]
+    with sqlite3.connect('file:'+str(audit.run/'llm_cache.sqlite')+'?mode=ro',uri=True) as conn:
+        for key, decision in audit.decisions.items():
+            call=calls.get(key)
+            if call is None:
+                raise ValueError('No model call for a logged decision')
+            cached=conn.execute('SELECT response FROM cache WHERE key=?',(call['key'],)).fetchone()
+            if cached is None:
+                raise ValueError('Missing original parsed model response')
+            raw=json.loads(cached[0]); actual=decision['decision']; log=by_id.get(key)
+            changes={k:actual[k] for k in ('vehicle_id','route_id','depart_step') if raw.get(k)!=actual.get(k)}
+            issues=[]
+            if changes or log:
+                if log is None:
+                    issues.append('unlogged_reference_resolution')
+                else:
+                    sources=audit.inputs[key]['payload']['own_commitment_statuses']
+                    source=next((s for s in sources if s['commitment_id']==raw.get('commitment_id') and s['status']=='accepted'),None)
+                    if raw.get('action')!='evacuate' or raw.get('departure_mode')!='commitment' or source is None:
+                        issues.append('reference_not_an_explicit_known_accepted_party')
+                    if log['raw_request']!=raw or log['resolved_fields']!=changes:
+                        issues.append('resolution_log_differs_from_model_response_or_executed_request')
+                    if source is not None and (log['source_record']!=source or any(raw.get(k) is not None or v!=source[k] for k,v in changes.items())):
+                        issues.append('resolution_overwrote_choice_or_copied_wrong_fact')
+                records.append({'step':key[0],'resident_id':key[1],'resolved_fields':changes,'issues':issues})
+    if set(by_id)-set(audit.decisions):
+        raise ValueError('Reference log has no associated decision')
+    return {'checked':len(records),'errors':sum(bool(r['issues']) for r in records),
+        'records':records,'meaning':'Only omitted copies of explicitly referenced accepted party fields; no choices or consent inferred'}
+
+
 def prepare(root: Path, output: Path, repo: Path):
     if output.exists() and any(output.iterdir()):
         raise FileExistsError('Existing cases and evaluations are protected')
@@ -83,6 +123,10 @@ def prepare(root: Path, output: Path, repo: Path):
         raise ValueError('Cannot mix scripted and real runs')
     output.mkdir(parents=True, exist_ok=True)
     summaries = {m: evaluate(a.run, repo, output/'audits'/m) for m, a in audits.items()}
+    references={m:audit_reference_resolutions(a) for m,a in audits.items()}
+    dump(output/'reference_resolution_checks.json',references)
+    if any(x['errors'] for x in references.values()):
+        raise ValueError('Reference resolution is not supported by the actual model input/output; review checks before scoring')
     hids = sorted(next(iter(audits.values())).profile_h)
     mapping = {hid: f'H{i+1:03}' for i, hid in enumerate(hids)}
     for hid in hids:

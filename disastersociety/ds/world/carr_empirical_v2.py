@@ -215,21 +215,29 @@ class CarrEmpiricalWorldV2:
                 action=('noop',d.action)
             elif self.member_locations.get(e.agent_id) != ('home',hh.id):
                 action=('rejected','resident_not_at_origin')
-            elif d.depart_step != clock.t:
-                action=('rejected','departure_not_due')
             elif getattr(d,'departure_mode',None)=='commitment':
                 c=hh.v2_commitments.get(d.commitment_id)
                 if c is None or c.status!='accepted':
                     action=('rejected','commitment_not_active')
                 elif e.agent_id not in c.party.traveler_ids:
                     action=('rejected','not_a_traveler')
+                elif d.depart_step is None or not d.route_id or not d.vehicle_id:
+                    action=('rejected','incomplete_departure_request')
+                elif d.depart_step != clock.t:
+                    action=('rejected','departure_not_due')
                 elif (c.party.depart_step,c.party.route_id,c.party.vehicle_id)!=(d.depart_step,d.route_id,d.vehicle_id):
                     action=('rejected','current_intent_commitment_mismatch')
                 else:
                     action=('party',c.id)
             elif getattr(d,'departure_mode',None)=='solo':
                 companions=frozenset(d.accompany_dependents)
-                if not companions <= set(hh.dependent_ids):
+                if getattr(d, 'party_proposal', None) is not None:
+                    action=('rejected','conflicting_solo_and_joint_proposal')
+                elif d.depart_step is None or not d.route_id or not d.vehicle_id:
+                    action=('rejected','incomplete_departure_request')
+                elif d.depart_step != clock.t:
+                    action=('rejected','departure_not_due')
+                elif not companions <= set(hh.dependent_ids):
                     action=('rejected','invalid_accompanying_members')
                 elif any(self.member_locations.get(m)!=('home',hh.id) for m in companions):
                     action=('rejected','party_member_not_at_origin')

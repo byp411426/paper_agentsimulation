@@ -67,3 +67,23 @@ def test_changed_case_is_rejected(review):
     (output/'anonymous/C1.json').write_text('{}')
     with pytest.raises(ValueError,match='Case changed'):
         collect(output,judgments)
+
+
+def test_reference_audit_detects_unlogged_copy_and_wrong_source(tmp_path):
+    from types import SimpleNamespace
+    from ds.llm.cache import LLMCache
+    from scripts.evaluate_published_comparison import audit_reference_resolutions
+    raw={'action':'evacuate','departure_mode':'commitment','commitment_id':'c',
+         'vehicle_id':None,'route_id':None,'depart_step':None}
+    fill={'vehicle_id':'v','route_id':'alternate','depart_step':5}
+    source={'commitment_id':'c','status':'accepted',**fill}
+    cache=LLMCache(tmp_path/'llm_cache.sqlite');cache.put('k','mock',json.dumps(raw),0,0);cache.close()
+    (tmp_path/'llm_calls.jsonl').write_text(json.dumps({'step':5,'agent_id':'r','status':'ok','key':'k'})+'\n')
+    audit=SimpleNamespace(run=tmp_path,decisions={(5,'r'):{'decision':{**raw,**fill}}},
+        inputs={(5,'r'):{'payload':{'own_commitment_statuses':[source]}}})
+    assert audit_reference_resolutions(audit)['errors']==1  # copy without a record
+    record={'step':5,'resident_id':'r','raw_request':raw,'source_record':source,'resolved_fields':fill}
+    (tmp_path/'decision_reference_resolutions.jsonl').write_text(json.dumps(record)+'\n')
+    assert audit_reference_resolutions(audit)['errors']==0
+    audit.inputs[(5,'r')]['payload']['own_commitment_statuses'][0]['route_id']='primary'
+    assert audit_reference_resolutions(audit)['errors']==1  # logged source disagrees with actual input

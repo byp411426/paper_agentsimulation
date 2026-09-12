@@ -66,3 +66,32 @@ class E1Decision(ResidentDecision):
             if self.departure_mode=='solo' and self.party_proposal is not None:
                 raise ValueError('do not depart solo and propose a shared trip in the same decision; choose prepare while proposing')
         return self
+
+
+class E1ActionRequest(E1Decision):
+    """A parsed model intention, before environment execution validation.
+
+    Missing departure arguments are rejected world requests, not provider
+    outages. The strict E1Decision constructor remains available to callers
+    constructing fully specified commands. No missing choice is invented here.
+    """
+    @model_validator(mode='after')
+    def explicit_departure(self):
+        return self
+
+    @classmethod
+    def normalize_wire_json(cls, text):
+        import json
+        try:
+            data = json.loads(text)
+        except (ValueError, TypeError):
+            return text, None
+        if not isinstance(data, dict):
+            return text, None
+        fields = [k for k in ('destination_id','route_id','vehicle_id','depart_step',
+            'departure_mode','commitment_id','party_proposal','plan_update') if data.get(k) == 'null']
+        if not fields:
+            return text, None
+        for k in fields:
+            data[k] = None
+        return json.dumps(data, ensure_ascii=False), 'nullable_string_null:' + ','.join(fields)

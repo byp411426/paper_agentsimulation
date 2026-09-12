@@ -14,7 +14,7 @@ from typing import Any
 from pydantic import BaseModel, Field, RootModel
 
 from ds.agents.carr_empirical_v2 import CarrEmpiricalResidentV2
-from ds.agents.e1_contracts import E1Decision
+from ds.agents.e1_contracts import E1ActionRequest as E1Decision
 from ds.kernel.rng import stream_seed
 from .ga_support import get_embedding
 
@@ -121,6 +121,8 @@ class PublishedResident(CarrEmpiricalResidentV2):
             model=self._gateway.decision_model,messages=messages,schema=schema,
             seed=stream_seed(self._gateway.run_seed,"llm_decision",entity_id=self.id,step=self._step),
             temperature=self._gateway.temperature)
+        result = self._resolve_departure_reference(result, payload=payload,
+            gateway=self._gateway, step=self._step)
         return self._normalize_proposal(result,step=self._step)
 
     def commit_execution(self, decision, outcome, *, step):

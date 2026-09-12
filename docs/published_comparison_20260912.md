@@ -61,7 +61,17 @@ this pilot and must not appear as a completed comparison.
   conditional departure fields. They remain development failures, including their costs.
   The final paired attempt restores reasoning uniformly; its higher call budget is frozen
   before scoring and is not adjusted per method's behavioral outcome.
-- Model request failures abort the run; there is no rule-generated behavior fallback.
+- Provider outages and unparseable outputs abort the run; there is no rule-generated
+  behavior fallback. A parsed but incomplete departure intention is instead rejected
+  by the environment, recorded without physical execution, and returned as feedback.
+  Such semantic request rejection must not be mislabeled as a provider outage.
+- `E1ActionRequest` is the model-to-world request contract. If a resident explicitly
+  cites an accepted commitment that is present in its actual input, omitted copies of
+  vehicle/route/time can resolve from that exact record. The original model request,
+  referenced source and copied fields are logged. Explicit conflicting fields remain
+  unchanged and are rejected by the world; the bridge never selects a party or grants consent.
+- Literal string `"null"` in declared nullable request fields can normalize to JSON null.
+  This narrow wire-format conversion is logged; actions and free text are untouched.
 
 Each run saves configuration, source and model-registry hashes, input hashes, upstream
 versions, embedding artifact hashes, model usage, complete event history and native

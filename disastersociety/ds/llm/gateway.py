@@ -69,6 +69,16 @@ class BudgetExceeded(Exception):
     ...
 
 
+def _normalize_for_schema(text, schema):
+    normalized, kind = _normalize_model_json(text)
+    hook = getattr(schema, 'normalize_wire_json', None)
+    if callable(hook):
+        normalized, wire_kind = hook(normalized)
+        if wire_kind:
+            kind = ';'.join(x for x in (kind, wire_kind) if x)
+    return normalized, kind
+
+
 class LLMCallFailed(Exception):
     ...
 
@@ -332,7 +342,7 @@ class LLMGateway:
         latency = int((time.time() - t0) * 1000)
 
         # 4. parse + validate; retain the original first repair verbatim.
-        normalized, normalization = _normalize_model_json(raw)
+        normalized, normalization = _normalize_for_schema(raw, schema)
         format_normalizations = ([{"phase": "initial", "kind": normalization}]
                                  if normalization else [])
         for correction_index in range(max_schema_repairs + 1):
@@ -439,7 +449,7 @@ class LLMGateway:
                 cost += self._cost(model, resp2.prompt_tokens, resp2.completion_tokens)
                 self.spent += self._cost(model, resp2.prompt_tokens, resp2.completion_tokens)
                 raw = resp2.content
-                normalized, normalization = _normalize_model_json(raw)
+                normalized, normalization = _normalize_for_schema(raw, schema)
                 if normalization:
                     format_normalizations.append({"phase": "schema_repair", "repair_round": correction_index + 1, "kind": normalization})
 
@@ -451,6 +461,7 @@ class LLMGateway:
                  key=key, status="ok", latency_ms=latency, pt=pt, ct=ct,
                  cost=cost, response_model=resp.response_model,
                  format_normalizations=format_normalizations,
+                 raw_response_before_normalization=raw if normalization else None,
                  schema_repairs=correction_index,
                  finish_reason=resp.finish_reason,
                  reasoning_chars=resp.reasoning_chars, **seed_record)
