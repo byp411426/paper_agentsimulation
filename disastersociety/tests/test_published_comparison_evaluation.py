@@ -69,6 +69,28 @@ def test_changed_case_is_rejected(review):
         collect(output,judgments)
 
 
+def test_explicit_two_arm_scope_does_not_invent_missing_baseline(review):
+    output,judgments=review
+    manifest=json.loads((output/'manifest.json').read_text())
+    manifest.update(methods=['agentsociety','disastersociety'],baselines=['agentsociety'])
+    manifest['cases']=[r for r in manifest['cases'] if r['case_id']!='C1']
+    manifest['pairs']=[r for r in manifest['pairs'] if r['pair_id']=='P2']
+    for b in manifest['batches']:
+        p=output/'anonymous'/b['file'];assignment=json.loads(p.read_text())
+        assignment['score_case_ids']=[c for c in assignment['score_case_ids'] if c!='C1']
+        assignment['pairs']=[r for r in assignment['pairs'] if r['pair_id']=='P2']
+        dump(p,assignment);b['sha256']=digest(p)
+        p=judgments/assignment['output_file'];data=json.loads(p.read_text())
+        data['scores']=[r for r in data['scores'] if r['case_id']!='C1']
+        data['pairs']=[r for r in data['pairs'] if r['pair_id']=='P2'];dump(p,data)
+    dump(output/'manifest.json',manifest)
+    key=json.loads((output/'private_method_key.json').read_text())
+    dump(output/'private_method_key.json',[r for r in key if r['case_id']!='C1'])
+    result=collect(output,judgments)
+    assert set(result['scores'])=={'agentsociety','disastersociety'}
+    assert set(result['pairwise'])=={'agentsociety'}
+
+
 def test_reference_audit_detects_unlogged_copy_and_wrong_source(tmp_path):
     from types import SimpleNamespace
     from ds.llm.cache import LLMCache

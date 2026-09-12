@@ -104,11 +104,15 @@ def audit_reference_resolutions(audit):
         'records':records,'meaning':'Only omitted copies of explicitly referenced accepted party fields; no choices or consent inferred'}
 
 
-def prepare(root: Path, output: Path, repo: Path):
+def prepare(root: Path, output: Path, repo: Path, methods=METHODS):
+    methods=tuple(methods)
+    if len(methods)<2 or len(set(methods))!=len(methods) or 'disastersociety' not in methods or not set(methods)<=set(METHODS):
+        raise ValueError('Select DisasterSociety and at least one distinct supported baseline')
+    baselines=tuple(m for m in methods if m!='disastersociety')
     if output.exists() and any(output.iterdir()):
         raise FileExistsError('Existing cases and evaluations are protected')
     source_roots = read_json(root/'source_roots.json') if (root/'source_roots.json').exists() else {}
-    audits = {m: CurrentRunAudit(root/(m+'_attempt1')/m, Path(source_roots.get(m,repo))) for m in METHODS}
+    audits = {m: CurrentRunAudit(root/(m+'_attempt1')/m, Path(source_roots.get(m,repo))) for m in methods}
     settings=[]
     continuations={}
     for a in audits.values():
@@ -165,7 +169,7 @@ def prepare(root: Path, output: Path, repo: Path):
     entries, private_key, pairs = [], [], []
     batch_cases = {i: [] for i in range((len(hids)+1)//2)}
     for hi, hid in enumerate(hids):
-        ordering = list(METHODS)
+        ordering = list(methods)
         rng.shuffle(ordering)
         cases = {}
         for method in ordering:
@@ -176,7 +180,7 @@ def prepare(root: Path, output: Path, repo: Path):
             private_key.append({'case_id': cid, 'method': method, 'household_id': hid})
             cases[method] = cid
             batch_cases[hi//2].append(cid)
-        for baseline in METHODS[:2]:
+        for baseline in baselines:
             sides = [cases['disastersociety'], cases[baseline]]
             rng.shuffle(sides)
             pid = f'PAIR_{len(pairs)+1:03}'
@@ -187,7 +191,7 @@ def prepare(root: Path, output: Path, repo: Path):
         for order in ('forward','reverse'):
             batch_id = f'batch_{batch+1}_{order}'
             # Reverse raters also repeat two households fixed by their initial order.
-            repeat_cases = batch_cases[batch][:3] if batch in (0,2) else []
+            repeat_cases = batch_cases[batch][:len(methods)] if batch in (0,2) else []
             assignment = {'batch_id':batch_id, 'rubric':'rubric.md',
                 'case_files': {c:c+'.json' for c in batch_cases[batch]},
                 'score_case_ids':batch_cases[batch] if order=='forward' else repeat_cases,
@@ -196,7 +200,7 @@ def prepare(root: Path, output: Path, repo: Path):
                 'output_file':batch_id+'_judgments.json'}
             dump(review/(batch_id+'.json'), assignment)
             batches.append({'batch_id':batch_id,'file':batch_id+'.json','sha256':digest(review/(batch_id+'.json'))})
-    manifest = {'kind':next(iter(kinds)), 'common_inputs_sha256':common,
+    manifest = {'kind':next(iter(kinds)), 'methods':methods,'baselines':baselines,'common_inputs_sha256':common,
         'paired_settings_sha256':hashlib.sha256(json.dumps(settings[0],sort_keys=True).encode()).hexdigest(),
         'arm_runs':{m:str(a.run) for m,a in audits.items()},
         'arm_source_roots':{m:str(a.repo) for m,a in audits.items()},
@@ -273,7 +277,7 @@ def collect(output: Path, judgments: Path):
         raise ValueError('Not all cases scored')
     key = {x['case_id']:x for x in read_json(output/'private_method_key.json')}
     scores_by_method = {}
-    for method in METHODS:
+    for method in manifest.get('methods',METHODS):
         rows = [{**primary[c], 'household_id':key[c]['household_id']} for c in key if key[c]['method']==method]
         values = [r['score'] for r in rows if r['score'] is not None]
         scores_by_method[method] = {'scored':len(values),'total':len(rows),
@@ -291,7 +295,7 @@ def collect(output: Path, judgments: Path):
             'household_id':key[ours]['household_id'],'ours_preference':mean(values) if None not in values else None,
             'order_disagreement':selected[0]!=selected[1], 'judgments':judgments_pair})
     pair_summary = {}
-    for baseline in METHODS[:2]:
+    for baseline in manifest.get('baselines',METHODS[:2]):
         rows = [r for r in pair_rows if r['baseline']==baseline]
         values = [r['ours_preference'] for r in rows if r['ours_preference'] is not None]
         pair_summary[baseline] = {'paired_households':len(rows),'judgeable_in_both_orders':len(values),
@@ -318,12 +322,14 @@ def main():
     sub=ap.add_subparsers(dest='action',required=True)
     p=sub.add_parser('prepare');p.add_argument('--runs',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--methods',nargs='+',choices=METHODS,default=METHODS,
+                   help='Freeze only named complete arms; never substitute an incomplete baseline')
     p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[2])
     c=sub.add_parser('collect');c.add_argument('--output',type=Path,required=True)
     c.add_argument('--judgments',type=Path,required=True)
     args=ap.parse_args()
     if args.action=='prepare':
-        result=prepare(args.runs,args.output,args.repo)
+        result=prepare(args.runs,args.output,args.repo,args.methods)
         print({'cases':len(result['cases']),'pairs':len(result['pairs']),'kind':result['kind']})
     else:
         result=collect(args.output,args.judgments)

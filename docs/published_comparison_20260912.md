@@ -169,3 +169,24 @@ disclosing the operational allowance amendment. Resource reporting sums actual r
 calls before and after the stop, including work inside its unfinished step; cache reads
 are not billed twice. Wall time includes replay overhead and is not a controlled latency
 benchmark. No incomplete behavioral score is used to decide whether to continue.
+
+## Actual execution scope amendment before judging
+
+The complete DisasterSociety and AgentSociety arms each reached step 25 with no failed
+or fallback calls. GA8 stopped at the initial estimate cap after 17 complete steps.
+Automatic approval review rejected an increased-cap continuation because additional
+paid spend was not considered explicitly authorized. That stopped attempt recorded
+501 cache reads, no new model calls and only 15 replayed steps; it is not an experiment
+result. The complete old prefix and caches are retained privately for an approved continuation.
+
+Consequently the unaffected two complete arms are evaluated in a separate frozen scope
+using `prepare --methods agentsociety disastersociety`. This yields 16 anonymous cases,
+8 underlying household pairs, 16 order judgments, and four repeated absolute scores
+on the same preselected households 1 and 5. No GA score or GA comparison is supplied,
+and no behavioral rating was consulted to select the two-arm scope. The original
+three-arm plan remains unfinished. This amendment does not authorize additional spending.
+
+Large anonymous histories can be read through `compact_review_case.py`, which substitutes
+backward JSON-pointer references for exactly repeated values. A round-trip equality
+assertion ensures every original field and event is reconstructible. These copies aid
+reading only; frozen original case hashes remain the evidence source.
